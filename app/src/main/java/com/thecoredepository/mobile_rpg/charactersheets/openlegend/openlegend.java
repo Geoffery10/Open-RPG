@@ -185,6 +185,10 @@ public class openlegend
         this.languages = languages;
     }
 
+    public void addLanguages(String languages, int location) {
+        this.languages[location] = languages;
+    }
+
     public String getBio() {
         return bio;
     }
@@ -197,16 +201,19 @@ public class openlegend
         return attributePointsAvalible;
     }
 
-    public void setAttributePointsAvalible(int attributePointsAvalible) {
-        this.attributePointsAvalible = attributePointsAvalible;
+    public void setAttributePointsAvalible() {
+        this.attributePointsAvalible = (22 + (majorLvl * 4) + (minorLvl * 4));
     }
 
     public int getGetAttributePointsUsed() {
         return getAttributePointsUsed;
     }
 
-    public void setGetAttributePointsUsed(int getAttributePointsUsed) {
-        this.getAttributePointsUsed = getAttributePointsUsed;
+    public void setGetAttributePointsUsed() {
+        this.getAttributePointsUsed = (agility + fortitude + might + learning + logic
+                + perception + will + deception + persuasion + presence + alteration
+                + creation + energy + entropy + influence + movement + prescience
+                + protection);
     }
 
     public int getAgility() {
@@ -405,15 +412,15 @@ public class openlegend
         return featPointsAvaliable;
     }
 
-    public void setFeatPointsAvaliable(int featPointsAvaliable) {
-        this.featPointsAvaliable = (6 + minorLvl);
+    public void setFeatPointsAvaliable() {
+        this.featPointsAvaliable = (6 + (minorLvl * 2) + (majorLvl * 2));
     }
 
     public int getFeatPointsUsed() {
         return featPointsUsed;
     }
 
-    public void setFeatPointsUsed(int featPointsUsed) {
+    public void setFeatPointsUsed() {
         this.featPointsUsed = featPointsUsed;
     }
 
@@ -471,6 +478,53 @@ public class openlegend
 
     public void setBoons(List boons) {
         Boons = boons;
+    }
+
+    public void generateRandomCharacter()
+    {
+        setPlayerName("Test Player");
+        setCharName("Test Hero");
+        setNickname("Hero");
+        setMajorLvl(1);
+        setMinorLvl(5);
+        setDeity("Coder Lord");
+
+        addLanguages("Basic", 0);
+        setBio("Precoded Bio Here");
+
+        setAgility(3);
+        setFortitude(3);
+        setMight(3);
+        setLearning(3);
+        setLogic(3);
+        setPerception(2);
+        setWill(2);
+        setDeception(2);
+        setPersuasion(1);
+
+        setAttributePointsAvalible();
+        setGetAttributePointsUsed();
+        setFeatPointsAvaliable();
+        setFeatPointsUsed();
+
+        /*
+        //Perks/Flaws
+        String[] perks = new String[2];
+        String[] flaws = new String[2];
+
+        //Inventory
+        //Might use class for inventory
+        //inventoryOL inventory = new inventoryOL();
+        //Or just keep the values here
+        int inventorySize;
+        List items = new ArrayList<String>();
+        List itemInfo = new ArrayList<String>();
+
+        //Banes/Boons
+        List Banes = new ArrayList<String>();
+        List Boons = new ArrayList<String>();
+
+         */
     }
 }
 
