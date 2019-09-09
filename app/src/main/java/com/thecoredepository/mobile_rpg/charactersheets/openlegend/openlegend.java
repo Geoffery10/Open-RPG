@@ -70,4 +70,6 @@ public class openlegend
     List items = new ArrayList<String>();
     List itemInfo = new ArrayList<String>();
 
+    //Banes/Boons
+    
 }
