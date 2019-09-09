@@ -113,6 +113,7 @@ public class openlegend
                 ", protection=" + protection +
                 ", toughness=" + toughness +
                 ", guard=" + guard +
+                ", armor=" + armor +
                 ", resolve=" + resolve +
                 ", hitpoints=" + hitpoints +
                 ", speed=" + speed +
@@ -405,7 +406,7 @@ public class openlegend
     }
 
     public void setFeatPointsAvaliable(int featPointsAvaliable) {
-        this.featPointsAvaliable = featPointsAvaliable;
+        this.featPointsAvaliable = (6 + minorLvl);
     }
 
     public int getFeatPointsUsed() {
