@@ -5,6 +5,8 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 // be saved often reduce the chance of lost data.
 */
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,41 +14,42 @@ import java.util.List;
 public class openlegend
 {
     //Values from the Open Legend Character Sheet
-    private String playerName = "John Doe";
-    private String charName = "Lucifer";
-    private String nickname = "Lue";
-    private int majorLvl = 1;
-    private int minorLvl = 1;
-    private String deity = "God";
+    private String playerName;
+    private String charName;
+    private String nickname;
+    private int majorLvl;
+    private int minorLvl;
+    private int levelTotal;
+    private String deity;
 
     private String[] languages = new String[10];
-    private String bio = "Just a chill dude out to kill.";
+    private String bio;
 
     //Attributes
-    private int attributePointsAvalible;
-    private int getAttributePointsUsed;
+    private int attributePointsAvalible = 0;
+    private int getAttributePointsUsed = 0;
     //PHYSICAL ATTRIBUTES
-    private int agility;
-    private int fortitude;
-    private int might;
+    private int agility = 0;
+    private int fortitude = 0;
+    private int might = 0;
     //MENTAL ATTRIBUTES
-    private int learning;
-    private int logic;
-    private int perception;
-    private int will;
+    private int learning = 0;
+    private int logic = 0;
+    private int perception = 0;
+    private int will = 0;
     //SOCIAL ATTRIBUTES
-    private int deception;
-    private int persuasion;
-    private int presence;
+    private int deception = 0;
+    private int persuasion = 0;
+    private int presence = 0;
     //EXTRAORDINARY ATTRIBUTES
-    private int alteration;
-    private int creation;
-    private int energy;
-    private int entropy;
-    private int influence;
-    private int movement;
-    private int prescience;
-    private int protection;
+    private int alteration = 0;
+    private int creation = 0;
+    private int energy = 0;
+    private int entropy = 0;
+    private int influence = 0;
+    private int movement = 0;
+    private int prescience = 0;
+    private int protection = 0;
 
     //Stats
     private int toughness;
@@ -169,6 +172,39 @@ public class openlegend
         this.minorLvl = minorLvl;
     }
 
+    public int getLevelTotal()
+    {
+        return levelTotal;
+    }
+
+    public void setLevelTotal(int levelTotal)
+    {
+        this.levelTotal = levelTotal;
+    }
+
+    public void setLevel()
+    {
+        int Level = getLevelTotal();
+        int RemainingXP = Level;
+        int MajorLvl = 1;
+        int MinorLvl = 0;
+        int XPtoLevel = 3;
+
+        while (RemainingXP > 0)
+        {
+            MinorLvl += 1;
+            RemainingXP -= 1;
+            if (MinorLvl == XPtoLevel)
+            {
+                MinorLvl = 0;
+                MajorLvl += 1;
+            }
+        }
+
+        setMajorLvl(MajorLvl);
+        setMinorLvl(MinorLvl);
+    }
+
     public String getDeity() {
         return deity;
     }
@@ -197,12 +233,12 @@ public class openlegend
         this.bio = bio;
     }
 
-    public int getAttributePointsAvalible() {
+    public int getAttributePointsAvailable() {
         return attributePointsAvalible;
     }
 
-    public void setAttributePointsAvalible() {
-        this.attributePointsAvalible = (22 + (majorLvl * 4) + (minorLvl * 4));
+    public void setAttributePointsAvailable() {
+        this.attributePointsAvalible = (40 + (getLevelTotal() * 3));
     }
 
     public int getGetAttributePointsUsed() {
@@ -210,10 +246,37 @@ public class openlegend
     }
 
     public void setGetAttributePointsUsed() {
-        this.getAttributePointsUsed = (agility + fortitude + might + learning + logic
-                + perception + will + deception + persuasion + presence + alteration
-                + creation + energy + entropy + influence + movement + prescience
-                + protection);
+        int points = 0;
+
+        Log.i("Attributes Ag", "Points = " + getAgility());
+        points += attributeCounter(getAgility());
+        points += attributeCounter(getFortitude());
+        points += attributeCounter(getMight());
+        points += attributeCounter(getLearning());
+        points += attributeCounter(getLogic());
+        points += attributeCounter(getPerception());
+        points += attributeCounter(getWill());
+        points += attributeCounter(getDeception());
+        points += attributeCounter(getPersuasion());
+        points += attributeCounter(getPresence());
+        points += attributeCounter(getAlteration());
+        points += attributeCounter(getCreation());
+        points += attributeCounter(getEnergy());
+        points += attributeCounter(getEntropy());
+        points += attributeCounter(getInfluence());
+        points += attributeCounter(getMovement());
+        points += attributeCounter(getPrescience());
+        points += attributeCounter(getProtection());
+
+        this.getAttributePointsUsed = points;
+    }
+
+    public int attributeCounter(int attribute)
+    {
+        int points = 0;
+        points = ((attribute*(attribute+1))/2);
+        Log.i("Attributes", "Points = " + points);
+        return points;
     }
 
     public int getAgility() {
@@ -408,11 +471,11 @@ public class openlegend
         this.speed = speed;
     }
 
-    public int getFeatPointsAvaliable() {
+    public int getFeatPointsAvailable() {
         return featPointsAvaliable;
     }
 
-    public void setFeatPointsAvaliable() {
+    public void setFeatPointsAvailable() {
         this.featPointsAvaliable = (6 + (minorLvl * 2) + (majorLvl * 2));
     }
 
@@ -486,6 +549,7 @@ public class openlegend
         setGuard(getArmor());
         setResolve();
         setHitpoints();
+        setLevel();
     }
 
     public void generateRandomCharacter()
@@ -510,9 +574,9 @@ public class openlegend
         setDeception(2);
         setPersuasion(1);
 
-        setAttributePointsAvalible();
+        setAttributePointsAvailable();
         setGetAttributePointsUsed();
-        setFeatPointsAvaliable();
+        setFeatPointsAvailable();
         setFeatPointsUsed();
 
         /*
