@@ -3,6 +3,10 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Environment;
+import android.util.Log;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -24,9 +28,23 @@ public class featsOL
     private String effects;
     private String special;
 
-    public void featList(Context context)
+
+
+    public static void featList()
     {
-        featsOL[] list = new featsOL[53];
+        featsOL[] featsList = new featsOL[53];
+
+        try {
+            String in = "feat.json";
+            Log.i("Feats", "Start");
+            JSONObject reader = new JSONObject(in);
+            JSONObject feats  = null;
+            feats = reader.getJSONObject("feats");
+            featsList[0].title = feats.getString("title");
+            Log.i("Feats", "Points = " + featsList[0].title);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         /*
         String text = "";
         try {

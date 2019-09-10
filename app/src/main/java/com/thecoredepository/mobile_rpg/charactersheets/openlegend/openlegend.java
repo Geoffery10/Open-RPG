@@ -248,7 +248,6 @@ public class openlegend
     public void setGetAttributePointsUsed() {
         int points = 0;
 
-        Log.i("Attributes Ag", "Points = " + getAgility());
         points += attributeCounter(getAgility());
         points += attributeCounter(getFortitude());
         points += attributeCounter(getMight());

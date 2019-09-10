@@ -192,6 +192,8 @@ public class OLSheetActivity  extends AppCompatActivity {
         player.setGetAttributePointsUsed();
         player.setAttributePointsAvailable();
 
+        featsOL.featList();
+
         return player;
     }
 }
