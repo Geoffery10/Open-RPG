@@ -2,6 +2,7 @@ package com.thecoredepository.mobile_rpg.dice;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,7 @@ public class DiceActivity extends AppCompatActivity {
 
     int numberOfDie = 0;
     int valueOfDie = 0;
+    long lastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -39,65 +41,69 @@ public class DiceActivity extends AppCompatActivity {
         btnRoll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView txtRolls = findViewById(R.id.txtRolls);
-                TextView txtTotal = findViewById(R.id.txtTotal);
-                EditText editAdv = findViewById(R.id.editAdv);
-                EditText editDis = findViewById(R.id.editDis);
-                txtRolls.setText("");
-                //Roll Dice
-                int roll = 0;
-                int d20 = 0;
-                List<Integer> die = new ArrayList<Integer>();
-                int total = 0;
-                int advantage = 0;
-                try {
-                    advantage = Integer.parseInt(String.valueOf(editAdv.getText())) - Integer.parseInt(String.valueOf(editDis.getText()));
-                } catch (Exception e)
+                if (SystemClock.elapsedRealtime() - lastClickTime > 1000)
                 {
-                    advantage = 0;
-                }
-                //Roll d20
-                do
-                {
-                    roll = dice.d20();
-                    d20 += roll;
-                    txtRolls.setText(txtRolls.getText() + "Roll d20: " + roll +"\n");
-                } while (roll == 20);
-
-                //Roll Other Dice
-                for (int i = 0; i < numberOfDie; i++)
-                {
+                    TextView txtRolls = findViewById(R.id.txtRolls);
+                    TextView txtTotal = findViewById(R.id.txtTotal);
+                    EditText editAdv = findViewById(R.id.editAdv);
+                    EditText editDis = findViewById(R.id.editDis);
+                    txtRolls.setText("");
+                    //Roll Dice
+                    int roll = 0;
+                    int d20 = 0;
+                    List<Integer> die = new ArrayList<Integer>();
+                    int total = 0;
+                    int advantage = 0;
+                    try {
+                        advantage = Integer.parseInt(String.valueOf(editAdv.getText())) - Integer.parseInt(String.valueOf(editDis.getText()));
+                    } catch (Exception e)
+                    {
+                        advantage = 0;
+                    }
+                    //Roll d20
                     do
                     {
-                        if (valueOfDie == 2)
+                        roll = dice.d20();
+                        d20 += roll;
+                        txtRolls.setText(txtRolls.getText() + "Roll d20: " + roll +"\n");
+                    } while (roll == 20);
+
+                    //Roll Other Dice
+                    for (int i = 0; i < numberOfDie; i++)
+                    {
+                        do
                         {
-                            roll = dice.d2();
-                        }
-                        else if (valueOfDie == 6)
-                        {
-                            roll = dice.d6();
-                        }
-                        else if (valueOfDie == 8)
-                        {
-                            roll = dice.d8();
-                        }
-                        else //d10
-                        {
-                            roll = dice.d10();
-                        }
-                        die.add(roll);
-                        txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
-                    } while (roll == valueOfDie);
+                            if (valueOfDie == 2)
+                            {
+                                roll = dice.d2();
+                            }
+                            else if (valueOfDie == 6)
+                            {
+                                roll = dice.d6();
+                            }
+                            else if (valueOfDie == 8)
+                            {
+                                roll = dice.d8();
+                            }
+                            else //d10
+                            {
+                                roll = dice.d10();
+                            }
+                            die.add(roll);
+                            txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+                        } while (roll == valueOfDie);
+                    }
+
+
+
+                    for (int i = 0; i < die.size(); i++)
+                    {
+                        total += die.get(i);
+                    }
+                    total += d20;
+                    txtTotal.setText("Total: " + total);
+                    lastClickTime = SystemClock.elapsedRealtime();
                 }
-
-
-
-                for (int i = 0; i < die.size(); i++)
-                {
-                    total += die.get(i);
-                }
-                total += d20;
-                txtTotal.setText("Total: " + total);
             }
         });
     }
