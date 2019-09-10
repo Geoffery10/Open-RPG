@@ -1,7 +1,6 @@
 package com.thecoredepository.mobile_rpg;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,12 +8,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.TextView;
-
 import com.example.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivity;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
-
 import java.util.ArrayList;
 import java.util.List;
 
