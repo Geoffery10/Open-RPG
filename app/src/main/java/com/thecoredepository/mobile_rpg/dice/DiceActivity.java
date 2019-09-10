@@ -40,6 +40,7 @@ public class DiceActivity extends AppCompatActivity {
         Button btnRoll = findViewById(R.id.btnRoll);
         btnRoll.setOnClickListener(new View.OnClickListener() {
             @Override
+            //Roll Dice
             public void onClick(View v) {
                 if (SystemClock.elapsedRealtime() - lastClickTime > 1000)
                 {
@@ -94,14 +95,17 @@ public class DiceActivity extends AppCompatActivity {
                         } while (roll == valueOfDie);
                     }
 
-
-
+                    //Add Total
                     for (int i = 0; i < die.size(); i++)
                     {
                         total += die.get(i);
                     }
                     total += d20;
+
+                    //Display Total
                     txtTotal.setText("Total: " + total);
+                    
+                    //Reset Clock
                     lastClickTime = SystemClock.elapsedRealtime();
                 }
             }
