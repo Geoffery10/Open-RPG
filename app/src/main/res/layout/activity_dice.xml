@@ -3,4 +3,93 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/txtAdv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Advantage"
+        android:textSize="24sp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/editAdv"
+        android:layout_width="75dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        android:textSize="24sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/txtDis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disadvantage"
+        android:textSize="24sp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/editDis"
+        android:layout_width="75dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        android:textSize="24sp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/btnRoll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Roll"
+        android:layout_margin="24dp"
+        android:textSize="24sp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/textAccent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtRolls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:text="1d20 = 20\n1d6 = 7\n1d6 = 7\n1d6 = 7\n1d6 = 7"
+                android:textAlignment="center"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total: 41"
+                android:textSize="36sp"
+                android:textAlignment="center"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

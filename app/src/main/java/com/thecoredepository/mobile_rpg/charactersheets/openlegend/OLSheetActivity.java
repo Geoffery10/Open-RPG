@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.mobile_rpg.R;
@@ -103,6 +105,19 @@ public class OLSheetActivity  extends AppCompatActivity {
         TextView txtProtection = findViewById(R.id.txtProtection);
         LinearLayout LLProtection = findViewById(R.id.LLProtection);
         Button btnProtection = findViewById(R.id.btnProtection);
+
+        btnAgility.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Spinner spinnerOL = findViewById(R.id.spinnerOL);
+                String selected = (String)spinnerOL.getSelectedItem();
+                Log.i("selected", selected);
+                Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
+                in.putExtra("dice", );
+                startActivity(in);
+            }
+        });
 
         if (player.getAgility() != 0) {
             txtAgility.setText("Agility: " + player.getAgility());

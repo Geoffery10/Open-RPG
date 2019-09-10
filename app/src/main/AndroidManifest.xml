@@ -20,6 +20,10 @@
             android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivity"
             android:theme="@style/AppTheme">
         </activity>
+        <activity
+            android:name="com.thecoredepository.mobile_rpg.dice.DiceActivity"
+            android:theme="@style/AppTheme">
+        </activity>
     </application>
 
 </manifest>
