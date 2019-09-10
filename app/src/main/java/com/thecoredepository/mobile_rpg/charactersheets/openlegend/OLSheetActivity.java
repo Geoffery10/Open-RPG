@@ -111,6 +111,160 @@ public class OLSheetActivity  extends AppCompatActivity {
         Button btnProtection = findViewById(R.id.btnProtection);
 
         //Button Clicks
+        buttonClicks(btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection);
+
+        //Element Visibility and Values
+        setAttributes(txtAgility, LLAgility, btnAgility, txtFortitude, LLFortitude, btnFortitude, txtMight, LLMight, btnMight, txtLearning, LLLearning, btnLearning, txtLogic, LLLogic, btnLogic, txtPerception, LLPerception, btnPerception, txtWill, LLWill, btnWill, txtDeception, LLDeception, btnDeception, txtPersuasion, LLPersuasion, btnPersuasion, txtPresence, LLPresence, btnPresence, txtAlteration, LLAlteration, btnAlteration, txtCreation, LLCreation, btnCreation, txtEnergy, LLEnergy, btnEnergy, txtEntropy, LLEntropy, btnEntropy, txtInfluence, LLInfluence, btnInfluence, txtMovement, LLMovement, btnMovement, txtPrescience, LLPrescience, btnPrescience, txtProtection, LLProtection, btnProtection);
+    }
+
+    private void setAttributes(TextView txtAgility, LinearLayout LLAgility, Button btnAgility, TextView txtFortitude, LinearLayout LLFortitude, Button btnFortitude, TextView txtMight, LinearLayout LLMight, Button btnMight, TextView txtLearning, LinearLayout LLLearning, Button btnLearning, TextView txtLogic, LinearLayout LLLogic, Button btnLogic, TextView txtPerception, LinearLayout LLPerception, Button btnPerception, TextView txtWill, LinearLayout LLWill, Button btnWill, TextView txtDeception, LinearLayout LLDeception, Button btnDeception, TextView txtPersuasion, LinearLayout LLPersuasion, Button btnPersuasion, TextView txtPresence, LinearLayout LLPresence, Button btnPresence, TextView txtAlteration, LinearLayout LLAlteration, Button btnAlteration, TextView txtCreation, LinearLayout LLCreation, Button btnCreation, TextView txtEnergy, LinearLayout LLEnergy, Button btnEnergy, TextView txtEntropy, LinearLayout LLEntropy, Button btnEntropy, TextView txtInfluence, LinearLayout LLInfluence, Button btnInfluence, TextView txtMovement, LinearLayout LLMovement, Button btnMovement, TextView txtPrescience, LinearLayout LLPrescience, Button btnPrescience, TextView txtProtection, LinearLayout LLProtection, Button btnProtection) {
+        if (player.getAgility() != 0) {
+            txtAgility.setText("Agility: " + player.getAgility());
+            btnAgility.setText(attributeToDice(player.getAgility()));
+            LLAgility.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLAgility.setVisibility(View.GONE);
+        }
+        if (player.getFortitude() != 0) {
+            txtFortitude.setText("Fortitude: " + (player.getFortitude()));
+            btnFortitude.setText(attributeToDice(player.getFortitude()));
+            LLFortitude.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLFortitude.setVisibility(View.GONE);
+        }
+        if (player.getMight() != 0) {
+            txtMight.setText("Might: " + player.getMight());
+            btnMight.setText(attributeToDice(player.getMight()));
+            LLMight.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLMight.setVisibility(View.GONE);
+        }
+        if (player.getLearning() != 0) {
+            txtLearning.setText("Learning: " + (player.getLearning()));
+            btnLearning.setText(attributeToDice(player.getLearning()));
+            LLLearning.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLLearning.setVisibility(View.GONE);
+        }
+        if (player.getLogic() != 0) {
+            txtLogic.setText("Logic: " + (player.getLogic()));
+            btnLogic.setText(attributeToDice(player.getLogic()));
+            LLLogic.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLLogic.setVisibility(View.GONE);
+        }
+        if (player.getPerception() != 0) {
+            txtPerception.setText("Perception: " + (player.getPerception()));
+            btnPerception.setText(attributeToDice(player.getPerception()));
+            LLPerception.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLPerception.setVisibility(View.GONE);
+        }
+        if (player.getWill() != 0) {
+            txtWill.setText("Will: " + (player.getWill()));
+            btnWill.setText(attributeToDice(player.getWill()));
+            LLWill.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLWill.setVisibility(View.GONE);
+        }
+        if (player.getDeception() != 0) {
+            txtDeception.setText("Deception: " + (player.getDeception()));
+            btnDeception.setText(attributeToDice(player.getDeception()));
+            LLDeception.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLDeception.setVisibility(View.GONE);
+        }
+        if (player.getPersuasion() != 0) {
+            txtPersuasion.setText("Persuasion: " + (player.getPersuasion()));
+            btnPersuasion.setText(attributeToDice(player.getPersuasion()));
+            LLPersuasion.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLPersuasion.setVisibility(View.GONE);
+        }
+        if (player.getPresence() != 0) {
+            txtPresence.setText("Presence: " + (player.getPresence()));
+            btnPresence.setText(attributeToDice(player.getPresence()));
+            LLPresence.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLPresence.setVisibility(View.GONE);
+        }
+        if (player.getAlteration() != 0) {
+            txtAlteration.setText("Alteration: " + (player.getAlteration()));
+            btnAlteration.setText(attributeToDice(player.getAlteration()));
+            LLAlteration.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLAlteration.setVisibility(View.GONE);
+        }
+        if (player.getCreation() != 0) {
+            txtCreation.setText("Creation: " + (player.getCreation()));
+            btnCreation.setText(attributeToDice(player.getCreation()));
+            LLCreation.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLCreation.setVisibility(View.GONE);
+        }
+        if (player.getEnergy() != 0) {
+            txtEnergy.setText("Energy: " + (player.getEnergy()));
+            btnEnergy.setText(attributeToDice(player.getEnergy()));
+            LLEnergy.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLEnergy.setVisibility(View.GONE);
+        }
+        if (player.getEntropy() != 0) {
+            txtEntropy.setText("Entropy: " + (player.getEntropy()));
+            btnEntropy.setText(attributeToDice(player.getEntropy()));
+            LLEntropy.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLEntropy.setVisibility(View.GONE);
+        }
+        if (player.getInfluence() != 0) {
+            txtInfluence.setText("Influence: " + (player.getInfluence()));
+            btnInfluence.setText(attributeToDice(player.getInfluence()));
+            LLInfluence.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLInfluence.setVisibility(View.GONE);
+        }
+        if (player.getMovement() != 0) {
+            txtMovement.setText("Movement: " + (player.getMovement()));
+            btnMovement.setText(attributeToDice(player.getMovement()));
+            LLMovement.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLMovement.setVisibility(View.GONE);
+        }
+        if (player.getPrescience() != 0) {
+            txtPrescience.setText("Prescience: " + (player.getPrescience()));
+            btnPrescience.setText(attributeToDice(player.getPrescience()));
+            LLPrescience.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLPrescience.setVisibility(View.GONE);
+        }
+        if (player.getProtection() != 0) {
+            txtProtection.setText("Protection: " + (player.getProtection()));
+            btnProtection.setText(attributeToDice(player.getProtection()));
+            LLProtection.setVisibility(View.VISIBLE);
+        }
+        else {
+            LLProtection.setVisibility(View.GONE);
+        }
+    }
+
+    private void buttonClicks(Button btnAgility, Button btnFortitude, Button btnMight, Button btnLearning, Button btnLogic, Button btnPerception, Button btnWill, Button btnDeception, Button btnPersuasion, Button btnPresence, Button btnAlteration, Button btnCreation, Button btnEnergy, Button btnEntropy, Button btnInfluence, Button btnMovement, Button btnPrescience, Button btnProtection) {
         btnAgility.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -273,152 +427,6 @@ public class OLSheetActivity  extends AppCompatActivity {
                 startActivity(in);
             }
         });
-
-        //Element Visibility and Values
-        if (player.getAgility() != 0) {
-            txtAgility.setText("Agility: " + player.getAgility());
-            btnAgility.setText(attributeToDice(player.getAgility()));
-            LLAgility.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLAgility.setVisibility(View.GONE);
-        }
-        if (player.getFortitude() != 0) {
-            txtFortitude.setText("Fortitude: " + (player.getFortitude()));
-            btnFortitude.setText(attributeToDice(player.getFortitude()));
-            LLFortitude.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLFortitude.setVisibility(View.GONE);
-        }
-        if (player.getMight() != 0) {
-            txtMight.setText("Might: " + player.getMight());
-            btnMight.setText(attributeToDice(player.getMight()));
-            LLMight.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLMight.setVisibility(View.GONE);
-        }
-        if (player.getLearning() != 0) {
-            txtLearning.setText("Learning: " + (player.getLearning()));
-            btnLearning.setText(attributeToDice(player.getLearning()));
-            LLLearning.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLLearning.setVisibility(View.GONE);
-        }
-        if (player.getLogic() != 0) {
-            txtLogic.setText("Logic: " + (player.getLogic()));
-            btnLogic.setText(attributeToDice(player.getLogic()));
-            LLLogic.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLLogic.setVisibility(View.GONE);
-        }
-        if (player.getPerception() != 0) {
-            txtPerception.setText("Perception: " + (player.getPerception()));
-            btnPerception.setText(attributeToDice(player.getPerception()));
-            LLPerception.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLPerception.setVisibility(View.GONE);
-        }
-        if (player.getWill() != 0) {
-            txtWill.setText("Will: " + (player.getWill()));
-            btnWill.setText(attributeToDice(player.getWill()));
-            LLWill.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLWill.setVisibility(View.GONE);
-        }
-        if (player.getDeception() != 0) {
-            txtDeception.setText("Deception: " + (player.getDeception()));
-            btnDeception.setText(attributeToDice(player.getDeception()));
-            LLDeception.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLDeception.setVisibility(View.GONE);
-        }
-        if (player.getPersuasion() != 0) {
-            txtPersuasion.setText("Persuasion: " + (player.getPersuasion()));
-            btnPersuasion.setText(attributeToDice(player.getPersuasion()));
-            LLPersuasion.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLPersuasion.setVisibility(View.GONE);
-        }
-        if (player.getPresence() != 0) {
-            txtPresence.setText("Presence: " + (player.getPresence()));
-            btnPresence.setText(attributeToDice(player.getPresence()));
-            LLPresence.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLPresence.setVisibility(View.GONE);
-        }
-        if (player.getAlteration() != 0) {
-            txtAlteration.setText("Alteration: " + (player.getAlteration()));
-            btnAlteration.setText(attributeToDice(player.getAlteration()));
-            LLAlteration.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLAlteration.setVisibility(View.GONE);
-        }
-        if (player.getCreation() != 0) {
-            txtCreation.setText("Creation: " + (player.getCreation()));
-            btnCreation.setText(attributeToDice(player.getCreation()));
-            LLCreation.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLCreation.setVisibility(View.GONE);
-        }
-        if (player.getEnergy() != 0) {
-            txtEnergy.setText("Energy: " + (player.getEnergy()));
-            btnEnergy.setText(attributeToDice(player.getEnergy()));
-            LLEnergy.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLEnergy.setVisibility(View.GONE);
-        }
-        if (player.getEntropy() != 0) {
-            txtEntropy.setText("Entropy: " + (player.getEntropy()));
-            btnEntropy.setText(attributeToDice(player.getEntropy()));
-            LLEntropy.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLEntropy.setVisibility(View.GONE);
-        }
-        if (player.getInfluence() != 0) {
-            txtInfluence.setText("Influence: " + (player.getInfluence()));
-            btnInfluence.setText(attributeToDice(player.getInfluence()));
-            LLInfluence.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLInfluence.setVisibility(View.GONE);
-        }
-        if (player.getMovement() != 0) {
-            txtMovement.setText("Movement: " + (player.getMovement()));
-            btnMovement.setText(attributeToDice(player.getMovement()));
-            LLMovement.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLMovement.setVisibility(View.GONE);
-        }
-        if (player.getPrescience() != 0) {
-            txtPrescience.setText("Prescience: " + (player.getPrescience()));
-            btnPrescience.setText(attributeToDice(player.getPrescience()));
-            LLPrescience.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLPrescience.setVisibility(View.GONE);
-        }
-        if (player.getProtection() != 0) {
-            txtProtection.setText("Protection: " + (player.getProtection()));
-            btnProtection.setText(attributeToDice(player.getProtection()));
-            LLProtection.setVisibility(View.VISIBLE);
-        }
-        else {
-            LLProtection.setVisibility(View.GONE);
-        }
     }
 
     //Changes attribute score to dice string
@@ -459,6 +467,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         }
     }
 
+    //HARD CODED CHARACTERS
     public openlegend loadCharacterSheet(String selected, openlegend player)
     {
         String type = "pc";
