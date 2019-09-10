@@ -63,45 +63,13 @@ public class DiceActivity extends AppCompatActivity {
                         advantage = 0;
                     }
                     //Roll d20
-                    do
-                    {
-                        roll = dice.d20();
-                        d20 += roll;
-                        txtRolls.setText(txtRolls.getText() + "Roll d20: " + roll +"\n");
-                    } while (roll == 20);
+                    d20 = rollD20(txtRolls, d20);
 
                     //Roll Other Dice
-                    for (int i = 0; i < numberOfDie; i++)
-                    {
-                        do
-                        {
-                            if (valueOfDie == 2)
-                            {
-                                roll = dice.d2();
-                            }
-                            else if (valueOfDie == 6)
-                            {
-                                roll = dice.d6();
-                            }
-                            else if (valueOfDie == 8)
-                            {
-                                roll = dice.d8();
-                            }
-                            else //d10
-                            {
-                                roll = dice.d10();
-                            }
-                            die.add(roll);
-                            txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
-                        } while (roll == valueOfDie);
-                    }
+                    rollOtherDice(txtRolls, die);
 
                     //Add Total
-                    for (int i = 0; i < die.size(); i++)
-                    {
-                        total += die.get(i);
-                    }
-                    total += d20;
+                    total = getTotalRoll(d20, die, total);
 
                     //Display Total
                     txtTotal.setText("Total: " + total);
@@ -111,6 +79,54 @@ public class DiceActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private int getTotalRoll(int d20, List<Integer> die, int total) {
+        for (int i = 0; i < die.size(); i++)
+        {
+            total += die.get(i);
+        }
+        total += d20;
+        return total;
+    }
+
+    private void rollOtherDice(TextView txtRolls, List<Integer> die) {
+        int roll;
+        for (int i = 0; i < numberOfDie; i++)
+        {
+            do
+            {
+                if (valueOfDie == 2)
+                {
+                    roll = dice.d2();
+                }
+                else if (valueOfDie == 6)
+                {
+                    roll = dice.d6();
+                }
+                else if (valueOfDie == 8)
+                {
+                    roll = dice.d8();
+                }
+                else //d10
+                {
+                    roll = dice.d10();
+                }
+                die.add(roll);
+                txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+            } while (roll == valueOfDie);
+        }
+    }
+
+    private int rollD20(TextView txtRolls, int d20) {
+        int roll;
+        do
+        {
+            roll = dice.d20();
+            d20 += roll;
+            txtRolls.setText(txtRolls.getText() + "Roll d20: " + roll +"\n");
+        } while (roll == 20);
+        return d20;
     }
 
     private int numberOfDie(String dice)
