@@ -17,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets', 'src/main/java/com/thecoredepository/mobile_rpg/charactersheets/openlegend/assets']
+        }
+    }
 }
 
 dependencies {
