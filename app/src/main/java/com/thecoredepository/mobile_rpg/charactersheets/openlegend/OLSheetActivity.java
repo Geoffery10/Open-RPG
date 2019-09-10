@@ -12,16 +12,19 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.dice.DiceActivity;
 
 import java.nio.file.Files;
 import java.util.Arrays;
 
 public class OLSheetActivity  extends AppCompatActivity {
+
+    public openlegend player = new openlegend();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ol_sheet);
-        openlegend player = new openlegend();
         Intent intent = getIntent();
         String selected = intent.getExtras().getString("selected");
         player = loadCharacterSheet(selected, player);
@@ -110,11 +113,8 @@ public class OLSheetActivity  extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Starts Game
-                Spinner spinnerOL = findViewById(R.id.spinnerOL);
-                String selected = (String)spinnerOL.getSelectedItem();
-                Log.i("selected", selected);
-                Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
-                in.putExtra("dice", );
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getAgility()));
                 startActivity(in);
             }
         });
