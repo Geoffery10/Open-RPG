@@ -103,6 +103,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getAgility() != 0) {
             txtAgility.setText("Agility: " + player.getAgility());
             btnAgility.setText(attributeToDice(player.getAgility()));
+            LLAgility.setVisibility(View.VISIBLE);
         }
         else {
             LLAgility.setVisibility(View.GONE);
@@ -110,6 +111,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getFortitude() != 0) {
             txtFortitude.setText("Fortitude: " + (player.getFortitude()));
             btnFortitude.setText(attributeToDice(player.getFortitude()));
+            LLFortitude.setVisibility(View.VISIBLE);
         }
         else {
             LLFortitude.setVisibility(View.GONE);
@@ -117,6 +119,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getMight() != 0) {
             txtMight.setText("Might: " + player.getMight());
             btnMight.setText(attributeToDice(player.getMight()));
+            LLMight.setVisibility(View.VISIBLE);
         }
         else {
             LLMight.setVisibility(View.GONE);
@@ -124,6 +127,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getLearning() != 0) {
             txtLearning.setText("Learning: " + (player.getLearning()));
             btnLearning.setText(attributeToDice(player.getLearning()));
+            LLLearning.setVisibility(View.VISIBLE);
         }
         else {
             LLLearning.setVisibility(View.GONE);
@@ -131,6 +135,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getLogic() != 0) {
             txtLogic.setText("Logic: " + (player.getLogic()));
             btnLogic.setText(attributeToDice(player.getLogic()));
+            LLLogic.setVisibility(View.VISIBLE);
         }
         else {
             LLLogic.setVisibility(View.GONE);
@@ -138,6 +143,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getPerception() != 0) {
             txtPerception.setText("Perception: " + (player.getPerception()));
             btnPerception.setText(attributeToDice(player.getPerception()));
+            LLPerception.setVisibility(View.VISIBLE);
         }
         else {
             LLPerception.setVisibility(View.GONE);
@@ -145,6 +151,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getWill() != 0) {
             txtWill.setText("Will: " + (player.getWill()));
             btnWill.setText(attributeToDice(player.getWill()));
+            LLWill.setVisibility(View.VISIBLE);
         }
         else {
             LLWill.setVisibility(View.GONE);
@@ -152,6 +159,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getDeception() != 0) {
             txtDeception.setText("Deception: " + (player.getDeception()));
             btnDeception.setText(attributeToDice(player.getDeception()));
+            LLDeception.setVisibility(View.VISIBLE);
         }
         else {
             LLDeception.setVisibility(View.GONE);
@@ -159,6 +167,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getPersuasion() != 0) {
             txtPersuasion.setText("Persuasion: " + (player.getPersuasion()));
             btnPersuasion.setText(attributeToDice(player.getPersuasion()));
+            LLPersuasion.setVisibility(View.VISIBLE);
         }
         else {
             LLPersuasion.setVisibility(View.GONE);
@@ -166,6 +175,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getLogic() != 0) {
             txtPresence.setText("Presence: " + (player.getPresence()));
             btnPresence.setText(attributeToDice(player.getPresence()));
+            LLPresence.setVisibility(View.VISIBLE);
         }
         else {
             LLPresence.setVisibility(View.GONE);
@@ -173,6 +183,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getAlteration() != 0) {
             txtAlteration.setText("Alteration: " + (player.getAlteration()));
             btnAlteration.setText(attributeToDice(player.getAlteration()));
+            LLAlteration.setVisibility(View.VISIBLE);
         }
         else {
             LLAlteration.setVisibility(View.GONE);
@@ -180,6 +191,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getCreation() != 0) {
             txtCreation.setText("Creation: " + (player.getCreation()));
             btnCreation.setText(attributeToDice(player.getCreation()));
+            LLCreation.setVisibility(View.VISIBLE);
         }
         else {
             LLCreation.setVisibility(View.GONE);
@@ -187,6 +199,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getEnergy() != 0) {
             txtEnergy.setText("Energy: " + (player.getEnergy()));
             btnEnergy.setText(attributeToDice(player.getEnergy()));
+            LLEnergy.setVisibility(View.VISIBLE);
         }
         else {
             LLEnergy.setVisibility(View.GONE);
@@ -194,6 +207,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getEntropy() != 0) {
             txtEntropy.setText("Entropy: " + (player.getEntropy()));
             btnEntropy.setText(attributeToDice(player.getEntropy()));
+            LLEntropy.setVisibility(View.VISIBLE);
         }
         else {
             LLEntropy.setVisibility(View.GONE);
@@ -201,6 +215,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getInfluence() != 0) {
             txtInfluence.setText("Influence: " + (player.getInfluence()));
             btnInfluence.setText(attributeToDice(player.getInfluence()));
+            LLInfluence.setVisibility(View.VISIBLE);
         }
         else {
             LLInfluence.setVisibility(View.GONE);
@@ -208,6 +223,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getMovement() != 0) {
             txtMovement.setText("Movement: " + (player.getMovement()));
             btnMovement.setText(attributeToDice(player.getMovement()));
+            LLMovement.setVisibility(View.VISIBLE);
         }
         else {
             LLMovement.setVisibility(View.GONE);
@@ -215,6 +231,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getPrescience() != 0) {
             txtPrescience.setText("Prescience: " + (player.getPrescience()));
             btnPrescience.setText(attributeToDice(player.getPrescience()));
+            LLPrescience.setVisibility(View.VISIBLE);
         }
         else {
             LLPrescience.setVisibility(View.GONE);
@@ -222,6 +239,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         if (player.getProtection() != 0) {
             txtProtection.setText("Protection: " + (player.getProtection()));
             btnProtection.setText(attributeToDice(player.getProtection()));
+            LLProtection.setVisibility(View.VISIBLE);
         }
         else {
             LLProtection.setVisibility(View.GONE);
