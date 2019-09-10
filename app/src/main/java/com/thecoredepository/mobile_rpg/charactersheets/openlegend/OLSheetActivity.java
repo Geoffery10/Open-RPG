@@ -1,6 +1,8 @@
 package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +20,9 @@ public class OLSheetActivity  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ol_sheet);
         openlegend player = new openlegend();
-        player = Tazmur(player);
+        Intent intent = getIntent();
+        String selected = intent.getExtras().getString("selected");
+        player = loadCharacterSheet(selected, player);
 
         TextView txtName = findViewById(R.id.txtCharName);
         txtName.setText(player.getCharName());
@@ -283,8 +287,106 @@ public class OLSheetActivity  extends AppCompatActivity {
         }
     }
 
+    public openlegend loadCharacterSheet(String selected, openlegend player)
+    {
+        String type = "pc";
+        if (selected.contains("Companion"))
+        {
+            if (selected.contains("III"))
+            {
+                type = "ccIII";
+            }
+            else if (selected.contains("II"))
+            {
+                type = "ccII";
+            }
+            else if (selected.contains("I"))
+            {
+                type = "ccI";
+            }
+            else //PC?
+            {
+                type = "pc";
+            }
+        }
+        if (selected.equals("Tazmur"))
+        {
+            player = Tazmur(player, type);
+        }
+        else if (selected.equals("Thor")) {
+            player = Thor(player, type);
+        }
+        else if (selected.contains("Nightmare")) {
+            player = Nightmare(player, type);
+        }
+        return player;
+    }
 
-    public static openlegend Tazmur(openlegend player)
+    public openlegend Nightmare(openlegend player, String type)
+    {
+        player.setCharName("Nightmare");
+        player.setNickname("Spirit");
+        player.setDeity("Kalle Demos");
+        String[] lang = new String[3];
+        lang[0] = "Gerudo";
+        lang[1] = "Hylian";
+        lang[2] = "Demon";
+        player.setLanguages(lang);
+        player.setBio("A flamboyant, seemingly calm, overconfident opponent whose only goal is to revive Demise, his master. His spirit is bound to Tazmur and is unable to leave him.");
+        player.setEntropy(5);
+        player.setAlteration(5);
+        player.setProtection(4);
+        player.setLevelTotal(10);
+        player.setSpeed(0);
+        player.setDamageTaken(0);
+
+        player.setStats();
+        player.setGetAttributePointsUsed();
+        player.setAttributePointsAvailable(type);
+
+        if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
+        {
+            featsOL.featList();
+        }
+
+        return player;
+    }
+
+    public openlegend Thor(openlegend player, String type)
+    {
+        player.setCharName("Thor");
+        player.setNickname("God of Thunder");
+        player.setDeity("Odin");
+        String[] lang = new String[3];
+        lang[0] = "English";
+        lang[1] = "Asgardian";
+        lang[2] = "Giant";
+        player.setLanguages(lang);
+        player.setBio("Thor is a hammer-wielding god associated with thunder, lightning, storms, oak trees, strength, the protection of mankind and also hallowing and fertility.");
+        player.setFortitude(6);
+        player.setMovement(4);
+        player.setEnergy(6);
+        player.setAgility(4);
+        player.setMight(4);
+        player.setWill(3);
+        player.setArmor(5);
+        player.setLevelTotal(13);
+        player.setSpeed(30);
+        player.setDamageTaken(5);
+
+        player.setStats();
+        player.setGetAttributePointsUsed();
+        player.setAttributePointsAvailable(type);
+
+        if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
+        {
+            featsOL.featList();
+        }
+
+        return player;
+    }
+
+    public openlegend Tazmur(openlegend player, String type)
     {
         player.setCharName("Tazmur");
         player.setNickname("Taz");
@@ -311,9 +413,12 @@ public class OLSheetActivity  extends AppCompatActivity {
 
         player.setStats();
         player.setGetAttributePointsUsed();
-        player.setAttributePointsAvailable();
+        player.setAttributePointsAvailable(type);
 
-        featsOL.featList();
+        if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
+        {
+            featsOL.featList();
+        }
 
         return player;
     }

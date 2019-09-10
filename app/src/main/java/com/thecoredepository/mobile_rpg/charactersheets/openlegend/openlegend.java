@@ -238,8 +238,23 @@ public class openlegend
         return attributePointsAvalible;
     }
 
-    public void setAttributePointsAvailable() {
-        this.attributePointsAvalible = (40 + (getLevelTotal() * 3));
+    public void setAttributePointsAvailable(String type) {
+        if (type.equals("pc"))
+        {
+            this.attributePointsAvalible = (40 + (getLevelTotal() * 3));
+        }
+        else if (type.equals("ccI") || type.equals("ccII"))
+        {
+            this.attributePointsAvalible = (20 + (getLevelTotal() * 3));
+        }
+        else if (type.equals("ccIII"))
+        {
+            this.attributePointsAvalible = (30 + (getLevelTotal() * 3));
+        }
+        else
+        {
+            this.attributePointsAvalible = 0;
+        }
     }
 
     public int getGetAttributePointsUsed() {
@@ -592,7 +607,7 @@ public class openlegend
         setDeception(2);
         setPersuasion(1);
 
-        setAttributePointsAvailable();
+        setAttributePointsAvailable("pc");
         setGetAttributePointsUsed();
         setFeatPointsAvailable();
         setFeatPointsUsed();
