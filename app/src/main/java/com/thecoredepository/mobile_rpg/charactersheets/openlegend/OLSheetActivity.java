@@ -118,6 +118,159 @@ public class OLSheetActivity  extends AppCompatActivity {
                 startActivity(in);
             }
         });
+        btnFortitude.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getFortitude()));
+                startActivity(in);
+            }
+        });
+        btnMight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getMight()));
+                startActivity(in);
+            }
+        });
+        btnLearning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getLearning()));
+                startActivity(in);
+            }
+        });
+        btnLogic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getLogic()));
+                startActivity(in);
+            }
+        });
+        btnPerception.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getPerception()));
+                startActivity(in);
+            }
+        });
+        btnWill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getWill()));
+                startActivity(in);
+            }
+        });
+        btnDeception.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getDeception()));
+                startActivity(in);
+            }
+        });
+        btnPersuasion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getPersuasion()));
+                startActivity(in);
+            }
+        });
+        btnPresence.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getPresence()));
+                startActivity(in);
+            }
+        });
+        btnAlteration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getAlteration()));
+                startActivity(in);
+            }
+        });
+        btnCreation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getCreation()));
+                startActivity(in);
+            }
+        });
+        btnEnergy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getEnergy()));
+                startActivity(in);
+            }
+        });
+        btnEntropy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getEntropy()));
+                startActivity(in);
+            }
+        });
+        btnInfluence.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getInfluence()));
+                startActivity(in);
+            }
+        });
+        btnMovement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getMovement()));
+                startActivity(in);
+            }
+        });
+        btnPrescience.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getPrescience()));
+                startActivity(in);
+            }
+        });
+        btnProtection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Intent in = new Intent(getApplicationContext(), DiceActivity.class);
+                in.putExtra("dice", attributeToDice(player.getProtection()));
+                startActivity(in);
+            }
+        });
 
         if (player.getAgility() != 0) {
             txtAgility.setText("Agility: " + player.getAgility());
@@ -191,7 +344,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         else {
             LLPersuasion.setVisibility(View.GONE);
         }
-        if (player.getLogic() != 0) {
+        if (player.getPresence() != 0) {
             txtPresence.setText("Presence: " + (player.getPresence()));
             btnPresence.setText(attributeToDice(player.getPresence()));
             LLPresence.setVisibility(View.VISIBLE);
