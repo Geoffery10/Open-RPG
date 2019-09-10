@@ -61,7 +61,7 @@ public class openlegend
     private int speed;
 
     //Feats
-    private int featPointsAvaliable;
+    private int featPointsAvailable;
     private int featPointsUsed;
 
     //Perks/Flaws
@@ -121,7 +121,7 @@ public class openlegend
                 ", resolve=" + resolve +
                 ", hitpoints=" + hitpoints +
                 ", speed=" + speed +
-                ", featPointsAvailable=" + featPointsAvaliable +
+                ", featPointsAvailable=" + featPointsAvailable +
                 ", featPointsUsed=" + featPointsUsed +
                 ", perks=" + Arrays.toString(perks) +
                 ", flaws=" + Arrays.toString(flaws) +
@@ -489,11 +489,11 @@ public class openlegend
     }
 
     public int getFeatPointsAvailable() {
-        return featPointsAvaliable;
+        return featPointsAvailable;
     }
 
     public void setFeatPointsAvailable() {
-        this.featPointsAvaliable = (6 + (minorLvl * 2) + (majorLvl * 2));
+        this.featPointsAvailable = (6 + (minorLvl * 2) + (majorLvl * 2));
     }
 
     public int getFeatPointsUsed() {

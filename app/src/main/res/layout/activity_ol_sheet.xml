@@ -216,230 +216,488 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txtSpeed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
+                    android:layout_weight="1"
                     android:text="Speed: "
                     android:textAlignment="center"
                     android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/txtAgility"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="Agility"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLAgility">
 
-                <TextView
-                    android:id="@+id/txtFortitude"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:text="Fortitude"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    <TextView
+                        android:id="@+id/txtAgility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="0"
+                        android:text="Agility"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/txtMight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="Might"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    <Button
+                        android:id="@+id/btnAgility"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtLearning"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Learning"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLFortitude">
 
-                <TextView
-                    android:id="@+id/txtLogic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Logic"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    <TextView
+                        android:id="@+id/txtFortitude"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="0"
+                        android:text="Fortitude"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/txtPerception"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Perception"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    <Button
+                        android:id="@+id/btnFortitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtWill"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Will"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLMight">
 
-                <TextView
-                    android:id="@+id/txtDeception"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Deception"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    <TextView
+                        android:id="@+id/txtMight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="Might"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/txtPersuasion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Persuasion"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    <Button
+                        android:id="@+id/btnMight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtPresence"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Presence"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLLearning">
 
-                <TextView
-                    android:id="@+id/txtAlteration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Alteration"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    <TextView
+                        android:id="@+id/txtLearning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Learning"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/txtCreation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Creation"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    <Button
+                        android:id="@+id/btnLearning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtEnergy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Energy"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLLogic">
 
-                <TextView
-                    android:id="@+id/txtEntropy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Entropy"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    <TextView
+                        android:id="@+id/txtLogic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Logic"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/txtInfluence"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Influence"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    <Button
+                        android:id="@+id/btnLogic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtMovement"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Movement"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLPerception">
 
-                <TextView
-                    android:id="@+id/txtPrescience"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Prescience"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    <TextView
+                        android:id="@+id/txtPerception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Perception"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/txtProtection"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Protection"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                    <Button
+                        android:id="@+id/btnPerception"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLWill">
+
+                    <TextView
+                        android:id="@+id/txtWill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Will"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btnWill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLDeception">
+
+                    <TextView
+                        android:id="@+id/txtDeception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Deception"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btnDeception"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLPersuasion">
+
+                    <TextView
+                        android:id="@+id/txtPersuasion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Persuasion"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btnPersuasion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLPresence">
+
+                    <TextView
+                        android:id="@+id/txtPresence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Presence"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btnPresence"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLAlteration">
+
+                    <TextView
+                        android:id="@+id/txtAlteration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Alteration"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btnAlteration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLCreation">
+
+                    <TextView
+                        android:id="@+id/txtCreation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Creation"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btnCreation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLEnergy">
+
+                    <TextView
+                        android:id="@+id/txtEnergy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Energy"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btnEnergy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLEntropy">
+
+                    <TextView
+                        android:id="@+id/txtEntropy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Entropy"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btnEntropy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLInfluence">
+
+                    <TextView
+                        android:id="@+id/txtInfluence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Influence"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btnInfluence"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLMovement">
+
+                    <TextView
+                        android:id="@+id/txtMovement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Movement"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btnMovement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLPrescience">
+
+                    <TextView
+                        android:id="@+id/txtPrescience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Prescience"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btnPrescience"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLProtection">
+
+                    <TextView
+                        android:id="@+id/txtProtection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Protection"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btnProtection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1d6" />
+                </LinearLayout>
 
                 <Button
                     android:id="@+id/btnInventory"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="32dp"
                     android:padding="18dp"
