@@ -64,8 +64,8 @@ public class DiceActivity extends AppCompatActivity {
                     txtRolls.setText(txtRolls.getText() + "Roll d20: " + roll +"\n");
                 } while (roll == 20);
 
-                //Roll Other
-                for (int i = 0; i <= numberOfDie; i++)
+                //Roll Other Dice
+                for (int i = 0; i < numberOfDie; i++)
                 {
                     do
                     {

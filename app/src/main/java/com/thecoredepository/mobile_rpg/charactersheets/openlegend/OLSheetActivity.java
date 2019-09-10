@@ -29,6 +29,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         String selected = intent.getExtras().getString("selected");
         player = loadCharacterSheet(selected, player);
 
+        //Initialization of Elements
         TextView txtName = findViewById(R.id.txtCharName);
         txtName.setText(player.getCharName());
         TextView txtNickName = findViewById(R.id.txtNickName);
@@ -109,6 +110,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         LinearLayout LLProtection = findViewById(R.id.LLProtection);
         Button btnProtection = findViewById(R.id.btnProtection);
 
+        //Button Clicks
         btnAgility.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -272,6 +274,7 @@ public class OLSheetActivity  extends AppCompatActivity {
             }
         });
 
+        //Element Visibility and Values
         if (player.getAgility() != 0) {
             txtAgility.setText("Agility: " + player.getAgility());
             btnAgility.setText(attributeToDice(player.getAgility()));
@@ -418,6 +421,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         }
     }
 
+    //Changes attribute score to dice string
     public String attributeToDice(int attribute)
     {
         if (attribute == 1){
