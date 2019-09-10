@@ -35,6 +35,12 @@ public class OLSheetActivity  extends AppCompatActivity {
         txtToughness.setText("Toughness: " + player.getToughness());
         TextView txtGuard = findViewById(R.id.txtGuard);
         txtGuard.setText("Guard: " + (player.getGuard()));
+        TextView txtResolve = findViewById(R.id.txtResolve);
+        txtResolve.setText("Resolve: " + player.getResolve());
+        TextView txtHitpoints = findViewById(R.id.txtHitpoints);
+        txtHitpoints.setText("Hitpoints: " + (player.getHitpoints()));
+        TextView txtSpeed = findViewById(R.id.txtSpeed);
+        txtSpeed.setText("Speed: " + (player.getSpeed()));
 
         TextView txtAgility = findViewById(R.id.txtAgility);
         TextView txtFortitude = findViewById(R.id.txtFortitude);
@@ -187,6 +193,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         player.setWill(2);
         player.setArmor(1);
         player.setLevelTotal(10);
+        player.setSpeed(30);
 
         player.setStats();
         player.setGetAttributePointsUsed();
