@@ -57,6 +57,7 @@ public class openlegend
     private int armor;
     private int resolve;
     private int hitpoints;
+    private int damageTaken;
     private int speed;
 
     //Feats
@@ -434,7 +435,7 @@ public class openlegend
         return guard;
     }
 
-    public void setGuard(int guard) {
+    public void setGuard(int armor) {
         this.guard = (10 + agility + might + armor);
     }
 
@@ -443,7 +444,7 @@ public class openlegend
     }
 
     public void setArmor(int armor) {
-        this.guard = armor;
+        this.armor = armor;
     }
 
     public int getResolve() {
@@ -460,6 +461,23 @@ public class openlegend
 
     public void setHitpoints() {
         this.hitpoints = ((2 * (fortitude + presence + will)) + 10);
+    }
+
+    public int getDamageTaken() {
+        return (hitpoints - damageTaken);
+    }
+
+    public void setDamageTaken() {
+        this.damageTaken = 0;
+    }
+
+    public void setDamageTaken(int damage) {
+        this.damageTaken = this.damageTaken + damage;
+    }
+
+    public void damagedHealed(int heal)
+    {
+        this.damageTaken = this.damageTaken - heal;
     }
 
     public int getSpeed() {
@@ -544,6 +562,7 @@ public class openlegend
 
     public void setStats()
     {
+        //This calculates values that aren't directly input.
         setToughness();
         setGuard(getArmor());
         setResolve();
