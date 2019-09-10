@@ -95,7 +95,7 @@ public class openlegend
                 ", deity='" + deity + '\'' +
                 ", languages=" + Arrays.toString(languages) +
                 ", bio='" + bio + '\'' +
-                ", attributePointsAvalible=" + attributePointsAvalible +
+                ", attributePointsAvailable=" + attributePointsAvalible +
                 ", getAttributePointsUsed=" + getAttributePointsUsed +
                 ", agility=" + agility +
                 ", fortitude=" + fortitude +
@@ -121,7 +121,7 @@ public class openlegend
                 ", resolve=" + resolve +
                 ", hitpoints=" + hitpoints +
                 ", speed=" + speed +
-                ", featPointsAvaliable=" + featPointsAvaliable +
+                ", featPointsAvailable=" + featPointsAvaliable +
                 ", featPointsUsed=" + featPointsUsed +
                 ", perks=" + Arrays.toString(perks) +
                 ", flaws=" + Arrays.toString(flaws) +
