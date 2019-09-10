@@ -12,69 +12,69 @@ import java.util.List;
 public class openlegend
 {
     //Values from the Open Legend Character Sheet
-    String playerName = "John Doe";
-    String charName = "Lucifer";
-    String nickname = "Lue";
-    int majorLvl = 1;
-    int minorLvl = 1;
-    String deity = "God";
+    private String playerName = "John Doe";
+    private String charName = "Lucifer";
+    private String nickname = "Lue";
+    private int majorLvl = 1;
+    private int minorLvl = 1;
+    private String deity = "God";
 
-    String[] languages = new String[10];
-    String bio = "Just a chill dude out to kill.";
+    private String[] languages = new String[10];
+    private String bio = "Just a chill dude out to kill.";
 
     //Attributes
-    int attributePointsAvalible;
-    int getAttributePointsUsed;
+    private int attributePointsAvalible;
+    private int getAttributePointsUsed;
     //PHYSICAL ATTRIBUTES
-    int agility;
-    int fortitude;
-    int might;
+    private int agility;
+    private int fortitude;
+    private int might;
     //MENTAL ATTRIBUTES
-    int learning;
-    int logic;
-    int perception;
-    int will;
+    private int learning;
+    private int logic;
+    private int perception;
+    private int will;
     //SOCIAL ATTRIBUTES
-    int deception;
-    int persuasion;
-    int presence;
+    private int deception;
+    private int persuasion;
+    private int presence;
     //EXTRAORDINARY ATTRIBUTES
-    int alteration;
-    int creation;
-    int energy;
-    int entropy;
-    int influence;
-    int movement;
-    int prescience;
-    int protection;
+    private int alteration;
+    private int creation;
+    private int energy;
+    private int entropy;
+    private int influence;
+    private int movement;
+    private int prescience;
+    private int protection;
 
     //Stats
-    int toughness;
-    int guard;
-    int armor;
-    int resolve;
-    int hitpoints;
-    int speed;
+    private int toughness;
+    private int guard;
+    private int armor;
+    private int resolve;
+    private int hitpoints;
+    private int speed;
 
     //Feats
-    int featPointsAvaliable;
-    int featPointsUsed;
+    private int featPointsAvaliable;
+    private int featPointsUsed;
 
     //Perks/Flaws
-    String[] perks = new String[2];
-    String[] flaws = new String[2];
+    private String[] perks = new String[2];
+    private String[] flaws = new String[2];
 
     //Inventory
     //Might use class for inventory
     //inventoryOL inventory = new inventoryOL();
     //Or just keep the values here
-    int inventorySize;
-    List items = new ArrayList<String>();
-    List itemInfo = new ArrayList<String>();
+    private int inventorySize;
+    private List items = new ArrayList<String>();
+    private List itemInfo = new ArrayList<String>();
 
     //Banes/Boons
-    List Banes = new ArrayList<String>();
-    List Boons = new ArrayList<String>();
+    private List Banes = new ArrayList<String>();
+    private List Boons = new ArrayList<String>();
 
 
     //Getters and Setters
@@ -388,7 +388,7 @@ public class openlegend
         return resolve;
     }
 
-    public void setResolve(int resolve) {
+    public void setResolve() {
         this.resolve = (10 + presence + will);
     }
 
@@ -396,7 +396,7 @@ public class openlegend
         return hitpoints;
     }
 
-    public void setHitpoints(int hitpoints) {
+    public void setHitpoints() {
         this.hitpoints = ((2 * (fortitude + presence + will)) + 10);
     }
 
@@ -478,6 +478,14 @@ public class openlegend
 
     public void setBoons(List boons) {
         Boons = boons;
+    }
+
+    public void setStats()
+    {
+        setToughness();
+        setGuard(getArmor());
+        setResolve();
+        setHitpoints();
     }
 
     public void generateRandomCharacter()
