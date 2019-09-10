@@ -56,7 +56,6 @@ public class DiceActivity extends AppCompatActivity {
                     List<Integer> die = new ArrayList<Integer>();
                     int total = 0;
                     int advantage = 0;
-                    boolean disadvantage = false;
                     try {
                         advantage = Integer.parseInt(String.valueOf(editAdv.getText())) - Integer.parseInt(String.valueOf(editDis.getText()));
                     } catch (Exception e)
@@ -71,12 +70,6 @@ public class DiceActivity extends AppCompatActivity {
                         txtRolls.setText(txtRolls.getText() + "Roll d20: " + roll +"\n");
                     } while (roll == 20);
 
-                    numberOfDie = (advantage * 2);
-                    if (numberOfDie <= 0)
-                    {
-                        numberOfDie = numberOfDie * -1;
-                        disadvantage = true;
-                    }
                     //Roll Other Dice
                     for (int i = 0; i < numberOfDie; i++)
                     {
@@ -101,25 +94,6 @@ public class DiceActivity extends AppCompatActivity {
                             die.add(roll);
                             txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
                         } while (roll == valueOfDie);
-                    }
-
-                    if (disadvantage == true)
-                    {
-                        Arrays.sort(die.toArray());
-                        for(int i=0; i < (advantage * -1); i++)
-                        {
-                            txtRolls.setText(txtRolls.getText() + "Removed d"+valueOfDie+" : " + die.get(i) +"\n");
-                            die.remove(i);
-                        }
-                    }
-                    else if (disadvantage == false)
-                    {
-                        Arrays.sort(die.toArray());
-                        for(int i=die.size(); i > (advantage); i--)
-                        {
-                            txtRolls.setText(txtRolls.getText() + "Removed d"+valueOfDie+" : " + die.get(i) +"\n");
-                            die.remove(i);
-                        }
                     }
 
                     //Add Total
