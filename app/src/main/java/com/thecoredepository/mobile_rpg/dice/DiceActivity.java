@@ -48,6 +48,8 @@ public class DiceActivity extends AppCompatActivity {
                     int d20 = 0;
                     List<Integer> die = new ArrayList<Integer>();
                     int total = 0;
+
+                    //====================THE ADVANTAGE SYSTEM NEEDS WORK===========================
                     int advantage = 0;
                     try {
                         advantage = Integer.parseInt(String.valueOf(editAdv.getText())) - Integer.parseInt(String.valueOf(editDis.getText()));
