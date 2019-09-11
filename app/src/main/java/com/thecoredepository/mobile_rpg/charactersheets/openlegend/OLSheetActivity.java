@@ -121,6 +121,17 @@ public class OLSheetActivity extends AppCompatActivity {
         //Button Clicks
         buttonClicks(btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection);
 
+        Button btnInventory = findViewById(R.id.btnInventory);
+        btnInventory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent in = new Intent(getApplicationContext(), OLInventoryActivity.class);
+                //in.putExtra("", attributeToDice();
+                startActivity(in);
+            }
+        });
+
         //Element Visibility and Values
         setAttributes(txtAgility, LLAgility, btnAgility, txtFortitude, LLFortitude, btnFortitude, txtMight, LLMight, btnMight, txtLearning, LLLearning, btnLearning, txtLogic, LLLogic, btnLogic, txtPerception, LLPerception, btnPerception, txtWill, LLWill, btnWill, txtDeception, LLDeception, btnDeception, txtPersuasion, LLPersuasion, btnPersuasion, txtPresence, LLPresence, btnPresence, txtAlteration, LLAlteration, btnAlteration, txtCreation, LLCreation, btnCreation, txtEnergy, LLEnergy, btnEnergy, txtEntropy, LLEntropy, btnEntropy, txtInfluence, LLInfluence, btnInfluence, txtMovement, LLMovement, btnMovement, txtPrescience, LLPrescience, btnPrescience, txtProtection, LLProtection, btnProtection);
 
@@ -329,7 +340,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnAgility.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getAgility()));
                 startActivity(in);
@@ -338,7 +349,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnFortitude.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getFortitude()));
                 startActivity(in);
@@ -347,7 +358,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnMight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getMight()));
                 startActivity(in);
@@ -356,7 +367,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnLearning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getLearning()));
                 startActivity(in);
@@ -365,7 +376,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnLogic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getLogic()));
                 startActivity(in);
@@ -374,7 +385,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnPerception.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getPerception()));
                 startActivity(in);
@@ -383,7 +394,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnWill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getWill()));
                 startActivity(in);
@@ -392,7 +403,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnDeception.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getDeception()));
                 startActivity(in);
@@ -401,7 +412,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnPersuasion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getPersuasion()));
                 startActivity(in);
@@ -410,7 +421,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnPresence.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getPresence()));
                 startActivity(in);
@@ -419,7 +430,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnAlteration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getAlteration()));
                 startActivity(in);
@@ -428,7 +439,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnCreation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getCreation()));
                 startActivity(in);
@@ -437,7 +448,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnEnergy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getEnergy()));
                 startActivity(in);
@@ -446,7 +457,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnEntropy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getEntropy()));
                 startActivity(in);
@@ -455,7 +466,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnInfluence.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getInfluence()));
                 startActivity(in);
@@ -464,7 +475,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnMovement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getMovement()));
                 startActivity(in);
@@ -473,7 +484,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnPrescience.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getPrescience()));
                 startActivity(in);
@@ -482,7 +493,7 @@ public class OLSheetActivity extends AppCompatActivity {
         btnProtection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
+                //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getProtection()));
                 startActivity(in);
