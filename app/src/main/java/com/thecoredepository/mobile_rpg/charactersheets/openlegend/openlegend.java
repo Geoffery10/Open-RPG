@@ -551,6 +551,17 @@ public class openlegend
         this.items = items;
     }
 
+    public void addItem(String item, String itemInfo)
+    {
+        this. items.add(item);
+        this.itemInfo.add(itemInfo);
+    }
+
+    public void removeItems()
+    {
+        //Remove item and description at same index
+    }
+
     public List getItemInfo() {
         return itemInfo;
     }
