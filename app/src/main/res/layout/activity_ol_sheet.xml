@@ -710,12 +710,6 @@
                     android:padding="18dp"
                     android:text="Inventory" />
 
-                <TextView
-                    android:id="@+id/txtInventoryTest"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Test" />
             </LinearLayout>
 
         </LinearLayout>

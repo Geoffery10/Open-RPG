@@ -114,10 +114,6 @@ public class OLSheetActivity extends AppCompatActivity {
         LinearLayout LLProtection = findViewById(R.id.LLProtection);
         Button btnProtection = findViewById(R.id.btnProtection);
 
-        //TEMP
-        TextView txtInventoryTest = findViewById(R.id.txtInventoryTest);
-        txtInventoryTest.setText(player.inventoryToString());
-
         //Button Clicks
         buttonClicks(btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection);
 

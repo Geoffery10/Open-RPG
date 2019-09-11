@@ -32,7 +32,7 @@
                 android:layout_marginRight="24dp"
                 android:text="Item: ItemInfo\n"
                 android:textIsSelectable="true"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
         </LinearLayout>
     </ScrollView>
 
