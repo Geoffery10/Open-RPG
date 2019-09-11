@@ -11,7 +11,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.dice.DiceActivity;
+
 import java.util.Arrays;
+
+import static com.thecoredepository.mobile_rpg.dice.dice.attributeToDice;
 
 public class OLSheetActivity  extends AppCompatActivity {
 
@@ -482,45 +485,6 @@ public class OLSheetActivity  extends AppCompatActivity {
         });
     }
 
-    //Changes attribute score to dice string
-    public String attributeToDice(int attribute)
-    {
-        if (attribute == 1){
-            return "1d4";
-        }
-        else if (attribute == 2){
-            return "1d6";
-        }
-        else if (attribute == 3){
-            return "1d8";
-        }
-        else if (attribute == 4){
-            return "1d10";
-        }
-        else if (attribute == 5){
-            return "2d6";
-        }
-        else if (attribute == 6){
-            return "2d8";
-        }
-        else if (attribute == 7){
-            return "2d10";
-        }
-        else if (attribute == 8){
-            return "3d8";
-        }
-        else if (attribute == 9){
-            return "3d10";
-        }
-        else if (attribute == 10){
-            return "4d8";
-        }
-        else {
-            return "NULL";
-        }
-    }
-
-    //HARD CODED CHARACTERS
     public openlegend loadCharacterSheet(String selected, openlegend player)
     {
         String type = "pc";
@@ -556,6 +520,8 @@ public class OLSheetActivity  extends AppCompatActivity {
         return player;
     }
 
+
+    //HARD CODED CHARACTERS
     public openlegend Nightmare(openlegend player, String type)
     {
         player.setCharName("Nightmare");

@@ -26,4 +26,42 @@ public class dice
     {
         return (int)(Math.random()*20) + 1;
     }
+
+    //Changes attribute score to dice string
+    public static String attributeToDice(int attribute)
+    {
+        if (attribute == 1){
+            return "1d4";
+        }
+        else if (attribute == 2){
+            return "1d6";
+        }
+        else if (attribute == 3){
+            return "1d8";
+        }
+        else if (attribute == 4){
+            return "1d10";
+        }
+        else if (attribute == 5){
+            return "2d6";
+        }
+        else if (attribute == 6){
+            return "2d8";
+        }
+        else if (attribute == 7){
+            return "2d10";
+        }
+        else if (attribute == 8){
+            return "3d8";
+        }
+        else if (attribute == 9){
+            return "3d10";
+        }
+        else if (attribute == 10){
+            return "4d8";
+        }
+        else {
+            return "NULL";
+        }
+    }
 }
