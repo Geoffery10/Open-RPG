@@ -105,6 +105,7 @@
                 android:layout_marginTop="24dp"
                 android:text="Total: "
                 android:textAlignment="center"
+                android:textIsSelectable="true"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="36sp" />
 
@@ -114,6 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="24dp"
                 android:textAlignment="center"
+                android:textIsSelectable="true"
                 android:textSize="36sp" />
 
         </LinearLayout>

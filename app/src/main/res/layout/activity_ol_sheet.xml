@@ -43,6 +43,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="16dp"
                     android:text="name"
+                    android:textIsSelectable="true"
                     android:textAlignment="center"
                     android:textSize="24sp"
                     tools:layout_conversion_absoluteHeight="19dp"
@@ -56,6 +57,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="16dp"
                     android:text="nickname"
+                    android:textIsSelectable="true"
                     android:textAlignment="center"
                     android:textSize="24sp"
                     tools:layout_conversion_absoluteHeight="247dp"
@@ -82,6 +84,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginTop="16dp"
                     android:text="Level x (x)"
+                    android:textIsSelectable="true"
                     android:textAlignment="center"
                     android:textSize="24sp" />
 
@@ -95,6 +98,7 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:text="god"
+                    android:textIsSelectable="true"
                     android:textAlignment="center"
                     android:textSize="24sp" />
             </LinearLayout>
@@ -113,6 +117,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginTop="16dp"
                     android:text="Languages: "
+                    android:textIsSelectable="true"
                     android:textAlignment="center"
                     android:textSize="24sp" />
 
@@ -134,6 +139,7 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:text="Bio:"
+                    android:textIsSelectable="true"
                     android:textAlignment="center"
                     android:textSize="24sp" />
             </LinearLayout>
@@ -154,6 +160,7 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:text="Attributes: "
+                    android:textIsSelectable="true"
                     android:textAlignment="center"
                     android:textSize="24sp" />
             </LinearLayout>
@@ -174,6 +181,7 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:text="Toughness"
+                    android:textIsSelectable="true"
                     android:textAlignment="center"
                     android:textSize="24sp" />
 
@@ -185,6 +193,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginTop="16dp"
                     android:text="Guard"
+                    android:textIsSelectable="true"
                     android:textAlignment="center"
                     android:textSize="24sp" />
 
@@ -206,6 +215,7 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:text="Resolve"
+                    android:textIsSelectable="true"
                     android:textAlignment="center"
                     android:textSize="24sp" />
 
@@ -217,6 +227,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginTop="16dp"
                     android:text="Hitpoints 0/10"
+                    android:textIsSelectable="true"
                     android:textAlignment="center"
                     android:textSize="24sp" />
 
@@ -242,6 +253,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
                     android:text="Speed: "
+                    android:textIsSelectable="true"
                     android:textAlignment="center"
                     android:textSize="24sp" />
 
@@ -262,6 +274,7 @@
                         android:layout_marginRight="16dp"
                         android:layout_weight="0"
                         android:text="Agility"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -289,6 +302,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_weight="0"
                         android:text="Fortitude"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -316,6 +330,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
                         android:text="Might"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -341,6 +356,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Learning"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -366,6 +382,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Logic"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -391,6 +408,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Perception"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -416,6 +434,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Will"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -441,6 +460,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Deception"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -466,6 +486,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Persuasion"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -491,6 +512,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Presence"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -516,6 +538,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Alteration"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -541,6 +564,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Creation"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -566,6 +590,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Energy"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -591,6 +616,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Entropy"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -616,6 +642,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Influence"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -641,6 +668,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Movement"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -666,6 +694,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Prescience"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
@@ -691,6 +720,7 @@
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
                         android:text="Protection"
+                        android:textIsSelectable="true"
                         android:textAlignment="center"
                         android:textSize="24sp" />
 
