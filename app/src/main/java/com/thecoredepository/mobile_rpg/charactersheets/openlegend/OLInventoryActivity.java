@@ -2,7 +2,10 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +15,8 @@ import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openle
 
 public class OLInventoryActivity extends AppCompatActivity
 {
+    private Menu menu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +31,35 @@ public class OLInventoryActivity extends AppCompatActivity
 
         for (int i = 0; i < player.getInventorySize(); i++)
         {
-            txtInventory.setText(txtInventory.getText() + player.getItemAt(i) +" : "+ player.getItemInfoAt(i) + "\n");
+            txtInventory.setText(txtInventory.getText() + "\u2022 " + player.getItemAt(i) +" : "+ player.getItemInfoAt(i) + "\n");
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.inventory_menu, menu);
+        this.menu = menu;
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        Toast toast = Toast.makeText(this, "Feature Not Avaliable Yet", Toast.LENGTH_SHORT);
+        switch(item.getItemId()) {
+            case R.id.addItem:
+                toast.show();
+                break;
+            case R.id.removeItem:
+                toast.show();
+                break;
+            case R.id.editItem:
+                toast.show();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+        return true;
     }
 }

@@ -627,8 +627,14 @@ public class OLSheetActivity extends AppCompatActivity {
         player.setGetAttributePointsUsed();
         player.setAttributePointsAvailable(type);
 
-        player.addItem("Sword", "It Cuts Things!");
-        player.addItem("Gold", "It's valuable");
+        player.setWealth(3);
+        player.addItem("Leather Armor", "(+1 Guard)");
+        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Intuitive + 1)");
+        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Intuitive + 1)");
+        player.addItem("Bow", "Agility v. Guard - Range 125ft");
+        player.addItem("Creature Book", "Advantage on Creature Knowledge");
+        player.addItem("Mask Collection (10)", "Collection of Masks from the Happy Mask Sales Men");
+        player.addItem("Magic Pearl", "Magic Peal with the power to stop the transformitive effects of the Dark World");
 
         if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
         {
