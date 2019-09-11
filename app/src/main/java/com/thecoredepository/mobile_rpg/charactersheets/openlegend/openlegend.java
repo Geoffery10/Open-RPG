@@ -543,31 +543,36 @@ public class openlegend
         this.inventorySize = inventorySize;
     }
 
-    public List getItems() {
+    public List getAllItems() {
         return items;
+    }
+
+    public List getAllItemInfo() {
+        return itemInfo;
     }
 
     public void setItems(List items) {
         this.items = items;
     }
 
+    public void setItemInfo(List itemInfo) {
+        this.itemInfo = itemInfo;
+    }
+
     public void addItem(String item, String itemInfo)
     {
         this. items.add(item);
         this.itemInfo.add(itemInfo);
+        this.inventorySize += 1;
     }
 
-    public void removeItems()
+    public void removeItem(String item)
     {
         //Remove item and description at same index
-    }
-
-    public List getItemInfo() {
-        return itemInfo;
-    }
-
-    public void setItemInfo(List itemInfo) {
-        this.itemInfo = itemInfo;
+        int index = items.indexOf(item);
+        this.items.remove(index);
+        this.itemInfo.remove(index);
+        this.inventorySize -= 1;
     }
 
     public List getBanes() {
