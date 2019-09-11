@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.example.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.dice.DiceActivity;
 
@@ -114,19 +116,12 @@ public class OLSheetActivity extends AppCompatActivity {
         LinearLayout LLProtection = findViewById(R.id.LLProtection);
         Button btnProtection = findViewById(R.id.btnProtection);
 
-        //Button Clicks
-        buttonClicks(btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection);
-
         Button btnInventory = findViewById(R.id.btnInventory);
-        btnInventory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                Intent in = new Intent(getApplicationContext(), OLInventoryActivity.class);
-                //in.putExtra("", attributeToDice();
-                startActivity(in);
-            }
-        });
+        Button btnBanes = findViewById(R.id.btnBanes);
+        Button btnBoons = findViewById(R.id.btnBoons);
+
+        //Button Clicks
+        buttonClicks(btnBanes, btnBoons, btnInventory, btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection);
 
         //Element Visibility and Values
         setAttributes(txtAgility, LLAgility, btnAgility, txtFortitude, LLFortitude, btnFortitude, txtMight, LLMight, btnMight, txtLearning, LLLearning, btnLearning, txtLogic, LLLogic, btnLogic, txtPerception, LLPerception, btnPerception, txtWill, LLWill, btnWill, txtDeception, LLDeception, btnDeception, txtPersuasion, LLPersuasion, btnPersuasion, txtPresence, LLPresence, btnPresence, txtAlteration, LLAlteration, btnAlteration, txtCreation, LLCreation, btnCreation, txtEnergy, LLEnergy, btnEnergy, txtEntropy, LLEntropy, btnEntropy, txtInfluence, LLInfluence, btnInfluence, txtMovement, LLMovement, btnMovement, txtPrescience, LLPrescience, btnPrescience, txtProtection, LLProtection, btnProtection);
@@ -156,6 +151,12 @@ public class OLSheetActivity extends AppCompatActivity {
                 }
                 showHideBio();
                 break;
+            case R.id.Banes:
+                toBanes();
+                break;
+            case R.id.Boons:
+                toBoons();
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -183,6 +184,26 @@ public class OLSheetActivity extends AppCompatActivity {
             txtLang.setVisibility(View.VISIBLE);
             txtBio.setVisibility(View.VISIBLE);
         }
+    }
+
+    private void toBanes()
+    {
+        Toast toast = Toast.makeText(this, "Banes Not Available Yet", Toast.LENGTH_SHORT);
+        toast.show();
+        /*
+        Intent in = new Intent(getApplicationContext(), OLBanes.class);
+        startActivity(in);
+         */
+    }
+
+    private void toBoons()
+    {
+        Toast toast = Toast.makeText(this, "Boons Not Available Yet", Toast.LENGTH_SHORT);
+        toast.show();
+        /*
+        Intent in = new Intent(getApplicationContext(), OLBoons.class);
+        startActivity(in);
+         */
     }
 
     private void setAttributes(TextView txtAgility, LinearLayout LLAgility, Button btnAgility, TextView txtFortitude, LinearLayout LLFortitude, Button btnFortitude, TextView txtMight, LinearLayout LLMight, Button btnMight, TextView txtLearning, LinearLayout LLLearning, Button btnLearning, TextView txtLogic, LinearLayout LLLogic, Button btnLogic, TextView txtPerception, LinearLayout LLPerception, Button btnPerception, TextView txtWill, LinearLayout LLWill, Button btnWill, TextView txtDeception, LinearLayout LLDeception, Button btnDeception, TextView txtPersuasion, LinearLayout LLPersuasion, Button btnPersuasion, TextView txtPresence, LinearLayout LLPresence, Button btnPresence, TextView txtAlteration, LinearLayout LLAlteration, Button btnAlteration, TextView txtCreation, LinearLayout LLCreation, Button btnCreation, TextView txtEnergy, LinearLayout LLEnergy, Button btnEnergy, TextView txtEntropy, LinearLayout LLEntropy, Button btnEntropy, TextView txtInfluence, LinearLayout LLInfluence, Button btnInfluence, TextView txtMovement, LinearLayout LLMovement, Button btnMovement, TextView txtPrescience, LinearLayout LLPrescience, Button btnPrescience, TextView txtProtection, LinearLayout LLProtection, Button btnProtection) {
@@ -332,7 +353,33 @@ public class OLSheetActivity extends AppCompatActivity {
         }
     }
 
-    private void buttonClicks(Button btnAgility, Button btnFortitude, Button btnMight, Button btnLearning, Button btnLogic, Button btnPerception, Button btnWill, Button btnDeception, Button btnPersuasion, Button btnPresence, Button btnAlteration, Button btnCreation, Button btnEnergy, Button btnEntropy, Button btnInfluence, Button btnMovement, Button btnPrescience, Button btnProtection) {
+    private void buttonClicks(Button btnBanes, Button btnBoons, Button btnInventory, Button btnAgility, Button btnFortitude, Button btnMight, Button btnLearning, Button btnLogic, Button btnPerception, Button btnWill, Button btnDeception, Button btnPersuasion, Button btnPresence, Button btnAlteration, Button btnCreation, Button btnEnergy, Button btnEntropy, Button btnInfluence, Button btnMovement, Button btnPrescience, Button btnProtection) {
+        btnBanes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                toBanes();
+            }
+        });
+
+        btnBoons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                toBoons();
+            }
+        });
+
+        btnInventory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent in = new Intent(getApplicationContext(), OLInventoryActivity.class);
+                //in.putExtra("", attributeToDice();
+                startActivity(in);
+            }
+        });
+
         btnAgility.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
