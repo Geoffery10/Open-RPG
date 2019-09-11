@@ -3,6 +3,8 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -14,6 +16,8 @@ import java.util.Arrays;
 public class OLSheetActivity  extends AppCompatActivity {
 
     public openlegend player = new openlegend();
+    public boolean bioEnabled = false;
+    public Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         Intent intent = getIntent();
         String selected = intent.getExtras().getString("selected");
         player = loadCharacterSheet(selected, player);
+        showHideBio();
 
         //Initialization of Elements
         TextView txtName = findViewById(R.id.txtCharName);
@@ -49,6 +54,7 @@ public class OLSheetActivity  extends AppCompatActivity {
         TextView txtSpeed = findViewById(R.id.txtSpeed);
         txtSpeed.setText("Speed: " + (player.getSpeed()));
 
+        //Attributes
         TextView txtAgility = findViewById(R.id.txtAgility);
         LinearLayout LLAgility = findViewById(R.id.LLAgility);
         Button btnAgility = findViewById(R.id.btnAgility);
@@ -109,6 +115,59 @@ public class OLSheetActivity  extends AppCompatActivity {
 
         //Element Visibility and Values
         setAttributes(txtAgility, LLAgility, btnAgility, txtFortitude, LLFortitude, btnFortitude, txtMight, LLMight, btnMight, txtLearning, LLLearning, btnLearning, txtLogic, LLLogic, btnLogic, txtPerception, LLPerception, btnPerception, txtWill, LLWill, btnWill, txtDeception, LLDeception, btnDeception, txtPersuasion, LLPersuasion, btnPersuasion, txtPresence, LLPresence, btnPresence, txtAlteration, LLAlteration, btnAlteration, txtCreation, LLCreation, btnCreation, txtEnergy, LLEnergy, btnEnergy, txtEntropy, LLEntropy, btnEntropy, txtInfluence, LLInfluence, btnInfluence, txtMovement, LLMovement, btnMovement, txtPrescience, LLPrescience, btnPrescience, txtProtection, LLProtection, btnProtection);
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.sheet_menu, menu);
+        this.menu = menu;
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch(item.getItemId()) {
+            case R.id.Bio:
+                MenuItem bio = menu.findItem(R.id.Bio);
+                if (bioEnabled == false) {
+                    bioEnabled = true;
+                    bio.setTitle("Hide Bio");
+                }
+                else {
+                    bioEnabled = false;
+                    bio.setTitle("Show Bio");
+                }
+                showHideBio();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+        return true;
+    }
+
+    private void showHideBio()
+    {
+        TextView txtLvl = findViewById(R.id.txtLvl);
+        TextView txtDeity = findViewById(R.id.txtDeity);
+        TextView txtLang = findViewById(R.id.txtLang);
+        TextView txtBio = findViewById(R.id.txtBio);
+        if (bioEnabled == false)
+        {
+            txtLvl.setVisibility(View.GONE);
+            txtDeity.setVisibility(View.GONE);
+            txtLang.setVisibility(View.GONE);
+            txtBio.setVisibility(View.GONE);
+        }
+        else
+        {
+            txtLvl.setVisibility(View.VISIBLE);
+            txtDeity.setVisibility(View.VISIBLE);
+            txtLang.setVisibility(View.VISIBLE);
+            txtBio.setVisibility(View.VISIBLE);
+        }
     }
 
     private void setAttributes(TextView txtAgility, LinearLayout LLAgility, Button btnAgility, TextView txtFortitude, LinearLayout LLFortitude, Button btnFortitude, TextView txtMight, LinearLayout LLMight, Button btnMight, TextView txtLearning, LinearLayout LLLearning, Button btnLearning, TextView txtLogic, LinearLayout LLLogic, Button btnLogic, TextView txtPerception, LinearLayout LLPerception, Button btnPerception, TextView txtWill, LinearLayout LLWill, Button btnWill, TextView txtDeception, LinearLayout LLDeception, Button btnDeception, TextView txtPersuasion, LinearLayout LLPersuasion, Button btnPersuasion, TextView txtPresence, LinearLayout LLPresence, Button btnPresence, TextView txtAlteration, LinearLayout LLAlteration, Button btnAlteration, TextView txtCreation, LinearLayout LLCreation, Button btnCreation, TextView txtEnergy, LinearLayout LLEnergy, Button btnEnergy, TextView txtEntropy, LinearLayout LLEntropy, Button btnEntropy, TextView txtInfluence, LinearLayout LLInfluence, Button btnInfluence, TextView txtMovement, LinearLayout LLMovement, Button btnMovement, TextView txtPrescience, LinearLayout LLPrescience, Button btnPrescience, TextView txtProtection, LinearLayout LLProtection, Button btnProtection) {
