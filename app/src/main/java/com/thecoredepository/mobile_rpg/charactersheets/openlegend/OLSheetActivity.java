@@ -113,6 +113,10 @@ public class OLSheetActivity  extends AppCompatActivity {
         LinearLayout LLProtection = findViewById(R.id.LLProtection);
         Button btnProtection = findViewById(R.id.btnProtection);
 
+        //TEMP
+        TextView txtInventoryTest = findViewById(R.id.txtInventoryTest);
+        txtInventoryTest.setText(player.inventoryToString());
+
         //Button Clicks
         buttonClicks(btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection);
 
@@ -614,6 +618,9 @@ public class OLSheetActivity  extends AppCompatActivity {
         player.setStats();
         player.setGetAttributePointsUsed();
         player.setAttributePointsAvailable(type);
+
+        player.addItem("Sword", "It Cuts Things!");
+        player.addItem("Gold", "It's valuable");
 
         if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
         {

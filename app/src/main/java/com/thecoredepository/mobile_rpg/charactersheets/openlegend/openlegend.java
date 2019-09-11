@@ -7,6 +7,7 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
 import android.util.Log;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -573,6 +574,13 @@ public class openlegend
         this.items.remove(index);
         this.itemInfo.remove(index);
         this.inventorySize -= 1;
+    }
+
+    public String inventoryToString()
+    {
+        return "Inventory - {" +
+            "Inventory=" + Arrays.toString(items.toArray())
+                + "\nItem Info=" + Arrays.toString(itemInfo.toArray()) + "}";
     }
 
     public List getBanes() {
