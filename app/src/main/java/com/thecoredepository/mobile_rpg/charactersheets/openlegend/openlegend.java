@@ -76,6 +76,7 @@ public class openlegend
     private int inventorySize;
     private List items = new ArrayList<String>();
     private List itemInfo = new ArrayList<String>();
+    private int wealth;
 
     //Banes/Boons
     private List Banes = new ArrayList<String>();
@@ -89,16 +90,17 @@ public class openlegend
 
     @Override
     public String toString() {
-        return "openlegend sheet - {" +
+        return "openlegend{" +
                 "playerName='" + playerName + '\'' +
                 ", charName='" + charName + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", majorLvl=" + majorLvl +
                 ", minorLvl=" + minorLvl +
+                ", levelTotal=" + levelTotal +
                 ", deity='" + deity + '\'' +
                 ", languages=" + Arrays.toString(languages) +
                 ", bio='" + bio + '\'' +
-                ", attributePointsAvailable=" + attributePointsAvalible +
+                ", attributePointsAvalible=" + attributePointsAvalible +
                 ", getAttributePointsUsed=" + getAttributePointsUsed +
                 ", agility=" + agility +
                 ", fortitude=" + fortitude +
@@ -123,6 +125,7 @@ public class openlegend
                 ", armor=" + armor +
                 ", resolve=" + resolve +
                 ", hitpoints=" + hitpoints +
+                ", damageTaken=" + damageTaken +
                 ", speed=" + speed +
                 ", featPointsAvailable=" + featPointsAvailable +
                 ", featPointsUsed=" + featPointsUsed +
@@ -131,6 +134,7 @@ public class openlegend
                 ", inventorySize=" + inventorySize +
                 ", items=" + items +
                 ", itemInfo=" + itemInfo +
+                ", wealth=" + wealth +
                 ", Banes=" + Banes +
                 ", Boons=" + Boons +
                 '}';
@@ -554,6 +558,16 @@ public class openlegend
         return itemInfo;
     }
 
+    public String getItemAt(int index)
+    {
+        return (String) this.items.get(index);
+    }
+
+    public String getItemInfoAt(int index)
+    {
+        return (String) this.itemInfo.get(index);
+    }
+
     public void setItems(List items) {
         this.items = items;
     }
@@ -583,6 +597,25 @@ public class openlegend
         return "Inventory - {" +
             "Inventory=" + Arrays.toString(items.toArray())
                 + "\nItem Info=" + Arrays.toString(itemInfo.toArray()) + "}";
+    }
+
+    public int getWealth()
+    {
+        return this.wealth;
+    }
+
+    public void setWealth(int wealth) {
+        this.wealth = wealth;
+    }
+
+    public void addWealth()
+    {
+        this.wealth = wealth += 1;
+    }
+
+    public void removeWealth()
+    {
+        this.wealth = wealth -= 1;
     }
 
     public List getBanes() {
