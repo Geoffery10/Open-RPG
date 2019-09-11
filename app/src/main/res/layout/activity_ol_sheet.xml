@@ -732,11 +732,38 @@
                         android:text="1d6" />
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+
+                    <Button
+                        android:id="@+id/btnBanes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+                        android:text="Banes" />
+
+                    <Button
+                        android:id="@+id/btnBoons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+                        android:text="Boons" />
+                </LinearLayout>
+
                 <Button
                     android:id="@+id/btnInventory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="32dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginHorizontal="5dp"
                     android:padding="18dp"
                     android:text="Inventory" />
 
