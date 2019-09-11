@@ -81,6 +81,8 @@ public class openlegend
     private List Banes = new ArrayList<String>();
     private List Boons = new ArrayList<String>();
 
+    //Define Player
+    public static openlegend player = new openlegend();
 
     //Getters and Setters
 

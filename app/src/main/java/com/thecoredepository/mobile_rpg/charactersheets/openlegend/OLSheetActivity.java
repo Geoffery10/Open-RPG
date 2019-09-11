@@ -14,11 +14,12 @@ import com.thecoredepository.mobile_rpg.dice.DiceActivity;
 
 import java.util.Arrays;
 
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 import static com.thecoredepository.mobile_rpg.dice.dice.attributeToDice;
 
-public class OLSheetActivity  extends AppCompatActivity {
+public class OLSheetActivity extends AppCompatActivity {
 
-    public openlegend player = new openlegend();
+    //public openlegend player = new openlegend();
     public boolean bioEnabled = false;
     public Menu menu;
 
