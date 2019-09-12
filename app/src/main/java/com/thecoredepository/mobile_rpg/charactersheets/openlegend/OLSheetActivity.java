@@ -707,7 +707,7 @@ public class OLSheetActivity extends AppCompatActivity {
 		player.setLogic(3);
 		player.setWill(4);
 		player.setFortitude(3);
-		player.setPresence(2)
+		player.setPresence(2);
 		player.setLearning(2);
 		player.setArmor(1);
         player.setLevelTotal(10);
@@ -721,12 +721,12 @@ public class OLSheetActivity extends AppCompatActivity {
         player.setWealth(1);
 		
 		player.addItem("Leather Armor", "(+1 Guard)");
-		player.addItem("Longbow");
+		player.addItem("Longbow", "");
 		player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Intuitive + 1)");
 		player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Intuitive + 1)");	
-		player.addItem("Rope 50");
-		player.addItem("Lockpicks");
-		player.addItem("Deku Mask");
+		player.addItem("Rope 50", "");
+		player.addItem("Lockpicks", "");
+		player.addItem("Deku Mask", "");
 		
         if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
         {
