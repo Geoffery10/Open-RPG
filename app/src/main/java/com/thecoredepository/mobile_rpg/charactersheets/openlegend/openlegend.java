@@ -6,6 +6,7 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 */
 
 import android.util.Log;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -708,6 +709,69 @@ public class openlegend
     {
         player = sheets.get(sheetList.indexOf(selected));
         return player;
+    }
+
+    public void newCharacter(String playerName, String type, String charName, String nickname, int majorLvl, int minorLvl, int levelTotal, String deity, String[] languages, String bio, int attributePointsAvalible, int getAttributePointsUsed, int agility, int fortitude, int might, int learning, int logic, int perception, int will, int deception, int persuasion, int presence, int alteration, int creation, int energy, int entropy, int influence, int movement, int prescience, int protection, int toughness, int guard, int armor, int resolve, int hitpoints, int damageTaken, int speed, int featPointsAvailable, int featPointsUsed, String[] perks, String[] flaws, int inventorySize, List items, List itemInfo, int wealth, List banes, List boons) {
+        openlegend newChar = new openlegend();
+
+        newChar.playerName = playerName;
+        newChar.type = type;
+        newChar.charName = charName;
+        newChar.nickname = nickname;
+        newChar.majorLvl = getMajorLvl();
+        newChar.minorLvl = getMinorLvl();
+        newChar.levelTotal = levelTotal;
+        newChar.deity = deity;
+        newChar.languages = languages;
+        newChar.bio = bio;
+        newChar.getAttributePointsUsed = getAttributePointsUsed;
+        setAttributePointsAvailable(type);
+        newChar.agility = agility;
+        newChar.fortitude = fortitude;
+        newChar.might = might;
+        newChar.learning = learning;
+        newChar.logic = logic;
+        newChar.perception = perception;
+        newChar.will = will;
+        newChar.deception = deception;
+        newChar.persuasion = persuasion;
+        newChar.presence = presence;
+        newChar.alteration = alteration;
+        newChar.creation = creation;
+        newChar.energy = energy;
+        newChar.entropy = entropy;
+        newChar.influence = influence;
+        newChar.movement = movement;
+        newChar.prescience = prescience;
+        newChar.protection = protection;
+        newChar.toughness = toughness;
+        newChar.guard = guard;
+        newChar.armor = armor;
+        newChar.resolve = resolve;
+        newChar.hitpoints = hitpoints;
+        newChar.damageTaken = damageTaken;
+        newChar.speed = speed;
+        newChar.featPointsAvailable = featPointsAvailable;
+        newChar.featPointsUsed = featPointsUsed;
+        newChar.perks = perks;
+        newChar.flaws = flaws;
+        newChar.inventorySize = inventorySize;
+        newChar.items = items;
+        newChar.itemInfo = itemInfo;
+        newChar.wealth = wealth;
+        Banes = banes;
+        Boons = boons;
+
+        if (sheetList.contains(newChar.getCharName()) == false)
+        {
+            sheetList.add(newChar.getCharName());
+            sheets.add(newChar);
+            Log.i("Sheets", "Character Created");
+        }
+        else
+        {
+            Log.i("Sheets", "Character Already Exists");
+        }
     }
 
     public static void HARDCODEDSHEETS()
