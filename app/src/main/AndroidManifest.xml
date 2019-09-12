@@ -32,6 +32,16 @@
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLBanesBoonsActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLFeatsActivitiy"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

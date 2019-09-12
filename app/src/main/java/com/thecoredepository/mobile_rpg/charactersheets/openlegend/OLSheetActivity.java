@@ -192,22 +192,16 @@ public class OLSheetActivity extends AppCompatActivity {
 
     private void toBanes()
     {
-        Toast toast = Toast.makeText(this, "Banes Not Available Yet", Toast.LENGTH_SHORT);
-        toast.show();
-        /*
-        Intent in = new Intent(getApplicationContext(), OLBanes.class);
+        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+        in.putExtra("selected", "bane");
         startActivity(in);
-         */
     }
 
     private void toBoons()
     {
-        Toast toast = Toast.makeText(this, "Boons Not Available Yet", Toast.LENGTH_SHORT);
-        toast.show();
-        /*
-        Intent in = new Intent(getApplicationContext(), OLBoons.class);
+        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+        in.putExtra("selected", "boons");
         startActivity(in);
-         */
     }
 
     private void setAttributes(TextView txtAgility, LinearLayout LLAgility, Button btnAgility, TextView txtFortitude, LinearLayout LLFortitude, Button btnFortitude, TextView txtMight, LinearLayout LLMight, Button btnMight, TextView txtLearning, LinearLayout LLLearning, Button btnLearning, TextView txtLogic, LinearLayout LLLogic, Button btnLogic, TextView txtPerception, LinearLayout LLPerception, Button btnPerception, TextView txtWill, LinearLayout LLWill, Button btnWill, TextView txtDeception, LinearLayout LLDeception, Button btnDeception, TextView txtPersuasion, LinearLayout LLPersuasion, Button btnPersuasion, TextView txtPresence, LinearLayout LLPresence, Button btnPresence, TextView txtAlteration, LinearLayout LLAlteration, Button btnAlteration, TextView txtCreation, LinearLayout LLCreation, Button btnCreation, TextView txtEnergy, LinearLayout LLEnergy, Button btnEnergy, TextView txtEntropy, LinearLayout LLEntropy, Button btnEntropy, TextView txtInfluence, LinearLayout LLInfluence, Button btnInfluence, TextView txtMovement, LinearLayout LLMovement, Button btnMovement, TextView txtPrescience, LinearLayout LLPrescience, Button btnPrescience, TextView txtProtection, LinearLayout LLProtection, Button btnProtection) {
