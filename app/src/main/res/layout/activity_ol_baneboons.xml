@@ -62,7 +62,7 @@
                             android:id="@+id/txtDescription01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="You blind your foe with anything from a massive explosion, to a handful of sand, to an arctic blast, to a dazzling flash of light. Pirates, snipers, rogues, and necromancers often make use of this bane in combat."
+                            android:text="@string/blinded_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -162,7 +162,7 @@
                             android:id="@+id/txtEffect01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text=""
+                            android:text="@string/blinded_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -170,7 +170,8 @@
                             android:id="@+id/viewSpecial01"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
                             <TextView
                                 android:id="@+id/lblSpecial01"
@@ -188,7 +189,6 @@
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
                         </LinearLayout>
-
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -211,7 +211,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
-                        android:text="Charmed  -  3/4/6" />
+                        android:text="Blind  -  5" />
 
                     <LinearLayout
                         android:id="@+id/infoBB02"
@@ -220,47 +220,41 @@
                         android:orientation="vertical"
                         android:visibility="gone">
 
-                        <Button
-                            android:id="@+id/txtAttributes02"
+                        <TextView
+                            android:id="@+id/lblDescription02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Influence"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/blinded_description"
                             android:textSize="20sp" />
 
-                        <Button
-                            android:id="@+id/txtAttack02"
+                        <TextView
+                            android:id="@+id/lblDuration02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Influence vs. Resolve"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Resist ends (Fail x 3 = 1 minute)"
+                            android:textAlignment="center"
                             android:textSize="20sp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/txtPowerLvl02"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="3 > 4 > 6"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
 
                             <TextView
                                 android:id="@+id/lblPowerLvl02"
@@ -270,13 +264,84 @@
                                 android:gravity="center"
                                 android:text="Power Level"
                                 android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl02"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
                         </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/blinded_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
 
                         <LinearLayout
                             android:id="@+id/viewSpecial02"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
                             <TextView
                                 android:id="@+id/lblSpecial02"
@@ -294,69 +359,6 @@
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
                         </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/lblDescription02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Description"
-                            android:textSize="25sp" />
-
-                        <TextView
-                            android:id="@+id/txtDescription02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Charms are one of the great banes of legend, wielded by powerful enchantresses like Circe (of Homer's The Odyssey), nymphs, psychics, and other characters who control the will of others, not through total domination, but through a magical spell of love or friendship."
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:id="@+id/lblDuration02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Duration"
-                            android:textSize="25sp" />
-
-                        <TextView
-                            android:id="@+id/txtDuration02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Resist ends (special) (Fail x 3 = 24 hours)"
-                            android:textAlignment="center"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:id="@+id/lblAttributes02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Attributes"
-                            android:textSize="25sp" />
-
-                        <TextView
-                            android:id="@+id/lblAttack02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Attack"
-                            android:textSize="25sp" />
-
-                        <TextView
-                            android:id="@+id/lblEffect02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Effect"
-                            android:textSize="25sp" />
-
-                        <TextView
-                            android:id="@+id/txtEffect02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""
-                            android:textAlignment="center"
-                            android:textSize="20sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -388,81 +390,6 @@
                         android:orientation="vertical"
                         android:visibility="gone">
 
-                        <Button
-                            android:id="@+id/txtAttributes03"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="Alteration - Creation - Energy - Entropy"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack03"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/txtPowerLvl03"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="5"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl03"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial03"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/lblSpecial03"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial03"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="N/A"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblDescription03"
                             android:layout_width="match_parent"
@@ -475,7 +402,7 @@
                             android:id="@+id/txtDescription03"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="You blind your foe with anything from a massive explosion, to a handful of sand, to an arctic blast, to a dazzling flash of light. Pirates, snipers, rogues, and necromancers often make use of this bane in combat."
+                            android:text="@string/blinded_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -494,6 +421,35 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl03"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl03"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
                         <TextView
                             android:id="@+id/lblAttributes03"
                             android:layout_width="match_parent"
@@ -502,6 +458,18 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
+                        <Button
+                            android:id="@+id/txtAttributes03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
                         <TextView
                             android:id="@+id/lblAttack03"
                             android:layout_width="match_parent"
@@ -509,6 +477,18 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect03"
@@ -522,9 +502,33 @@
                             android:id="@+id/txtEffect03"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="The target cannot see as long as the effect persists. The target automatically fails any Perception rolls based solely on normal sight. Attack rolls and Perception rolls based partially on sight that can be supplemented by another sense suffer disadvantage 5. The target's Guard defense is reduced by 3."
+                            android:text="@string/blinded_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial03"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial03"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial03"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="N/A"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -556,81 +560,6 @@
                         android:orientation="vertical"
                         android:visibility="gone">
 
-                        <Button
-                            android:id="@+id/txtAttributes04"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="Alteration - Creation - Energy - Entropy"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack04"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/txtPowerLvl04"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="5"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl04"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial04"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/lblSpecial04"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial04"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="N/A"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblDescription04"
                             android:layout_width="match_parent"
@@ -643,7 +572,7 @@
                             android:id="@+id/txtDescription04"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="You blind your foe with anything from a massive explosion, to a handful of sand, to an arctic blast, to a dazzling flash of light. Pirates, snipers, rogues, and necromancers often make use of this bane in combat."
+                            android:text="@string/blinded_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -662,6 +591,35 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl04"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl04"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
                         <TextView
                             android:id="@+id/lblAttributes04"
                             android:layout_width="match_parent"
@@ -670,6 +628,18 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
+                        <Button
+                            android:id="@+id/txtAttributes04"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
                         <TextView
                             android:id="@+id/lblAttack04"
                             android:layout_width="match_parent"
@@ -677,6 +647,18 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack04"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect04"
@@ -690,9 +672,33 @@
                             android:id="@+id/txtEffect04"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="The target cannot see as long as the effect persists. The target automatically fails any Perception rolls based solely on normal sight. Attack rolls and Perception rolls based partially on sight that can be supplemented by another sense suffer disadvantage 5. The target's Guard defense is reduced by 3."
+                            android:text="@string/blinded_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial04"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial04"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial04"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="N/A"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -724,81 +730,6 @@
                         android:orientation="vertical"
                         android:visibility="gone">
 
-                        <Button
-                            android:id="@+id/txtAttributes05"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="Alteration - Creation - Energy - Entropy"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack05"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/txtPowerLvl05"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="5"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl05"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial05"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/lblSpecial05"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial05"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="N/A"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblDescription05"
                             android:layout_width="match_parent"
@@ -811,7 +742,7 @@
                             android:id="@+id/txtDescription05"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="You blind your foe with anything from a massive explosion, to a handful of sand, to an arctic blast, to a dazzling flash of light. Pirates, snipers, rogues, and necromancers often make use of this bane in combat."
+                            android:text="@string/blinded_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -830,6 +761,35 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl05"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl05"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
                         <TextView
                             android:id="@+id/lblAttributes05"
                             android:layout_width="match_parent"
@@ -838,6 +798,18 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
+                        <Button
+                            android:id="@+id/txtAttributes05"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
                         <TextView
                             android:id="@+id/lblAttack05"
                             android:layout_width="match_parent"
@@ -845,6 +817,18 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack05"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect05"
@@ -858,9 +842,33 @@
                             android:id="@+id/txtEffect05"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="The target cannot see as long as the effect persists. The target automatically fails any Perception rolls based solely on normal sight. Attack rolls and Perception rolls based partially on sight that can be supplemented by another sense suffer disadvantage 5. The target's Guard defense is reduced by 3."
+                            android:text="@string/blinded_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial05"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial05"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial05"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="N/A"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -892,81 +900,6 @@
                         android:orientation="vertical"
                         android:visibility="gone">
 
-                        <Button
-                            android:id="@+id/txtAttributes06"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="Alteration - Creation - Energy - Entropy"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack06"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/txtPowerLvl06"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="5"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl06"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial06"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/lblSpecial06"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial06"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="N/A"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblDescription06"
                             android:layout_width="match_parent"
@@ -979,7 +912,7 @@
                             android:id="@+id/txtDescription06"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="You blind your foe with anything from a massive explosion, to a handful of sand, to an arctic blast, to a dazzling flash of light. Pirates, snipers, rogues, and necromancers often make use of this bane in combat."
+                            android:text="@string/blinded_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -998,6 +931,35 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl06"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl06"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
                         <TextView
                             android:id="@+id/lblAttributes06"
                             android:layout_width="match_parent"
@@ -1006,6 +968,18 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
+                        <Button
+                            android:id="@+id/txtAttributes06"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
                         <TextView
                             android:id="@+id/lblAttack06"
                             android:layout_width="match_parent"
@@ -1013,6 +987,18 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack06"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect06"
@@ -1026,9 +1012,33 @@
                             android:id="@+id/txtEffect06"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="The target cannot see as long as the effect persists. The target automatically fails any Perception rolls based solely on normal sight. Attack rolls and Perception rolls based partially on sight that can be supplemented by another sense suffer disadvantage 5. The target's Guard defense is reduced by 3."
+                            android:text="@string/blinded_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial06"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial06"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial06"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="N/A"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -1060,81 +1070,6 @@
                         android:orientation="vertical"
                         android:visibility="gone">
 
-                        <Button
-                            android:id="@+id/txtAttributes07"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="Alteration - Creation - Energy - Entropy"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack07"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/txtPowerLvl07"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="5"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl07"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial07"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/lblSpecial07"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial07"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="N/A"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblDescription07"
                             android:layout_width="match_parent"
@@ -1147,7 +1082,7 @@
                             android:id="@+id/txtDescription07"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="You blind your foe with anything from a massive explosion, to a handful of sand, to an arctic blast, to a dazzling flash of light. Pirates, snipers, rogues, and necromancers often make use of this bane in combat."
+                            android:text="@string/blinded_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -1166,6 +1101,35 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl07"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl07"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
                         <TextView
                             android:id="@+id/lblAttributes07"
                             android:layout_width="match_parent"
@@ -1174,6 +1138,18 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
+                        <Button
+                            android:id="@+id/txtAttributes07"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
                         <TextView
                             android:id="@+id/lblAttack07"
                             android:layout_width="match_parent"
@@ -1181,6 +1157,18 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack07"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect07"
@@ -1194,12 +1182,37 @@
                             android:id="@+id/txtEffect07"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="The target cannot see as long as the effect persists. The target automatically fails any Perception rolls based solely on normal sight. Attack rolls and Perception rolls based partially on sight that can be supplemented by another sense suffer disadvantage 5. The target's Guard defense is reduced by 3."
+                            android:text="@string/blinded_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial07"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial07"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial07"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="N/A"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
