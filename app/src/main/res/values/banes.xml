@@ -201,4 +201,30 @@
     <string name="Fear_special">
         While most banes last until the target actively attempts to resist them, this bane prevents the target from thinking clearly. However, the target's logical mind fights to regain control. As such, at the end of each of its turns, the target receives a resist roll as a free action to break free from this effect. When your target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next hour. When inflicting this bane using Might, you may determine range using the Non-Physical Attack Range table (see Chapter 7: Combat).
     </string>
+	
+	<string name="Forced Move_name">Forced Move  -  2 / 4 / 6 / 8</string>
+    <string name="Forced Move_description">
+        With a forceful blow, magical gust of wind, or telekinetic push, you move your target against its will. This bane is favored among ogres, telekinetisists, wind mages, super soldiers, and other characters built to reshape the battlefield to their advantage.
+    </string>
+    <string name="Forced Move_duration">Instantaneous</string>
+    <string name="Forced Move_powerLvl">2 > 4 > 6 > 8</string>
+    <string name="Forced Move_attributes">
+		Agility - Energy - Might - Movement
+	</string>
+    <string name="Forced Move_attack">
+        Agility vs. Guard
+		\nEnergy vs. Guard
+		\nMight vs. Guard
+		\nMovement vs. Guard
+    </string>
+    <string name="Forced Move_effect">
+        The target is moved a distance against their will, as determined by the bane's power level. The ending location is chosen by the attacker.
+		\n\t<b>Power Level 2</b> - The target is moved 5'.
+		\n\t<b>Power Level 4</b> - The target is moved 10'.
+		\n\t<b>Power Level 5</b> - The target is moved 15'.
+		\n\t<b>Power Level 8</b> - The target is moved 20'.
+    </string>
+    <string name="Forced Move_special">
+        N/A
+    </string>
 </resources>
