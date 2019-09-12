@@ -555,7 +555,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
-                        android:text="Blind  -  5" />
+                        android:text="@string/Death_name" />
 
                     <LinearLayout
                         android:id="@+id/infoBB04"
@@ -576,7 +576,7 @@
                             android:id="@+id/txtDescription04"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_description"
+                            android:text="@string/Death_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -591,7 +591,7 @@
                             android:id="@+id/txtDuration04"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Resist ends (Fail x 3 = 1 minute)"
+                            android:text="@string/Death_duration"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -616,7 +616,7 @@
                                 android:layout_weight="1"
                                 android:backgroundTint="@color/colorAccent"
                                 android:gravity="center"
-                                android:text="5"
+                                android:text="@string/Death_powerLvl"
                                 android:textAllCaps="false"
                                 android:textColor="@color/textAccent"
                                 android:textIsSelectable="true"
@@ -638,7 +638,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:text="@string/Death_attributes"
                             android:textAllCaps="false"
                             android:textColor="@color/textAccent"
                             android:textIsSelectable="true"
@@ -658,7 +658,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:text="@string/Death_attack"
                             android:textAllCaps="false"
                             android:textColor="@color/textAccent"
                             android:textIsSelectable="true"
@@ -676,7 +676,7 @@
                             android:id="@+id/txtEffect04"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_effect"
+                            android:text="@string/Death_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -699,7 +699,7 @@
                                 android:id="@+id/txtSpecial04"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="N/A"
+                                android:text="@string/Deafened_special"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
                         </LinearLayout>
@@ -726,7 +726,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
-                        android:text="Blind  -  5" />
+                        android:text="@string/Demoralized_name" />
 
                     <LinearLayout
                         android:id="@+id/infoBB05"
@@ -747,7 +747,7 @@
                             android:id="@+id/txtDescription05"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_description"
+                            android:text="@string/Demoralized_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -762,7 +762,7 @@
                             android:id="@+id/txtDuration05"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Resist ends (Fail x 3 = 1 minute)"
+                            android:text="@string/Demoralized_duration"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -787,7 +787,7 @@
                                 android:layout_weight="1"
                                 android:backgroundTint="@color/colorAccent"
                                 android:gravity="center"
-                                android:text="5"
+                                android:text="@string/Demoralized_powerLvl"
                                 android:textAllCaps="false"
                                 android:textColor="@color/textAccent"
                                 android:textIsSelectable="true"
@@ -809,7 +809,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:text="@string/Demoralized_attributes"
                             android:textAllCaps="false"
                             android:textColor="@color/textAccent"
                             android:textIsSelectable="true"
@@ -829,7 +829,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:text="@string/Demoralized_attack"
                             android:textAllCaps="false"
                             android:textColor="@color/textAccent"
                             android:textIsSelectable="true"
@@ -847,7 +847,7 @@
                             android:id="@+id/txtEffect05"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_effect"
+                            android:text="@string/Demoralized_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -856,7 +856,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:visibility="gone">
+                            android:visibility="visible">
 
                             <TextView
                                 android:id="@+id/lblSpecial05"
@@ -870,7 +870,7 @@
                                 android:id="@+id/txtSpecial05"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="N/A"
+                                android:text="@string/Demoralized_special"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
                         </LinearLayout>
