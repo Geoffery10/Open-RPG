@@ -26,7 +26,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
 
                 <LinearLayout
                     android:id="@+id/viewBB01"
@@ -41,7 +42,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
-                        android:text="Blind  -  5" />
+                        android:text="@string/Blinded_name" />
 
                     <LinearLayout
                         android:id="@+id/infoBB01"
@@ -62,7 +63,7 @@
                             android:id="@+id/txtDescription01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_description"
+                            android:text="@string/Blinded_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -77,7 +78,7 @@
                             android:id="@+id/txtDuration01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Resist ends (Fail x 3 = 1 minute)"
+                            android:text="@string/Blinded_duration"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -102,7 +103,7 @@
                                 android:layout_weight="1"
                                 android:backgroundTint="@color/colorAccent"
                                 android:gravity="center"
-                                android:text="5"
+                                android:text="@string/Blinded_powerLvl"
                                 android:textAllCaps="false"
                                 android:textColor="@color/textAccent"
                                 android:textIsSelectable="true"
@@ -124,7 +125,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:text="@string/Blinded_attributes"
                             android:textAllCaps="false"
                             android:textColor="@color/textAccent"
                             android:textIsSelectable="true"
@@ -144,7 +145,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:text="@string/Blinded_attack"
                             android:textAllCaps="false"
                             android:textColor="@color/textAccent"
                             android:textIsSelectable="true"
@@ -162,7 +163,7 @@
                             android:id="@+id/txtEffect01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_effect"
+                            android:text="@string/Blinded_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -185,7 +186,7 @@
                                 android:id="@+id/txtSpecial01"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="N/A"
+                                android:text="@string/Blinded_special"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
                         </LinearLayout>
@@ -196,7 +197,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
 
                 <LinearLayout
                     android:id="@+id/viewBB02"
@@ -211,7 +213,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
-                        android:text="Blind  -  5" />
+                        android:text="@string/Charmed_name" />
 
                     <LinearLayout
                         android:id="@+id/infoBB02"
@@ -232,7 +234,7 @@
                             android:id="@+id/txtDescription02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_description"
+                            android:text="@string/Charmed_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -247,7 +249,7 @@
                             android:id="@+id/txtDuration02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Resist ends (Fail x 3 = 1 minute)"
+                            android:text="@string/Charmed_duration"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -272,7 +274,7 @@
                                 android:layout_weight="1"
                                 android:backgroundTint="@color/colorAccent"
                                 android:gravity="center"
-                                android:text="5"
+                                android:text="@string/Charmed_powerLvl"
                                 android:textAllCaps="false"
                                 android:textColor="@color/textAccent"
                                 android:textIsSelectable="true"
@@ -294,7 +296,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:text="@string/Charmed_attributes"
                             android:textAllCaps="false"
                             android:textColor="@color/textAccent"
                             android:textIsSelectable="true"
@@ -314,7 +316,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:text="@string/Charmed_attack"
                             android:textAllCaps="false"
                             android:textColor="@color/textAccent"
                             android:textIsSelectable="true"
@@ -332,7 +334,7 @@
                             android:id="@+id/txtEffect02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_effect"
+                            android:text="@string/Charmed_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -355,7 +357,7 @@
                                 android:id="@+id/txtSpecial02"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="N/A"
+                                android:text="@string/Charmed_special"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
                         </LinearLayout>
@@ -366,7 +368,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
 
                 <LinearLayout
                     android:id="@+id/viewBB03"
@@ -381,7 +384,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
-                        android:text="Blind  -  5" />
+                        android:text="@string/Deafened_name" />
 
                     <LinearLayout
                         android:id="@+id/infoBB03"
@@ -402,7 +405,7 @@
                             android:id="@+id/txtDescription03"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_description"
+                            android:text="@string/Deafened_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -502,7 +505,7 @@
                             android:id="@+id/txtEffect03"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_effect"
+                            android:text="@string/Deafened_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -536,7 +539,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
 
                 <LinearLayout
                     android:id="@+id/viewBB04"
@@ -706,7 +710,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
 
                 <LinearLayout
                     android:id="@+id/viewBB05"
@@ -876,7 +881,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
 
                 <LinearLayout
                     android:id="@+id/viewBB06"
@@ -1046,7 +1052,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
 
                 <LinearLayout
                     android:id="@+id/viewBB07"

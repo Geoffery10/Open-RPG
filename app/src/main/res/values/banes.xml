@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="blinded_description">You blind your foe with anything from a massive explosion, to a handful of sand, to an arctic blast, to a dazzling flash of light. Pirates, snipers, rogues, and necromancers often make use of this bane in combat.</string>
-    <string name="blinded_effect">The target cannot see as long as the effect persists. The target automatically fails any Perception rolls based solely on normal sight. Attack rolls and Perception rolls based partially on sight that can be supplemented by another sense suffer disadvantage 5. The target\'s Guard defense is reduced by 3.</string>
+    <string name="blinded_description">temp</string>
+    <string name="blinded_effect">temp</string>
 
+    <string name="Blinded_name">Blind  -  5</string>
+    <string name="Blinded_duration">Resist ends (Fail x 3 = 1 minute)</string>
+    <string name="Blinded_description">
+        You blind your foe with anything from a massive explosion, to a handful of sand, to an arctic blast, to a dazzling flash of light. Pirates, snipers, rogues, and necromancers often make use of this bane in combat.
+    </string>
+    <string name="Blinded_effect">
+        The target cannot see as long as the effect persists. The target automatically fails any Perception rolls based solely on normal sight. Attack rolls and Perception rolls based partially on sight that can be supplemented by another sense suffer disadvantage 5. The target\'s Guard defense is reduced by 3.
+    </string>
+    <string name="Blinded_powerLvl">5</string>
+    <string name="Blinded_attributes">Alteration - Creation - Energy - Entropy</string>
+    <string name="Blinded_attack">Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness</string>
+    <string name="Blinded_special">N/A</string>
+
+    <string name="Charmed_name">Charmed  -  3 / 4 / 6</string>
+    <string name="Charmed_duration">Resist ends (Fail x 3 = 1 minute)</string>
+    <string name="Charmed_description">Charms are one of the great banes of legend, wielded by powerful enchantresses like Circe (of Homer\'s The Odyssey), nymphs, psychics, and other characters who control the will of others, not through total domination, but through a magical spell of love or friendship.</string>
+    <string name="Charmed_effect">
+        The charmed bane can only be inflicted via a bane attack. Damaging attacks that trigger banes cannot trigger this bane. The charmed bane manifests at two levels: minor and major.
+        \n<b>Minor Charm</b> - The target is mentally compelled to become more friendly, only changing their attitude toward you moderately. If they are about to strike you, they will restrain themselves - still angry and hostile, but no longer violent. If they want to help you and are leaning toward trusting you, but have some hesitation because you\'ve just met, then that hesitation goes away.
+        \n<b>Major Charm</b> - The attacker chooses whether the major charm is platonic or romantic. If platonic, the bane causes the target to consider the attacker their best friend and one of the most trustworthy and noble people they have met in all their lives. Alternatively, the attacker can choose for this trust and admiration to manifest as romantic love. The target is unable to do anything to plot against the one who afflicted them, and will (at the earliest possible opportunity) tell their charmer of any rumored harm or danger coming their way. The afflicted character becomes immediately suspicious of anyone who speaks ill of their attacker. The target is mentally compelled to like and trust you more, depending on the power level of the bane when invoked.
+        \n\n\t<b>Power Level 3</b> - You can Minor Charm creatures of animal level intelligence or lower.
+        \n\t<b>Power Level 4</b> - You can Minor Charm creatures of humanoid intelligence. You can Major Charm creatures of animal level intelligence or lower.
+        \n\t<b>Power Level 6</b> - You can Major Charm creatures of humanoid intelligence.
+    </string>
+    <string name="Charmed_powerLvl">5</string>
+    <string name="Charmed_attributes">Alteration - Creation - Energy - Entropy</string>
+    <string name="Charmed_attack">Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness</string>
+    <string name="Charmed_special">
+        While most banes last until the target actively attempts to resist it, this bane prevents the target from being aware of their affliction and thus prevents them from actively attempting to break free. However, the target\'s true mind is magically suppressed but fights to regain control. As such, at the end of each of its turns, the target receives a resist roll as a free action to break free from the effect. When your target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next 24 hours.
+    </string>
+
+    <string name="Deafened_name">Deafened  -  4</string>
+    <string name="Deafened_description">
+        You deafen your foe with a crash of thunder, a deft strike to their ears, or a dark energy that disables their hearing. This bane is common to storm mages, mad scientists, and assassins.
+    </string>
+    <string name="Deafened_duration">Resist ends (Fail x 3 = 1 minute)</string>
+    <string name="Deafened_powerLvl">4</string>
+    <string name="Deafened_attributes">Agility - Energy - Entropy</string>
+    <string name="Deafened_attack">
+        Agility vs. Guard
+        \nEnergy vs. Toughness
+        \nEntropy vs. Toughness
+    </string>
+    <string name="Deafened_effect">
+        The target cannot hear as long as the effect persists. The target automatically fails any Perception rolls based solely on hearing. Perception rolls based partially on hearing that can be supplemented by another sense suffer disadvantage 3.
+    </string>
+    <string name="Deafened_special">
+        N/A
+    </string>
 </resources>
