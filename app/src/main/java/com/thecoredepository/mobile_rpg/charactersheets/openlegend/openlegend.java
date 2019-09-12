@@ -706,217 +706,199 @@ public class openlegend
 
     public openlegend loadCharacterSheet(String selected)
     {
-        HARDCODEDSHEETS();
         player = sheets.get(sheetList.indexOf(selected));
         return player;
     }
 
     public static void HARDCODEDSHEETS()
     {
-        openlegend temp = new openlegend();
-        temp.setType("pc");
-        temp.setCharName("Tazmur");
-        temp.setNickname("Taz");
-        temp.setDeity("Kalle Demos");
-        String[] lang = new String[3];
-        lang[0] = "Gerudo";
-        lang[1] = "Hylian";
-        lang[2] = "Sheikah";
-        temp.setLanguages(lang);
-        temp.setBio("Possibly an evil male Gerudo who wanders the land lacking any real home. In his travels he befriended an extremely magical cat named Noujou. It’s possible he has evil goals in life but he’s pretty chill. ");
-        temp.setFortitude(2);
-        temp.setPresence(2);
-        temp.setPerception(2);
-        temp.setAlteration(6);
-        temp.setMovement(4);
-        temp.setEnergy(4);
-        temp.setAgility(2);
-        temp.setLearning(2);
-        temp.setWill(2);
-        temp.setArmor(1);
-        temp.setLevelTotal(10);
-        temp.setSpeed(30);
-        temp.setDamageTaken(0);
 
-        temp.setStats();
-        temp.setGetAttributePointsUsed();
-        temp.setAttributePointsAvailable(temp.getType());
+        String[] lang = new String[10];
 
-        temp.setWealth(3);
-        temp.addItem("Leather Armor", "(+1 Guard)");
-        temp.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
-        temp.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
-        temp.addItem("Bow", "Agility v. Guard - Range 125ft");
-        temp.addItem("Creature Book", "Advantage on Creature Knowledge");
-        temp.addItem("Mask Collection (10)", "Collection of Masks from the Happy Mask Sales Men");
-        temp.addItem("Magic Pearl", "Magic Peal with the power to stop the transformitive effects of the Dark World");
-
-        if (temp.getType().equals("pc") || temp.getType().equals("ccII") || temp.getType().equals("ccIII"))
+        if (sheetList.contains("Tazmur") == false)
         {
-            featsOL.featList();
+            openlegend tazmur = new openlegend();
+            tazmur.setType("pc");
+            tazmur.setCharName("Tazmur");
+            tazmur.setNickname("Taz");
+            tazmur.setDeity("Kalle Demos");
+            lang[0] = "Gerudo";
+            lang[1] = "Hylian";
+            lang[2] = "Sheikah";
+            tazmur.setLanguages(lang);
+            tazmur.setBio("Possibly an evil male Gerudo who wanders the land lacking any real home. In his travels he befriended an extremely magical cat named Noujou. It’s possible he has evil goals in life but he’s pretty chill. ");
+            tazmur.setFortitude(2);
+            tazmur.setPresence(2);
+            tazmur.setPerception(2);
+            tazmur.setAlteration(6);
+            tazmur.setMovement(4);
+            tazmur.setEnergy(4);
+            tazmur.setAgility(2);
+            tazmur.setLearning(2);
+            tazmur.setWill(2);
+            tazmur.setArmor(1);
+            tazmur.setLevelTotal(10);
+            tazmur.setSpeed(30);
+            tazmur.setDamageTaken(0);
+
+            tazmur.setStats();
+            tazmur.setGetAttributePointsUsed();
+            tazmur.setAttributePointsAvailable(tazmur.getType());
+
+            tazmur.setWealth(3);
+            tazmur.addItem("Leather Armor", "(+1 Guard)");
+            tazmur.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
+            tazmur.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
+            tazmur.addItem("Bow", "Agility v. Guard - Range 125ft");
+            tazmur.addItem("Creature Book", "Advantage on Creature Knowledge");
+            tazmur.addItem("Mask Collection (10)", "Collection of Masks from the Happy Mask Sales Men");
+            tazmur.addItem("Magic Pearl", "Magic Peal with the power to stop the transformitive effects of the Dark World");
+
+            if (tazmur.getType().equals("pc") || tazmur.getType().equals("ccII") || tazmur.getType().equals("ccIII"))
+            {
+                featsOL.featList();
+            }
+            sheetList.add(tazmur.getCharName());
+            sheets.add(tazmur);
         }
-        sheetList.add("Tazmur");
-        sheets.add(temp);
+
+        //==========================================================================================
+
+        if (sheetList.contains("Nightmare") == false)
+        {
+            openlegend nightmare = new openlegend();
+            nightmare.setType("ccII");
+            nightmare.setCharName("Nightmare");
+            nightmare.setNickname("Spirit");
+            nightmare.setDeity("Kalle Demos");
+            lang[0] = "Gerudo";
+            lang[1] = "Hylian";
+            lang[2] = "Demon";
+            nightmare.setLanguages(lang);
+            nightmare.setBio("A flamboyant, seemingly calm, overconfident opponent whose only goal is to revive Demise, his master. His spirit is bound to Tazmur and is unable to leave him.");
+            nightmare.setEntropy(5);
+            nightmare.setAlteration(5);
+            nightmare.setProtection(4);
+            nightmare.setLevelTotal(10);
+            nightmare.setSpeed(0);
+            nightmare.setDamageTaken(0);
+
+            nightmare.setStats();
+            nightmare.setGetAttributePointsUsed();
+            nightmare.setAttributePointsAvailable(nightmare.getType());
+
+            if (nightmare.getType().equals("pc") || nightmare.getType().equals("ccII") || nightmare.getType().equals("ccIII"))
+            {
+                featsOL.featList();
+            }
+            sheetList.add(nightmare.getCharName());
+            sheets.add(nightmare);
+        }
+
+        //==========================================================================================
+
+        if (sheetList.contains("Mazok") == false)
+        {
+            openlegend mazok = new openlegend();
+            mazok.setType("pc");
+            mazok.setCharName("Mazok");
+            mazok.setNickname("Maz");
+            mazok.setDeity("N/A");
+            lang[0] = "Wild";
+            lang[1] = "Hylian";
+            lang[2] = "Sheikah";
+            mazok.setLanguages(lang);
+            mazok.setBio("Born sixteen years ago to a savage Rito tribe, Mazok ran away early in his life.  Since then he met Aderinus, a Labrynnian who saved him from the dark magic of the Lost Woods.  With jet black feathers and pure white eyes, he’s abnormal looking compared to the normally colorful Rito.  As a result, he was the laughing stock of his tribe, which leads to him holding a bitter resentment for them to this day.  He is also slow to trust and not very talkative.");
+            mazok.setAgility(6);
+            mazok.setMight(5);
+            mazok.setPerception(3);
+            mazok.setLogic(3);
+            mazok.setWill(4);
+            mazok.setFortitude(3);
+            mazok.setPresence(2);
+            mazok.setLearning(2);
+            mazok.setArmor(1);
+            mazok.setLevelTotal(10);
+            mazok.setSpeed(30);
+            mazok.setDamageTaken(0);
+
+            mazok.setStats();
+            mazok.setGetAttributePointsUsed();
+            mazok.setAttributePointsAvailable(mazok.getType());
+
+            mazok.setWealth(1);
+
+            mazok.addItem("Leather Armor", "(+1 Guard)");
+            mazok.addItem("Longbow", "");
+            mazok.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
+            mazok.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
+            mazok.addItem("Rope 50", "");
+            mazok.addItem("Lockpicks", "");
+            mazok.addItem("Deku Mask", "");
+
+            if (mazok.getType().equals("pc") || mazok.getType().equals("ccII") || mazok.getType().equals("ccIII"))
+            {
+                featsOL.featList();
+            }
+            sheetList.add(mazok.getCharName());
+            sheets.add(mazok);
+        }
+
+
+        //==========================================================================================
+
 
     }
 
-    //HARD CODED CHARACTERS
-    public openlegend Nightmare(openlegend player, String type)
-    {
-        player.setCharName("Nightmare");
-        player.setNickname("Spirit");
-        player.setDeity("Kalle Demos");
-        String[] lang = new String[3];
-        lang[0] = "Gerudo";
-        lang[1] = "Hylian";
-        lang[2] = "Demon";
-        player.setLanguages(lang);
-        player.setBio("A flamboyant, seemingly calm, overconfident opponent whose only goal is to revive Demise, his master. His spirit is bound to Tazmur and is unable to leave him.");
-        player.setEntropy(5);
-        player.setAlteration(5);
-        player.setProtection(4);
-        player.setLevelTotal(10);
-        player.setSpeed(0);
-        player.setDamageTaken(0);
-
-        player.setStats();
-        player.setGetAttributePointsUsed();
-        player.setAttributePointsAvailable(type);
-
-        if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
-        {
-            featsOL.featList();
-        }
-
-        return player;
-    }
-
-    public openlegend Thor(openlegend player, String type)
-    {
-        player.setCharName("Thor");
-        player.setNickname("God of Thunder");
-        player.setDeity("Odin");
-        String[] lang = new String[3];
-        lang[0] = "English";
-        lang[1] = "Asgardian";
-        lang[2] = "Giant";
-        player.setLanguages(lang);
-        player.setBio("Thor is a hammer-wielding god associated with thunder, lightning, storms, oak trees, strength, the protection of mankind and also hallowing and fertility.");
-        player.setFortitude(6);
-        player.setMovement(4);
-        player.setEnergy(6);
-        player.setAgility(4);
-        player.setMight(4);
-        player.setWill(3);
-        player.setArmor(5);
-        player.setLevelTotal(13);
-        player.setSpeed(30);
-        player.setDamageTaken(5);
-
-        player.setStats();
-        player.setGetAttributePointsUsed();
-        player.setAttributePointsAvailable(type);
-
-        if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
-        {
-            featsOL.featList();
-        }
-
-        return player;
-    }
-
-    /*public openlegend Tazmur(openlegend player, String type)
-    {
-        player.setCharName("Tazmur");
-        player.setNickname("Taz");
-        player.setDeity("Kalle Demos");
-        String[] lang = new String[3];
-        lang[0] = "Gerudo";
-        lang[1] = "Hylian";
-        lang[2] = "Sheikah";
-        player.setLanguages(lang);
-        player.setBio("Possibly an evil male Gerudo who wanders the land lacking any real home. In his travels he befriended an extremely magical cat named Noujou. It’s possible he has evil goals in life but he’s pretty chill. ");
-        player.setFortitude(2);
-        player.setPresence(2);
-        player.setPerception(2);
-        player.setAlteration(6);
-        player.setMovement(4);
-        player.setEnergy(4);
-        player.setAgility(2);
-        player.setLearning(2);
-        player.setWill(2);
-        player.setArmor(1);
-        player.setLevelTotal(10);
-        player.setSpeed(30);
-        player.setDamageTaken(0);
-
-        player.setStats();
-        player.setGetAttributePointsUsed();
-        player.setAttributePointsAvailable(type);
-
-        player.setWealth(3);
-        player.addItem("Leather Armor", "(+1 Guard)");
-        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
-        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
-        player.addItem("Bow", "Agility v. Guard - Range 125ft");
-        player.addItem("Creature Book", "Advantage on Creature Knowledge");
-        player.addItem("Mask Collection (10)", "Collection of Masks from the Happy Mask Sales Men");
-        player.addItem("Magic Pearl", "Magic Peal with the power to stop the transformitive effects of the Dark World");
-
-        if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
-        {
-            featsOL.featList();
-        }
-
-        return player;
-    }
-
-     */
-
-    public openlegend Mazok(openlegend player, String type)
-    {
-        player.setCharName("Mazok");
-        player.setNickname("Maz");
-        player.setDeity("N/A");
-        String[] lang = new String[3];
-        lang[0] = "Wild";
-        lang[1] = "Hylian";
-        lang[2] = "Sheikah";
-        player.setLanguages(lang);
-        player.setBio("Born sixteen years ago to a savage Rito tribe, Mazok ran away early in his life.  Since then he met Aderinus, a Labrynnian who saved him from the dark magic of the Lost Woods.  With jet black feathers and pure white eyes, he’s abnormal looking compared to the normally colorful Rito.  As a result, he was the laughing stock of his tribe, which leads to him holding a bitter resentment for them to this day.  He is also slow to trust and not very talkative.");
-        player.setAgility(6);
-        player.setMight(5);
-        player.setPerception(3);
-        player.setLogic(3);
-        player.setWill(4);
-        player.setFortitude(3);
-        player.setPresence(2);
-        player.setLearning(2);
-        player.setArmor(1);
-        player.setLevelTotal(10);
-        player.setSpeed(30);
-        player.setDamageTaken(0);
-
-        player.setStats();
-        player.setGetAttributePointsUsed();
-        player.setAttributePointsAvailable(type);
-
-        player.setWealth(1);
-
-        player.addItem("Leather Armor", "(+1 Guard)");
-        player.addItem("Longbow", "");
-        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
-        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
-        player.addItem("Rope 50", "");
-        player.addItem("Lockpicks", "");
-        player.addItem("Deku Mask", "");
-
-        if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
-        {
-            featsOL.featList();
-        }
-
-        return player;
+    public static openlegend blankChar(openlegend blank) {
+        blank.playerName = "";
+        blank.type = "";
+        blank.charName = "";
+        blank.nickname = "";
+        blank.majorLvl = 0;
+        blank.minorLvl = 0;
+        blank.levelTotal = 0;
+        blank.deity = "";
+        blank.languages = null;
+        blank.bio = "";
+        blank.attributePointsAvalible = 0;
+        blank.getAttributePointsUsed = 0;
+        blank.agility = 0;
+        blank.fortitude = 0;
+        blank.might = 0;
+        blank.learning = 0;
+        blank.logic = 0;
+        blank.perception = 0;
+        blank.will = 0;
+        blank.deception = 0;
+        blank.persuasion = 0;
+        blank.presence = 0;
+        blank.alteration = 0;
+        blank.creation = 0;
+        blank.energy = 0;
+        blank.entropy = 0;
+        blank.influence = 0;
+        blank.movement = 0;
+        blank.prescience = 0;
+        blank.protection = 0;
+        blank.toughness = 0;
+        blank.guard = 0;
+        blank.armor = 0;
+        blank.resolve = 0;
+        blank.hitpoints = 0;
+        blank.damageTaken = 0;
+        blank.speed = 0;
+        blank.featPointsAvailable = 0;
+        blank.featPointsUsed = 0;
+        blank.perks = null;
+        blank.flaws = null;
+        blank.inventorySize = 0;
+        blank.items.clear();
+        blank.itemInfo.clear();
+        blank.wealth = 0;
+        blank.Banes.clear();
+        blank.Boons.clear();
+        return blank;
     }
 }
 
