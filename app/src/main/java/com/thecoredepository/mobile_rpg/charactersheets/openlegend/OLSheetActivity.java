@@ -151,6 +151,10 @@ public class OLSheetActivity extends AppCompatActivity {
                 }
                 showHideBio();
                 break;
+            case R.id.EditSheet:
+                    Toast toast = Toast.makeText(this, "Editing Comming Soon!", Toast.LENGTH_SHORT);
+                    toast.show();
+                    break;
             case R.id.Banes:
                 toBanes();
                 break;
