@@ -32,6 +32,7 @@ public class DiceActivity extends AppCompatActivity {
         valueOfDie = valueOfDie(diceIn);
 
         Button btnRoll = findViewById(R.id.btnRoll);
+        btnRoll.setText("Roll - " + diceIn);
         btnRoll.setOnClickListener(new View.OnClickListener() {
             @Override
             //Roll Dice
