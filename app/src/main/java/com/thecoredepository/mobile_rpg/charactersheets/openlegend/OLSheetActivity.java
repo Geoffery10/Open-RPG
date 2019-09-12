@@ -690,4 +690,49 @@ public class OLSheetActivity extends AppCompatActivity {
 
         return player;
     }
+	public openlegend Mazok(openlegend player, String type)
+    {
+        player.setCharName("Mazok");
+        player.setNickname("Maz");
+        player.setDeity("N/A");
+        String[] lang = new String[3];
+        lang[0] = "Wild";
+        lang[1] = "Hylian";
+        lang[2] = "Sheikah";
+        player.setLanguages(lang);
+        player.setBio("Born sixteen years ago to a savage Rito tribe, Mazok ran away early in his life.  Since then he met Aderinus, a Labrynnian who saved him from the dark magic of the Lost Woods.  With jet black feathers and pure white eyes, he’s abnormal looking compared to the normally colorful Rito.  As a result, he was the laughing stock of his tribe, which leads to him holding a bitter resentment for them to this day.  He is also slow to trust and not very talkative.");
+        player.setAgility(6);
+		player.setMight(5);
+		player.setPerception(3);
+		player.setLogic(3);
+		player.setWill(4);
+		player.setFortitude(3);
+		player.setPresence(2)
+		player.setLearning(2);
+		player.setArmor(1);
+        player.setLevelTotal(10);
+        player.setSpeed(30);
+        player.setDamageTaken(0);
+
+        player.setStats();
+        player.setGetAttributePointsUsed();
+        player.setAttributePointsAvailable(type);
+
+        player.setWealth(1);
+		
+		player.addItem("Leather Armor", "(+1 Guard)");
+		player.addItem("Longbow");
+		player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Intuitive + 1)");
+		player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Intuitive + 1)");	
+		player.addItem("Rope 50");
+		player.addItem("Lockpicks");
+		player.addItem("Deku Mask");
+		
+        if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
+        {
+            featsOL.featList();
+        }
+
+        return player;
+    }
 }
