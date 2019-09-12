@@ -13,6 +13,7 @@ import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivi
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,13 +24,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Spinner spinnerOL = findViewById(R.id.spinnerOL);
         Button btnOpenSheet = findViewById(R.id.btnOpenSheet);
-        List<String> sheets = new ArrayList<String>();
-        sheets.add("Tazmur");
-        sheets.add("Nightmare - Companion II");
-        sheets.add("Thor");
-        sheets.add("Mazok");
+        sheetList.add("Tazmur");
+        sheetList.add("Nightmare - Companion II");
+        sheetList.add("Thor");
+        sheetList.add("Mazok");
 
-        ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sheets);
+        ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sheetList);
         spinnerOL.setAdapter(adapterOL);
 
         btnOpenSheet.setOnClickListener(new View.OnClickListener() {
