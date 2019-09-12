@@ -83,6 +83,8 @@ public class openlegend
     private List Boons = new ArrayList<String>();
 
     //Define Player
+    public static List<openlegend> sheets = new ArrayList<openlegend>();
+    public static List<String> sheetList = new ArrayList<String>();
     public static openlegend player = new openlegend();
 
     //Getters and Setters
