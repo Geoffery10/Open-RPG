@@ -58,7 +58,7 @@
 	
 	<string name="Death_name">Death  -  9</string>
     <string name="Death_description">
-        Utilizing either incredible precision or the power of entropy, you snuff out the target's life force completely. The 
+        Utilizing either incredible precision or the power of entropy, you snuff out the target/\'s life force completely. The
 		deadliest assassins and most powerful necromancers are known for such legendary skill at ending life.
 	</string>
     <string name="Death_duration">Resist ends (special) (Fail x 3 = Permanent)</string>
@@ -76,7 +76,7 @@
 			target to life.
 	</string>
     <string name="Death_special">
-        While most banes last until the target actively attempts to resist it, this bane renders the target incapable of taking actions and thus prevents them from actively attempting to break free. However, the target's body fights to regain consciousness and resist the impending death. As such, at the end of each of its turns, the target receives a resist roll as a free action to break free from the effect. When the target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next 24 hours.
+        While most banes last until the target actively attempts to resist it, this bane renders the target incapable of taking actions and thus prevents them from actively attempting to break free. However, the target\'s body fights to regain consciousness and resist the impending death. As such, at the end of each of its turns, the target receives a resist roll as a free action to break free from the effect. When the target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next 24 hours.
     </string>
 	
 	<string name="Demoralized_name">Demoralized  -  3 / 6 / 8</string>
@@ -126,7 +126,7 @@
 		\nMovement vs. Guard
     </string>
     <string name="Disarmed_effect">
-        \n<b>Power Level 3</b> - The target drops an object they are holding in a space of your choosing within 15' of the target.
+        \n<b>Power Level 3</b> - The target drops an object they are holding in a space of your choosing within 15\' of the target.
 		\n<b>Power Level 6</b> - As an alternative to moving the item, you can choose to assume control of it. If you do, you are now the wielder. For the wielder to regain control, they can react with a Disarmed bane of their own to counter the effect or make an attribute roll (typically Might) with a Challenge Rating equal to 10 + 2 x the attribute score you used to disarm the item.
     </string>
     <string name="Disarmed_special">
@@ -146,18 +146,18 @@
         Influence vs. Resolve
     </string>
     <string name="Dominated_effect">
-        The dominated bane manifests at two levels: lesser and greater. <b>Lesser Domination</b> - The target obeys a one word command until the end of their next turn, at which time the bane immediately ends. <b>Greater Domination</b> - The target's every action and move is under your control. Unlike the charmed bane, characters under the effect of domination lose control of their actions. Their minds, however, struggle to regain control of their own body. They cannot take actions of any kind (except thought) unless it is ordered by you. Every action which the attacker orders the afflicted character to perform which is in extreme violation of their nature gives the target a resist roll as a free action to end the effect. The attacker does not gain special access to the target's mind and so can only order the character to perform actions that they think the character is capable of. Lastly, each mental order that the attacker gives to the target is a major action. However, the order can be a series of verbal commands, such “Attack enemy X unless someone comes through the door, in which case flee”. The dominated creature will continue to obey the last mental command they were given until you give a new command. Only one such command can be active at a given time. Greater Domination has a duration of Resist ends (Fail x 3 = 1 hour).
+        The dominated bane manifests at two levels: lesser and greater. <b>Lesser Domination</b> - The target obeys a one word command until the end of their next turn, at which time the bane immediately ends. <b>Greater Domination</b> - The target\'s every action and move is under your control. Unlike the charmed bane, characters under the effect of domination lose control of their actions. Their minds, however, struggle to regain control of their own body. They cannot take actions of any kind (except thought) unless it is ordered by you. Every action which the attacker orders the afflicted character to perform which is in extreme violation of their nature gives the target a resist roll as a free action to end the effect. The attacker does not gain special access to the target\'s mind and so can only order the character to perform actions that they think the character is capable of. Lastly, each mental order that the attacker gives to the target is a major action. However, the order can be a series of verbal commands, such “Attack enemy X unless someone comes through the door, in which case flee”. The dominated creature will continue to obey the last mental command they were given until you give a new command. Only one such command can be active at a given time. Greater Domination has a duration of Resist ends (Fail x 3 = 1 hour).
 		\n\t<b>Power Level 3</b> - You can target creatures of subhuman intelligence (animals, some elementals, certain undead, etc.) with Lesser Domination.
 		\n\t<b>Power Level 5</b> - You can target creatures of human intelligence or better with Lesser Domination. You can target creatures of subhuman intelligence (animals, some elementals, etc.) with Greater Domination.
 		\n\t<b>Power Level 9</b>- You can target creatures of human intelligence or greater with Greater Domination.
     </string>
     <string name="Dominated_special">
-        While most banes last until the target actively attempts to resist it, this bane prevents the target from being aware of their affliction and thus prevents them from actively attempting to break free. However, the target's true mind is suppressed but fights to regain control. As such, at the end of each of its turns, the target receives a resist roll as a free action to break free from the effect. When your target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next 24 hours.
+        While most banes last until the target actively attempts to resist it, this bane prevents the target from being aware of their affliction and thus prevents them from actively attempting to break free. However, the target\'s true mind is suppressed but fights to regain control. As such, at the end of each of its turns, the target receives a resist roll as a free action to break free from the effect. When your target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next 24 hours.
     </string>
 	
 	<string name="Fatigued_name">Fatigued  -  5</string>
     <string name="Fatigued_description">
-        You cause the target's body to wither and weaken, gradually losing its ability to function until the victim finally succumbs to death. Fatigue may be the result of a necromancer's curse, an assassin's poison, a radiation ray, or similar life sapping effects.
+        You cause the target\'s body to wither and weaken, gradually losing its ability to function until the victim finally succumbs to death. Fatigue may be the result of a necromancer\'s curse, an assassin\'s poison, a radiation ray, or similar life sapping effects.
     </string>
     <string name="Fatigued_duration">Special</string>
     <string name="Fatigued_powerLvl">5</string>
@@ -177,12 +177,12 @@
 		\n\t<b>Level 6</b> - The target dies.
     </string>
     <string name="Fatigued_special">
-        Unlike other banes, canceling this bane takes time and rest. Each 24 hour period of rest with little or no exertion removes one level of fatigue. If the *restoration* boon is successfully invoked to dispel this bane, only one level of fatigue is removed (in addition to that removed by natural rest). If the *restoration* boon's invoker has an attribute score of 7 or greater, all levels of fatigue are removed instead of just one. A target may only benefit from one invocation of the *restoration* boon to remove fatigue within a 24 hour period.
+        Unlike other banes, canceling this bane takes time and rest. Each 24 hour period of rest with little or no exertion removes one level of fatigue. If the *restoration* boon is successfully invoked to dispel this bane, only one level of fatigue is removed (in addition to that removed by natural rest). If the *restoration* boon\'s invoker has an attribute score of 7 or greater, all levels of fatigue are removed instead of just one. A target may only benefit from one invocation of the *restoration* boon to remove fatigue within a 24 hour period.
     </string>
 	
 	<string name="Fear_name">Fear  -  5</string>
     <string name="Fear_description">
-        Through an overwhelming force of physical might or extraordinary power, you strike terror into the hearts of enemies, causing them to flee from your presence. A warrior might invoke this bane by hurling a boulder while a cyber hacker might achieve the same effect by uploading a hallucinatory virus into an opponent's neuro jack.
+        Through an overwhelming force of physical might or extraordinary power, you strike terror into the hearts of enemies, causing them to flee from your presence. A warrior might invoke this bane by hurling a boulder while a cyber hacker might achieve the same effect by uploading a hallucinatory virus into an opponent\'s neuro jack.
     </string>
     <string name="Fear_duration">Special</string>
     <string name="Fear_powerLvl">5</string>
@@ -199,32 +199,32 @@
         On its turn, the afflicted target must use its entire turn to get as far away as possible from you. It cannot use its actions to do anything other than retreat, and it cannot willingly move closer to you while the bane persists.
     </string>
     <string name="Fear_special">
-        While most banes last until the target actively attempts to resist them, this bane prevents the target from thinking clearly. However, the target's logical mind fights to regain control. As such, at the end of each of its turns, the target receives a resist roll as a free action to break free from this effect. When your target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next hour. When inflicting this bane using Might, you may determine range using the Non-Physical Attack Range table (see Chapter 7: Combat).
+        While most banes last until the target actively attempts to resist them, this bane prevents the target from thinking clearly. However, the target\'s logical mind fights to regain control. As such, at the end of each of its turns, the target receives a resist roll as a free action to break free from this effect. When your target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next hour. When inflicting this bane using Might, you may determine range using the Non-Physical Attack Range table (see Chapter 7: Combat).
     </string>
 	
-	<string name="Forced Move_name">Forced Move  -  2 / 4 / 6 / 8</string>
-    <string name="Forced Move_description">
+	<string name="Forced_Move_name">Forced Move  -  2 / 4 / 6 / 8</string>
+    <string name="Forced_Move_description">
         With a forceful blow, magical gust of wind, or telekinetic push, you move your target against its will. This bane is favored among ogres, telekinetisists, wind mages, super soldiers, and other characters built to reshape the battlefield to their advantage.
     </string>
-    <string name="Forced Move_duration">Instantaneous</string>
-    <string name="Forced Move_powerLvl">2 > 4 > 6 > 8</string>
-    <string name="Forced Move_attributes">
+    <string name="Forced_Move_duration">Instantaneous</string>
+    <string name="Forced_Move_powerLvl">2 > 4 > 6 > 8</string>
+    <string name="Forced_Move_attributes">
 		Agility - Energy - Might - Movement
 	</string>
-    <string name="Forced Move_attack">
+    <string name="Forced_Move_attack">
         Agility vs. Guard
 		\nEnergy vs. Guard
 		\nMight vs. Guard
 		\nMovement vs. Guard
     </string>
-    <string name="Forced Move_effect">
-        The target is moved a distance against their will, as determined by the bane's power level. The ending location is chosen by the attacker.
-		\n\t<b>Power Level 2</b> - The target is moved 5'.
-		\n\t<b>Power Level 4</b> - The target is moved 10'.
-		\n\t<b>Power Level 5</b> - The target is moved 15'.
-		\n\t<b>Power Level 8</b> - The target is moved 20'.
+    <string name="Forced_Move_effect">
+        The target is moved a distance against their will, as determined by the bane\'s power level. The ending location is chosen by the attacker.
+		\n\t<b>Power Level 2</b> - The target is moved 5\'.
+		\n\t<b>Power Level 4</b> - The target is moved 10\'.
+		\n\t<b>Power Level 5</b> - The target is moved 15\'.
+		\n\t<b>Power Level 8</b> - The target is moved 20\'.
     </string>
-    <string name="Forced Move_special">
+    <string name="Forced_Move_special">
         N/A
     </string>
 </resources>
