@@ -16,6 +16,7 @@ public class openlegend
 {
     //Values from the Open Legend Character Sheet
     private String playerName;
+    private String type;
     private String charName;
     private String nickname;
     private int majorLvl;
@@ -83,9 +84,9 @@ public class openlegend
     private List Boons = new ArrayList<String>();
 
     //Define Player
-    public static List<openlegend> sheets = new ArrayList<openlegend>();
-    public static List<String> sheetList = new ArrayList<String>();
-    public static openlegend player = new openlegend();
+    public static List<openlegend> sheets = new ArrayList<openlegend>(); //Sheets
+    public static List<String> sheetList = new ArrayList<String>(); //List of Sheet Names
+    public static openlegend player = new openlegend(); //Current Sheets
 
     //Getters and Setters
 
@@ -152,6 +153,16 @@ public class openlegend
 
     public String getCharName() {
         return charName;
+    }
+
+    public void setType(String type)
+    {
+        this.type = type;
+    }
+
+    public String getType()
+    {
+        return this.type;
     }
 
     public void setCharName(String charName) {
@@ -691,6 +702,221 @@ public class openlegend
         List Boons = new ArrayList<String>();
 
          */
+    }
+
+    public openlegend loadCharacterSheet(String selected)
+    {
+        HARDCODEDSHEETS();
+        player = sheets.get(sheetList.indexOf(selected));
+        return player;
+    }
+
+    public static void HARDCODEDSHEETS()
+    {
+        openlegend temp = new openlegend();
+        temp.setType("pc");
+        temp.setCharName("Tazmur");
+        temp.setNickname("Taz");
+        temp.setDeity("Kalle Demos");
+        String[] lang = new String[3];
+        lang[0] = "Gerudo";
+        lang[1] = "Hylian";
+        lang[2] = "Sheikah";
+        temp.setLanguages(lang);
+        temp.setBio("Possibly an evil male Gerudo who wanders the land lacking any real home. In his travels he befriended an extremely magical cat named Noujou. It’s possible he has evil goals in life but he’s pretty chill. ");
+        temp.setFortitude(2);
+        temp.setPresence(2);
+        temp.setPerception(2);
+        temp.setAlteration(6);
+        temp.setMovement(4);
+        temp.setEnergy(4);
+        temp.setAgility(2);
+        temp.setLearning(2);
+        temp.setWill(2);
+        temp.setArmor(1);
+        temp.setLevelTotal(10);
+        temp.setSpeed(30);
+        temp.setDamageTaken(0);
+
+        temp.setStats();
+        temp.setGetAttributePointsUsed();
+        temp.setAttributePointsAvailable(temp.getType());
+
+        temp.setWealth(3);
+        temp.addItem("Leather Armor", "(+1 Guard)");
+        temp.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
+        temp.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
+        temp.addItem("Bow", "Agility v. Guard - Range 125ft");
+        temp.addItem("Creature Book", "Advantage on Creature Knowledge");
+        temp.addItem("Mask Collection (10)", "Collection of Masks from the Happy Mask Sales Men");
+        temp.addItem("Magic Pearl", "Magic Peal with the power to stop the transformitive effects of the Dark World");
+
+        if (temp.getType().equals("pc") || temp.getType().equals("ccII") || temp.getType().equals("ccIII"))
+        {
+            featsOL.featList();
+        }
+        sheetList.add("Tazmur");
+        sheets.add(temp);
+
+    }
+
+    //HARD CODED CHARACTERS
+    public openlegend Nightmare(openlegend player, String type)
+    {
+        player.setCharName("Nightmare");
+        player.setNickname("Spirit");
+        player.setDeity("Kalle Demos");
+        String[] lang = new String[3];
+        lang[0] = "Gerudo";
+        lang[1] = "Hylian";
+        lang[2] = "Demon";
+        player.setLanguages(lang);
+        player.setBio("A flamboyant, seemingly calm, overconfident opponent whose only goal is to revive Demise, his master. His spirit is bound to Tazmur and is unable to leave him.");
+        player.setEntropy(5);
+        player.setAlteration(5);
+        player.setProtection(4);
+        player.setLevelTotal(10);
+        player.setSpeed(0);
+        player.setDamageTaken(0);
+
+        player.setStats();
+        player.setGetAttributePointsUsed();
+        player.setAttributePointsAvailable(type);
+
+        if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
+        {
+            featsOL.featList();
+        }
+
+        return player;
+    }
+
+    public openlegend Thor(openlegend player, String type)
+    {
+        player.setCharName("Thor");
+        player.setNickname("God of Thunder");
+        player.setDeity("Odin");
+        String[] lang = new String[3];
+        lang[0] = "English";
+        lang[1] = "Asgardian";
+        lang[2] = "Giant";
+        player.setLanguages(lang);
+        player.setBio("Thor is a hammer-wielding god associated with thunder, lightning, storms, oak trees, strength, the protection of mankind and also hallowing and fertility.");
+        player.setFortitude(6);
+        player.setMovement(4);
+        player.setEnergy(6);
+        player.setAgility(4);
+        player.setMight(4);
+        player.setWill(3);
+        player.setArmor(5);
+        player.setLevelTotal(13);
+        player.setSpeed(30);
+        player.setDamageTaken(5);
+
+        player.setStats();
+        player.setGetAttributePointsUsed();
+        player.setAttributePointsAvailable(type);
+
+        if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
+        {
+            featsOL.featList();
+        }
+
+        return player;
+    }
+
+    /*public openlegend Tazmur(openlegend player, String type)
+    {
+        player.setCharName("Tazmur");
+        player.setNickname("Taz");
+        player.setDeity("Kalle Demos");
+        String[] lang = new String[3];
+        lang[0] = "Gerudo";
+        lang[1] = "Hylian";
+        lang[2] = "Sheikah";
+        player.setLanguages(lang);
+        player.setBio("Possibly an evil male Gerudo who wanders the land lacking any real home. In his travels he befriended an extremely magical cat named Noujou. It’s possible he has evil goals in life but he’s pretty chill. ");
+        player.setFortitude(2);
+        player.setPresence(2);
+        player.setPerception(2);
+        player.setAlteration(6);
+        player.setMovement(4);
+        player.setEnergy(4);
+        player.setAgility(2);
+        player.setLearning(2);
+        player.setWill(2);
+        player.setArmor(1);
+        player.setLevelTotal(10);
+        player.setSpeed(30);
+        player.setDamageTaken(0);
+
+        player.setStats();
+        player.setGetAttributePointsUsed();
+        player.setAttributePointsAvailable(type);
+
+        player.setWealth(3);
+        player.addItem("Leather Armor", "(+1 Guard)");
+        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
+        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
+        player.addItem("Bow", "Agility v. Guard - Range 125ft");
+        player.addItem("Creature Book", "Advantage on Creature Knowledge");
+        player.addItem("Mask Collection (10)", "Collection of Masks from the Happy Mask Sales Men");
+        player.addItem("Magic Pearl", "Magic Peal with the power to stop the transformitive effects of the Dark World");
+
+        if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
+        {
+            featsOL.featList();
+        }
+
+        return player;
+    }
+
+     */
+
+    public openlegend Mazok(openlegend player, String type)
+    {
+        player.setCharName("Mazok");
+        player.setNickname("Maz");
+        player.setDeity("N/A");
+        String[] lang = new String[3];
+        lang[0] = "Wild";
+        lang[1] = "Hylian";
+        lang[2] = "Sheikah";
+        player.setLanguages(lang);
+        player.setBio("Born sixteen years ago to a savage Rito tribe, Mazok ran away early in his life.  Since then he met Aderinus, a Labrynnian who saved him from the dark magic of the Lost Woods.  With jet black feathers and pure white eyes, he’s abnormal looking compared to the normally colorful Rito.  As a result, he was the laughing stock of his tribe, which leads to him holding a bitter resentment for them to this day.  He is also slow to trust and not very talkative.");
+        player.setAgility(6);
+        player.setMight(5);
+        player.setPerception(3);
+        player.setLogic(3);
+        player.setWill(4);
+        player.setFortitude(3);
+        player.setPresence(2);
+        player.setLearning(2);
+        player.setArmor(1);
+        player.setLevelTotal(10);
+        player.setSpeed(30);
+        player.setDamageTaken(0);
+
+        player.setStats();
+        player.setGetAttributePointsUsed();
+        player.setAttributePointsAvailable(type);
+
+        player.setWealth(1);
+
+        player.addItem("Leather Armor", "(+1 Guard)");
+        player.addItem("Longbow", "");
+        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
+        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
+        player.addItem("Rope 50", "");
+        player.addItem("Lockpicks", "");
+        player.addItem("Deku Mask", "");
+
+        if (type.equals("pc") || type.equals("ccII") || type.equals("ccIII"))
+        {
+            featsOL.featList();
+        }
+
+        return player;
     }
 }
 

@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import com.example.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,10 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Spinner spinnerOL = findViewById(R.id.spinnerOL);
         Button btnOpenSheet = findViewById(R.id.btnOpenSheet);
-        sheetList.add("Tazmur");
-        sheetList.add("Nightmare - Companion II");
-        sheetList.add("Thor");
-        sheetList.add("Mazok");
+        openlegend.HARDCODEDSHEETS();
 
         ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sheetList);
         spinnerOL.setAdapter(adapterOL);
