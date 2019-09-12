@@ -576,6 +576,9 @@ public class OLSheetActivity extends AppCompatActivity {
         else if (selected.contains("Nightmare")) {
             player = Nightmare(player, type);
         }
+        else if (selected.contains("Mazok")) {
+            player = Mazok(player, type);
+        }
         return player;
     }
 

@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         sheets.add("Tazmur");
         sheets.add("Nightmare - Companion II");
         sheets.add("Thor");
+        sheets.add("Mazok");
 
         ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sheets);
         spinnerOL.setAdapter(adapterOL);
