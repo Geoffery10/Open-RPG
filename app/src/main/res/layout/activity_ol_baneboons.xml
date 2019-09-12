@@ -897,7 +897,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
-                        android:text="Blind  -  5" />
+                        android:text="@string/Disarmed_name" />
 
                     <LinearLayout
                         android:id="@+id/infoBB06"
@@ -918,7 +918,7 @@
                             android:id="@+id/txtDescription06"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_description"
+                            android:text="@string/Disarmed_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -933,7 +933,7 @@
                             android:id="@+id/txtDuration06"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Resist ends (Fail x 3 = 1 minute)"
+                            android:text="@string/Disarmed_duration"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -958,7 +958,7 @@
                                 android:layout_weight="1"
                                 android:backgroundTint="@color/colorAccent"
                                 android:gravity="center"
-                                android:text="5"
+                                android:text="@string/Disarmed_powerLvl"
                                 android:textAllCaps="false"
                                 android:textColor="@color/textAccent"
                                 android:textIsSelectable="true"
@@ -980,7 +980,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:text="@string/Disarmed_attributes"
                             android:textAllCaps="false"
                             android:textColor="@color/textAccent"
                             android:textIsSelectable="true"
@@ -1000,7 +1000,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:text="@string/Disarmed_attack"
                             android:textAllCaps="false"
                             android:textColor="@color/textAccent"
                             android:textIsSelectable="true"
@@ -1018,7 +1018,7 @@
                             android:id="@+id/txtEffect06"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_effect"
+                            android:text="@string/Disarmed_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -1027,7 +1027,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:visibility="gone">
+                            android:visibility="visible">
 
                             <TextView
                                 android:id="@+id/lblSpecial06"
@@ -1041,7 +1041,7 @@
                                 android:id="@+id/txtSpecial06"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="N/A"
+                                android:text="@string/Disarmed_special"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
                         </LinearLayout>
@@ -1068,7 +1068,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
-                        android:text="Blind  -  5" />
+                        android:text="@string/Dominated_name" />
 
                     <LinearLayout
                         android:id="@+id/infoBB07"
@@ -1089,7 +1089,7 @@
                             android:id="@+id/txtDescription07"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_description"
+                            android:text="@string/Dominated_description"
                             android:textSize="20sp" />
 
                         <TextView
@@ -1104,7 +1104,7 @@
                             android:id="@+id/txtDuration07"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Resist ends (Fail x 3 = 1 minute)"
+                            android:text="@string/Dominated_duration"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -1129,7 +1129,7 @@
                                 android:layout_weight="1"
                                 android:backgroundTint="@color/colorAccent"
                                 android:gravity="center"
-                                android:text="5"
+                                android:text="@string/Dominated_powerLvl"
                                 android:textAllCaps="false"
                                 android:textColor="@color/textAccent"
                                 android:textIsSelectable="true"
@@ -1151,7 +1151,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:text="@string/Dominated_attributes"
                             android:textAllCaps="false"
                             android:textColor="@color/textAccent"
                             android:textIsSelectable="true"
@@ -1171,7 +1171,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorAccent"
                             android:gravity="center"
-                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:text="@string/Dominated_attack"
                             android:textAllCaps="false"
                             android:textColor="@color/textAccent"
                             android:textIsSelectable="true"
@@ -1189,7 +1189,7 @@
                             android:id="@+id/txtEffect07"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/blinded_effect"
+                            android:text="@string/Dominated_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -1198,7 +1198,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:visibility="gone">
+                            android:visibility="visible">
 
                             <TextView
                                 android:id="@+id/lblSpecial07"
@@ -1212,7 +1212,7 @@
                                 android:id="@+id/txtSpecial07"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="N/A"
+                                android:text="@string/Dominated_special"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
                         </LinearLayout>
