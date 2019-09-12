@@ -227,4 +227,183 @@
     <string name="Forced_Move_special">
         N/A
     </string>
+    
+    <string name="Immobile_name">Immobile  -  1</string>
+    <string name="Immobile_description">
+        Whether through grappling, a precise nerve strike, entangling vines, mental compulsion, or a bone-numbing blast of cold, you render your foe incapable of movement. This bane is typical among martial artists, special ops agents, enchanters, and wrestlers.
+    </string>
+    <string name="Immobile_duration">Resist ends (special) (Fail x 3 = 1 minute)</string>
+    <string name="Immobile_powerLvl">1</string>
+    <string name="Immobile_attributes">
+		Agility - Alteration - Creation - Energy - Entropy - Influence - Might - Movement
+	</string>
+    <string name="Immobile_attack">
+        Agility vs. Guard
+        \nAlteration vs. Guard
+        \nCreation vs. Toughness
+        \nEnergy vs. Toughness
+        \nEntropy vs. Toughness
+        \nInfluence vs. Resolve
+        \nMight vs. Guard
+        \nMovement vs. Guard
+    </string>
+    <string name="Immobile_effect">
+        Your target cannot move from its current space. If you invoked the bane with a Might roll and are within 5\' of the target, then both you and the target are immobile in your current space for the duration of the bane (locked in a grapple). While grappling in this manner, you can attempt to inflict this bane again upon the target. If successful, you can move your speed and take the target with you. If this attack fails, you can only move by first releasing the target and ending the bane. If you invoked the bane with any attribute other than Might, you can move freely while the target remains affected. You can choose to release the target as a free action, immediately ending the bane.
+    </string>
+    <string name="Immobile_special">
+        When an affected target succeeds at a resist roll to end this effect, they can move 15\' as a free action.
+    </string>
+    
+    <string name="Incapacitated_name">Incapacitated  -  5 / 7 / 9</string>
+    <string name="Incapacitated_description">
+        Incapacitation is a catch-all bane for a variety of effects, including total paralysis, sleep, petrification, poison, being knocked out, fainting, or similar conditions that render a character completely helpless. Examples of possible causes of this bane include a martial artist\'s paralyzing strike, an enchanter's magical song of sleep, paralysis by poison, fainting from extreme heat, suffocation, and the gaze of a medusa.
+    </string>
+    <string name="Incapacitated_duration">Resist ends (Fail x 3 = 1 minute)</string>
+    <string name="Incapacitated_powerLvl">5 > 7 > 9</string>
+    <string name="Incapacitated_attributes">
+		Agility - Entropy - Influence
+	</string>
+    <string name="Incapacitated_attack">
+        Agility vs. Toughness
+        \nEntropy vs. Toughness
+        \nInfluence vs. Resolve
+    </string>
+    <string name="Incapacitated_effect">
+        The target is immobile (can\'t move from their current space) and unconscious. They have disadvantage 5 on all perception rolls and are incapable of moving. As a result of being completely incapable of movement, an incapacitated character can be the victim of a finishing blow.
+        \n\t<b>Power Level 5</b> - The effect can be broken by a moderate disruption, such as a firm shove, a kick, glass of water, loud bang, etc.
+        \n\t<b>Power Level 7</b> - The effect can only be broken if the target takes 1 point of damage or more.
+        \n\t<b>Power Level 9</b> - The effect cannot be disrupted by external forces. Only the afflicted character's successful resist roll can end the effect.
+    </string>
+    <string name="Incapacitated_special">
+        While most banes last until the target actively attempts to resist it, this bane prevents the target from being aware of their affliction and thus prevents them from actively attempting to break free. However, the target\'s body fights to regain consciousness. As such, at the end of each of its turns, the target receives a resist roll as a free action to break free from the effect. When your target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next hour.
+    </string>
+    
+    <string name="Knockdown_name">Knockdown  -  1</string>
+    <string name="Knockdown_description">
+        Whether via a thunderous blow from a great axe, an earth shattering bolt of supernatural energy, or a well aimed shove in a direction where the enemy\'s balance is weak, you knock the target off their feet. Knockdown is a favorite of hulking brutes, telekinetisists, martial artists, and earth elementalists.
+    </string>
+    <string name="Knockdown_duration">Instantaneous</string>
+    <string name="Knockdown_powerLvl">1</string>
+    <string name="Knockdown_attributes">
+		Agility - Energy - Might - Movement
+	</string>
+    <string name="Knockdown_attack">
+        Agility vs. Guard
+        \nEnergy vs. Guard
+        \nMight vs. Guard
+        \nMovement vs. Guard
+    </string>
+    <string name="Knockdown_effect">
+        The target falls prone. Prone targets have disadvantage 1 on all attacks they make. Characters that are prone due to the *knockdown* bane (or any other reason) get +2 to Guard versus Ranged attacks and -2 Guard versus Melee attacks. Standing up from prone requires a move action and costs a character half (round down) of their speed for the round.
+    </string>
+    <string name="Knockdown_special">
+        N/A
+    </string>
+    
+    <string name="Memory_Alteration_name">Memory Alteration  -  5 / 6 / 8</string>
+    <string name="Memory_Alteration_description">
+        Warping or controlling the mind is one of the most dreaded powers of enchanters, causing powerful heroes to forget their homes, families, and quests. Memory alteration is often inflicted by mad scientists, necromancers, enchanters, and chronomancers.
+    </string>
+    <string name="Memory_Alteration_duration">Instantaneous</string>
+    <string name="Memory_Alteration_powerLvl">5 > 6 > 8</string>
+    <string name="Memory_Alteration_attributes">
+		Influence
+	</string>
+    <string name="Memory_Alteration_attack">
+        Influence vs. Resolve
+    </string>
+    <string name="Memory_Alteration_effect">
+        You alter the target\'s memories to an extent based on the power level of the bane.
+        \n\t<b>Power Level 5</b> - You temporarily modify a minor aspect of the target's memory. The target automatically regains the lost memory and realizes their confusion 1 hour later.
+        \n\t<b>Power Level 6</b> - You permanently erase or alter the last 5 minutes of the target's memory. The target does not know what happened during this time outside of the memories you feed them (including having seen you, if they did). Multiple uses of this bane progressively erase consecutive 5 minute increments.
+        \n\t<b>Power Level 8</b> - Instead of the immediate past, you can erase or alter memories from any time.
+        \nThe memory alteration bane can only be inflicted via a bane attack. Damaging attacks that trigger banes cannot trigger this bane. This bane confers no special ability to know about a target's memory. The invoker must be aware of the memory either from rumor, personal knowledge, prescience, or other means.
+    </string>
+    <string name="Memory_Alteration_special">
+        When you target an enemy with this bane and your action roll fails to beat the target\'s Resolve defense, the target is immune to further invocations of this bane from you for the next 24 hours.
+    </string>
+    
+    <string name="Mind_Dredge_name">Mind Dredge  -  2 / 4 / 6 / 8 / 9</string>
+    <string name="Mind_Dredge_description">
+        You gaze into the mind of another creature and read their thoughts. The most powerful wielders of this bane can even pry into the distant memories of their subjects. Fortune tellers, psychics, and mentalists all use mind dredge to learn the deepest dreams and darkest secrets of others.
+    </string>
+    <string name="Mind_Dredge_duration">Resist ends (Fail x 3 = 1 minute)</string>
+    <string name="Mind_Dredge_powerLvl">2 > 4 > 6 > 8 > 9</string>
+    <string name="Mind_Dredge_attributes">
+		Prescience
+	</string>
+    <string name="Mind_Dredge_attack">
+        Prescience vs. Resolve
+    </string>
+    <string name="Mind_Dredge_effect">
+        \n\t<b>Power Level 2</b> - This power may only target creatures of animal intelligence or lower. You gain access to the target's current thoughts.
+        \n\t<b>Power Level 4</b> - This power may target creatures of any intelligence. You gain access to the target's current thoughts.
+        \n\t<b>Power Level 6</b> - This power may target creatures of any intelligence. You gain access to the target's current thoughts as well as its recent memories. Initially, you may probe 1 day into the past. For every round that the bane persists, you gain access to an additional day's worth of memories.
+        \n\t<b>Power Level 8</b> - This power may target creatures of any intelligence. You gain access to the target's current thoughts as well as its distant memories. Initially, you may probe 1 year into the past. For every round that the bane persists, you gain access to an additional year's worth of memories. Alternatively, you may choose to access the memories associated with a particular place, object, or event.
+        \n\t<b>Power Level 9</b> - This power may target creatures of any intelligence. You gain access to the target's current thoughts as well as all of its memories, without limitation by time. Alternatively, you may choose to access the memories associated with a particular place, object, or event.
+    </string>
+    <string name="Mind_Dredge_special">
+        When your target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next 24 hours.
+    </string>
+    
+    <string name="Nullify_name">Nullify  -  1 / 2 / 3 / 4 / 5 / 6 / 7 / 8 / 9</string>
+    <string name="Nullify_description">
+        Through magical power, technological hacking, or similar means, you are able to nullify your enemy\'s boons. The nullify bane is often used by abjurers, engineers, bards, and similar characters built to neutralize the powers of their enemy.
+    </string>
+    <string name="Nullify_duration">Instantaneous</string>
+    <string name="Nullify_powerLvl">1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9</string>
+    <string name="Nullify_attributes">
+		Protection
+	</string>
+    <string name="Nullify_attack">
+        Protection vs. Resolve
+    </string>
+    <string name="Nullify_effect">
+        You cancel a single boon currently in effect if it is of this bane\'s power level or lower. The invoking power level further impacts the effect as follows:
+        \n\t<b>Power Level 1</b> - Cancel a boon of Power Level 1. You can cancel a boon that must be actively invoked. In addition, the target cannot benefit from or have the target boon invoked upon them for 1 minute.
+        \n\t<b>Power Level 2</b> - Cancel a boon of Power Level 2.
+        \n\t<b>Power Level 3</b> - Cancel a boon of Power Level 3.
+        \n\t<b>Power Level 4</b> - Cancel a boon of Power Level 4.
+        \n\t<b>Power Level 5</b> - Cancel a boon of Power Level 5.
+        \n\t<b>Power Level 6</b> - Cancel a boon of Power Level 6. You can cancel a boon that is permanent, passive, or inherent to the target (e.g. the invisibility of a Will o' Wisp). Effects that would prevent Nullify from being invoked in this way have no effect. In addition, the target cannot benefit from or have the target boon invoked upon them for 1 minute.
+        \n\t<b>Power Level 7</b> - Cancel a boon of Power Level 7.
+        \n\t<b>Power Level 8</b> - Cancel a boon of Power Level 8.
+        \n\t<b>Power Level 9</b> - Cancel a boon of Power Level 9.
+    </string>
+    <string name="Nullify_special">
+        If the targeted boon covers a large area, you can cancel all of it by targeting any portion of the effect you can see, or multi-targeting a number of 5\' cubes you believe it to be in. If the targeted boon is affecting an area rather than a creature, you roll against the CR of the boon instead of a Resolve defense. The CR is 10 + 2 x the boon's invoked power level.
+    </string>
+    
+    <string name="Persistent_Damage_name">Persistent Damage  -  2 / 4 / 6 / 8 / 9</string>
+    <string name="Persistent_Damage_description">
+        Whether by setting the target ablaze, covering them in acid, slicing an artery, or cursing them with a wasting disease, you inflict your foe with a lasting and recurring source of damage. Persistent damage is a favorite among assassins, mad scientists, and elementalists.
+    </string>
+    <string name="Persistent_Damage_duration">Resist ends (Fail x 3 = 1 minute)</string>
+    <string name="Persistent_Damage_powerLvl">2 > 4 > 6 > 8 > 9</string>
+    <string name="Persistent_Damage_attributes">
+		Agility - Energy - Entropy
+	</string>
+    <string name="Persistent_Damage_attack">
+        Agility vs. Guard
+        \nEnergy vs. Guard
+        \nEntropy vs. Toughness
+    </string>
+    <string name="Persistent_Damage_effect">
+        At the beginning of the target\'s turn, before they take any actions, they suffer damage determined by the power level of the bane. This damage automatically bypasses the afflicted character\'s defenses but it can be reduced by any resistance to damage of a certain type (see the resistance boon). Like all dice rolls, these dice explode.
+        \n\t<b>Power Level 2</b> - 1d4 damage per round.
+        \n\t<b>Power Level 4</b> - 1d6 damage per round.
+        \n\t<b>Power Level 6</b> - 1d8 damage per round.
+        \n\t<b>Power Level 7</b> - 1d10 damage per round.
+        \n\t<b>Power Level 8</b> - 2d6 damage per round.
+    </string>
+    <string name="Persistent_Damage_special">
+        Persistent damage comes in a number of different variations: physical damage (bleeding from a vital strike), energy damage (lightning, fire, cold, acid, etc.) and entropic damage (necromantic energy), among others. Each variation has its own cure. When that cure is applied with a major action (either by the afflicted character or another), the target receives a resist roll (as a free action) with advantage 1 to end the effect. The GM has the final word on whether a proposed cure can help a given type of persistent damage, but the following examples can help with arbitration:
+        \n\tBleeding damage is cured with a successful roll using Learning, Logic, or Creation.
+        \n\tLightning damage is cured by a discharge or grounding of the current.
+        \n\tCold damage is countered with warmth, heat, or fire.
+        \n\tAcid damage is neutralized with alkalizing agents (powder, milk, etc.).
+        \n\tFire damage is neutralized with water or smothering.
+        \n\tEntropic damage is neutralized with extraordinary or magical healing.
+This bane may still be resisted in the usual way of using the resist banes action.
+    </string>
 </resources>
