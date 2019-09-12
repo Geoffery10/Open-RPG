@@ -1027,7 +1027,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:visibility="visible">
+                            android:visibility="gone">
 
                             <TextView
                                 android:id="@+id/lblSpecial06"
@@ -1213,6 +1213,1032 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/Dominated_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
+
+                <LinearLayout
+                    android:id="@+id/viewBB08"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB08"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Fatigued_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB08"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Fatigued_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Fatigued_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl08"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl08"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Fatigued_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Fatigued_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Fatigued_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Fatigued_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial08"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial08"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial08"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Fatigued_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
+
+                <LinearLayout
+                    android:id="@+id/viewBB09"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB09"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Fear_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB09"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Fear_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Fear_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl09"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl09"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Fear_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Fear_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Fear_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Fear_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial09"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial09"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial09"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Fear_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
+
+                <LinearLayout
+                    android:id="@+id/viewBB10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Forced_Move_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Forced_Move_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Forced_Move_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Forced_Move_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Forced_Move_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Forced_Move_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Forced_Move_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial10"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Forced_Move_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
+
+                <LinearLayout
+                    android:id="@+id/viewBB11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Immobile_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Immobile_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Immobile_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Immobile_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Immobile_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Immobile_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Immobile_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial11"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Immobile_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
+
+                <LinearLayout
+                    android:id="@+id/viewBB12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Incapacitated_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB12"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Incapacitated_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Incapacitated_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Incapacitated_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Incapacitated_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Incapacitated_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Incapacitated_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial12"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Incapacitated_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
+
+                <LinearLayout
+                    android:id="@+id/viewBB13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Knockdown_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Knockdown_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Knockdown_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Knockdown_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Knockdown_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Knockdown_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Knockdown_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial13"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Knockdown_special"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
                         </LinearLayout>
