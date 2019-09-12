@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.thecoredepository.mobile_rpg.MainActivity">
+        <activity android:name="com.thecoredepository.mobile_rpg.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,15 +19,18 @@
         </activity>
         <activity
             android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.thecoredepository.mobile_rpg.dice.DiceActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLInventoryActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
