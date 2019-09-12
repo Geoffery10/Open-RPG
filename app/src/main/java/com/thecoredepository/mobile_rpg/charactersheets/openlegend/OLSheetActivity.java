@@ -679,8 +679,8 @@ public class OLSheetActivity extends AppCompatActivity {
 
         player.setWealth(3);
         player.addItem("Leather Armor", "(+1 Guard)");
-        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Intuitive + 1)");
-        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Intuitive + 1)");
+        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
+        player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
         player.addItem("Bow", "Agility v. Guard - Range 125ft");
         player.addItem("Creature Book", "Advantage on Creature Knowledge");
         player.addItem("Mask Collection (10)", "Collection of Masks from the Happy Mask Sales Men");
@@ -725,8 +725,8 @@ public class OLSheetActivity extends AppCompatActivity {
 		
 		player.addItem("Leather Armor", "(+1 Guard)");
 		player.addItem("Longbow", "");
-		player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Intuitive + 1)");
-		player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Intuitive + 1)");	
+		player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
+		player.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");	
 		player.addItem("Rope 50", "");
 		player.addItem("Lockpicks", "");
 		player.addItem("Deku Mask", "");
