@@ -256,7 +256,7 @@
     
     <string name="Incapacitated_name">Incapacitated  -  5 / 7 / 9</string>
     <string name="Incapacitated_description">
-        Incapacitation is a catch-all bane for a variety of effects, including total paralysis, sleep, petrification, poison, being knocked out, fainting, or similar conditions that render a character completely helpless. Examples of possible causes of this bane include a martial artist\'s paralyzing strike, an enchanter's magical song of sleep, paralysis by poison, fainting from extreme heat, suffocation, and the gaze of a medusa.
+        Incapacitation is a catch-all bane for a variety of effects, including total paralysis, sleep, petrification, poison, being knocked out, fainting, or similar conditions that render a character completely helpless. Examples of possible causes of this bane include a martial artist\'s paralyzing strike, an enchanter\'s magical song of sleep, paralysis by poison, fainting from extreme heat, suffocation, and the gaze of a medusa.
     </string>
     <string name="Incapacitated_duration">Resist ends (Fail x 3 = 1 minute)</string>
     <string name="Incapacitated_powerLvl">5 > 7 > 9</string>
@@ -272,7 +272,7 @@
         The target is immobile (can\'t move from their current space) and unconscious. They have disadvantage 5 on all perception rolls and are incapable of moving. As a result of being completely incapable of movement, an incapacitated character can be the victim of a finishing blow.
         \n\t<b>Power Level 5</b> - The effect can be broken by a moderate disruption, such as a firm shove, a kick, glass of water, loud bang, etc.
         \n\t<b>Power Level 7</b> - The effect can only be broken if the target takes 1 point of damage or more.
-        \n\t<b>Power Level 9</b> - The effect cannot be disrupted by external forces. Only the afflicted character's successful resist roll can end the effect.
+        \n\t<b>Power Level 9</b> - The effect cannot be disrupted by external forces. Only the afflicted character\'s successful resist roll can end the effect.
     </string>
     <string name="Incapacitated_special">
         While most banes last until the target actively attempts to resist it, this bane prevents the target from being aware of their affliction and thus prevents them from actively attempting to break free. However, the target\'s body fights to regain consciousness. As such, at the end of each of its turns, the target receives a resist roll as a free action to break free from the effect. When your target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next hour.
@@ -314,10 +314,10 @@
     </string>
     <string name="Memory_Alteration_effect">
         You alter the target\'s memories to an extent based on the power level of the bane.
-        \n\t<b>Power Level 5</b> - You temporarily modify a minor aspect of the target's memory. The target automatically regains the lost memory and realizes their confusion 1 hour later.
-        \n\t<b>Power Level 6</b> - You permanently erase or alter the last 5 minutes of the target's memory. The target does not know what happened during this time outside of the memories you feed them (including having seen you, if they did). Multiple uses of this bane progressively erase consecutive 5 minute increments.
+        \n\t<b>Power Level 5</b> - You temporarily modify a minor aspect of the target\'s memory. The target automatically regains the lost memory and realizes their confusion 1 hour later.
+        \n\t<b>Power Level 6</b> - You permanently erase or alter the last 5 minutes of the target\'s memory. The target does not know what happened during this time outside of the memories you feed them (including having seen you, if they did). Multiple uses of this bane progressively erase consecutive 5 minute increments.
         \n\t<b>Power Level 8</b> - Instead of the immediate past, you can erase or alter memories from any time.
-        \nThe memory alteration bane can only be inflicted via a bane attack. Damaging attacks that trigger banes cannot trigger this bane. This bane confers no special ability to know about a target's memory. The invoker must be aware of the memory either from rumor, personal knowledge, prescience, or other means.
+        \nThe memory alteration bane can only be inflicted via a bane attack. Damaging attacks that trigger banes cannot trigger this bane. This bane confers no special ability to know about a target\'s memory. The invoker must be aware of the memory either from rumor, personal knowledge, prescience, or other means.
     </string>
     <string name="Memory_Alteration_special">
         When you target an enemy with this bane and your action roll fails to beat the target\'s Resolve defense, the target is immune to further invocations of this bane from you for the next 24 hours.
@@ -336,11 +336,11 @@
         Prescience vs. Resolve
     </string>
     <string name="Mind_Dredge_effect">
-        \n\t<b>Power Level 2</b> - This power may only target creatures of animal intelligence or lower. You gain access to the target's current thoughts.
-        \n\t<b>Power Level 4</b> - This power may target creatures of any intelligence. You gain access to the target's current thoughts.
-        \n\t<b>Power Level 6</b> - This power may target creatures of any intelligence. You gain access to the target's current thoughts as well as its recent memories. Initially, you may probe 1 day into the past. For every round that the bane persists, you gain access to an additional day's worth of memories.
-        \n\t<b>Power Level 8</b> - This power may target creatures of any intelligence. You gain access to the target's current thoughts as well as its distant memories. Initially, you may probe 1 year into the past. For every round that the bane persists, you gain access to an additional year's worth of memories. Alternatively, you may choose to access the memories associated with a particular place, object, or event.
-        \n\t<b>Power Level 9</b> - This power may target creatures of any intelligence. You gain access to the target's current thoughts as well as all of its memories, without limitation by time. Alternatively, you may choose to access the memories associated with a particular place, object, or event.
+        \n\t<b>Power Level 2</b> - This power may only target creatures of animal intelligence or lower. You gain access to the target\'s current thoughts.
+        \n\t<b>Power Level 4</b> - This power may target creatures of any intelligence. You gain access to the target\'s current thoughts.
+        \n\t<b>Power Level 6</b> - This power may target creatures of any intelligence. You gain access to the target\'s current thoughts as well as its recent memories. Initially, you may probe 1 day into the past. For every round that the bane persists, you gain access to an additional day\'s worth of memories.
+        \n\t<b>Power Level 8</b> - This power may target creatures of any intelligence. You gain access to the target\'s current thoughts as well as its distant memories. Initially, you may probe 1 year into the past. For every round that the bane persists, you gain access to an additional year\'s worth of memories. Alternatively, you may choose to access the memories associated with a particular place, object, or event.
+        \n\t<b>Power Level 9</b> - This power may target creatures of any intelligence. You gain access to the target\'s current thoughts as well as all of its memories, without limitation by time. Alternatively, you may choose to access the memories associated with a particular place, object, or event.
     </string>
     <string name="Mind_Dredge_special">
         When your target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next 24 hours.
@@ -365,13 +365,13 @@
         \n\t<b>Power Level 3</b> - Cancel a boon of Power Level 3.
         \n\t<b>Power Level 4</b> - Cancel a boon of Power Level 4.
         \n\t<b>Power Level 5</b> - Cancel a boon of Power Level 5.
-        \n\t<b>Power Level 6</b> - Cancel a boon of Power Level 6. You can cancel a boon that is permanent, passive, or inherent to the target (e.g. the invisibility of a Will o' Wisp). Effects that would prevent Nullify from being invoked in this way have no effect. In addition, the target cannot benefit from or have the target boon invoked upon them for 1 minute.
+        \n\t<b>Power Level 6</b> - Cancel a boon of Power Level 6. You can cancel a boon that is permanent, passive, or inherent to the target (e.g. the invisibility of a Will o\' Wisp). Effects that would prevent Nullify from being invoked in this way have no effect. In addition, the target cannot benefit from or have the target boon invoked upon them for 1 minute.
         \n\t<b>Power Level 7</b> - Cancel a boon of Power Level 7.
         \n\t<b>Power Level 8</b> - Cancel a boon of Power Level 8.
         \n\t<b>Power Level 9</b> - Cancel a boon of Power Level 9.
     </string>
     <string name="Nullify_special">
-        If the targeted boon covers a large area, you can cancel all of it by targeting any portion of the effect you can see, or multi-targeting a number of 5\' cubes you believe it to be in. If the targeted boon is affecting an area rather than a creature, you roll against the CR of the boon instead of a Resolve defense. The CR is 10 + 2 x the boon's invoked power level.
+        If the targeted boon covers a large area, you can cancel all of it by targeting any portion of the effect you can see, or multi-targeting a number of 5\' cubes you believe it to be in. If the targeted boon is affecting an area rather than a creature, you roll against the CR of the boon instead of a Resolve defense. The CR is 10 + 2 x the boon\'s invoked power level.
     </string>
     
     <string name="Persistent_Damage_name">Persistent Damage  -  2 / 4 / 6 / 8 / 9</string>
