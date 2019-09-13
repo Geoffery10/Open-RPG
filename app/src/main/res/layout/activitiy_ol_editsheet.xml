@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paper_bg"
+    android:configChanges="orientation"
+    android:gravity="center"
+    android:screenOrientation="portrait"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="128dp"
+                android:cropToPadding="true"
+                android:padding="32dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/open_legend_lg_logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/txtCharName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:inputType="textPersonName"
+                    android:text="name"
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp"
+                    tools:layout_conversion_absoluteHeight="19dp"
+                    tools:layout_conversion_absoluteWidth="411dp" />
+
+                <EditText
+                    android:id="@+id/txtNickName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:inputType="textPersonName"
+                    android:text="nickname"
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp"
+                    tools:layout_conversion_absoluteHeight="247dp"
+                    tools:layout_conversion_absoluteWidth="411dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtLvl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Level:"
+                    android:textIsSelectable="true"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/txtMajorLv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:inputType="number"
+                    android:text="x"
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/txtMinorLvl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:inputType="number"
+                    android:text="x"
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/txtDeity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:inputType="textPersonName"
+                    android:text="god"
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtLang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Languages: "
+                    android:textIsSelectable="true"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtBio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Bio:"
+                    android:textIsSelectable="true"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/txtBioEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="bio"
+                    android:textIsSelectable="true"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAttributes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Attributes: "
+                    android:textIsSelectable="true"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtToughness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Toughness"
+                    android:textIsSelectable="true"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/txtGuard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Guard"
+                    android:textIsSelectable="true"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtResolve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Resolve"
+                    android:textIsSelectable="true"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/txtHitpoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Hitpoints 0/10"
+                    android:textIsSelectable="true"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:text="Speed: "
+                    android:textIsSelectable="true"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLAgility">
+
+                    <TextView
+                        android:id="@+id/txtAgility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Agility:"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editAgility"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLFortitude">
+
+                    <TextView
+                        android:id="@+id/txtFortitude"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Fortitude:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editFortitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLMight">
+
+                    <TextView
+                        android:id="@+id/txtMight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Might:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editMight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLLearning">
+
+                    <TextView
+                        android:id="@+id/txtLearning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Learning:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editLearning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLLogic">
+
+                    <TextView
+                        android:id="@+id/txtLogic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Logic:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editLogic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLPerception">
+
+                    <TextView
+                        android:id="@+id/txtPerception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Perception:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editPerception"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLWill">
+
+                    <TextView
+                        android:id="@+id/txtWill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Will:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editWill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLDeception">
+
+                    <TextView
+                        android:id="@+id/txtDeception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Deception:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editDeception"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLPersuasion">
+
+                    <TextView
+                        android:id="@+id/txtPersuasion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Persuasion:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editPersuasion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLPresence">
+
+                    <TextView
+                        android:id="@+id/txtPresence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Presence:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editPresence"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLAlteration">
+
+                    <TextView
+                        android:id="@+id/txtAlteration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Alteration:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editAlteration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLCreation">
+
+                    <TextView
+                        android:id="@+id/txtCreation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Creation:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editCreation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLEnergy">
+
+                    <TextView
+                        android:id="@+id/txtEnergy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Energy:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editEnergy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLEntropy">
+
+                    <TextView
+                        android:id="@+id/txtEntropy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Entropy:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editEntropy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLInfluence">
+
+                    <TextView
+                        android:id="@+id/txtInfluence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Influence:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editInfluence"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLMovement">
+
+                    <TextView
+                        android:id="@+id/txtMovement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Movement:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editMovement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLPrescience">
+
+                    <TextView
+                        android:id="@+id/txtPrescience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Prescience:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editPrescience"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLProtection">
+
+                    <TextView
+                        android:id="@+id/txtProtection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Protection:"
+                        android:textIsSelectable="true"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editProtection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+
+                    <Button
+                        android:id="@+id/btnBanes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+                        android:text="Banes" />
+
+                    <Button
+                        android:id="@+id/btnBoons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+                        android:text="Boons" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnInventory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:padding="18dp"
+                    android:text="Inventory" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
