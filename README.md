@@ -2,8 +2,8 @@
 <img align="center" width="500" height="100" src="https://github.com/Geoffery10/Mobile-RPG/blob/master/github_assets/icon_banner.jpg">
 </p>
 
-# Mobile RPG Sheets
-Mobile RPG Sheets is an Android app that allows you to carry your character sheets anywhere. 
+# Open RPG
+Open RPG is an Android app that allows you to carry your character sheets anywhere. 
 The app includes features like dice rollers and lookup of skill/banes/boons/feats... 
 Let Mobile RPG Sheets do all the hard work for you!
 
