@@ -1,4 +1,6 @@
+<p align="center">
 <img align="center" width="100" height="100" src="https://github.com/Geoffery10/Mobile-RPG/blob/master/github_assets/icon.png?raw=true">
+</p>
 
 # Mobile RPG Sheets
 Mobile RPG Sheets is an Android app that allows you to carry your character sheets anywhere. 
