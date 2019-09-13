@@ -1,8 +1,24 @@
-![Banner](https://openlegend.heromuster.com/heromuster-header.png)
+<p align="center">
+<img align="center" width="100" height="100" src="https://github.com/Geoffery10/Mobile-RPG/blob/master/github_assets/icon.png?raw=true">
+</p>
+
 # Mobile RPG Sheets
 Mobile RPG Sheets is an Android app that allows you to carry your character sheets anywhere. 
 The app includes features like dice rollers and lookup of skill/banes/boons/feats... 
 Let Mobile RPG Sheets do all the hard work for you!
+
+## Table of Contents
+* [Screenshots](https://github.com/Geoffery10/Mobile-RPG/blob/master/README.md#screenshots)
+* [Getting Started](https://github.com/Geoffery10/Mobile-RPG#getting-started)
+  * [Prerequisites](https://github.com/Geoffery10/Mobile-RPG#prerequisites)
+  * [Tested On](https://github.com/Geoffery10/Mobile-RPG#tested-on)
+  * [Installing](https://github.com/Geoffery10/Mobile-RPG#installing)
+    * [Play Store](https://github.com/Geoffery10/Mobile-RPG#play-store)
+    * [GitHub Releases](https://github.com/Geoffery10/Mobile-RPG#github-release)
+* [Built With](https://github.com/Geoffery10/Mobile-RPG#built-with)
+* [Contributing](https://github.com/Geoffery10/Mobile-RPG#contributing)  
+* [Authors](https://github.com/Geoffery10/Mobile-RPG#authors)
+* [License and Acknowledgments](https://github.com/Geoffery10/Mobile-RPG#license)
 
 ## Screenshots
 ![Screenshot](https://github.com/Geoffery10/Mobile-RPG/blob/master/github_assets/Screenshot_1568401566.png?raw=true)
