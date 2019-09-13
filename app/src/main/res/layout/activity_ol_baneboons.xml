@@ -24,10 +24,11 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/viewBB01_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/viewBB01"
@@ -50,6 +51,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Blinded_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Blinded_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Blinded_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial01"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial01"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial01"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Blinded_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription01"
@@ -82,35 +160,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl01"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl01"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="@string/Blinded_powerLvl"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes01"
                             android:layout_width="match_parent"
@@ -119,18 +168,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes01"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Blinded_attributes"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack01"
                             android:layout_width="match_parent"
@@ -138,18 +175,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack01"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Blinded_attack"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect01"
@@ -166,39 +191,17 @@
                             android:text="@string/Blinded_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial01"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/lblSpecial01"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial01"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Blinded_special"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewBB02_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
                 android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:visibility="visible">
 
                 <LinearLayout
                     android:id="@+id/viewBB02"
@@ -206,7 +209,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="15dp"
                     android:background="#80FFFFFF"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="visible">
 
                     <Button
                         android:id="@+id/btnBB02"
@@ -221,6 +225,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Charmed_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Charmed_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl02"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Charmed_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl02"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial02"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial02"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial02"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Charmed_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription02"
@@ -253,35 +334,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl02"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl02"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="@string/Charmed_powerLvl"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes02"
                             android:layout_width="match_parent"
@@ -290,18 +342,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Charmed_attributes"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack02"
                             android:layout_width="match_parent"
@@ -309,18 +349,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Charmed_attack"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect02"
@@ -337,39 +365,16 @@
                             android:text="@string/Charmed_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial02"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/lblSpecial02"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial02"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Charmed_special"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewBB03_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/viewBB03"
@@ -392,6 +397,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Alteration - Creation - Energy - Entropy"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl03"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl03"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial03"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial03"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial03"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="N/A"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription03"
@@ -424,35 +506,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl03"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl03"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="5"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes03"
                             android:layout_width="match_parent"
@@ -461,18 +514,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes03"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="Alteration - Creation - Energy - Entropy"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack03"
                             android:layout_width="match_parent"
@@ -480,18 +521,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack03"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect03"
@@ -508,39 +537,16 @@
                             android:text="@string/Deafened_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial03"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/lblSpecial03"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial03"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="N/A"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewBB04_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/viewBB04"
@@ -563,6 +569,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes04"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Death_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack04"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Death_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl04"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Death_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl04"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial04"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial04"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial04"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Deafened_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription04"
@@ -595,35 +678,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl04"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl04"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="@string/Death_powerLvl"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes04"
                             android:layout_width="match_parent"
@@ -632,18 +686,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes04"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Death_attributes"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack04"
                             android:layout_width="match_parent"
@@ -651,18 +693,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack04"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Death_attack"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect04"
@@ -679,39 +709,16 @@
                             android:text="@string/Death_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial04"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/lblSpecial04"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial04"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Deafened_special"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewBB05_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/viewBB05"
@@ -734,6 +741,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes05"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Demoralized_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack05"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Demoralized_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl05"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Demoralized_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl05"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial05"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial05"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial05"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Demoralized_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription05"
@@ -766,35 +850,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl05"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl05"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="@string/Demoralized_powerLvl"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes05"
                             android:layout_width="match_parent"
@@ -803,18 +858,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes05"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Demoralized_attributes"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack05"
                             android:layout_width="match_parent"
@@ -822,18 +865,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack05"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Demoralized_attack"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect05"
@@ -850,39 +881,16 @@
                             android:text="@string/Demoralized_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial05"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="visible">
-
-                            <TextView
-                                android:id="@+id/lblSpecial05"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial05"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Demoralized_special"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewBB06_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/viewBB06"
@@ -905,6 +913,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes06"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Disarmed_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack06"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Disarmed_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl06"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Disarmed_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl06"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial06"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial06"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial06"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Disarmed_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription06"
@@ -937,35 +1022,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl06"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl06"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="@string/Disarmed_powerLvl"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes06"
                             android:layout_width="match_parent"
@@ -974,18 +1030,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes06"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Disarmed_attributes"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack06"
                             android:layout_width="match_parent"
@@ -993,18 +1037,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack06"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Disarmed_attack"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect06"
@@ -1021,39 +1053,16 @@
                             android:text="@string/Disarmed_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial06"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/lblSpecial06"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial06"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Disarmed_special"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewBB07_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/viewBB07"
@@ -1076,6 +1085,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes07"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Dominated_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack07"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Dominated_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl07"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Dominated_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl07"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial07"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial07"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial07"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Dominated_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription07"
@@ -1108,35 +1194,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl07"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl07"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="@string/Dominated_powerLvl"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes07"
                             android:layout_width="match_parent"
@@ -1145,18 +1202,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes07"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Dominated_attributes"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack07"
                             android:layout_width="match_parent"
@@ -1164,18 +1209,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack07"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Dominated_attack"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect07"
@@ -1192,39 +1225,16 @@
                             android:text="@string/Dominated_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial07"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="visible">
-
-                            <TextView
-                                android:id="@+id/lblSpecial07"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial07"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Dominated_special"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-            
+
             <LinearLayout
+                android:id="@+id/viewBB08_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/viewBB08"
@@ -1247,6 +1257,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Fatigued_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Fatigued_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl08"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Fatigued_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl08"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial08"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial08"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial08"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Fatigued_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription08"
@@ -1279,35 +1366,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl08"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl08"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="@string/Fatigued_powerLvl"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes08"
                             android:layout_width="match_parent"
@@ -1316,18 +1374,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes08"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Fatigued_attributes"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack08"
                             android:layout_width="match_parent"
@@ -1335,18 +1381,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack08"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Fatigued_attack"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect08"
@@ -1363,39 +1397,16 @@
                             android:text="@string/Fatigued_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial08"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="visible">
-
-                            <TextView
-                                android:id="@+id/lblSpecial08"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial08"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Fatigued_special"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-            
+
             <LinearLayout
+                android:id="@+id/viewBB09_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/viewBB09"
@@ -1418,6 +1429,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Fear_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Fear_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl09"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Fear_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl09"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial09"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial09"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial09"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Fear_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription09"
@@ -1450,35 +1538,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl09"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl09"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="@string/Fear_powerLvl"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes09"
                             android:layout_width="match_parent"
@@ -1487,18 +1546,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes09"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Fear_attributes"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack09"
                             android:layout_width="match_parent"
@@ -1506,18 +1553,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack09"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Fear_attack"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect09"
@@ -1534,39 +1569,16 @@
                             android:text="@string/Fear_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial09"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="visible">
-
-                            <TextView
-                                android:id="@+id/lblSpecial09"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial09"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Fear_special"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-            
+
             <LinearLayout
+                android:id="@+id/viewBB10_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/viewBB10"
@@ -1589,6 +1601,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Forced_Move_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Forced_Move_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Forced_Move_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial10"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Forced_Move_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription10"
@@ -1621,35 +1710,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="@string/Forced_Move_powerLvl"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes10"
                             android:layout_width="match_parent"
@@ -1658,18 +1718,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes10"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Forced_Move_attributes"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack10"
                             android:layout_width="match_parent"
@@ -1677,18 +1725,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack10"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Forced_Move_attack"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect10"
@@ -1705,39 +1741,16 @@
                             android:text="@string/Forced_Move_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial10"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/lblSpecial10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Forced_Move_special"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-            
+
             <LinearLayout
+                android:id="@+id/viewBB11_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/viewBB11"
@@ -1760,6 +1773,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Immobile_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Immobile_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Immobile_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial11"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Immobile_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription11"
@@ -1792,35 +1882,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="@string/Immobile_powerLvl"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes11"
                             android:layout_width="match_parent"
@@ -1829,18 +1890,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes11"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Immobile_attributes"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack11"
                             android:layout_width="match_parent"
@@ -1848,18 +1897,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack11"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Immobile_attack"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect11"
@@ -1876,39 +1913,16 @@
                             android:text="@string/Immobile_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial11"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="visible">
-
-                            <TextView
-                                android:id="@+id/lblSpecial11"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial11"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Immobile_special"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-            
+
             <LinearLayout
+                android:id="@+id/viewBB12_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/viewBB12"
@@ -1931,6 +1945,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Incapacitated_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Incapacitated_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Incapacitated_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial12"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Incapacitated_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription12"
@@ -1963,35 +2054,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl12"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl12"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="@string/Incapacitated_powerLvl"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes12"
                             android:layout_width="match_parent"
@@ -2000,18 +2062,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes12"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Incapacitated_attributes"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack12"
                             android:layout_width="match_parent"
@@ -2019,18 +2069,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack12"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Incapacitated_attack"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect12"
@@ -2047,39 +2085,16 @@
                             android:text="@string/Incapacitated_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial12"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="visible">
-
-                            <TextView
-                                android:id="@+id/lblSpecial12"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial12"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Incapacitated_special"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-            
+
             <LinearLayout
+                android:id="@+id/viewBB13_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginVertical="5dp">
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/viewBB13"
@@ -2102,6 +2117,83 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/txtAttributes13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Knockdown_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Knockdown_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/txtPowerLvl13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Knockdown_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial13"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Knockdown_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/lblDescription13"
@@ -2134,35 +2226,6 @@
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl13"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
-
-                            <Button
-                                android:id="@+id/txtPowerLvl13"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/colorAccent"
-                                android:gravity="center"
-                                android:text="@string/Knockdown_powerLvl"
-                                android:textAllCaps="false"
-                                android:textColor="@color/textAccent"
-                                android:textIsSelectable="true"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
                         <TextView
                             android:id="@+id/lblAttributes13"
                             android:layout_width="match_parent"
@@ -2171,18 +2234,6 @@
                             android:text="Attributes"
                             android:textSize="25sp" />
 
-                        <Button
-                            android:id="@+id/txtAttributes13"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Knockdown_attributes"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
-
                         <TextView
                             android:id="@+id/lblAttack13"
                             android:layout_width="match_parent"
@@ -2190,18 +2241,6 @@
                             android:gravity="center"
                             android:text="Attack"
                             android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/txtAttack13"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorAccent"
-                            android:gravity="center"
-                            android:text="@string/Knockdown_attack"
-                            android:textAllCaps="false"
-                            android:textColor="@color/textAccent"
-                            android:textIsSelectable="true"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/lblEffect13"
@@ -2218,30 +2257,6 @@
                             android:text="@string/Knockdown_effect"
                             android:textAlignment="center"
                             android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:id="@+id/viewSpecial13"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/lblSpecial13"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Special"
-                                android:textSize="25sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpecial13"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Knockdown_special"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

@@ -235,31 +235,31 @@ public class OLBanesBoonsActivity extends AppCompatActivity
 
     public void showBanesByStats()
     {
-        View viewBB01 = findViewById(R.id.viewBB01);
+        View viewBB01 = findViewById(R.id.viewBB01_1);
         viewBB01.setVisibility(View.GONE);
-        View viewBB02 = findViewById(R.id.viewBB02);
+        View viewBB02 = findViewById(R.id.viewBB02_1);
         viewBB02.setVisibility(View.GONE);
-        View viewBB03 = findViewById(R.id.viewBB03);
+        View viewBB03 = findViewById(R.id.viewBB03_1);
         viewBB03.setVisibility(View.GONE);
-        View viewBB04 = findViewById(R.id.viewBB04);
+        View viewBB04 = findViewById(R.id.viewBB04_1);
         viewBB04.setVisibility(View.GONE);
-        View viewBB05 = findViewById(R.id.viewBB05);
+        View viewBB05 = findViewById(R.id.viewBB05_1);
         viewBB05.setVisibility(View.GONE);
-        View viewBB06 = findViewById(R.id.viewBB06);
+        View viewBB06 = findViewById(R.id.viewBB06_1);
         viewBB06.setVisibility(View.GONE);
-        View viewBB07 = findViewById(R.id.viewBB07);
+        View viewBB07 = findViewById(R.id.viewBB07_1);
         viewBB07.setVisibility(View.GONE);
-        View viewBB08 = findViewById(R.id.viewBB08);
+        View viewBB08 = findViewById(R.id.viewBB08_1);
         viewBB08.setVisibility(View.GONE);
-        View viewBB09 = findViewById(R.id.viewBB09);
+        View viewBB09 = findViewById(R.id.viewBB09_1);
         viewBB09.setVisibility(View.GONE);
-        View viewBB10 = findViewById(R.id.viewBB10);
+        View viewBB10 = findViewById(R.id.viewBB10_1);
         viewBB09.setVisibility(View.GONE);
-        View viewBB11 = findViewById(R.id.viewBB11);
+        View viewBB11 = findViewById(R.id.viewBB11_1);
         viewBB11.setVisibility(View.GONE);
-        View viewBB12 = findViewById(R.id.viewBB12);
+        View viewBB12 = findViewById(R.id.viewBB12_1);
         viewBB12.setVisibility(View.GONE);
-        View viewBB13 = findViewById(R.id.viewBB13);
+        View viewBB13 = findViewById(R.id.viewBB13_1);
         viewBB13.setVisibility(View.GONE);
 
         if(player.getAlteration() >= 5 || player.getCreation() >= 5 || player.getEnergy() >= 5 || player.getEntropy() >= 5)
