@@ -404,39 +404,238 @@
         \n\tAcid damage is neutralized with alkalizing agents (powder, milk, etc.).
         \n\tFire damage is neutralized with water or smothering.
         \n\tEntropic damage is neutralized with extraordinary or magical healing.
-This bane may still be resisted in the usual way of using the resist banes action.
+		This bane may still be resisted in the usual way of using the resist banes action.
     </string>
 	
-	<string name="Persistent_Damage_name">Persistent Damage  -  2 / 4 / 6 / 8 / 9</string>
-    <string name="Persistent_Damage_description">
-        Whether by setting the target ablaze, covering them in acid, slicing an artery, or cursing them with a wasting disease, you inflict your foe with a lasting and recurring source of damage. Persistent damage is a favorite among assassins, mad scientists, and elementalists.
+	<string name="Phantasm_name">Phantasm  -  1 / 2 / 3 / 4 / 5 / 6 / 7 / 8 / 9</string>
+    <string name="Phantasm_description">
+        You create an illusory manifestation to deceive the senses. Some examples include making a meal taste rotten, altering the data on a screen where a user is logging in, creating the sound of a stampede of horses, hiding allies behind a false wall, or creating an illusion of an intergalactic emperor who can converse intelligibly.
     </string>
-    <string name="Persistent_Damage_duration">Resist ends (Fail x 3 = 1 minute)</string>
-    <string name="Persistent_Damage_powerLvl">2 > 4 > 6 > 8 > 9</string>
-    <string name="Persistent_Damage_attributes">
-		Agility - Energy - Entropy
+    <string name="Phantasm_duration">Special</string>
+    <string name="Phantasm_powerLvl">1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9</string>
+    <string name="Phantasm_attributes">
+		Influence
 	</string>
-    <string name="Persistent_Damage_attack">
+    <string name="Phantasm_attack">
+        Influence vs. Resolve
+    </string>
+    <string name="Phantasm_effect">
+        You create a phantasm of your choosing. The power level at which you invoke the bane determines which senses you can deceive as well as the maximum size of your illusion, as follows:
+		\n\t<b>Power Level 1</b> - Affect Taste. Manifest a 5\' x 5\' x 5\' area phantasm.
+		\n\t<b>Power Level 2</b> - Affect Smell, Sound, or Touch.
+		\n\t<b>Power Level 3</b> - Affect Sight.
+		\n\t<b>Power Level 4</b> - Manifest a 10\' x 10\' x 10\' area phantasm.
+		\n\t<b>Power Level 5</b> - Manifest a 15\' x 15\' x 15\' area phantasm.
+		\n\t<b>Power Level 6</b> - Affect All Senses.
+		\n\t<b>Power Level 7</b> - Manifest a 20\' x 20\' x 20\' area phantasm.
+		\n\t<b>Power Level 8</b> - Manifest a 30\' x 30\' x 30\' area phantasm.
+		\n\t<b>Power Level 9</b> - Manifest a 50\' x 50\' x 50\' area phantasm.
+		Until reaching power level 6, you can combine sensory illusions by adding the required power levels together (e.g., mimicking both sight and sound requires power level 5). While the phantasm persists, you can make logical changes to it freely. For example, an illusory person can speak naturally as you direct it and could be made to fall in response to an attack. However, substantial changes to the illusion (such as transforming a human into a goblin) require a new invocation of the illusion.
+    </string>
+    <string name="Phantasm_special">
+        Unlike other banes, this bane does not work by targeting specific enemies. Instead, your Influence roll for invoking it is compared with the Resolve defense of each character that would perceive the created effect if it were real. If the roll is lower than their Resolve, they perceive none of the phantasm\'s effects. If the roll is greater than or equal to their Resolve, they perceive the illusory effect you create and react as if it were real. When mimicking a very specific person, place, or thing that the target is very familiar with, the GM should consider increasing the target\'s Resolve defense for the purpose of that particular phantasm invocation. Characters convinced by the phantasm can roll Resist as normal in order to attempt to shake off the bane. If successful, they are no longer deceived by the effect. In addition, you must spend a minor action to sustain the bane during each of your turns. Failing to do so in a given round causes the bane\'s effects to cease at the end of your turn. When an affected character succeeds at a resist roll against this bane, they become immune to all subsequent phantasms invoked by you for the next hour.
+    </string>
+	
+	<string name="Polymorph_name">Polymorph  -  5 / 6 / 8 / 9</string>
+    <string name="Polymorph_description">
+        You alter the size, shape, and composition of the target by causing them to grow, shrink, or assume a completely new form, like that of a sheep or a newt. Polymorph might be accomplished by a druid\'s curse, a mad scientist\'s transmogrification ray, or exposure to alien radiation.
+    </string>
+    <string name="Polymorph_duration">Resist ends (Fail x 3 = 1 hour)</string>
+    <string name="Polymorph_powerLvl">5 > 6 > 8 > 9</string>
+    <string name="Polymorph_attributes">
+		Alteration
+	</string>
+    <string name="Polymorph_attack">
+        Alteration vs. Toughness
+    </string>
+    <string name="Polymorph_effect">
+        Your power level determines the extent to which you can transform your target, as follows. If the target is transformed into a different creature, it uses the Might, Agility, Fortitude, and Perception attribute scores of the new creature.
+		\n\t<b>Power Level 5</b> - Polymorph a creature into another creature of the same size. This new form can reduce the target\'s attribute scores by up to 2. If the new form would have higher attributes, the target becomes an exceptional version of that creature. For example, transforming a deadly sniper with Agility 5 into a clumsy ogre with Agility 0, would leave the target with an Agility of 3 instead of the 0 typical for the new form.
+		\n\t<b>Power Level 6</b> - Polymorph a creature into another creature between double and half the size. The new form can reduce the target\'s attribute scores by up to 3.
+		\n\t<b>Power Level 8</b> - Polymorph a creature into another creature between quadruple and one-quarter its original size. Alternatively, transform the target into an object of its original size. The new form can reduce the target\'s attribute scores by up to 5.
+		\n\t<b>Power Level 9</b> - Polymorph a creature into another creature of any size. Alternatively, transform the target into an object of its original size. The new form can reduce the target\'s attribute scores by up to 7.
+		In order to keep track of hit points, the target should record the total damage they have suffered. When transforming, damage remains with the character even if their maximum hit points change. For example, Agent Walker has a max HP of 20 but is turned into a sheep and has her Fortitude reduced by 2, leaving her at 16 hit points. During combat, she suffers 10 damage. When she later transforms back into Agent Walker, the 10 damage remains and is subtracted from her new maximum, leaving her with 10 out of 20 hit points. Additionally, if the shift would reduce the target\'s hit points to less than 1, the target\'s hit point total becomes 1 instead.
+    </string>
+    <string name="Polymorph_special">
+        N/A
+    </string>
+	
+	<string name="Spying_name">Spying  -  4 / 5 / 6 / 7 / 8 / 9</string>
+    <string name="Spying_description">
+        Through a display of awe-inspiring force, intimidation, or leadership, you command attention as the greatest threat, causing others to fear attacking your allies. Examples include a brute smashing the skull of a lesser foe, a gunslinger hurling insults, or a space captain diving into the middle of a swirling melee with plasma blades flashing.
+    </string>
+    <string name="Spying_duration">Resist (minor) ends (Fail x 3 = 1 minute)</string>
+    <string name="Spying_powerLvl">4 > 5 > 6 > 7 > 8 > 9</string>
+    <string name="Spying_attributes">
+		Agility - Creation - Deception - Energy - Influence - Might - Persuasion -  Presence
+	</string>
+    <string name="Spying_attack">
+        Agility vs. Resolve
+		\nCreation vs. Resolve
+		\nDeception vs. Resolve
+		\nEnergy vs. Resolve
+		\nInfluence vs. Resolve
+		\nMight vs. Resolve
+		\nPersuasion vs. Resolve
+		\nPresence vs. Resolve
+    </string>
+    <string name="Spying_effect">
+        Any attacks made by the target that do not include you as a target suffer disadvantage. If the same target is affected by this bane from multiple sources, as long as their attack includes one of those who targeted them, they are not affected by the penalty. Unlike other banes, your damaging attack against one target can trigger this bane in a different target, provided your roll is greater than or equal to their Resolve defense (that is, by striking one foe, you can provoke another).
+		\n\t<b>Power Level 4</b> - The target suffers disadvantage 1 on attacks that do not include you.
+		\n\t<b>Power Level 5</b> - The target suffers disadvantage 2 on attacks that do not include you.
+		\n\t<b>Power Level 6</b> - The target suffers disadvantage 3 on attacks that do not include you.
+		\n\t<b>Power Level 7</b> - The target suffers disadvantage 4 on attacks that do not include you.
+		\n\t<b>Power Level 8</b> - The target suffers disadvantage 5 on attacks that do not include you.
+		\n\t<b>Power Level 9</b> - The target suffers disadvantage 6 on attacks that do not include you.
+    </string>
+    <string name="Spying_special">
+        Resisting this bane is a minor action. When inflicting this bane using Agility or Might, you may determine range using the Non-Physical Attack Range table (see Chapter 7: Combat).
+    </string>
+	
+	<string name="Spying_name">Spying  -  5 / 6 / 7 / 9</string>
+    <string name="Spying_description">
+        Either through innate extrasensory perception or a special conduit such as a computer terminal, bubbling cauldron, or a crystal ball, you can view the target from a distance.
+    </string>
+    <string name="Spying_duration">10 minutes (special)</string>
+    <string name="Spying_powerLvl">5 > 6 > 7 > 9</string>
+    <string name="Spying_attributes">
+		Prescience
+	</string>
+    <string name="Spying_attack">
+        Prescience vs. Resolve (special)
+    </string>
+    <string name="Spying_effect">
+        You can spy on a person or area that you are familiar with. The power level of this bane determines the maximum distance between you and the target. If successfully invoked, you can see and hear everything that goes on within a 60\' radius of your target. Anyone within the targeted area who has a Resolve defense score higher than your Prescience action roll to invoke this bane becomes aware of an unseen presence in the area (regardless of whether or not you succeed at the roll). Certain creatures may be able to identify your spying if they are familiar with such powers.
+		\n\t<b>Power Level 5</b> - 1 mile or less
+		\n\t<b>Power Level 6</b> - 100 miles or less
+		\n\t<b>Power Level 7</b> - More than 100 miles, but on the same dimension or plane of reality
+		\n\t<b>Power Level 9</b> - Any dimension or plane of reality. (Peering into certain dimensions may expose you to other dangers at the GM\'s discretion).
+    </string>
+    <string name="Spying_special">
+        When you successfully invoke this bane, at the end of its duration, you can make a Prescience roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated. However, you must retest your new roll against the Resolve scores of those in the targeted area to determine whether or not they can sense your presence. You can attempt to spy the same target any number of times, but if your action roll fails, that target becomes immune to your spying for 24 hours.
+    </string>
+	
+	<string name="Sickened_name">Sickened  -  5</string>
+    <string name="Sickened_description">
+        Entropic energy overcomes the target, bombarding their system and inducing nausea that makes self-defense and any kind of action difficult. This bane might stem from a witch\'s curse, chemical warfare, a powerful poison, or exposure to alien toxins.
+    </string>
+    <string name="Sickened_duration">Resist ends (Fail x 3 = 1 minute)</string>
+    <string name="Sickened_powerLvl">5</string>
+    <string name="Sickened_attributes">
+		Entropy
+	</string>
+    <string name="Sickened_attack">
+        Entropy vs. Toughness
+    </string>
+    <string name="Sickened_effect">
+        The target has disadvantage 1 on all action rolls and -1 to all defenses.
+    </string>
+    <string name="Sickened_special">
+        N/A
+    </string>
+	
+	<string name="Silenced_name">Silenced  -  2</string>
+    <string name="Silenced_description">
+        Silence overcomes the target, whether from the warping of sound around the target, or from a physical effect like strangulation or suffocation. The silence bane is a favorite among assassins, sorcerers, engineers, and mad scientists.
+    </string>
+    <string name="Silenced_duration">Resist ends (Fail x 3 = 1 minute)</string>
+    <string name="Silenced_powerLvl">2</string>
+    <string name="Silenced_attributes">
+		Agility - Alteration - Entropy - Might
+	</string>
+    <string name="Silenced_attack">
+        Agility vs. Toughness
+		\tAlteration vs. Toughness
+		\tEntropy vs. Toughness
+		\tMight vs. Toughness
+    </string>
+    <string name="Silenced_effect">
+        If Might, Agility, or Entropy is used to inflict this bane, then the character is suffering strangulation and unable to speak. If the bane is inflicted using Alteration, then all sound within 5\' of the target is suppressed through extraordinary means, making their footsteps and the usual clank of belongings they are carrying inaudible.
+    </string>
+    <string name="Silenced_special">
+        N/A
+    </string>
+	
+	<string name="Slowed_name">Slowed  -  1</string>
+    <string name="Slowed_description">
+        The target\'s movement is impaired, either by extreme cold, prolonged heat, poison, or injury to one or both legs. This bane is a favored attack among rogues, ice mages, telekinetisists, and gunslingers.
+    </string>
+    <string name="Slowed_duration">Resist ends (Fail x 3 = 1 minute)</string>
+    <string name="Slowed_powerLvl">1</string>
+    <string name="Slowed_attributes">
+		Agility - Energy - Entropy - Might - Movement
+	</string>
+    <string name="Slowed_attack">
         Agility vs. Guard
-        \nEnergy vs. Guard
-        \nEntropy vs. Toughness
+		\tEnergy vs. Guard
+		\tEntropy vs. Toughness
+		\tMight vs. Guard
+		\tMovement vs. Guard
     </string>
-    <string name="Persistent_Damage_effect">
-        At the beginning of the target\'s turn, before they take any actions, they suffer damage determined by the power level of the bane. This damage automatically bypasses the afflicted character\'s defenses but it can be reduced by any resistance to damage of a certain type (see the resistance boon). Like all dice rolls, these dice explode.
-        \n\t<b>Power Level 2</b> - 1d4 damage per round.
-        \n\t<b>Power Level 4</b> - 1d6 damage per round.
-        \n\t<b>Power Level 6</b> - 1d8 damage per round.
-        \n\t<b>Power Level 7</b> - 1d10 damage per round.
-        \n\t<b>Power Level 8</b> - 2d6 damage per round.
+    <string name="Slowed_effect">
+        The afflicted target\'s speed is reduced to half its current speed, rounded down to the nearest 5\' increment. This applies to all movement that is physical (flight, walking, climbing, etc.). If the target is currently under a magical effect that increases speed, the two effects are canceled for the duration that both affect the target.
     </string>
-    <string name="Persistent_Damage_special">
-        Persistent damage comes in a number of different variations: physical damage (bleeding from a vital strike), energy damage (lightning, fire, cold, acid, etc.) and entropic damage (necromantic energy), among others. Each variation has its own cure. When that cure is applied with a major action (either by the afflicted character or another), the target receives a resist roll (as a free action) with advantage 1 to end the effect. The GM has the final word on whether a proposed cure can help a given type of persistent damage, but the following examples can help with arbitration:
-        \n\tBleeding damage is cured with a successful roll using Learning, Logic, or Creation.
-        \n\tLightning damage is cured by a discharge or grounding of the current.
-        \n\tCold damage is countered with warmth, heat, or fire.
-        \n\tAcid damage is neutralized with alkalizing agents (powder, milk, etc.).
-        \n\tFire damage is neutralized with water or smothering.
-        \n\tEntropic damage is neutralized with extraordinary or magical healing.
-This bane may still be resisted in the usual way of using the resist banes action.
+    <string name="Slowed_special">
+        N/A
+    </string>
+	
+	<string name="Stunned_name">Stunned  -  4</string>
+    <string name="Stunned_description">
+        You disorient the target\'s senses, causing them to act much less efficiently. Stunning an enemy can be caused by attacks such as a pistol whip to the back of the head, a kick in the groin, and a deafening thunderclap.
+    </string>
+    <string name="Stunned_duration">Resist ends (Fail x 3 = 1 minute)</string>
+    <string name="Stunned_powerLvl">4</string>
+    <string name="Stunned_attributes">
+		Agility - Energy - Entropy - Might
+	</string>
+    <string name="Stunned_attack">
+        Agility vs. Toughness
+		\nEnergy vs. Toughness
+		\nEntropy vs. Toughness
+		\nMight vs. Toughness
+    </string>
+    <string name="Stunned_effect">
+        During the target\'s turn, they are limited to either a single major action, a single move action, or a single minor action. Effects that grant additional actions do not circumvent this unless they grant a free action. Note that a target expending its move action to resist this bane will receive the remainder of their usual actions if the resist roll succeeds.
+    </string>
+    <string name="Stunned_special">
+        This bane has special rules for boss NPCs (See Chapter 8: Running the Game). A boss is only affected by the stunned bane during its normal initiative turn. It may still take all of its boss actions as usual.
+    </string>
+	
+	<string name="Stupefied_name">Stupefied  -  7</string>
+    <string name="Stupefied_description">
+        The stupefied bane has examples in many stories and legends: a vampire\'s eyes, a siren\'s song, and a nymph\'s beauty are all known to cast a stupor upon weak-willed mortals. Being stupefied causes the target to be lulled into a false sense of security, tranquility, and pacifism.
+    </string>
+    <string name="Stupefied_duration">Resist ends (Fail x 3 = 1 minute)</string>
+    <string name="Stupefied_powerLvl">7</string>
+    <string name="Stupefied_attributes">
+		Influence
+	</string>
+    <string name="Stupefied_attack">
+        Influence vs. Resolve
+    </string>
+    <string name="Stupefied_effect">
+        The target is in a state of mental fog, lowering their mental defenses. While stupefied, the target\'s Resolve defense is reduced to 10. In addition, the target has the approximate intelligence of a child. If attacked, it will defend itself until the attack ceases using its natural weapons, but the target will never employ any kind of complex tactic or ability, such as spellcasting. If the target sees fire, it will run away. If it feels pain, it will flee.
+    </string>
+    <string name="Stupefied_special">
+        While most banes last until the target actively attempts to resist it, this bane prevents the target from actively attempting to break free. However, the target\'s true mind is suppressed but fights to regain control. As such, at the end of each of its turns, the target receives a resist roll as a free action to break free from the effect. Any attack that causes the target mental or physical pain gives the target an additional resist roll to break free from the bane. Also any action that would startle a wild animal (being hit with a rock, slapped on the face, etc.) will also trigger a free resist roll for the target. Unlike other resist rolls, those triggered by damage, fear, and trauma do not count against the target\'s typically allowed failures of 3, beyond which the duration of the bane would extend. When your target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next 24 hours.
+    </string>
+	
+	<string name="Truthfulness_name">Truthfulness  -  5</string>
+    <string name="Truthfulness_description">
+        By controlling the target\'s mind through compulsion magic, chemical injection, neural probes, or similar means, you render them incapable of lying deliberately. This is a favored bane among enchanters, mad scientists, psychics, and thought police.
+    </string>
+    <string name="Truthfulness_duration">10 minutes (special)</string>
+    <string name="Truthfulness_powerLvl">5</string>
+    <string name="Truthfulness_attributes">
+		Influence
+	</string>
+    <string name="Truthfulness_attack">
+        Influence vs. Resolve
+    </string>
+    <string name="Truthfulness_effect">
+        The target answers any question asked with honesty, to the best of their knowledge. When compelled to reveal something they would not reveal outside of duress, the target makes a Will roll and you make an Influence roll. If the target\'s roll is higher than yours, then they resist the bane and the effect ends.
+    </string>
+    <string name="Truthfulness_special">
+        When you successfully invoke this bane, at the end of its duration, you can make another Influence roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated. When a target wins the contested Will vs. Influence roll, you cannot target them with this bane again for 24 hours.
     </string>
 </resources>
