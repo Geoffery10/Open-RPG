@@ -27,8 +27,23 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         txtBanesBoonsTitle.setText(selected);
 
         //Display Banes By Player Stats
-        showBanesByStats();
-        //showBoonsByStats()
+        if (selected.equals("Banes"))
+        {
+            showBanesByStats();
+        }
+        else if (selected.equals("Boons"))
+        {
+            //showBoonsByStats()
+        }
+        else if (selected.equals("Banes/Boons"))
+        {
+            showBanesByStats();
+            //showBoonsByStats()
+        }
+        else //All
+        {
+            //Display All Banes and Boons
+        }
 
         //Banes Buttons
         banesShowHideButtons();
