@@ -406,4 +406,37 @@
         \n\tEntropic damage is neutralized with extraordinary or magical healing.
 This bane may still be resisted in the usual way of using the resist banes action.
     </string>
+	
+	<string name="Persistent_Damage_name">Persistent Damage  -  2 / 4 / 6 / 8 / 9</string>
+    <string name="Persistent_Damage_description">
+        Whether by setting the target ablaze, covering them in acid, slicing an artery, or cursing them with a wasting disease, you inflict your foe with a lasting and recurring source of damage. Persistent damage is a favorite among assassins, mad scientists, and elementalists.
+    </string>
+    <string name="Persistent_Damage_duration">Resist ends (Fail x 3 = 1 minute)</string>
+    <string name="Persistent_Damage_powerLvl">2 > 4 > 6 > 8 > 9</string>
+    <string name="Persistent_Damage_attributes">
+		Agility - Energy - Entropy
+	</string>
+    <string name="Persistent_Damage_attack">
+        Agility vs. Guard
+        \nEnergy vs. Guard
+        \nEntropy vs. Toughness
+    </string>
+    <string name="Persistent_Damage_effect">
+        At the beginning of the target\'s turn, before they take any actions, they suffer damage determined by the power level of the bane. This damage automatically bypasses the afflicted character\'s defenses but it can be reduced by any resistance to damage of a certain type (see the resistance boon). Like all dice rolls, these dice explode.
+        \n\t<b>Power Level 2</b> - 1d4 damage per round.
+        \n\t<b>Power Level 4</b> - 1d6 damage per round.
+        \n\t<b>Power Level 6</b> - 1d8 damage per round.
+        \n\t<b>Power Level 7</b> - 1d10 damage per round.
+        \n\t<b>Power Level 8</b> - 2d6 damage per round.
+    </string>
+    <string name="Persistent_Damage_special">
+        Persistent damage comes in a number of different variations: physical damage (bleeding from a vital strike), energy damage (lightning, fire, cold, acid, etc.) and entropic damage (necromantic energy), among others. Each variation has its own cure. When that cure is applied with a major action (either by the afflicted character or another), the target receives a resist roll (as a free action) with advantage 1 to end the effect. The GM has the final word on whether a proposed cure can help a given type of persistent damage, but the following examples can help with arbitration:
+        \n\tBleeding damage is cured with a successful roll using Learning, Logic, or Creation.
+        \n\tLightning damage is cured by a discharge or grounding of the current.
+        \n\tCold damage is countered with warmth, heat, or fire.
+        \n\tAcid damage is neutralized with alkalizing agents (powder, milk, etc.).
+        \n\tFire damage is neutralized with water or smothering.
+        \n\tEntropic damage is neutralized with extraordinary or magical healing.
+This bane may still be resisted in the usual way of using the resist banes action.
+    </string>
 </resources>
