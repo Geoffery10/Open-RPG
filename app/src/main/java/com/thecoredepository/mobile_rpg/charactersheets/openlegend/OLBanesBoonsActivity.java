@@ -294,7 +294,7 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         {
             viewBB08.setVisibility(View.VISIBLE);
         }
-        if(player.getAgility() >= 2 || player.getEnergy() >= 2 || player.getMight() >= 2 || player.getMovement() >= 2)
+        if(player.getCreation() >= 5 || player.getEntropy() >= 5 || player.getInfluence() >= 5 || player.getMight() >= 5)
         {
             viewBB09.setVisibility(View.VISIBLE);
         }
@@ -306,7 +306,7 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         {
             viewBB11.setVisibility(View.VISIBLE);
         }
-        if(player.getAgility() >= 1 || player.getEnergy() >= 1 || player.getEntropy() >= 1 || player.getMovement() >= 1)
+        if(player.getAgility() >= 5 || player.getEnergy() >= 5 || player.getEntropy() >= 5 || player.getMovement() >= 5)
         {
             viewBB12.setVisibility(View.VISIBLE);
         }
