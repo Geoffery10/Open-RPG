@@ -2623,7 +2623,7 @@
                     android:id="@+id/viewBB16"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginHorizontal="15dp"
                     android:background="#80FFFFFF"
                     android:orientation="vertical">
 
@@ -2795,7 +2795,7 @@
                     android:id="@+id/viewBB17"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginHorizontal="17dp"
+                    android:layout_marginHorizontal="15dp"
                     android:background="#80FFFFFF"
                     android:orientation="vertical">
 
@@ -2946,6 +2946,1726 @@
 
                             <TextView
                                 android:id="@+id/txtSpecial17"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Persistent_Damage_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/viewBB18_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/viewBB18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Persistent_Damage_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB18"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl18"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl18"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Persistent_Damage_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial18"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial18"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial18"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Persistent_Damage_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/viewBB17_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/viewBB19"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Persistent_Damage_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB19"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Persistent_Damage_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial19"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial19"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial19"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Persistent_Damage_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/viewBB20_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/viewBB20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Persistent_Damage_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB20"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Persistent_Damage_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial20"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial20"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial20"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Persistent_Damage_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/viewBB21_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/viewBB21"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Persistent_Damage_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB21"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Persistent_Damage_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial21"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial21"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial21"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Persistent_Damage_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/viewBB22_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/viewBB22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Persistent_Damage_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB22"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl22"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl22"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Persistent_Damage_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial22"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial22"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial22"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Persistent_Damage_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/viewBB23_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/viewBB23"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15p"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Persistent_Damage_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB23"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl23"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl23"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Persistent_Damage_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial23"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial23"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial23"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Persistent_Damage_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/viewBB24_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/viewBB24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Persistent_Damage_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB24"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl24"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl24"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Persistent_Damage_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial24"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial24"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial24"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Persistent_Damage_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/viewBB25_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/viewBB25"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Persistent_Damage_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB25"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl25"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl25"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Persistent_Damage_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial25"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial25"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial25"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Persistent_Damage_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/viewBB26_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/viewBB26"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Persistent_Damage_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB26"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl26"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl26"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Persistent_Damage_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial26"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial26"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial26"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Persistent_Damage_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/viewBB27_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/viewBB27"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Persistent_Damage_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB27"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl27"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl27"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Persistent_Damage_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Persistent_Damage_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Persistent_Damage_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial27"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/lblSpecial27"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial27"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/Persistent_Damage_special"
