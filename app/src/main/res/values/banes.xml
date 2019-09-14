@@ -460,16 +460,16 @@
         N/A
     </string>
 	
-	<string name="Spying_name">Spying  -  4 / 5 / 6 / 7 / 8 / 9</string>
-    <string name="Spying_description">
+	<string name="Provoked_name">Provoked  -  4 / 5 / 6 / 7 / 8 / 9</string>
+    <string name="Provoked_description">
         Through a display of awe-inspiring force, intimidation, or leadership, you command attention as the greatest threat, causing others to fear attacking your allies. Examples include a brute smashing the skull of a lesser foe, a gunslinger hurling insults, or a space captain diving into the middle of a swirling melee with plasma blades flashing.
     </string>
-    <string name="Spying_duration">Resist (minor) ends (Fail x 3 = 1 minute)</string>
-    <string name="Spying_powerLvl">4 > 5 > 6 > 7 > 8 > 9</string>
-    <string name="Spying_attributes">
+    <string name="Provoked_duration">Resist (minor) ends (Fail x 3 = 1 minute)</string>
+    <string name="Provoked_powerLvl">4 > 5 > 6 > 7 > 8 > 9</string>
+    <string name="Provoked_attributes">
 		Agility - Creation - Deception - Energy - Influence - Might - Persuasion -  Presence
 	</string>
-    <string name="Spying_attack">
+    <string name="Provoked_attack">
         Agility vs. Resolve
 		\nCreation vs. Resolve
 		\nDeception vs. Resolve
@@ -479,7 +479,7 @@
 		\nPersuasion vs. Resolve
 		\nPresence vs. Resolve
     </string>
-    <string name="Spying_effect">
+    <string name="Provoked_effect">
         Any attacks made by the target that do not include you as a target suffer disadvantage. If the same target is affected by this bane from multiple sources, as long as their attack includes one of those who targeted them, they are not affected by the penalty. Unlike other banes, your damaging attack against one target can trigger this bane in a different target, provided your roll is greater than or equal to their Resolve defense (that is, by striking one foe, you can provoke another).
 		\n\t<b>Power Level 4</b> - The target suffers disadvantage 1 on attacks that do not include you.
 		\n\t<b>Power Level 5</b> - The target suffers disadvantage 2 on attacks that do not include you.
@@ -488,7 +488,7 @@
 		\n\t<b>Power Level 8</b> - The target suffers disadvantage 5 on attacks that do not include you.
 		\n\t<b>Power Level 9</b> - The target suffers disadvantage 6 on attacks that do not include you.
     </string>
-    <string name="Spying_special">
+    <string name="Provoked_special">
         Resisting this bane is a minor action. When inflicting this bane using Agility or Might, you may determine range using the Non-Physical Attack Range table (see Chapter 7: Combat).
     </string>
 	
