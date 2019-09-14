@@ -231,6 +231,22 @@ public class OLBanesBoonsActivity extends AppCompatActivity
                 }
             }
         });
+
+        final LinearLayout infoBB14 = findViewById(R.id.infoBB14);
+        Button btnBB14 = findViewById(R.id.btnBB14);
+        btnBB14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB14.getVisibility() == View.VISIBLE)
+                {
+                    infoBB14.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB14.setVisibility(View.VISIBLE);
+                }
+            }
+        });
     }
 
     public void showBanesByStats()
