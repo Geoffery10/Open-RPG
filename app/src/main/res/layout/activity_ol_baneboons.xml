@@ -2267,6 +2267,178 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/viewBB14_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/viewBB14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#80FFFFFF"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnBB14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/Memory_Alteration_name" />
+
+                    <LinearLayout
+                        android:id="@+id/infoBB14"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lblDescription14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Memory_Alteration_description"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblDuration14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtDuration14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Memory_Alteration_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblPowerLvl14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:id="@+id/txtPowerLvl14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorAccent"
+                                android:gravity="center"
+                                android:text="@string/Memory_Alteration_powerLvl"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textAccent"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblAttributes14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attributes"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttributes14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Memory_Alteration_attributes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblAttack14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Attack"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/txtAttack14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="@string/Memory_Alteration_attack"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textAccent"
+                            android:textIsSelectable="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lblEffect14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Effect"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txtEffect14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Memory_Alteration_effect"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/viewSpecial14"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lblSpecial14"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Special"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/txtSpecial14"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Memory_Alteration_special"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
