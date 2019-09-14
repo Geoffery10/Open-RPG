@@ -957,6 +957,15 @@
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
 
+                            <TextView
+                                android:id="@+id/lblPowerLvl06"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Power Level"
+                                android:textSize="25sp" />
+
                             <Button
                                 android:id="@+id/txtPowerLvl06"
                                 android:layout_width="wrap_content"
@@ -969,15 +978,6 @@
                                 android:textColor="@color/textAccent"
                                 android:textIsSelectable="true"
                                 android:textSize="20sp" />
-
-                            <TextView
-                                android:id="@+id/lblPowerLvl06"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Power Level"
-                                android:textSize="25sp" />
 
                         </LinearLayout>
 
@@ -1438,12 +1438,12 @@
                         android:visibility="gone">
 
                         <TextView
-                            android:id="@+id/txtDuration09"
+                            android:id="@+id/lblDescription09"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/Fear_duration"
-                            android:textAlignment="center"
-                            android:textSize="20sp" />
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textSize="25sp" />
 
                         <TextView
                             android:id="@+id/txtDescription09"
@@ -1461,12 +1461,12 @@
                             android:textSize="25sp" />
 
                         <TextView
-                            android:id="@+id/lblDescription09"
+                            android:id="@+id/txtDuration09"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Description"
-                            android:textSize="25sp" />
+                            android:text="@string/Fear_duration"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
