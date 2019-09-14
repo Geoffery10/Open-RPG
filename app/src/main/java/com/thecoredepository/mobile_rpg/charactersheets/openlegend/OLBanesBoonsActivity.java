@@ -33,16 +33,20 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         }
         else if (selected.equals("Boons"))
         {
-            //showBoonsByStats()
+            showBoonsByStats();
         }
         else if (selected.equals("Banes/Boons"))
         {
             showBanesByStats();
-            //showBoonsByStats()
+            showBoonsByStats();
         }
         else //All
         {
-            //Display All Banes and Boons
+            //Show All Banes/Boons
+            int visibility = View.VISIBLE;
+            baneVisibility(visibility);
+            boonVisibility(visibility);
+
         }
 
         //Banes Buttons
@@ -486,60 +490,39 @@ public class OLBanesBoonsActivity extends AppCompatActivity
 
     public void showBanesByStats()
     {
+        //Hide Banes
+        int visibility = View.GONE;
+        baneVisibility(visibility);
+        //Hide Boons
+        boonVisibility(visibility);
+
         View viewBB01 = findViewById(R.id.viewBB01_1);
-        viewBB01.setVisibility(View.GONE);
         View viewBB02 = findViewById(R.id.viewBB02_1);
-        viewBB02.setVisibility(View.GONE);
         View viewBB03 = findViewById(R.id.viewBB03_1);
-        viewBB03.setVisibility(View.GONE);
         View viewBB04 = findViewById(R.id.viewBB04_1);
-        viewBB04.setVisibility(View.GONE);
         View viewBB05 = findViewById(R.id.viewBB05_1);
-        viewBB05.setVisibility(View.GONE);
         View viewBB06 = findViewById(R.id.viewBB06_1);
-        viewBB06.setVisibility(View.GONE);
         View viewBB07 = findViewById(R.id.viewBB07_1);
-        viewBB07.setVisibility(View.GONE);
         View viewBB08 = findViewById(R.id.viewBB08_1);
-        viewBB08.setVisibility(View.GONE);
         View viewBB09 = findViewById(R.id.viewBB09_1);
-        viewBB09.setVisibility(View.GONE);
         View viewBB10 = findViewById(R.id.viewBB10_1);
-        viewBB09.setVisibility(View.GONE);
         View viewBB11 = findViewById(R.id.viewBB11_1);
-        viewBB11.setVisibility(View.GONE);
         View viewBB12 = findViewById(R.id.viewBB12_1);
-        viewBB12.setVisibility(View.GONE);
         View viewBB13 = findViewById(R.id.viewBB13_1);
-        viewBB13.setVisibility(View.GONE);
         View viewBB14 = findViewById(R.id.viewBB14_1);
-        viewBB14.setVisibility(View.GONE);
         View viewBB15 = findViewById(R.id.viewBB15_1);
-        viewBB15.setVisibility(View.GONE);
         View viewBB16 = findViewById(R.id.viewBB16_1);
-        viewBB16.setVisibility(View.GONE);
         View viewBB17 = findViewById(R.id.viewBB17_1);
-        viewBB17.setVisibility(View.GONE);
         View viewBB18 = findViewById(R.id.viewBB18_1);
-        viewBB18.setVisibility(View.GONE);
         View viewBB19 = findViewById(R.id.viewBB19_1);
-        viewBB19.setVisibility(View.GONE);
         View viewBB20 = findViewById(R.id.viewBB20_1);
-        viewBB20.setVisibility(View.GONE);
         View viewBB21 = findViewById(R.id.viewBB21_1);
-        viewBB21.setVisibility(View.GONE);
         View viewBB22 = findViewById(R.id.viewBB22_1);
-        viewBB22.setVisibility(View.GONE);
         View viewBB23 = findViewById(R.id.viewBB23_1);
-        viewBB23.setVisibility(View.GONE);
         View viewBB24 = findViewById(R.id.viewBB24_1);
-        viewBB24.setVisibility(View.GONE);
         View viewBB25 = findViewById(R.id.viewBB25_1);
-        viewBB25.setVisibility(View.GONE);
         View viewBB26 = findViewById(R.id.viewBB26_1);
-        viewBB26.setVisibility(View.GONE);
         View viewBB27 = findViewById(R.id.viewBB27_1);
-        viewBB27.setVisibility(View.GONE);
 
         if(player.getAlteration() >= 5 || player.getCreation() >= 5 || player.getEnergy() >= 5 || player.getEntropy() >= 5)
         {
@@ -649,5 +632,272 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         {
             viewBB27.setVisibility(View.VISIBLE);
         }
+    }
+
+    public void showBoonsByStats()
+    {
+        //Hide Banes
+        int visibility = View.GONE;
+        baneVisibility(visibility);
+        //Hide Boons
+        boonVisibility(visibility);
+
+        View viewBB01 = findViewById(R.id.viewBB01_1);
+        View viewBB02 = findViewById(R.id.viewBB02_1);
+        View viewBB03 = findViewById(R.id.viewBB03_1);
+        View viewBB04 = findViewById(R.id.viewBB04_1);
+        View viewBB05 = findViewById(R.id.viewBB05_1);
+        View viewBB06 = findViewById(R.id.viewBB06_1);
+        View viewBB07 = findViewById(R.id.viewBB07_1);
+        View viewBB08 = findViewById(R.id.viewBB08_1);
+        View viewBB09 = findViewById(R.id.viewBB09_1);
+        View viewBB10 = findViewById(R.id.viewBB10_1);
+        View viewBB11 = findViewById(R.id.viewBB11_1);
+        View viewBB12 = findViewById(R.id.viewBB12_1);
+        View viewBB13 = findViewById(R.id.viewBB13_1);
+        View viewBB14 = findViewById(R.id.viewBB14_1);
+        View viewBB15 = findViewById(R.id.viewBB15_1);
+        View viewBB16 = findViewById(R.id.viewBB16_1);
+        View viewBB17 = findViewById(R.id.viewBB17_1);
+        View viewBB18 = findViewById(R.id.viewBB18_1);
+        View viewBB19 = findViewById(R.id.viewBB19_1);
+        View viewBB20 = findViewById(R.id.viewBB20_1);
+        View viewBB21 = findViewById(R.id.viewBB21_1);
+        View viewBB22 = findViewById(R.id.viewBB22_1);
+        View viewBB23 = findViewById(R.id.viewBB23_1);
+        View viewBB24 = findViewById(R.id.viewBB24_1);
+        View viewBB25 = findViewById(R.id.viewBB25_1);
+        View viewBB26 = findViewById(R.id.viewBB26_1);
+        View viewBB27 = findViewById(R.id.viewBB27_1);
+        /*
+        if(player.getAlteration() >= 5 || player.getCreation() >= 5 || player.getEnergy() >= 5 || player.getEntropy() >= 5)
+        {
+            viewBB01.setVisibility(View.VISIBLE);
+        }
+        if(player.getInfluence() >= 3)
+        {
+            viewBB02.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 4 || player.getEnergy() >= 4 || player.getEntropy() >= 4)
+        {
+            viewBB03.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 9 || player.getEntropy() >= 9)
+        {
+            viewBB04.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 3 || player.getEnergy() >= 3 || player.getEntropy() >= 3 || player.getInfluence() >= 3 || player.getMight() >= 3 || player.getPersuasion() >= 3 || player.getPresence() >= 3)
+        {
+            viewBB05.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 3 || player.getAlteration() >= 3 || player.getEnergy() >= 3 || player.getEntropy() >= 3 || player.getInfluence() >= 3 || player.getMight() >= 3 || player.getMovement() >= 3)
+        {
+            viewBB06.setVisibility(View.VISIBLE);
+        }
+        if(player.getInfluence() >= 5)
+        {
+            viewBB07.setVisibility(View.VISIBLE);
+        }
+        if(player.getEntropy() >= 5)
+        {
+            viewBB08.setVisibility(View.VISIBLE);
+        }
+        if(player.getCreation() >= 5 || player.getEntropy() >= 5 || player.getInfluence() >= 5 || player.getMight() >= 5)
+        {
+            viewBB09.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 2 || player.getEnergy() >= 2 || player.getMight() >= 2 || player.getMovement() >= 2)
+        {
+            viewBB10.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 1 || player.getAlteration() >= 1 || player.getCreation() >= 1 || player.getEnergy() >= 1 || player.getEntropy() >= 1 || player.getInfluence() >= 1 || player.getMight() >= 1 || player.getMovement() >= 1)
+        {
+            viewBB11.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 5 || player.getEntropy() >= 5 || player.getInfluence() >= 5)
+        {
+            viewBB12.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 1 || player.getEnergy() >= 1 || player.getMight() >= 1 || player.getMovement() >= 1)
+        {
+            viewBB13.setVisibility(View.VISIBLE);
+        }
+        if(player.getInfluence() >= 5)
+        {
+            viewBB14.setVisibility(View.VISIBLE);
+        }
+        if(player.getPrescience() >= 2)
+        {
+            viewBB15.setVisibility(View.VISIBLE);
+        }
+        if(player.getProtection() >= 1)
+        {
+            viewBB16.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 2 || player.getEnergy() >= 2 || player.getEntropy() >= 2)
+        {
+            viewBB17.setVisibility(View.VISIBLE);
+        }
+        if(player.getInfluence() >= 1)
+        {
+            viewBB18.setVisibility(View.VISIBLE);
+        }
+        if(player.getAlteration() >= 5)
+        {
+            viewBB19.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 4 || player.getCreation() >= 4 || player.getDeception() >= 4 || player.getEnergy() >= 4 || player.getInfluence() >= 4 || player.getMight() >= 4 || player.getPersuasion() >= 4 || player.getPrescience() >= 4)
+        {
+            viewBB20.setVisibility(View.VISIBLE);
+        }
+        if(player.getPrescience() >= 5)
+        {
+            viewBB21.setVisibility(View.VISIBLE);
+        }
+        if(player.getEntropy() >= 5)
+        {
+            viewBB22.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 2 || player.getAlteration() >= 2 || player.getEntropy() >= 2 || player.getMight() >= 2)
+        {
+            viewBB23.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 1 || player.getEnergy() >= 1 || player.getEntropy() >= 1 || player.getMight() >= 1 || player.getMovement() >= 1)
+        {
+            viewBB24.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 4 || player.getEnergy() >= 4 || player.getEntropy() >= 4 || player.getMight() >= 4)
+        {
+            viewBB25.setVisibility(View.VISIBLE);
+        }
+        if(player.getInfluence() >= 7)
+        {
+            viewBB26.setVisibility(View.VISIBLE);
+        }
+        if(player.getInfluence() >= 5)
+        {
+            viewBB27.setVisibility(View.VISIBLE);
+        }
+        
+         */
+    }
+
+    private void baneVisibility(int visibility) {
+        View viewBB01 = findViewById(R.id.viewBB01_1);
+        View viewBB02 = findViewById(R.id.viewBB02_1);
+        View viewBB03 = findViewById(R.id.viewBB03_1);
+        View viewBB04 = findViewById(R.id.viewBB04_1);
+        View viewBB05 = findViewById(R.id.viewBB05_1);
+        View viewBB06 = findViewById(R.id.viewBB06_1);
+        View viewBB07 = findViewById(R.id.viewBB07_1);
+        View viewBB08 = findViewById(R.id.viewBB08_1);
+        View viewBB09 = findViewById(R.id.viewBB09_1);
+        View viewBB10 = findViewById(R.id.viewBB10_1);
+        View viewBB11 = findViewById(R.id.viewBB11_1);
+        View viewBB12 = findViewById(R.id.viewBB12_1);
+        View viewBB13 = findViewById(R.id.viewBB13_1);
+        View viewBB14 = findViewById(R.id.viewBB14_1);
+        View viewBB15 = findViewById(R.id.viewBB15_1);
+        View viewBB16 = findViewById(R.id.viewBB16_1);
+        View viewBB17 = findViewById(R.id.viewBB17_1);
+        View viewBB18 = findViewById(R.id.viewBB18_1);
+        View viewBB19 = findViewById(R.id.viewBB19_1);
+        View viewBB20 = findViewById(R.id.viewBB20_1);
+        View viewBB21 = findViewById(R.id.viewBB21_1);
+        View viewBB22 = findViewById(R.id.viewBB22_1);
+        View viewBB23 = findViewById(R.id.viewBB23_1);
+        View viewBB24 = findViewById(R.id.viewBB24_1);
+        View viewBB25 = findViewById(R.id.viewBB25_1);
+        View viewBB26 = findViewById(R.id.viewBB26_1);
+        View viewBB27 = findViewById(R.id.viewBB27_1);
+
+        viewBB01.setVisibility(visibility);
+        viewBB02.setVisibility(visibility);
+        viewBB03.setVisibility(visibility);
+        viewBB04.setVisibility(visibility);
+        viewBB05.setVisibility(visibility);
+        viewBB06.setVisibility(visibility);
+        viewBB07.setVisibility(visibility);
+        viewBB08.setVisibility(visibility);
+        viewBB09.setVisibility(visibility);
+        viewBB09.setVisibility(visibility);
+        viewBB10.setVisibility(visibility);
+        viewBB11.setVisibility(visibility);
+        viewBB12.setVisibility(visibility);
+        viewBB13.setVisibility(visibility);
+        viewBB14.setVisibility(visibility);
+        viewBB15.setVisibility(visibility);
+        viewBB16.setVisibility(visibility);
+        viewBB17.setVisibility(visibility);
+        viewBB18.setVisibility(visibility);
+        viewBB19.setVisibility(visibility);
+        viewBB20.setVisibility(visibility);
+        viewBB21.setVisibility(visibility);
+        viewBB22.setVisibility(visibility);
+        viewBB23.setVisibility(visibility);
+        viewBB24.setVisibility(visibility);
+        viewBB25.setVisibility(visibility);
+        viewBB26.setVisibility(visibility);
+        viewBB27.setVisibility(visibility);
+    }
+
+    private void boonVisibility(int visibility) {
+        //THESE ARE STILL BANES!!!
+        View viewBB01 = findViewById(R.id.viewBB01_1);
+        View viewBB02 = findViewById(R.id.viewBB02_1);
+        View viewBB03 = findViewById(R.id.viewBB03_1);
+        View viewBB04 = findViewById(R.id.viewBB04_1);
+        View viewBB05 = findViewById(R.id.viewBB05_1);
+        View viewBB06 = findViewById(R.id.viewBB06_1);
+        View viewBB07 = findViewById(R.id.viewBB07_1);
+        View viewBB08 = findViewById(R.id.viewBB08_1);
+        View viewBB09 = findViewById(R.id.viewBB09_1);
+        View viewBB10 = findViewById(R.id.viewBB10_1);
+        View viewBB11 = findViewById(R.id.viewBB11_1);
+        View viewBB12 = findViewById(R.id.viewBB12_1);
+        View viewBB13 = findViewById(R.id.viewBB13_1);
+        View viewBB14 = findViewById(R.id.viewBB14_1);
+        View viewBB15 = findViewById(R.id.viewBB15_1);
+        View viewBB16 = findViewById(R.id.viewBB16_1);
+        View viewBB17 = findViewById(R.id.viewBB17_1);
+        View viewBB18 = findViewById(R.id.viewBB18_1);
+        View viewBB19 = findViewById(R.id.viewBB19_1);
+        View viewBB20 = findViewById(R.id.viewBB20_1);
+        View viewBB21 = findViewById(R.id.viewBB21_1);
+        View viewBB22 = findViewById(R.id.viewBB22_1);
+        View viewBB23 = findViewById(R.id.viewBB23_1);
+        View viewBB24 = findViewById(R.id.viewBB24_1);
+        View viewBB25 = findViewById(R.id.viewBB25_1);
+        View viewBB26 = findViewById(R.id.viewBB26_1);
+        View viewBB27 = findViewById(R.id.viewBB27_1);
+
+        viewBB01.setVisibility(visibility);
+        viewBB02.setVisibility(visibility);
+        viewBB03.setVisibility(visibility);
+        viewBB04.setVisibility(visibility);
+        viewBB05.setVisibility(visibility);
+        viewBB06.setVisibility(visibility);
+        viewBB07.setVisibility(visibility);
+        viewBB08.setVisibility(visibility);
+        viewBB09.setVisibility(visibility);
+        viewBB09.setVisibility(visibility);
+        viewBB10.setVisibility(visibility);
+        viewBB11.setVisibility(visibility);
+        viewBB12.setVisibility(visibility);
+        viewBB13.setVisibility(visibility);
+        viewBB14.setVisibility(visibility);
+        viewBB15.setVisibility(visibility);
+        viewBB16.setVisibility(visibility);
+        viewBB17.setVisibility(visibility);
+        viewBB18.setVisibility(visibility);
+        viewBB19.setVisibility(visibility);
+        viewBB20.setVisibility(visibility);
+        viewBB21.setVisibility(visibility);
+        viewBB22.setVisibility(visibility);
+        viewBB23.setVisibility(visibility);
+        viewBB24.setVisibility(visibility);
+        viewBB25.setVisibility(visibility);
+        viewBB26.setVisibility(visibility);
+        viewBB27.setVisibility(visibility);
     }
 }
