@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,8 +23,19 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         Intent intent = getIntent();
         String selected = intent.getExtras().getString("selected"); //Banes or Boons
 
-        showBanesByStats();
+        TextView txtBanesBoonsTitle = findViewById(R.id.txtBanesBoonsTitle);
+        txtBanesBoonsTitle.setText(selected);
 
+        //Display Banes By Player Stats
+        showBanesByStats();
+        //showBoonsByStats()
+
+        //Banes Buttons
+        banesShowHideButtons();
+        //boonsShowHideButtons();
+    }
+
+    private void banesShowHideButtons() {
         final LinearLayout infoBB01 = findViewById(R.id.infoBB01);
         Button btnBB01 = findViewById(R.id.btnBB01);
         btnBB01.setOnClickListener(new View.OnClickListener() {
