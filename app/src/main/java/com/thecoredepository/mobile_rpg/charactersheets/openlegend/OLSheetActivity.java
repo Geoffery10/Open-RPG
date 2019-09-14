@@ -193,14 +193,14 @@ public class OLSheetActivity extends AppCompatActivity {
     private void toBanes()
     {
         Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
-        in.putExtra("selected", "bane");
+        in.putExtra("selected", "Banes");
         startActivity(in);
     }
 
     private void toBoons()
     {
         Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
-        in.putExtra("selected", "boons");
+        in.putExtra("selected", "Boons");
         startActivity(in);
     }
 
