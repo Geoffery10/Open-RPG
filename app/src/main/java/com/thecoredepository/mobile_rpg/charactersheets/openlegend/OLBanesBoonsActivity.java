@@ -295,6 +295,166 @@ public class OLBanesBoonsActivity extends AppCompatActivity
                 }
             }
         });
+
+        final LinearLayout infoBB18 = findViewById(R.id.infoBB18);
+        Button btnBB18 = findViewById(R.id.btnBB18);
+        btnBB18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB18.getVisibility() == View.VISIBLE)
+                {
+                    infoBB18.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB18.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        final LinearLayout infoBB19 = findViewById(R.id.infoBB19);
+        Button btnBB19 = findViewById(R.id.btnBB19);
+        btnBB19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB19.getVisibility() == View.VISIBLE)
+                {
+                    infoBB19.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB19.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        final LinearLayout infoBB20 = findViewById(R.id.infoBB20);
+        Button btnBB20 = findViewById(R.id.btnBB20);
+        btnBB20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB20.getVisibility() == View.VISIBLE)
+                {
+                    infoBB20.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB20.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        final LinearLayout infoBB21 = findViewById(R.id.infoBB21);
+        Button btnBB21 = findViewById(R.id.btnBB21);
+        btnBB21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB21.getVisibility() == View.VISIBLE)
+                {
+                    infoBB21.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB21.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        final LinearLayout infoBB22 = findViewById(R.id.infoBB22);
+        Button btnBB22 = findViewById(R.id.btnBB22);
+        btnBB22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB22.getVisibility() == View.VISIBLE)
+                {
+                    infoBB22.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB22.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        final LinearLayout infoBB23 = findViewById(R.id.infoBB23);
+        Button btnBB23 = findViewById(R.id.btnBB23);
+        btnBB23.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB23.getVisibility() == View.VISIBLE)
+                {
+                    infoBB23.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB23.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        final LinearLayout infoBB24 = findViewById(R.id.infoBB24);
+        Button btnBB24 = findViewById(R.id.btnBB24);
+        btnBB24.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB24.getVisibility() == View.VISIBLE)
+                {
+                    infoBB24.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB24.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        final LinearLayout infoBB25 = findViewById(R.id.infoBB25);
+        Button btnBB25 = findViewById(R.id.btnBB25);
+        btnBB25.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB25.getVisibility() == View.VISIBLE)
+                {
+                    infoBB25.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB25.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        final LinearLayout infoBB26 = findViewById(R.id.infoBB26);
+        Button btnBB26 = findViewById(R.id.btnBB26);
+        btnBB26.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB26.getVisibility() == View.VISIBLE)
+                {
+                    infoBB26.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB26.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        final LinearLayout infoBB27 = findViewById(R.id.infoBB27);
+        Button btnBB27 = findViewById(R.id.btnBB27);
+        btnBB27.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB27.getVisibility() == View.VISIBLE)
+                {
+                    infoBB27.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB27.setVisibility(View.VISIBLE);
+                }
+            }
+        });
     }
 
     public void showBanesByStats()
@@ -333,6 +493,26 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         viewBB16.setVisibility(View.GONE);
         View viewBB17 = findViewById(R.id.viewBB17_1);
         viewBB17.setVisibility(View.GONE);
+        View viewBB18 = findViewById(R.id.viewBB18_1);
+        viewBB18.setVisibility(View.GONE);
+        View viewBB19 = findViewById(R.id.viewBB19_1);
+        viewBB19.setVisibility(View.GONE);
+        View viewBB20 = findViewById(R.id.viewBB20_1);
+        viewBB20.setVisibility(View.GONE);
+        View viewBB21 = findViewById(R.id.viewBB21_1);
+        viewBB21.setVisibility(View.GONE);
+        View viewBB22 = findViewById(R.id.viewBB22_1);
+        viewBB22.setVisibility(View.GONE);
+        View viewBB23 = findViewById(R.id.viewBB23_1);
+        viewBB23.setVisibility(View.GONE);
+        View viewBB24 = findViewById(R.id.viewBB24_1);
+        viewBB24.setVisibility(View.GONE);
+        View viewBB25 = findViewById(R.id.viewBB25_1);
+        viewBB25.setVisibility(View.GONE);
+        View viewBB26 = findViewById(R.id.viewBB26_1);
+        viewBB26.setVisibility(View.GONE);
+        View viewBB27 = findViewById(R.id.viewBB27_1);
+        viewBB27.setVisibility(View.GONE);
 
         if(player.getAlteration() >= 5 || player.getCreation() >= 5 || player.getEnergy() >= 5 || player.getEntropy() >= 5)
         {
@@ -401,6 +581,46 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         if(player.getAgility() >= 2 || player.getEnergy() >= 2 || player.getEntropy() >= 2)
         {
             viewBB17.setVisibility(View.VISIBLE);
+        }
+        if(player.getInfluence() >= 1)
+        {
+            viewBB18.setVisibility(View.VISIBLE);
+        }
+        if(player.getAlteration() >= 5)
+        {
+            viewBB19.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 4 || player.getCreation() >= 4 || player.getDeception() >= 4 || player.getEnergy() >= 4 || player.getInfluence() >= 4 || player.getMight() >= 4 || player.getPersuasion() >= 4 || player.getPrescience() >= 4)
+        {
+            viewBB20.setVisibility(View.VISIBLE);
+        }
+        if(player.getPrescience() >= 5)
+        {
+            viewBB21.setVisibility(View.VISIBLE);
+        }
+        if(player.getEntropy() >= 5)
+        {
+            viewBB22.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 2 || player.getAlteration() >= 2 || player.getEntropy() >= 2 || player.getMight() >= 2)
+        {
+            viewBB23.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 1 || player.getEnergy() >= 1 || player.getEntropy() >= 1 || player.getMight() >= 1 || player.getMovement() >= 1)
+        {
+            viewBB24.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 4 || player.getEnergy() >= 4 || player.getEntropy() >= 4 || player.getMight() >= 4)
+        {
+            viewBB25.setVisibility(View.VISIBLE);
+        }
+        if(player.getInfluence() >= 7)
+        {
+            viewBB26.setVisibility(View.VISIBLE);
+        }
+        if(player.getInfluence() >= 5)
+        {
+            viewBB27.setVisibility(View.VISIBLE);
         }
     }
 }
