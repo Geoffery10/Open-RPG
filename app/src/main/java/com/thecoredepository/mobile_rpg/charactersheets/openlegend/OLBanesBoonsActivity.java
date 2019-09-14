@@ -778,7 +778,7 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         {
             viewBB27.setVisibility(View.VISIBLE);
         }
-        
+
          */
     }
 
