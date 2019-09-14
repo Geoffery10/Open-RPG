@@ -247,6 +247,54 @@ public class OLBanesBoonsActivity extends AppCompatActivity
                 }
             }
         });
+
+        final LinearLayout infoBB15 = findViewById(R.id.infoBB15);
+        Button btnBB15 = findViewById(R.id.btnBB15);
+        btnBB15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB15.getVisibility() == View.VISIBLE)
+                {
+                    infoBB15.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB15.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        final LinearLayout infoBB16 = findViewById(R.id.infoBB16);
+        Button btnBB16 = findViewById(R.id.btnBB16);
+        btnBB16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB16.getVisibility() == View.VISIBLE)
+                {
+                    infoBB16.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB16.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        final LinearLayout infoBB17 = findViewById(R.id.infoBB17);
+        Button btnBB17 = findViewById(R.id.btnBB17);
+        btnBB17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB17.getVisibility() == View.VISIBLE)
+                {
+                    infoBB17.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB17.setVisibility(View.VISIBLE);
+                }
+            }
+        });
     }
 
     public void showBanesByStats()
@@ -277,6 +325,14 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         viewBB12.setVisibility(View.GONE);
         View viewBB13 = findViewById(R.id.viewBB13_1);
         viewBB13.setVisibility(View.GONE);
+        View viewBB14 = findViewById(R.id.viewBB14_1);
+        viewBB14.setVisibility(View.GONE);
+        View viewBB15 = findViewById(R.id.viewBB15_1);
+        viewBB15.setVisibility(View.GONE);
+        View viewBB16 = findViewById(R.id.viewBB16_1);
+        viewBB16.setVisibility(View.GONE);
+        View viewBB17 = findViewById(R.id.viewBB17_1);
+        viewBB17.setVisibility(View.GONE);
 
         if(player.getAlteration() >= 5 || player.getCreation() >= 5 || player.getEnergy() >= 5 || player.getEntropy() >= 5)
         {
@@ -329,6 +385,22 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         if(player.getAgility() >= 1 || player.getEnergy() >= 1 || player.getMight() >= 1 || player.getMovement() >= 1)
         {
             viewBB13.setVisibility(View.VISIBLE);
+        }
+        if(player.getInfluence() >= 5)
+        {
+            viewBB14.setVisibility(View.VISIBLE);
+        }
+        if(player.getPrescience() >= 2)
+        {
+            viewBB15.setVisibility(View.VISIBLE);
+        }
+        if(player.getProtection() >= 1)
+        {
+            viewBB16.setVisibility(View.VISIBLE);
+        }
+        if(player.getAgility() >= 2 || player.getEnergy() >= 2 || player.getEntropy() >= 2)
+        {
+            viewBB17.setVisibility(View.VISIBLE);
         }
     }
 }
