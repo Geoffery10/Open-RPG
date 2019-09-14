@@ -266,7 +266,7 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         {
             viewBB01.setVisibility(View.VISIBLE);
         }
-        if(player.getAlteration() >= 3 || player.getCreation() >= 3 || player.getEnergy() >= 3 || player.getEntropy() >= 3)
+        if(player.getInfluence() >= 3)
         {
             viewBB02.setVisibility(View.VISIBLE);
         }
@@ -286,11 +286,11 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         {
             viewBB06.setVisibility(View.VISIBLE);
         }
-        if(player.getEntropy() >= 5)
+        if(player.getInfluence() >= 5)
         {
             viewBB07.setVisibility(View.VISIBLE);
         }
-        if(player.getCreation() >= 5 || player.getEntropy() >= 5 || player.getInfluence() >= 5 || player.getMight() >= 5)
+        if(player.getEntropy() >= 5)
         {
             viewBB08.setVisibility(View.VISIBLE);
         }
@@ -298,19 +298,19 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         {
             viewBB09.setVisibility(View.VISIBLE);
         }
-        if(player.getAgility() >= 1 || player.getAlteration() >= 1 || player.getCreation() >= 1 || player.getEnergy() >= 1 || player.getEntropy() >= 1 || player.getInfluence() >= 1 || player.getMight() >= 1 || player.getMovement() >= 1)
+        if(player.getAgility() >= 2 || player.getEnergy() >= 2 || player.getMight() >= 2 || player.getMovement() >= 2)
         {
             viewBB10.setVisibility(View.VISIBLE);
         }
-        if(player.getAgility() >= 5 || player.getEntropy() >= 5 || player.getInfluence() >= 5)
+        if(player.getAgility() >= 1 || player.getAlteration() >= 1 || player.getCreation() >= 1 || player.getEnergy() >= 1 || player.getEntropy() >= 1 || player.getInfluence() >= 1 || player.getMight() >= 1 || player.getMovement() >= 1)
         {
             viewBB11.setVisibility(View.VISIBLE);
         }
-        if(player.getAgility() >= 5 || player.getEnergy() >= 5 || player.getEntropy() >= 5 || player.getMovement() >= 5)
+        if(player.getAgility() >= 5 || player.getEntropy() >= 5 || player.getInfluence() >= 5)
         {
             viewBB12.setVisibility(View.VISIBLE);
         }
-        if(player.getInfluence() >= 5)
+        if(player.getAgility() >= 1 || player.getEnergy() >= 1 || player.getMight() >= 1 || player.getMovement() >= 1)
         {
             viewBB13.setVisibility(View.VISIBLE);
         }
