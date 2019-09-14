@@ -12,7 +12,7 @@
         The target cannot see as long as the effect persists. The target automatically fails any Perception rolls based solely on normal sight. Attack rolls and Perception rolls based partially on sight that can be supplemented by another sense suffer disadvantage 5. The target\'s Guard defense is reduced by 3.
     </string>
     <string name="Blinded_powerLvl">5</string>
-    <string name="Blinded_attributes">Alteration - Creation - Energy - Entropy</string>
+    <string name="Blinded_attributes">Agility - Creation - Energy - Entropy</string>
     <string name="Blinded_attack">Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness</string>
     <string name="Blinded_special">N/A</string>
 
@@ -27,9 +27,9 @@
         \n\t<b>Power Level 4</b> - You can Minor Charm creatures of humanoid intelligence. You can Major Charm creatures of animal level intelligence or lower.
         \n\t<b>Power Level 6</b> - You can Major Charm creatures of humanoid intelligence.
     </string>
-    <string name="Charmed_powerLvl">5</string>
-    <string name="Charmed_attributes">Alteration - Creation - Energy - Entropy</string>
-    <string name="Charmed_attack">Agility vs. Guard\nCreation vs. Guard\nEnergy vs. Guard\nEntropy vs. Toughness</string>
+    <string name="Charmed_powerLvl">3 > 4 > 6</string>
+    <string name="Charmed_attributes">Influence</string>
+    <string name="Charmed_attack">Influence vs. Resolve</string>
     <string name="Charmed_special">
         While most banes last until the target actively attempts to resist it, this bane prevents the target from being aware 
 		of their affliction and thus prevents them from actively attempting to break free. However, the target\'s true mind is magically suppressed but fights to regain control. As such, at the end of each of its turns, the target receives a resist roll as a free action to break free from the effect. When your target succeeds at a resist roll against this bane, they become immune to all subsequent attempts by you to inflict the bane for the next 24 hours.
