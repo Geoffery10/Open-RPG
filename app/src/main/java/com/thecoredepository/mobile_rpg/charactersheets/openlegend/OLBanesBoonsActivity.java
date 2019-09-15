@@ -26,7 +26,7 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         TextView txtBanesBoonsTitle = findViewById(R.id.txtBanesBoonsTitle);
         txtBanesBoonsTitle.setText(selected);
 
-        //Display Banes By Player Stats
+        //Display Banes/Boons
         if (selected.equals("Banes"))
         {
             showBanesByStats();
@@ -642,33 +642,38 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         //Hide Boons
         boonVisibility(visibility);
 
-        View viewBB01 = findViewById(R.id.viewBB01_1);
-        View viewBB02 = findViewById(R.id.viewBB02_1);
-        View viewBB03 = findViewById(R.id.viewBB03_1);
-        View viewBB04 = findViewById(R.id.viewBB04_1);
-        View viewBB05 = findViewById(R.id.viewBB05_1);
-        View viewBB06 = findViewById(R.id.viewBB06_1);
-        View viewBB07 = findViewById(R.id.viewBB07_1);
-        View viewBB08 = findViewById(R.id.viewBB08_1);
-        View viewBB09 = findViewById(R.id.viewBB09_1);
-        View viewBB10 = findViewById(R.id.viewBB10_1);
-        View viewBB11 = findViewById(R.id.viewBB11_1);
-        View viewBB12 = findViewById(R.id.viewBB12_1);
-        View viewBB13 = findViewById(R.id.viewBB13_1);
-        View viewBB14 = findViewById(R.id.viewBB14_1);
-        View viewBB15 = findViewById(R.id.viewBB15_1);
-        View viewBB16 = findViewById(R.id.viewBB16_1);
-        View viewBB17 = findViewById(R.id.viewBB17_1);
-        View viewBB18 = findViewById(R.id.viewBB18_1);
-        View viewBB19 = findViewById(R.id.viewBB19_1);
-        View viewBB20 = findViewById(R.id.viewBB20_1);
-        View viewBB21 = findViewById(R.id.viewBB21_1);
-        View viewBB22 = findViewById(R.id.viewBB22_1);
-        View viewBB23 = findViewById(R.id.viewBB23_1);
-        View viewBB24 = findViewById(R.id.viewBB24_1);
-        View viewBB25 = findViewById(R.id.viewBB25_1);
-        View viewBB26 = findViewById(R.id.viewBB26_1);
-        View viewBB27 = findViewById(R.id.viewBB27_1);
+        View viewBB28 = findViewById(R.id.viewBB28_1);
+        View viewBB29 = findViewById(R.id.viewBB29_1);
+        View viewBB30 = findViewById(R.id.viewBB30_1);
+        View viewBB31 = findViewById(R.id.viewBB31_1);
+        View viewBB32 = findViewById(R.id.viewBB32_1);
+        View viewBB33 = findViewById(R.id.viewBB33_1);
+        View viewBB34 = findViewById(R.id.viewBB34_1);
+        View viewBB35 = findViewById(R.id.viewBB35_1);
+        View viewBB36 = findViewById(R.id.viewBB36_1);
+        View viewBB37 = findViewById(R.id.viewBB37_1);
+        View viewBB38 = findViewById(R.id.viewBB38_1);
+        View viewBB39 = findViewById(R.id.viewBB39_1);
+        View viewBB40 = findViewById(R.id.viewBB40_1);
+        View viewBB41 = findViewById(R.id.viewBB41_1);
+        View viewBB42 = findViewById(R.id.viewBB42_1);
+        View viewBB43 = findViewById(R.id.viewBB43_1);
+        View viewBB44 = findViewById(R.id.viewBB44_1);
+        View viewBB45 = findViewById(R.id.viewBB45_1);
+        View viewBB46 = findViewById(R.id.viewBB46_1);
+        View viewBB47 = findViewById(R.id.viewBB47_1);
+        View viewBB48 = findViewById(R.id.viewBB48_1);
+        View viewBB49 = findViewById(R.id.viewBB49_1);
+        View viewBB50 = findViewById(R.id.viewBB50_1);
+        View viewBB51 = findViewById(R.id.viewBB51_1);
+        View viewBB52 = findViewById(R.id.viewBB52_1);
+        View viewBB53 = findViewById(R.id.viewBB53_1);
+        View viewBB54 = findViewById(R.id.viewBB54_1);
+        View viewBB55 = findViewById(R.id.viewBB55_1);
+        View viewBB56 = findViewById(R.id.viewBB56_1);
+        View viewBB57 = findViewById(R.id.viewBB57_1);
+        View viewBB58 = findViewById(R.id.viewBB58_1);
+
         /*
         if(player.getAlteration() >= 5 || player.getCreation() >= 5 || player.getEnergy() >= 5 || player.getEntropy() >= 5)
         {
@@ -842,62 +847,68 @@ public class OLBanesBoonsActivity extends AppCompatActivity
     }
 
     private void boonVisibility(int visibility) {
-        //THESE ARE STILL BANES!!!
-        View viewBB01 = findViewById(R.id.viewBB01_1);
-        View viewBB02 = findViewById(R.id.viewBB02_1);
-        View viewBB03 = findViewById(R.id.viewBB03_1);
-        View viewBB04 = findViewById(R.id.viewBB04_1);
-        View viewBB05 = findViewById(R.id.viewBB05_1);
-        View viewBB06 = findViewById(R.id.viewBB06_1);
-        View viewBB07 = findViewById(R.id.viewBB07_1);
-        View viewBB08 = findViewById(R.id.viewBB08_1);
-        View viewBB09 = findViewById(R.id.viewBB09_1);
-        View viewBB10 = findViewById(R.id.viewBB10_1);
-        View viewBB11 = findViewById(R.id.viewBB11_1);
-        View viewBB12 = findViewById(R.id.viewBB12_1);
-        View viewBB13 = findViewById(R.id.viewBB13_1);
-        View viewBB14 = findViewById(R.id.viewBB14_1);
-        View viewBB15 = findViewById(R.id.viewBB15_1);
-        View viewBB16 = findViewById(R.id.viewBB16_1);
-        View viewBB17 = findViewById(R.id.viewBB17_1);
-        View viewBB18 = findViewById(R.id.viewBB18_1);
-        View viewBB19 = findViewById(R.id.viewBB19_1);
-        View viewBB20 = findViewById(R.id.viewBB20_1);
-        View viewBB21 = findViewById(R.id.viewBB21_1);
-        View viewBB22 = findViewById(R.id.viewBB22_1);
-        View viewBB23 = findViewById(R.id.viewBB23_1);
-        View viewBB24 = findViewById(R.id.viewBB24_1);
-        View viewBB25 = findViewById(R.id.viewBB25_1);
-        View viewBB26 = findViewById(R.id.viewBB26_1);
-        View viewBB27 = findViewById(R.id.viewBB27_1);
+        View viewBB28 = findViewById(R.id.viewBB28_1);
+        View viewBB29 = findViewById(R.id.viewBB29_1);
+        View viewBB30 = findViewById(R.id.viewBB30_1);
+        View viewBB31 = findViewById(R.id.viewBB31_1);
+        View viewBB32 = findViewById(R.id.viewBB32_1);
+        View viewBB33 = findViewById(R.id.viewBB33_1);
+        View viewBB34 = findViewById(R.id.viewBB34_1);
+        View viewBB35 = findViewById(R.id.viewBB35_1);
+        View viewBB36 = findViewById(R.id.viewBB36_1);
+        View viewBB37 = findViewById(R.id.viewBB37_1);
+        View viewBB38 = findViewById(R.id.viewBB38_1);
+        View viewBB39 = findViewById(R.id.viewBB39_1);
+        View viewBB40 = findViewById(R.id.viewBB40_1);
+        View viewBB41 = findViewById(R.id.viewBB41_1);
+        View viewBB42 = findViewById(R.id.viewBB42_1);
+        View viewBB43 = findViewById(R.id.viewBB43_1);
+        View viewBB44 = findViewById(R.id.viewBB44_1);
+        View viewBB45 = findViewById(R.id.viewBB45_1);
+        View viewBB46 = findViewById(R.id.viewBB46_1);
+        View viewBB47 = findViewById(R.id.viewBB47_1);
+        View viewBB48 = findViewById(R.id.viewBB48_1);
+        View viewBB49 = findViewById(R.id.viewBB49_1);
+        View viewBB50 = findViewById(R.id.viewBB50_1);
+        View viewBB51 = findViewById(R.id.viewBB51_1);
+        View viewBB52 = findViewById(R.id.viewBB52_1);
+        View viewBB53 = findViewById(R.id.viewBB53_1);
+        View viewBB54 = findViewById(R.id.viewBB54_1);
+        View viewBB55 = findViewById(R.id.viewBB55_1);
+        View viewBB56 = findViewById(R.id.viewBB56_1);
+        View viewBB57 = findViewById(R.id.viewBB57_1);
+        View viewBB58 = findViewById(R.id.viewBB58_1);
 
-        viewBB01.setVisibility(visibility);
-        viewBB02.setVisibility(visibility);
-        viewBB03.setVisibility(visibility);
-        viewBB04.setVisibility(visibility);
-        viewBB05.setVisibility(visibility);
-        viewBB06.setVisibility(visibility);
-        viewBB07.setVisibility(visibility);
-        viewBB08.setVisibility(visibility);
-        viewBB09.setVisibility(visibility);
-        viewBB09.setVisibility(visibility);
-        viewBB10.setVisibility(visibility);
-        viewBB11.setVisibility(visibility);
-        viewBB12.setVisibility(visibility);
-        viewBB13.setVisibility(visibility);
-        viewBB14.setVisibility(visibility);
-        viewBB15.setVisibility(visibility);
-        viewBB16.setVisibility(visibility);
-        viewBB17.setVisibility(visibility);
-        viewBB18.setVisibility(visibility);
-        viewBB19.setVisibility(visibility);
-        viewBB20.setVisibility(visibility);
-        viewBB21.setVisibility(visibility);
-        viewBB22.setVisibility(visibility);
-        viewBB23.setVisibility(visibility);
-        viewBB24.setVisibility(visibility);
-        viewBB25.setVisibility(visibility);
-        viewBB26.setVisibility(visibility);
-        viewBB27.setVisibility(visibility);
+        viewBB28.setVisibility(visibility);
+        viewBB29.setVisibility(visibility);
+        viewBB30.setVisibility(visibility);
+        viewBB31.setVisibility(visibility);
+        viewBB32.setVisibility(visibility);
+        viewBB33.setVisibility(visibility);
+        viewBB34.setVisibility(visibility);
+        viewBB35.setVisibility(visibility);
+        viewBB36.setVisibility(visibility);
+        viewBB37.setVisibility(visibility);
+        viewBB38.setVisibility(visibility);
+        viewBB39.setVisibility(visibility);
+        viewBB40.setVisibility(visibility);
+        viewBB41.setVisibility(visibility);
+        viewBB42.setVisibility(visibility);
+        viewBB43.setVisibility(visibility);
+        viewBB44.setVisibility(visibility);
+        viewBB45.setVisibility(visibility);
+        viewBB46.setVisibility(visibility);
+        viewBB47.setVisibility(visibility);
+        viewBB48.setVisibility(visibility);
+        viewBB49.setVisibility(visibility);
+        viewBB50.setVisibility(visibility);
+        viewBB51.setVisibility(visibility);
+        viewBB52.setVisibility(visibility);
+        viewBB53.setVisibility(visibility);
+        viewBB54.setVisibility(visibility);
+        viewBB55.setVisibility(visibility);
+        viewBB56.setVisibility(visibility);
+        viewBB57.setVisibility(visibility);
+        viewBB58.setVisibility(visibility);
     }
 }
