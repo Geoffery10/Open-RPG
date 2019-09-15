@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="blinded_description">temp</string>
-    <string name="blinded_effect">temp</string>
-
     <string name="Blinded_name">Blind  -  5</string>
     <string name="Blinded_duration">Resist ends (Fail x 3 = 1 minute)</string>
     <string name="Blinded_description">
