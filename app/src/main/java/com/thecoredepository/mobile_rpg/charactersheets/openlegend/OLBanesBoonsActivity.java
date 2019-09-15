@@ -674,117 +674,131 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         View viewBB57 = findViewById(R.id.viewBB57_1);
         View viewBB58 = findViewById(R.id.viewBB58_1);
 
-        /*
-        if(player.getAlteration() >= 5 || player.getCreation() >= 5 || player.getEnergy() >= 5 || player.getEntropy() >= 5)
-        {
-            viewBB01.setVisibility(View.VISIBLE);
-        }
-        if(player.getInfluence() >= 3)
-        {
-            viewBB02.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 4 || player.getEnergy() >= 4 || player.getEntropy() >= 4)
-        {
-            viewBB03.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 9 || player.getEntropy() >= 9)
-        {
-            viewBB04.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 3 || player.getEnergy() >= 3 || player.getEntropy() >= 3 || player.getInfluence() >= 3 || player.getMight() >= 3 || player.getPersuasion() >= 3 || player.getPresence() >= 3)
-        {
-            viewBB05.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 3 || player.getAlteration() >= 3 || player.getEnergy() >= 3 || player.getEntropy() >= 3 || player.getInfluence() >= 3 || player.getMight() >= 3 || player.getMovement() >= 3)
-        {
-            viewBB06.setVisibility(View.VISIBLE);
-        }
-        if(player.getInfluence() >= 5)
-        {
-            viewBB07.setVisibility(View.VISIBLE);
-        }
-        if(player.getEntropy() >= 5)
-        {
-            viewBB08.setVisibility(View.VISIBLE);
-        }
-        if(player.getCreation() >= 5 || player.getEntropy() >= 5 || player.getInfluence() >= 5 || player.getMight() >= 5)
-        {
-            viewBB09.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 2 || player.getEnergy() >= 2 || player.getMight() >= 2 || player.getMovement() >= 2)
-        {
-            viewBB10.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 1 || player.getAlteration() >= 1 || player.getCreation() >= 1 || player.getEnergy() >= 1 || player.getEntropy() >= 1 || player.getInfluence() >= 1 || player.getMight() >= 1 || player.getMovement() >= 1)
-        {
-            viewBB11.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 5 || player.getEntropy() >= 5 || player.getInfluence() >= 5)
-        {
-            viewBB12.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 1 || player.getEnergy() >= 1 || player.getMight() >= 1 || player.getMovement() >= 1)
-        {
-            viewBB13.setVisibility(View.VISIBLE);
-        }
-        if(player.getInfluence() >= 5)
-        {
-            viewBB14.setVisibility(View.VISIBLE);
-        }
-        if(player.getPrescience() >= 2)
-        {
-            viewBB15.setVisibility(View.VISIBLE);
-        }
-        if(player.getProtection() >= 1)
-        {
-            viewBB16.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 2 || player.getEnergy() >= 2 || player.getEntropy() >= 2)
-        {
-            viewBB17.setVisibility(View.VISIBLE);
-        }
-        if(player.getInfluence() >= 1)
-        {
-            viewBB18.setVisibility(View.VISIBLE);
-        }
-        if(player.getAlteration() >= 5)
-        {
-            viewBB19.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 4 || player.getCreation() >= 4 || player.getDeception() >= 4 || player.getEnergy() >= 4 || player.getInfluence() >= 4 || player.getMight() >= 4 || player.getPersuasion() >= 4 || player.getPrescience() >= 4)
-        {
-            viewBB20.setVisibility(View.VISIBLE);
-        }
-        if(player.getPrescience() >= 5)
-        {
-            viewBB21.setVisibility(View.VISIBLE);
-        }
-        if(player.getEntropy() >= 5)
-        {
-            viewBB22.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 2 || player.getAlteration() >= 2 || player.getEntropy() >= 2 || player.getMight() >= 2)
-        {
-            viewBB23.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 1 || player.getEnergy() >= 1 || player.getEntropy() >= 1 || player.getMight() >= 1 || player.getMovement() >= 1)
-        {
-            viewBB24.setVisibility(View.VISIBLE);
-        }
-        if(player.getAgility() >= 4 || player.getEnergy() >= 4 || player.getEntropy() >= 4 || player.getMight() >= 4)
-        {
-            viewBB25.setVisibility(View.VISIBLE);
-        }
-        if(player.getInfluence() >= 7)
-        {
-            viewBB26.setVisibility(View.VISIBLE);
-        }
-        if(player.getInfluence() >= 5)
-        {
-            viewBB27.setVisibility(View.VISIBLE);
-        }
 
-         */
+        if(player.getAlteration() >= 4 || player.getMovement() >= 4)
+        {
+            viewBB28.setVisibility(View.VISIBLE);
+        }
+		if(player.getCreation() >= 6 || player.getEntropy() >= 6 || player.getLogic() >= 6)
+        {
+            viewBB29.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 4 || player.getCreation() >= 4 || player.getEnergy() >= 4 || player.getEntropy() >= 4 || player.getInfluence() >= 4 || player.getMovement() >= 4 || player.getPresence() >= 4 || player.getPrescience() >= 4 || player.getProtection() >= 4)
+        {
+            viewBB30.setVisibility(View.VISIBLE);
+        }
+		if(player.getCreation() >= 3 || player.getEnergy() >= 3 || player.getEntropy() >= 3 || player.getProtection() >= 3)
+        {
+            viewBB31.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 5 || player.getEntropy() >= 5 || player.getPerception() >= 5 || player.getPrescience() >= 5)
+        {
+            viewBB32.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 3 || player.getCreation() >= 3 || player.getPrescience() >= 3 || player.getPresence() >= 3)
+        {
+            viewBB33.setVisibility(View.VISIBLE);
+        }
+		if(player.getEntropy() >= 1 || player.getInfluence() >= 1)
+        {
+            viewBB34.setVisibility(View.VISIBLE);
+        }
+		if(player.getPrescience() >= 1)
+        {
+            viewBB35.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 5 || player.getMovement() >= 5)
+        {
+            viewBB36.setVisibility(View.VISIBLE);
+        }
+		if(player.getCreation() >= 1)
+        {
+            viewBB37.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 2 || player.getMovement() >= 2)
+        {
+            viewBB38.setVisibility(View.VISIBLE);
+        }
+		if(player.getCreation() >= 1 || player.getLearning() >= 1 || player.getLogic() >= 1 || player.getPresence() >= 1)
+        {
+            viewBB39.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 7 || player.getEntropy() >= 7)
+        {
+            viewBB40.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 5 || player.getInfluence() >= 5)
+        {
+            viewBB41.setVisibility(View.VISIBLE);
+        }
+		if(player.getEntropy() >= 5)
+        {
+            viewBB42.setVisibility(View.VISIBLE);
+        }
+		if(player.getCreation() >= 1 || player.getEnergy >= 1)
+        {
+            viewBB43.setVisibility(View.VISIBLE);
+        }
+		if(player.getPrescience() >= 1)
+        {
+            viewBB44.setVisibility(View.VISIBLE);
+        }
+		if(player.getPrescience() >= 5)
+        {
+            viewBB45.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 1 || player.getCreation >= 1)
+        {
+            viewBB46.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 3 || player.getEnergy >= 3 || player.getMovement() >= 3 || player.getProtection() >= 3)
+        {
+            viewBB47.setVisibility(View.VISIBLE);
+        }
+		if(player.getCreation() >= 1 || player.getProtection() >= 1)
+        {
+            viewBB48.setVisibility(View.VISIBLE);
+        }
+		if(player.getPrescience() >= 4)
+        {
+            viewBB49.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 2)
+        {
+            viewBB50.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 4 || player.getCreation() >= 4 || player.getEntropy() >= 4 || player.getEnergy() >= 4)
+        {
+            viewBB51.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 3 || player.getCreation() >= 3 || player.getProtection() >= 3)
+        {
+            viewBB52.setVisibility(View.VISIBLE);
+        }
+		if(player.getMovement() >= 3)
+        {
+            viewBB53.setVisibility(View.VISIBLE);
+        }
+		if(player.getInfluence() >= 3 || player.getPrescience() >= 3)
+        {
+            viewBB54.setVisibility(View.VISIBLE);
+        }
+		if(player.getMovement() >= 3)
+        {
+            viewBB55.setVisibility(View.VISIBLE);
+        }
+		if(player.getPrescience() >= 5)
+        {
+            viewBB56.setVisibility(View.VISIBLE);
+        }
+		if(player.getAlteration() >= 3)
+        {
+            viewBB57.setVisibility(View.VISIBLE);
+        }
+		if(player.getPrescience() >= 5)
+        {
+            viewBB58.setVisibility(View.VISIBLE);
+        }
     }
 
     private void baneVisibility(int visibility) {
