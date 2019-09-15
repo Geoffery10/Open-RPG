@@ -486,6 +486,537 @@ public class OLBanesBoonsActivity extends AppCompatActivity
                 }
             }
         });
+
+        final LinearLayout infoBB28 = findViewById(R.id.infoBB28);
+        Button btnBB28 = findViewById(R.id.btnBB28);
+        btnBB28.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB28.getVisibility() == View.VISIBLE)
+                {
+                    infoBB28.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB28.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB29 = findViewById(R.id.infoBB29);
+        Button btnBB29 = findViewById(R.id.btnBB29);
+        btnBB29.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB29.getVisibility() == View.VISIBLE)
+                {
+                    infoBB29.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB29.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB30 = findViewById(R.id.infoBB30);
+        Button btnBB30 = findViewById(R.id.btnBB30);
+        btnBB30.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB30.getVisibility() == View.VISIBLE)
+                {
+                    infoBB30.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB30.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB31 = findViewById(R.id.infoBB31);
+        Button btnBB31 = findViewById(R.id.btnBB31);
+        btnBB31.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB31.getVisibility() == View.VISIBLE)
+                {
+                    infoBB31.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB31.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB32 = findViewById(R.id.infoBB32);
+        Button btnBB32 = findViewById(R.id.btnBB32);
+        btnBB32.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB32.getVisibility() == View.VISIBLE)
+                {
+                    infoBB32.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB32.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB33 = findViewById(R.id.infoBB33);
+        Button btnBB33 = findViewById(R.id.btnBB33);
+        btnBB33.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB33.getVisibility() == View.VISIBLE)
+                {
+                    infoBB33.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB33.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB34 = findViewById(R.id.infoBB34);
+        Button btnBB34 = findViewById(R.id.btnBB34);
+        btnBB34.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB34.getVisibility() == View.VISIBLE)
+                {
+                    infoBB34.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB34.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB35 = findViewById(R.id.infoBB35);
+        Button btnBB35 = findViewById(R.id.btnBB35);
+        btnBB35.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB35.getVisibility() == View.VISIBLE)
+                {
+                    infoBB35.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB35.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB36 = findViewById(R.id.infoBB36);
+        Button btnBB36 = findViewById(R.id.btnBB36);
+        btnBB36.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB36.getVisibility() == View.VISIBLE)
+                {
+                    infoBB36.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB36.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB37 = findViewById(R.id.infoBB37);
+        Button btnBB37 = findViewById(R.id.btnBB37);
+        btnBB37.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB37.getVisibility() == View.VISIBLE)
+                {
+                    infoBB37.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB37.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB38 = findViewById(R.id.infoBB38);
+        Button btnBB38 = findViewById(R.id.btnBB38);
+        btnBB38.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB38.getVisibility() == View.VISIBLE)
+                {
+                    infoBB38.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB38.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB39 = findViewById(R.id.infoBB39);
+        Button btnBB39 = findViewById(R.id.btnBB39);
+        btnBB39.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB39.getVisibility() == View.VISIBLE)
+                {
+                    infoBB39.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB39.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB40 = findViewById(R.id.infoBB40);
+        Button btnBB40 = findViewById(R.id.btnBB40);
+        btnBB40.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB40.getVisibility() == View.VISIBLE)
+                {
+                    infoBB40.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB40.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB41 = findViewById(R.id.infoBB41);
+        Button btnBB41 = findViewById(R.id.btnBB41);
+        btnBB41.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB41.getVisibility() == View.VISIBLE)
+                {
+                    infoBB41.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB41.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB42 = findViewById(R.id.infoBB42);
+        Button btnBB42 = findViewById(R.id.btnBB42);
+        btnBB42.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB42.getVisibility() == View.VISIBLE)
+                {
+                    infoBB42.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB42.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB43 = findViewById(R.id.infoBB43);
+        Button btnBB43 = findViewById(R.id.btnBB43);
+        btnBB43.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB43.getVisibility() == View.VISIBLE)
+                {
+                    infoBB43.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB43.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB44 = findViewById(R.id.infoBB44);
+        Button btnBB44 = findViewById(R.id.btnBB44);
+        btnBB44.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB44.getVisibility() == View.VISIBLE)
+                {
+                    infoBB44.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB44.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB45 = findViewById(R.id.infoBB45);
+        Button btnBB45 = findViewById(R.id.btnBB45);
+        btnBB45.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB45.getVisibility() == View.VISIBLE)
+                {
+                    infoBB45.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB45.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB46 = findViewById(R.id.infoBB46);
+        Button btnBB46 = findViewById(R.id.btnBB46);
+        btnBB46.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB46.getVisibility() == View.VISIBLE)
+                {
+                    infoBB46.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB46.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB47 = findViewById(R.id.infoBB47);
+        Button btnBB47 = findViewById(R.id.btnBB47);
+        btnBB47.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB47.getVisibility() == View.VISIBLE)
+                {
+                    infoBB47.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB47.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB48 = findViewById(R.id.infoBB48);
+        Button btnBB48 = findViewById(R.id.btnBB48);
+        btnBB48.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB48.getVisibility() == View.VISIBLE)
+                {
+                    infoBB48.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB48.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB49 = findViewById(R.id.infoBB49);
+        Button btnBB49 = findViewById(R.id.btnBB49);
+        btnBB49.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB49.getVisibility() == View.VISIBLE)
+                {
+                    infoBB49.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB49.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB50 = findViewById(R.id.infoBB50);
+        Button btnBB50 = findViewById(R.id.btnBB50);
+        btnBB50.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB50.getVisibility() == View.VISIBLE)
+                {
+                    infoBB50.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB50.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB51 = findViewById(R.id.infoBB51);
+        Button btnBB51 = findViewById(R.id.btnBB51);
+        btnBB51.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB51.getVisibility() == View.VISIBLE)
+                {
+                    infoBB51.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB51.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB52 = findViewById(R.id.infoBB52);
+        Button btnBB52 = findViewById(R.id.btnBB52);
+        btnBB52.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB52.getVisibility() == View.VISIBLE)
+                {
+                    infoBB52.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB52.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB53 = findViewById(R.id.infoBB53);
+        Button btnBB53 = findViewById(R.id.btnBB53);
+        btnBB53.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB53.getVisibility() == View.VISIBLE)
+                {
+                    infoBB53.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB53.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB54 = findViewById(R.id.infoBB54);
+        Button btnBB54 = findViewById(R.id.btnBB54);
+        btnBB54.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB54.getVisibility() == View.VISIBLE)
+                {
+                    infoBB54.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB54.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB55 = findViewById(R.id.infoBB55);
+        Button btnBB55 = findViewById(R.id.btnBB55);
+        btnBB55.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB55.getVisibility() == View.VISIBLE)
+                {
+                    infoBB55.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB55.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB56 = findViewById(R.id.infoBB56);
+        Button btnBB56 = findViewById(R.id.btnBB56);
+        btnBB56.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB56.getVisibility() == View.VISIBLE)
+                {
+                    infoBB56.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB56.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB57 = findViewById(R.id.infoBB57);
+        Button btnBB57 = findViewById(R.id.btnBB57);
+        btnBB57.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB57.getVisibility() == View.VISIBLE)
+                {
+                    infoBB57.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB57.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        final LinearLayout infoBB58 = findViewById(R.id.infoBB58);
+        Button btnBB58 = findViewById(R.id.btnBB58);
+        btnBB58.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (infoBB58.getVisibility() == View.VISIBLE)
+                {
+                    infoBB58.setVisibility(View.GONE);
+                }
+                else
+                {
+                    infoBB58.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+    }
+
+    private void boonsShowHideButtons()
+    {
+
     }
 
     public void showBanesByStats()
