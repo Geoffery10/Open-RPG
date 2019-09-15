@@ -319,7 +319,7 @@
     <string name="Shapeshift_attributes">Alteration</string>
     <string name="Shapeshift_special">Shapeshifting into a specific creature (attempting to impersonate them) requires a Deception action roll which is opposed by Perception attribute of anyone who sees the shapeshifted creature. In addition, at power levels 4 and lower, the target does not gain mastery over any special movement modes granted by the new form. As such, the movement speed is cut in half for movement modes not native to the original form, and the GM may rule that certain actions, such as swimming in combat, suffer disadvantage on relevant action rolls.</string>
 
-    <string name="Summon_Creature_name">Summon_Creature  -  4 / 5 / 6 / 7 / 8 / 9</string>
+    <string name="Summon_Creature_name">Summon Creature  -  4 / 5 / 6 / 7 / 8 / 9</string>
     <string name="Summon_Creature_invocation">1 Focus Action</string>
     <string name="Summon_Creature_duration">Sustain Persists</string>
     <string name="Summon_Creature_description">
@@ -332,4 +332,94 @@
     <string name="Summon_Creature_attributes">Alteration - Creation - Entropy - Energy</string>
     <string name="Summon_Creature_special">Creatures summoned by this boon cannot be healed if they reach zero hit points. They are permanently dead. Additionally, creatures summoned by this boon cannot invoke it. Multi-targeting for this boon does not work as it does for other boons. You may use a single invocation to summon multiple creatures. For each additional creature summoned beyond the first, you suffer an additional disadvantage 2 on your action roll to invoke. Any effect that modifies multi-targeting penalties will work as normal in offsetting this disadvantage.</string>
 
+    <string name="Sustenance_name">Sustenance  -  3 / 4 / 5 / 7 / 9</string>
+    <string name="Sustenance_invocation">1 Major Action</string>
+    <string name="Sustenance_duration">24 hours</string>
+    <string name="Sustenance_description">
+        You protect the target from environmental dangers or suspend their usual biological needs. Examples include sprouting gills to allow for underwater breathing, calling on a divine power to be sustained without food, and using far-future biomodifications to endure extreme cold.
+    </string>
+    <string name="Sustenance_effect">
+        You protect the target from one environmental danger, biological need, or similar condition. The power level of this boon determines the type of conditions you may protect against.\n\t<b>Power Level 3</b> - Target is unaffected by a chosen type of hostile climate. Examples include heat, cold, and radiation.\n\t<b>Power Level 4</b> - Target can sustain a single biological need from an alternate source, such as by breathing the oxygen found in water, drinking from an irradiated stream, or eating food not normally edible\n\t<b>Power Level 5</b> - Target can subsist without the essential nourishment periodically required for sustenance, such as food or water.\n\t<b>Power Level 7</b> - Target can subsist without the most critical nourishment, that which is typically consumed on a moment-to-moment basis, such as air.\n\t<b>Power Level 9</b> - Target is unaffected even when cut off from all biological necessities, including warmth, water, air, food, and any other biological need.
+    </string>
+    <string name="Sustenance_powerLvl">3 > 4 > 5 > 7 > 9</string>
+    <string name="Sustenance_attributes">Alteration - Creation - Protection</string>
+    <string name="Sustenance_special">You may only have one instance of this boon in effect at any given time. As soon as you invoke it, any previous invocations are immediately canceled.</string>
+
+    <string name="Telekinesis_name">Telekinesis  -  3 / 5 / 7 / 9</string>
+    <string name="Telekinesis_invocation">1 Major Action</string>
+    <string name="Telekinesis_duration">Sustain Persists</string>
+    <string name="Telekinesis_description">
+        You reach out and extraordinarily control an unattended inanimate object. This may stem from latent psychic ability, magical manipulation of the element of air, anti-gravity technology, or similar sources.
+    </string>
+    <string name="Telekinesis_effect">
+        Immediately upon invoking the boon, and again each round when you sustain the boon, you may move the target object up to 5' times your invoking attribute score. As part of moving an object, you may also manipulate it (for example, turning a door knob or opening a coin purse). A new invocation of this boon must be attempted whenever you wish to target a different object. The power level of the boon determines the size and weight of the objects you may target:\n\t<b>Power Level 3</b> - The object must be smaller than a 1' cube or lighter than 10 pounds.\n\t<b>Power Level 5</b> - The object must be smaller than a 5' cube or lighter than 100 pounds.\n\t<b>Power Level 7</b> - The object must be smaller than a 10' cube or lighter than 1,000 pounds.\n\t<b>Power Level 9</b> - The object must be smaller than a 20' cube or lighter than 10,000 pounds.
+    </string>
+    <string name="Telekinesis_powerLvl">3 > 5 > 7 > 9</string>
+    <string name="Telekinesis_attributes">Movement</string>
+    <string name="Telekinesis_special">N/A</string>
+
+    <string name="Telepathy_name">Telepathy  -  3 / 5 / 6 / 7</string>
+    <string name="Telepathy_invocation">1 Major Action</string>
+    <string name="Telepathy_duration">Sustain Persists</string>
+    <string name="Telepathy_description">
+        You reach out mentally to a willing target and speak wordlessly with thought-to-thought communication. Examples of this boon in action include a psychic who can connect with the minds of others and a far future artificial intelligence capable of passing information to other beings through the vibration of quantum strings.
+    </string>
+    <string name="Telepathy_effect">
+        You and the target can communicate with each other simply through thought. Note that this telepathy does not bestow intelligence upon creatures, so you could not use it to communicate with a squirrel unless you already possessed other means of doing so. Additionally, telepathy does not bypass language barriers, so you would need to already speak the language of your target.\n\t<b>Power Level 3</b> - You can communicate telepathically with a single creature of animal-level intelligence or lower. Keep in mind that it can only communicate concepts with you that it can understand.\n\t<b>Power Level 5</b> - You can communicate telepathically with a single creature of humanoid intelligence.\n\t<b>Power Level 6</b> - You can create a mental relay between yourself and up to five other creatures allowing each of them to communicate with the rest of the group simultaneously.\n\t<b>Power Level 7</b> - You can communicate telepathically with any number of creatures that you can see.
+    </string>
+    <string name="Telepathy_powerLvl">3 > 5 > 6 > 7</string>
+    <string name="Telepathy_attributes">Influence - Prescience</string>
+    <string name="Telepathy_special">N/A</string>
+
+    <string name="Teleport_name">Teleport  -  3 / 5 / 7 / 9</string>
+    <string name="Teleport_invocation">1 Move Action</string>
+    <string name="Teleport_duration">Instantaneous</string>
+    <string name="Teleport_description">
+        You are able to instantly move yourself or an ally from one place to another, either by stepping into an intermediate realm, deconstructing and reforming a physical body, transporting magically, or similar means.
+    </string>
+    <string name="Teleport_effect">
+        \n\t<b>Power Level 3</b> - You can teleport the target to any unoccupied space within 5 feet per Movement attribute score as long as you can naturally see your destination.\n\t<b>Power Level 5</b> - Your teleportation range is unchanged, but you can now teleport your target to spaces that you can't see. If you choose an occupied space, your target lands in the nearest adjacent space (roll randomly to decide if there are multiple options) and your target is stunned for 1 round (a resist roll is not needed to end the effect).\n\t<b>Power Level 7</b> - You can opt to take longer in invoking the boon. If you choose to do so, for each minute of invocation (delay before making your action roll) you can teleport the target 1 mile, up to a maximum number of miles equal to your Movement attribute score. While the distance is greater, this mode is also dangerous, as a misunderstanding of direction or geography can put your target many miles in an unfavorable direction. You simply choose a direction (relative to your starting location) and teleport your target a number of miles equal to your Movement score. During invocation, you must spend a focus action each turn until the invocation time passes.\n\t<b>Power Level 9</b> - Using the same longer invocation time for power level 7, you can now teleport your target to any location without range limit, provided you have personally seen (through magical or normal means) the destination.
+    </string>
+    <string name="Teleport_powerLvl">3 > 5 > 7 > 9</string>
+    <string name="Teleport_attributes">Movement</string>
+    <string name="Teleport_special">N/A</string>
+
+    <string name="Tongues_name">Tongues  -  5 / 6</string>
+    <string name="Tongues_invocation">10 Minutes</string>
+    <string name="Tongues_duration">Sustain Persists</string>
+    <string name="Tongues_description">
+        You or an ally temporarily gains the ability to read, write, and speak languages that they are otherwise unfamiliar with. This ability may come by channeling interplanar spirits, tapping the power of a super intelligence, making deductions based on an extraordinary understanding of the science of communication, or similar means.
+    </string>
+    <string name="Tongues_effect">
+        \n\t<b>Power Level 5</b> - Your target can understand and speak a language of your choice.\n\t<b>Power Level 6</b> - Your target can read a language of your choice.
+    </string>
+    <string name="Tongues_powerLvl">5 > 6</string>
+    <string name="Tongues_attributes">Prescience</string>
+    <string name="Tongues_special">N/A</string>
+
+    <string name="Transmutation_name">Transmutation  -  3 / 5 / 7 / 8 / 9</string>
+    <string name="Transmutation_invocation">1 Minute</string>
+    <string name="Transmutation_duration">Sustain Persists</string>
+    <string name="Transmutation_description">
+        You are able to change the size, shape, and composition of physical matter that you touch. Transmute rocks to gold, a wall into a door, or a lump of metal into a loaded gun. This boon is favored among druids, transmuters, engineers, and mad scientists.
+    </string>
+    <string name="Transmutation_effect">
+        Your power level determines the types of matter you can transmute as well as the duration of the effect. The duration is either temporary or permanent. A temporary transmutation must be sustained every round. A permanent transmutation does not have to be sustained and persists until some other effect would cancel it. The maximum volume of matter you can transmute is on 5 cubic feet multiplied by your attribute score.\n\t<b>Power Level 3</b> - Temporarily transmute an object into another object of the same size and weight.\n\t<b>Power Level 5</b> - Temporarily transmute an object into another object of the same size and 50% greater or lesser weight. Temporarily transmute an object into another object of the same weight and 50% greater or lesser size.\n\t<b>Power Level 7</b> - Permanently transmute an object into another object of the same size and weight. Temporarily transmute an object into another object of the same size and 200% greater or lesser weight. Temporarily transmute an object into another object of the same weight and 200% greater or lesser size.\n\t<b>Power Level 8</b> - Permanently transmute an object into another object of up to 200% difference in size and/or weight. Temporarily transmute a simple object into a mundane object of notable complexity. The resulting object must be of Wealth Level 2 or less.\n\t<b>Power Level 9</b> - Permanently transmute a simple object into a mundane and complex one. The resulting object must be of Wealth Level 2 or less.
+    </string>
+    <string name="Transmutation_powerLvl">3 > 5 > 7 > 8 > 9</string>
+    <string name="Transmutation_attributes">Alteration</string>
+    <string name="Transmutation_special">N/A</string>
+
+    <string name="Truesight_name">Truesight  -  5 / 6 / 7 / 8 / 9</string>
+    <string name="Truesight_invocation">1 Major Action</string>
+    <string name="Truesight_duration">Sustain Persists</string>
+    <string name="Truesight_description">
+        You grant yourself or an ally the ability to perceive that which cannot be detected with mundane senses, piercing impediments that would block or deceive normal sight, including darkness, solid objects, illusions, and even the barrier between alternate planes of reality. This power may stem from extrasensory perception, divine blessing, cybernetically enhanced senses, or similar means.
+    </string>
+    <string name="Truesight_effect">
+        \n\t<b>Power Level 5</b> - The target sees the presence of extraordinary effects such as magic, cloaking technology, and other effects that could be seen through extra-visual perception. In addition, this boon grants advantage 1 on rolls used to detect mundane concealment such as hidden passages, furniture with hidden storage, and concealed traps or other hazards.\n\t<b>Power Level 7</b> - The target's extraordinary sight pierces through all illusory effects, allowing them to see a *phantasm* for what it is.\n\t<b>Power Level 8</b> - The target can see through solid objects and their natural visual range is unhindered by them.\n\t<b>Power Level 9</b> - The extraordinary sight enables the target to peer into alternate planes or dimensions. They can see into dimensional pockets and other planes that overlap with the one they are currently on. In addition, the target's visual range becomes supercharged.
+    </string>
+    <string name="Truesight_powerLvl">5 > 6 > 7 > 8 > 9</string>
+    <string name="Truesight_attributes">Prescience</string>
+    <string name="Truesight_special">N/A</string>
 </resources>
