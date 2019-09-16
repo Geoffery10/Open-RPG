@@ -49,20 +49,27 @@ public class DiceActivity extends AppCompatActivity {
                     int d20 = 0;
                     List<Integer> die = new ArrayList<Integer>();
                     int total = 0;
-
-                    //====================THE ADVANTAGE SYSTEM NEEDS WORK===========================
                     int advantage = 0;
+                    int disadvantage = 0;
+
                     try {
                         advantage = Integer.parseInt(String.valueOf(editAdv.getText())) - Integer.parseInt(String.valueOf(editDis.getText()));
                     } catch (Exception e)
                     {
                         advantage = 0;
                     }
+                    try {
+                        disadvantage = Integer.parseInt(String.valueOf(editAdv.getText())) - Integer.parseInt(String.valueOf(editDis.getText()));
+                    } catch (Exception e)
+                    {
+                        disadvantage = 0;
+                    }
+
                     //Roll d20
                     d20 = rollD20(txtRolls, d20);
 
                     //Roll Other Dice
-                    rollOtherDice(txtRolls, die);
+                    rollOtherDice(txtRolls, die, advantage, disadvantage);
 
                     //Add Total
                     total = getTotalRoll(d20, die, total);
@@ -86,31 +93,44 @@ public class DiceActivity extends AppCompatActivity {
         return total;
     }
 
-    private void rollOtherDice(TextView txtRolls, List<Integer> die) {
+    private void rollOtherDice(TextView txtRolls, List<Integer> die, int advantage, int disadvantage)
+    {
         int roll;
-        for (int i = 0; i < numberOfDie; i++)
+
+        if (advantage > disadvantage)
         {
-            do
+
+        }
+        else if (disadvantage > advantage)
+        {
+
+        }
+        else
+        {
+            for (int i = 0; i < numberOfDie; i++)
             {
-                if (valueOfDie == 2)
+                do
                 {
-                    roll = dice.d2();
-                }
-                else if (valueOfDie == 6)
-                {
-                    roll = dice.d6();
-                }
-                else if (valueOfDie == 8)
-                {
-                    roll = dice.d8();
-                }
-                else //d10
-                {
-                    roll = dice.d10();
-                }
-                die.add(roll);
-                txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
-            } while (roll == valueOfDie);
+                    if (valueOfDie == 2)
+                    {
+                        roll = dice.d2();
+                    }
+                    else if (valueOfDie == 6)
+                    {
+                        roll = dice.d6();
+                    }
+                    else if (valueOfDie == 8)
+                    {
+                        roll = dice.d8();
+                    }
+                    else //d10
+                    {
+                        roll = dice.d10();
+                    }
+                    die.add(roll);
+                    txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+                } while (roll == valueOfDie);
+            }
         }
     }
 
