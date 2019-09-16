@@ -66,6 +66,7 @@ public class openlegend
     //Feats
     private int featPointsAvailable;
     private int featPointsUsed;
+    private List<String> feats = new ArrayList<String>();
 
     //Perks/Flaws
     private String[] perks = new String[2];
@@ -81,6 +82,7 @@ public class openlegend
     private int wealth;
 
     //Banes/Boons
+    //This should be irrelevant now
     private List Banes = new ArrayList<String>();
     private List Boons = new ArrayList<String>();
 
