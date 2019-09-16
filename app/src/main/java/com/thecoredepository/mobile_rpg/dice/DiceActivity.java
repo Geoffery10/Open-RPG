@@ -13,6 +13,7 @@ import com.example.mobile_rpg.R;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class DiceActivity extends AppCompatActivity {
 
@@ -67,13 +68,10 @@ public class DiceActivity extends AppCompatActivity {
                     }
 
                     //Roll d20
-                    d20 = rollD20(txtRolls, d20);
+                    total = rollD20(txtRolls, d20);
 
                     //Roll Other Dice
-                    rollOtherDice(txtRolls, die, advantage, disadvantage);
-
-                    //Add Total
-                    total = getTotalRoll(d20, die, total);
+                    total  += rollOtherDice(txtRolls, die, advantage, disadvantage);
 
                     //Display Total
                     txtTotal.setText("Total: " + total);
@@ -94,10 +92,13 @@ public class DiceActivity extends AppCompatActivity {
         return total;
     }
 
-    private void rollOtherDice(TextView txtRolls, List<Integer> die, int advantage, int disadvantage)
+    private int rollOtherDice(TextView txtRolls, List<Integer> die, int advantage, int disadvantage)
     {
+        int total = 0;
         int roll = 0;
         int totalAdvantage = advantage - disadvantage;
+        List<Integer> dieTemp = new ArrayList<Integer>();
+
         if (totalAdvantage < 0)
         {
             totalAdvantage = totalAdvantage * (-1);
@@ -107,46 +108,52 @@ public class DiceActivity extends AppCompatActivity {
         {
 
             for (int i = 0; i < (numberOfDie + totalAdvantage); i++) {
-                roll = getRoll(die);
-                txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
-            }
-            Collections.sort(die);
-            Log.i("Rolls", die.toString());
-            for (int i = 0; i < totalAdvantage; i++) {
-                die.remove(i);
-                Log.i("Rolls", die.toString());
-            }
-            Log.i("Rolls", die.toString());
-
-            for (int i = 0; i < numberOfDie; i++) {
-                if (die.get(i) == valueOfDie) {
-                    roll = getRoll(die);
-                    txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
-                }
-            }
-            Log.i("Rolls", die.toString());
-        }
-        else if (disadvantage > advantage)
-        {
-            for (int i = 0; i < (numberOfDie + totalAdvantage); i++) {
-                roll = getRoll(die);
+                roll = getRoll();
+                die.add(roll);
                 txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
             }
             Collections.sort(die);
             Collections.reverse(die);
-            Log.i("Rolls", die.toString());
-            for (int i = 0; i < totalAdvantage; i++) {
-                die.remove(i);
-            }
-            Log.i("Rolls", die.toString());
-
+            Log.i("Rolls - Sorted", die.toString());
             for (int i = 0; i < numberOfDie; i++) {
-                if (die.get(i) == valueOfDie) {
-                    roll = getRoll(die);
-                    txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+                dieTemp.add(die.get(i));
+                Log.i("Rolls - dieTemp", dieTemp.toString());
+            }
+
+            for (int i = 0; i < dieTemp.size(); i++) {
+                if (dieTemp.get(i) == valueOfDie) {
+                    roll = getRoll();
+                    dieTemp.add(roll);
+                    Log.i("Rolls - Explosions", dieTemp.toString());
                 }
             }
-            Log.i("Rolls", die.toString());
+            total = dieSum(dieTemp);
+            Log.i("Rolls - Total", ""+total);
+        }
+        else if (disadvantage > advantage)
+        {
+            for (int i = 0; i < (numberOfDie + totalAdvantage); i++) {
+                roll = getRoll();
+                die.add(roll);
+                txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+            }
+            Collections.sort(die);
+            Log.i("Rolls - Sorted", die.toString());
+            for (int i = 0; i < numberOfDie; i++) {
+                dieTemp.add(die.get(i));
+                Log.i("Rolls - dieTemp", dieTemp.toString());
+            }
+
+            for (int i = 0; i < dieTemp.size(); i++) {
+                if (dieTemp.get(i) == valueOfDie) {
+                    roll = getRoll();
+                    dieTemp.add(roll);
+                    txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+                    Log.i("Rolls - Explosions", dieTemp.toString());
+                }
+            }
+            total = dieSum(dieTemp);
+            Log.i("Rolls - Total", ""+total);
         }
         else
         {
@@ -154,14 +161,28 @@ public class DiceActivity extends AppCompatActivity {
             {
                 do
                 {
-                    roll = getRoll(die);
+                    roll = getRoll();
+                    die.add(roll);
                     txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
                 } while (roll == valueOfDie);
             }
+            total = dieSum(die);
+            Log.i("Rolls - Total", ""+total);
         }
+
+        return total;
     }
 
-    private int getRoll(List<Integer> die) {
+    public int dieSum(List<Integer> die) {
+        int sum = 0;
+
+        for (int i : die)
+            sum = sum + i;
+
+        return sum;
+    }
+
+    private int getRoll() {
         int roll = 0;
         if (valueOfDie == 2)
         {
@@ -179,7 +200,6 @@ public class DiceActivity extends AppCompatActivity {
         {
             roll = dice.d10();
         }
-        die.add(roll);
         return roll;
     }
 
