@@ -29,11 +29,11 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="35dp"
                 android:layout_marginRight="35dp"
-                android:scaleType="fitStart"
+                android:scaleType="fitCenter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/open_legend_lg_logo" />
+                app:srcCompat="@drawable/bannerOL" />
 
             <Spinner
                 android:id="@+id/spinnerOL"
