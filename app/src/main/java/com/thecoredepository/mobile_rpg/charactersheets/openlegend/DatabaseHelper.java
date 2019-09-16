@@ -27,8 +27,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void createDB() throws IOException {
-        this.getReadableDatabase();
-        Log.i("Readable ends.","end");
+        try {
+            this.getReadableDatabase();
+            Log.i("Readable ends.","end");
+        } catch (Exception e)
+        {
+            throw new Error(e);
+        }
 
         try {
             copyDB();
@@ -38,7 +43,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.setVersion(oldVersion);
+    }
 
     private boolean checkDB(){
         SQLiteDatabase checkDB = null;

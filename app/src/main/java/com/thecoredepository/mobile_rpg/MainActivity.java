@@ -1,8 +1,11 @@
 package com.thecoredepository.mobile_rpg;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,6 +32,9 @@ import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openle
 public class MainActivity extends AppCompatActivity {
 
     Cursor c = null;
+    final Context context=this;
+    private SQLiteDatabase mDataBase;
+    private static String DB_NAME ="opSheets.db";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,29 +48,38 @@ public class MainActivity extends AppCompatActivity {
 
         //LOAD DB
         /*
-        DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);
+        String DB_PATH;
+
+        DatabaseHelper db;
+        db = new DatabaseHelper(this);
         try {
-            myDbHelper.createDataBase();
+            db.createDB();
         } catch (IOException ioe) {
-            throw new Error("Unable to create database");
+            throw new Error("Database not created....");
         }
-        myDbHelper.openDataBase();
-
-        Toast.makeText(MainActivity.this, "Successfully Imported", Toast.LENGTH_SHORT).show();
-        c = myDbHelper.query("player", null, null, null, null, null, null);
-        if (c.moveToFirst()) {
-            do {
-                Toast.makeText(MainActivity.this,
-                        "_id: " + c.getString(0) + "\n" +
-                                "playerName: " + c.getString(1) + "\n" +
-                                "type: " + c.getString(2) + "\n" +
-                                "charName:  " + c.getString(3),
-                        Toast.LENGTH_LONG).show();
-            } while (c.moveToNext());
+        try
+        {
+            db.openDB();
+        } catch (Exception e)
+        {
+            Log.i("open DB......","Database not opened");
         }
 
+        SQLiteDatabase db1;
+        db1 = openOrCreateDatabase("opSheets", SQLiteDatabase.CREATE_IF_NECESSARY, null);
+        Cursor c = db1.rawQuery("SELECT * FROM player", null);
+        c.moveToFirst();
+        String temp = "";
+        while (!c.isAfterLast()) {
+            String s2 = c.getString(0);
+            String s3 = c.getString(1);
+            String s4 = c.getString(2);
+            temp = temp + "\n Id:" + s2 + "\tType:" + s3 + "\tBal:" + s4;
+            c.moveToNext();
+        }
+        Toast.makeText(getApplicationContext(), temp, Toast.LENGTH_LONG);
+        
          */
-
 
         openlegend.HARDCODEDSHEETS();
 
