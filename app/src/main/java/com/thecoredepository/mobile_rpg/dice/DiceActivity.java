@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.mobile_rpg.R;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class DiceActivity extends AppCompatActivity {
@@ -53,13 +54,13 @@ public class DiceActivity extends AppCompatActivity {
                     int disadvantage = 0;
 
                     try {
-                        advantage = Integer.parseInt(String.valueOf(editAdv.getText())) - Integer.parseInt(String.valueOf(editDis.getText()));
+                        advantage = Integer.parseInt(String.valueOf(editAdv.getText()));
                     } catch (Exception e)
                     {
                         advantage = 0;
                     }
                     try {
-                        disadvantage = Integer.parseInt(String.valueOf(editAdv.getText())) - Integer.parseInt(String.valueOf(editDis.getText()));
+                        disadvantage = Integer.parseInt(String.valueOf(editDis.getText()));
                     } catch (Exception e)
                     {
                         disadvantage = 0;
@@ -95,15 +96,57 @@ public class DiceActivity extends AppCompatActivity {
 
     private void rollOtherDice(TextView txtRolls, List<Integer> die, int advantage, int disadvantage)
     {
-        int roll;
+        int roll = 0;
+        int totalAdvantage = advantage - disadvantage;
+        if (totalAdvantage < 0)
+        {
+            totalAdvantage = totalAdvantage * (-1);
+        }
 
         if (advantage > disadvantage)
         {
 
+            for (int i = 0; i < (numberOfDie + totalAdvantage); i++) {
+                roll = getRoll(die);
+                txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+            }
+            Collections.sort(die);
+            Log.i("Rolls", die.toString());
+            for (int i = 0; i < totalAdvantage; i++) {
+                die.remove(i);
+                Log.i("Rolls", die.toString());
+            }
+            Log.i("Rolls", die.toString());
+
+            for (int i = 0; i < numberOfDie; i++) {
+                if (die.get(i) == valueOfDie) {
+                    roll = getRoll(die);
+                    txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+                }
+            }
+            Log.i("Rolls", die.toString());
         }
         else if (disadvantage > advantage)
         {
+            for (int i = 0; i < (numberOfDie + totalAdvantage); i++) {
+                roll = getRoll(die);
+                txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+            }
+            Collections.sort(die);
+            Collections.reverse(die);
+            Log.i("Rolls", die.toString());
+            for (int i = 0; i < totalAdvantage; i++) {
+                die.remove(i);
+            }
+            Log.i("Rolls", die.toString());
 
+            for (int i = 0; i < numberOfDie; i++) {
+                if (die.get(i) == valueOfDie) {
+                    roll = getRoll(die);
+                    txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+                }
+            }
+            Log.i("Rolls", die.toString());
         }
         else
         {
@@ -111,27 +154,33 @@ public class DiceActivity extends AppCompatActivity {
             {
                 do
                 {
-                    if (valueOfDie == 2)
-                    {
-                        roll = dice.d2();
-                    }
-                    else if (valueOfDie == 6)
-                    {
-                        roll = dice.d6();
-                    }
-                    else if (valueOfDie == 8)
-                    {
-                        roll = dice.d8();
-                    }
-                    else //d10
-                    {
-                        roll = dice.d10();
-                    }
-                    die.add(roll);
+                    roll = getRoll(die);
                     txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
                 } while (roll == valueOfDie);
             }
         }
+    }
+
+    private int getRoll(List<Integer> die) {
+        int roll = 0;
+        if (valueOfDie == 2)
+        {
+            roll = dice.d2();
+        }
+        else if (valueOfDie == 6)
+        {
+            roll = dice.d6();
+        }
+        else if (valueOfDie == 8)
+        {
+            roll = dice.d8();
+        }
+        else //d10
+        {
+            roll = dice.d10();
+        }
+        die.add(roll);
+        return roll;
     }
 
     private int rollD20(TextView txtRolls, int d20) {
