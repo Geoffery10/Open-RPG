@@ -9,6 +9,7 @@
     tools:context="com.thecoredepository.mobile_rpg.MainActivity">
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,40 +20,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="341dp"
-                android:layout_height="90dp"
-                android:layout_marginStart="35dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="35dp"
-                android:layout_marginRight="35dp"
-                android:scaleType="fitCenter"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/bannerOL" />
-
-            <Spinner
-                android:id="@+id/spinnerOL"
-                style="@style/Platform.Widget.AppCompat.Spinner"
-                android:layout_width="0dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
-                android:backgroundTint="@color/colorAccent"
-                android:foregroundTint="@color/colorPrimaryDark"
-                android:popupBackground="@drawable/paper_bg"
-                android:spinnerMode="dialog"
-                android:textSize="34sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <Button
                 android:id="@+id/btnOpenSheet"
@@ -89,7 +56,51 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnOpenSheet" />
 
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="341dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="35dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/banner_ol" />
+
+            <Spinner
+                android:id="@+id/spinnerOL"
+                style="@style/Platform.Widget.AppCompat.Spinner"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:backgroundTint="@color/colorAccent"
+                android:foregroundTint="@color/colorPrimaryDark"
+                android:popupBackground="@drawable/paper_bg"
+                android:spinnerMode="dialog"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Version: 0.0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

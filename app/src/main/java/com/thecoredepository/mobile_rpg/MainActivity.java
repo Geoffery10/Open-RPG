@@ -9,10 +9,12 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
 
+import com.example.mobile_rpg.BuildConfig;
 import com.example.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.DatabaseHelper;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivity;
@@ -36,8 +38,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Spinner spinnerOL = findViewById(R.id.spinnerOL);
         Button btnOpenSheet = findViewById(R.id.btnOpenSheet);
+        TextView txtVersion = findViewById(R.id.txtVersion);
+        String versionName = BuildConfig.VERSION_NAME;
+        txtVersion.setText("Version: " + versionName);
 
         //LOAD DB
+        /*
         DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);
         try {
             myDbHelper.createDataBase();
@@ -58,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
             } while (c.moveToNext());
         }
+
+         */
         openlegend.HARDCODEDSHEETS();
 
         ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, sheetList);
