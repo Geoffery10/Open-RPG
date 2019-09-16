@@ -7,101 +7,122 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
 
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    String DB_PATH = null;
+    private static String DB_PATH= "data/data/com.thecoredepository.mobile_rpg/databases/";
     private static String DB_NAME = "olSheets";
-    private SQLiteDatabase myDataBase;
-    private final Context myContext;
+    private SQLiteDatabase dbObj;
+    private final Context context;
 
     public DatabaseHelper(Context context) {
-        super(context, DB_NAME, null, 10);
-        this.myContext = context;
-        this.DB_PATH = "/data/data/" + context.getPackageName() + "/" + "databases/";
-        Log.e("Path 1", DB_PATH);
+        super(context, DB_NAME, null, 3);
+        this.context = context;
     }
 
+    public void createDB() throws IOException {
+        this.getReadableDatabase();
+        Log.i("Readable ends.","end");
 
-    public void createDataBase() throws IOException {
-        boolean dbExist = checkDataBase();
-        if (dbExist) {
-        } else {
-            this.getReadableDatabase();
-            try {
-                copyDataBase();
-            } catch (IOException e) {
-                throw new Error("Error copying database");
-            }
-        }
-    }
-
-    private boolean checkDataBase() {
-        SQLiteDatabase checkDB = null;
         try {
-            String myPath = DB_PATH + DB_NAME;
-            checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
-        } catch (SQLiteException e) {
+            copyDB();
+            Log.i("copy db ends.","end");
+        } catch (IOException e) {
+            throw new Error("Error copying database");
         }
-        if (checkDB != null) {
+    }
+
+
+
+    private boolean checkDB(){
+        SQLiteDatabase checkDB = null;
+        try{
+            String path = DB_PATH + DB_NAME;
+            Log.i("myPath ......",path);
+            checkDB = SQLiteDatabase.openDatabase(path, null, SQLiteDatabase.OPEN_READONLY);
+            Log.i("myPath ......",path);
+            if (checkDB!=null)
+            {
+                Cursor c= checkDB.rawQuery("SELECT * FROM bank", null);
+                Log.i("Cursor.......",c.getString(0));
+                c.moveToFirst();
+                String contents[]=new String[80];
+                int flag=0;
+
+                while(! c.isAfterLast())
+                {
+                    String temp="";
+                    String s2=c.getString(0);
+                    String s3=c.getString(1);
+                    String s4=c.getString(2);
+                    temp=temp+"\n Id:"+s2+"\tplayerName:"+s3+"\ttype:"+s4;
+                    contents[flag]=temp;
+                    flag=flag+1;
+                    Log.i("DB values.",temp);
+                    c.moveToNext();
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }catch(SQLiteException e){
+            e.printStackTrace();
+        }
+
+        if(checkDB != null){
             checkDB.close();
         }
         return checkDB != null ? true : false;
     }
 
-    private void copyDataBase() throws IOException {
-        InputStream myInput = myContext.getAssets().open(DB_NAME);
-        String outFileName = DB_PATH + DB_NAME;
-        OutputStream myOutput = new FileOutputStream(outFileName);
-        byte[] buffer = new byte[10];
-        int length;
-        while ((length = myInput.read(buffer)) > 0) {
-            myOutput.write(buffer, 0, length);
+    public void copyDB() throws IOException{
+        try {
+            Log.i("inside copyDB.","start");
+            InputStream ip =  context.getAssets().open(DB_NAME+".db");
+            Log.i("Input Stream.",ip+"");
+            String op=  DB_PATH  +  DB_NAME ;
+            OutputStream output = new FileOutputStream( op);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = ip.read(buffer))>0){
+                output.write(buffer, 0, length);
+                Log.i("Content.",length+"");
+            }
+            output.flush();
+            output.close();
+            ip.close();
         }
-        myOutput.flush();
-        myOutput.close();
-        myInput.close();
-
+        catch (IOException e) {
+            Log.v("error", e.toString());
+        }
     }
 
-    public void openDataBase() throws SQLException {
+    public void openDB() throws SQLException {
         String myPath = DB_PATH + DB_NAME;
-        myDataBase = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
-
+        dbObj = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
+        Log.i("open DB......",dbObj.toString());
     }
-
     @Override
     public synchronized void close() {
-        if (myDataBase != null)
-            myDataBase.close();
+        if(dbObj != null)
+            dbObj.close();
         super.close();
     }
 
-
     @Override
     public void onCreate(SQLiteDatabase db) {
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        if (newVersion > oldVersion)
-            try {
-                copyDataBase();
-            } catch (IOException e) {
-                e.printStackTrace();
 
-            }
     }
-
-    public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
-        return myDataBase.query(table, columns, selection, selectionArgs, groupBy, having, orderBy);
-    }
-
-
 }
