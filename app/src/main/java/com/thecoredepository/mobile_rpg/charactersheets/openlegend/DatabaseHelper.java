@@ -100,7 +100,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
-        return myDataBase.query("player", null, null, null, null, null, null);
+        return myDataBase.query(table, columns, selection, selectionArgs, groupBy, having, orderBy);
     }
 
 

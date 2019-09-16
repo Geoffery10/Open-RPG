@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.R;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 

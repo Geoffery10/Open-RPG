@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.R;
 
 public class OLFeatsActivitiy extends AppCompatActivity
 {

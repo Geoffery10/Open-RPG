@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.dice.DiceActivity;
 
 import java.util.Arrays;

@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.R;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
