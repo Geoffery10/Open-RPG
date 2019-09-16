@@ -83,7 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
         openlegend.HARDCODEDSHEETS();
 
-        ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, sheetList);
+        ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, R.layout.spinner_style, sheetList);
+
         spinnerOL.setAdapter(adapterOL);
 
         btnOpenSheet.setOnClickListener(new View.OnClickListener() {

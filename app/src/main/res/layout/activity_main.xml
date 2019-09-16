@@ -75,7 +75,7 @@
                 android:id="@+id/spinnerOL"
                 style="@style/Platform.Widget.AppCompat.Spinner"
                 android:layout_width="0dp"
-                android:layout_height="32dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
                 android:layout_marginTop="8dp"
