@@ -88,10 +88,12 @@ public class MainActivity extends AppCompatActivity {
                 Spinner spinnerOL = findViewById(R.id.spinnerOL);
                 String selected = (String)spinnerOL.getSelectedItem();
                 Log.i("selected", selected);
+                //Save lastSheet
                 SharedPreferences saveLastSheet = getSharedPreferences("lastSheet", MODE_PRIVATE);
                 SharedPreferences.Editor editor = saveLastSheet.edit();
                 editor.putString("lastSheet", selected);
                 editor.apply();
+                //Open Sheet
                 Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
                 in.putExtra("selected", selected);
                 startActivity(in);
