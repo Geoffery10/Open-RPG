@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -13,18 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.IOException;
-
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.DatabaseHelper;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivity;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
-
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
 
@@ -45,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         TextView txtVersion = findViewById(R.id.txtVersion);
         String versionName = BuildConfig.VERSION_NAME;
         txtVersion.setText("Version: " + versionName);
+
 
         //LOAD DB
         /*
@@ -84,8 +76,10 @@ public class MainActivity extends AppCompatActivity {
         openlegend.HARDCODEDSHEETS();
 
         ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, R.layout.spinner_style, sheetList);
-
         spinnerOL.setAdapter(adapterOL);
+        //Load lastSheet
+        SharedPreferences loadLastSheet = getSharedPreferences("lastSheet", MODE_PRIVATE);
+        spinnerOL.setSelection(sheetList.indexOf(loadLastSheet.getString("lastSheet", "ERROR")));
 
         btnOpenSheet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
                 Spinner spinnerOL = findViewById(R.id.spinnerOL);
                 String selected = (String)spinnerOL.getSelectedItem();
                 Log.i("selected", selected);
+                SharedPreferences saveLastSheet = getSharedPreferences("lastSheet", MODE_PRIVATE);
+                SharedPreferences.Editor editor = saveLastSheet.edit();
+                editor.putString("lastSheet", selected);
+                editor.apply();
                 Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
                 in.putExtra("selected", selected);
                 startActivity(in);
