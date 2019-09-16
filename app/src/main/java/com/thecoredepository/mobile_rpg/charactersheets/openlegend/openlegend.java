@@ -5,10 +5,15 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 // be saved often reduce the chance of lost data.
 */
 
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import java.lang.reflect.Array;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -909,6 +914,7 @@ public class openlegend
             sheetList.add(mazok.getCharName());
             sheets.add(mazok);
         }
+
 
 
         //==========================================================================================

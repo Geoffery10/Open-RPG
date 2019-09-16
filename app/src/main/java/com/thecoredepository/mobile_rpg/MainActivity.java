@@ -2,11 +2,8 @@ package com.thecoredepository.mobile_rpg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,18 +11,20 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivity;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
 
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
 
 
 public class MainActivity extends AppCompatActivity {
-
-    Cursor c = null;
-    final Context context=this;
-    private SQLiteDatabase mDataBase;
-    private static String DB_NAME ="opSheets.db";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,43 +36,7 @@ public class MainActivity extends AppCompatActivity {
         String versionName = BuildConfig.VERSION_NAME;
         txtVersion.setText("Version: " + versionName);
 
-
-        //LOAD DB
-        /*
-        String DB_PATH;
-
-        DatabaseHelper db;
-        db = new DatabaseHelper(this);
-        try {
-            db.createDB();
-        } catch (IOException ioe) {
-            throw new Error("Database not created....");
-        }
-        try
-        {
-            db.openDB();
-        } catch (Exception e)
-        {
-            Log.i("open DB......","Database not opened");
-        }
-
-        SQLiteDatabase db1;
-        db1 = openOrCreateDatabase("opSheets", SQLiteDatabase.CREATE_IF_NECESSARY, null);
-        Cursor c = db1.rawQuery("SELECT * FROM player", null);
-        c.moveToFirst();
-        String temp = "";
-        while (!c.isAfterLast()) {
-            String s2 = c.getString(0);
-            String s3 = c.getString(1);
-            String s4 = c.getString(2);
-            temp = temp + "\n Id:" + s2 + "\tType:" + s3 + "\tBal:" + s4;
-            c.moveToNext();
-        }
-        Toast.makeText(getApplicationContext(), temp, Toast.LENGTH_LONG);
-        
-         */
-
-        openlegend.HARDCODEDSHEETS();
+        loadData();
 
         ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, R.layout.spinner_style, sheetList);
         spinnerOL.setAdapter(adapterOL);
@@ -99,5 +62,44 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
+    }
+
+    private void saveData()
+    {
+        SharedPreferences sheetPreferences = getSharedPreferences("sheetList", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sheetPreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(sheetList);
+        editor.putString("sheetList", json);
+        editor.apply();
+
+        SharedPreferences sheetsPreferences = getSharedPreferences("sheetList", MODE_PRIVATE);
+        editor = sheetsPreferences.edit();
+        gson = new Gson();
+        json = gson.toJson(sheets);
+        editor.putString("sheets", json);
+        editor.apply();
+    }
+
+    private void loadData()
+    {
+        SharedPreferences sheetPreferences = getSharedPreferences("sheetList", MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sheetPreferences.getString("sheetList", null);
+        Type type = new TypeToken<ArrayList<String>>() {}.getType();
+        sheetList = gson.fromJson(json, type);
+
+        SharedPreferences sheetsPreferences = getSharedPreferences("sheets", MODE_PRIVATE);
+        gson = new Gson();
+        json = sheetsPreferences.getString("sheets", null);
+        type = new TypeToken<ArrayList<openlegend>>() {}.getType();
+        sheets = gson.fromJson(json, type);
+
+        if (sheetList == null || sheets == null)
+        {
+            sheetList = new ArrayList<>();
+            sheets = new ArrayList<>();
+            openlegend.HARDCODEDSHEETS();
+        }
     }
 }
