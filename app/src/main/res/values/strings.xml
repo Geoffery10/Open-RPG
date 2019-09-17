@@ -10,12 +10,27 @@
 
     <string name="newSheetStart">
         <b><u>Welcome to Character Creation!</u></b>\n
-        Start by entering some basic information about your character then press <i>Continue</i>. All these values can
-        be changed later if you change your mind. <i>Note: type is normally Player Character unless
+        Start by entering some basic information about your character then press <i>Continue</i>.
+        All these values can be changed later if you change your mind. <i>Note: type is normally
+        Player Character unless
         you are making a side character</i>
     </string>
     <string name="newSheetLang">
         <b><u>Languages</u></b>\n
         You may add up to 10 Languages. <i>Note: Currently Not Added</i>
+    </string>
+    <string name="newSheetLevel">
+        <b><u>Levels</u></b>\n
+        Open Legend levels can be expressed as <b>Major</b> and <b>Minor Levels</b> or simply
+        <b>Experience</b>. Unless Specified by the GameMaster most Players start at Major(0)/Minor(0)
+        or Experience(0).
+    </string>
+    <string name="newSheetAttributes">
+        <b><u>Attributes, Banes, and Boon</u></b>\n
+        Attribute points determine what your character is good at. To increase an attribute the value
+        of the next attribute value must be spent <i>(2->3 requires 3 points)</i>. Stats like <b>Guard</b>
+        are calculated based on your attributes. Additionally attributes unlock different
+        <b>Banes</b>/<b>Boons</b> which can turn the tide of battle. <i>Note: Information on
+        calculations on the Open Legend - Character Creation website</i>
     </string>
 </resources>
