@@ -25,6 +25,16 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
+                <TextView
+                    android:id="@+id/textView0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textAlignment="center"
+                    android:layout_weight="0"
+                    android:text="@string/newSheetStart"
+                    android:textSize="24sp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -47,7 +57,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:inputType="textPersonName"
+                        android:inputType="textPersonName|textCapWords"
                         android:text=""
                         android:textAlignment="center"
                         android:textIsSelectable="true"
@@ -79,7 +89,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:inputType="textPersonName"
+                        android:inputType="textPersonName|textCapWords"
                         android:textAlignment="center"
                         android:textIsSelectable="true"
                         android:textSize="24sp"
@@ -110,7 +120,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:inputType="textPersonName"
+                        android:inputType="textPersonName|textCapWords"
                         android:textAlignment="center"
                         android:textIsSelectable="true"
                         android:textSize="24sp"
@@ -128,7 +138,7 @@
                         android:id="@+id/textView1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
+                        android:layout_gravity="top"
                         android:layout_weight="0"
                         android:text="Character Type:"
                         android:textSize="24sp" />
@@ -138,7 +148,7 @@
                         style="@style/Platform.Widget.AppCompat.Spinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="fill_vertical"
+                        android:layout_gravity="bottom"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
@@ -149,37 +159,32 @@
 
                 </LinearLayout>
 
-                <LinearLayout
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0"
+                    android:text="Bio:"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/txtBioEdit"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="0"
-                        android:text="Bio:"
-                        android:textSize="24sp" />
-
-                    <EditText
-                        android:id="@+id/txtBioEdit"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="fill_vertical"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="16dp"
-                        android:inputType="textPersonName"
-                        android:singleLine="false"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp"
-                        tools:layout_conversion_absoluteHeight="247dp"
-                        tools:layout_conversion_absoluteWidth="411dp" />
-
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:inputType="textPersonName|textCapWords|textMultiLine"
+                    android:minLines="1"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp"
+                    tools:layout_conversion_absoluteHeight="247dp"
+                    tools:layout_conversion_absoluteWidth="411dp" />
 
                 <Button
                     android:id="@+id/btnContinue01"

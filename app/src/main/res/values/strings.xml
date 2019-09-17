@@ -7,4 +7,11 @@
         <item>Companion Character - II</item>
         <item>Companion Character - III</item>
     </array>
+
+    <string name="newSheetStart">
+        <b><u>Welcome to Character Creation!</u></b>\n
+        Start by entering some basic information about your character then press <i>Continue</i>. All these values can
+        be changed later if you change your mind. <i>Note: type is normally Player Character unless
+        you are making a side character</i>
+    </string>
 </resources>
