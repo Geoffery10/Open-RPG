@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.thecoredepository.mobile_rpg.R;
 
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
+
 public class OLNewSheet extends AppCompatActivity {
 
     @Override
@@ -21,6 +23,10 @@ public class OLNewSheet extends AppCompatActivity {
         LinearLayout layoutBio = findViewById(R.id.layoutBio);
         layoutBio.setVisibility(View.VISIBLE);
 
+        continueButtons();
+    }
+
+    private void continueButtons() {
         Button btnContinue01 = findViewById(R.id.btnContinue01);
         Button btnContinue02 = findViewById(R.id.btnContinue02);
         Button btnContinue03 = findViewById(R.id.btnContinue03);
@@ -91,7 +97,7 @@ public class OLNewSheet extends AppCompatActivity {
                 layoutInventory.setVisibility(View.GONE);
                 //Open Sheet
                 Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
-                in.putExtra("selected", "Tazmur");
+                in.putExtra("selected", player.getCharName());
                 startActivity(in);
             }
         });
