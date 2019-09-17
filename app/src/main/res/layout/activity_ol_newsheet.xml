@@ -49,6 +49,7 @@
                         android:inputType="textPersonName"
                         android:textAlignment="center"
                         android:textIsSelectable="true"
+                        android:text=""
                         android:textSize="24sp"
                         tools:layout_conversion_absoluteHeight="19dp"
                         tools:layout_conversion_absoluteWidth="411dp" />

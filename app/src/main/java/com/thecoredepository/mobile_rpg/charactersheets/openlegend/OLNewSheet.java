@@ -43,7 +43,7 @@ public class OLNewSheet extends AppCompatActivity {
             {
                 //REQUIRE CHARACTER NAME
                 EditText txtCharName = findViewById(R.id.txtCharName);
-                if (!txtCharName.getText().equals(""))
+                if (txtCharName.getText().toString().trim().length() > 0)
                 {
                     player.setCharName(""+txtCharName.getText());
                     LinearLayout layoutBio = findViewById(R.id.layoutBio);
