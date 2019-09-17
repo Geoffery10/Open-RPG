@@ -265,7 +265,7 @@
 
                         <ImageButton
                             android:id="@+id/btnAgilityP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -288,11 +288,11 @@
 
                         <ImageButton
                             android:id="@+id/btnAgilityM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
-                            android:maxWidth="4dp"
+                            android:maxWidth="7dp"
                             android:scaleType="fitCenter"
                             android:text="+" />
 
@@ -320,7 +320,7 @@
 
                         <ImageButton
                             android:id="@+id/btnFortitudeP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -342,11 +342,11 @@
 
                         <ImageButton
                             android:id="@+id/btnFortitudeM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
-                            android:maxWidth="4dp"
+                            android:maxWidth="7dp"
                             android:scaleType="fitCenter"
                             android:text="+" />
 
@@ -374,7 +374,7 @@
 
                         <ImageButton
                             android:id="@+id/btnMightP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -396,11 +396,11 @@
 
                         <ImageButton
                             android:id="@+id/btnMightM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
-                            android:maxWidth="4dp"
+                            android:maxWidth="7dp"
                             android:scaleType="fitCenter"
                             android:text="+" />
 
@@ -428,7 +428,7 @@
 
                         <ImageButton
                             android:id="@+id/btnLearningP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -450,7 +450,7 @@
 
                         <ImageButton
                             android:id="@+id/btnLearningM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -481,7 +481,7 @@
 
                         <ImageButton
                             android:id="@+id/btnLogicP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -503,7 +503,7 @@
 
                         <ImageButton
                             android:id="@+id/btnLogicM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -534,7 +534,7 @@
 
                         <ImageButton
                             android:id="@+id/btnPerceptionP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -556,7 +556,7 @@
 
                         <ImageButton
                             android:id="@+id/btnPerceptionM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -587,7 +587,7 @@
 
                         <ImageButton
                             android:id="@+id/btnWillP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -609,7 +609,7 @@
 
                         <ImageButton
                             android:id="@+id/btnWillM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -640,7 +640,7 @@
 
                         <ImageButton
                             android:id="@+id/btnDeceptionP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -662,7 +662,7 @@
 
                         <ImageButton
                             android:id="@+id/btnDeceptionM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -693,7 +693,7 @@
 
                         <ImageButton
                             android:id="@+id/btnPersuasionP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -715,7 +715,7 @@
 
                         <ImageButton
                             android:id="@+id/btnPersuasionM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -746,7 +746,7 @@
 
                         <ImageButton
                             android:id="@+id/btnPresenceP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -768,7 +768,7 @@
 
                         <ImageButton
                             android:id="@+id/btnPresenceM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -799,7 +799,7 @@
 
                         <ImageButton
                             android:id="@+id/btnAlterationP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -821,7 +821,7 @@
 
                         <ImageButton
                             android:id="@+id/btnAlterationM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -852,7 +852,7 @@
 
                         <ImageButton
                             android:id="@+id/btnCreationP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -874,7 +874,7 @@
 
                         <ImageButton
                             android:id="@+id/btnCreationM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -905,7 +905,7 @@
 
                         <ImageButton
                             android:id="@+id/btnEnergyP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -927,7 +927,7 @@
 
                         <ImageButton
                             android:id="@+id/btnEnergyM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -958,7 +958,7 @@
 
                         <ImageButton
                             android:id="@+id/btnEntropyP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -980,7 +980,7 @@
 
                         <ImageButton
                             android:id="@+id/btnEntropyM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -1011,7 +1011,7 @@
 
                         <ImageButton
                             android:id="@+id/btnInfluenceP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -1033,7 +1033,7 @@
 
                         <ImageButton
                             android:id="@+id/btnInfluenceM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -1064,7 +1064,7 @@
 
                         <ImageButton
                             android:id="@+id/btnMovementP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -1086,7 +1086,7 @@
 
                         <ImageButton
                             android:id="@+id/btnMovementM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -1117,7 +1117,7 @@
 
                         <ImageButton
                             android:id="@+id/btnPrescienceP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -1139,7 +1139,7 @@
 
                         <ImageButton
                             android:id="@+id/btnPrescienceM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -1170,7 +1170,7 @@
 
                         <ImageButton
                             android:id="@+id/btnProtectionP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -1192,7 +1192,7 @@
 
                         <ImageButton
                             android:id="@+id/btnProtectionM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -1223,7 +1223,7 @@
 
                         <ImageButton
                             android:id="@+id/btnArmorP"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
@@ -1245,7 +1245,7 @@
 
                         <ImageButton
                             android:id="@+id/btnArmorM"
-                            android:layout_width="4dp"
+                            android:layout_width="7dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_right"
@@ -1259,14 +1259,6 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/editSpeed"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0"
-                            android:inputType="number"
-                            android:text="" />
 
                         <TextView
                             android:id="@+id/txtSpeed"
@@ -1283,6 +1275,14 @@
                             android:textAlignment="center"
                             android:textIsSelectable="true"
                             android:textSize="24sp" />
+
+                        <EditText
+                            android:id="@+id/editSpeed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:inputType="number"
+                            android:text="" />
 
                     </LinearLayout>
 
@@ -1345,7 +1345,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:layout_marginLeft="24dp"
+                            android:layout_marginLeft="27dp"
                             android:layout_marginTop="16dp"
                             android:text="Hitpoints 0/10"
                             android:textAlignment="center"
