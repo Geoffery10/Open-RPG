@@ -91,4 +91,7 @@
     <string name="Protection_Glance">
         Protect from damage, break supernatural influence, dispel magic, exile extradimensional beings
     </string>
+    <string name="Armor_Glance">
+        The value or your armors protection if wearing any (Directly adds to guard)
+    </string>
 </resources>
