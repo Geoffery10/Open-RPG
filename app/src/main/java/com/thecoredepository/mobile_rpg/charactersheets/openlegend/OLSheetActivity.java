@@ -44,7 +44,9 @@ public class OLSheetActivity extends AppCompatActivity {
         TextView txtDeity = findViewById(R.id.txtDeity);
         txtDeity.setText(player.getDeity());
         TextView txtLang = findViewById(R.id.txtLang);
-        txtLang.setText("Languages: " + (Arrays.toString(player.getLanguages())));
+        String lang = "";
+        lang = getLangs(lang);
+        txtLang.setText("Languages: " + (lang));
         TextView txtBio = findViewById(R.id.txtBio);
         txtBio.setText("Bio: " + (player.getBio()));
         TextView txtAttributes = findViewById(R.id.txtAttributes);
@@ -126,6 +128,21 @@ public class OLSheetActivity extends AppCompatActivity {
         //Element Visibility and Values
         setAttributes(txtAgility, LLAgility, btnAgility, txtFortitude, LLFortitude, btnFortitude, txtMight, LLMight, btnMight, txtLearning, LLLearning, btnLearning, txtLogic, LLLogic, btnLogic, txtPerception, LLPerception, btnPerception, txtWill, LLWill, btnWill, txtDeception, LLDeception, btnDeception, txtPersuasion, LLPersuasion, btnPersuasion, txtPresence, LLPresence, btnPresence, txtAlteration, LLAlteration, btnAlteration, txtCreation, LLCreation, btnCreation, txtEnergy, LLEnergy, btnEnergy, txtEntropy, LLEntropy, btnEntropy, txtInfluence, LLInfluence, btnInfluence, txtMovement, LLMovement, btnMovement, txtPrescience, LLPrescience, btnPrescience, txtProtection, LLProtection, btnProtection);
 
+    }
+
+    private String getLangs(String lang) {
+        for (int i = 0; i < 10; i++)
+        {
+            if (null != player.getLanguage(i))
+            {
+                lang = lang + player.getLanguages()[i] + ", ";
+            }
+        }
+        if (lang.length() > 2)
+        {
+            lang = lang.substring(0, lang.length() - 2);
+        }
+        return lang;
     }
 
     @Override

@@ -246,8 +246,16 @@ public class openlegend
         return languages;
     }
 
+    public String getLanguage(int index) {
+        return languages[index];
+    }
+
     public void setLanguages(String[] languages) {
         this.languages = languages;
+    }
+
+    public void setLanguage(String language, int index) {
+        this.languages[index] = language;
     }
 
     public void addLanguages(String languages, int location) {
@@ -784,8 +792,6 @@ public class openlegend
     public static void HARDCODEDSHEETS()
     {
 
-        String[] lang = new String[10];
-
         if (sheetList.contains("Tazmur") == false)
         {
             openlegend tazmur = new openlegend();
@@ -793,6 +799,7 @@ public class openlegend
             tazmur.setCharName("Tazmur");
             tazmur.setNickname("Taz");
             tazmur.setDeity("Kalle Demos");
+            String[] lang = new String[10];
             lang[0] = "Gerudo";
             lang[1] = "Hylian";
             lang[2] = "Sheikah";
@@ -842,6 +849,7 @@ public class openlegend
             nightmare.setCharName("Nightmare");
             nightmare.setNickname("Spirit");
             nightmare.setDeity("Kalle Demos");
+            String[] lang = new String[10];
             lang[0] = "Gerudo";
             lang[1] = "Hylian";
             lang[2] = "Demon";
@@ -875,6 +883,7 @@ public class openlegend
             mazok.setCharName("Mazok");
             mazok.setNickname("Maz");
             mazok.setDeity("N/A");
+            String[] lang = new String[10];
             lang[0] = "Wild";
             lang[1] = "Hylian";
             lang[2] = "Sheikah";
@@ -927,6 +936,7 @@ public class openlegend
             Noujou.setCharName("Noujou");
             Noujou.setNickname("Noujou");
             Noujou.setDeity("Kalle Demos");
+            String[] lang = new String[10];
             lang[0] = "Hylian";
             lang[1] = "Sheikah";
             lang[2] = "Fiendish";
@@ -975,7 +985,10 @@ public class openlegend
         blank.minorLvl = 0;
         blank.levelTotal = 0;
         blank.deity = "";
-        blank.languages = null;
+        for (int i = 0; i < 10; i++)
+        {
+            blank.setLanguage("", i);
+        }
         blank.bio = "";
         blank.attributePointsAvalible = 0;
         blank.getAttributePointsUsed = 0;
