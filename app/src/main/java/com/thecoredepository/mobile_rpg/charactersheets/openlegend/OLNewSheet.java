@@ -61,6 +61,26 @@ public class OLNewSheet extends AppCompatActivity {
 
         plusButtons(editAgility, editFortitude, editMight, editLearning, editLogic, editPerception, editWill, editDeception, editPersuasion, editPresence, editAlteration, editCreation, editEnergy, editEntropy, editInfluence, editMovement, editPrescience, editProtection, editArmor);
 
+        baneboonButtons();
+    }
+
+    private void baneboonButtons() {
+        Button btnBanes = findViewById(R.id.btnBanes);
+        btnBanes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                toBanes();
+            }
+        });
+        Button btnBoons = findViewById(R.id.btnBoons);
+        btnBoons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                toBoons();
+            }
+        });
     }
 
     private void plusButtons(final TextView editAgility, final TextView editFortitude, final TextView editMight, final TextView editLearning, final TextView editLogic, final TextView editPerception, final TextView editWill, final TextView editDeception, final TextView editPersuasion, final TextView editPresence, final TextView editAlteration, final TextView editCreation, final TextView editEnergy, final TextView editEntropy, final TextView editInfluence, final TextView editMovement, final TextView editPrescience, final TextView editProtection, final TextView editArmor) {
@@ -487,5 +507,19 @@ public class OLNewSheet extends AppCompatActivity {
             type = "pc";
         }
         player.setType(type);
+    }
+
+    private void toBanes()
+    {
+        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+        in.putExtra("selected", "Banes");
+        startActivity(in);
+    }
+
+    private void toBoons()
+    {
+        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+        in.putExtra("selected", "Boons");
+        startActivity(in);
     }
 }

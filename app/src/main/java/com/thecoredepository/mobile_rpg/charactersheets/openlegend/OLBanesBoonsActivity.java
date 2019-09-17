@@ -49,12 +49,11 @@ public class OLBanesBoonsActivity extends AppCompatActivity
 
         }
 
-        //Banes Buttons
-        banesShowHideButtons();
-        //boonsShowHideButtons();
+        //Banes/Boons Buttons
+        ShowHideButtons();
     }
 
-    private void banesShowHideButtons() {
+    private void ShowHideButtons() {
         final LinearLayout infoBB01 = findViewById(R.id.infoBB01);
         Button btnBB01 = findViewById(R.id.btnBB01);
         btnBB01.setOnClickListener(new View.OnClickListener() {
@@ -1012,11 +1011,6 @@ public class OLBanesBoonsActivity extends AppCompatActivity
                 }
             }
         });
-    }
-
-    private void boonsShowHideButtons()
-    {
-
     }
 
     public void showBanesByStats()
