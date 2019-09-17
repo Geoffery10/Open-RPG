@@ -422,7 +422,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <TextView
                     android:id="@+id/textView10"
@@ -518,6 +518,17 @@
 
                     </LinearLayout>
 
+                    <TextView
+                        android:id="@+id/txtAgilityGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Agility_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
+
                     <LinearLayout
                         android:id="@+id/LLFortitude"
                         android:layout_width="match_parent"
@@ -571,6 +582,17 @@
                             android:text="+" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtFortitudeGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Fortitude_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:id="@+id/LLMight"
@@ -626,6 +648,17 @@
 
                     </LinearLayout>
 
+                    <TextView
+                        android:id="@+id/txtMightGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Might_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
+
                     <LinearLayout
                         android:id="@+id/LLLearning"
                         android:layout_width="match_parent"
@@ -678,6 +711,17 @@
                             android:text="+" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtLearningGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Learning_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:id="@+id/LLLogic"
@@ -732,6 +776,17 @@
 
                     </LinearLayout>
 
+                    <TextView
+                        android:id="@+id/txtLogicGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Logic_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
+
                     <LinearLayout
                         android:id="@+id/LLPerception"
                         android:layout_width="match_parent"
@@ -784,6 +839,17 @@
                             android:text="+" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtPerceptionGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Perception_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:id="@+id/LLWill"
@@ -838,6 +904,17 @@
 
                     </LinearLayout>
 
+                    <TextView
+                        android:id="@+id/txtWillGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Will_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
+
                     <LinearLayout
                         android:id="@+id/LLDeception"
                         android:layout_width="match_parent"
@@ -890,6 +967,17 @@
                             android:text="+" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtDeceptionGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Deception_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:id="@+id/LLPersuasion"
@@ -944,6 +1032,17 @@
 
                     </LinearLayout>
 
+                    <TextView
+                        android:id="@+id/txtPersuasionGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Persuasion_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
+
                     <LinearLayout
                         android:id="@+id/LLPresence"
                         android:layout_width="match_parent"
@@ -996,6 +1095,17 @@
                             android:text="+" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtPresenceGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Presence_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:id="@+id/LLAlteration"
@@ -1050,6 +1160,17 @@
 
                     </LinearLayout>
 
+                    <TextView
+                        android:id="@+id/txtAlterationGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Alteration_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
+
                     <LinearLayout
                         android:id="@+id/LLCreation"
                         android:layout_width="match_parent"
@@ -1102,6 +1223,17 @@
                             android:text="+" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtCreationGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Creation_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:id="@+id/LLEnergy"
@@ -1156,6 +1288,17 @@
 
                     </LinearLayout>
 
+                    <TextView
+                        android:id="@+id/txtEnergyGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Energy_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
+
                     <LinearLayout
                         android:id="@+id/LLEntropy"
                         android:layout_width="match_parent"
@@ -1208,6 +1351,17 @@
                             android:text="+" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtEntropyGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Entropy_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:id="@+id/LLInfluence"
@@ -1262,6 +1416,17 @@
 
                     </LinearLayout>
 
+                    <TextView
+                        android:id="@+id/txtInfluenceGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Influence_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
+
                     <LinearLayout
                         android:id="@+id/LLMovement"
                         android:layout_width="match_parent"
@@ -1314,6 +1479,17 @@
                             android:text="+" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtMovementGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Movement_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:id="@+id/LLPrescience"
@@ -1368,6 +1544,17 @@
 
                     </LinearLayout>
 
+                    <TextView
+                        android:id="@+id/txtPrescienceGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Prescience_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
+
                     <LinearLayout
                         android:id="@+id/LLProtection"
                         android:layout_width="match_parent"
@@ -1420,6 +1607,17 @@
                             android:text="+" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtProtectionGlance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="top"
+                        android:text="@string/Protection_Glance"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
