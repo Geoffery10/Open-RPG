@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLNewSheet;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivity;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Spinner spinnerOL = findViewById(R.id.spinnerOL);
         Button btnOpenSheet = findViewById(R.id.btnOpenSheet);
+        Button btnNewSheet = findViewById(R.id.btnNewSheet);
         TextView txtVersion = findViewById(R.id.txtVersion);
         String versionName = BuildConfig.VERSION_NAME;
         txtVersion.setText("Version: " + versionName);
@@ -47,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         btnOpenSheet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
                 Spinner spinnerOL = findViewById(R.id.spinnerOL);
                 String selected = (String)spinnerOL.getSelectedItem();
                 Log.i("selected", selected);
@@ -59,6 +60,15 @@ public class MainActivity extends AppCompatActivity {
                 //Open Sheet
                 Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
                 in.putExtra("selected", selected);
+                startActivity(in);
+            }
+        });
+
+        btnNewSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //New Sheet
+                Intent in = new Intent(getApplicationContext(), OLNewSheet.class);
                 startActivity(in);
             }
         });
