@@ -14,4 +14,8 @@
         be changed later if you change your mind. <i>Note: type is normally Player Character unless
         you are making a side character</i>
     </string>
+    <string name="newSheetLang">
+        <b><u>Languages</u></b>\n
+        You may add up to 10 Languages. <i>Note: Currently Not Added</i>
+    </string>
 </resources>
