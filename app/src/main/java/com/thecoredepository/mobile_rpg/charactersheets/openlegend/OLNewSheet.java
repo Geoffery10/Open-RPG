@@ -410,258 +410,260 @@ public class OLNewSheet extends AppCompatActivity {
 
     private void minusAttributeButtons(final TextView editAgility, final TextView editFortitude, final TextView editMight, final TextView editLearning, final TextView editLogic, final TextView editPerception, final TextView editWill, final TextView editDeception, final TextView editPersuasion, final TextView editPresence, final TextView editAlteration, final TextView editCreation, final TextView editEnergy, final TextView editEntropy, final TextView editInfluence, final TextView editMovement, final TextView editPrescience, final TextView editProtection, final TextView editArmor) {
 
-        ImageButton btnAgilityPlus = findViewById(R.id.btnAgilityPlus);
-        ImageButton btnFortitudePlus = findViewById(R.id.btnFortitudePlus);
-        ImageButton btnMightPlus = findViewById(R.id.btnMightPlus);
+        ImageButton btnAgilityMinus = findViewById(R.id.btnAgilityMinus);
+        ImageButton btnFortitudeMinus = findViewById(R.id.btnFortitudeMinus);
+        ImageButton btnMightMinus = findViewById(R.id.btnMightMinus);
 
-        ImageButton btnLearningPlus = findViewById(R.id.btnLearningPlus);
-        ImageButton btnLogicPlus = findViewById(R.id.btnLogicPlus);
-        ImageButton btnPerceptionPlus = findViewById(R.id.btnPerceptionPlus);
-        ImageButton btnWillPlus = findViewById(R.id.btnWillPlus);
+        ImageButton btnLearningMinus = findViewById(R.id.btnLearningMinus);
+        ImageButton btnLogicMinus = findViewById(R.id.btnLogicMinus);
+        ImageButton btnPerceptionMinus = findViewById(R.id.btnPerceptionMinus);
+        ImageButton btnWillMinus = findViewById(R.id.btnWillMinus);
 
-        ImageButton btnDeceptionPlus = findViewById(R.id.btnDeceptionPlus);
-        ImageButton btnPersuasionPlus = findViewById(R.id.btnPersuasionPlus);
-        ImageButton btnPresencePlus = findViewById(R.id.btnPresencePlus);
+        ImageButton btnDeceptionMinus = findViewById(R.id.btnDeceptionMinus);
+        ImageButton btnPersuasionMinus = findViewById(R.id.btnPersuasionMinus);
+        ImageButton btnPresenceMinus = findViewById(R.id.btnPresenceMinus);
 
-        ImageButton btnAlterationPlus = findViewById(R.id.btnAlterationPlus);
-        ImageButton btnCreationPlus = findViewById(R.id.btnCreationPlus);
-        ImageButton btnEnergyPlus = findViewById(R.id.btnEnergyPlus);
-        ImageButton btnEntropyPlus = findViewById(R.id.btnEntropyPlus);
-        ImageButton btnInfluencePlus = findViewById(R.id.btnInfluencePlus);
-        ImageButton btnMovementPlus = findViewById(R.id.btnMovementPlus);
-        ImageButton btnPresciencePlus = findViewById(R.id.btnPresciencePlus);
-        ImageButton btnProtectionPlus = findViewById(R.id.btnProtectionPlus);
+        ImageButton btnAlterationMinus = findViewById(R.id.btnAlterationMinus);
+        ImageButton btnCreationMinus = findViewById(R.id.btnCreationMinus);
+        ImageButton btnEnergyMinus = findViewById(R.id.btnEnergyMinus);
+        ImageButton btnEntropyMinus = findViewById(R.id.btnEntropyMinus);
+        ImageButton btnInfluenceMinus = findViewById(R.id.btnInfluenceMinus);
+        ImageButton btnMovementMinus = findViewById(R.id.btnMovementMinus);
+        ImageButton btnPrescienceMinus = findViewById(R.id.btnPrescienceMinus);
+        ImageButton btnProtectionMinus = findViewById(R.id.btnProtectionMinus);
 
-        ImageButton btnArmorPlus = findViewById(R.id.btnArmorPlus);
+        ImageButton btnArmorMinus = findViewById(R.id.btnArmorMinus);
 
-        btnAgilityPlus.setOnClickListener(new View.OnClickListener() {
+        btnAgilityMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getAgility() + 1) <= maxScore)
+
+                if ((player.getAgility() - 1) >= 0)
                 {
-                    player.setAgility(player.getAgility() + 1);
+                    player.setAgility(player.getAgility() - 1);
                     editAgility.setText(""+player.getAgility());
                     updateAttributes();
                 }
             }
         });
-        btnFortitudePlus.setOnClickListener(new View.OnClickListener() {
+        btnFortitudeMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getFortitude() + 1) <= maxScore) {
-                    player.setFortitude(player.getFortitude() + 1);
+
+                if ((player.getFortitude() - 1) >= 0) {
+                    player.setFortitude(player.getFortitude() - 1);
                     editFortitude.setText("" + player.getFortitude());
                     updateAttributes();
                 }
             }
         });
-        btnMightPlus.setOnClickListener(new View.OnClickListener() {
+        btnMightMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getMight() + 1) <= maxScore) {
-                    player.setMight(player.getMight() + 1);
+
+                if ((player.getMight() - 1) >= 0) {
+                    player.setMight(player.getMight() - 1);
                     editMight.setText("" + player.getMight());
                     updateAttributes();
                 }
             }
         });
 
-        btnLearningPlus.setOnClickListener(new View.OnClickListener() {
+        btnLearningMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getLearning() + 1) <= maxScore) {
-                    player.setLearning(player.getLearning() + 1);
+
+                if ((player.getLearning() - 1) >= 0) {
+                    player.setLearning(player.getLearning() - 1);
                     editLearning.setText("" + player.getLearning());
                     updateAttributes();
                 }
             }
         });
-        btnLogicPlus.setOnClickListener(new View.OnClickListener() {
+        btnLogicMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getLogic() + 1) <= maxScore) {
-                    player.setLogic(player.getLogic() + 1);
+
+                if ((player.getLogic() - 1) >= 0) {
+                    player.setLogic(player.getLogic() - 1);
                     editLogic.setText("" + player.getLogic());
                     updateAttributes();
                 }
             }
         });
-        btnPerceptionPlus.setOnClickListener(new View.OnClickListener() {
+        btnPerceptionMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getPerception() + 1) <= maxScore) {
-                    player.setPerception(player.getPerception() + 1);
+
+                if ((player.getPerception() - 1) >= 0) {
+                    player.setPerception(player.getPerception() - 1);
                     editPerception.setText("" + player.getPerception());
                     updateAttributes();
                 }
             }
         });
-        btnWillPlus.setOnClickListener(new View.OnClickListener() {
+        btnWillMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getWill() + 1) <= maxScore) {
-                    player.setWill(player.getWill() + 1);
+
+                if ((player.getWill() - 1) >= 0) {
+                    player.setWill(player.getWill() - 1);
                     editWill.setText("" + player.getWill());
                     updateAttributes();
                 }
             }
         });
 
-        btnDeceptionPlus.setOnClickListener(new View.OnClickListener() {
+        btnDeceptionMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getDeception() + 1) <= maxScore) {
-                    player.setDeception(player.getDeception() + 1);
+
+                if ((player.getDeception() - 1) >= 0) {
+                    player.setDeception(player.getDeception() - 1);
                     editDeception.setText("" + player.getDeception());
                     updateAttributes();
                 }
             }
         });
-        btnPersuasionPlus.setOnClickListener(new View.OnClickListener() {
+        btnPersuasionMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getPersuasion() + 1) <= maxScore) {
-                    player.setPersuasion(player.getPersuasion() + 1);
+
+                if ((player.getPersuasion() - 1) >= 0) {
+                    player.setPersuasion(player.getPersuasion() - 1);
                     editPersuasion.setText("" + player.getPersuasion());
                     updateAttributes();
                 }
             }
         });
-        btnPresencePlus.setOnClickListener(new View.OnClickListener() {
+        btnPresenceMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getPresence() + 1) <= maxScore) {
-                    player.setPresence(player.getPresence() + 1);
+
+                if ((player.getPresence() - 1) >= 0) {
+                    player.setPresence(player.getPresence() - 1);
                     editPresence.setText("" + player.getPresence());
                     updateAttributes();
                 }
             }
         });
 
-        btnAlterationPlus.setOnClickListener(new View.OnClickListener() {
+        btnAlterationMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getAlteration() + 1) <= maxScore) {
-                    player.setAlteration(player.getAlteration() + 1);
+
+                if ((player.getAlteration() - 1) >= 0) {
+                    player.setAlteration(player.getAlteration() - 1);
                     editAlteration.setText("" + player.getAlteration());
                     updateAttributes();
                 }
             }
         });
-        btnCreationPlus.setOnClickListener(new View.OnClickListener() {
+        btnCreationMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getCreation() + 1) <= maxScore) {
-                    player.setCreation(player.getCreation() + 1);
+
+                if ((player.getCreation() - 1) >= 0) {
+                    player.setCreation(player.getCreation() - 1);
                     editCreation.setText("" + player.getCreation());
                     updateAttributes();
                 }
             }
         });
-        btnEnergyPlus.setOnClickListener(new View.OnClickListener() {
+        btnEnergyMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getEnergy() + 1) <= maxScore) {
-                    player.setEnergy(player.getEnergy() + 1);
+
+                if ((player.getEnergy() - 1) >= 0) {
+                    player.setEnergy(player.getEnergy() - 1);
                     editEnergy.setText("" + player.getEnergy());
                     updateAttributes();
                 }
             }
         });
-        btnEntropyPlus.setOnClickListener(new View.OnClickListener() {
+        btnEntropyMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getEntropy() + 1) <= maxScore) {
-                    player.setEntropy(player.getEntropy() + 1);
+
+                if ((player.getEntropy() - 1) >= 0) {
+                    player.setEntropy(player.getEntropy() - 1);
                     editEntropy.setText("" + player.getEntropy());
                     updateAttributes();
                 }
             }
         });
-        btnInfluencePlus.setOnClickListener(new View.OnClickListener() {
+        btnInfluenceMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getInfluence() + 1) <= maxScore) {
-                    player.setInfluence(player.getInfluence() + 1);
+
+                if ((player.getInfluence() - 1) >= 0) {
+                    player.setInfluence(player.getInfluence() - 1);
                     editInfluence.setText("" + player.getInfluence());
                     updateAttributes();
                 }
             }
         });
-        btnMovementPlus.setOnClickListener(new View.OnClickListener() {
+        btnMovementMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getMovement() + 1) <= maxScore) {
-                    player.setMovement(player.getMovement() + 1);
+
+                if ((player.getMovement() - 1) >= 0) {
+                    player.setMovement(player.getMovement() - 1);
                     editMovement.setText("" + player.getMovement());
                     updateAttributes();
                 }
             }
         });
-        btnPresciencePlus.setOnClickListener(new View.OnClickListener() {
+        btnPrescienceMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getPrescience() + 1) <= maxScore) {
-                    player.setPrescience(player.getPrescience() + 1);
+
+                if ((player.getPrescience() - 1) >= 0) {
+                    player.setPrescience(player.getPrescience() - 1);
                     editPrescience.setText("" + player.getPrescience());
                     updateAttributes();
                 }
             }
         });
-        btnProtectionPlus.setOnClickListener(new View.OnClickListener() {
+        btnProtectionMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                int maxScore = getMaxScore();
-                if ((player.getProtection() + 1) <= maxScore) {
-                    player.setProtection(player.getProtection() + 1);
+                
+                if ((player.getProtection() - 1) >= 0) {
+                    player.setProtection(player.getProtection() - 1);
                     editProtection.setText("" + player.getProtection());
                     updateAttributes();
                 }
             }
         });
 
-        btnArmorPlus.setOnClickListener(new View.OnClickListener() {
+        btnArmorMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setArmor(player.getArmor() + 1);
-                editArmor.setText(""+player.getArmor());
-                updateAttributes();
+                if ((player.getArmor() - 1) >= 0) {
+                    player.setArmor(player.getArmor() - 1);
+                    editArmor.setText("" + player.getArmor());
+                    updateAttributes();
+                }
             }
         });
     }

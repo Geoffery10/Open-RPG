@@ -1486,6 +1486,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:gravity="top"
+                        android:layout_gravity="center_horizontal"
                         android:text="@string/Movement_Glance"
                         android:textAlignment="center"
                         android:textIsSelectable="true"
