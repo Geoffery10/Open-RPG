@@ -920,6 +920,50 @@ public class openlegend
         //==========================================================================================
 
 
+        if (sheetList.contains("Noujou") == false)
+        {
+            openlegend Noujou = new openlegend();
+            Noujou.setType("pc");
+            Noujou.setCharName("Noujou");
+            Noujou.setNickname("Noujou");
+            Noujou.setDeity("Kalle Demos");
+            lang[0] = "Hylian";
+            lang[1] = "Sheikah";
+            lang[2] = "Fiendish";
+            Noujou.setLanguages(lang);
+            Noujou.setBio("The demon lords had been slumbering for too long and a few foolish heroes were needed to upset the balance. This unassuming white house cat was set on turning the gears of fate. Passion burns in those sapphire eyes. Black veins of unholy power stir. Hidden below short white fur.");
+            Noujou.setAgility(6);
+            Noujou.setFortitude(3);
+            Noujou.setMight(3);
+            Noujou.setPerception(3);
+            Noujou.setPresence(3);
+            Noujou.setWill(3);
+            Noujou.setEntropy(6);
+            Noujou.setPersuasion(6);
+            Noujou.setDeception(1);
+            Noujou.setLogic(1);
+            Noujou.setLevelTotal(10);
+            Noujou.setSpeed(30);
+            Noujou.setDamageTaken(0);
+            Noujou.setArmor(1);
+
+            Noujou.setStats();
+            Noujou.setGetAttributePointsUsed();
+            Noujou.setAttributePointsAvailable(Noujou.getType());
+
+            Noujou.setWealth(3);
+
+            Noujou.addItem("Claws", "Agility(Entropy) v. Guard");
+            Noujou.addItem("Health Potion", "");
+            Noujou.addItem("Broad Sword", "Might v. Guard");
+
+            if (Noujou.getType().equals("pc") || Noujou.getType().equals("ccII") || Noujou.getType().equals("ccIII"))
+            {
+                featsOL.featList();
+            }
+            sheetList.add(Noujou.getCharName());
+            sheets.add(Noujou);
+        }
     }
 
     public static openlegend blankChar(openlegend blank) {

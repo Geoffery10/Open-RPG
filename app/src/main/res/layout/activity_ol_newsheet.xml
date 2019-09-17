@@ -213,7 +213,7 @@
                             android:layout_marginLeft="8dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginRight="16dp"
-                            android:layout_weight="0"
+                            android:layout_weight="1"
                             android:gravity="center_horizontal|center_vertical"
                             android:text="Agility:"
                             android:textAlignment="center"
@@ -226,11 +226,12 @@
                             android:layout_height="40dp"
                             android:layout_weight="1"
                             android:background="@drawable/button_bg_left"
+                            android:scaleType="centerInside"
                             android:text="+" />
 
                         <TextView
                             android:id="@+id/editAgility"
-                            android:layout_width="wrap_content"
+                            android:layout_width="4dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
@@ -266,19 +267,43 @@
                             android:layout_marginLeft="8dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginRight="16dp"
-                            android:layout_weight="0"
+                            android:layout_weight="1"
                             android:gravity="center_horizontal|center_vertical"
                             android:text="Fortitude:"
                             android:textAlignment="center"
                             android:textIsSelectable="true"
                             android:textSize="24sp" />
 
-                        <EditText
+                        <ImageButton
+                            android:id="@+id/btnFortitudeP"
+                            android:layout_width="4dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg_left"
+                            android:text="+" />
+
+                        <TextView
                             android:id="@+id/editFortitude"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0"
-                            android:text="" />
+                            android:layout_width="4dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/textAccent"
+                            android:textSize="24sp" />
+
+                        <ImageButton
+                            android:id="@+id/btnFortitudeM"
+                            android:layout_width="4dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg_right"
+                            android:scaleType="fitCenter"
+                            android:text="+" />
 
                     </LinearLayout>
 
