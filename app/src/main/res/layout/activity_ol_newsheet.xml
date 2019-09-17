@@ -229,7 +229,7 @@
                 android:layout_marginLeft="18dp"
                 android:layout_marginRight="18dp"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView6"
