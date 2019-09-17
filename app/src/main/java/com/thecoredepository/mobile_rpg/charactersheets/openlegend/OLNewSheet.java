@@ -673,6 +673,8 @@ public class OLNewSheet extends AppCompatActivity {
         player.setAttributePointsAvailable(player.getType());
         TextView txtAttributes = findViewById(R.id.txtAttributes);
         txtAttributes.setText("Attributes: " + player.getGetAttributePointsUsed() +"/"+ player.getAttributePointsAvailable());
+        txtAttributes = findViewById(R.id.txtAttributes2);
+        txtAttributes.setText("Attributes: " + player.getGetAttributePointsUsed() +"/"+ player.getAttributePointsAvailable());
         TextView txtToughness = findViewById(R.id.txtToughness);
         txtToughness.setText("Toughness: " + player.getToughness());
         TextView txtGuard = findViewById(R.id.txtGuard);
