@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Open RPG</string>
+    <array name="charTypes">
+        <item>Player Character</item>
+        <item>Companion Character - I</item>
+        <item>Companion Character - II</item>
+        <item>Companion Character - III</item>
+    </array>
 </resources>

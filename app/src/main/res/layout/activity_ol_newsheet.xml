@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/paper_bg"
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -12,7 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/layoutBio"
@@ -47,9 +48,9 @@
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
                         android:inputType="textPersonName"
+                        android:text=""
                         android:textAlignment="center"
                         android:textIsSelectable="true"
-                        android:text=""
                         android:textSize="24sp"
                         tools:layout_conversion_absoluteHeight="19dp"
                         tools:layout_conversion_absoluteWidth="411dp" />
@@ -115,6 +116,36 @@
                         android:textSize="24sp"
                         tools:layout_conversion_absoluteHeight="247dp"
                         tools:layout_conversion_absoluteWidth="411dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0"
+                        android:text="Character Type:"
+                        android:textSize="24sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerType"
+                        style="@style/Platform.Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:entries="@array/charTypes"
+                        android:popupBackground="@drawable/paper_bg"
+                        android:spinnerMode="dialog"
+                        android:textSize="34sp" />
 
                 </LinearLayout>
 
