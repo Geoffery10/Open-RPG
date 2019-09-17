@@ -30,6 +30,9 @@ public class OLNewSheet extends AppCompatActivity {
         LinearLayout layoutBio = findViewById(R.id.layoutBio);
         layoutBio.setVisibility(View.VISIBLE);
 
+        //=========================THIS IS ONLY HERE UNTIL LEVELS ARE DONE!=========================
+        player.setLevelTotal(0);
+
         continueButtons();
 
         final TextView editAgility = findViewById(R.id.editAgility);
@@ -57,9 +60,11 @@ public class OLNewSheet extends AppCompatActivity {
         final TextView editArmor = findViewById(R.id.editArmor);
 
         plusButtons(editAgility, editFortitude, editMight, editLearning, editLogic, editPerception, editWill, editDeception, editPersuasion, editPresence, editAlteration, editCreation, editEnergy, editEntropy, editInfluence, editMovement, editPrescience, editProtection, editArmor);
+
     }
 
     private void plusButtons(final TextView editAgility, final TextView editFortitude, final TextView editMight, final TextView editLearning, final TextView editLogic, final TextView editPerception, final TextView editWill, final TextView editDeception, final TextView editPersuasion, final TextView editPresence, final TextView editAlteration, final TextView editCreation, final TextView editEnergy, final TextView editEntropy, final TextView editInfluence, final TextView editMovement, final TextView editPrescience, final TextView editProtection, final TextView editArmor) {
+
         ImageButton btnAgilityPlus = findViewById(R.id.btnAgilityPlus);
         ImageButton btnFortitudePlus = findViewById(R.id.btnFortitudePlus);
         ImageButton btnMightPlus = findViewById(R.id.btnMightPlus);
@@ -88,24 +93,37 @@ public class OLNewSheet extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                player.setAgility(player.getAgility() + 1);
-                editAgility.setText(""+player.getAgility());
+                int maxScore = getMaxScore();
+                if ((player.getAgility() + 1) <= maxScore)
+                {
+                    player.setAgility(player.getAgility() + 1);
+                    editAgility.setText(""+player.getAgility());
+                    updateAttributes();
+                }
             }
         });
         btnFortitudePlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setFortitude(player.getFortitude() + 1);
-                editFortitude.setText(""+player.getFortitude());
+                int maxScore = getMaxScore();
+                if ((player.getFortitude() + 1) <= maxScore) {
+                    player.setFortitude(player.getFortitude() + 1);
+                    editFortitude.setText("" + player.getFortitude());
+                    updateAttributes();
+                }
             }
         });
         btnMightPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setMight(player.getMight() + 1);
-                editMight.setText(""+player.getMight());
+                int maxScore = getMaxScore();
+                if ((player.getMight() + 1) <= maxScore) {
+                    player.setMight(player.getMight() + 1);
+                    editMight.setText("" + player.getMight());
+                    updateAttributes();
+                }
             }
         });
 
@@ -113,32 +131,48 @@ public class OLNewSheet extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                player.setLearning(player.getLearning() + 1);
-                editLearning.setText(""+player.getLearning());
+                int maxScore = getMaxScore();
+                if ((player.getLearning() + 1) <= maxScore) {
+                    player.setLearning(player.getLearning() + 1);
+                    editLearning.setText("" + player.getLearning());
+                    updateAttributes();
+                }
             }
         });
         btnLogicPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setLogic(player.getLogic() + 1);
-                editLogic.setText(""+player.getLogic());
+                int maxScore = getMaxScore();
+                if ((player.getLogic() + 1) <= maxScore) {
+                    player.setLogic(player.getLogic() + 1);
+                    editLogic.setText("" + player.getLogic());
+                    updateAttributes();
+                }
             }
         });
         btnPerceptionPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setPerception(player.getPerception() + 1);
-                editPerception.setText(""+player.getPerception());
+                int maxScore = getMaxScore();
+                if ((player.getPerception() + 1) <= maxScore) {
+                    player.setPerception(player.getPerception() + 1);
+                    editPerception.setText("" + player.getPerception());
+                    updateAttributes();
+                }
             }
         });
         btnWillPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setWill(player.getWill() + 1);
-                editWill.setText(""+player.getWill());
+                int maxScore = getMaxScore();
+                if ((player.getWill() + 1) <= maxScore) {
+                    player.setWill(player.getWill() + 1);
+                    editWill.setText("" + player.getWill());
+                    updateAttributes();
+                }
             }
         });
 
@@ -146,24 +180,36 @@ public class OLNewSheet extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                player.setDeception(player.getDeception() + 1);
-                editDeception.setText(""+player.getDeception());
+                int maxScore = getMaxScore();
+                if ((player.getDeception() + 1) <= maxScore) {
+                    player.setDeception(player.getDeception() + 1);
+                    editDeception.setText("" + player.getDeception());
+                    updateAttributes();
+                }
             }
         });
         btnPersuasionPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setPersuasion(player.getPersuasion() + 1);
-                editPersuasion.setText(""+player.getPersuasion());
+                int maxScore = getMaxScore();
+                if ((player.getPersuasion() + 1) <= maxScore) {
+                    player.setPersuasion(player.getPersuasion() + 1);
+                    editPersuasion.setText("" + player.getPersuasion());
+                    updateAttributes();
+                }
             }
         });
         btnPresencePlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setPresence(player.getPresence() + 1);
-                editPresence.setText(""+player.getPresence());
+                int maxScore = getMaxScore();
+                if ((player.getPresence() + 1) <= maxScore) {
+                    player.setPresence(player.getPresence() + 1);
+                    editPresence.setText("" + player.getPresence());
+                    updateAttributes();
+                }
             }
         });
 
@@ -171,72 +217,96 @@ public class OLNewSheet extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                player.setAlteration(player.getAlteration() + 1);
-                editAlteration.setText(""+player.getAlteration());
+                int maxScore = getMaxScore();
+                if ((player.getAlteration() + 1) <= maxScore) {
+                    player.setAlteration(player.getAlteration() + 1);
+                    editAlteration.setText("" + player.getAlteration());
+                    updateAttributes();
+                }
             }
         });
         btnCreationPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setCreation(player.getCreation() + 1);
-                editCreation.setText(""+player.getCreation());
-            }
-        });
-        btnCreationPlus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                player.setCreation(player.getCreation() + 1);
-                editCreation.setText(""+player.getCreation());
+                int maxScore = getMaxScore();
+                if ((player.getCreation() + 1) <= maxScore) {
+                    player.setCreation(player.getCreation() + 1);
+                    editCreation.setText("" + player.getCreation());
+                    updateAttributes();
+                }
             }
         });
         btnEnergyPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setEnergy(player.getEnergy() + 1);
-                editEnergy.setText(""+player.getEnergy());
+                int maxScore = getMaxScore();
+                if ((player.getEnergy() + 1) <= maxScore) {
+                    player.setEnergy(player.getEnergy() + 1);
+                    editEnergy.setText("" + player.getEnergy());
+                    updateAttributes();
+                }
             }
         });
         btnEntropyPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setEntropy(player.getEntropy() + 1);
-                editEntropy.setText(""+player.getEntropy());
+                int maxScore = getMaxScore();
+                if ((player.getEntropy() + 1) <= maxScore) {
+                    player.setEntropy(player.getEntropy() + 1);
+                    editEntropy.setText("" + player.getEntropy());
+                    updateAttributes();
+                }
             }
         });
         btnInfluencePlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setInfluence(player.getInfluence() + 1);
-                editInfluence.setText(""+player.getInfluence());
+                int maxScore = getMaxScore();
+                if ((player.getInfluence() + 1) <= maxScore) {
+                    player.setInfluence(player.getInfluence() + 1);
+                    editInfluence.setText("" + player.getInfluence());
+                    updateAttributes();
+                }
             }
         });
         btnMovementPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setMovement(player.getMovement() + 1);
-                editMovement.setText(""+player.getMovement());
+                int maxScore = getMaxScore();
+                if ((player.getMovement() + 1) <= maxScore) {
+                    player.setMovement(player.getMovement() + 1);
+                    editMovement.setText("" + player.getMovement());
+                    updateAttributes();
+                }
             }
         });
         btnPresciencePlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setPrescience(player.getPrescience() + 1);
-                editPrescience.setText(""+player.getPrescience());
+                int maxScore = getMaxScore();
+                if ((player.getPrescience() + 1) <= maxScore) {
+                    player.setPrescience(player.getPrescience() + 1);
+                    editPrescience.setText("" + player.getPrescience());
+                    updateAttributes();
+                }
             }
         });
         btnProtectionPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setProtection(player.getProtection() + 1);
-                editProtection.setText(""+player.getProtection());
+                int maxScore = getMaxScore();
+                if ((player.getProtection() + 1) <= maxScore) {
+                    player.setProtection(player.getProtection() + 1);
+                    editProtection.setText("" + player.getProtection());
+                    updateAttributes();
+                }
             }
         });
 
@@ -246,8 +316,47 @@ public class OLNewSheet extends AppCompatActivity {
             {
                 player.setArmor(player.getArmor() + 1);
                 editArmor.setText(""+player.getArmor());
+                updateAttributes();
             }
         });
+    }
+
+    private void updateAttributes()
+    {
+        player.setStats();
+        player.setGetAttributePointsUsed();
+        player.setAttributePointsAvailable(player.getType());
+        TextView txtAttributes = findViewById(R.id.txtAttributes);
+        txtAttributes.setText("Attributes: " + player.getGetAttributePointsUsed() +"/"+ player.getAttributePointsAvailable());
+        TextView txtToughness = findViewById(R.id.txtToughness);
+        txtToughness.setText("Toughness: " + player.getToughness());
+        TextView txtGuard = findViewById(R.id.txtGuard);
+        txtGuard.setText("Guard: " + (player.getGuard()));
+        TextView txtResolve = findViewById(R.id.txtResolve);
+        txtResolve.setText("Resolve: " + player.getResolve());
+        TextView txtHitpoints = findViewById(R.id.txtHitpoints);
+        txtHitpoints.setText("Hitpoints: " + (player.getHitpoints()));
+
+    }
+
+    private int getMaxScore() {
+        int maxScore = 0;
+        if (player.getLevelTotal() <= 3) {
+            maxScore = 5;
+        }
+        else if (player.getLevelTotal() <= 9) {
+            maxScore = 6;
+        }
+        else if (player.getLevelTotal() <= 15) {
+            maxScore = 7;
+        }
+        else if (player.getLevelTotal() <= 21) {
+            maxScore = 8;
+        }
+        else {
+            maxScore = 9;
+        }
+        return maxScore;
     }
 
     private void continueButtons() {
@@ -297,6 +406,7 @@ public class OLNewSheet extends AppCompatActivity {
                 layoutLevel.setVisibility(View.GONE);
                 LinearLayout layoutAttributes = findViewById(R.id.layoutAttributes);
                 layoutAttributes.setVisibility(View.VISIBLE);
+                updateAttributes();
             }
         });
 
