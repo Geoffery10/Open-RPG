@@ -229,17 +229,182 @@
                 android:layout_marginLeft="18dp"
                 android:layout_marginRight="18dp"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:textAlignment="center"
                     android:layout_weight="0"
                     android:text="@string/newSheetLevel"
+                    android:textAlignment="center"
                     android:textSize="24sp" />
+
+                <LinearLayout
+                    android:id="@+id/LLMajorLvl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtMajorLvl"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Major Level:"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="24sp" />
+
+                    <ImageButton
+                        android:id="@+id/btnMajorLvlMinus"
+                        android:layout_width="7dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_left"
+                        android:scaleType="centerInside"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/editMajorLvl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg"
+                        android:gravity="center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/textAccent"
+                        android:textSize="24sp" />
+
+                    <ImageButton
+                        android:id="@+id/btnMajorLvlPlus"
+                        android:layout_width="7dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_right"
+                        android:maxWidth="7dp"
+                        android:scaleType="fitCenter"
+                        android:text="+" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LLMinorLvl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtMinorLvl"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Minor Level:"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="24sp" />
+
+                    <ImageButton
+                        android:id="@+id/btnMinorLvlMinus"
+                        android:layout_width="7dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_left"
+                        android:scaleType="centerInside"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/editMinorLvl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg"
+                        android:gravity="center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/textAccent"
+                        android:textSize="24sp" />
+
+                    <ImageButton
+                        android:id="@+id/btnMinorLvlPlus"
+                        android:layout_width="7dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_right"
+                        android:maxWidth="7dp"
+                        android:scaleType="fitCenter"
+                        android:text="+" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LLLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtLevel"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Experience:"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="24sp" />
+
+                    <ImageButton
+                        android:id="@+id/btnLevelMinus"
+                        android:layout_width="7dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_left"
+                        android:scaleType="centerInside"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/editLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg"
+                        android:gravity="center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/textAccent"
+                        android:textSize="24sp" />
+
+                    <ImageButton
+                        android:id="@+id/btnLevelPlus"
+                        android:layout_width="7dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_right"
+                        android:maxWidth="7dp"
+                        android:scaleType="fitCenter"
+                        android:text="+" />
+
+                </LinearLayout>
 
                 <Button
                     android:id="@+id/btnContinue03"
