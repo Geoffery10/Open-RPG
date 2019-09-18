@@ -26,7 +26,6 @@ public class OLNewSheet extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ol_newsheet);
-
         LinearLayout layoutBio = findViewById(R.id.layoutBio);
         layoutBio.setVisibility(View.VISIBLE);
 
@@ -91,7 +90,7 @@ public class OLNewSheet extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                player.setLevelTotal(player.getLevelTotal() +  1);
+                player.setLevelTotal(player.getLevelTotal() + 1);
                 editLevel.setText(""+player.getLevelTotal());
                 player.setLevel();
                 editMajorLvl.setText(""+player.getMajorLvl());
@@ -101,32 +100,35 @@ public class OLNewSheet extends AppCompatActivity {
     }
 
     private void minusLevelButtons(final TextView editMajorLvl, final TextView editMinorLvl, final TextView editLevel) {
-        ImageButton btnMajorLvlPlus = findViewById(R.id.btnMajorLvlPlus);
-        btnMajorLvlPlus.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnMajorLvlMinus = findViewById(R.id.btnMajorLvlMinus);
+        btnMajorLvlMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
 
             }
         });
-        ImageButton btnMinorLvlPlus = findViewById(R.id.btnMinorLvlPlus);
-        btnMinorLvlPlus.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnMinorLvlMinus = findViewById(R.id.btnMinorLvlMinus);
+        btnMinorLvlMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
 
             }
         });
-        ImageButton btnLevelPlus = findViewById(R.id.btnLevelPlus);
-        btnLevelPlus.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnLevelMinus = findViewById(R.id.btnLevelMinus);
+        btnLevelMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                player.setLevelTotal(player.getLevelTotal() +  1);
-                editLevel.setText(""+player.getLevelTotal());
-                player.setLevel();
-                editMajorLvl.setText(""+player.getMajorLvl());
-                editMinorLvl.setText(""+player.getMinorLvl());
+                if (player.getLevelTotal() > 0)
+                {
+                    player.setLevelTotal(player.getLevelTotal() - 1);
+                    editLevel.setText(""+player.getLevelTotal());
+                    player.setLevel();
+                    editMajorLvl.setText(""+player.getMajorLvl());
+                    editMinorLvl.setText(""+player.getMinorLvl());
+                }
             }
         });
     }
@@ -725,7 +727,6 @@ public class OLNewSheet extends AppCompatActivity {
                 if (txtCharName.getText().toString().trim().length() > 0)
                 {
                     getBioSection(txtCharName);
-
                     LinearLayout layoutBio = findViewById(R.id.layoutBio);
                     layoutBio.setVisibility(View.GONE);
                     LinearLayout layoutLang = findViewById(R.id.layoutLang);
@@ -739,6 +740,8 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 //Languages aren't required
+                player.setLevelTotal(0);
+
                 LinearLayout layoutLang = findViewById(R.id.layoutLang);
                 layoutLang.setVisibility(View.GONE);
                 LinearLayout layoutLevel = findViewById(R.id.layoutLevel);
