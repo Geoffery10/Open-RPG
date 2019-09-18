@@ -215,7 +215,7 @@ public class openlegend
     {
         int Level = getLevelTotal();
         int RemainingXP = Level;
-        int MajorLvl = 1;
+        int MajorLvl = 0;
         int MinorLvl = 0;
         int XPtoLevel = 3;
 
