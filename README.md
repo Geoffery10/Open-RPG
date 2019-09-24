@@ -68,7 +68,7 @@ Interested in contributing? Join our [Discord](https://discord.gg/yh7E5S3)! <a h
 ## Authors
 
 * **Geoffery Powell - [Geoffery10](https://github.com/Geoffery10)** - *Team Lead, Developer, and Graphic Designer* 
-* **Connor Davey - [CD33](https://github.com/connordavey33)** - *STUFF?*
+* **Connor Davey - [CD33](https://github.com/connordavey33)** - *System Math Development, Creative Designer*
 
 ## License
 
