@@ -72,8 +72,7 @@ Interested in contributing? Join our [Discord](https://discord.gg/yh7E5S3)!
 
 ## License
 
-**LINCENSE NOT COMPLETE**
-* This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* This project is licensed under the GNU Lesser General Public License v3.0 - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
