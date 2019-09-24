@@ -72,7 +72,7 @@ Interested in contributing? Join our [Discord](https://discord.gg/yh7E5S3)!
 
 ## License
 
-* This project is licensed under the GNU Lesser General Public License v3.0 - see the [LICENSE.md](LICENSE.md) file for details
+* This project is licensed under the GNU Lesser General Public License v3.0 - see the [LICENSE.md](https://github.com/Geoffery10/Open-RPG/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
