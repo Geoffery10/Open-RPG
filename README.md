@@ -34,8 +34,9 @@ This app requires at least Android 4.0.3 (Ice Cream Sandwich).
 
 #### Tested On
 ```
-Samsung Galaxy S8
 Samsung Galaxy S9+
+Samsung Galaxy S8
+Samsung Galaxy S7
 ```
 
 ### Installing
