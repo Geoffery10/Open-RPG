@@ -62,7 +62,7 @@ Installing can be done by downloading the .apk from the latest release to your A
 
 ## Contributing
 
-Interested in contributing? Join our [Discord](https://discord.gg/yh7E5S3)! 
+Interested in contributing? Join our [Discord](https://discord.gg/yh7E5S3)! <a href="https://discord.gg/yh7E5S3"><img align="center" width="18" height="18" src="https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/discord-128.png"></a>
 
 
 ## Authors
