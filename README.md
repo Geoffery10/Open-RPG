@@ -34,8 +34,9 @@ This app requires at least Android 4.0.3 (Ice Cream Sandwich).
 
 #### Tested On
 ```
-Samsung Galaxy S8
 Samsung Galaxy S9+
+Samsung Galaxy S8
+Samsung Galaxy S7
 ```
 
 ### Installing
@@ -62,18 +63,19 @@ Installing can be done by downloading the .apk from the latest release to your A
 
 ## Contributing
 
-Interested in contributing? Join our [Discord](https://discord.gg/yh7E5S3)! 
+Interested in contributing? Join our [Discord](https://discord.gg/yh7E5S3)! <a href="https://discord.gg/yh7E5S3"><img align="center" width="18" height="18" src="https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/discord-128.png"></a>
 
 
 ## Authors
-
-* **Geoffery Powell - [Geoffery10](https://github.com/Geoffery10)** - *Team Lead, Developer, and Graphic Designer* 
-* **Connor Davey - [CD33](https://github.com/connordavey33)** - *STUFF?*
+Geoffery Powell - [Geoffery10](https://github.com/Geoffery10) | Connor Davey - [CD33](https://github.com/connordavey33)
+--------------------------------------------------------------|--------------------------------------------------------
+Team Lead | Creative Designer
+Developer | System Math Development
+Graphic Designer | 
 
 ## License
 
-**LINCENSE NOT COMPLETE**
-* This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* This project is licensed under the GNU Lesser General Public License v3.0 - see the [LICENSE.md](https://github.com/Geoffery10/Open-RPG/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
