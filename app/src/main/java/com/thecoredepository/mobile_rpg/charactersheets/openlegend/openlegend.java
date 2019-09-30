@@ -836,7 +836,10 @@ public class openlegend
 
             if (tazmur.getType().equals("pc") || tazmur.getType().equals("ccII") || tazmur.getType().equals("ccIII"))
             {
-                OLFeats.featList();
+                tazmur.feats.add("Superior Concentration II");
+                tazmur.feats.add("Boon Focus I - Aura");
+                tazmur.feats.add("Boon Focus I - Invisible");
+                tazmur.feats.add("Companion II - Nightmare");
             }
             sheetList.add(tazmur.getCharName());
             sheets.add(tazmur);
