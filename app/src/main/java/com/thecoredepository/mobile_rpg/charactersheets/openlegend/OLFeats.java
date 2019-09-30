@@ -759,7 +759,7 @@ public class OLFeats
         Potent_Bane.setFeatCost(3);
         Potent_Bane.setDescription("You are so adept at a particular form of attack that your foes struggle to shake off the effects. Perhaps the flames of your fireballs burn hotter. Or maybe you've developed a special chemical to mix in with your blinding powder. Whatever the source and whatever the effect, most enemies are incapable of recovering from your legendary attack.");
         Potent_Bane.setPrerequisites("Ability to invoke the chosen bane");
-        Potent_Bane.setEffects("Choose one bane that you can invoke that has a duration of "resist ends". When a target makes a resist roll to shake off your invocation of the chosen bane, they have disadvantage 1.");
+        Potent_Bane.setEffects("Choose one bane that you can invoke that has a duration of \"resist ends\". When a target makes a resist roll to shake off your invocation of the chosen bane, they have disadvantage 1.");
         Potent_Bane.setSpecial("You may select this feat multiple times. Each time you take it, choose a different bane.");
 
         featList.add(Potent_Bane);
@@ -853,6 +853,92 @@ public class OLFeats
 
         featList.add(Sworn_Enemy);
 
-        
+        OLFeats Tough_as_Nails = new OLFeats();
+        Tough_as_Nails.setTitle("Tough as Nails");
+        Tough_as_Nails.setMaxLevel(2);
+        Tough_as_Nails.setFeatCost(2);
+        Tough_as_Nails.setDescription("You have a remarkable ability to shrug off pain and punishment that would take down lesser heroes. This power might stem from your rocky carapace, extreme combat training, or simply an extra dose of grit that you acquired from a hard life.");
+        Tough_as_Nails.setPrerequisites("Tier 1: Fortitude - 3\nTier 2: Fortitude - 5");
+        Tough_as_Nails.setEffects("You permanently gain 5 extra hit points per tier of this feat you possess.");
+        Tough_as_Nails.setSpecial("None");
+
+        featList.add(Tough_as_Nails);
+
+        OLFeats Two_Weapon_Brute = new OLFeats();
+        Two_Weapon_Brute.setTitle("Two Weapon Brute");
+        Two_Weapon_Brute.setMaxLevel(1);
+        Two_Weapon_Brute.setFeatCost(3);
+        Two_Weapon_Brute.setDescription("Being both physically powerful and incredibly agile, you are able to wield a weapon in one-hand that requires two hands for others. Good examples of this feat in action include an orcish barbarian wielding a great axe and shield and a survivor in the zombie apocalypse wielding two chainsaws.");
+        Two_Weapon_Brute.setPrerequisites("Agility - 4 and Might - 5 and Multi-Attack Specialist");
+        Two_Weapon_Brute.setEffects("You can wield weapons with the two-handed property in one hand and you gain the benefits of both the two-handed and one-handed property while doing so. This means that you gain a total of advantage 2 when wielding a two-handed weapon in each hand, advantage 1 from the power of a two-handed weapon plus advantage 1 from having one weapon in each hand.");
+        Two_Weapon_Brute.setSpecial("None");
+
+        featList.add(Two_Weapon_Brute);
+
+        OLFeats Two_Weapon_Defense = new OLFeats();
+        Two_Weapon_Defense.setTitle("Two Weapon Defense");
+        Two_Weapon_Defense.setMaxLevel(1);
+        Two_Weapon_Defense.setFeatCost(2);
+        Two_Weapon_Defense.setDescription("Your mastery of two weapon fighting allows you not only to come at your foes with a flurry of attacks, but also to shield yourself exceptionally well by deflecting incoming attacks with your weapons. Duelists, rangers, and space pirates are all concepts that could make use of this feat.");
+        Two_Weapon_Defense.setPrerequisites("Agility - 4 and Attack Specialization");
+        Two_Weapon_Defense.setEffects("When you wield a weapon you've taken the Attack Specialization feat for in each hand, you gain a +1 armor bonus to your Guard defense.");
+        Two_Weapon_Defense.setSpecial("None");
+
+        featList.add(Two_Weapon_Defense);
+
+        OLFeats Unending_Charm = new OLFeats();
+        Unending_Charm.setTitle("Unending Charm");
+        Unending_Charm.setMaxLevel(1);
+        Unending_Charm.setFeatCost(3);
+        Unending_Charm.setDescription("Whether you are an enchanter, psychic, or mad scientist, you have mastered the art of enthralling others. Your charms are so potent that your victims may fall permanently under your compulsion.");
+        Unending_Charm.setPrerequisites("Influence - 4");
+        Unending_Charm.setEffects("When you invoke the charmed bane, targets who do not make their resist roll within 24 hours of being afflicted become permanently affected by the bane. They do not receive any more resist rolls to shake themselves free of the effect. Other extraordinary effects like a nullify bane can still end the effect (and other methods may work at the GM's discretion).");
+        Unending_Charm.setSpecial("None");
+
+        featList.add(Unending_Charm);
+
+        OLFeats Untrackable = new OLFeats();
+        Untrackable.setTitle("Untrackable");
+        Untrackable.setMaxLevel(1);
+        Untrackable.setFeatCost(1);
+        Untrackable.setDescription("Whether this power manifests itself as vines that grow in your wake, a magical ward against detection, or an illusory veil, the effect is the same: you are protected from being tracked.");
+        Untrackable.setPrerequisites("Agility or Alteration or Influence - 3");
+        Untrackable.setEffects("Your travel is veiled by special means that conceal your tracks and any evidence of your passage even after you are far away. It is impossible to follow your tracks except by extraordinary means.");
+        Untrackable.setSpecial("None");
+
+        featList.add(Untrackable);
+
+        OLFeats Vicious_Strike = new OLFeats();
+        Vicious_Strike.setTitle("Vicious Strike");
+        Vicious_Strike.setMaxLevel(1);
+        Vicious_Strike.setFeatCost(2);
+        Vicious_Strike.setDescription("Whether through brute force, lethal precision, or volatile magic, a deadly attack delivered by you is exceptionally vicious. Berserkers, assassins, and superheroes of exceptional combat skill are all good examples of this feat in play.");
+        Vicious_Strike.setPrerequisites("None");
+        Vicious_Strike.setEffects("Any time you roll a natural 20 on the d20 for an attack action roll, you get advantage 1 on all subsequent d20 re-rolls granted by dice explosions.");
+        Vicious_Strike.setSpecial("None");
+
+        featList.add(Vicious_Strike);
+
+        OLFeats Wealthy = new OLFeats();
+        Wealthy.setTitle("Wealthy");
+        Wealthy.setMaxLevel(1);
+        Wealthy.setFeatCost(3);
+        Wealthy.setDescription("Whether you were born into nobility, come from old money, are heir to a great treasure, or simply a well-established merchant, you are wealthier than the average adventurer.");
+        Wealthy.setPrerequisites("None");
+        Wealthy.setEffects("Your wealth score is increased by 1.");
+        Wealthy.setSpecial("None");
+
+        featList.add(Wealthy);
+
+        OLFeats Well_Rounded = new OLFeats();
+        Well_Rounded.setTitle("Well-Rounded");
+        Well_Rounded.setMaxLevel(1);
+        Well_Rounded.setFeatCost(2);
+        Well_Rounded.setDescription("You have a versatile education, a wide range of experiences, or just plain old good luck. The result is that you're pretty good at things you're not specialized in.");
+        Well_Rounded.setPrerequisites("None");
+        Well_Rounded.setEffects("Any time you use an attribute with a score of 2 or less to make an action roll outside of combat that is not a bane or boon invocation, you gain advantage 1 to the roll.");
+        Well_Rounded.setSpecial("None");
+
+        featList.add(Well_Rounded);
     }
 }
