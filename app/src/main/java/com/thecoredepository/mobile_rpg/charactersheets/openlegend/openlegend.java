@@ -917,7 +917,15 @@ public class openlegend
 
             if (nightmare.getType().equals("pc") || nightmare.getType().equals("ccII") || nightmare.getType().equals("ccIII"))
             {
-                //nightmare.feats.add("Bane Focus - Fatigue");
+                Iterator<OLFeats> iterator = OLFeats.featList.iterator();
+                while (iterator.hasNext()) {
+                    OLFeats feat = iterator.next();
+                    if (feat.getTitle().equals("Bane Focus")) {
+                        feat.setLevel(1);
+                        feat.setConnection("Fatigue");
+                        nightmare.feats.add(feat.copyFeat());
+                    }
+                }
             }
             sheetList.add(nightmare.getCharName());
             sheets.add(nightmare);
@@ -967,7 +975,49 @@ public class openlegend
 
             if (mazok.getType().equals("pc") || mazok.getType().equals("ccII") || mazok.getType().equals("ccIII"))
             {
-                OLFeats.featList();
+                Iterator<OLFeats> iterator = OLFeats.featList.iterator();
+                while (iterator.hasNext()) {
+                    OLFeats feat = iterator.next();
+                    if (feat.getTitle().equals("Companion")) {
+                        feat.setLevel(3);
+                        feat.setConnection("Ookami");
+                        mazok.feats.add(feat.copyFeat());
+                    }
+                    if (feat.getTitle().equals("Flying")) {
+                        feat.setLevel(1);
+                        mazok.feats.add(feat.copyFeat());
+                    }
+                    if (feat.getTitle().equals("")) {
+                        feat.setLevel(1);
+                        feat.setConnection("Longshot");
+                        mazok.feats.add(feat.copyFeat());
+                    }
+                    if (feat.getTitle().equals("Untrackable")) {
+                        feat.setLevel(1);
+                        mazok.feats.add(feat.copyFeat());
+                    }
+                    if (feat.getTitle().equals("Brutal Intimidation")) {
+                        feat.setLevel(1);
+                        mazok.feats.add(feat.copyFeat());
+                    }
+                    if (feat.getTitle().equals("Boon Access")) {
+                        feat.setLevel(1);
+                        feat.setConnection("Detection");
+                        mazok.feats.add(feat.copyFeat());
+                    }
+                    if (feat.getTitle().equals("Combat Momentum")) {
+                        feat.setLevel(1);
+                        mazok.feats.add(feat.copyFeat());
+                    }
+                    if (feat.getTitle().equals("Great Leap")) {
+                        feat.setLevel(1);
+                        mazok.feats.add(feat.copyFeat());
+                    }
+                    if (feat.getTitle().equals("Multi-Attack Specialist")) {
+                        feat.setLevel(1);
+                        mazok.feats.add(feat.copyFeat());
+                    }
+                }
             }
             sheetList.add(mazok.getCharName());
             sheets.add(mazok);
