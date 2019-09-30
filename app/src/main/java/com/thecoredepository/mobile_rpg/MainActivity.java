@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLFeats;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLNewSheet;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivity;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
@@ -21,6 +22,7 @@ import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLFeats.featList;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
 
@@ -38,13 +40,19 @@ public class MainActivity extends AppCompatActivity {
         String versionName = BuildConfig.VERSION_NAME;
         txtVersion.setText("Version: " + versionName);
 
+        //Load Saved Data
         loadData();
 
+        //Load Data into Spinner
         ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, R.layout.spinner_style, sheetList);
         spinnerOL.setAdapter(adapterOL);
         //Load lastSheet
         SharedPreferences loadLastSheet = getSharedPreferences("lastSheet", MODE_PRIVATE);
         spinnerOL.setSelection(sheetList.indexOf(loadLastSheet.getString("lastSheet", "ERROR")));
+
+        //Preload Feats
+        featList();
+        Log.i("Feats", ""+featList.get(0).getTitle());
 
         btnOpenSheet.setOnClickListener(new View.OnClickListener() {
             @Override

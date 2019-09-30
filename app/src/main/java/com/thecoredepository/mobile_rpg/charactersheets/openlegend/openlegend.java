@@ -5,15 +5,8 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 // be saved often reduce the chance of lost data.
 */
 
-import android.content.SharedPreferences;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Array;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -835,7 +828,7 @@ public class openlegend
 
             if (tazmur.getType().equals("pc") || tazmur.getType().equals("ccII") || tazmur.getType().equals("ccIII"))
             {
-                featsOL.featList();
+                OLFeats.featList();
             }
             sheetList.add(tazmur.getCharName());
             sheets.add(tazmur);
@@ -869,7 +862,7 @@ public class openlegend
 
             if (nightmare.getType().equals("pc") || nightmare.getType().equals("ccII") || nightmare.getType().equals("ccIII"))
             {
-                featsOL.featList();
+                OLFeats.featList();
             }
             sheetList.add(nightmare.getCharName());
             sheets.add(nightmare);
@@ -919,7 +912,7 @@ public class openlegend
 
             if (mazok.getType().equals("pc") || mazok.getType().equals("ccII") || mazok.getType().equals("ccIII"))
             {
-                featsOL.featList();
+                OLFeats.featList();
             }
             sheetList.add(mazok.getCharName());
             sheets.add(mazok);
@@ -969,7 +962,7 @@ public class openlegend
 
             if (Noujou.getType().equals("pc") || Noujou.getType().equals("ccII") || Noujou.getType().equals("ccIII"))
             {
-                featsOL.featList();
+                OLFeats.featList();
             }
             sheetList.add(Noujou.getCharName());
             sheets.add(Noujou);
