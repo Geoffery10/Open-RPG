@@ -1,7 +1,5 @@
 package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
-import android.hardware.Camera;
-
 import java.util.ArrayList;
 
 public class OLFeats
