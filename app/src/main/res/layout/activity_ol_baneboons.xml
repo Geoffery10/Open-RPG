@@ -58,7 +58,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/lblDescription01"
+                                android:id="@+id/lblDescription"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -66,14 +66,14 @@
                                 android:textSize="25sp" />
 
                             <TextView
-                                android:id="@+id/txtDescription01"
+                                android:id="@+id/txtDescription"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/Blinded_description"
                                 android:textSize="20sp" />
 
                             <TextView
-                                android:id="@+id/lblDuration01"
+                                android:id="@+id/lblFeatEffect"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -81,7 +81,7 @@
                                 android:textSize="25sp" />
 
                             <TextView
-                                android:id="@+id/txtDuration01"
+                                android:id="@+id/txtFeatEffect"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/Blinded_duration"
