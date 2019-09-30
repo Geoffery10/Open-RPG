@@ -533,6 +533,326 @@ public class OLFeats
 
         featList.add(Heightened_Invocation);
 
+        OLFeats Hospitaler = new OLFeats();
+        Hospitaler.setTitle("Hospitaler");
+        Hospitaler.setMaxLevel(1);
+        Hospitaler.setFeatCost(2);
+        Hospitaler.setDescription("Through inspiring words, magical healing, or advanced medical technique, you are exceptionally skilled at helping others shake off baneful afflictions. Paladins, bards, and combat medics are all typical examples of characters who are masters of this feat.");
+        Hospitaler.setPrerequisites("Creation or Presence or Protection - 4");
+        Hospitaler.setEffects("You can use a major action to give an ally an immediate resist roll (a free action for the ally) with advantage 1. Additionally, you gain advantage 1 any time you attempt to invoke the restoration boon.");
+        Hospitaler.setSpecial("None");
+
+        featList.add(Hospitaler);
+
+        OLFeats Impervious_Trance = new OLFeats();
+        Impervious_Trance.setTitle("Impervious Trance");
+        Impervious_Trance.setMaxLevel(1);
+        Impervious_Trance.setFeatCost(3);
+        Impervious_Trance.setDescription("In the heightened focus of battle, your will becomes indomitable. Like a monk with unflinching mental focus or a berserker who is too bloodthirsty to be stopped, you cannot be thwarted by fear, charm, or similar attempts to overcome your willpower.");
+        Impervious_Trance.setPrerequisites("Will - 7 and Battle Trance");
+        Impervious_Trance.setEffects("While you are in a battle trance, you are immune to banes that target your Resolve. If you were already under the effect of such a bane, it is negated for the duration of your battle trance and returns when your battle trance ends.");
+        Impervious_Trance.setSpecial("None");
+
+        featList.add(Impervious_Trance);
+
+        OLFeats Indomitable_Endurance = new OLFeats();
+        Indomitable_Endurance.setTitle("Indomitable Endurance");
+        Indomitable_Endurance.setMaxLevel(5);
+        Indomitable_Endurance.setFeatCost(2);
+        Indomitable_Endurance.setDescription("Your endurance and willpower are legendary, allowing you to push on when others would keel over from exhaustion. A barbarian able to recover their wind after a mighty frenzy, or a computer hacker capable of routinely going for days without sleep while focused on a singular objective are good examples of this feat in action.");
+        Indomitable_Endurance.setPrerequisites("Fortitude or Will - 5");
+        Indomitable_Endurance.setEffects("You are able to shrug off the effects of the fatigued bane. For each tier you possess in this feat, treat your fatigue level as one lower than it actually is for the purposes of determining the bane's effects.");
+        Indomitable_Endurance.setSpecial("None");
+
+        featList.add(Indomitable_Endurance);
+
+        OLFeats Indomitable_Resolve = new OLFeats();
+        Indomitable_Resolve.setTitle("Indomitable Resolve");
+        Indomitable_Resolve.setMaxLevel(3);
+        Indomitable_Resolve.setFeatCost(1);
+        Indomitable_Resolve.setDescription("Your resolve is exceptional, making your more resilient to mental effects that would overwhelm those of lesser mettle. A keen-minded space captain and a wizened mage are both exemplars of this feat in action.");
+        Indomitable_Resolve.setPrerequisites("Tier 1: Presence or Will - 3\nTier 2: Presence or Will - 4\nTier 3: Presence or Will - 5");
+        Indomitable_Resolve.setEffects("For each tier you possess in this feat, your Resolve defense is increased by 1.");
+        Indomitable_Resolve.setSpecial("None");
+
+        featList.add(Indomitable_Resolve);
+
+        OLFeats Inspiring_Champion = new OLFeats();
+        Inspiring_Champion.setTitle("Inspiring Champion");
+        Inspiring_Champion.setMaxLevel(3);
+        Inspiring_Champion.setFeatCost(2);
+        Inspiring_Champion.setDescription("You fight with such bravery, heroism, or bravado that your allies are inspired to fight beyond their usual mettle. Common examples of characters who typify this feat include a shining knight, a fearless platoon leader, and a heroic bard.");
+        Inspiring_Champion.setPrerequisites("Tier 1: Presence - 4\nTier 2: Presence - 5\nTier 3: Presence - 6");
+        Inspiring_Champion.setEffects("Once per round, when your roll for a damaging attack exceeds an enemy's defense by 10 or more, you can grant healing to your allies as outlined below. In order to gain this healing, allies must be within a range of 5' times your Presence score.\n\tTier 1 - A single ally that can see the attack heals 1d4 HP.\n\tTier 2 - A number of allies equal to your Presence score who can see the attack heal 1d4 HP.\n\tTier 3 - All allies who can see the attack heal 2d4 HP.");
+        Inspiring_Champion.setSpecial("None");
+
+        featList.add(Inspiring_Champion);
+
+        OLFeats Knowledge = new OLFeats();
+        Knowledge.setTitle("Knowledge");
+        Knowledge.setMaxLevel(3);
+        Knowledge.setFeatCost(2);
+        Knowledge.setDescription("Whether through extensive study or years of first hand experience, you have knowledge of a particular subject which far surpasses your general intelligence. A navigator well versed in the galactic map, a barbarian warlord with years of experience with military strategy, and a professor of the paranormal are all examples of this feat in play.");
+        Knowledge.setPrerequisites("None");
+        Knowledge.setEffects("When you take this feat, choose a sphere of knowledge from the list below or, with the GM's approval, create a new one.\nExample spheres of knowledge include alchemy, anatomy, arcane, computers, explosives, engineering, geography, herbalism, history, location (must specify), medicine, military strategy, supernatural, and wilderness.\nYour tier in this feat determines how knowledgeable you are within your chosen sphere.\n\tTier 1 - You automatically succeed on any action roll related to your chosen sphere of knowledge with a CR of 16 or lower. For higher CRs, your Learning attribute is considered to be 3 for the action roll unless your Learning score is already 3 or higher, in which case you gain advantage 1 on the roll.\n\tTier 2 - You automatically succeed on any action roll related to your chosen sphere of knowledge with a CR of 22 or lower. For higher CRs, your Learning attribute is considered to be 6 for the action roll unless your Learning score is already 6 or higher, in which case you gain advantage 1 on the roll.\n\tTier 3 - You automatically succeed on any action roll related to your chosen sphere of knowledge with a CR of 26 or lower. For higher CRs, your Learning attribute is considered to be 8 for the action roll unless your Learning score is already 8 or higher, in which case you gain advantage 1 on the roll.");
+        Knowledge.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new sphere of knowledge each time. Purchasing this feat in this way confers no benefit on other spheres of knowledge.");
+
+        featList.add(Knowledge);
+
+        OLFeats Lethal_Strike = new OLFeats();
+        Lethal_Strike.setTitle("Your tier in this feat determines how knowledgeable you are within your chosen sphere.Lethal Strike");
+        Lethal_Strike.setMaxLevel(9);
+        Lethal_Strike.setFeatCost(3);
+        Lethal_Strike.setDescription("Like a highly trained sniper, a ninja of legend, or a feinting melee dervish, you can devastate your foes with an expertly placed attack when you catch them off guard.");
+        Lethal_Strike.setPrerequisites("Tier 1: Agility - 3\nTier 4: Agility - 5\nTier 7: Agility - 7");
+        Lethal_Strike.setEffects("Your attacks are considered lethal strikes whenever you fulfill one of the following conditions:\n\tYour target is caught off guard or otherwise unaware of the attack, such as when you are hidden from them, disguised as a friend, or have successfully deceived them.\n\tYour target is within melee attack range of an ally.\nYou gain advantage on lethal strikes equal to your tier in this feat. Additionally, a certain portion of the damage (not to exceed the total damage dealt) is considered lethal damage, which is more difficult to heal from (see Chapter 7: Combat).\n\tTier 1 - Advantage 1. Up to 5 lethal damage.\n\tTier 2 - Advantage 2. Up to 5 lethal damage.\n\tTier 3 - Advantage 3. Up to 10 lethal damage.\n\tTier 4 - Advantage 4. Up to 10 lethal damage.\n\tTier 5 - Advantage 5. Up to 15 lethal damage.\n\tTier 6 - Advantage 6. Up to 20 lethal damage.\n\tTier 7 - Advantage 7. Up to 20 lethal damage.\n\tTier 8 - Advantage 8. Up to 25 lethal damage.\n\tTier 9 - Advantage 9. Up to 25 lethal damage.");
+        Lethal_Strike.setSpecial("None");
+
+        featList.add(Lethal_Strike);
+
+        OLFeats Lightning_Reflexes = new OLFeats();
+        Lightning_Reflexes.setTitle("Lightning Reflexes");
+        Lightning_Reflexes.setMaxLevel(5);
+        Lightning_Reflexes.setFeatCost(1);
+        Lightning_Reflexes.setDescription("You are always ready for danger, allowing you to easily get the drop on your foes. A highly trained gunslinger with a vigilant trigger finger and a covert operative always prepared for ambush are good examples of this feat in action.");
+        Lightning_Reflexes.setPrerequisites("Tier 1: Agility or Prescience - 2\nTier 3: Agility or Prescience - 4");
+        Lightning_Reflexes.setEffects("For each tier you possess in this feat, you gain advantage 1 on all initiative rolls.");
+        Lightning_Reflexes.setSpecial("None");
+
+        featList.add(Lightning_Reflexes);
+
+        OLFeats Longshot = new OLFeats();
+        Longshot.setTitle("Longshot");
+        Longshot.setMaxLevel(1);
+        Longshot.setFeatCost(1);
+        Longshot.setDescription("Your expertise with a particular ranged weapon or extraordinary power enables you to strike targets at extreme distances that others would find impossible. This feat is common among snipers, fighter pilots, and war wizards.");
+        Longshot.setPrerequisites("Agility or Might or Any Extraordinary - 5");
+        Longshot.setEffects("When you take this feat, select one weapon or attack type. Examples of attack types you include fire, cold, lightning, acid, poison, entropy, creation, and force - though this list is not exhaustive. With the chosen weapon or attack type, your range with that weapon or attribute is doubled.");
+        Longshot.setSpecial("You may take this feat multiple times. If you do, select a new weapon or attack type each time.");
+
+        featList.add(Longshot);
+
+        OLFeats Silencing_Strike = new OLFeats();
+        Silencing_Strike.setTitle("Silencing Strike");
+        Silencing_Strike.setMaxLevel(1);
+        Silencing_Strike.setFeatCost(3);
+        Silencing_Strike.setDescription("Like an expert assassin or ninja, you can render your foes completely unable to alert others of your presence. This might take the form of a dart to the larynx, a garrote around the throat, or simply a sturdy covering of the mouth.");
+        Silencing_Strike.setPrerequisites("Agility - 4");
+        Silencing_Strike.setEffects("Whenever you deal damage using a weapon with the precise property to a target that is caught off guard or otherwise unaware of the attack, such as when you are hidden from them, disguised as a friend, or have successfully deceived them, the target is afflicted with the silenced bane.");
+        Silencing_Strike.setSpecial("None");
+
+        featList.add(Silencing_Strike);
+
+        OLFeats Martial_Focus = new OLFeats();
+        Martial_Focus.setTitle("Martial Focus");
+        Martial_Focus.setMaxLevel(1);
+        Martial_Focus.setFeatCost(3);
+        Martial_Focus.setDescription("Like a kensai warrior devoted to mastery of their katana or an assassin who exclusively wields their favored pistols, your training is hyper-focused on a single style of combat to the exclusion of all others.");
+        Martial_Focus.setPrerequisites("Agility or Might - 1");
+        Martial_Focus.setEffects("Choose a single weapon (or choose unarmed combat), and specify the attribute that your martial focus relies upon: Agility or Might. When making attacks using your chosen weapon, your attribute is considered 1 greater for the purposes of determining attribute dice. Your attribute is not changed for purposes of feats, banes, boons, or similar items. Because of your intense focus on a single combat style, any attacks that you make without your martial focus suffer disadvantage 1.");
+        Martial_Focus.setSpecial("None");
+
+        featList.add(Martial_Focus);
+
+        OLFeats Master_Tracker = new OLFeats();
+        Master_Tracker.setTitle("Master Tracker");
+        Master_Tracker.setMaxLevel(1);
+        Master_Tracker.setFeatCost(1);
+        Master_Tracker.setDescription("You were made for the hunt. Whether you gained this ability through years of practice or possess it through heightened senses, the effect is the same: once you've picked up a trail, you almost never lose track of your quarry.");
+        Master_Tracker.setPrerequisites("Perception - 4");
+        Master_Tracker.setEffects("Unless blinded or thwarted through extraordinary means, you always know the direction of true north. In addition, once you successfully locate the trail of a target, you automatically succeed at all tracking attempts to continue following that trail for 7 days after the time you first picked it up. Only extraordinary concealment, targets in flight, or similarly exceptional cases can cause you to lose your mark.");
+        Master_Tracker.setSpecial("None");
+
+        featList.add(Master_Tracker);
+
+        OLFeats Mimic = new OLFeats();
+        Mimic.setTitle("Mimic");
+        Mimic.setMaxLevel(1);
+        Mimic.setFeatCost(2);
+        Mimic.setDescription("You have honed your shapeshifting abilities to be able to not only change your form, but to even imitate specific creatures. Your powers may stem from studying the arts of deceptive magic, from a gene mutation, or even from innate extraordinary abilities.");
+        Mimic.setPrerequisites("Alteration - 4 and Deception - 3");
+        Mimic.setEffects("When you use the shapeshift boon, you may take on the features of a specific creature. For example, instead of merely transforming into an elf, you can assume the guise of Galdion the elven king. The disguise is near perfect for those examining you visually. If your behavior or other signs provide reasonable suspicion, an onlooker can attempt a Perception roll with a Challenge Rating equal to 10 + triple your Alteration or Deception score, whichever is higher. If they succeed, they will recognize your disguise.");
+        Mimic.setSpecial("None");
+
+        featList.add(Mimic);
+
+        OLFeats Multi_Attack_Specialist = new OLFeats();
+        Multi_Attack_Specialist.setTitle("Multi-Attack Specialist");
+        Multi_Attack_Specialist.setMaxLevel(6);
+        Multi_Attack_Specialist.setFeatCost(3);
+        Multi_Attack_Specialist.setDescription("Whether you are delivering a flurry of blows, wielding two weapons, or calling a chain of lightning bolts from the sky, you have mastered the art of delivering multiple attacks.");
+        Multi_Attack_Specialist.setPrerequisites("None");
+        Multi_Attack_Specialist.setEffects("At the start of your turn, you may declare that you are multi-attacking. You must state how many extra attacks you would like to make. You receive a corresponding number of additional major actions, which can only be used for attacks. All of your attacks this round suffer disadvantage equal to 3 times the number of additional attacks you declare (i.e., if you make 2 attacks, you suffer disadvantage 3; 3 attacks suffers disadvantage 6). For each tier of this feat that you possess, reduce the disadvantage penalty by 1. You may use your attacks to make any combination of bane or damaging attacks, but you may not invoke boons. Resolve each attack individually, applying any other multi-targeting options as you wish. You can move between each of these attacks and they can be used to target the same creature more than once. The number of additional attacks you can make with this feat is limited to 1 + half your level, rounded up. Thus, the limit is 2 additional attacks at 1st level, 3 additional attacks at 3rd level, and 6 additional attacks at 9th level. Example - Vax the Deathbringer has Multi-Attack Specialist (Tier III). He declares that he will be making three attacks this round (two additional attacks). Therefore, all of his attacks suffer disadvantage 3 (3 x 2 = 6, minus 3 for feat tier 3). His first attack is a necromantic burst targeting a 10'-cube. Because of the area of effect, Vax suffers an additional disadvantage 2, making his total disadvantage for that attack 5. For his second attack, Vax casts a spell of blindness on a single foe, making an action roll at disadvantage 3. For his final attack, Vax moves in to melee and uses his touch of death on three foes. Targeting 3 foes incurs an additional disadvantage 3, making his final attack roll suffer a total of disadvantage 6.");
+        Multi_Attack_Specialist.setSpecial("None");
+
+        featList.add(Multi_Attack_Specialist);
+
+        OLFeats Multi_Bane_Specialist = new OLFeats();
+        Multi_Bane_Specialist.setTitle("Multi-Bane Specialist");
+        Multi_Bane_Specialist.setMaxLevel(1);
+        Multi_Bane_Specialist.setFeatCost(3);
+        Multi_Bane_Specialist.setDescription("You have mastered a signature attack that allows you to invoke two banes at once. A blast of ice that blinds and slows your enemy, a thunderous shotgun blast that hurls foes back and knocks them to the ground, and a wormtongue song that puts targets to sleep and alters their memory are all examples of a signature attack that could be created with this feat.");
+        Multi_Bane_Specialist.setPrerequisites("Able to inflict both banes (see description)");
+        Multi_Bane_Specialist.setEffects("Choose two banes that you are able to inflict and that share a common prerequisite attribute. You are able to inflict both banes with a single attack. The required attribute score for combining the banes is equal to the sum of their power levels (e.g., combining knockdown and slowed, both power level 1, would require an attribute score of 2). If the banes target different defenses, you choose which defense your attack targets. On a successful attack roll, the target is inflicted with both banes. They each persist independently of one another and must be resisted separately.");
+        Multi_Bane_Specialist.setSpecial("In order to benefit from the bane focus feat when using a multi-bane attack, you must possess bane focus for both banes. You may take this feat more than once. If you do, you must choose a different pair of banes for the new instance of the feat.");
+
+        featList.add(Multi_Bane_Specialist);
+
+        OLFeats Multi_Target_Attack_Specialist = new OLFeats();
+        Multi_Target_Attack_Specialist.setTitle("Multi-Target Attack Specialist");
+        Multi_Target_Attack_Specialist.setMaxLevel(5);
+        Multi_Target_Attack_Specialist.setFeatCost(2);
+        Multi_Target_Attack_Specialist.setDescription("You are a master of wreaking havoc on many foes at once, whether it be with a whirlwind of your twin blades, a hail of gun fire, a massive wave of psionic energy, or a devastating ball of flame.");
+        Multi_Target_Attack_Specialist.setPrerequisites("None");
+        Multi_Target_Attack_Specialist.setEffects("When you choose this feat, you must decide to focus in area, ranged, or melee attacks. For each tier, you reduce the disadvantage penalty associated with multi-targeting for your chosen attack type by 1.");
+        Multi_Target_Attack_Specialist.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new multi-target mode (area, ranged, or melee) each time. Track your feat tier separately for each targeting mode that you select for this feat.");
+
+        featList.add(Multi_Target_Attack_Specialist);
+
+        OLFeats Multi_Target_Boon_Expert = new OLFeats();
+        Multi_Target_Boon_Expert.setTitle("Multi-Target Boon Expert");
+        Multi_Target_Boon_Expert.setMaxLevel(1);
+        Multi_Target_Boon_Expert.setFeatCost(3);
+        Multi_Target_Boon_Expert.setDescription("You have so mastered the art of aiding groups of allies that you can invoke certain boons effortlessly. A healing nova, a supernatural wind that gives flight to a group, and a time dilation that hastens a group of allies are all examples of this feat in action.");
+        Multi_Target_Boon_Expert.setPrerequisites("Boon Focus and Multi-Target Boon Specialist II");
+        Multi_Target_Boon_Expert.setEffects("When multi-targeting a boon for which you have the Boon Focus feat, you do not need to make an action roll if the disadvantage normally incurred from multi-targeting is completely negated by your Multi-Target Boon Specialist feat. Your invocation automatically succeeds.");
+        Multi_Target_Boon_Expert.setSpecial("None");
+
+        featList.add(Multi_Target_Boon_Expert);
+
+        OLFeats Multi_Target_Boon_Specialist = new OLFeats();
+        Multi_Target_Boon_Specialist.setTitle("Multi-Target Boon Specialist");
+        Multi_Target_Boon_Specialist.setMaxLevel(9);
+        Multi_Target_Boon_Specialist.setFeatCost(2);
+        Multi_Target_Boon_Specialist.setDescription("You are a master of invoking boons for more than one target. A mass dimensional shift to an intermediary plane and a mass manifestation of entropic life draining are some examples of what this might look like in play.");
+        Multi_Target_Boon_Specialist.setPrerequisites("None");
+        Multi_Target_Boon_Specialist.setEffects("For each tier of this feat, you reduce the disadvantage penalty associated with invoking boons for multiple targets by 1.");
+        Multi_Target_Boon_Specialist.setSpecial("None");
+
+        featList.add(Multi_Target_Boon_Specialist);
+
+        OLFeats Natural_Defense = new OLFeats();
+        Natural_Defense.setTitle("Natural Defense");
+        Natural_Defense.setMaxLevel(3);
+        Natural_Defense.setFeatCost(2);
+        Natural_Defense.setDescription("Whether through draconic heritage, a cyborg exoskeleton, or just a lifetime of conditioning, your skin is tough as nails, allowing your body to deflect blows that would cripple others.");
+        Natural_Defense.setPrerequisites("Tier 1: None\nTier 2: Fortitude - 1\nTier 3: Fortitude - 2");
+        Natural_Defense.setEffects("When you are not wearing armor, you gain a bonus to your Guard and Toughness defenses. Your bonus is determined by your tier in this feat:\n\tTier 1 - +1 bonus to Guard and Toughness.\n\tTier 2 - +2 bonus to Guard and Toughness.\n\tTier 3 - +3 bonus to Guard and Toughness.");
+        Natural_Defense.setSpecial("None");
+
+        featList.add(Natural_Defense);
+
+        OLFeats Overpowering_Strike = new OLFeats();
+        Overpowering_Strike.setTitle("Overpowering Strike");
+        Overpowering_Strike.setMaxLevel(1);
+        Overpowering_Strike.setFeatCost(2);
+        Overpowering_Strike.setDescription("In combat, you are like a wrecking ball that clears the battlefield of your foes. The sheer force of your attacks is so great that you send opponents flying. A half-ogre wielding a massive tree branch and a super soldier trained to use the enemy's weight against themself are both examples of this feat in play.");
+        Overpowering_Strike.setPrerequisites("Might - 4");
+        Overpowering_Strike.setEffects("Each time you deal damage using a weapon that has the forceful property, you can choose to push the target five feet away from you.");
+        Overpowering_Strike.setSpecial("None");
+
+        featList.add(Overpowering_Strike);
+
+        OLFeats Potent_Bane = new OLFeats();
+        Potent_Bane.setTitle("Potent Bane");
+        Potent_Bane.setMaxLevel(1);
+        Potent_Bane.setFeatCost(3);
+        Potent_Bane.setDescription("You are so adept at a particular form of attack that your foes struggle to shake off the effects. Perhaps the flames of your fireballs burn hotter. Or maybe you've developed a special chemical to mix in with your blinding powder. Whatever the source and whatever the effect, most enemies are incapable of recovering from your legendary attack.");
+        Potent_Bane.setPrerequisites("Ability to invoke the chosen bane");
+        Potent_Bane.setEffects("Choose one bane that you can invoke that has a duration of "resist ends". When a target makes a resist roll to shake off your invocation of the chosen bane, they have disadvantage 1.");
+        Potent_Bane.setSpecial("You may select this feat multiple times. Each time you take it, choose a different bane.");
+
+        featList.add(Potent_Bane);
+
+        OLFeats Reactionary_Trance = new OLFeats();
+        Reactionary_Trance.setTitle("Reactionary Trance");
+        Reactionary_Trance.setMaxLevel(1);
+        Reactionary_Trance.setFeatCost(2);
+        Reactionary_Trance.setDescription("Your intense focus never lapses, allowing you to tap into your heightened battle trance at a moment's notice. Examples of this feat in play include a hulking brute who snaps into a rage at the first sign of danger and a trained gunslinger who is always ready for a fight.");
+        Reactionary_Trance.setPrerequisites("Will - 6 and Battle Trance");
+        Reactionary_Trance.setEffects("You can enter a battle trance (as per the Battle Trance feat) as a free action even when it is not your turn. You may choose to do so in reaction to another action, such as an enemy's attack, spell, or insult. You may even declare your intent to enter a battle trance after the action has been resolved (such as after the attack has already been rolled). The benefits granted from your battle trance take place before the triggering action is resolved, potentially negating damage or harmful effects that you would have otherwise incurred.");
+        Reactionary_Trance.setSpecial("None");
+
+        featList.add(Reactionary_Trance);
+
+        OLFeats Reckless_Attack = new OLFeats();
+        Reckless_Attack.setTitle("Reckless Attack");
+        Reckless_Attack.setMaxLevel(1);
+        Reckless_Attack.setFeatCost(3);
+        Reckless_Attack.setDescription("By willingly punishing your own body in the heat of battle, you launch a relentless flurry of attacks that physically drains you but devastates your foes. A super soldier activating a stim pack and a berserker pushing their muscles to the breaking point are examples of this feat in action.");
+        Reckless_Attack.setPrerequisites("Battle Trance");
+        Reckless_Attack.setEffects("While you are in a battle trance, on your turn you may choose to inflict 5 hit points of damage on yourself to make an attack as a minor action. Effects that prevent or reduce damage cannot affect this self-inflicted damage. You suffer the damage before making your extra attack, so you must be able to remain conscious after the damage is dealt in order to benefit from your extra attack.");
+        Reckless_Attack.setSpecial("None");
+
+        featList.add(Reckless_Attack);
+
+        OLFeats Resilient = new OLFeats();
+        Resilient.setTitle("Resilient");
+        Resilient.setMaxLevel(1);
+        Resilient.setFeatCost(3);
+        Resilient.setDescription("Whether through luck, extraordinary will, or exceptional courage, you are able to shake off banes quicker than others. This feat can fit almost any character concept: a halfling who always has luck shining on him, a sorceress with an aura of protection, a paladin blessed by a deity, or an absent-minded professor who has no time to let disturbances get in the way of study.");
+        Resilient.setPrerequisites("Fortitude or Presence or Will - 3");
+        Resilient.setEffects("Any time you make a resist roll, you have advantage 1 on the roll.");
+        Resilient.setSpecial("None");
+
+        featList.add(Resilient);
+
+        OLFeats Sentinel = new OLFeats();
+        Sentinel.setTitle("Sentinel");
+        Sentinel.setMaxLevel(3);
+        Sentinel.setFeatCost(3);
+        Sentinel.setDescription("Your heightened awareness on the battlefield means that you are nearly impossible to catch flat-footed and are always prepared to defend yourself or allies. This feat is typified by such character concepts as the bodyguard, the abjurer, and the psychic defender.");
+        Sentinel.setPrerequisites("Agility or Might or Any Extraordinary - 5");
+        Sentinel.setEffects("Once per round, after you have expended your next major action to perform a defend action, you get an additional major action that must be spent before the start of your next turn to make another defend action. Multiple tiers of this feat grant additional major actions usable only for defend actions.");
+        Sentinel.setSpecial("None");
+
+        featList.add(Sentinel);
+
+        OLFeats Skill_Specialization = new OLFeats();
+        Skill_Specialization.setTitle("Skill Specialization");
+        Skill_Specialization.setMaxLevel(5);
+        Skill_Specialization.setFeatCost(2);
+        Skill_Specialization.setDescription("You have the eyes of an eagle, the endurance of an ox, the guile of a fox, or some similarly exceptional non-combat talent. It might come from intense training, prolonged study, or even an inherent natural talent.");
+        Skill_Specialization.setPrerequisites("None");
+        Skill_Specialization.setEffects("Choose one attribute. Any time you make a roll using the chosen attribute that is not for initiative, attacks, invocations, or the defend action, you gain advantage 1 on the roll per tier of this feat you possess for that attribute.");
+        Skill_Specialization.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new attribute each time. Track your feat tier separately for each attribute that you choose for this feat.");
+
+        featList.add(Skill_Specialization);
+
+        OLFeats Superior_Concentration = new OLFeats();
+        Superior_Concentration.setTitle("Superior Concentration");
+        Superior_Concentration.setMaxLevel(3);
+        Superior_Concentration.setFeatCost(3);
+        Superior_Concentration.setDescription("Your powers of focus are exceptionally honed, allowing you to maintain concentration on multiple extraordinary effects at once. This feat is typical among character concepts built to enhance themselves or their allies, such as bards, platoon leaders, or engineers.");
+        Superior_Concentration.setPrerequisites("None");
+        Superior_Concentration.setEffects("When you take the sustain a boon minor action, you may sustain one additional boon per tier of this feat which you possess.");
+        Superior_Concentration.setSpecial("None");
+
+        featList.add(Superior_Concentration);
+
+
+        OLFeats Swimming = new OLFeats();
+        Swimming.setTitle("Swimming");
+        Swimming.setMaxLevel(1);
+        Swimming.setFeatCost(1);
+        Swimming.setDescription("You are made for the water and can swim at surprising speeds with the aptitude of a fish. This might be the result of hard core training, or it may stem from a racial trait, such as webbed feet and hands.");
+        Swimming.setPrerequisites("None");
+        Swimming.setEffects("You gain a swimming speed equal to your base speed and do not need to make any special action rolls to maintain this base speed.");
+        Swimming.setSpecial("None");
+
+        featList.add(Swimming);
+
+        OLFeats Sworn_Enemy = new OLFeats();
+        Sworn_Enemy.setTitle("Sworn Enemy");
+        Sworn_Enemy.setMaxLevel(9);
+        Sworn_Enemy.setFeatCost(1);
+        Sworn_Enemy.setDescription("You are expertly focused on dealing with a particular species, race, or faction. Perhaps your family was slain by werewolves, and you have devoted your life to studying their mannerisms in order to hunt them down. Or maybe you were raised in a prison on the third moon of Vogax Prime, and you know the Vogans better than they know themselves.");
+        Sworn_Enemy.setPrerequisites("None");
+        Sworn_Enemy.setEffects("Choose a species, race, or faction (e.g., dragons, Void Templars, gnolls, or vampires). You learn the primary conversational language of that species, and at the GM's discretion, you may have some level of access to other special forms of communication (such as thieves' cant or secret hand signals). Furthermore, you gain advantage 1 per tier of this feat to all Mental attribute rolls (Learning, Logic, Perception, and Will) pertaining to your chosen group.");
+        Sworn_Enemy.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new group each time. Your total advantage on Mental attribute rolls is equal to your tier for that particular group. For example, a character might have Sworn Enemy II (Void Templars) and Sworn Enemy IV (Werewolves).");
+
+        featList.add(Sworn_Enemy);
+
         
     }
 }
