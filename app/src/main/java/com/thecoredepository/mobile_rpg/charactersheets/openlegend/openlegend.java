@@ -549,6 +549,14 @@ public class openlegend
         this.featPointsUsed = featPointsUsed;
     }
 
+    public List<String> getFeats() {
+        return feats;
+    }
+
+    public void setFeats(List<String> feats) {
+        this.feats = feats;
+    }
+
     public String[] getPerks() {
         return perks;
     }
@@ -862,7 +870,7 @@ public class openlegend
 
             if (nightmare.getType().equals("pc") || nightmare.getType().equals("ccII") || nightmare.getType().equals("ccIII"))
             {
-                OLFeats.featList();
+                nightmare.feats.add("Bane Focus - Fatigue");
             }
             sheetList.add(nightmare.getCharName());
             sheets.add(nightmare);
