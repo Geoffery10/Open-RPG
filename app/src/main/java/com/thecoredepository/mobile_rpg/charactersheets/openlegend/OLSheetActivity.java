@@ -129,7 +129,9 @@ public class OLSheetActivity extends AppCompatActivity {
         Button btnBoons = findViewById(R.id.btnBoons);
 
         TextView txtFeats = findViewById(R.id.txtFeats);
-        txtFeats.setText("Feats:\n" + player.getFeatsList());
+        player.setFeatPointsAvailable();
+        player.setFeatPointsUsed();
+        txtFeats.setText("Feats: " + player.getFeatPointsUsed() + "/" + player.getFeatPointsAvailable() + "\n" + player.getFeatsList());
 
         //Button Clicks
         buttonClicks(btnBanes, btnBoons, btnInventory, btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection);

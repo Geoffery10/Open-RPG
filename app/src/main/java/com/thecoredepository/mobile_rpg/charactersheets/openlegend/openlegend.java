@@ -208,24 +208,12 @@ public class openlegend
     public void setLevel()
     {
         int Level = getLevelTotal();
-        int RemainingXP = Level;
-        int MajorLvl = 0;
-        int MinorLvl = 0;
-        int XPtoLevel = 3;
 
-        while (RemainingXP > 0)
-        {
-            MinorLvl += 1;
-            RemainingXP -= 1;
-            if (MinorLvl == XPtoLevel)
-            {
-                MinorLvl = 0;
-                MajorLvl += 1;
-            }
-        }
+        majorLvl = levelTotal / 3 + 1;
+        minorLvl = levelTotal % 3;
 
-        setMajorLvl(MajorLvl);
-        setMinorLvl(MinorLvl);
+        Log.i("Level", "Major - " + majorLvl);
+        Log.i("Level", "Minor - " + minorLvl);
     }
 
     public String getDeity() {
@@ -539,7 +527,7 @@ public class openlegend
     }
 
     public void setFeatPointsAvailable() {
-        this.featPointsAvailable = (6 + (minorLvl * 2) + (majorLvl * 2));
+        this.featPointsAvailable = (6 + levelTotal);
     }
 
     public int getFeatPointsUsed() {
@@ -547,7 +535,13 @@ public class openlegend
     }
 
     public void setFeatPointsUsed() {
-        this.featPointsUsed = featPointsUsed;
+        int used = 0;
+        Iterator<OLFeats> iterator = feats.iterator();
+        while (iterator.hasNext()) {
+            OLFeats feat = iterator.next();
+            used += feat.getLevel() * feat.getFeatCost();
+        }
+        this.featPointsUsed = used;
     }
 
     public List<OLFeats> getFeats() {
@@ -1006,10 +1000,6 @@ public class openlegend
                         mazok.feats.add(feat.copyFeat());
                     }
                     if (feat.getTitle().equals("Combat Momentum")) {
-                        feat.setLevel(1);
-                        mazok.feats.add(feat.copyFeat());
-                    }
-                    if (feat.getTitle().equals("Great Leap")) {
                         feat.setLevel(1);
                         mazok.feats.add(feat.copyFeat());
                     }
