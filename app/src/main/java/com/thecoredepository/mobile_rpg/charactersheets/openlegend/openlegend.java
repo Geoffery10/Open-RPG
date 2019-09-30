@@ -553,6 +553,15 @@ public class openlegend
         return feats;
     }
 
+    public String getFeatsList() {
+        String featsStringList = "";
+        for (int i = 0; i < feats.size(); i++)
+        {
+            featsStringList += feats.get(i) + "\n";
+        }
+        return featsStringList;
+    }
+
     public void setFeats(List<String> feats) {
         this.feats = feats;
     }
