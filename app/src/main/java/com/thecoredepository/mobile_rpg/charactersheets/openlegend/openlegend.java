@@ -514,19 +514,20 @@ public class openlegend
         this.hitpoints = ((2 * (fortitude + presence + will)) + 10);
     }
 
+
     public int getDamageTaken() {
         return (hitpoints - damageTaken);
     }
 
     public void setDamageTaken() {
-        this.damageTaken = 0;
+        this.damageTaken = this.hitpoints;
     }
 
     public void setDamageTaken(int damage) {
         this.damageTaken = this.damageTaken + damage;
     }
 
-    public void damagedHealed(int heal)
+    public void setDamagedHealed(int heal)
     {
         this.damageTaken = this.damageTaken - heal;
     }
@@ -670,6 +671,7 @@ public class openlegend
         setGuard(getArmor());
         setResolve();
         setHitpoints();
+        setDamageTaken(0);
         setLevel();
     }
 
@@ -817,7 +819,6 @@ public class openlegend
             tazmur.setArmor(1);
             tazmur.setLevelTotal(10);
             tazmur.setSpeed(30);
-            tazmur.setDamageTaken(0);
 
             tazmur.setStats();
             tazmur.setGetAttributePointsUsed();

@@ -1,12 +1,18 @@
 package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -178,11 +184,79 @@ public class OLSheetActivity extends AppCompatActivity {
             case R.id.Boons:
                 toBoons();
                 break;
+            case R.id.Damage:
+                damageDialog();
+                break;
+            case R.id.Healing:
+                healingDialog();
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
 
         return true;
+    }
+
+    private void damageDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Damage");
+
+        // Set up the input
+        final EditText input = new EditText(this);
+        input.setGravity(Gravity.CENTER_HORIZONTAL);
+        // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+        input.setInputType(InputType.TYPE_CLASS_NUMBER);
+        builder.setView(input);
+
+        // Set up the buttons
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String userin = input.getText().toString();
+                int num = Integer.valueOf(userin);
+                player.setDamageTaken(num);
+                TextView txtHitpoints = findViewById(R.id.txtHitpoints);
+                txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        builder.show();
+    }
+
+    private void healingDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Healing");
+
+        // Set up the input
+        final EditText input = new EditText(this);
+        input.setGravity(Gravity.CENTER_HORIZONTAL);
+        // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+        input.setInputType(InputType.TYPE_CLASS_NUMBER);
+        builder.setView(input);
+
+        // Set up the buttons
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String userin = input.getText().toString();
+                int num = Integer.valueOf(userin);
+                player.setDamagedHealed(num);
+                TextView txtHitpoints = findViewById(R.id.txtHitpoints);
+                txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        builder.show();
     }
 
     private void showHideBio()
