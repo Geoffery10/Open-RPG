@@ -456,6 +456,83 @@ public class OLFeats
 
         featList.add(Fast_Draw);
 
+        OLFeats Fast_Tracker = new OLFeats();
+        Fast_Tracker.setTitle("Fast Tracker");
+        Fast_Tracker.setMaxLevel(1);
+        Fast_Tracker.setFeatCost(2);
+        Fast_Tracker.setDescription("Following a trail is an everyday part of your life, and as such it is no more taxing than breathing or blinking. Whether you are an experienced woodsman, a bounty hunter for the Galactic Senate, or a humanoid cat creature with heightened senses, your expertise at tracking allows you to get it done faster than the average hunter.");
+        Fast_Tracker.setPrerequisites("Agility - 5 and Perception - 5");
+        Fast_Tracker.setEffects("You move unhindered and at full speed when tracking your quarry.");
+        Fast_Tracker.setSpecial("None");
 
+        featList.add(Fast_Tracker);
+
+        OLFeats Ferocious_Minions = new OLFeats();
+        Ferocious_Minions.setTitle("Ferocious Minions");
+        Ferocious_Minions.setMaxLevel(3);
+        Ferocious_Minions.setFeatCost(2);
+        Ferocious_Minions.setDescription("Whether you are a necromancer who summons hordes of undead, an inventor who crafts autonomous defense droids, or a psychic capable of bending others to your will, minions are exceptionally strong under your command.");
+        Ferocious_Minions.setPrerequisites("Tier 1: Alteration or Creation or Entropy or Energy or Influence - 4\nTier 2: Alteration or Creation or Entropy or Energy or Influence - 5\nTier 3: Alteration or Creation or Entropy or Energy or Influence - 7");
+        Ferocious_Minions.setEffects("Creatures under the effects of your charmed or dominated banes, or those created by your invocation of the summon creature boon, gain advantage 1 on all attack rolls to protect you or act in your favor for each tier of this feat you possess.");
+        Ferocious_Minions.setSpecial("None");
+
+        featList.add(Ferocious_Minions);
+
+        OLFeats Fleet_of_Foot = new OLFeats();
+        Fleet_of_Foot.setTitle("Fleet of Foot");
+        Fleet_of_Foot.setMaxLevel(3);
+        Fleet_of_Foot.setFeatCost(2);
+        Fleet_of_Foot.setDescription("Whether through cybernetic implants, telekinetic propulsion, or simply hardcore training, you are faster than most. This feat is common to swashbucklers, martial artists, super soldiers, and psychic warriors.");
+        Fleet_of_Foot.setPrerequisites("Tier 1: Agility or Fortitude or Movement - 2\nTier 2: Agility or Fortitude or Movement - 4\nTier 3: Agility or Fortitude or Movement - 6");
+        Fleet_of_Foot.setEffects("Your speed is permanently increased by 5' per tier of this feat.");
+        Fleet_of_Foot.setSpecial("None");
+
+        featList.add(Fleet_of_Foot);
+
+        OLFeats Flying = new OLFeats();
+        Flying.setTitle("Flying");
+        Flying.setMaxLevel(1);
+        Flying.setFeatCost(3);
+        Flying.setDescription("Whether through a pair of celestial or infernal wings, an inherent telekinetic force, or mutant super powers, you possess the ability to fly.");
+        Flying.setPrerequisites("None");
+        Flying.setEffects("You gain a flight speed equal to your normal speed. At the GM's discretion, certain hostile actions may be capable of canceling your flight, sending you hurtling to your doom. If your flight is anatomical, the immobile bane might render your wings immovable. If telekinetic, an application of the nullify bane may cancel your flight.");
+        Flying.setSpecial("None");
+
+        featList.add(Flying);
+
+        OLFeats Great_Leap = new OLFeats();
+        Great_Leap.setTitle("Great Leap");
+        Great_Leap.setMaxLevel(1);
+        Great_Leap.setFeatCost(1);
+        Great_Leap.setDescription("Through extraordinary power or exceptional agility, you can jump much farther than the average creature. A telekinetic superhero and an insectoid race of bipedal cricket-like beings are both examples of this feat in play.");
+        Great_Leap.setPrerequisites("Tier 1: Movement or Agility - 2\nTier 2: Movement or Agility - 4\nTier 3: Movement or Agility - 6");
+        Great_Leap.setEffects("You can use your Movement or Agility score instead of your Might score when determining how far you can jump. In addition, you gain advantage 1 per tier on action rolls to jump.");
+        Great_Leap.setSpecial("None");
+
+        featList.add(Great_Leap);
+
+        OLFeats Hallucination = new OLFeats();
+        Hallucination.setTitle("Hallucination");
+        Hallucination.setMaxLevel(2);
+        Hallucination.setFeatCost(3);
+        Hallucination.setDescription("You are able to use your powers of illusion to not only create phantasmal figments, but to completely dominate the sensory perceptions of individual targets. Such power is wielded by the likes of legendary enchanters, psychics, and shamans. Those who can master such powers are often capable of neutralizing angry mobs without shedding a drop of blood.");
+        Hallucination.setPrerequisites("Tier 1: Influence - 5\nTier 2: Influence - 7");
+        Hallucination.setEffects("\tTier 1 - When you invoke the phantasm bane, you may choose to create a hallucination within a single target's mind instead of an illusion that is perceptible to everyone. You gain complete control over the target's senses (as granted by the power level of your bane), and thus the hallucination is not restricted by size or area. Your hallucination may only target a single creature and is not eligible for multi-targeting attacks. In addition, unless the target is damaged, they suffer disadvantage on resist rolls against the bane.\n\tTier 2 - When you invoke the hallucination form of the phantasm bane, you may target additional creatures within range as determined by your Influence score. This does not count as a multi-target attack and thus does not incur disadvantage on your action roll.\n\t\tInfluence 7 - 5 targets\n\t\tInfluence 8 - 10 targets\n\t\tInfluence 9 - 50 targets");
+        Hallucination.setSpecial("None");
+
+        featList.add(Hallucination);
+
+        OLFeats Heightened_Invocation = new OLFeats();
+        Heightened_Invocation.setTitle("Heightened Invocation");
+        Heightened_Invocation.setMaxLevel(3);
+        Heightened_Invocation.setFeatCost(2);
+        Heightened_Invocation.setDescription("By channeling your extraordinary powers through extended research or extensive rituals, such as meditation, fasting, blood letting, or sacrifices, you are able to increase the strength of your invocations. This feat is common among wizards, inventors, mad scientists, and similar characters who use extraordinary abilities to achieve great deeds.");
+        Heightened_Invocation.setPrerequisites("Tier 1: Any Extraordinary - 4\nTier 2: Any Extraordinary - 6\nTier 3: Any Extraordinary - 9");
+        Heightened_Invocation.setEffects("When invoking a bane or boon, you may choose to do so as a heightened invocation. The invocation time for a heightened invocation is one increment higher than usual as follows:\n\t1 action becomes 1 minute\n\t1 minute becomes 10 minutes\n\t10 minutes becomes 1 hour\n\t1 hour becomes 8 hours\n\t8 hours becomes 24 hours\nTier 1 - When performing a heightened invocation, you may choose one of the following effects to empower your bane or boon:\n\tIncrease the range of the effect as follows: Attribute 5 = 500ft\n\t\tAttribute 6 = 1/2 mile\n\t\tAttribute 7 = 1 mile\n\t\tAttribute 8 = 10 miles\n\t\tAttribute 9 = 100 miles\n\tNegate two levels of disadvantage caused by multi-targeting (e.g., target 2 creatures or a 10' square for free instead of disadvantage 2).\n\tFor your action roll, treat your attribute score as if it was one greater for purposes of determining attribute dice. Note that this doesn't grant access to banes or boons you could not normally access. It only increases the dice used for the action roll.\nTier 2 - You gain the following options when you perform a heightened invocation:\n\tYou can lead others to join you in group invocation as long as they are also able to invoke the bane or boon at the same power level that you are invoking it at. At the conclusion of the group invocation, each contributor may choose one of the effects granted by Tier 1 of this feat.\n\tYou gain the following additional options to choose from when empowering your invocations with heightened invocation:\n\t\tCause a boon to persist for 1 minute automatically without needing to use a sustain action. Furthermore, enemies cannot end the boon through use of a disrupting attack (though the nullify bane still works).\n\t\tTargets may not make resist rolls against a bane for one minute after it is invoked.\nTier 3 - You gain the ability to permanently bestow or dispel banes and boons. In order to bestow the bane or boon, you must rigorously attend to the invocation process for a number of days equal to the power level of the bane or boon to be invoked or nullified. During that time you can eat, sleep, and act normally with two exceptions: 1) You must work actively on the invocation and with minimal interruption for 8 hours out of each day. 2) You can leave the area and move about freely during the down time each day, but for the 8 hours of active heightened invocation you must be in the same physical or geographic location where the invocation was initiated. When the invocation time is completed, make an action roll as follows:\n\tBestow Boon - Make an action roll to invoke the boon as usual. If successful, you cause a non-instantaneous & non-permanent boon to permanently affect the target. The target can thereafter invoke the boon at will with a free action, without requiring an action roll to do so. The target does not need to use a sustain action to persist the effect, and the effect can only be nullified either temporarily with the nullify bane, or permanently with the Heightened Invocation feat (see the Dispel Boon entry that follows).\n\tBestow Bane - Make an action roll to invoke the bane as usual. If successful, you cause a non-instantaneous & non-permanent bane to permanently affect the target. The bane persists indefinitely and does not allow resist rolls to end its effects. The effect can be canceled either temporarily with the nullify bane, or permanently with the Heightened Invocation feat (see the Dispel Bane entry that follows).\n\tDispel Boon - Make an Entropy roll with a Challenge Rating equal to 10 + twice the power level of the boon you are attempting to dispel. If successful, you cause a permanent boon to be forever stripped from the target, causing them to lose the ability to invoke the boon automatically.\n\tDispel Bane - Make a Protection roll with a Challenge Rating equal to 10 + twice the power level of the bane you are attempting to dispel. If successful, you break the curse of a permanent bane afflicting the target, though your target gains no special immunity to it.");
+        Heightened_Invocation.setSpecial("Permanently bestowing banes or boons via this feat can dramatically impact the mechanical balance of a story. Just as with other permanent effects like Extraordinary Item creation, the invocation of permanent banes or boons is subject to GM's discretion, and using this feat in a way that makes one particular character overly powerful should be prohibited.");
+
+        featList.add(Heightened_Invocation);
+
+        
     }
 }
