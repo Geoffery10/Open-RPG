@@ -9,6 +9,7 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class openlegend
@@ -64,7 +65,7 @@ public class openlegend
     //Feats
     private int featPointsAvailable;
     private int featPointsUsed;
-    private List<String> feats = new ArrayList<String>();
+    private List<OLFeats> feats = new ArrayList<>();
 
     //Perks/Flaws
     private String[] perks = new String[2];
@@ -549,20 +550,30 @@ public class openlegend
         this.featPointsUsed = featPointsUsed;
     }
 
-    public List<String> getFeats() {
+    public List<OLFeats> getFeats() {
         return feats;
     }
 
     public String getFeatsList() {
         String featsStringList = "";
-        for (int i = 0; i < feats.size(); i++)
-        {
-            featsStringList += feats.get(i) + "\n";
+        Log.i("Feats", "Running getFeatsList()");
+        Iterator<OLFeats> iterator = feats.iterator();
+        while (iterator.hasNext()) {
+            OLFeats feat = iterator.next();
+            Log.i("Feats", feat.getTitle());
+            if (feat.getConnection() != null)
+            {
+                featsStringList += feat.getTitle() + " " + feat.getLevel() + " - " + feat.getConnection() + "\n";
+            }
+            else
+            {
+                featsStringList += feat.getTitle() + " " + feat.getLevel() + "\n";
+            }
         }
         return featsStringList;
     }
 
-    public void setFeats(List<String> feats) {
+    public void setFeats(List<OLFeats> feats) {
         this.feats = feats;
     }
 
@@ -845,10 +856,34 @@ public class openlegend
 
             if (tazmur.getType().equals("pc") || tazmur.getType().equals("ccII") || tazmur.getType().equals("ccIII"))
             {
-                tazmur.feats.add("Superior Concentration II");
-                tazmur.feats.add("Boon Focus I - Aura");
-                tazmur.feats.add("Boon Focus I - Invisible");
-                tazmur.feats.add("Companion II - Nightmare");
+                Log.i("Feats", "Adding Feats");
+                Iterator<OLFeats> iterator = OLFeats.featList.iterator();
+                while (iterator.hasNext()) {
+                    OLFeats feat = iterator.next();
+                    if (feat.getTitle().equals("Superior Concentration")) {
+                        feat.setLevel(1);
+                        tazmur.feats.add(feat.copyFeat());
+                        Log.i("Feats", "added Superior Concentration");
+                    }
+                    if (feat.getTitle().equals("Boon Focus")) {
+                        feat.setLevel(1);
+                        feat.setConnection("Aura");
+                        tazmur.feats.add(feat.copyFeat());
+                        Log.i("Feats", "added Boon Focus - Aura");
+                    }
+                    if (feat.getTitle().equals("Boon Focus")) {
+                        feat.setLevel(1);
+                        feat.setConnection("Invisible");
+                        tazmur.feats.add(feat.copyFeat());
+                        Log.i("Feats", "added Boon Focus - Invisible");
+                    }
+                    if (feat.getTitle().equals("Companion")) {
+                        feat.setLevel(2);
+                        feat.setConnection("Nightmare");
+                        tazmur.feats.add(feat.copyFeat());
+                        Log.i("Feats", "added Companion");
+                    }
+                }
             }
             sheetList.add(tazmur.getCharName());
             sheets.add(tazmur);
@@ -882,7 +917,7 @@ public class openlegend
 
             if (nightmare.getType().equals("pc") || nightmare.getType().equals("ccII") || nightmare.getType().equals("ccIII"))
             {
-                nightmare.feats.add("Bane Focus - Fatigue");
+                //nightmare.feats.add("Bane Focus - Fatigue");
             }
             sheetList.add(nightmare.getCharName());
             sheets.add(nightmare);

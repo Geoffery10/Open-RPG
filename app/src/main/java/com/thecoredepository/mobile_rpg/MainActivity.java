@@ -40,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         String versionName = BuildConfig.VERSION_NAME;
         txtVersion.setText("Version: " + versionName);
 
+        //Preload Feats
+        featList();
+
         //Load Saved Data
         loadData();
 
@@ -49,10 +52,6 @@ public class MainActivity extends AppCompatActivity {
         //Load lastSheet
         SharedPreferences loadLastSheet = getSharedPreferences("lastSheet", MODE_PRIVATE);
         spinnerOL.setSelection(sheetList.indexOf(loadLastSheet.getString("lastSheet", "ERROR")));
-
-        //Preload Feats
-        featList();
-        Log.i("Feats", ""+featList.get(0).getTitle());
 
         btnOpenSheet.setOnClickListener(new View.OnClickListener() {
             @Override

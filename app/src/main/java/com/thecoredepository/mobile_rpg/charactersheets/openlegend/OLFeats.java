@@ -14,7 +14,22 @@ public class OLFeats
     private String prerequisites;
     private String effects;
     private String special;
+    private String connection; //What companion name, bane/boon, or other connected string
 
+    public OLFeats copyFeat() {
+        OLFeats newFeat = new OLFeats();
+        newFeat.setTitle(this.title);
+        newFeat.setMaxLevel(this.maxLevel);
+        newFeat.setLevel(this.level);
+        newFeat.setFeatCost(this.featCost);
+        newFeat.setFeatCostTotal(this.featCostTotal);
+        newFeat.setDescription(this.description);
+        newFeat.setPrerequisites(this.prerequisites);
+        newFeat.setEffects(this.effects);
+        newFeat.setSpecial(this.special);
+        newFeat.setConnection(this.connection);
+        return newFeat;
+    }
 
     public String getTitle() {
         return title;
@@ -86,6 +101,22 @@ public class OLFeats
 
     public void setSpecial(String special) {
         this.special = special;
+    }
+
+    public static ArrayList<OLFeats> getFeatList() {
+        return featList;
+    }
+
+    public static void setFeatList(ArrayList<OLFeats> featList) {
+        OLFeats.featList = featList;
+    }
+
+    public String getConnection() {
+        return connection;
+    }
+
+    public void setConnection(String connection) {
+        this.connection = connection;
     }
 
     public static void featList()
