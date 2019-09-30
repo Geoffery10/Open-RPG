@@ -807,7 +807,7 @@ public class openlegend
             lang[2] = "Sheikah";
             tazmur.setLanguages(lang);
             tazmur.setBio("Possibly an evil male Gerudo who wanders the land lacking any real home. In his travels he befriended an extremely magical cat named Noujou. It’s possible he has evil goals in life but he’s pretty chill. ");
-            tazmur.setFortitude(2);
+            tazmur.setFortitude(3);
             tazmur.setPresence(2);
             tazmur.setPerception(2);
             tazmur.setAlteration(6);
@@ -858,7 +858,7 @@ public class openlegend
             nightmare.setBio("A flamboyant, seemingly calm, overconfident opponent whose only goal is to revive Demise, his master. His spirit is bound to Tazmur and is unable to leave him.");
             nightmare.setEntropy(5);
             nightmare.setAlteration(5);
-            nightmare.setProtection(4);
+            nightmare.setProtection(5);
             nightmare.setLevelTotal(10);
             nightmare.setSpeed(0);
             nightmare.setDamageTaken(0);
