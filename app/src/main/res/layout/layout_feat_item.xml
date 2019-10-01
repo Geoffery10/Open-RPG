@@ -19,7 +19,8 @@
             android:layout_marginHorizontal="5dp"
             android:backgroundTint="@color/colorPrimary"
             android:text="FEAT TITLE - LEVEL     (COST)"
-            android:textColor="@color/textAccent" />
+            android:textColor="@color/textAccent"
+            android:textSize="16sp" />
 
         <LinearLayout
             android:id="@+id/infoFeat"
