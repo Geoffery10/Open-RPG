@@ -634,6 +634,17 @@ public class openlegend
         return featConnections;
     }
 
+    public void removeFeat(OLFeats feat) {
+        int index;
+        if (feats.contains(feat)) {
+            index = feats.indexOf(feat);
+            feats.remove(index);
+        }
+        else {
+            Log.d("removeFeat", "Feat not found");
+        }
+    }
+
     public void setFeats(ArrayList<OLFeats> feats) {
         this.feats = feats;
     }

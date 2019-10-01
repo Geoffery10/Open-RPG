@@ -20,8 +20,6 @@ import android.widget.Toast;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.dice.DiceActivity;
 
-import java.util.Arrays;
-
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 import static com.thecoredepository.mobile_rpg.dice.dice.attributeToDice;
 
@@ -129,10 +127,9 @@ public class OLSheetActivity extends AppCompatActivity {
         Button btnBoons = findViewById(R.id.btnBoons);
         Button btnFeats = findViewById(R.id.btnFeats);
 
+        //THIS IS BEING REPLACED BY FEATS MENU
         TextView txtFeats = findViewById(R.id.txtFeats);
-        player.setFeatPointsAvailable();
-        player.setFeatPointsUsed();
-        txtFeats.setText("Feats: " + player.getFeatPointsUsed() + "/" + player.getFeatPointsAvailable() + "\n" + player.getFeatsList());
+        txtFeats.setVisibility(View.GONE);
 
         //Button Clicks
         buttonClicks(btnBanes, btnBoons, btnInventory, btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection, btnFeats);

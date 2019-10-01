@@ -1,5 +1,7 @@
 package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,16 +25,29 @@ public class OLFeatsActivitiy extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ol_feats);
+        updateFeatsHeader();
         Intent intent = getIntent();
         //String selected = intent.getExtras().getString("selected");
-        TextView txtFeatHeader = findViewById(R.id.txtFeatsHeader);
-        txtFeatHeader.setText("Feats: " + player.getFeatPointsUsed() + "/" + player.getFeatPointsAvailable());
         RecyclerView recyclerView = findViewById(R.id.feat_view);
         add = false;
         remove = false;
         generateRecyclerView(add, remove, showAll, recyclerView);
 
 
+    }
+
+    public void updateFeatsHeader() {
+        player.setFeatPointsAvailable();
+        player.setFeatPointsUsed();
+        TextView txtFeatHeader = findViewById(R.id.txtFeatsHeader);
+        txtFeatHeader.setText("Feats: " + player.getFeatPointsUsed() + "/" + player.getFeatPointsAvailable());
+    }
+
+    public void updateFeatsHeader(Context context) {
+        player.setFeatPointsAvailable();
+        player.setFeatPointsUsed();
+        TextView txtFeatHeader = ((Activity)context).findViewById(R.id.txtFeatsHeader);
+        txtFeatHeader.setText("Feats: " + player.getFeatPointsUsed() + "/" + player.getFeatPointsAvailable());
     }
 
     @Override

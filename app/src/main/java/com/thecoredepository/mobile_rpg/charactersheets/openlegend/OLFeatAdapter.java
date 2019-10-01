@@ -1,5 +1,6 @@
 package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -62,6 +64,10 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         OLFeats feat = new OLFeats();
 
         holder.infoFeat.setVisibility(View.GONE);
+        holder.viewAddRemoveUpgradeFeat.setVisibility(View.GONE);
+        holder.spinnerAddRemoveUpgradeFeat.setVisibility(View.GONE);
+        holder.spinnerAddRemoveUpgradeFeat2.setVisibility(View.GONE);
+        holder.editAddRemoveUpgradeFeat.setVisibility(View.GONE);
 
         if (add == false && showAll == false)
         {
@@ -187,6 +193,9 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         else if (remove == true)
         {
             holder.viewAddRemoveUpgradeFeat.setVisibility(View.VISIBLE);
+            holder.spinnerAddRemoveUpgradeFeat.setVisibility(View.GONE);
+            holder.spinnerAddRemoveUpgradeFeat2.setVisibility(View.GONE);
+            holder.editAddRemoveUpgradeFeat.setVisibility(View.GONE);
             holder.btnAddRemove.setText("Remove");
             holder.btnAddRemove.setVisibility(View.VISIBLE);
             holder.btnUpgrade.setVisibility(View.GONE);
@@ -206,10 +215,17 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
             }
         });
 
+        Log.d("Position", ""+position);
+        final int finalPosition = position;
+        final OLFeats finalFeat = feat;
         holder.btnAddRemove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Remove Feat from Player then Reload
+                player.removeFeat(finalFeat);
+                notifyItemRemoved(finalPosition);
+                OLFeatsActivitiy updateFeatPoints = new OLFeatsActivitiy();
+                updateFeatPoints.updateFeatsHeader(context);
             }
         });
     }
@@ -269,7 +285,9 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         Button lblSpecial;
         TextView txtSpecial;
         LinearLayout viewAddRemoveUpgradeFeat;
+        EditText editAddRemoveUpgradeFeat;
         Spinner spinnerAddRemoveUpgradeFeat;
+        Spinner spinnerAddRemoveUpgradeFeat2;
         Button btnAddRemove;
         Button btnUpgrade;
 
@@ -288,7 +306,9 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
             lblSpecial = itemView.findViewById(R.id.lblSpecial);
             txtSpecial = itemView.findViewById(R.id.txtSpecial);
             viewAddRemoveUpgradeFeat = itemView.findViewById(R.id.viewAddRemoveUpgradeFeat);
+            editAddRemoveUpgradeFeat = itemView.findViewById(R.id.editAddRemoveUpgradeFeat);
             spinnerAddRemoveUpgradeFeat = itemView.findViewById(R.id.spinnerAddRemoveUpgradeFeat);
+            spinnerAddRemoveUpgradeFeat2 = itemView.findViewById(R.id.spinnerAddRemoveUpgradeFeat2);
             btnAddRemove = itemView.findViewById(R.id.btnAddRemove);
             btnUpgrade = itemView.findViewById(R.id.btnUpgrade);
         }

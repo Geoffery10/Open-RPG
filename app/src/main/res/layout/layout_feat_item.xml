@@ -31,7 +31,7 @@
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingBottom="15dp"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -131,14 +131,28 @@
                 android:orientation="vertical"
                 android:visibility="visible">
 
+                <EditText
+                    android:id="@+id/editAddRemoveUpgradeFeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SPECIAL..."
+                    android:textAlignment="center"
+                    android:textSize="15sp" />
+
                 <Spinner
                     android:id="@+id/spinnerAddRemoveUpgradeFeat"
                     style="@style/Platform.Widget.AppCompat.Spinner"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginRight="32dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:foregroundTint="@color/colorPrimaryDark"
+                    android:popupBackground="@drawable/paper_bg"
+                    android:spinnerMode="dialog"
+                    android:textSize="34sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <Spinner
+                    android:id="@+id/spinnerAddRemoveUpgradeFeat2"
+                    style="@style/Platform.Widget.AppCompat.Spinner"
                     android:backgroundTint="@color/colorAccent"
                     android:foregroundTint="@color/colorPrimaryDark"
                     android:popupBackground="@drawable/paper_bg"
