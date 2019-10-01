@@ -116,16 +116,16 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         }
         if (add == true || showAll == true) {
             feat = OLFeats.getFeatList().get(position);
-
             String btnFeatText = feat.getTitle() + " ";
-            if (feat.getConnection() != null) {
-                btnFeatText += " - ";
-            }
             if (feat.getMaxLevel() > 1) {
-                btnFeatText += "1-" + feat.getMaxLevel() + "  ";
+                int levelNum = feat.getMaxLevel();
+                btnFeatText += " - I-" + numberToRoman(levelNum);
+            }
+            else {
+                btnFeatText += " - I";
             }
 
-            btnFeatText += "[" + feat.getFeatCost() + "]";
+            btnFeatText += "  [" + feat.getFeatCost() + "]";
             holder.btnFeat.setText(btnFeatText);
             holder.txtDescription.setText(feat.getDescription());
             if (!feat.getPrerequisites().equals("None")) {
@@ -203,6 +203,13 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
                 {
                     holder.infoFeat.setVisibility(View.GONE);
                 }
+            }
+        });
+
+        holder.btnAddRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Remove Feat from Player then Reload
             }
         });
     }
