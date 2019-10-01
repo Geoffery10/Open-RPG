@@ -24,7 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:layout_marginBottom="8dp"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,15 +47,21 @@
                     android:text="@string/Blinded_description"
                     android:textSize="20sp" />
 
-                <Button
+                <TextView
+                    android:id="@+id/lblPrerequisites"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Prerequisites"
+                    android:textSize="25sp" />
+
+                <TextView
                     android:id="@+id/txtPrerequisites"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/colorAccent"
                     android:gravity="center"
                     android:text="Prerequisites"
                     android:textAllCaps="false"
-                    android:textColor="@color/textAccent"
                     android:textIsSelectable="true"
                     android:textSize="20sp" />
 
@@ -71,7 +78,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="EFFECT..."
-                    android:textAlignment="center"
                     android:textSize="20sp" />
 
                 <LinearLayout
@@ -94,34 +100,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="SPECIAL..."
-                        android:textAlignment="center"
                         android:textSize="20sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/connectionFeat"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:visibility="gone">
-
-                    <TextView
-                        android:id="@+id/lblConnection"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Connection"
-                        android:textSize="25sp"
-                        android:visibility="gone"/>
-
-                    <TextView
-                        android:id="@+id/txtConnection"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Connection..."
-                        android:textAlignment="center"
-                        android:textSize="20sp"
-                        android:visibility="gone"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

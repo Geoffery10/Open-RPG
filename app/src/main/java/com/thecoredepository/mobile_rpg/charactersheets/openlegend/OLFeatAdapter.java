@@ -34,12 +34,54 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         Log.d("Recycle", "onBindViewHolder called");
         OLFeats feat = new OLFeats();
         feat = player.getFeat(position);
 
-        holder.btnFeat.setText(feat.getTitle()+" - "+feat.getLevel()+"      "+feat.getFeatCost());
+        String btnFeatText = feat.getTitle() + " ";
+        if (feat.getConnection() != null) {
+            btnFeatText += "(" + feat.getConnection() + ") - ";
+        }
+        if (feat.getMaxLevel() > 1) {
+            btnFeatText += "1-" + feat.getMaxLevel() + "  ";
+        }
+
+        btnFeatText += "[" + feat.getFeatCost() + "]";
+        holder.btnFeat.setText(btnFeatText);
+        holder.txtDescription.setText(feat.getDescription());
+        if (!feat.getPrerequisites().equals("None")) {
+            holder.txtPrerequisites.setText(feat.getPrerequisites());
+            holder.lblPrerequisites.setVisibility(View.VISIBLE);
+            holder.txtPrerequisites.setVisibility(View.VISIBLE);
+        }
+        else {
+            holder.lblPrerequisites.setVisibility(View.GONE);
+            holder.txtPrerequisites.setVisibility(View.GONE);
+        }
+        holder.txtFeatEffect.setText(feat.getEffects());
+        if (!feat.getSpecial().equals("None")) {
+            holder.txtSpecial.setText(feat.getSpecial());
+            holder.txtSpecial.setVisibility(View.VISIBLE);
+        }
+        else {
+            holder.txtSpecial.setVisibility(View.GONE);
+        }
+
+        holder.btnFeat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Open Feat
+                if (holder.infoFeat.getVisibility() == View.GONE)
+                {
+                    holder.infoFeat.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    holder.infoFeat.setVisibility(View.GONE);
+                }
+            }
+        });
     }
 
     @Override
@@ -55,15 +97,13 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         LinearLayout infoFeat;
         TextView lblDescription;
         TextView txtDescription;
-        Button txtPrerequisites;
+        TextView lblPrerequisites;
+        TextView txtPrerequisites;
         TextView lblFeatEffect;
         TextView txtFeatEffect;
         LinearLayout specialFeat;
         TextView lblSpecial;
         TextView txtSpecial;
-        LinearLayout connectionFeat;
-        TextView lblConnection;
-        TextView txtConnection;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -72,15 +112,13 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
             infoFeat = itemView.findViewById(R.id.infoFeat);
             lblDescription = itemView.findViewById(R.id.lblDescription);
             txtDescription = itemView.findViewById(R.id.txtDescription);
+            lblPrerequisites = itemView.findViewById(R.id.lblPrerequisites);
             txtPrerequisites = itemView.findViewById(R.id.txtPrerequisites);
             lblFeatEffect = itemView.findViewById(R.id.lblFeatEffect);
             txtFeatEffect = itemView.findViewById(R.id.txtFeatEffect);
             specialFeat = itemView.findViewById(R.id.specialFeat);
             lblSpecial = itemView.findViewById(R.id.lblSpecial);
             txtSpecial = itemView.findViewById(R.id.txtSpecial);
-            connectionFeat = itemView.findViewById(R.id.connectionFeat);
-            lblConnection = itemView.findViewById(R.id.lblConnection);
-            txtConnection = itemView.findViewById(R.id.txtConnection);
         }
     }
 }

@@ -14,20 +14,14 @@
         android:textSize="30sp"
         android:gravity="center"/>
 
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feat_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:scrollbars="vertical" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/feat_view"></androidx.recyclerview.widget.RecyclerView>
-
-        </LinearLayout>
-    </ScrollView>
 </LinearLayout>

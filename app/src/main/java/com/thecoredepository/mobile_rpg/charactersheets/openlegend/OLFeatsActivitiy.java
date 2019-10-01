@@ -2,6 +2,7 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,6 +23,7 @@ public class OLFeatsActivitiy extends AppCompatActivity
         //String selected = intent.getExtras().getString("selected");
 
         RecyclerView recyclerView = findViewById(R.id.feat_view);
+
         for (int i = 0; i < player.getFeatCount(); i++)
         {
             OLFeatAdapter adapter = new OLFeatAdapter(this);
