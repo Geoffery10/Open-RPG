@@ -5,8 +5,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,6 +19,7 @@ import com.thecoredepository.mobile_rpg.R;
 import java.util.ArrayList;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
 
 public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder>
 {
@@ -142,6 +145,18 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         }
         if (add == true)
         {
+            player.setAllBanes();
+            player.setAllBoons();
+            ArrayList<String> connections = player.getAllBanes();
+            if (connections.size() > 0)
+            {
+                ArrayAdapter<String> featSpinner = new ArrayAdapter<String>(context, R.layout.spinner_style, connections);
+                holder.spinnerAddRemoveUpgradeFeat.setAdapter(featSpinner);
+                holder.spinnerAddRemoveUpgradeFeat.setVisibility(View.VISIBLE);
+            }
+            else {
+                holder.spinnerAddRemoveUpgradeFeat.setVisibility(View.GONE);
+            }
             holder.viewAddRemoveUpgradeFeat.setVisibility(View.VISIBLE);
             if (feat.getCanBeTakenMoreThanOnce() == true || !player.getFeats().contains(feat)) {
                 holder.btnAddRemove.setText("Add");
@@ -210,6 +225,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         Button lblSpecial;
         TextView txtSpecial;
         LinearLayout viewAddRemoveUpgradeFeat;
+        Spinner spinnerAddRemoveUpgradeFeat;
         Button btnAddRemove;
         Button btnUpgrade;
 
@@ -228,6 +244,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
             lblSpecial = itemView.findViewById(R.id.lblSpecial);
             txtSpecial = itemView.findViewById(R.id.txtSpecial);
             viewAddRemoveUpgradeFeat = itemView.findViewById(R.id.viewAddRemoveUpgradeFeat);
+            spinnerAddRemoveUpgradeFeat = itemView.findViewById(R.id.spinnerAddRemoveUpgradeFeat);
             btnAddRemove = itemView.findViewById(R.id.btnAddRemove);
             btnUpgrade = itemView.findViewById(R.id.btnUpgrade);
         }

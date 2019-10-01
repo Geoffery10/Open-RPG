@@ -81,9 +81,11 @@ public class openlegend
     private int wealth;
 
     //Banes/Boons
-    //This should be irrelevant now
-    private List Banes = new ArrayList<String>();
-    private List Boons = new ArrayList<String>();
+    private ArrayList Banes = new ArrayList<String>();
+    private ArrayList Boons = new ArrayList<String>();
+
+    private ArrayList AllBanes = new ArrayList<String>();
+    private ArrayList AllBoons = new ArrayList<String>();
 
     //Define Player
     public static List<openlegend> sheets = new ArrayList<openlegend>(); //Sheets
@@ -601,6 +603,28 @@ public class openlegend
         return featsStringList;
     }
 
+    public ArrayList<String> getFeatConnections() {
+        //THIS MIGHT BE OBSOLETE
+        ArrayList<String> featConnections = new ArrayList<>();
+        Iterator<OLFeats> iterator = feats.iterator();
+        while (iterator.hasNext()) {
+            OLFeats feat = iterator.next();
+            Log.i("Feats", feat.getTitle());
+            if (feat.getConnection() != null)
+            {
+                featConnections.add(feat.getConnection());
+            }
+        }
+        return featConnections;
+    }
+
+    public ArrayList<String> getFeatConnectionsBoons() {
+        //THIS MIGHT BE OBSOLETE
+        ArrayList<String> featConnections = new ArrayList<>();
+        featConnections = AllBanes;
+        return featConnections;
+    }
+
     public void setFeats(ArrayList<OLFeats> feats) {
         this.feats = feats;
     }
@@ -697,19 +721,96 @@ public class openlegend
         this.wealth = wealth -= 1;
     }
 
-    public List getBanes() {
+    public ArrayList getBanes() {
         return Banes;
     }
 
-    public void setBanes(List banes) {
+    public void setAllBanes() {
+        Log.i("Setting Banes/Boons", "Setting Banes");
+        AllBanes.clear();
+        AllBanes.add("Blinded");
+        AllBanes.add("Charmed");
+        AllBanes.add("Deafened");
+        AllBanes.add("Death");
+        AllBanes.add("Demoralized");
+        AllBanes.add("Disarmed");
+        AllBanes.add("Dominated");
+        AllBanes.add("Fatigued");
+        AllBanes.add("Fear");
+        AllBanes.add("Forced Move");
+        AllBanes.add("Immobile");
+        AllBanes.add("Incapacitated");
+        AllBanes.add("Knockdown");
+        AllBanes.add("Memory Alteration");
+        AllBanes.add("Mind Dredge");
+        AllBanes.add("Nullify");
+        AllBanes.add("Persistent Damage");
+        AllBanes.add("Phantasm");
+        AllBanes.add("Polymorph");
+        AllBanes.add("Provoked");
+        AllBanes.add("Spying");
+        AllBanes.add("Sickened");
+        AllBanes.add("Silenced");
+        AllBanes.add("Slowed");
+        AllBanes.add("Stunned");
+        AllBanes.add("Stupefied");
+        AllBanes.add("Charmed");
+        AllBanes.add("Truthfulness");
+    }
+
+    public ArrayList<String> getAllBanes() {
+        return AllBanes;
+    }
+
+    public void setAllBoons() {
+        Log.i("Setting Banes/Boons", "Setting Boons");
+        AllBoons.clear();
+        AllBoons.add("Absorb Object");
+        AllBoons.add("Animation");
+        AllBoons.add("Aura");
+        AllBoons.add("Barrier");
+        AllBoons.add("Blindsight");
+        AllBoons.add("Bolster");
+        AllBoons.add("Darkness");
+        AllBoons.add("Detection");
+        AllBoons.add("Flight");
+        AllBoons.add("Genesis");
+        AllBoons.add("Haste");
+        AllBoons.add("Heal");
+        AllBoons.add("Insubstantial");
+        AllBoons.add("Invisible");
+        AllBoons.add("Life Drain");
+        AllBoons.add("Light");
+        AllBoons.add("Precognition");
+        AllBoons.add("Reading");
+        AllBoons.add("Regeneration");
+        AllBoons.add("Resistance");
+        AllBoons.add("Restoration");
+        AllBoons.add("Seeing");
+        AllBoons.add("Shapeshift");
+        AllBoons.add("Summon Creature");
+        AllBoons.add("Sustenance");
+        AllBoons.add("Telekinesis");
+        AllBoons.add("Telepathy");
+        AllBoons.add("Teleport");
+        AllBoons.add("Tongues");
+        AllBoons.add("Transmutation");
+        AllBoons.add("Truesight");
+    }
+
+    public ArrayList<String> getAllBoons() {
+        return AllBoons;
+    }
+
+    public void setBanes(ArrayList banes) {
         Banes = banes;
     }
 
-    public List getBoons() {
+    public ArrayList getBoons() {
         return Boons;
     }
 
-    public void setBoons(List boons) {
+    public void setBoons(ArrayList boons) {
         Boons = boons;
     }
 
@@ -777,7 +878,7 @@ public class openlegend
         return player;
     }
 
-    public void newCharacter(String playerName, String type, String charName, String nickname, int majorLvl, int minorLvl, int levelTotal, String deity, String[] languages, String bio, int attributePointsAvalible, int getAttributePointsUsed, int agility, int fortitude, int might, int learning, int logic, int perception, int will, int deception, int persuasion, int presence, int alteration, int creation, int energy, int entropy, int influence, int movement, int prescience, int protection, int toughness, int guard, int armor, int resolve, int hitpoints, int damageTaken, int speed, int featPointsAvailable, int featPointsUsed, String[] perks, String[] flaws, int inventorySize, List items, List itemInfo, int wealth, List banes, List boons) {
+    public void newCharacter(String playerName, String type, String charName, String nickname, int majorLvl, int minorLvl, int levelTotal, String deity, String[] languages, String bio, int attributePointsAvalible, int getAttributePointsUsed, int agility, int fortitude, int might, int learning, int logic, int perception, int will, int deception, int persuasion, int presence, int alteration, int creation, int energy, int entropy, int influence, int movement, int prescience, int protection, int toughness, int guard, int armor, int resolve, int hitpoints, int damageTaken, int speed, int featPointsAvailable, int featPointsUsed, String[] perks, String[] flaws, int inventorySize, List items, List itemInfo, int wealth, ArrayList banes, ArrayList boons) {
         openlegend newChar = new openlegend();
 
         newChar.playerName = playerName;
