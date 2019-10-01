@@ -153,19 +153,37 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
             }
             holder.viewAddRemoveUpgradeFeat.setVisibility(View.GONE);
         }
+        //=================================ADD NEW FEAT=============================================
         if (add == true)
         {
+            //THIS SHOULD BE SET IN A MORE UNIVERSAL LOCATION LATER
             player.setAvaliableBanes();
             player.setAvaliableBoons();
 
+            //IF THERE IS A CONNECTION SHOW FIELDS
             if (!feat.getConnectionType().equals(""))
             {
                 //Show Connection Inputs based off ConnectionType labels
                 ArrayList<String> connections = new ArrayList<>();
+
+                //CONNECTION SETUPS
                 if (feat.getConnectionType().equals("Character"))
                 {
                     connections = (ArrayList<String>)sheetList.clone();
                     connections.remove(sheetList.indexOf(player.getCharName()));
+                }
+                else if (feat.getConnectionType().equals("Weapon/Attack Type"))
+                {
+                    //getAvailableWeaponAttackTypes is not setup yet
+                    //connections = (ArrayList<String>)player.getAvailableWeaponAttackTypes().clone();
+                }
+                else if (feat.getConnectionType().equals("Attribute"))
+                {
+                    //ATTRIBUTES HERE
+                }
+                else if (feat.getConnectionType().equals("AvailableBane"))
+                {
+                    connections = player.getAvailableBanes();
                 }
 
                 ArrayAdapter<String> featSpinner = new ArrayAdapter<String>(context, R.layout.spinner_style, connections);
@@ -189,6 +207,22 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
             else {
                 holder.btnUpgrade.setVisibility(View.GONE);
             }
+
+            final int finalPosition = position;
+            final OLFeats finalFeat = feat;
+            holder.btnAddRemove.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Add Feat to Player
+
+                    //Add Connection Data to Feat
+
+                    player.addFeat(finalFeat);
+                    //notifyItemRemoved(finalPosition);
+                    OLFeatsActivitiy updateFeatPoints = new OLFeatsActivitiy();
+                    updateFeatPoints.updateFeatsHeader(context);
+                }
+            });
         }
         else if (remove == true)
         {
