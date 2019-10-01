@@ -6,7 +6,7 @@
     android:background="@drawable/paper_bg">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtFeatsHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Feats"

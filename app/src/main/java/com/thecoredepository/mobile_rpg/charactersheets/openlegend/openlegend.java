@@ -91,10 +91,14 @@ public class openlegend
     private ArrayList AvailableBanes = new ArrayList<String>();
     private ArrayList AvailableBoons = new ArrayList<String>();
 
+    private ArrayList AvailableWeaponAttackTypes = new ArrayList<String>();
+    private ArrayList Attributes = new ArrayList<String>();
+    private ArrayList AttackTypes = new ArrayList<String>();
+
 
     //Define Player
-    public static List<openlegend> sheets = new ArrayList<openlegend>(); //Sheets
-    public static List<String> sheetList = new ArrayList<String>(); //List of Sheet Names
+    public static ArrayList<openlegend> sheets = new ArrayList<openlegend>(); //Sheets
+    public static ArrayList<String> sheetList = new ArrayList<String>(); //List of Sheet Names
     public static openlegend player = new openlegend(); //Current Sheets
 
     //Getters and Setters
@@ -943,6 +947,46 @@ public class openlegend
 
     public void setBoons(ArrayList boons) {
         Boons = boons;
+    }
+
+    public ArrayList getAvailableWeaponAttackTypes() {
+        return AvailableWeaponAttackTypes;
+    }
+
+    public void setAvailableWeaponAttackTypes(ArrayList availableWeaponAttackTypes) {
+        AvailableWeaponAttackTypes = availableWeaponAttackTypes;
+    }
+
+    public ArrayList getAttributes() {
+        return Attributes;
+    }
+
+    public void setAttributes(ArrayList attributes) {
+        Attributes = attributes;
+    }
+
+    public ArrayList getAttackTypes() {
+        return AttackTypes;
+    }
+
+    public void setAttackTypes(ArrayList attackTypes) {
+        AttackTypes = attackTypes;
+    }
+
+    public static ArrayList<openlegend> getSheets() {
+        return sheets;
+    }
+
+    public static void setSheets(ArrayList<openlegend> sheets) {
+        openlegend.sheets = sheets;
+    }
+
+    public static ArrayList<String> getSheetList() {
+        return sheetList;
+    }
+
+    public static void setSheetList(ArrayList<String> sheetList) {
+        openlegend.sheetList = sheetList;
     }
 
     public void setStats()

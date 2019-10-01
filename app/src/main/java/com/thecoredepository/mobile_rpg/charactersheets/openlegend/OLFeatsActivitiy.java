@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -24,6 +25,8 @@ public class OLFeatsActivitiy extends AppCompatActivity
         setContentView(R.layout.activity_ol_feats);
         Intent intent = getIntent();
         //String selected = intent.getExtras().getString("selected");
+        TextView txtFeatHeader = findViewById(R.id.txtFeatsHeader);
+        txtFeatHeader.setText("Feats: " + player.getFeatPointsUsed() + "/" + player.getFeatPointsAvailable());
         RecyclerView recyclerView = findViewById(R.id.feat_view);
         add = false;
         remove = false;
@@ -81,6 +84,8 @@ public class OLFeatsActivitiy extends AppCompatActivity
             OLFeatAdapter adapter = new OLFeatAdapter(this, player.getFeats(), add, remove, showAll);
             recyclerView.setAdapter(adapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            TextView txtFeatHeader = findViewById(R.id.txtFeatsHeader);
+            txtFeatHeader.setText("Feats: " + player.getFeatPointsUsed() + "/" + player.getFeatPointsAvailable());
         }
     }
 }

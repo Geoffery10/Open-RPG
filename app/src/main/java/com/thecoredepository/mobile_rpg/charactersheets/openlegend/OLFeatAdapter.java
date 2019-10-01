@@ -19,6 +19,8 @@ import com.thecoredepository.mobile_rpg.R;
 import java.util.ArrayList;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
 
 public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder>
 {
@@ -59,16 +61,19 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         Log.d("Recycle", "onBindViewHolder called");
         OLFeats feat = new OLFeats();
 
+        holder.infoFeat.setVisibility(View.GONE);
+
         if (add == false && showAll == false)
         {
             feat = getFeatsList(position);
 
-            String btnFeatText = feat.getTitle() + " ";
+            String btnFeatText = feat.getTitle() + "";
             if (feat.getConnection() != null) {
-                btnFeatText += "(" + feat.getConnection() + ") - ";
+                btnFeatText += " (" + feat.getConnection() + ")";
             }
             if (feat.getMaxLevel() > 1) {
-                btnFeatText += "1-" + feat.getMaxLevel() + "  ";
+                int levelNum = feat.getLevel();
+                btnFeatText += " - " + numberToRoman(levelNum) + "  ";
             }
 
             btnFeatText += "[" + feat.getFeatCost() + "]";
@@ -114,7 +119,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
 
             String btnFeatText = feat.getTitle() + " ";
             if (feat.getConnection() != null) {
-                btnFeatText += "(" + feat.getConnection() + ") - ";
+                btnFeatText += " - ";
             }
             if (feat.getMaxLevel() > 1) {
                 btnFeatText += "1-" + feat.getMaxLevel() + "  ";
@@ -146,9 +151,17 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         {
             player.setAvaliableBanes();
             player.setAvaliableBoons();
-            ArrayList<String> connections = player.getAvailableBanes();
-            if (connections.size() > 0)
+
+            if (!feat.getConnectionType().equals(""))
             {
+                //Show Connection Inputs based off ConnectionType labels
+                ArrayList<String> connections = new ArrayList<>();
+                if (feat.getConnectionType().equals("Character"))
+                {
+                    connections = (ArrayList<String>)sheetList.clone();
+                    connections.remove(sheetList.indexOf(player.getCharName()));
+                }
+
                 ArrayAdapter<String> featSpinner = new ArrayAdapter<String>(context, R.layout.spinner_style, connections);
                 holder.spinnerAddRemoveUpgradeFeat.setAdapter(featSpinner);
                 holder.spinnerAddRemoveUpgradeFeat.setVisibility(View.VISIBLE);
@@ -192,6 +205,31 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
                 }
             }
         });
+    }
+
+    private String numberToRoman(int levelNum) {
+        String result = "";
+        while (levelNum >= 10) {
+            result += "X";
+            levelNum -= 10;
+        }
+        while (levelNum >= 9) {
+            result += "IX";
+            levelNum -= 9;
+        }
+        while (levelNum >= 5) {
+            result += "V";
+            levelNum -= 5;
+        }
+        while (levelNum >= 4) {
+            result += "IV";
+            levelNum -= 4;
+        }
+        while (levelNum >= 1) {
+            result += "I";
+            levelNum -= 1;
+        }
+        return result;
     }
 
     @Override
