@@ -15,6 +15,7 @@ public class OLFeats
     private String effects;
     private String special;
     private String connection; //What companion name, bane/boon, or other connected string
+    private Boolean canBeTakenMoreThanOnce;
 
     public OLFeats copyFeat() {
         OLFeats newFeat = new OLFeats();
@@ -123,13 +124,21 @@ public class OLFeats
         this.connection = connection;
     }
 
+    public Boolean getCanBeTakenMoreThanOnce() {
+        return canBeTakenMoreThanOnce;
+    }
+
+    public void setCanBeTakenMoreThanOnce(Boolean canBeTakenMoreThanOnce) {
+        this.canBeTakenMoreThanOnce = canBeTakenMoreThanOnce;
+    }
+
     public static void featList()
     {
         OLFeats Alternate_Form = new OLFeats();
         Alternate_Form.setTitle("Alternate Form");
         Alternate_Form.setMaxLevel(2);
         Alternate_Form.setFeatCost(3);
-        Alternate_Form.setDescription("None");
+        Alternate_Form.setDescription("You have the ability to transform from one persona to another, whether that be through bodily transformation like a werewolf or through exterior mechanisms, such as a cybernetically enhanced soldier who can call forth a symbiotic mech suit.");
         Alternate_Form.setPrerequisites("None");
         Alternate_Form.setEffects("Upon taking this feat, you build a single alternate form using the normal character creation rules, though your attribute and feat points are determined by your tier in this feat:\n" +
                 "\n\tTier 1 - Half of your primary form's attribute points (rounded up), and 3 feat points.\n" +
@@ -154,7 +163,7 @@ public class OLFeats
         Armor_Mastery.setTitle("Armor Mastery");
         Armor_Mastery.setMaxLevel(2);
         Armor_Mastery.setFeatCost(3);
-        Armor_Mastery.setDescription("None");
+        Armor_Mastery.setDescription("Whether unloading your assault rifle on full-automatic or hurling a ball of flame, you are exceptionally precise at choosing targets for area attacks, allowing you to avoid allies who would otherwise be caught in the line of fire.");
         Armor_Mastery.setPrerequisites("None");
         Armor_Mastery.setEffects("Your training allows you to sleep in armor without gaining one level of the fatigued bane. In addition, while wearing armor, you gain the following benefits:\n\tTier 1 - The Fortitude prerequisite for wearing armor is reduced by 1. When wearing armor, you get a +1 armor bonus to your Guard defense.\n\tTier 2 - The Fortitude prerequisite for wearing armor is reduced by 2. When wearing armor, you get a +2 armor bonus to your Guard defense. Any movement penalty is reduced by 5'.");
         Armor_Mastery.setSpecial("None");
@@ -165,7 +174,7 @@ public class OLFeats
         Attack_Redirection.setTitle("Attack Redirection");
         Attack_Redirection.setMaxLevel(1);
         Attack_Redirection.setFeatCost(3);
-        Attack_Redirection.setDescription("None");
+        Attack_Redirection.setDescription("Whether you are a heavily armored mechanized knight or a nimble rogue in studded leather, you and your armor are one. Your training and experience at wearing armor allows you to maximize its protection and minimize its drawbacks.");
         Attack_Redirection.setPrerequisites("Defensive Reflexes II");
         Attack_Redirection.setEffects("When you make a defend action and your roll exceeds the attacker's action roll, you can choose to redirect the attack to a target that is neither you, nor the attacker. The original attack roll does not change, only the target. If the attack was a melee attack, you can redirect it to anyone within 5' of you (as opposed to within 5' of the attacker).");
         Attack_Redirection.setSpecial("None");
@@ -176,7 +185,7 @@ public class OLFeats
         Attack_Specialization.setTitle("Attack Specialization");
         Attack_Specialization.setMaxLevel(9);
         Attack_Specialization.setFeatCost(3);
-        Attack_Specialization.setDescription("None");
+        Attack_Specialization.setDescription("You are adept at redirecting your enemy's attacks. Whether using fancy footwork, magical force, or tactical superiority, you know how to force your enemy to attack unintended targets.");
         Attack_Specialization.setPrerequisites("Tier 1: Agility or Might or Any Extraordinary - 3\nTier 4: Agility or Might or Any Extraordinary - 5\nTier 7: Agility or Might or Any Extraordinary - 7");
         Attack_Specialization.setEffects("When you take this feat, select one weapon or attack type. You gain advantage 1 per tier of this feat for any damaging attack made with your chosen attack type. This bonus does not apply to bane attacks or boon invocations. Examples of attack types you can choose to specialize in include fire, cold, lightning, acid, poison, entropy, and force - though this list is not exhaustive.");
         Attack_Specialization.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new weapon or attack type each time. Your total advantage to an attack is equal to your tier for that particular weapon or attack type. For example, a character might have Attack Specialization II (Fire) for fire attacks and Attack Specialization IV (Longsword) for longsword attacks.");

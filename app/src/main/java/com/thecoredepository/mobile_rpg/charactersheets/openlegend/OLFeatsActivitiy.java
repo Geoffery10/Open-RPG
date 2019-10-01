@@ -26,7 +26,7 @@ public class OLFeatsActivitiy extends AppCompatActivity
 
         for (int i = 0; i < player.getFeatCount(); i++)
         {
-            OLFeatAdapter adapter = new OLFeatAdapter(this);
+            OLFeatAdapter adapter = new OLFeatAdapter(this, player.getFeats(), false, false);
             recyclerView.setAdapter(adapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
         }

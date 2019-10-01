@@ -14,15 +14,32 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
 
+import java.util.ArrayList;
+
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 
 public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder>
 {
     private Context context;
+    private Boolean add;
+    private Boolean remove;
 
-    public OLFeatAdapter(Context context)
+    public ArrayList<OLFeats> getFeatsList() {
+        return featsList;
+    }
+
+    public OLFeats getFeatsList(int position) {
+        return featsList.get(position);
+    }
+
+    private ArrayList<OLFeats> featsList = new ArrayList<>();
+
+    public OLFeatAdapter(Context context, ArrayList<OLFeats> feats, Boolean add, Boolean remove)
     {
         this.context = context;
+        this.featsList = feats;
+        this.add = add;
+        this.remove = remove;
     }
 
     @NonNull
@@ -37,7 +54,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         Log.d("Recycle", "onBindViewHolder called");
         OLFeats feat = new OLFeats();
-        feat = player.getFeat(position);
+        feat = getFeatsList(position);
 
         String btnFeatText = feat.getTitle() + " ";
         if (feat.getConnection() != null) {
