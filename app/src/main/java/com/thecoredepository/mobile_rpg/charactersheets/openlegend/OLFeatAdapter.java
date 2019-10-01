@@ -199,6 +199,19 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
             holder.btnAddRemove.setText("Remove");
             holder.btnAddRemove.setVisibility(View.VISIBLE);
             holder.btnUpgrade.setVisibility(View.GONE);
+
+            final int finalPosition = position;
+            final OLFeats finalFeat = feat;
+            holder.btnAddRemove.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Remove Feat from Player then Reload
+                    player.removeFeat(finalFeat);
+                    notifyItemRemoved(finalPosition);
+                    OLFeatsActivitiy updateFeatPoints = new OLFeatsActivitiy();
+                    updateFeatPoints.updateFeatsHeader(context);
+                }
+            });
         }
         holder.btnFeat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -215,19 +228,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
             }
         });
 
-        Log.d("Position", ""+position);
-        final int finalPosition = position;
-        final OLFeats finalFeat = feat;
-        holder.btnAddRemove.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Remove Feat from Player then Reload
-                player.removeFeat(finalFeat);
-                notifyItemRemoved(finalPosition);
-                OLFeatsActivitiy updateFeatPoints = new OLFeatsActivitiy();
-                updateFeatPoints.updateFeatsHeader(context);
-            }
-        });
+
     }
 
     private String numberToRoman(int levelNum) {

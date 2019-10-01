@@ -634,6 +634,10 @@ public class openlegend
         return featConnections;
     }
 
+    public void addFeat(OLFeats feat) {
+        this.feats.add(feat);
+    }
+
     public void removeFeat(OLFeats feat) {
         int index;
         if (feats.contains(feat)) {
