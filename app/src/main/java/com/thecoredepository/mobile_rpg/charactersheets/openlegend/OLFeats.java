@@ -145,6 +145,7 @@ public class OLFeats
                 "\n\tTier 2 - Same attribute points as your primary form, and 3 feat points less than your primary form.\n" +
                 "Whenever your primary form gains new attribute points or levels up, your alternate form also gains points according to the above formulas. As a focus action, you may change between any two forms (including your primary form or any alternate form). You maintain this capability in all of your forms. Each form is treated as a completely different character for mechanical purposes - possessing different attributes, feats, perks, flaws, and other defining characteristics. Your alternate form does, however, retain the ability to transform back into your primary form. In order to keep track of hit points, you should always record the total damage that your character has suffered. When transforming, your damage remains with you even if your maximum hit points change. For example, Dr. Jekyll has a max HP of 15 and Mr. Hyde has a max HP of 30. During combat, Mr. Hyde suffers 10 damage. When he later transforms back into Dr. Jekyll, the 10 damage remains and is subtracted from his new maximum, leaving the doctor with 5 out of 15 hit points. Additionally, when changing forms, if your hit points would be reduced to less than 1, your hit point total becomes 1 instead.");
         Alternate_Form.setSpecial("When selecting feats for your alternate form, you may not select the Alternate Form feat. With GM approval, you may take this feat multiple times. If you do, you get access to an additional form. Multiple Alternate Forms can be a powerful way of accumulating new feat points and attributes. The GM should prevent players from exploiting the feat to create an overly powerful character.");
+        Alternate_Form.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Alternate_Form);
 
@@ -189,6 +190,7 @@ public class OLFeats
         Attack_Specialization.setPrerequisites("Tier 1: Agility or Might or Any Extraordinary - 3\nTier 4: Agility or Might or Any Extraordinary - 5\nTier 7: Agility or Might or Any Extraordinary - 7");
         Attack_Specialization.setEffects("When you take this feat, select one weapon or attack type. You gain advantage 1 per tier of this feat for any damaging attack made with your chosen attack type. This bonus does not apply to bane attacks or boon invocations. Examples of attack types you can choose to specialize in include fire, cold, lightning, acid, poison, entropy, and force - though this list is not exhaustive.");
         Attack_Specialization.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new weapon or attack type each time. Your total advantage to an attack is equal to your tier for that particular weapon or attack type. For example, a character might have Attack Specialization II (Fire) for fire attacks and Attack Specialization IV (Longsword) for longsword attacks.");
+        Attack_Specialization.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Attack_Specialization);
 
@@ -211,6 +213,7 @@ public class OLFeats
         Bane_Focus.setPrerequisites("Ability to invoke the chosen bane");
         Bane_Focus.setEffects("Choose a bane that you can invoke. When your roll on a damaging attack exceeds the target's defense by 5 or more (as opposed to the usual 10), you can inflict this bane for free. Each attack is still only capable of inflicting a single bane. Furthermore, when making a bane attack to inflict your chosen bane, you gain advantage 2 on the bane attack roll.");
         Bane_Focus.setSpecial("You may take this feat multiple times. Each time you do, choose a different bane.");
+        Bane_Focus.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Bane_Focus);
 
@@ -266,6 +269,7 @@ public class OLFeats
         Boon_Access.setPrerequisites("None");
         Boon_Access.setEffects("When you choose this feat, choose one boon that you do not have the requisite attribute to invoke. The cost of this feat is equal to the power level of the chosen boon. You can invoke the chosen boon despite lacking the necessary attribute. For invocation rolls, treat your attribute score as the power level of the boon. If the boon has multiple attribute prerequisite options, you choose one attribute when you take this feat. Additionally, you count as having access to the chosen boon for the purpose of meeting feat prerequisites, and your attribute for meeting such prerequisites is equal to the power level of the boon. The Boon Access feat bypasses the normal attribute score restrictions based on character level, so a first level character could spend all 6 of their feat points to begin play with access to a power level 6 boon. You may acquire this feat multiple times. Each time, select a new boon.");
         Boon_Access.setSpecial("You may take this feat multiple times. Each time you do, choose a new boon to gain access to. Note that this feat can give access to high-powered boons with a potential for very dramatic impact on the storyline of a game. As such, using this feat to access a boon of power level 6 or higher should be approved by the GM before using it in a game. If you ever meet the attribute prerequisite for the chosen boon, you may choose at that time to lose this feat and regain the feat points spent. Re-allocate them as you choose.");
+        Boon_Access.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Boon_Access);
 
@@ -277,6 +281,7 @@ public class OLFeats
         Boon_Focus.setPrerequisites("Ability to invoke the chosen boon");
         Boon_Focus.setEffects("Choose a single boon that you can invoke. You gain benefits with that boon according to your tier in this feat.\n\tTier 1 - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. You can invoke the boon at any of the power levels you could access via your other means. If the invocation is not a single target, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.\n\tTier 2 - You gain advantage 3 on your action roll to invoke the boon if you are not single-targeting. Additionally, you may invoke the boon one time increment faster, as follows: If the invocation time is a major action or move action, it becomes a minor action. If the invocation time is 1 focus action, it becomes 1 major action. If the invocation time is 1 minute, it becomes 1 focus action. If the invocation time is 10 minutes, it becomes 1 minute. If the invocation time is 1 hour, it becomes 10 minutes. If the invocation time is 8 hours, it becomes 1 hour. If the invocation time for a boon is 1 minor action, it can be invoked only once as a minor action. Beyond that it can be invoked by expending a move or major action.\n\tTier 3 - The effect at tier 3 varies based on the duration of the boon:\nIf the chosen boon has a duration of \"sustain persists\", you gain advantage 4 on your action roll to invoke if you are not single-targeting. Additionally, one instance of the boon can be sustained each round as a free action, rather than a minor action. If the boon is somehow temporarily canceled, in the absence of other rules, you can invoke it again as a free action. If targeted by the nullify bane, this effect can only be canceled by a power level 6 or greater invocation of that bane.");
         Boon_Focus.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new boon each time. Your tier of this feat is independent for each boon.");
+        Boon_Focus.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Boon_Focus);
 
@@ -343,6 +348,7 @@ public class OLFeats
         Companion.setPrerequisites("None");
         Companion.setEffects("You gain a companion character that acts independently from you. During combat, your companion acts on its own initiative count and gains the usual assortment of actions, which you may choose. You also get to assign your companion's attributes. Whenever you gain a level or purchase a new tier in this feat, you may reassign your companion's attributes and feats.\n\tTier 1 - Your companion has a total of 20 attribute points plus 4 per level of your character.\n\tTier 2 - Your companion receives 3 feat points.\n\tTier 3 - Your companion has a total of 30 attribute points plus 6 per level of your character. In addition, you can optionally grant feats to your companion. In order to do so, you spend your own feat points and the companion receives the feat instead of you. The companion, not you, must meet all feat prerequisites. Any math related to these feats are calculated based on the companion's attributes, feats, etc. If you have spent feat points this way and would gain feat points from any other effect, those feat points are reduced by the number of feat points you have granted to your companion.");
         Companion.setSpecial("If you ever lose your companion, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and any of the companion's feats, and may spend them as usual. In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new companion each time.");
+        Companion.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Companion);
 
@@ -354,6 +360,7 @@ public class OLFeats
         Craft_Mundane_Item.setPrerequisites("Learning or Logic - 3 or Knowledge I");
         Craft_Mundane_Item.setEffects("Choose a specific craft or profession. You can create items that are relevant to your chosen craft, and your GM will determine the speed at which you craft based on the nature of the item and the materials you have access to. Your tier in the Craft Mundane Item feat determines the maximum wealth level of the items you can craft. Unlike acquiring items by using your wealth (described in Chapter 5), crafting does not limit your ability to acquire additional goods.\n\tTier 1 - You can craft items equal to your wealth level.\n\tTier 2 - You can craft items equal to your wealth level + 1.\nCraft Examples (This list is not exhaustive, and you can work with your GM to come up with other suitable crafts):\n\tAlchemy - acid, chemicals, non-magical tinctures, incense, reagents.\n\tArcane - magical ingredients, inks, scrolls, exotic components.\n\tBlacksmithing - metal, leather, weapons, armor, wheels, horseshoes.\n\tChemistry - acid, explosives, narcotics.\n\tEngineering - machines, wheels, gears, guns, vehicles.\n\tGeography - maps, cartography, instruments of navigation.\n\tHerbalism - poultices, natural remedies, stimulants, brewing.\n\tMedicine - medical tools, tonics, tinctures, pain relievers, anti-toxins.");
         Craft_Mundane_Item.setSpecial("In addition to taking multiple tiers of this feat, you may take this feat multiple times and select a new craft or profession each time.");
+        Craft_Mundane_Item.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Craft_Mundane_Item);
 
@@ -453,6 +460,7 @@ public class OLFeats
         Energy_Resistance.setPrerequisites("None");
         Energy_Resistance.setEffects("Choose from the following energy types: fire, cold, lightning, acid, poison, or another at the GM's discretion. When you are attacked with that energy type, you gain resistance to the attack as follows:\n\tTier 1 - Your defense scores are increased by 3 against the chosen energy type.\n\tTier 2 - Your defense scores are increased by 6 against the chosen energy type.\n\tTier 3 - Your defense scores are increased by 9 against the chosen energy type.\n\tTier 4 - You are immune to damage and harmful effects from the chosen energy type.");
         Energy_Resistance.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new energy type each time.");
+        Energy_Resistance.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Energy_Resistance);
 
@@ -475,6 +483,7 @@ public class OLFeats
         Extraordinary_Focus.setPrerequisites("Any Extraordinary - 1");
         Extraordinary_Focus.setEffects("With the approval of your GM, choose a focus from which your power with a single extraordinary attribute stems. Some possibilities include a wand, a digital psi amplifier, a crystal ball, a spell book, a holy symbol, a weapon, your voice, or an animal familiar. You cannot use the selected extraordinary attribute without your focus. The focus heightens your power and for the purposes of determining your attribute dice for action rolls, you treat the chosen attribute as if it was one greater. For all purposes outside of attribute dice, your ability score remains unchanged (feats, banes, boons, etc.).");
         Extraordinary_Focus.setSpecial("If you ever lose your extraordinary focus, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and may spend them as usual. You may take this feat multiple times. If you do, select a new attribute not chosen previously. For each instance of this feat, you may choose an existing focus or select a new one.");
+        Extraordinary_Focus.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Extraordinary_Focus);
 
@@ -640,6 +649,7 @@ public class OLFeats
         Knowledge.setPrerequisites("None");
         Knowledge.setEffects("When you take this feat, choose a sphere of knowledge from the list below or, with the GM's approval, create a new one.\nExample spheres of knowledge include alchemy, anatomy, arcane, computers, explosives, engineering, geography, herbalism, history, location (must specify), medicine, military strategy, supernatural, and wilderness.\nYour tier in this feat determines how knowledgeable you are within your chosen sphere.\n\tTier 1 - You automatically succeed on any action roll related to your chosen sphere of knowledge with a CR of 16 or lower. For higher CRs, your Learning attribute is considered to be 3 for the action roll unless your Learning score is already 3 or higher, in which case you gain advantage 1 on the roll.\n\tTier 2 - You automatically succeed on any action roll related to your chosen sphere of knowledge with a CR of 22 or lower. For higher CRs, your Learning attribute is considered to be 6 for the action roll unless your Learning score is already 6 or higher, in which case you gain advantage 1 on the roll.\n\tTier 3 - You automatically succeed on any action roll related to your chosen sphere of knowledge with a CR of 26 or lower. For higher CRs, your Learning attribute is considered to be 8 for the action roll unless your Learning score is already 8 or higher, in which case you gain advantage 1 on the roll.");
         Knowledge.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new sphere of knowledge each time. Purchasing this feat in this way confers no benefit on other spheres of knowledge.");
+        Knowledge.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Knowledge);
 
@@ -673,6 +683,7 @@ public class OLFeats
         Longshot.setPrerequisites("Agility or Might or Any Extraordinary - 5");
         Longshot.setEffects("When you take this feat, select one weapon or attack type. Examples of attack types you include fire, cold, lightning, acid, poison, entropy, creation, and force - though this list is not exhaustive. With the chosen weapon or attack type, your range with that weapon or attribute is doubled.");
         Longshot.setSpecial("You may take this feat multiple times. If you do, select a new weapon or attack type each time.");
+        Longshot.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Longshot);
 
@@ -750,6 +761,7 @@ public class OLFeats
         Multi_Target_Attack_Specialist.setPrerequisites("None");
         Multi_Target_Attack_Specialist.setEffects("When you choose this feat, you must decide to focus in area, ranged, or melee attacks. For each tier, you reduce the disadvantage penalty associated with multi-targeting for your chosen attack type by 1.");
         Multi_Target_Attack_Specialist.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new multi-target mode (area, ranged, or melee) each time. Track your feat tier separately for each targeting mode that you select for this feat.");
+        Multi_Target_Attack_Specialist.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Multi_Target_Attack_Specialist);
 
@@ -860,6 +872,7 @@ public class OLFeats
         Skill_Specialization.setPrerequisites("None");
         Skill_Specialization.setEffects("Choose one attribute. Any time you make a roll using the chosen attribute that is not for initiative, attacks, invocations, or the defend action, you gain advantage 1 on the roll per tier of this feat you possess for that attribute.");
         Skill_Specialization.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new attribute each time. Track your feat tier separately for each attribute that you choose for this feat.");
+        Skill_Specialization.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Skill_Specialization);
 
@@ -894,7 +907,8 @@ public class OLFeats
         Sworn_Enemy.setPrerequisites("None");
         Sworn_Enemy.setEffects("Choose a species, race, or faction (e.g., dragons, Void Templars, gnolls, or vampires). You learn the primary conversational language of that species, and at the GM's discretion, you may have some level of access to other special forms of communication (such as thieves' cant or secret hand signals). Furthermore, you gain advantage 1 per tier of this feat to all Mental attribute rolls (Learning, Logic, Perception, and Will) pertaining to your chosen group.");
         Sworn_Enemy.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new group each time. Your total advantage on Mental attribute rolls is equal to your tier for that particular group. For example, a character might have Sworn Enemy II (Void Templars) and Sworn Enemy IV (Werewolves).");
-
+        Sworn_Enemy.setCanBeTakenMoreThanOnce(true);
+        
         featList.add(Sworn_Enemy);
 
         OLFeats Tough_as_Nails = new OLFeats();
