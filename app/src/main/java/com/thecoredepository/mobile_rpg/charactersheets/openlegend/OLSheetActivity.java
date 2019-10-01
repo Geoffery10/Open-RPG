@@ -127,6 +127,7 @@ public class OLSheetActivity extends AppCompatActivity {
         Button btnInventory = findViewById(R.id.btnInventory);
         Button btnBanes = findViewById(R.id.btnBanes);
         Button btnBoons = findViewById(R.id.btnBoons);
+        Button btnFeats = findViewById(R.id.btnFeats);
 
         TextView txtFeats = findViewById(R.id.txtFeats);
         player.setFeatPointsAvailable();
@@ -134,7 +135,7 @@ public class OLSheetActivity extends AppCompatActivity {
         txtFeats.setText("Feats: " + player.getFeatPointsUsed() + "/" + player.getFeatPointsAvailable() + "\n" + player.getFeatsList());
 
         //Button Clicks
-        buttonClicks(btnBanes, btnBoons, btnInventory, btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection);
+        buttonClicks(btnBanes, btnBoons, btnInventory, btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection, btnFeats);
 
         //Element Visibility and Values
         setAttributes(txtAgility, LLAgility, btnAgility, txtFortitude, LLFortitude, btnFortitude, txtMight, LLMight, btnMight, txtLearning, LLLearning, btnLearning, txtLogic, LLLogic, btnLogic, txtPerception, LLPerception, btnPerception, txtWill, LLWill, btnWill, txtDeception, LLDeception, btnDeception, txtPersuasion, LLPersuasion, btnPersuasion, txtPresence, LLPresence, btnPresence, txtAlteration, LLAlteration, btnAlteration, txtCreation, LLCreation, btnCreation, txtEnergy, LLEnergy, btnEnergy, txtEntropy, LLEntropy, btnEntropy, txtInfluence, LLInfluence, btnInfluence, txtMovement, LLMovement, btnMovement, txtPrescience, LLPrescience, btnPrescience, txtProtection, LLProtection, btnProtection);
@@ -447,7 +448,7 @@ public class OLSheetActivity extends AppCompatActivity {
         }
     }
 
-    private void buttonClicks(Button btnBanes, Button btnBoons, Button btnInventory, Button btnAgility, Button btnFortitude, Button btnMight, Button btnLearning, Button btnLogic, Button btnPerception, Button btnWill, Button btnDeception, Button btnPersuasion, Button btnPresence, Button btnAlteration, Button btnCreation, Button btnEnergy, Button btnEntropy, Button btnInfluence, Button btnMovement, Button btnPrescience, Button btnProtection) {
+    private void buttonClicks(Button btnBanes, Button btnBoons, Button btnInventory, Button btnAgility, Button btnFortitude, Button btnMight, Button btnLearning, Button btnLogic, Button btnPerception, Button btnWill, Button btnDeception, Button btnPersuasion, Button btnPresence, Button btnAlteration, Button btnCreation, Button btnEnergy, Button btnEntropy, Button btnInfluence, Button btnMovement, Button btnPrescience, Button btnProtection, Button btnFeats) {
         btnBanes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -633,6 +634,16 @@ public class OLSheetActivity extends AppCompatActivity {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
                 in.putExtra("dice", attributeToDice(player.getProtection()));
+                startActivity(in);
+            }
+        });
+
+        btnFeats.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Open Feats Menu
+                Intent in = new Intent(getApplicationContext(), OLFeatsActivitiy.class);
+                //in.putExtra("dice", attributeToDice(player.getProtection()));
                 startActivity(in);
             }
         });

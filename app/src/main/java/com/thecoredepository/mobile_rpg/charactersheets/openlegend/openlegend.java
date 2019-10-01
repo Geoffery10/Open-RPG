@@ -548,6 +548,14 @@ public class openlegend
         return feats;
     }
 
+    public OLFeats getFeat(int index) {
+        return feats.get(index);
+    }
+
+    public int getFeatCount() {
+        return feats.size();
+    }
+
     public String getFeatsList() {
         String featsStringList = "";
         Log.i("Feats", "Running getFeatsList()");
