@@ -15,7 +15,7 @@ public class OLFeats
     private String effects;
     private String special;
     private String connection; //What companion name, bane/boon, or other connected string
-    private Boolean canBeTakenMoreThanOnce;
+    private Boolean canBeTakenMoreThanOnce = false;
 
     public OLFeats copyFeat() {
         OLFeats newFeat = new OLFeats();
@@ -908,7 +908,7 @@ public class OLFeats
         Sworn_Enemy.setEffects("Choose a species, race, or faction (e.g., dragons, Void Templars, gnolls, or vampires). You learn the primary conversational language of that species, and at the GM's discretion, you may have some level of access to other special forms of communication (such as thieves' cant or secret hand signals). Furthermore, you gain advantage 1 per tier of this feat to all Mental attribute rolls (Learning, Logic, Perception, and Will) pertaining to your chosen group.");
         Sworn_Enemy.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new group each time. Your total advantage on Mental attribute rolls is equal to your tier for that particular group. For example, a character might have Sworn Enemy II (Void Templars) and Sworn Enemy IV (Werewolves).");
         Sworn_Enemy.setCanBeTakenMoreThanOnce(true);
-        
+
         featList.add(Sworn_Enemy);
 
         OLFeats Tough_as_Nails = new OLFeats();
