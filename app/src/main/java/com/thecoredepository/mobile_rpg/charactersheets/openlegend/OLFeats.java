@@ -164,7 +164,7 @@ public class OLFeats
         Area_Manipulation.setTitle("Area Manipulation");
         Area_Manipulation.setMaxLevel(5);
         Area_Manipulation.setFeatCost(1);
-        Area_Manipulation.setDescription("None");
+        Area_Manipulation.setDescription("Whether unloading your assault rifle on full-automatic or hurling a ball of flame, you are exceptionally precise at choosing targets for area attacks, allowing you to avoid allies who would otherwise be caught in the line of fire.");
         Area_Manipulation.setPrerequisites("None");
         Area_Manipulation.setEffects("For each tier of this feat you possess, you can omit a single 5-foot square from being targeted as part of an area attack.");
         Area_Manipulation.setSpecial("None");

@@ -802,6 +802,7 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginHorizontal="5dp"
                     android:padding="18dp"
+                    android:layout_marginBottom="32dp"
                     android:text="Feats" />
 
                 <TextView
