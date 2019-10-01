@@ -552,6 +552,32 @@ public class openlegend
         return feats.get(index);
     }
 
+    public int getFeatIndex(OLFeats feat) {
+        int index = 0;
+        if (feats.contains(feat)) {
+            index = feats.indexOf(feat);
+        }
+        else {
+            Log.d("getFeatIndex", "Feat not found");
+        }
+        return index;
+    }
+
+    public int getFeatLevel(OLFeats feat)
+    {
+        int index;
+        int level = 0;
+        if (feats.contains(feat)) {
+            index = feats.indexOf(feat);
+            feat = (feats.get(index));
+            level = feat.getLevel();
+        }
+        else {
+            Log.d("getFeatLevel", "Feat not found");
+        }
+        return level;
+    }
+
     public int getFeatCount() {
         return feats.size();
     }

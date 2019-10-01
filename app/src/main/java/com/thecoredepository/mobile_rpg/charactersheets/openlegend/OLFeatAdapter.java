@@ -21,8 +21,9 @@ import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openle
 public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder>
 {
     private Context context;
-    private Boolean add;
-    private Boolean remove;
+    private Boolean add = false;
+    private Boolean remove = false;
+    private Boolean showAll = false;
 
     public ArrayList<OLFeats> getFeatsList() {
         return featsList;
@@ -34,12 +35,13 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
 
     private ArrayList<OLFeats> featsList = new ArrayList<>();
 
-    public OLFeatAdapter(Context context, ArrayList<OLFeats> feats, Boolean add, Boolean remove)
+    public OLFeatAdapter(Context context, ArrayList<OLFeats> feats, Boolean add, Boolean remove, Boolean showAll)
     {
         this.context = context;
         this.featsList = feats;
         this.add = add;
         this.remove = remove;
+        this.showAll = showAll;
     }
 
     @NonNull
@@ -55,7 +57,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         Log.d("Recycle", "onBindViewHolder called");
         OLFeats feat = new OLFeats();
 
-        if (add == false && remove == false)
+        if (add == false && showAll == false)
         {
             feat = getFeatsList(position);
 
@@ -105,9 +107,8 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
                 }
             });
         }
-        else if (add == true)
-        {
-            feat = getFeatsList(position);
+        if (add == true || showAll == true) {
+            feat = OLFeats.getFeatList().get(position);
 
             String btnFeatText = feat.getTitle() + " ";
             if (feat.getConnection() != null) {
@@ -137,7 +138,10 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
             else {
                 holder.txtSpecial.setVisibility(View.GONE);
             }
-
+            holder.viewAddRemoveUpgradeFeat.setVisibility(View.GONE);
+        }
+        if (add == true)
+        {
             holder.viewAddRemoveUpgradeFeat.setVisibility(View.VISIBLE);
             if (feat.getCanBeTakenMoreThanOnce() == true || !player.getFeats().contains(feat)) {
                 holder.btnAddRemove.setText("Add");
@@ -146,35 +150,49 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
             else {
                 holder.btnAddRemove.setVisibility(View.GONE);
             }
-            if (player.getFeats().contains(feat)) {
-                //Does not check if max feat level has been reached yet
+            if (player.getFeats().contains(feat) && player.getFeatLevel(feat) < feat.getMaxLevel()) {
                 holder.btnUpgrade.setVisibility(View.VISIBLE);
             }
             else {
                 holder.btnUpgrade.setVisibility(View.GONE);
             }
-
-            holder.btnFeat.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //Open Feat
-                    if (holder.infoFeat.getVisibility() == View.GONE)
-                    {
-                        holder.infoFeat.setVisibility(View.VISIBLE);
-                    }
-                    else
-                    {
-                        holder.infoFeat.setVisibility(View.GONE);
-                    }
-                }
-            });
         }
+        else if (remove == true)
+        {
+            holder.viewAddRemoveUpgradeFeat.setVisibility(View.VISIBLE);
+            holder.btnAddRemove.setText("Remove");
+            holder.btnAddRemove.setVisibility(View.VISIBLE);
+            holder.btnUpgrade.setVisibility(View.GONE);
+        }
+        holder.btnFeat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Open Feat
+                if (holder.infoFeat.getVisibility() == View.GONE)
+                {
+                    holder.infoFeat.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    holder.infoFeat.setVisibility(View.GONE);
+                }
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        Log.d("Recycle", "Size: " + player.getFeatCount());
-        return player.getFeatCount();
+        int size = 0;
+        if (add == false && showAll == false) {
+            Log.d("Recycle", "Size: " + player.getFeatCount());
+            size = player.getFeatCount();
+        }
+        else if (add == true || showAll == true) {
+            Log.d("Recycle", "Size: " + OLFeats.getFeatList().size());
+            size = OLFeats.getFeatList().size() / 2;
+        }
+
+        return size;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
