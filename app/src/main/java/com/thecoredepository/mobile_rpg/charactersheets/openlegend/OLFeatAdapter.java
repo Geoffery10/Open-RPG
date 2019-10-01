@@ -95,14 +95,14 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         LinearLayout viewFeat;
         Button btnFeat;
         LinearLayout infoFeat;
-        TextView lblDescription;
+        Button lblDescription;
         TextView txtDescription;
-        TextView lblPrerequisites;
+        Button lblPrerequisites;
         TextView txtPrerequisites;
-        TextView lblFeatEffect;
+        Button lblFeatEffect;
         TextView txtFeatEffect;
         LinearLayout specialFeat;
-        TextView lblSpecial;
+        Button lblSpecial;
         TextView txtSpecial;
 
         public ViewHolder(@NonNull View itemView) {

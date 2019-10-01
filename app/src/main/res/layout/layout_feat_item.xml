@@ -17,14 +17,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
-            android:text="FEAT TITLE - LEVEL     (COST)" />
+            android:backgroundTint="@color/colorPrimary"
+            android:text="FEAT TITLE - LEVEL     (COST)"
+            android:textColor="@color/textAccent" />
 
         <LinearLayout
             android:id="@+id/infoFeat"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
             android:visibility="gone">
 
             <LinearLayout
@@ -32,13 +37,16 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
+                <Button
                     android:id="@+id/lblDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:clickable="false"
                     android:gravity="center"
                     android:text="Description"
-                    android:textSize="25sp" />
+                    android:textColor="@color/textAccent"
+                    android:backgroundTint="@color/colorPrimaryLight"
+                    android:textSize="14dp" />
 
                 <TextView
                     android:id="@+id/txtDescription"
@@ -47,13 +55,16 @@
                     android:text="@string/Blinded_description"
                     android:textSize="20sp" />
 
-                <TextView
+                <Button
                     android:id="@+id/lblPrerequisites"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:clickable="false"
                     android:gravity="center"
                     android:text="Prerequisites"
-                    android:textSize="25sp" />
+                    android:textColor="@color/textAccent"
+                    android:backgroundTint="@color/colorPrimaryLight"
+                    android:textSize="14dp" />
 
                 <TextView
                     android:id="@+id/txtPrerequisites"
@@ -65,13 +76,16 @@
                     android:textIsSelectable="true"
                     android:textSize="20sp" />
 
-                <TextView
+                <Button
                     android:id="@+id/lblFeatEffect"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:clickable="false"
                     android:gravity="center"
                     android:text="Effect"
-                    android:textSize="25sp" />
+                    android:textColor="@color/textAccent"
+                    android:backgroundTint="@color/colorPrimaryLight"
+                    android:textSize="14dp" />
 
                 <TextView
                     android:id="@+id/txtFeatEffect"
@@ -87,13 +101,16 @@
                     android:orientation="vertical"
                     android:visibility="gone">
 
-                    <TextView
+                    <Button
                         android:id="@+id/lblSpecial"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:clickable="false"
                         android:gravity="center"
                         android:text="Special"
-                        android:textSize="25sp" />
+                        android:textColor="@color/textAccent"
+                        android:backgroundTint="@color/colorPrimaryLight"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/txtSpecial"
@@ -102,6 +119,7 @@
                         android:text="SPECIAL..."
                         android:textSize="20sp" />
                 </LinearLayout>
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
