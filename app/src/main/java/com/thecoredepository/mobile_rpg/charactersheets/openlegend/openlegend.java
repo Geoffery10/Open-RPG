@@ -76,19 +76,21 @@ public class openlegend
     //inventoryOL inventory = new inventoryOL();
     //Or just keep the values here
     private int inventorySize;
-    private List items = new ArrayList<String>();
-    private List itemInfo = new ArrayList<String>();
+    private ArrayList<String> items = new ArrayList<String>();
+    private ArrayList<String> itemInfo = new ArrayList<String>();
     private int wealth;
 
     //Banes/Boons
     private ArrayList Banes = new ArrayList<String>();
     private ArrayList Boons = new ArrayList<String>();
 
+    //ArrayLists
     private ArrayList AllBanes = new ArrayList<String>();
     private ArrayList AllBoons = new ArrayList<String>();
 
-    private ArrayList AvaliableBanes = new ArrayList<String>();
-    private ArrayList AvaliableBoons = new ArrayList<String>();
+    private ArrayList AvailableBanes = new ArrayList<String>();
+    private ArrayList AvailableBoons = new ArrayList<String>();
+
 
     //Define Player
     public static List<openlegend> sheets = new ArrayList<openlegend>(); //Sheets
@@ -674,11 +676,11 @@ public class openlegend
         return (String) this.itemInfo.get(index);
     }
 
-    public void setItems(List items) {
+    public void setItems(ArrayList<String> items) {
         this.items = items;
     }
 
-    public void setItemInfo(List itemInfo) {
+    public void setItemInfo(ArrayList<String> itemInfo) {
         this.itemInfo = itemInfo;
     }
 
@@ -763,87 +765,87 @@ public class openlegend
 
     public void setAvaliableBanes() {
         Log.i("Setting Banes/Boons", "Setting Banes");
-        AvaliableBanes.clear();
+        AvailableBanes.clear();
         if(alteration >= 5 || creation >= 5 || energy >= 5 || entropy >= 5) {
-            AvaliableBanes.add("Blinded");
+            AvailableBanes.add("Blinded");
         }
         if(influence >= 3) {
-            AvaliableBanes.add("Charmed");
+            AvailableBanes.add("Charmed");
         }
         if(agility >= 4 || energy >= 4 || entropy >= 4) {
-            AvaliableBanes.add("Deafened");
+            AvailableBanes.add("Deafened");
         }
         if(agility >= 9 || entropy >= 9) {
-            AvaliableBanes.add("Death");
+            AvailableBanes.add("Death");
         }
         if(agility >= 3 || energy >= 3 || entropy >= 3 || influence >= 3 || might >= 3 || persuasion >= 3 || presence >= 3) {
-            AvaliableBanes.add("Demoralized");
+            AvailableBanes.add("Demoralized");
         }
         if(agility >= 3 || alteration >= 3 || energy >= 3 || entropy >= 3 || influence >= 3 || might >= 3 || movement >= 3) {
-            AvaliableBanes.add("Disarmed");
+            AvailableBanes.add("Disarmed");
         }
         if(influence >= 5) {
-            AvaliableBanes.add("Dominated");
+            AvailableBanes.add("Dominated");
         }
         if(entropy >= 5) {
-            AvaliableBanes.add("Fatigued");
+            AvailableBanes.add("Fatigued");
         }
         if(creation >= 5 || entropy >= 5 || influence >= 5 || might >= 5) {
-            AvaliableBanes.add("Fear");
+            AvailableBanes.add("Fear");
         }
         if(agility >= 2 || energy >= 2 || might >= 2 || movement >= 2) {
-            AvaliableBanes.add("Forced Move");
+            AvailableBanes.add("Forced Move");
         }
         if(agility >= 1 || alteration >= 1 || creation >= 1 || energy >= 1 || entropy >= 1 || influence >= 1 || might >= 1 || movement >= 1) {
-            AvaliableBanes.add("Immobile");
+            AvailableBanes.add("Immobile");
         }
         if(agility >= 5 || entropy >= 5 || influence >= 5) {
-            AvaliableBanes.add("Incapacitated");
+            AvailableBanes.add("Incapacitated");
         }
         if(agility >= 1 || energy >= 1 || might >= 1 || movement >= 1) {
-            AvaliableBanes.add("Knockdown");
+            AvailableBanes.add("Knockdown");
         }
         if(influence >= 5) {
-            AvaliableBanes.add("Memory Alteration");
+            AvailableBanes.add("Memory Alteration");
         }
         if(prescience >= 2) {
-            AvaliableBanes.add("Mind Dredge");
+            AvailableBanes.add("Mind Dredge");
         }
         if(protection >= 1) {
-            AvaliableBanes.add("Nullify");
+            AvailableBanes.add("Nullify");
         }
         if(agility >= 2 || energy >= 2 || entropy >= 2) {
-            AvaliableBanes.add("Persistent Damage");
+            AvailableBanes.add("Persistent Damage");
         }
         if(influence >= 1) {
-            AvaliableBanes.add("Phantasm");
+            AvailableBanes.add("Phantasm");
         }
         if(alteration >= 5) {
-            AvaliableBanes.add("Polymorph");
+            AvailableBanes.add("Polymorph");
         }
         if(agility >= 4 || creation >= 4 || deception >= 4 || energy >= 4 || influence >= 4 || might >= 4 || persuasion >= 4 || prescience >= 4) {
-            AvaliableBanes.add("Provoked");
+            AvailableBanes.add("Provoked");
         }
         if(prescience >= 5) {
-            AvaliableBanes.add("Spying");
+            AvailableBanes.add("Spying");
         }
         if(entropy >= 5) {
-            AvaliableBanes.add("Sickened");
+            AvailableBanes.add("Sickened");
         }
         if(agility >= 2 || alteration >= 2 || entropy >= 2 || might >= 2) {
-            AvaliableBanes.add("Silenced");
+            AvailableBanes.add("Silenced");
         }
         if(agility >= 1 || energy >= 1 || entropy >= 1 || might >= 1 || movement >= 1) {
-            AvaliableBanes.add("Slowed");
+            AvailableBanes.add("Slowed");
         }
         if(agility >= 4 || energy >= 4 || entropy >= 4 || might >= 4) {
-            AvaliableBanes.add("Stunned");
+            AvailableBanes.add("Stunned");
         }
         if(influence >= 7) {
-            AvaliableBanes.add("Stupefied");
+            AvailableBanes.add("Stupefied");
         }
         if(influence >= 5) {
-            AvaliableBanes.add("Truthfulness");
+            AvailableBanes.add("Truthfulness");
         }
     }
 
@@ -851,8 +853,8 @@ public class openlegend
         return AllBanes;
     }
 
-    public ArrayList<String> getAvaliableBanes() {
-        return AvaliableBanes;
+    public ArrayList<String> getAvailableBanes() {
+        return AvailableBanes;
     }
 
     public void setAllBoons() {
@@ -893,38 +895,38 @@ public class openlegend
 
     public void setAvaliableBoons() {
         Log.i("Setting Banes/Boons", "Setting Boons");
-        AvaliableBoons.clear();
-        AvaliableBoons.add("Absorb Object");
-        AvaliableBoons.add("Animation");
-        AvaliableBoons.add("Aura");
-        AvaliableBoons.add("Barrier");
-        AvaliableBoons.add("Blindsight");
-        AvaliableBoons.add("Bolster");
-        AvaliableBoons.add("Darkness");
-        AvaliableBoons.add("Detection");
-        AvaliableBoons.add("Flight");
-        AvaliableBoons.add("Genesis");
-        AvaliableBoons.add("Haste");
-        AvaliableBoons.add("Heal");
-        AvaliableBoons.add("Insubstantial");
-        AvaliableBoons.add("Invisible");
-        AvaliableBoons.add("Life Drain");
-        AvaliableBoons.add("Light");
-        AvaliableBoons.add("Precognition");
-        AvaliableBoons.add("Reading");
-        AvaliableBoons.add("Regeneration");
-        AvaliableBoons.add("Resistance");
-        AvaliableBoons.add("Restoration");
-        AvaliableBoons.add("Seeing");
-        AvaliableBoons.add("Shapeshift");
-        AvaliableBoons.add("Summon Creature");
-        AvaliableBoons.add("Sustenance");
-        AvaliableBoons.add("Telekinesis");
-        AvaliableBoons.add("Telepathy");
-        AvaliableBoons.add("Teleport");
-        AvaliableBoons.add("Tongues");
-        AvaliableBoons.add("Transmutation");
-        AvaliableBoons.add("Truesight");
+        AvailableBoons.clear();
+        AvailableBoons.add("Absorb Object");
+        AvailableBoons.add("Animation");
+        AvailableBoons.add("Aura");
+        AvailableBoons.add("Barrier");
+        AvailableBoons.add("Blindsight");
+        AvailableBoons.add("Bolster");
+        AvailableBoons.add("Darkness");
+        AvailableBoons.add("Detection");
+        AvailableBoons.add("Flight");
+        AvailableBoons.add("Genesis");
+        AvailableBoons.add("Haste");
+        AvailableBoons.add("Heal");
+        AvailableBoons.add("Insubstantial");
+        AvailableBoons.add("Invisible");
+        AvailableBoons.add("Life Drain");
+        AvailableBoons.add("Light");
+        AvailableBoons.add("Precognition");
+        AvailableBoons.add("Reading");
+        AvailableBoons.add("Regeneration");
+        AvailableBoons.add("Resistance");
+        AvailableBoons.add("Restoration");
+        AvailableBoons.add("Seeing");
+        AvailableBoons.add("Shapeshift");
+        AvailableBoons.add("Summon Creature");
+        AvailableBoons.add("Sustenance");
+        AvailableBoons.add("Telekinesis");
+        AvailableBoons.add("Telepathy");
+        AvailableBoons.add("Teleport");
+        AvailableBoons.add("Tongues");
+        AvailableBoons.add("Transmutation");
+        AvailableBoons.add("Truesight");
     }
 
     public ArrayList<String> getAllBoons() {
@@ -1007,7 +1009,7 @@ public class openlegend
         return player;
     }
 
-    public void newCharacter(String playerName, String type, String charName, String nickname, int majorLvl, int minorLvl, int levelTotal, String deity, String[] languages, String bio, int attributePointsAvalible, int getAttributePointsUsed, int agility, int fortitude, int might, int learning, int logic, int perception, int will, int deception, int persuasion, int presence, int alteration, int creation, int energy, int entropy, int influence, int movement, int prescience, int protection, int toughness, int guard, int armor, int resolve, int hitpoints, int damageTaken, int speed, int featPointsAvailable, int featPointsUsed, String[] perks, String[] flaws, int inventorySize, List items, List itemInfo, int wealth, ArrayList banes, ArrayList boons) {
+    public void newCharacter(String playerName, String type, String charName, String nickname, int majorLvl, int minorLvl, int levelTotal, String deity, String[] languages, String bio, int attributePointsAvalible, int getAttributePointsUsed, int agility, int fortitude, int might, int learning, int logic, int perception, int will, int deception, int persuasion, int presence, int alteration, int creation, int energy, int entropy, int influence, int movement, int prescience, int protection, int toughness, int guard, int armor, int resolve, int hitpoints, int damageTaken, int speed, int featPointsAvailable, int featPointsUsed, String[] perks, String[] flaws, int inventorySize, ArrayList items, ArrayList itemInfo, int wealth, ArrayList banes, ArrayList boons) {
         openlegend newChar = new openlegend();
 
         newChar.playerName = playerName;

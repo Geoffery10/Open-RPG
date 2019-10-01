@@ -19,7 +19,6 @@ import com.thecoredepository.mobile_rpg.R;
 import java.util.ArrayList;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
 
 public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder>
 {
@@ -147,7 +146,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         {
             player.setAvaliableBanes();
             player.setAvaliableBoons();
-            ArrayList<String> connections = player.getAvaliableBanes();
+            ArrayList<String> connections = player.getAvailableBanes();
             if (connections.size() > 0)
             {
                 ArrayAdapter<String> featSpinner = new ArrayAdapter<String>(context, R.layout.spinner_style, connections);
