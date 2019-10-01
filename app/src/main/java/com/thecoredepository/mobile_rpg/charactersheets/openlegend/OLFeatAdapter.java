@@ -145,9 +145,9 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         }
         if (add == true)
         {
-            player.setAllBanes();
-            player.setAllBoons();
-            ArrayList<String> connections = player.getAllBanes();
+            player.setAvaliableBanes();
+            player.setAvaliableBoons();
+            ArrayList<String> connections = player.getAvaliableBanes();
             if (connections.size() > 0)
             {
                 ArrayAdapter<String> featSpinner = new ArrayAdapter<String>(context, R.layout.spinner_style, connections);

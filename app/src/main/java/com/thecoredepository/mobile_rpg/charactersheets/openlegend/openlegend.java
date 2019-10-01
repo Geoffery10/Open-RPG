@@ -87,6 +87,9 @@ public class openlegend
     private ArrayList AllBanes = new ArrayList<String>();
     private ArrayList AllBoons = new ArrayList<String>();
 
+    private ArrayList AvaliableBanes = new ArrayList<String>();
+    private ArrayList AvaliableBoons = new ArrayList<String>();
+
     //Define Player
     public static List<openlegend> sheets = new ArrayList<openlegend>(); //Sheets
     public static List<String> sheetList = new ArrayList<String>(); //List of Sheet Names
@@ -758,8 +761,98 @@ public class openlegend
         AllBanes.add("Truthfulness");
     }
 
+    public void setAvaliableBanes() {
+        Log.i("Setting Banes/Boons", "Setting Banes");
+        AvaliableBanes.clear();
+        if(alteration >= 5 || creation >= 5 || energy >= 5 || entropy >= 5) {
+            AvaliableBanes.add("Blinded");
+        }
+        if(influence >= 3) {
+            AvaliableBanes.add("Charmed");
+        }
+        if(agility >= 4 || energy >= 4 || entropy >= 4) {
+            AvaliableBanes.add("Deafened");
+        }
+        if(agility >= 9 || entropy >= 9) {
+            AvaliableBanes.add("Death");
+        }
+        if(agility >= 3 || energy >= 3 || entropy >= 3 || influence >= 3 || might >= 3 || persuasion >= 3 || presence >= 3) {
+            AvaliableBanes.add("Demoralized");
+        }
+        if(agility >= 3 || alteration >= 3 || energy >= 3 || entropy >= 3 || influence >= 3 || might >= 3 || movement >= 3) {
+            AvaliableBanes.add("Disarmed");
+        }
+        if(influence >= 5) {
+            AvaliableBanes.add("Dominated");
+        }
+        if(entropy >= 5) {
+            AvaliableBanes.add("Fatigued");
+        }
+        if(creation >= 5 || entropy >= 5 || influence >= 5 || might >= 5) {
+            AvaliableBanes.add("Fear");
+        }
+        if(agility >= 2 || energy >= 2 || might >= 2 || movement >= 2) {
+            AvaliableBanes.add("Forced Move");
+        }
+        if(agility >= 1 || alteration >= 1 || creation >= 1 || energy >= 1 || entropy >= 1 || influence >= 1 || might >= 1 || movement >= 1) {
+            AvaliableBanes.add("Immobile");
+        }
+        if(agility >= 5 || entropy >= 5 || influence >= 5) {
+            AvaliableBanes.add("Incapacitated");
+        }
+        if(agility >= 1 || energy >= 1 || might >= 1 || movement >= 1) {
+            AvaliableBanes.add("Knockdown");
+        }
+        if(influence >= 5) {
+            AvaliableBanes.add("Memory Alteration");
+        }
+        if(prescience >= 2) {
+            AvaliableBanes.add("Mind Dredge");
+        }
+        if(protection >= 1) {
+            AvaliableBanes.add("Nullify");
+        }
+        if(agility >= 2 || energy >= 2 || entropy >= 2) {
+            AvaliableBanes.add("Persistent Damage");
+        }
+        if(influence >= 1) {
+            AvaliableBanes.add("Phantasm");
+        }
+        if(alteration >= 5) {
+            AvaliableBanes.add("Polymorph");
+        }
+        if(agility >= 4 || creation >= 4 || deception >= 4 || energy >= 4 || influence >= 4 || might >= 4 || persuasion >= 4 || prescience >= 4) {
+            AvaliableBanes.add("Provoked");
+        }
+        if(prescience >= 5) {
+            AvaliableBanes.add("Spying");
+        }
+        if(entropy >= 5) {
+            AvaliableBanes.add("Sickened");
+        }
+        if(agility >= 2 || alteration >= 2 || entropy >= 2 || might >= 2) {
+            AvaliableBanes.add("Silenced");
+        }
+        if(agility >= 1 || energy >= 1 || entropy >= 1 || might >= 1 || movement >= 1) {
+            AvaliableBanes.add("Slowed");
+        }
+        if(agility >= 4 || energy >= 4 || entropy >= 4 || might >= 4) {
+            AvaliableBanes.add("Stunned");
+        }
+        if(influence >= 7) {
+            AvaliableBanes.add("Stupefied");
+        }
+        if(influence >= 5) {
+            AvaliableBanes.add("Truthfulness");
+        }
+    }
+
     public ArrayList<String> getAllBanes() {
         return AllBanes;
+    }
+
+    public ArrayList<String> getAvaliableBanes() {
+        return AvaliableBanes;
     }
 
     public void setAllBoons() {
@@ -796,6 +889,42 @@ public class openlegend
         AllBoons.add("Tongues");
         AllBoons.add("Transmutation");
         AllBoons.add("Truesight");
+    }
+
+    public void setAvaliableBoons() {
+        Log.i("Setting Banes/Boons", "Setting Boons");
+        AvaliableBoons.clear();
+        AvaliableBoons.add("Absorb Object");
+        AvaliableBoons.add("Animation");
+        AvaliableBoons.add("Aura");
+        AvaliableBoons.add("Barrier");
+        AvaliableBoons.add("Blindsight");
+        AvaliableBoons.add("Bolster");
+        AvaliableBoons.add("Darkness");
+        AvaliableBoons.add("Detection");
+        AvaliableBoons.add("Flight");
+        AvaliableBoons.add("Genesis");
+        AvaliableBoons.add("Haste");
+        AvaliableBoons.add("Heal");
+        AvaliableBoons.add("Insubstantial");
+        AvaliableBoons.add("Invisible");
+        AvaliableBoons.add("Life Drain");
+        AvaliableBoons.add("Light");
+        AvaliableBoons.add("Precognition");
+        AvaliableBoons.add("Reading");
+        AvaliableBoons.add("Regeneration");
+        AvaliableBoons.add("Resistance");
+        AvaliableBoons.add("Restoration");
+        AvaliableBoons.add("Seeing");
+        AvaliableBoons.add("Shapeshift");
+        AvaliableBoons.add("Summon Creature");
+        AvaliableBoons.add("Sustenance");
+        AvaliableBoons.add("Telekinesis");
+        AvaliableBoons.add("Telepathy");
+        AvaliableBoons.add("Teleport");
+        AvaliableBoons.add("Tongues");
+        AvaliableBoons.add("Transmutation");
+        AvaliableBoons.add("Truesight");
     }
 
     public ArrayList<String> getAllBoons() {
