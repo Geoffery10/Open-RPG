@@ -14,6 +14,8 @@ public class OLFeats
     private String prerequisites;
     private String effects;
     private String special;
+    //AllBane, AvailableBoon, 2 Available Bane, Character, Weapon/Attack Type, Attribute, Energy Type, Knowledge, None...
+    private String connectionType = "";
     private String connection; //What companion name, bane/boon, or other connected string
     private Boolean canBeTakenMoreThanOnce = false;
 
@@ -116,6 +118,14 @@ public class OLFeats
         OLFeats.featList = featList;
     }
 
+    public String getConnectionType() {
+        return connectionType;
+    }
+
+    public void setConnectionType(String connectionType) {
+        this.connectionType = connectionType;
+    }
+
     public String getConnection() {
         return connection;
     }
@@ -145,6 +155,7 @@ public class OLFeats
                 "\n\tTier 2 - Same attribute points as your primary form, and 3 feat points less than your primary form.\n" +
                 "Whenever your primary form gains new attribute points or levels up, your alternate form also gains points according to the above formulas. As a focus action, you may change between any two forms (including your primary form or any alternate form). You maintain this capability in all of your forms. Each form is treated as a completely different character for mechanical purposes - possessing different attributes, feats, perks, flaws, and other defining characteristics. Your alternate form does, however, retain the ability to transform back into your primary form. In order to keep track of hit points, you should always record the total damage that your character has suffered. When transforming, your damage remains with you even if your maximum hit points change. For example, Dr. Jekyll has a max HP of 15 and Mr. Hyde has a max HP of 30. During combat, Mr. Hyde suffers 10 damage. When he later transforms back into Dr. Jekyll, the 10 damage remains and is subtracted from his new maximum, leaving the doctor with 5 out of 15 hit points. Additionally, when changing forms, if your hit points would be reduced to less than 1, your hit point total becomes 1 instead.");
         Alternate_Form.setSpecial("When selecting feats for your alternate form, you may not select the Alternate Form feat. With GM approval, you may take this feat multiple times. If you do, you get access to an additional form. Multiple Alternate Forms can be a powerful way of accumulating new feat points and attributes. The GM should prevent players from exploiting the feat to create an overly powerful character.");
+        Alternate_Form.setConnectionType("Character");
         Alternate_Form.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Alternate_Form);
@@ -190,6 +201,7 @@ public class OLFeats
         Attack_Specialization.setPrerequisites("Tier 1: Agility or Might or Any Extraordinary - 3\nTier 4: Agility or Might or Any Extraordinary - 5\nTier 7: Agility or Might or Any Extraordinary - 7");
         Attack_Specialization.setEffects("When you take this feat, select one weapon or attack type. You gain advantage 1 per tier of this feat for any damaging attack made with your chosen attack type. This bonus does not apply to bane attacks or boon invocations. Examples of attack types you can choose to specialize in include fire, cold, lightning, acid, poison, entropy, and force - though this list is not exhaustive.");
         Attack_Specialization.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new weapon or attack type each time. Your total advantage to an attack is equal to your tier for that particular weapon or attack type. For example, a character might have Attack Specialization II (Fire) for fire attacks and Attack Specialization IV (Longsword) for longsword attacks.");
+        Attack_Specialization.setConnectionType("Weapon/Attack Type");
         Attack_Specialization.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Attack_Specialization);
@@ -201,6 +213,7 @@ public class OLFeats
         Attribute_Substitution.setDescription("Your prowess in an extraordinary, mental, or social attribute is linked in a way that empowers another attribute of your character, allowing you to use that attribute for tasks normally reserved for another. Examples of Attribute Substitution in play include a martial artist who is physically weak but capable of using internal chi to throw and disable opponents, an anatomical genius who uses logic to make vital strikes rather than their agility, or a gunslinger whose deadshot aim is the result of a dark pact.");
         Attribute_Substitution.setPrerequisites("None");
         Attribute_Substitution.setEffects("When you take this feat, you create a permanent link between two attributes: one stronger (the primary attribute) and one weaker (the dependent attribute). You may use your primary attribute in place of the dependent attribute for different purposes depending on which tier of the feat you have:\n\tTier 1\n\t\tMaking non-attack, non-defend, non-invocation action rolls\n\t\tCalculating hit points, defenses, and other secondary statistics\n\t\tMeeting feat prerequisites\n\t\tOther situations at the GM's discretion\n\tTier 2\n\t\tMaking attack and defend action rolls\n\t\tInvoking banes and boons\nThe relationship formed by your two attributes is subject to case-by-case approval and must be approved by the GM first. The link must be logical and consistent with the story you are trying to tell. For example, a brawler who substitutes their Logic for their Might to represent their ability to use leverage in grappling rather than strength would likely not get to use their Logic score for an attempt to bend the bars on a prison cell. Furthermore, the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful. Two examples of proper uses of this feat include a calculating warrior who studies angles, leverage, and physics to substitute Logic for Might, or a gunslinger who channels dark energy, giving her deadshot accuracy and substituting Entropy for Agility.");
+        Attribute_Substitution.setConnectionType("Attribute");
         Attribute_Substitution.setSpecial("None");
 
         featList.add(Attribute_Substitution);
@@ -213,6 +226,7 @@ public class OLFeats
         Bane_Focus.setPrerequisites("Ability to invoke the chosen bane");
         Bane_Focus.setEffects("Choose a bane that you can invoke. When your roll on a damaging attack exceeds the target's defense by 5 or more (as opposed to the usual 10), you can inflict this bane for free. Each attack is still only capable of inflicting a single bane. Furthermore, when making a bane attack to inflict your chosen bane, you gain advantage 2 on the bane attack roll.");
         Bane_Focus.setSpecial("You may take this feat multiple times. Each time you do, choose a different bane.");
+        Bane_Focus.setConnectionType("AvailableBane");
         Bane_Focus.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Bane_Focus);
@@ -246,6 +260,7 @@ public class OLFeats
         Battlefield_Punisher.setDescription("Not only can you deal out retributive damage, you can devastate your opponents with a signature secondary effect. Examples of this feat in action include a stalwart paladin who knocks foes prone, a ninja who blinds enemies, or a telekinetic psychic who hurls attacks away.");
         Battlefield_Punisher.setPrerequisites("Agility or Might or Any Extraordinary - 5 and Battlefield Retribution");
         Battlefield_Punisher.setEffects("Choose a bane you can inflict. Any time you use the defend action with an attribute that could inflict the chosen bane and deal 10 damage via the Battlefield Retribution feat, you may choose to automatically afflict the attacker with the chosen bane.");
+        Battlefield_Punisher.setConnectionType("AvailableBane");
         Battlefield_Punisher.setSpecial("None");
 
         featList.add(Battlefield_Punisher);
@@ -269,6 +284,7 @@ public class OLFeats
         Boon_Access.setPrerequisites("None");
         Boon_Access.setEffects("When you choose this feat, choose one boon that you do not have the requisite attribute to invoke. The cost of this feat is equal to the power level of the chosen boon. You can invoke the chosen boon despite lacking the necessary attribute. For invocation rolls, treat your attribute score as the power level of the boon. If the boon has multiple attribute prerequisite options, you choose one attribute when you take this feat. Additionally, you count as having access to the chosen boon for the purpose of meeting feat prerequisites, and your attribute for meeting such prerequisites is equal to the power level of the boon. The Boon Access feat bypasses the normal attribute score restrictions based on character level, so a first level character could spend all 6 of their feat points to begin play with access to a power level 6 boon. You may acquire this feat multiple times. Each time, select a new boon.");
         Boon_Access.setSpecial("You may take this feat multiple times. Each time you do, choose a new boon to gain access to. Note that this feat can give access to high-powered boons with a potential for very dramatic impact on the storyline of a game. As such, using this feat to access a boon of power level 6 or higher should be approved by the GM before using it in a game. If you ever meet the attribute prerequisite for the chosen boon, you may choose at that time to lose this feat and regain the feat points spent. Re-allocate them as you choose.");
+        Boon_Access.setConnectionType("AllBoon");
         Boon_Access.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Boon_Access);
@@ -281,6 +297,7 @@ public class OLFeats
         Boon_Focus.setPrerequisites("Ability to invoke the chosen boon");
         Boon_Focus.setEffects("Choose a single boon that you can invoke. You gain benefits with that boon according to your tier in this feat.\n\tTier 1 - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. You can invoke the boon at any of the power levels you could access via your other means. If the invocation is not a single target, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.\n\tTier 2 - You gain advantage 3 on your action roll to invoke the boon if you are not single-targeting. Additionally, you may invoke the boon one time increment faster, as follows: If the invocation time is a major action or move action, it becomes a minor action. If the invocation time is 1 focus action, it becomes 1 major action. If the invocation time is 1 minute, it becomes 1 focus action. If the invocation time is 10 minutes, it becomes 1 minute. If the invocation time is 1 hour, it becomes 10 minutes. If the invocation time is 8 hours, it becomes 1 hour. If the invocation time for a boon is 1 minor action, it can be invoked only once as a minor action. Beyond that it can be invoked by expending a move or major action.\n\tTier 3 - The effect at tier 3 varies based on the duration of the boon:\nIf the chosen boon has a duration of \"sustain persists\", you gain advantage 4 on your action roll to invoke if you are not single-targeting. Additionally, one instance of the boon can be sustained each round as a free action, rather than a minor action. If the boon is somehow temporarily canceled, in the absence of other rules, you can invoke it again as a free action. If targeted by the nullify bane, this effect can only be canceled by a power level 6 or greater invocation of that bane.");
         Boon_Focus.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new boon each time. Your tier of this feat is independent for each boon.");
+        Boon_Focus.setConnectionType("AvailableBoon");
         Boon_Focus.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Boon_Focus);
@@ -348,6 +365,7 @@ public class OLFeats
         Companion.setPrerequisites("None");
         Companion.setEffects("You gain a companion character that acts independently from you. During combat, your companion acts on its own initiative count and gains the usual assortment of actions, which you may choose. You also get to assign your companion's attributes. Whenever you gain a level or purchase a new tier in this feat, you may reassign your companion's attributes and feats.\n\tTier 1 - Your companion has a total of 20 attribute points plus 4 per level of your character.\n\tTier 2 - Your companion receives 3 feat points.\n\tTier 3 - Your companion has a total of 30 attribute points plus 6 per level of your character. In addition, you can optionally grant feats to your companion. In order to do so, you spend your own feat points and the companion receives the feat instead of you. The companion, not you, must meet all feat prerequisites. Any math related to these feats are calculated based on the companion's attributes, feats, etc. If you have spent feat points this way and would gain feat points from any other effect, those feat points are reduced by the number of feat points you have granted to your companion.");
         Companion.setSpecial("If you ever lose your companion, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and any of the companion's feats, and may spend them as usual. In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new companion each time.");
+        Companion.setConnectionType("Character");
         Companion.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Companion);
@@ -360,6 +378,7 @@ public class OLFeats
         Craft_Mundane_Item.setPrerequisites("Learning or Logic - 3 or Knowledge I");
         Craft_Mundane_Item.setEffects("Choose a specific craft or profession. You can create items that are relevant to your chosen craft, and your GM will determine the speed at which you craft based on the nature of the item and the materials you have access to. Your tier in the Craft Mundane Item feat determines the maximum wealth level of the items you can craft. Unlike acquiring items by using your wealth (described in Chapter 5), crafting does not limit your ability to acquire additional goods.\n\tTier 1 - You can craft items equal to your wealth level.\n\tTier 2 - You can craft items equal to your wealth level + 1.\nCraft Examples (This list is not exhaustive, and you can work with your GM to come up with other suitable crafts):\n\tAlchemy - acid, chemicals, non-magical tinctures, incense, reagents.\n\tArcane - magical ingredients, inks, scrolls, exotic components.\n\tBlacksmithing - metal, leather, weapons, armor, wheels, horseshoes.\n\tChemistry - acid, explosives, narcotics.\n\tEngineering - machines, wheels, gears, guns, vehicles.\n\tGeography - maps, cartography, instruments of navigation.\n\tHerbalism - poultices, natural remedies, stimulants, brewing.\n\tMedicine - medical tools, tonics, tinctures, pain relievers, anti-toxins.");
         Craft_Mundane_Item.setSpecial("In addition to taking multiple tiers of this feat, you may take this feat multiple times and select a new craft or profession each time.");
+        Craft_Mundane_Item.setConnectionType("Profession");
         Craft_Mundane_Item.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Craft_Mundane_Item);
@@ -460,6 +479,7 @@ public class OLFeats
         Energy_Resistance.setPrerequisites("None");
         Energy_Resistance.setEffects("Choose from the following energy types: fire, cold, lightning, acid, poison, or another at the GM's discretion. When you are attacked with that energy type, you gain resistance to the attack as follows:\n\tTier 1 - Your defense scores are increased by 3 against the chosen energy type.\n\tTier 2 - Your defense scores are increased by 6 against the chosen energy type.\n\tTier 3 - Your defense scores are increased by 9 against the chosen energy type.\n\tTier 4 - You are immune to damage and harmful effects from the chosen energy type.");
         Energy_Resistance.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new energy type each time.");
+        Energy_Resistance.setConnectionType("Energy Type");
         Energy_Resistance.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Energy_Resistance);
@@ -483,6 +503,7 @@ public class OLFeats
         Extraordinary_Focus.setPrerequisites("Any Extraordinary - 1");
         Extraordinary_Focus.setEffects("With the approval of your GM, choose a focus from which your power with a single extraordinary attribute stems. Some possibilities include a wand, a digital psi amplifier, a crystal ball, a spell book, a holy symbol, a weapon, your voice, or an animal familiar. You cannot use the selected extraordinary attribute without your focus. The focus heightens your power and for the purposes of determining your attribute dice for action rolls, you treat the chosen attribute as if it was one greater. For all purposes outside of attribute dice, your ability score remains unchanged (feats, banes, boons, etc.).");
         Extraordinary_Focus.setSpecial("If you ever lose your extraordinary focus, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and may spend them as usual. You may take this feat multiple times. If you do, select a new attribute not chosen previously. For each instance of this feat, you may choose an existing focus or select a new one.");
+        Extraordinary_Focus.setConnectionType("Item");
         Extraordinary_Focus.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Extraordinary_Focus);
@@ -649,6 +670,7 @@ public class OLFeats
         Knowledge.setPrerequisites("None");
         Knowledge.setEffects("When you take this feat, choose a sphere of knowledge from the list below or, with the GM's approval, create a new one.\nExample spheres of knowledge include alchemy, anatomy, arcane, computers, explosives, engineering, geography, herbalism, history, location (must specify), medicine, military strategy, supernatural, and wilderness.\nYour tier in this feat determines how knowledgeable you are within your chosen sphere.\n\tTier 1 - You automatically succeed on any action roll related to your chosen sphere of knowledge with a CR of 16 or lower. For higher CRs, your Learning attribute is considered to be 3 for the action roll unless your Learning score is already 3 or higher, in which case you gain advantage 1 on the roll.\n\tTier 2 - You automatically succeed on any action roll related to your chosen sphere of knowledge with a CR of 22 or lower. For higher CRs, your Learning attribute is considered to be 6 for the action roll unless your Learning score is already 6 or higher, in which case you gain advantage 1 on the roll.\n\tTier 3 - You automatically succeed on any action roll related to your chosen sphere of knowledge with a CR of 26 or lower. For higher CRs, your Learning attribute is considered to be 8 for the action roll unless your Learning score is already 8 or higher, in which case you gain advantage 1 on the roll.");
         Knowledge.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new sphere of knowledge each time. Purchasing this feat in this way confers no benefit on other spheres of knowledge.\nYour tier in this feat determines how knowledgeable you are within your chosen sphere.");
+        Knowledge.setConnectionType("Knowledge");
         Knowledge.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Knowledge);
@@ -705,6 +727,7 @@ public class OLFeats
         Martial_Focus.setDescription("Like a kensai warrior devoted to mastery of their katana or an assassin who exclusively wields their favored pistols, your training is hyper-focused on a single style of combat to the exclusion of all others.");
         Martial_Focus.setPrerequisites("Agility or Might - 1");
         Martial_Focus.setEffects("Choose a single weapon (or choose unarmed combat), and specify the attribute that your martial focus relies upon: Agility or Might. When making attacks using your chosen weapon, your attribute is considered 1 greater for the purposes of determining attribute dice. Your attribute is not changed for purposes of feats, banes, boons, or similar items. Because of your intense focus on a single combat style, any attacks that you make without your martial focus suffer disadvantage 1.");
+        Martial_Focus.setConnectionType("Weapon Type");
         Martial_Focus.setSpecial("None");
 
         featList.add(Martial_Focus);
@@ -749,6 +772,7 @@ public class OLFeats
         Multi_Bane_Specialist.setDescription("You have mastered a signature attack that allows you to invoke two banes at once. A blast of ice that blinds and slows your enemy, a thunderous shotgun blast that hurls foes back and knocks them to the ground, and a wormtongue song that puts targets to sleep and alters their memory are all examples of a signature attack that could be created with this feat.");
         Multi_Bane_Specialist.setPrerequisites("Able to inflict both banes (see description)");
         Multi_Bane_Specialist.setEffects("Choose two banes that you are able to inflict and that share a common prerequisite attribute. You are able to inflict both banes with a single attack. The required attribute score for combining the banes is equal to the sum of their power levels (e.g., combining knockdown and slowed, both power level 1, would require an attribute score of 2). If the banes target different defenses, you choose which defense your attack targets. On a successful attack roll, the target is inflicted with both banes. They each persist independently of one another and must be resisted separately.");
+        Multi_Bane_Specialist.setConnectionType("2 Available Bane");
         Multi_Bane_Specialist.setSpecial("In order to benefit from the bane focus feat when using a multi-bane attack, you must possess bane focus for both banes. You may take this feat more than once. If you do, you must choose a different pair of banes for the new instance of the feat.");
 
         featList.add(Multi_Bane_Specialist);
@@ -761,6 +785,7 @@ public class OLFeats
         Multi_Target_Attack_Specialist.setPrerequisites("None");
         Multi_Target_Attack_Specialist.setEffects("When you choose this feat, you must decide to focus in area, ranged, or melee attacks. For each tier, you reduce the disadvantage penalty associated with multi-targeting for your chosen attack type by 1.");
         Multi_Target_Attack_Specialist.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new multi-target mode (area, ranged, or melee) each time. Track your feat tier separately for each targeting mode that you select for this feat.");
+        Multi_Target_Attack_Specialist.setConnectionType("Attack Type");
         Multi_Target_Attack_Specialist.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Multi_Target_Attack_Specialist);
@@ -816,6 +841,7 @@ public class OLFeats
         Potent_Bane.setDescription("You are so adept at a particular form of attack that your foes struggle to shake off the effects. Perhaps the flames of your fireballs burn hotter. Or maybe you've developed a special chemical to mix in with your blinding powder. Whatever the source and whatever the effect, most enemies are incapable of recovering from your legendary attack.");
         Potent_Bane.setPrerequisites("Ability to invoke the chosen bane");
         Potent_Bane.setEffects("Choose one bane that you can invoke that has a duration of \"resist ends\". When a target makes a resist roll to shake off your invocation of the chosen bane, they have disadvantage 1.");
+        Potent_Bane.setConnectionType("Available Bane");
         Potent_Bane.setSpecial("You may select this feat multiple times. Each time you take it, choose a different bane.");
 
         featList.add(Potent_Bane);
@@ -872,6 +898,7 @@ public class OLFeats
         Skill_Specialization.setPrerequisites("None");
         Skill_Specialization.setEffects("Choose one attribute. Any time you make a roll using the chosen attribute that is not for initiative, attacks, invocations, or the defend action, you gain advantage 1 on the roll per tier of this feat you possess for that attribute.");
         Skill_Specialization.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new attribute each time. Track your feat tier separately for each attribute that you choose for this feat.");
+        Skill_Specialization.setConnectionType("Attribute");
         Skill_Specialization.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Skill_Specialization);
@@ -907,6 +934,7 @@ public class OLFeats
         Sworn_Enemy.setPrerequisites("None");
         Sworn_Enemy.setEffects("Choose a species, race, or faction (e.g., dragons, Void Templars, gnolls, or vampires). You learn the primary conversational language of that species, and at the GM's discretion, you may have some level of access to other special forms of communication (such as thieves' cant or secret hand signals). Furthermore, you gain advantage 1 per tier of this feat to all Mental attribute rolls (Learning, Logic, Perception, and Will) pertaining to your chosen group.");
         Sworn_Enemy.setSpecial("In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new group each time. Your total advantage on Mental attribute rolls is equal to your tier for that particular group. For example, a character might have Sworn Enemy II (Void Templars) and Sworn Enemy IV (Werewolves).");
+        Sworn_Enemy.setConnectionType("Enemy");
         Sworn_Enemy.setCanBeTakenMoreThanOnce(true);
 
         featList.add(Sworn_Enemy);
