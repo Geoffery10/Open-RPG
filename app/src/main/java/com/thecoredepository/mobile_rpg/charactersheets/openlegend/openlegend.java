@@ -65,7 +65,7 @@ public class openlegend
     //Feats
     private int featPointsAvailable;
     private int featPointsUsed;
-    private List<OLFeats> feats = new ArrayList<>();
+    private ArrayList<OLFeats> feats = new ArrayList<>();
 
     //Perks/Flaws
     private String[] perks = new String[2];
@@ -544,7 +544,7 @@ public class openlegend
         this.featPointsUsed = used;
     }
 
-    public List<OLFeats> getFeats() {
+    public ArrayList<OLFeats> getFeats() {
         return feats;
     }
 
@@ -575,7 +575,7 @@ public class openlegend
         return featsStringList;
     }
 
-    public void setFeats(List<OLFeats> feats) {
+    public void setFeats(ArrayList<OLFeats> feats) {
         this.feats = feats;
     }
 

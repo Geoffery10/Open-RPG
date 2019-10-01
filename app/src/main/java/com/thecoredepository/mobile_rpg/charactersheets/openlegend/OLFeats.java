@@ -31,6 +31,10 @@ public class OLFeats
         return newFeat;
     }
 
+    public OLFeats getFeatPosition(int index) {
+        return featList.get(index);
+    }
+
     public String getTitle() {
         return title;
     }
