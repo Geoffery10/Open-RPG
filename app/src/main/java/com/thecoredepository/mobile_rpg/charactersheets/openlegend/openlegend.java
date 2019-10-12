@@ -5,6 +5,7 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 // be saved often reduce the chance of lost data.
 */
 
+import android.app.Presentation;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -102,7 +103,6 @@ public class openlegend
     public static openlegend player = new openlegend(); //Current Sheets
 
     //Getters and Setters
-
 
     @Override
     public String toString() {
@@ -328,7 +328,9 @@ public class openlegend
     }
 
     public void setAgility(int agility) {
-        this.agility = agility;
+        if (agility >= 0) {
+            this.agility = agility;
+        }
     }
 
     public int getFortitude() {
@@ -336,7 +338,9 @@ public class openlegend
     }
 
     public void setFortitude(int fortitude) {
-        this.fortitude = fortitude;
+        if (fortitude >= 0) {
+            this.fortitude = fortitude;
+        }
     }
 
     public int getMight() {
@@ -344,7 +348,9 @@ public class openlegend
     }
 
     public void setMight(int might) {
-        this.might = might;
+        if (might >= 0) {
+            this.might = might;
+        }
     }
 
     public int getLearning() {
@@ -352,7 +358,9 @@ public class openlegend
     }
 
     public void setLearning(int learning) {
-        this.learning = learning;
+        if (learning >= 0) {
+            this.learning = learning;
+        }
     }
 
     public int getLogic() {
@@ -360,7 +368,9 @@ public class openlegend
     }
 
     public void setLogic(int logic) {
-        this.logic = logic;
+        if (logic >= 0) {
+            this.logic = logic;
+        }
     }
 
     public int getPerception() {
@@ -368,7 +378,9 @@ public class openlegend
     }
 
     public void setPerception(int perception) {
-        this.perception = perception;
+        if (perception >= 0) {
+            this.perception = perception;
+        }
     }
 
     public int getWill() {
@@ -376,7 +388,9 @@ public class openlegend
     }
 
     public void setWill(int will) {
-        this.will = will;
+        if (will >= 0) {
+            this.will = will;
+        }
     }
 
     public int getDeception() {
@@ -384,7 +398,9 @@ public class openlegend
     }
 
     public void setDeception(int deception) {
-        this.deception = deception;
+        if (deception >= 0) {
+            this.deception = deception;
+        }
     }
 
     public int getPersuasion() {
@@ -392,7 +408,9 @@ public class openlegend
     }
 
     public void setPersuasion(int persuasion) {
-        this.persuasion = persuasion;
+        if (persuasion >= 0) {
+            this.persuasion = persuasion;
+        }
     }
 
     public int getPresence() {
@@ -400,7 +418,9 @@ public class openlegend
     }
 
     public void setPresence(int presence) {
-        this.presence = presence;
+        if (presence >= 0) {
+            this.presence = presence;
+        }
     }
 
     public int getAlteration() {
@@ -408,7 +428,9 @@ public class openlegend
     }
 
     public void setAlteration(int alteration) {
-        this.alteration = alteration;
+        if (alteration >= 0) {
+            this.alteration = alteration;
+        }
     }
 
     public int getCreation() {
@@ -416,7 +438,9 @@ public class openlegend
     }
 
     public void setCreation(int creation) {
-        this.creation = creation;
+        if (creation >= 0) {
+            this.creation = creation;
+        }
     }
 
     public int getEnergy() {
@@ -424,7 +448,9 @@ public class openlegend
     }
 
     public void setEnergy(int energy) {
-        this.energy = energy;
+        if (energy >= 0) {
+            this.energy = energy;
+        }
     }
 
     public int getEntropy() {
@@ -432,7 +458,9 @@ public class openlegend
     }
 
     public void setEntropy(int entropy) {
-        this.entropy = entropy;
+        if (entropy >= 0) {
+            this.entropy = entropy;
+        }
     }
 
     public int getInfluence() {
@@ -440,7 +468,9 @@ public class openlegend
     }
 
     public void setInfluence(int influence) {
-        this.influence = influence;
+        if (influence >= 0) {
+            this.influence = influence;
+        }
     }
 
     public int getMovement() {
@@ -448,7 +478,9 @@ public class openlegend
     }
 
     public void setMovement(int movement) {
-        this.movement = movement;
+        if (movement >= 0) {
+            this.movement = movement;
+        }
     }
 
     public int getPrescience() {
@@ -456,7 +488,9 @@ public class openlegend
     }
 
     public void setPrescience(int prescience) {
-        this.prescience = prescience;
+        if (prescience >= 0) {
+            this.prescience = prescience;
+        }
     }
 
     public int getProtection() {
@@ -464,7 +498,9 @@ public class openlegend
     }
 
     public void setProtection(int protection) {
-        this.protection = protection;
+        if (protection >= 0) {
+            this.protection = protection;
+        }
     }
 
     public int getToughness() {
@@ -1339,7 +1375,7 @@ public class openlegend
 
         //==========================================================================================
 
-        
+
         if (sheetList.contains("Ookami") == false)
         {
             openlegend ookami = new openlegend();
