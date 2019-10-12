@@ -47,6 +47,11 @@
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>
