@@ -1339,6 +1339,55 @@ public class openlegend
 
         //==========================================================================================
 
+        if (sheetList.contains("Ookami") == false)
+        {
+            openlegend ookami = new openlegend();
+            ookami.setType("ccIII");
+            ookami.setCharName("Ookami");
+            ookami.setNickname("");
+            ookami.setDeity("Lesser God/Spirit");
+            String[] lang = new String[10];
+            lang[0] = "Wild";
+            ookami.setLanguages(lang);
+            ookami.setBio("Ookami is a lesser God/Spirit that aid's Mazok.");
+            ookami.setFortitude(6);
+            ookami.setPerception(1);
+            ookami.setMight(5);
+            ookami.setAgility(6);
+            ookami.setPresence(1);
+            ookami.setWill(1);
+            ookami.setArmor(0);
+            ookami.setLevelTotal(10);
+            ookami.setSpeed(35);
+
+            ookami.setStats();
+            ookami.setGetAttributePointsUsed();
+            ookami.setAttributePointsAvailable(ookami.getType());
+
+            ookami.setWealth(0);
+
+            if (ookami.getType().equals("pc") || ookami.getType().equals("ccII") || ookami.getType().equals("ccIII"))
+            {
+                Iterator<OLFeats> iterator = OLFeats.featList.iterator();
+                while (iterator.hasNext()) {
+                    OLFeats feat = iterator.next();
+                    if (feat.getTitle().equals("Fleet of Foot")) {
+                        feat.setLevel(1);
+                        ookami.feats.add(feat.copyFeat());
+                    }
+                    if (feat.getTitle().equals("Great Leap")) {
+                        feat.setLevel(1);
+                        ookami.feats.add(feat.copyFeat());
+                    }
+                }
+            }
+            sheetList.add(ookami.getCharName());
+            sheets.add(ookami);
+        }
+
+
+        //==========================================================================================
+
 
         if (sheetList.contains("Noujou") == false)
         {
