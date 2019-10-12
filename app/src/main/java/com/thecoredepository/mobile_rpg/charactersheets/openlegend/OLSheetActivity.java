@@ -42,7 +42,13 @@ public class OLSheetActivity extends AppCompatActivity {
         TextView txtName = findViewById(R.id.txtCharName);
         txtName.setText(player.getCharName());
         TextView txtNickName = findViewById(R.id.txtNickName);
-        txtNickName.setText("(" + player.getNickname() + ")");
+        if (!(player.getNickname().equals(""))) {
+            txtNickName.setText("(" + player.getNickname() + ")");
+            txtNickName.setVisibility(View.VISIBLE);
+        }
+        else {
+            txtNickName.setVisibility(View.GONE);
+        }
         TextView txtLvl = findViewById(R.id.txtLvl);
         txtLvl.setText("Level: " + (player.getMajorLvl()) + " (" + (player.getMinorLvl()) + ")");
         TextView txtDeity = findViewById(R.id.txtDeity);
