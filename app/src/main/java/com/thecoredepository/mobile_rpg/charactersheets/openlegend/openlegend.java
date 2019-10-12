@@ -1228,7 +1228,6 @@ public class openlegend
             nightmare.setProtection(5);
             nightmare.setLevelTotal(10);
             nightmare.setSpeed(0);
-            nightmare.setDamageTaken(0);
 
             nightmare.setStats();
             nightmare.setGetAttributePointsUsed();
@@ -1276,7 +1275,6 @@ public class openlegend
             mazok.setArmor(1);
             mazok.setLevelTotal(10);
             mazok.setSpeed(30);
-            mazok.setDamageTaken(0);
 
             mazok.setStats();
             mazok.setGetAttributePointsUsed();
@@ -1367,7 +1365,6 @@ public class openlegend
             Noujou.setLogic(1);
             Noujou.setLevelTotal(10);
             Noujou.setSpeed(30);
-            Noujou.setDamageTaken(0);
             Noujou.setArmor(1);
 
             Noujou.setStats();
