@@ -1186,14 +1186,14 @@ public class openlegend
             tazmur.setFortitude(3);
             tazmur.setPresence(2);
             tazmur.setPerception(2);
-            tazmur.setAlteration(6);
+            tazmur.setAlteration(7);
             tazmur.setMovement(4);
             tazmur.setEnergy(4);
             tazmur.setAgility(2);
             tazmur.setLearning(2);
             tazmur.setWill(2);
             tazmur.setArmor(1);
-            tazmur.setLevelTotal(10);
+            tazmur.setLevelTotal(12);
             tazmur.setSpeed(30);
 
             tazmur.setStats();
@@ -1232,8 +1232,14 @@ public class openlegend
                         tazmur.feats.add(feat.copyFeat());
                         Log.i("Feats", "added Boon Focus - Invisible");
                     }
+                    if (feat.getTitle().equals("Boon Focus")) {
+                        feat.setLevel(1);
+                        feat.setConnection("Haste");
+                        tazmur.feats.add(feat.copyFeat());
+                        Log.i("Feats", "added Boon Focus - Haste");
+                    }
                     if (feat.getTitle().equals("Companion")) {
-                        feat.setLevel(2);
+                        feat.setLevel(3);
                         feat.setConnection("Nightmare");
                         tazmur.feats.add(feat.copyFeat());
                         Log.i("Feats", "added Companion");
@@ -1249,7 +1255,7 @@ public class openlegend
         if (sheetList.contains("Nightmare") == false)
         {
             openlegend nightmare = new openlegend();
-            nightmare.setType("ccII");
+            nightmare.setType("ccIII");
             nightmare.setCharName("Nightmare");
             nightmare.setNickname("Spirit");
             nightmare.setDeity("Kalle Demos");
@@ -1262,7 +1268,7 @@ public class openlegend
             nightmare.setEntropy(5);
             nightmare.setAlteration(5);
             nightmare.setProtection(5);
-            nightmare.setLevelTotal(10);
+            nightmare.setLevelTotal(12);
             nightmare.setSpeed(0);
 
             nightmare.setStats();
@@ -1309,7 +1315,7 @@ public class openlegend
             mazok.setPresence(2);
             mazok.setLearning(2);
             mazok.setArmor(1);
-            mazok.setLevelTotal(10);
+            mazok.setLevelTotal(12);
             mazok.setSpeed(30);
 
             mazok.setStats();
@@ -1362,7 +1368,7 @@ public class openlegend
                         feat.setLevel(1);
                         mazok.feats.add(feat.copyFeat());
                     }
-                    if (feat.getTitle().equals("Multi-Attack Specialist")) {
+                    if (feat.getTitle().equals("Multi-Target Attack Specialist")) {
                         feat.setLevel(1);
                         mazok.feats.add(feat.copyFeat());
                     }
@@ -1394,7 +1400,7 @@ public class openlegend
             ookami.setPresence(1);
             ookami.setWill(1);
             ookami.setArmor(0);
-            ookami.setLevelTotal(10);
+            ookami.setLevelTotal(12);
             ookami.setSpeed(35);
 
             ookami.setStats();
