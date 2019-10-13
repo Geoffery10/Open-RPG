@@ -1,8 +1,10 @@
 package com.thecoredepository.mobile_rpg;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -49,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         featList();
 
         //Load Saved Data
-        OLSavingSheets saveData = new OLSavingSheets();
+        final OLSavingSheets saveData = new OLSavingSheets();
         saveData.loadData(this);
 
         //Load Data into Spinner
@@ -86,21 +89,34 @@ public class MainActivity extends AppCompatActivity {
         btnDeleteSheet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Delete the selected sheet
                 Spinner spinnerOL = findViewById(R.id.spinnerOL);
                 String selected = (String)spinnerOL.getSelectedItem();
-                Log.i("selected", selected);
+                new AlertDialog.Builder(mContext)
+                        .setTitle("Delete " + selected)
+                        .setMessage("Do you really want to delete "+selected+"?")
+                        .setIcon(android.R.drawable.ic_delete)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
-                if (sheetList.contains(selected))
-                {
-                    int index = 0;
-                    index = sheetList.indexOf(selected);
-                    sheetList.remove(index);
-                    sheets.remove(index);
-                }
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                //Delete the selected sheet
+                                Spinner spinnerOL = findViewById(R.id.spinnerOL);
+                                String selected = (String)spinnerOL.getSelectedItem();
+                                Log.i("selected", selected);
 
-                ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(mContext, R.layout.spinner_style, sheetList);
-                spinnerOL.setAdapter(adapterOL);
+                                if (sheetList.contains(selected))
+                                {
+                                    int index = 0;
+                                    index = sheetList.indexOf(selected);
+                                    sheetList.remove(index);
+                                    sheets.remove(index);
+                                }
+
+                                ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(mContext, R.layout.spinner_style, sheetList);
+                                spinnerOL.setAdapter(adapterOL);
+
+                                saveData.saveData(mContext);
+                            }})
+                        .setNegativeButton(android.R.string.no, null).show();
             }
         });
     }
