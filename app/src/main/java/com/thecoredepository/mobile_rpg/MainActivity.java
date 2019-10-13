@@ -91,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Spinner spinnerOL = findViewById(R.id.spinnerOL);
                 String selected = (String)spinnerOL.getSelectedItem();
+
+                //Confirm Deletion
                 new AlertDialog.Builder(mContext)
                         .setTitle("Delete " + selected)
                         .setMessage("Do you really want to delete "+selected+"?")
@@ -103,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
                                 String selected = (String)spinnerOL.getSelectedItem();
                                 Log.i("selected", selected);
 
+                                //Check for Sheet
                                 if (sheetList.contains(selected))
                                 {
                                     int index = 0;
@@ -111,9 +114,11 @@ public class MainActivity extends AppCompatActivity {
                                     sheets.remove(index);
                                 }
 
+                                //Update Spinner
                                 ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(mContext, R.layout.spinner_style, sheetList);
                                 spinnerOL.setAdapter(adapterOL);
 
+                                //Save Data
                                 saveData.saveData(mContext);
                             }})
                         .setNegativeButton(android.R.string.no, null).show();
