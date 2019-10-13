@@ -16,6 +16,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLFeats;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLNewSheet;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivity;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
 
@@ -44,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
         featList();
 
         //Load Saved Data
-        loadData();
+        OLSavingSheets saveData = new OLSavingSheets();
+        saveData.loadData(this);
 
         //Load Data into Spinner
         ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, R.layout.spinner_style, sheetList);
@@ -79,44 +81,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
-    }
-
-    private void saveData()
-    {
-        SharedPreferences sheetPreferences = getSharedPreferences("sheetList", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sheetPreferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(sheetList);
-        editor.putString("sheetList", json);
-        editor.apply();
-
-        SharedPreferences sheetsPreferences = getSharedPreferences("sheetList", MODE_PRIVATE);
-        editor = sheetsPreferences.edit();
-        gson = new Gson();
-        json = gson.toJson(sheets);
-        editor.putString("sheets", json);
-        editor.apply();
-    }
-
-    private void loadData()
-    {
-        SharedPreferences sheetPreferences = getSharedPreferences("sheetList", MODE_PRIVATE);
-        Gson gson = new Gson();
-        String json = sheetPreferences.getString("sheetList", null);
-        Type type = new TypeToken<ArrayList<String>>() {}.getType();
-        sheetList = gson.fromJson(json, type);
-
-        SharedPreferences sheetsPreferences = getSharedPreferences("sheets", MODE_PRIVATE);
-        gson = new Gson();
-        json = sheetsPreferences.getString("sheets", null);
-        type = new TypeToken<ArrayList<openlegend>>() {}.getType();
-        sheets = gson.fromJson(json, type);
-
-        if (sheetList == null || sheets == null)
-        {
-            sheetList = new ArrayList<>();
-            sheets = new ArrayList<>();
-            openlegend.HARDCODEDSHEETS();
-        }
     }
 }
