@@ -290,8 +290,8 @@ public class OLEditSheet extends AppCompatActivity
         player.setStats();
 
         updateStats();
-        OLSavingSheets savingSheets = new OLSavingSheets();
-        savingSheets.saveData(this);
+        OLSavingSheets saveData = new OLSavingSheets();
+        saveData.saveData(this);
 
         Toast toast = Toast.makeText(this, "Player Saved", Toast.LENGTH_SHORT);
         toast.show();
