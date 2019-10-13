@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,23 +26,19 @@ public class OLEditSheet extends AppCompatActivity
         TextView txtName = findViewById(R.id.txtCharName);
         txtName.setText(player.getCharName());
         TextView txtNickName = findViewById(R.id.txtNickName);
-        if (!(player.getNickname().equals(""))) {
-            txtNickName.setText("(" + player.getNickname() + ")");
-            txtNickName.setVisibility(View.VISIBLE);
-        }
-        else {
-            txtNickName.setVisibility(View.GONE);
-        }
+        txtNickName.setText(player.getNickname());
         TextView txtLvl = findViewById(R.id.txtLvl);
-        txtLvl.setText("Level: " + (player.getMajorLvl()) + " (" + (player.getMinorLvl()) + ")");
+        txtLvl.setText("Level: ");
+        TextView editLvl = findViewById(R.id.editLvl);
+        editLvl.setText(""+player.getLevelTotal());
         TextView txtDeity = findViewById(R.id.txtDeity);
         txtDeity.setText(player.getDeity());
         TextView txtLang = findViewById(R.id.txtLang);
         //String lang = "";
         //lang = getLangs(lang);
         //txtLang.setText("Languages: " + (lang));
-        TextView txtBio = findViewById(R.id.txtBio);
-        txtBio.setText("Bio: " + (player.getBio()));
+        TextView txtBio = findViewById(R.id.txtBioEdit);
+        txtBio.setText(player.getBio());
         TextView txtAttributes = findViewById(R.id.txtAttributes);
         txtAttributes.setText("Attributes: " + player.getGetAttributePointsUsed() +"/"+ player.getAttributePointsAvailable());
         TextView txtToughness = findViewById(R.id.txtToughness);
@@ -51,62 +49,62 @@ public class OLEditSheet extends AppCompatActivity
         txtResolve.setText("Resolve: " + player.getResolve());
         TextView txtHitpoints = findViewById(R.id.txtHitpoints);
         txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
-        TextView txtSpeed = findViewById(R.id.txtSpeed);
-        txtSpeed.setText("Speed: " + (player.getSpeed()));
+        EditText txtSpeed = findViewById(R.id.editSpeed);
+        txtSpeed.setText("" + player.getSpeed());
 
         //Attributes
-        TextView txtAgility = findViewById(R.id.txtAgility);
+        TextView editAgility = findViewById(R.id.editAgility);
         LinearLayout LLAgility = findViewById(R.id.LLAgility);
         Button btnAgility = findViewById(R.id.btnAgility);
-        TextView txtFortitude = findViewById(R.id.txtFortitude);
+        TextView editFortitude = findViewById(R.id.editFortitude);
         LinearLayout LLFortitude = findViewById(R.id.LLFortitude);
         Button btnFortitude = findViewById(R.id.btnFortitude);
-        TextView txtMight = findViewById(R.id.txtMight);
+        TextView editMight = findViewById(R.id.editMight);
         LinearLayout LLMight = findViewById(R.id.LLMight);
         Button btnMight = findViewById(R.id.btnMight);
-        TextView txtLearning = findViewById(R.id.txtLearning);
+        TextView editLearning = findViewById(R.id.editLearning);
         LinearLayout LLLearning = findViewById(R.id.LLLearning);
         Button btnLearning = findViewById(R.id.btnLearning);
-        TextView txtLogic = findViewById(R.id.txtLogic);
+        TextView editLogic = findViewById(R.id.editLogic);
         LinearLayout LLLogic = findViewById(R.id.LLLogic);
         Button btnLogic = findViewById(R.id.btnLogic);
-        TextView txtPerception = findViewById(R.id.txtPerception);
+        TextView editPerception = findViewById(R.id.editPerception);
         LinearLayout LLPerception = findViewById(R.id.LLPerception);
         Button btnPerception = findViewById(R.id.btnPerception);
-        TextView txtWill = findViewById(R.id.txtWill);
+        TextView editWill = findViewById(R.id.editWill);
         LinearLayout LLWill = findViewById(R.id.LLWill);
         Button btnWill = findViewById(R.id.btnWill);
-        TextView txtDeception = findViewById(R.id.txtDeception);
+        TextView editDeception = findViewById(R.id.editDeception);
         LinearLayout LLDeception = findViewById(R.id.LLDeception);
         Button btnDeception = findViewById(R.id.btnDeception);
-        TextView txtPersuasion = findViewById(R.id.txtPersuasion);
+        TextView editPersuasion = findViewById(R.id.editPersuasion);
         LinearLayout LLPersuasion = findViewById(R.id.LLPersuasion);
         Button btnPersuasion = findViewById(R.id.btnPersuasion);
-        TextView txtPresence = findViewById(R.id.txtPresence);
+        TextView editPresence = findViewById(R.id.editPresence);
         LinearLayout LLPresence = findViewById(R.id.LLPresence);
         Button btnPresence = findViewById(R.id.btnPresence);
-        TextView txtAlteration = findViewById(R.id.txtAlteration);
+        TextView editAlteration = findViewById(R.id.editAlteration);
         LinearLayout LLAlteration = findViewById(R.id.LLAlteration);
         Button btnAlteration = findViewById(R.id.btnAlteration);
-        TextView txtCreation = findViewById(R.id.txtCreation);
+        TextView editCreation = findViewById(R.id.editCreation);
         LinearLayout LLCreation = findViewById(R.id.LLCreation);
         Button btnCreation = findViewById(R.id.btnCreation);
-        TextView txtEnergy = findViewById(R.id.txtEnergy);
+        TextView editEnergy = findViewById(R.id.editEnergy);
         LinearLayout LLEnergy = findViewById(R.id.LLEnergy);
         Button btnEnergy = findViewById(R.id.btnEnergy);
-        TextView txtEntropy = findViewById(R.id.txtEntropy);
+        TextView editEntropy = findViewById(R.id.editEntropy);
         LinearLayout LLEntropy = findViewById(R.id.LLEntropy);
         Button btnEntropy = findViewById(R.id.btnEntropy);
-        TextView txtInfluence = findViewById(R.id.txtInfluence);
+        TextView editInfluence = findViewById(R.id.editInfluence);
         LinearLayout LLInfluence = findViewById(R.id.LLInfluence);
         Button btnInfluence = findViewById(R.id.btnInfluence);
-        TextView txtMovement = findViewById(R.id.txtMovement);
+        TextView editMovement = findViewById(R.id.editMovement);
         LinearLayout LLMovement = findViewById(R.id.LLMovement);
         Button btnMovement = findViewById(R.id.btnMovement);
-        TextView txtPrescience = findViewById(R.id.txtPrescience);
+        TextView editPrescience = findViewById(R.id.editPrescience);
         LinearLayout LLPrescience = findViewById(R.id.LLPrescience);
         Button btnPrescience = findViewById(R.id.btnPrescience);
-        TextView txtProtection = findViewById(R.id.txtProtection);
+        TextView editProtection = findViewById(R.id.editProtection);
         LinearLayout LLProtection = findViewById(R.id.LLProtection);
         Button btnProtection = findViewById(R.id.btnProtection);
 
@@ -117,236 +115,209 @@ public class OLEditSheet extends AppCompatActivity
         Button btnFeats = findViewById(R.id.btnFeats);
 
         //THIS IS BEING REPLACED BY FEATS MENU
-        TextView txtFeats = findViewById(R.id.txtFeats);
-        txtFeats.setVisibility(View.GONE);
+        //TextView editFeats = findViewById(R.id.Feats);
+        //editFeats.setVisibility(View.GONE);
 
         //Button Clicks
         buttonClicks(btnBanes, btnBoons, btnInventory, btnSave);
 
         //Element Visibility and Values
-        setAttributes(txtAgility, LLAgility, btnAgility, txtFortitude, LLFortitude, btnFortitude, txtMight, LLMight, btnMight, txtLearning, LLLearning, btnLearning, txtLogic, LLLogic, btnLogic, txtPerception, LLPerception, btnPerception, txtWill, LLWill, btnWill, txtDeception, LLDeception, btnDeception, txtPersuasion, LLPersuasion, btnPersuasion, txtPresence, LLPresence, btnPresence, txtAlteration, LLAlteration, btnAlteration, txtCreation, LLCreation, btnCreation, txtEnergy, LLEnergy, btnEnergy, txtEntropy, LLEntropy, btnEntropy, txtInfluence, LLInfluence, btnInfluence, txtMovement, LLMovement, btnMovement, txtPrescience, LLPrescience, btnPrescience, txtProtection, LLProtection, btnProtection);
+        setAttributes(editAgility, LLAgility, btnAgility, editFortitude, LLFortitude, btnFortitude, editMight, LLMight, btnMight, editLearning, LLLearning, btnLearning, editLogic, LLLogic, btnLogic, editPerception, LLPerception, btnPerception, editWill, LLWill, btnWill, editDeception, LLDeception, btnDeception, editPersuasion, LLPersuasion, btnPersuasion, editPresence, LLPresence, btnPresence, editAlteration, LLAlteration, btnAlteration, editCreation, LLCreation, btnCreation, editEnergy, LLEnergy, btnEnergy, editEntropy, LLEntropy, btnEntropy, editInfluence, LLInfluence, btnInfluence, editMovement, LLMovement, btnMovement, editPrescience, LLPrescience, btnPrescience, editProtection, LLProtection, btnProtection);
     }
 
     private void setAttributes(TextView txtAgility, LinearLayout LLAgility, Button btnAgility, TextView txtFortitude, LinearLayout LLFortitude, Button btnFortitude, TextView txtMight, LinearLayout LLMight, Button btnMight, TextView txtLearning, LinearLayout LLLearning, Button btnLearning, TextView txtLogic, LinearLayout LLLogic, Button btnLogic, TextView txtPerception, LinearLayout LLPerception, Button btnPerception, TextView txtWill, LinearLayout LLWill, Button btnWill, TextView txtDeception, LinearLayout LLDeception, Button btnDeception, TextView txtPersuasion, LinearLayout LLPersuasion, Button btnPersuasion, TextView txtPresence, LinearLayout LLPresence, Button btnPresence, TextView txtAlteration, LinearLayout LLAlteration, Button btnAlteration, TextView txtCreation, LinearLayout LLCreation, Button btnCreation, TextView txtEnergy, LinearLayout LLEnergy, Button btnEnergy, TextView txtEntropy, LinearLayout LLEntropy, Button btnEntropy, TextView txtInfluence, LinearLayout LLInfluence, Button btnInfluence, TextView txtMovement, LinearLayout LLMovement, Button btnMovement, TextView txtPrescience, LinearLayout LLPrescience, Button btnPrescience, TextView txtProtection, LinearLayout LLProtection, Button btnProtection) {
         if (player.getAgility() != 0) {
-            txtAgility.setText("Agility: " + player.getAgility());
+            txtAgility.setText("" + player.getAgility());
         }
         else {
             txtAgility.setText("0");
         }
         if (player.getFortitude() != 0) {
-            txtFortitude.setText("Fortitude: " + (player.getFortitude()));
+            txtFortitude.setText("" + player.getFortitude());
         }
         else {
             txtFortitude.setText("0");
         }
         if (player.getMight() != 0) {
-            txtMight.setText("Might: " + player.getMight());
+            txtMight.setText("" + player.getMight());
         }
         else {
             txtMight.setText("0");
         }
         if (player.getLearning() != 0) {
-            txtLearning.setText("Learning: " + (player.getLearning()));
+            txtLearning.setText("" + player.getLearning());
         }
         else {
             txtLearning.setText("0");
         }
         if (player.getLogic() != 0) {
-            txtLogic.setText("Logic: " + (player.getLogic()));
+            txtLogic.setText("" + player.getLogic());
         }
         else {
             txtLogic.setText("0");
         }
         if (player.getPerception() != 0) {
-            txtPerception.setText("Perception: " + (player.getPerception()));
+            txtPerception.setText("" + player.getPerception());
         }
         else {
             txtPerception.setText("0");
         }
         if (player.getWill() != 0) {
-            txtWill.setText("Will: " + (player.getWill()));
+            txtWill.setText("" + player.getWill());
         }
         else {
             txtWill.setText("0");
         }
         if (player.getDeception() != 0) {
-            txtDeception.setText("Deception: " + (player.getDeception()));
+            txtDeception.setText("" + player.getDeception());
         }
         else {
             txtDeception.setText("0");
         }
         if (player.getPersuasion() != 0) {
-            txtPersuasion.setText("Persuasion: " + (player.getPersuasion()));
+            txtPersuasion.setText("" + player.getPersuasion());
         }
         else {
             txtPerception.setText("0");
         }
         if (player.getPresence() != 0) {
-            txtPresence.setText("Presence: " + (player.getPresence()));
+            txtPresence.setText("" + player.getPresence());
         }
         else {
             txtPresence.setText("0");
         }
         if (player.getAlteration() != 0) {
-            txtAlteration.setText("Alteration: " + (player.getAlteration()));
+            txtAlteration.setText("" + player.getAlteration());
         }
         else {
             txtAlteration.setText("0");
         }
         if (player.getCreation() != 0) {
-            txtCreation.setText("Creation: " + (player.getCreation()));
+            txtCreation.setText("" + player.getCreation());
         }
         else {
             txtCreation.setText("0");
         }
         if (player.getEnergy() != 0) {
-            txtEnergy.setText("Energy: " + (player.getEnergy()));
+            txtEnergy.setText("" + player.getEnergy());
         }
         else {
             txtEnergy.setText("0");
         }
         if (player.getEntropy() != 0) {
-            txtEntropy.setText("Entropy: " + (player.getEntropy()));
+            txtEntropy.setText("" + player.getEntropy());
         }
         else {
             txtEntropy.setText("0");
         }
         if (player.getInfluence() != 0) {
-            txtInfluence.setText("Influence: " + (player.getInfluence()));
+            txtInfluence.setText("" + player.getInfluence());
         }
         else {
             txtInfluence.setText("0");
         }
         if (player.getMovement() != 0) {
-            txtMovement.setText("Movement: " + (player.getMovement()));
+            txtMovement.setText(player.getMovement());
         }
         else {
             txtMovement.setText("0");
         }
         if (player.getPrescience() != 0) {
-            txtPrescience.setText("Prescience: " + (player.getPrescience()));
+            txtPrescience.setText("" + player.getPrescience());
         }
         else {
             txtPrescience.setText("0");
         }
         if (player.getProtection() != 0) {
-            txtProtection.setText("Protection: " + (player.getProtection()));
+            txtProtection.setText("" + player.getProtection());
         }
         else {
             txtProtection.setText("0");
         }
     }
 
-    private void saveAttributes(TextView txtAgility, LinearLayout LLAgility, Button btnAgility, TextView txtFortitude, LinearLayout LLFortitude, Button btnFortitude, TextView txtMight, LinearLayout LLMight, Button btnMight, TextView txtLearning, LinearLayout LLLearning, Button btnLearning, TextView txtLogic, LinearLayout LLLogic, Button btnLogic, TextView txtPerception, LinearLayout LLPerception, Button btnPerception, TextView txtWill, LinearLayout LLWill, Button btnWill, TextView txtDeception, LinearLayout LLDeception, Button btnDeception, TextView txtPersuasion, LinearLayout LLPersuasion, Button btnPersuasion, TextView txtPresence, LinearLayout LLPresence, Button btnPresence, TextView txtAlteration, LinearLayout LLAlteration, Button btnAlteration, TextView txtCreation, LinearLayout LLCreation, Button btnCreation, TextView txtEnergy, LinearLayout LLEnergy, Button btnEnergy, TextView txtEntropy, LinearLayout LLEntropy, Button btnEntropy, TextView txtInfluence, LinearLayout LLInfluence, Button btnInfluence, TextView txtMovement, LinearLayout LLMovement, Button btnMovement, TextView txtPrescience, LinearLayout LLPrescience, Button btnPrescience, TextView txtProtection, LinearLayout LLProtection, Button btnProtection) {
-        if (!(txtAgility.getText().equals("0"))) {
-            player.setAgility(Integer.parseInt("" + txtAgility.getText()));
-        }
-        else {
-            player.setAgility(0);
-        }
-        if (player.getFortitude() != 0) {
-            txtFortitude.setText("Fortitude: " + (player.getFortitude()));
-        }
-        else {
-            txtFortitude.setText("0");
-        }
-        if (player.getMight() != 0) {
-            txtMight.setText("Might: " + player.getMight());
-        }
-        else {
-            txtMight.setText("0");
-        }
-        if (player.getLearning() != 0) {
-            txtLearning.setText("Learning: " + (player.getLearning()));
-        }
-        else {
-            txtLearning.setText("0");
-        }
-        if (player.getLogic() != 0) {
-            txtLogic.setText("Logic: " + (player.getLogic()));
-        }
-        else {
-            txtLogic.setText("0");
-        }
-        if (player.getPerception() != 0) {
-            txtPerception.setText("Perception: " + (player.getPerception()));
-        }
-        else {
-            txtPerception.setText("0");
-        }
-        if (player.getWill() != 0) {
-            txtWill.setText("Will: " + (player.getWill()));
-        }
-        else {
-            txtWill.setText("0");
-        }
-        if (player.getDeception() != 0) {
-            txtDeception.setText("Deception: " + (player.getDeception()));
-        }
-        else {
-            txtDeception.setText("0");
-        }
-        if (player.getPersuasion() != 0) {
-            txtPersuasion.setText("Persuasion: " + (player.getPersuasion()));
-        }
-        else {
-            txtPerception.setText("0");
-        }
-        if (player.getPresence() != 0) {
-            txtPresence.setText("Presence: " + (player.getPresence()));
-        }
-        else {
-            txtPresence.setText("0");
-        }
-        if (player.getAlteration() != 0) {
-            txtAlteration.setText("Alteration: " + (player.getAlteration()));
-        }
-        else {
-            txtAlteration.setText("0");
-        }
-        if (player.getCreation() != 0) {
-            txtCreation.setText("Creation: " + (player.getCreation()));
-        }
-        else {
-            txtCreation.setText("0");
-        }
-        if (player.getEnergy() != 0) {
-            txtEnergy.setText("Energy: " + (player.getEnergy()));
-        }
-        else {
-            txtEnergy.setText("0");
-        }
-        if (player.getEntropy() != 0) {
-            txtEntropy.setText("Entropy: " + (player.getEntropy()));
-        }
-        else {
-            txtEntropy.setText("0");
-        }
-        if (player.getInfluence() != 0) {
-            txtInfluence.setText("Influence: " + (player.getInfluence()));
-        }
-        else {
-            txtInfluence.setText("0");
-        }
-        if (player.getMovement() != 0) {
-            txtMovement.setText("Movement: " + (player.getMovement()));
-        }
-        else {
-            txtMovement.setText("0");
-        }
-        if (player.getPrescience() != 0) {
-            txtPrescience.setText("Prescience: " + (player.getPrescience()));
-        }
-        else {
-            txtPrescience.setText("0");
-        }
-        if (player.getProtection() != 0) {
-            txtProtection.setText("Protection: " + (player.getProtection()));
-        }
-        else {
-            txtProtection.setText("0");
-        }
+    private void saveAttributes() {
+        //Initialization of Elements
+        TextView txtName = findViewById(R.id.txtCharName);
+        player.setCharName("" + txtName.getText());
+        TextView txtNickName = findViewById(R.id.txtNickName);
+        player.setNickname("" + txtNickName.getText());
+
+        EditText editText = findViewById(R.id.editLvl);
+        player.setLevelTotal(Integer.parseInt("" + editText.getText()));
+        TextView txtDeity = findViewById(R.id.txtDeity);
+        player.setDeity("" + txtDeity.getText());
+
+        TextView txtLang = findViewById(R.id.txtLang);
+        //String lang = "";
+        //lang = getLangs(lang);
+        //txtLang.setText("Languages: " + (lang));
+
+        TextView txtBio = findViewById(R.id.txtBio);
+        player.setBio("" + txtBio.getText());
+
+        TextView editSpeed = findViewById(R.id.editSpeed);
+        player.setSpeed(Integer.parseInt("" + editSpeed.getText()));
+
+        //Attributes
+        TextView editAgility = findViewById(R.id.editAgility);
+        player.setAgility(Integer.parseInt("" + editAgility.getText()));
+
+        TextView editFortitude = findViewById(R.id.editFortitude);
+        player.setFortitude(Integer.parseInt("" + editFortitude.getText()));
+
+        TextView editMight = findViewById(R.id.editMight);
+        player.setMight(Integer.parseInt("" + editMight.getText()));
+
+        TextView editLearning = findViewById(R.id.editLearning);
+        player.setLearning(Integer.parseInt("" + editLearning.getText()));
+
+        TextView editLogic = findViewById(R.id.editLogic);
+        player.setLogic(Integer.parseInt("" + editLogic.getText()));
+
+        TextView editPerception = findViewById(R.id.editPerception);
+        player.setPerception(Integer.parseInt("" + editPerception.getText()));
+
+        TextView editWill = findViewById(R.id.editWill);
+        player.setWill(Integer.parseInt("" + editWill.getText()));
+
+        TextView editDeception = findViewById(R.id.editDeception);
+        player.setDeception(Integer.parseInt("" + editDeception.getText()));
+
+        TextView editPersuasion = findViewById(R.id.editPersuasion);
+        player.setPersuasion(Integer.parseInt("" + editPersuasion.getText()));
+
+        TextView editPresence = findViewById(R.id.editPresence);
+        player.setPresence(Integer.parseInt("" + editPresence.getText()));
+
+        TextView editAlteration = findViewById(R.id.editAlteration);
+        player.setAlteration(Integer.parseInt("" + editAlteration.getText()));
+
+        TextView editCreation = findViewById(R.id.editCreation);
+        player.setCreation(Integer.parseInt("" + editCreation.getText()));
+
+        TextView editEnergy = findViewById(R.id.editEnergy);
+        player.setEnergy(Integer.parseInt("" + editEnergy.getText()));
+
+        TextView editEntropy = findViewById(R.id.editEntropy);
+        player.setEntropy(Integer.parseInt("" + editEntropy.getText()));
+
+        TextView editInfluence = findViewById(R.id.editInfluence);
+        player.setInfluence(Integer.parseInt("" + editInfluence.getText()));
+
+        TextView editMovement = findViewById(R.id.editMovement);
+        player.setMovement(Integer.parseInt("" + editMovement.getText()));
+
+        TextView editPrescience = findViewById(R.id.editPrescience);
+        player.setPrescience(Integer.parseInt("" + editPrescience.getText()));
+
+        TextView editProtection = findViewById(R.id.editProtection);
+        player.setProtection(Integer.parseInt("" + editProtection.getText()));
+
+        player.setLevel();
+
+        Toast toast = Toast.makeText(this, "Player Saved", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     private void toBanes()
@@ -369,6 +340,7 @@ public class OLEditSheet extends AppCompatActivity
             public void onClick(View v)
             {
                 //Set Attributes First
+                saveAttributes();
                 toBanes();
             }
         });
@@ -378,6 +350,7 @@ public class OLEditSheet extends AppCompatActivity
             public void onClick(View v)
             {
                 //Set Attributes First
+                saveAttributes();
                 toBoons();
             }
         });
@@ -397,7 +370,7 @@ public class OLEditSheet extends AppCompatActivity
             public void onClick(View v)
             {
                 //Save Attributes to player
-
+                saveAttributes();
             }
         });
 

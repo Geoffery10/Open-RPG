@@ -91,20 +91,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/txtMajorLv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="16dp"
-                    android:inputType="number"
-                    android:text="x"
-                    android:textAlignment="center"
-                    android:textIsSelectable="true"
-                    android:textSize="24sp" />
-
-                <EditText
-                    android:id="@+id/txtMinorLvl"
+                    android:id="@+id/editLvl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -293,21 +280,35 @@
                 android:layout_marginRight="18dp"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/txtSpeed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
-                    android:text="Speed: "
-                    android:textIsSelectable="true"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/LLSpeed">
+
+                    <TextView
+                        android:id="@+id/txtSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Speed:"
+                        android:textAlignment="center"
+                        android:textIsSelectable="true"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:text="" />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
