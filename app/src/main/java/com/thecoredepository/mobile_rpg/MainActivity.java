@@ -2,6 +2,7 @@ package com.thecoredepository.mobile_rpg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -30,6 +31,8 @@ import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openle
 
 public class MainActivity extends AppCompatActivity {
 
+    public Context mContext = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         Spinner spinnerOL = findViewById(R.id.spinnerOL);
         Button btnOpenSheet = findViewById(R.id.btnOpenSheet);
         Button btnNewSheet = findViewById(R.id.btnNewSheet);
+        Button btnDeleteSheet = findViewById(R.id.btnDeleteSheet);
         TextView txtVersion = findViewById(R.id.txtVersion);
         String versionName = BuildConfig.VERSION_NAME;
         txtVersion.setText("Version: " + versionName);
@@ -62,10 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 String selected = (String)spinnerOL.getSelectedItem();
                 Log.i("selected", selected);
                 //Save lastSheet
-                SharedPreferences saveLastSheet = getSharedPreferences("lastSheet", MODE_PRIVATE);
-                SharedPreferences.Editor editor = saveLastSheet.edit();
-                editor.putString("lastSheet", selected);
-                editor.apply();
+                saveLastSheet(selected);
                 //Open Sheet
                 Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
                 in.putExtra("selected", selected);
@@ -81,5 +82,34 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
+
+        btnDeleteSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Delete the selected sheet
+                Spinner spinnerOL = findViewById(R.id.spinnerOL);
+                String selected = (String)spinnerOL.getSelectedItem();
+                Log.i("selected", selected);
+
+                if (sheetList.contains(selected))
+                {
+                    int index = 0;
+                    index = sheetList.indexOf(selected);
+                    sheetList.remove(index);
+                    sheets.remove(index);
+                }
+
+                ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(mContext, R.layout.spinner_style, sheetList);
+                spinnerOL.setAdapter(adapterOL);
+            }
+        });
+    }
+
+    private void saveLastSheet(String selected) {
+        //Save lastSheet
+        SharedPreferences saveLastSheet = getSharedPreferences("lastSheet", MODE_PRIVATE);
+        SharedPreferences.Editor editor = saveLastSheet.edit();
+        editor.putString("lastSheet", selected);
+        editor.apply();
     }
 }
