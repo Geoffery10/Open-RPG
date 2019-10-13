@@ -1,5 +1,6 @@
 package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Layout;
@@ -21,6 +22,9 @@ import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openle
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
 
 public class OLNewSheet extends AppCompatActivity {
+
+    public Context mContext = this;
+    public openlegend playerTemp = new openlegend();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,11 +94,11 @@ public class OLNewSheet extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                player.setLevelTotal(player.getLevelTotal() + 1);
-                editLevel.setText(""+player.getLevelTotal());
-                player.setLevel();
-                editMajorLvl.setText(""+player.getMajorLvl());
-                editMinorLvl.setText(""+player.getMinorLvl());
+                playerTemp.setLevelTotal(playerTemp.getLevelTotal() + 1);
+                editLevel.setText(""+playerTemp.getLevelTotal());
+                playerTemp.setLevel();
+                editMajorLvl.setText(""+playerTemp.getMajorLvl());
+                editMinorLvl.setText(""+playerTemp.getMinorLvl());
             }
         });
     }
@@ -121,13 +125,13 @@ public class OLNewSheet extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                if (player.getLevelTotal() > 0)
+                if (playerTemp.getLevelTotal() > 0)
                 {
-                    player.setLevelTotal(player.getLevelTotal() - 1);
-                    editLevel.setText(""+player.getLevelTotal());
-                    player.setLevel();
-                    editMajorLvl.setText(""+player.getMajorLvl());
-                    editMinorLvl.setText(""+player.getMinorLvl());
+                    playerTemp.setLevelTotal(playerTemp.getLevelTotal() - 1);
+                    editLevel.setText(""+playerTemp.getLevelTotal());
+                    playerTemp.setLevel();
+                    editMajorLvl.setText(""+playerTemp.getMajorLvl());
+                    editMinorLvl.setText(""+playerTemp.getMinorLvl());
                 }
             }
         });
@@ -183,10 +187,10 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getAgility() + 1) <= maxScore)
+                if ((playerTemp.getAgility() + 1) <= maxScore)
                 {
-                    player.setAgility(player.getAgility() + 1);
-                    editAgility.setText(""+player.getAgility());
+                    playerTemp.setAgility(playerTemp.getAgility() + 1);
+                    editAgility.setText(""+playerTemp.getAgility());
                     updateAttributes();
                 }
             }
@@ -196,9 +200,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getFortitude() + 1) <= maxScore) {
-                    player.setFortitude(player.getFortitude() + 1);
-                    editFortitude.setText("" + player.getFortitude());
+                if ((playerTemp.getFortitude() + 1) <= maxScore) {
+                    playerTemp.setFortitude(playerTemp.getFortitude() + 1);
+                    editFortitude.setText("" + playerTemp.getFortitude());
                     updateAttributes();
                 }
             }
@@ -208,9 +212,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getMight() + 1) <= maxScore) {
-                    player.setMight(player.getMight() + 1);
-                    editMight.setText("" + player.getMight());
+                if ((playerTemp.getMight() + 1) <= maxScore) {
+                    playerTemp.setMight(playerTemp.getMight() + 1);
+                    editMight.setText("" + playerTemp.getMight());
                     updateAttributes();
                 }
             }
@@ -221,9 +225,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getLearning() + 1) <= maxScore) {
-                    player.setLearning(player.getLearning() + 1);
-                    editLearning.setText("" + player.getLearning());
+                if ((playerTemp.getLearning() + 1) <= maxScore) {
+                    playerTemp.setLearning(playerTemp.getLearning() + 1);
+                    editLearning.setText("" + playerTemp.getLearning());
                     updateAttributes();
                 }
             }
@@ -233,9 +237,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getLogic() + 1) <= maxScore) {
-                    player.setLogic(player.getLogic() + 1);
-                    editLogic.setText("" + player.getLogic());
+                if ((playerTemp.getLogic() + 1) <= maxScore) {
+                    playerTemp.setLogic(playerTemp.getLogic() + 1);
+                    editLogic.setText("" + playerTemp.getLogic());
                     updateAttributes();
                 }
             }
@@ -245,9 +249,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getPerception() + 1) <= maxScore) {
-                    player.setPerception(player.getPerception() + 1);
-                    editPerception.setText("" + player.getPerception());
+                if ((playerTemp.getPerception() + 1) <= maxScore) {
+                    playerTemp.setPerception(playerTemp.getPerception() + 1);
+                    editPerception.setText("" + playerTemp.getPerception());
                     updateAttributes();
                 }
             }
@@ -257,9 +261,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getWill() + 1) <= maxScore) {
-                    player.setWill(player.getWill() + 1);
-                    editWill.setText("" + player.getWill());
+                if ((playerTemp.getWill() + 1) <= maxScore) {
+                    playerTemp.setWill(playerTemp.getWill() + 1);
+                    editWill.setText("" + playerTemp.getWill());
                     updateAttributes();
                 }
             }
@@ -270,9 +274,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getDeception() + 1) <= maxScore) {
-                    player.setDeception(player.getDeception() + 1);
-                    editDeception.setText("" + player.getDeception());
+                if ((playerTemp.getDeception() + 1) <= maxScore) {
+                    playerTemp.setDeception(playerTemp.getDeception() + 1);
+                    editDeception.setText("" + playerTemp.getDeception());
                     updateAttributes();
                 }
             }
@@ -282,9 +286,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getPersuasion() + 1) <= maxScore) {
-                    player.setPersuasion(player.getPersuasion() + 1);
-                    editPersuasion.setText("" + player.getPersuasion());
+                if ((playerTemp.getPersuasion() + 1) <= maxScore) {
+                    playerTemp.setPersuasion(playerTemp.getPersuasion() + 1);
+                    editPersuasion.setText("" + playerTemp.getPersuasion());
                     updateAttributes();
                 }
             }
@@ -294,9 +298,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getPresence() + 1) <= maxScore) {
-                    player.setPresence(player.getPresence() + 1);
-                    editPresence.setText("" + player.getPresence());
+                if ((playerTemp.getPresence() + 1) <= maxScore) {
+                    playerTemp.setPresence(playerTemp.getPresence() + 1);
+                    editPresence.setText("" + playerTemp.getPresence());
                     updateAttributes();
                 }
             }
@@ -307,9 +311,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getAlteration() + 1) <= maxScore) {
-                    player.setAlteration(player.getAlteration() + 1);
-                    editAlteration.setText("" + player.getAlteration());
+                if ((playerTemp.getAlteration() + 1) <= maxScore) {
+                    playerTemp.setAlteration(playerTemp.getAlteration() + 1);
+                    editAlteration.setText("" + playerTemp.getAlteration());
                     updateAttributes();
                 }
             }
@@ -319,9 +323,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getCreation() + 1) <= maxScore) {
-                    player.setCreation(player.getCreation() + 1);
-                    editCreation.setText("" + player.getCreation());
+                if ((playerTemp.getCreation() + 1) <= maxScore) {
+                    playerTemp.setCreation(playerTemp.getCreation() + 1);
+                    editCreation.setText("" + playerTemp.getCreation());
                     updateAttributes();
                 }
             }
@@ -331,9 +335,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getEnergy() + 1) <= maxScore) {
-                    player.setEnergy(player.getEnergy() + 1);
-                    editEnergy.setText("" + player.getEnergy());
+                if ((playerTemp.getEnergy() + 1) <= maxScore) {
+                    playerTemp.setEnergy(playerTemp.getEnergy() + 1);
+                    editEnergy.setText("" + playerTemp.getEnergy());
                     updateAttributes();
                 }
             }
@@ -343,9 +347,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getEntropy() + 1) <= maxScore) {
-                    player.setEntropy(player.getEntropy() + 1);
-                    editEntropy.setText("" + player.getEntropy());
+                if ((playerTemp.getEntropy() + 1) <= maxScore) {
+                    playerTemp.setEntropy(playerTemp.getEntropy() + 1);
+                    editEntropy.setText("" + playerTemp.getEntropy());
                     updateAttributes();
                 }
             }
@@ -355,9 +359,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getInfluence() + 1) <= maxScore) {
-                    player.setInfluence(player.getInfluence() + 1);
-                    editInfluence.setText("" + player.getInfluence());
+                if ((playerTemp.getInfluence() + 1) <= maxScore) {
+                    playerTemp.setInfluence(playerTemp.getInfluence() + 1);
+                    editInfluence.setText("" + playerTemp.getInfluence());
                     updateAttributes();
                 }
             }
@@ -367,9 +371,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getMovement() + 1) <= maxScore) {
-                    player.setMovement(player.getMovement() + 1);
-                    editMovement.setText("" + player.getMovement());
+                if ((playerTemp.getMovement() + 1) <= maxScore) {
+                    playerTemp.setMovement(playerTemp.getMovement() + 1);
+                    editMovement.setText("" + playerTemp.getMovement());
                     updateAttributes();
                 }
             }
@@ -379,9 +383,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getPrescience() + 1) <= maxScore) {
-                    player.setPrescience(player.getPrescience() + 1);
-                    editPrescience.setText("" + player.getPrescience());
+                if ((playerTemp.getPrescience() + 1) <= maxScore) {
+                    playerTemp.setPrescience(playerTemp.getPrescience() + 1);
+                    editPrescience.setText("" + playerTemp.getPrescience());
                     updateAttributes();
                 }
             }
@@ -391,9 +395,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 int maxScore = getMaxScore();
-                if ((player.getProtection() + 1) <= maxScore) {
-                    player.setProtection(player.getProtection() + 1);
-                    editProtection.setText("" + player.getProtection());
+                if ((playerTemp.getProtection() + 1) <= maxScore) {
+                    playerTemp.setProtection(playerTemp.getProtection() + 1);
+                    editProtection.setText("" + playerTemp.getProtection());
                     updateAttributes();
                 }
             }
@@ -403,8 +407,8 @@ public class OLNewSheet extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                player.setArmor(player.getArmor() + 1);
-                editArmor.setText(""+player.getArmor());
+                playerTemp.setArmor(playerTemp.getArmor() + 1);
+                editArmor.setText(""+playerTemp.getArmor());
                 updateAttributes();
             }
         });
@@ -441,10 +445,10 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getAgility() - 1) >= 0)
+                if ((playerTemp.getAgility() - 1) >= 0)
                 {
-                    player.setAgility(player.getAgility() - 1);
-                    editAgility.setText(""+player.getAgility());
+                    playerTemp.setAgility(playerTemp.getAgility() - 1);
+                    editAgility.setText(""+playerTemp.getAgility());
                     updateAttributes();
                 }
             }
@@ -454,9 +458,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getFortitude() - 1) >= 0) {
-                    player.setFortitude(player.getFortitude() - 1);
-                    editFortitude.setText("" + player.getFortitude());
+                if ((playerTemp.getFortitude() - 1) >= 0) {
+                    playerTemp.setFortitude(playerTemp.getFortitude() - 1);
+                    editFortitude.setText("" + playerTemp.getFortitude());
                     updateAttributes();
                 }
             }
@@ -466,9 +470,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getMight() - 1) >= 0) {
-                    player.setMight(player.getMight() - 1);
-                    editMight.setText("" + player.getMight());
+                if ((playerTemp.getMight() - 1) >= 0) {
+                    playerTemp.setMight(playerTemp.getMight() - 1);
+                    editMight.setText("" + playerTemp.getMight());
                     updateAttributes();
                 }
             }
@@ -479,9 +483,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getLearning() - 1) >= 0) {
-                    player.setLearning(player.getLearning() - 1);
-                    editLearning.setText("" + player.getLearning());
+                if ((playerTemp.getLearning() - 1) >= 0) {
+                    playerTemp.setLearning(playerTemp.getLearning() - 1);
+                    editLearning.setText("" + playerTemp.getLearning());
                     updateAttributes();
                 }
             }
@@ -491,9 +495,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getLogic() - 1) >= 0) {
-                    player.setLogic(player.getLogic() - 1);
-                    editLogic.setText("" + player.getLogic());
+                if ((playerTemp.getLogic() - 1) >= 0) {
+                    playerTemp.setLogic(playerTemp.getLogic() - 1);
+                    editLogic.setText("" + playerTemp.getLogic());
                     updateAttributes();
                 }
             }
@@ -503,9 +507,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getPerception() - 1) >= 0) {
-                    player.setPerception(player.getPerception() - 1);
-                    editPerception.setText("" + player.getPerception());
+                if ((playerTemp.getPerception() - 1) >= 0) {
+                    playerTemp.setPerception(playerTemp.getPerception() - 1);
+                    editPerception.setText("" + playerTemp.getPerception());
                     updateAttributes();
                 }
             }
@@ -515,9 +519,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getWill() - 1) >= 0) {
-                    player.setWill(player.getWill() - 1);
-                    editWill.setText("" + player.getWill());
+                if ((playerTemp.getWill() - 1) >= 0) {
+                    playerTemp.setWill(playerTemp.getWill() - 1);
+                    editWill.setText("" + playerTemp.getWill());
                     updateAttributes();
                 }
             }
@@ -528,9 +532,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getDeception() - 1) >= 0) {
-                    player.setDeception(player.getDeception() - 1);
-                    editDeception.setText("" + player.getDeception());
+                if ((playerTemp.getDeception() - 1) >= 0) {
+                    playerTemp.setDeception(playerTemp.getDeception() - 1);
+                    editDeception.setText("" + playerTemp.getDeception());
                     updateAttributes();
                 }
             }
@@ -540,9 +544,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getPersuasion() - 1) >= 0) {
-                    player.setPersuasion(player.getPersuasion() - 1);
-                    editPersuasion.setText("" + player.getPersuasion());
+                if ((playerTemp.getPersuasion() - 1) >= 0) {
+                    playerTemp.setPersuasion(playerTemp.getPersuasion() - 1);
+                    editPersuasion.setText("" + playerTemp.getPersuasion());
                     updateAttributes();
                 }
             }
@@ -552,9 +556,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getPresence() - 1) >= 0) {
-                    player.setPresence(player.getPresence() - 1);
-                    editPresence.setText("" + player.getPresence());
+                if ((playerTemp.getPresence() - 1) >= 0) {
+                    playerTemp.setPresence(playerTemp.getPresence() - 1);
+                    editPresence.setText("" + playerTemp.getPresence());
                     updateAttributes();
                 }
             }
@@ -565,9 +569,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getAlteration() - 1) >= 0) {
-                    player.setAlteration(player.getAlteration() - 1);
-                    editAlteration.setText("" + player.getAlteration());
+                if ((playerTemp.getAlteration() - 1) >= 0) {
+                    playerTemp.setAlteration(playerTemp.getAlteration() - 1);
+                    editAlteration.setText("" + playerTemp.getAlteration());
                     updateAttributes();
                 }
             }
@@ -577,9 +581,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getCreation() - 1) >= 0) {
-                    player.setCreation(player.getCreation() - 1);
-                    editCreation.setText("" + player.getCreation());
+                if ((playerTemp.getCreation() - 1) >= 0) {
+                    playerTemp.setCreation(playerTemp.getCreation() - 1);
+                    editCreation.setText("" + playerTemp.getCreation());
                     updateAttributes();
                 }
             }
@@ -589,9 +593,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getEnergy() - 1) >= 0) {
-                    player.setEnergy(player.getEnergy() - 1);
-                    editEnergy.setText("" + player.getEnergy());
+                if ((playerTemp.getEnergy() - 1) >= 0) {
+                    playerTemp.setEnergy(playerTemp.getEnergy() - 1);
+                    editEnergy.setText("" + playerTemp.getEnergy());
                     updateAttributes();
                 }
             }
@@ -601,9 +605,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getEntropy() - 1) >= 0) {
-                    player.setEntropy(player.getEntropy() - 1);
-                    editEntropy.setText("" + player.getEntropy());
+                if ((playerTemp.getEntropy() - 1) >= 0) {
+                    playerTemp.setEntropy(playerTemp.getEntropy() - 1);
+                    editEntropy.setText("" + playerTemp.getEntropy());
                     updateAttributes();
                 }
             }
@@ -613,9 +617,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getInfluence() - 1) >= 0) {
-                    player.setInfluence(player.getInfluence() - 1);
-                    editInfluence.setText("" + player.getInfluence());
+                if ((playerTemp.getInfluence() - 1) >= 0) {
+                    playerTemp.setInfluence(playerTemp.getInfluence() - 1);
+                    editInfluence.setText("" + playerTemp.getInfluence());
                     updateAttributes();
                 }
             }
@@ -625,9 +629,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getMovement() - 1) >= 0) {
-                    player.setMovement(player.getMovement() - 1);
-                    editMovement.setText("" + player.getMovement());
+                if ((playerTemp.getMovement() - 1) >= 0) {
+                    playerTemp.setMovement(playerTemp.getMovement() - 1);
+                    editMovement.setText("" + playerTemp.getMovement());
                     updateAttributes();
                 }
             }
@@ -637,9 +641,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if ((player.getPrescience() - 1) >= 0) {
-                    player.setPrescience(player.getPrescience() - 1);
-                    editPrescience.setText("" + player.getPrescience());
+                if ((playerTemp.getPrescience() - 1) >= 0) {
+                    playerTemp.setPrescience(playerTemp.getPrescience() - 1);
+                    editPrescience.setText("" + playerTemp.getPrescience());
                     updateAttributes();
                 }
             }
@@ -649,9 +653,9 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 
-                if ((player.getProtection() - 1) >= 0) {
-                    player.setProtection(player.getProtection() - 1);
-                    editProtection.setText("" + player.getProtection());
+                if ((playerTemp.getProtection() - 1) >= 0) {
+                    playerTemp.setProtection(playerTemp.getProtection() - 1);
+                    editProtection.setText("" + playerTemp.getProtection());
                     updateAttributes();
                 }
             }
@@ -661,9 +665,9 @@ public class OLNewSheet extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                if ((player.getArmor() - 1) >= 0) {
-                    player.setArmor(player.getArmor() - 1);
-                    editArmor.setText("" + player.getArmor());
+                if ((playerTemp.getArmor() - 1) >= 0) {
+                    playerTemp.setArmor(playerTemp.getArmor() - 1);
+                    editArmor.setText("" + playerTemp.getArmor());
                     updateAttributes();
                 }
             }
@@ -672,36 +676,36 @@ public class OLNewSheet extends AppCompatActivity {
 
     private void updateAttributes()
     {
-        player.setStats();
-        player.setGetAttributePointsUsed();
-        player.setAttributePointsAvailable(player.getType());
+        playerTemp.setStats();
+        playerTemp.setGetAttributePointsUsed();
+        playerTemp.setAttributePointsAvailable(playerTemp.getType());
         TextView txtAttributes = findViewById(R.id.txtAttributes);
-        txtAttributes.setText("Attributes: " + player.getGetAttributePointsUsed() +"/"+ player.getAttributePointsAvailable());
+        txtAttributes.setText("Attributes: " + playerTemp.getGetAttributePointsUsed() +"/"+ playerTemp.getAttributePointsAvailable());
         txtAttributes = findViewById(R.id.txtAttributes2);
-        txtAttributes.setText("Attributes: " + player.getGetAttributePointsUsed() +"/"+ player.getAttributePointsAvailable());
+        txtAttributes.setText("Attributes: " + playerTemp.getGetAttributePointsUsed() +"/"+ playerTemp.getAttributePointsAvailable());
         TextView txtToughness = findViewById(R.id.txtToughness);
-        txtToughness.setText("Toughness: " + player.getToughness());
+        txtToughness.setText("Toughness: " + playerTemp.getToughness());
         TextView txtGuard = findViewById(R.id.txtGuard);
-        txtGuard.setText("Guard: " + (player.getGuard()));
+        txtGuard.setText("Guard: " + (playerTemp.getGuard()));
         TextView txtResolve = findViewById(R.id.txtResolve);
-        txtResolve.setText("Resolve: " + player.getResolve());
+        txtResolve.setText("Resolve: " + playerTemp.getResolve());
         TextView txtHitpoints = findViewById(R.id.txtHitpoints);
-        txtHitpoints.setText("Hitpoints: " + (player.getHitpoints()));
+        txtHitpoints.setText("Hitpoints: " + (playerTemp.getHitpoints()));
 
     }
 
     private int getMaxScore() {
         int maxScore = 0;
-        if (player.getLevelTotal() <= 3) {
+        if (playerTemp.getLevelTotal() <= 3) {
             maxScore = 5;
         }
-        else if (player.getLevelTotal() <= 9) {
+        else if (playerTemp.getLevelTotal() <= 9) {
             maxScore = 6;
         }
-        else if (player.getLevelTotal() <= 15) {
+        else if (playerTemp.getLevelTotal() <= 15) {
             maxScore = 7;
         }
-        else if (player.getLevelTotal() <= 21) {
+        else if (playerTemp.getLevelTotal() <= 21) {
             maxScore = 8;
         }
         else {
@@ -740,7 +744,7 @@ public class OLNewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 //Languages aren't required
-                player.setLevelTotal(0);
+                playerTemp.setLevelTotal(0);
 
                 LinearLayout layoutLang = findViewById(R.id.layoutLang);
                 layoutLang.setVisibility(View.GONE);
@@ -795,31 +799,35 @@ public class OLNewSheet extends AppCompatActivity {
                 layoutInventory.setVisibility(View.GONE);
                 //Open Sheet
                 Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
-                sheets.add(player);
-                sheetList.add(player.getCharName());
-                in.putExtra("selected", player.getCharName());
+                sheets.add(playerTemp);
+                sheetList.add(playerTemp.getCharName());
+
+                OLSavingSheets saveData = new OLSavingSheets();
+                saveData.saveData(mContext);
+
+                in.putExtra("selected", playerTemp.getCharName());
                 startActivity(in);
             }
         });
     }
 
     private void getBioSection(EditText txtCharName) {
-        player.setCharName(""+txtCharName.getText());
+        playerTemp.setCharName(""+txtCharName.getText());
         EditText txtNickName = findViewById(R.id.txtNickName);
-        player.setNickname(""+txtNickName.getText());
+        playerTemp.setNickname(""+txtNickName.getText());
         EditText txtDeity = findViewById(R.id.txtDeity);
         if (txtDeity.getText().toString().trim().length() > 0) {
-            player.setDeity(""+txtDeity.getText());
+            playerTemp.setDeity(""+txtDeity.getText());
         }
         else {
-            player.setDeity("No Deity");
+            playerTemp.setDeity("No Deity");
         }
-        getPlayerType();
+        getplayerType();
         EditText txtBioEdit = findViewById(R.id.txtBioEdit);
-        player.setBio(""+txtBioEdit.getText());
+        playerTemp.setBio(""+txtBioEdit.getText());
     }
 
-    private void getPlayerType() {
+    private void getplayerType() {
         Spinner spinnerType = findViewById(R.id.spinnerType);
         String type = (String)spinnerType.getSelectedItem();
         if (type.equals("Player Character")) {
@@ -838,7 +846,7 @@ public class OLNewSheet extends AppCompatActivity {
             Log.i("Type", "Error: "+type);
             type = "pc";
         }
-        player.setType(type);
+        playerTemp.setType(type);
     }
 
     private void toBanes()
