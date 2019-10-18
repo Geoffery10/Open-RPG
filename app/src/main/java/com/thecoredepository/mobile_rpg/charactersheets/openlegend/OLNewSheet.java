@@ -807,6 +807,7 @@ public class OLNewSheet extends AppCompatActivity {
 
                 in.putExtra("selected", playerTemp.getCharName());
                 startActivity(in);
+                finish();
             }
         });
     }
