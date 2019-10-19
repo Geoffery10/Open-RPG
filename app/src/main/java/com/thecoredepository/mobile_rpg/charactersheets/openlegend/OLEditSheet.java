@@ -230,8 +230,8 @@ public class OLEditSheet extends AppCompatActivity
         //lang = getLangs(lang);
         //txtLang.setText("Languages: " + (lang));
 
-        TextView txtBio = findViewById(R.id.txtBio);
-        player.setBio("" + txtBio.getText());
+        TextView txtBioEdit = findViewById(R.id.txtBioEdit);
+        player.setBio("" + txtBioEdit.getText());
 
         TextView editSpeed = findViewById(R.id.editSpeed);
         player.setSpeed(Integer.parseInt("" + editSpeed.getText()));
