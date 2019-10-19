@@ -1188,7 +1188,7 @@ public class openlegend
             tazmur.setPerception(2);
             tazmur.setAlteration(7);
             tazmur.setMovement(4);
-            tazmur.setEnergy(4);
+            tazmur.setEnergy(5);
             tazmur.setAgility(2);
             tazmur.setLearning(2);
             tazmur.setWill(2);
@@ -1265,9 +1265,9 @@ public class openlegend
             lang[2] = "Demon";
             nightmare.setLanguages(lang);
             nightmare.setBio("A flamboyant, seemingly calm, overconfident opponent whose only goal is to revive Demise, his master. His spirit is bound to Tazmur and is unable to leave him.");
-            nightmare.setEntropy(5);
+            nightmare.setEntropy(6);
             nightmare.setAlteration(5);
-            nightmare.setProtection(5);
+            nightmare.setProtection(7);
             nightmare.setLevelTotal(12);
             nightmare.setSpeed(0);
 
@@ -1307,9 +1307,8 @@ public class openlegend
             mazok.setLanguages(lang);
             mazok.setBio("Born sixteen years ago to a savage Rito tribe, Mazok ran away early in his life.  Since then he met Aderinus, a Labrynnian who saved him from the dark magic of the Lost Woods.  With jet black feathers and pure white eyes, he’s abnormal looking compared to the normally colorful Rito.  As a result, he was the laughing stock of his tribe, which leads to him holding a bitter resentment for them to this day.  He is also slow to trust and not very talkative.");
             mazok.setAgility(6);
-            mazok.setMight(5);
+            mazok.setMight(7);
             mazok.setPerception(3);
-            mazok.setLogic(3);
             mazok.setWill(4);
             mazok.setFortitude(3);
             mazok.setPresence(2);

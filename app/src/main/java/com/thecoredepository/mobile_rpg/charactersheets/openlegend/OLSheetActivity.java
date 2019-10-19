@@ -38,6 +38,10 @@ public class OLSheetActivity extends AppCompatActivity {
         player = player.loadCharacterSheet(selected);
         showHideBio();
 
+        initializationOfElement();
+    }
+
+    private void initializationOfElement() {
         //Initialization of Elements
         TextView txtName = findViewById(R.id.txtCharName);
         txtName.setText(player.getCharName());
@@ -142,7 +146,6 @@ public class OLSheetActivity extends AppCompatActivity {
 
         //Element Visibility and Values
         setAttributes(txtAgility, LLAgility, btnAgility, txtFortitude, LLFortitude, btnFortitude, txtMight, LLMight, btnMight, txtLearning, LLLearning, btnLearning, txtLogic, LLLogic, btnLogic, txtPerception, LLPerception, btnPerception, txtWill, LLWill, btnWill, txtDeception, LLDeception, btnDeception, txtPersuasion, LLPersuasion, btnPersuasion, txtPresence, LLPresence, btnPresence, txtAlteration, LLAlteration, btnAlteration, txtCreation, LLCreation, btnCreation, txtEnergy, LLEnergy, btnEnergy, txtEntropy, LLEntropy, btnEntropy, txtInfluence, LLInfluence, btnInfluence, txtMovement, LLMovement, btnMovement, txtPrescience, LLPrescience, btnPrescience, txtProtection, LLProtection, btnProtection);
-
     }
 
     private String getLangs(String lang) {
@@ -168,8 +171,7 @@ public class OLSheetActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
             case R.id.Bio:
                 MenuItem bio = menu.findItem(R.id.Bio);
@@ -268,8 +270,7 @@ public class OLSheetActivity extends AppCompatActivity {
         builder.show();
     }
 
-    private void showHideBio()
-    {
+    private void showHideBio() {
         TextView txtLvl = findViewById(R.id.txtLvl);
         TextView txtDeity = findViewById(R.id.txtDeity);
         TextView txtLang = findViewById(R.id.txtLang);
@@ -290,15 +291,13 @@ public class OLSheetActivity extends AppCompatActivity {
         }
     }
 
-    private void toBanes()
-    {
+    private void toBanes() {
         Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
         in.putExtra("selected", "Banes");
         startActivity(in);
     }
 
-    private void toBoons()
-    {
+    private void toBoons() {
         Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
         in.putExtra("selected", "Boons");
         startActivity(in);
@@ -652,4 +651,11 @@ public class OLSheetActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onRestart() {
+        // After a pause OR at startup
+        super.onRestart();
+        //Refresh
+        initializationOfElement();
+    }
 }
