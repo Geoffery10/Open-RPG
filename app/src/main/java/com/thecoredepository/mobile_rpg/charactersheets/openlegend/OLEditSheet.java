@@ -64,6 +64,12 @@ public class OLEditSheet extends AppCompatActivity
     }
 
     private void updateStats() {
+        //Update Stats
+        player.setStats();
+        player.setAttributePointsAvailable(player.getType());
+        player.setGetAttributePointsUsed();
+
+        //Update Fields
         TextView txtAttributes = findViewById(R.id.txtAttributes);
         txtAttributes.setText("Attributes: " + player.getGetAttributePointsUsed() +"/"+ player.getAttributePointsAvailable());
         TextView txtToughness = findViewById(R.id.txtToughness);
