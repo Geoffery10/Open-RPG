@@ -135,7 +135,6 @@
                     android:id="@+id/editAddRemoveUpgradeFeat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="SPECIAL..."
                     android:textAlignment="center"
                     android:textSize="15sp" />
 
