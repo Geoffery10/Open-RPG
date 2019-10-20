@@ -299,7 +299,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         }
         else if (add == true || showAll == true) {
             Log.d("Recycle", "Size: " + OLFeats.getFeatList().size());
-            size = OLFeats.getFeatList().size() / 2;
+            size = OLFeats.getFeatList().size();
         }
 
         return size;
