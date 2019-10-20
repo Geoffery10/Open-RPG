@@ -214,7 +214,14 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
                 @Override
                 public void onClick(View v) {
                     //Add Feat to Player
-
+                    if (holder.spinnerAddRemoveUpgradeFeat.getVisibility() == View.VISIBLE) {
+                        if (holder.spinnerAddRemoveUpgradeFeat2.getVisibility() == View.VISIBLE) {
+                            finalFeat.setConnection(holder.spinnerAddRemoveUpgradeFeat.getSelectedItem().toString() + " - " + holder.spinnerAddRemoveUpgradeFeat2.getSelectedItem().toString());
+                        }
+                        else {
+                            finalFeat.setConnection(holder.spinnerAddRemoveUpgradeFeat.getSelectedItem().toString() + "");
+                        }
+                    }
                     //Add Connection Data to Feat
 
                     player.addFeat(finalFeat);
