@@ -574,7 +574,16 @@ public class openlegend
     }
 
     public void setFeatPointsAvailable() {
-        this.featPointsAvailable = (6 + levelTotal);
+        if (type.equals("pc")) {
+            this.featPointsAvailable = (6 + levelTotal);
+        }
+        else if (type.equals("ccII") || type.equals("ccIII")) {
+            this.featPointsAvailable = 3;
+        }
+        else {
+            this.featPointsAvailable = 0;
+        }
+
     }
 
     public int getFeatPointsUsed() {
