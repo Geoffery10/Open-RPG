@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        AppContext.mContext = mContext;
         Spinner spinnerOL = findViewById(R.id.spinnerOL);
         Button btnOpenSheet = findViewById(R.id.btnOpenSheet);
         Button btnNewSheet = findViewById(R.id.btnNewSheet);
