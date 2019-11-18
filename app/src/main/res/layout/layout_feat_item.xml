@@ -7,7 +7,7 @@
         android:id="@+id/viewFeat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
+        android:layout_marginHorizontal="5dp"
         android:background="#80FFFFFF"
         android:orientation="vertical"
         android:visibility="visible">
@@ -16,7 +16,7 @@
             android:id="@+id/btnFeat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
+            android:layout_marginHorizontal="15dp"
             android:backgroundTint="@color/colorPrimary"
             android:text="FEAT TITLE - LEVEL     (COST)"
             android:textColor="@color/textAccent"
