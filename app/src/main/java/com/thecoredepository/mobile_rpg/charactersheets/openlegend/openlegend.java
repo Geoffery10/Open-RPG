@@ -82,6 +82,8 @@ public class openlegend
     private int wealth;
 
     //Banes/Boons
+    private ArrayList<OLBanes> banes = new ArrayList<>();
+    private ArrayList<OLBoons> boons = new ArrayList<>();
     private ArrayList Banes = new ArrayList<String>();
     private ArrayList Boons = new ArrayList<String>();
 
