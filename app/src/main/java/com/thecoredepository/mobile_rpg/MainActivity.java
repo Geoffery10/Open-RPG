@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLNewSheet;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats.featList;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;

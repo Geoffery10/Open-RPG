@@ -3,7 +3,6 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,8 +15,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLBanesBoonsActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
 

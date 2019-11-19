@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSheetActivity"
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
@@ -28,17 +28,17 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLInventoryActivity"
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLInventoryActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLBanesBoonsActivity"
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLBanesBoonsActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLFeatsActivitiy"
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLFeatsActivitiy"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
