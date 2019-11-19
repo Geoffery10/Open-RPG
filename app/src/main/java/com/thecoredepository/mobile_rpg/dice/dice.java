@@ -28,7 +28,7 @@ public class dice
     }
     public static int custom(int custom)
     {
-        return (int)(Math.random()*custom)+1);
+        return (int)((Math.random()*custom)+1);
     }
     
     public static int roll(int numOfDice, int valueOfDice)
