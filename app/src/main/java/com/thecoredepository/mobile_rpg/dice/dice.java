@@ -26,13 +26,17 @@ public class dice
     {
         return (int)(Math.random()*20) + 1;
     }
+    public static int custom(int custom)
+    {
+        return (int)(Math.random()*custom)+1);
+    }
     
     public static int roll(int numOfDice, int valueOfDice)
     {
         int result = 0;
         for(int i = 0; i <= numOfDice; i++)
         {
-            result += (int)(Math.random()*valueOfDice) + 1;
+            result += custom(valueOfDice);
         }
         return result;
     }
