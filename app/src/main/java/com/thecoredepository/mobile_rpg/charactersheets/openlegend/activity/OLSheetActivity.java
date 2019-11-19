@@ -72,7 +72,11 @@ public class OLSheetActivity extends AppCompatActivity {
         TextView txtResolve = findViewById(R.id.txtResolve);
         txtResolve.setText("Resolve: " + player.getResolve());
         TextView txtHitpoints = findViewById(R.id.txtHitpoints);
-        txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
+        if (player.getLethalDamage() > 0) {
+            txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()) + "  (L:"+player.getLethalDamage()+")");
+        } else {
+            txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
+        }
         TextView txtSpeed = findViewById(R.id.txtSpeed);
         txtSpeed.setText("Speed: " + (player.getSpeed()));
 
@@ -201,6 +205,9 @@ public class OLSheetActivity extends AppCompatActivity {
             case R.id.Healing:
                 healingDialog();
                 break;
+            case R.id.LethalDamage:
+                lethalDamageDialog();
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -228,6 +235,42 @@ public class OLSheetActivity extends AppCompatActivity {
                 player.setDamageTaken(num);
                 TextView txtHitpoints = findViewById(R.id.txtHitpoints);
                 txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        builder.show();
+    }
+
+    private void lethalDamageDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Lethal Damage");
+
+        // Set up the input
+        final EditText input = new EditText(this);
+        input.setGravity(Gravity.CENTER_HORIZONTAL);
+        // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+        input.setInputType(InputType.TYPE_CLASS_NUMBER);
+        builder.setView(input);
+
+        // Set up the buttons
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String userin = input.getText().toString();
+                int num = Integer.valueOf(userin);
+                player.setLethalDamage(num);
+                player.setHitpoints();
+                TextView txtHitpoints = findViewById(R.id.txtHitpoints);
+                if (player.getLethalDamage() > 0) {
+                    txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()) + "  (L:"+player.getLethalDamage()+")");
+                } else {
+                    txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
+                }
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

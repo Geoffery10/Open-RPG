@@ -65,7 +65,7 @@ public class openlegend
     private int hitpoints;
     private int damageTaken;
     private int speed;
-	private int lethalDamage;
+	private int lethalDamage = 0;
 
     //Feats
     private int featPointsAvailable;
@@ -171,12 +171,15 @@ public class openlegend
 	}
 	
 	public void setLethalDamage(int lethalDamage) {
-		if (lethalDamage >= 0) {
+		if (lethalDamage < 0) {
 			this.lethalDamage = 0;
 		}
 		else if (lethalDamage > getHitpoints()){
-			this.lethalDamage += lethalDamage;
+			this.lethalDamage = getHitpoints();
 		}
+		else {
+            this.lethalDamage = this.lethalDamage + lethalDamage;
+        }
 	}
 
     public String getPlayerName() {

@@ -6,4 +6,5 @@
     <item android:title="Boons" android:id="@+id/Boons"></item>
     <item android:title="Damage" android:id="@+id/Damage"></item>
     <item android:title="Healing" android:id="@+id/Healing"></item>
+    <item android:title="Lethal Damage" android:id="@+id/LethalDamage"></item>
 </menu>
