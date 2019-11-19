@@ -9,6 +9,7 @@ public class OLBoons
     private String duration;
     private String description;
     private String effect;
+    private int minLvl;
     private int powerlvl;
     private String attributes;
     private String attack;
@@ -20,6 +21,7 @@ public class OLBoons
         newBoon.setDuration(this.duration);
         newBoon.setDescription(this.description);
         newBoon.setEffect(this.effect);
+        newBoon.setMinLvl(this.minLvl);
         newBoon.setPowerlvl(this.powerlvl);
         newBoon.setAttributes(this.attributes);
         newBoon.setAttack(this.attack);
@@ -61,6 +63,14 @@ public class OLBoons
 
     public void setEffect(String effect) {
         this.effect = effect;
+    }
+
+    public int getMinLvl() {
+        return minLvl;
+    }
+
+    public void setMinLvl(int minLvl) {
+        this.minLvl = minLvl;
     }
 
     public int getPowerlvl() {
