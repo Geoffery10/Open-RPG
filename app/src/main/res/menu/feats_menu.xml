@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Your Feats" android:id="@+id/yourFeats"></item>
+    <item android:title="Add Feats" android:id="@+id/addFeats"></item>
+    <item android:title="Remove Feats" android:id="@+id/removeFeats"></item>
+    <item android:title="Show All" android:id="@+id/showAllFeats"></item>
+</menu>

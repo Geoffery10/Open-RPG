@@ -1,8 +1,27 @@
-![Banner](https://openlegend.heromuster.com/heromuster-header.png)
-# Mobile RPG Sheets
-Mobile RPG Sheets is an Android app that allows you to carry your character sheets anywhere. 
+<p align="center">
+<img align="center" width="500" height="100" src="https://github.com/Geoffery10/Mobile-RPG/blob/master/github_assets/icon_banner.jpg">
+</p>
+
+# Open RPG
+Open RPG is an Android app that allows you to carry your character sheets anywhere. 
 The app includes features like dice rollers and lookup of skill/banes/boons/feats... 
-Let Mobile RPG Sheets do all the hard work for you!
+Let Open RPG do all the hard work for you!
+
+## Table of Contents
+* [Screenshots](https://github.com/Geoffery10/Mobile-RPG/blob/master/README.md#screenshots)
+* [Getting Started](https://github.com/Geoffery10/Mobile-RPG#getting-started)
+  * [Prerequisites](https://github.com/Geoffery10/Mobile-RPG#prerequisites)
+  * [Tested On](https://github.com/Geoffery10/Mobile-RPG#tested-on)
+  * [Installing](https://github.com/Geoffery10/Mobile-RPG#installing)
+    * [Play Store](https://github.com/Geoffery10/Mobile-RPG#play-store)
+    * [GitHub Releases](https://github.com/Geoffery10/Mobile-RPG#github-release)
+* [Built With](https://github.com/Geoffery10/Mobile-RPG#built-with)
+* [Contributing](https://github.com/Geoffery10/Mobile-RPG#contributing)  
+* [Authors](https://github.com/Geoffery10/Mobile-RPG#authors)
+* [License and Acknowledgments](https://github.com/Geoffery10/Mobile-RPG#license)
+
+## Screenshots
+![Screenshot](https://github.com/Geoffery10/Mobile-RPG/blob/master/github_assets/Screenshot_1568401566.png?raw=true)
 
 ## Getting Started
 
@@ -15,7 +34,9 @@ This app requires at least Android 4.0.3 (Ice Cream Sandwich).
 
 #### Tested On
 ```
+Samsung Galaxy S9+
 Samsung Galaxy S8
+Samsung Galaxy S7
 ```
 
 ### Installing
@@ -42,18 +63,25 @@ Installing can be done by downloading the .apk from the latest release to your A
 
 ## Contributing
 
-Interested in contributing? Join our [Discord](https://discord.gg/yh7E5S3)! 
+Interested in contributing? Join our [Discord](https://discord.gg/yh7E5S3)! <a href="https://discord.gg/yh7E5S3"><img align="center" width="18" height="18" src="https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/discord-128.png"></a>
 
 
 ## Authors
-
-* **Geoffery Powell - [Geoffery10](https://github.com/Geoffery10)** - *Team Lead, Developer, and Graphic Designer* 
-* **Connor Davey - [CD33](https://github.com/connordavey33)** - *STUFF?*
+Geoffery Powell - [Geoffery10](https://github.com/Geoffery10) | Connor Davey - [CD33](https://github.com/connordavey33)
+--------------------------------------------------------------|--------------------------------------------------------
+Team Lead | Creative Designer
+Developer | System Math Development
+Graphic Designer | 
 
 ## License
 
-**LINCENSE NOT COMPLETE**
-* This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+### Open RPG
+This project is licensed under the GNU Lesser General Public License v3.0 - see the [LICENSE.md](https://github.com/Geoffery10/Open-RPG/blob/master/LICENSE) file for details
+
+### Open Legend 
+This product was created under the Open Legend Community License and contains material that is copyright to Seventh Sphere Entertainment. Such use of Seventh Sphere Entertainment materials in this product is in accordance with the Open Legend Community License and shall not be construed as a challenge to the intellectual property rights reserved by Seventh Sphere Entertainment. Seventh Sphere Entertainment and Open Legend RPG and their respective logos are trademarks of Seventh Sphere Entertainment in the U.S.A. and other countries. 
+
+The full-text Open Legend Community License can be found at http://www.openlegendrpg.com/community-license.
 
 ## Acknowledgments
 

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fadeScrollbars="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/viewBaneBoon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:background="#80FFFFFF"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btnBaneBoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="BANE/BOON - 1/4/7"
+            android:textColor="@color/textAccent"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/infoBaneBoon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/lblDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryLight"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="Description"
+                    android:textColor="@color/textAccent"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Blinded_description"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/lblDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryLight"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="Duration"
+                    android:textColor="@color/textAccent"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/txtDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Blinded_duration"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/lblAttributes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryLight"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="Attributes"
+                android:textColor="@color/textAccent"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txtAttributes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/Blinded_attributes"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/lblAttack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryLight"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="Attack"
+                android:textColor="@color/textAccent"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txtAttack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/Blinded_attack"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/lblPowerLvl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimaryLight"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="Power Level"
+                    android:textColor="@color/textAccent"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/txtPowerLvl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimaryLight"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@color/textAccent"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/lblEffect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryLight"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="Effect"
+                android:textColor="@color/textAccent"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txtEffect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/Blinded_effect"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/viewSpecial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/lblSpecial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryLight"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="Special"
+                    android:textColor="@color/textAccent"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/txtSpecial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Blinded_special"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

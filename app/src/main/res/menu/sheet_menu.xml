@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:title="Show Bio" android:id="@+id/Bio"></item>
+    <item android:title="Edit Sheet" android:id="@+id/EditSheet"></item>
     <item android:title="Banes" android:id="@+id/Banes"></item>
     <item android:title="Boons" android:id="@+id/Boons"></item>
+    <item android:title="Damage" android:id="@+id/Damage"></item>
+    <item android:title="Healing" android:id="@+id/Healing"></item>
 </menu>

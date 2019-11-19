@@ -5,75 +5,120 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/paper_bg"
+    android:screenOrientation="portrait"
     tools:context="com.thecoredepository.mobile_rpg.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="341dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:scaleType="fitStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/open_legend_lg_logo" />
-
-    <Spinner
-        android:id="@+id/spinnerOL"
-        style="@style/Platform.Widget.AppCompat.Spinner"
+    <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:backgroundTint="@color/colorAccent"
-        android:foregroundTint="@color/colorPrimaryDark"
-        android:popupBackground="@drawable/paper_bg"
-        android:spinnerMode="dropdown"
-        android:textSize="24sp"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btnOpenSheet"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:background="@color/colorAccent"
-        android:text="Open Sheet"
-        android:textColor="#DEFFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerOL" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
 
-    <Button
-        android:id="@+id/btnNewSheet"
-        android:layout_width="0dp"
+            <Button
+                android:id="@+id/btnOpenSheet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@color/colorAccent"
+                android:text="Open Sheet"
+                android:textColor="#DEFFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerOL" />
+
+            <Button
+                android:id="@+id/btnNewSheet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@color/colorPrimary"
+                android:enabled="true"
+                android:text="New Sheet"
+                android:textColor="#DEFFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/btnDeleteSheet"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnOpenSheet" />
+
+            <Button
+                android:id="@+id/btnDeleteSheet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="72dp"
+                android:background="@color/colorPrimary"
+                android:enabled="true"
+                android:text="Delete Sheet"
+                android:textColor="#DEFFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.75"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnNewSheet"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="341dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="35dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/banner_ol" />
+
+            <Spinner
+                android:id="@+id/spinnerOL"
+                style="@style/Platform.Widget.AppCompat.Spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:backgroundTint="@color/colorAccent"
+                android:foregroundTint="@color/colorPrimaryDark"
+                android:popupBackground="@drawable/paper_bg"
+                android:spinnerMode="dialog"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtVersion"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:background="@color/colorPrimaryDark"
-        android:enabled="false"
-        android:text="New Sheet"
-        android:textColor="#DEFFFFFF"
+        android:layout_marginBottom="8dp"
+        android:text="Version: 0.0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOpenSheet" />
+        app:layout_constraintStart_toStartOf="@+id/frameLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

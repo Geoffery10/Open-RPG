@@ -26,6 +26,16 @@ public class dice
     {
         return (int)(Math.random()*20) + 1;
     }
+    
+    public static roll(int numOfDice, int valueOfDice)
+    {
+        int result = 0;
+        for(int i = 0; i <= numOfDice; i++)
+        {
+            result += (int)(Math.random()*valueOfDice) + 1;
+        }
+        return result;
+    }
 
     //Changes attribute score to dice string
     public static String attributeToDice(int attribute)

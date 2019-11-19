@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/viewFeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:background="#80FFFFFF"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btnFeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="FEAT TITLE - LEVEL     (COST)"
+            android:textColor="@color/textAccent"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/infoFeat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/lblDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="Description"
+                    android:textColor="@color/textAccent"
+                    android:backgroundTint="@color/colorPrimaryLight"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Blinded_description"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/lblPrerequisites"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="Prerequisites"
+                    android:textColor="@color/textAccent"
+                    android:backgroundTint="@color/colorPrimaryLight"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/txtPrerequisites"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Prerequisites"
+                    android:textAllCaps="false"
+                    android:textIsSelectable="true"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/lblFeatEffect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="Effect"
+                    android:textColor="@color/textAccent"
+                    android:backgroundTint="@color/colorPrimaryLight"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/txtFeatEffect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EFFECT..."
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/specialFeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/lblSpecial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="Special"
+                        android:textColor="@color/textAccent"
+                        android:backgroundTint="@color/colorPrimaryLight"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/txtSpecial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SPECIAL..."
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/viewAddRemoveUpgradeFeat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/editAddRemoveUpgradeFeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerAddRemoveUpgradeFeat"
+                    style="@style/Platform.Widget.AppCompat.Spinner"
+                    android:backgroundTint="@color/colorAccent"
+                    android:foregroundTint="@color/colorPrimaryDark"
+                    android:popupBackground="@drawable/paper_bg"
+                    android:spinnerMode="dialog"
+                    android:textSize="34sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <Spinner
+                    android:id="@+id/spinnerAddRemoveUpgradeFeat2"
+                    style="@style/Platform.Widget.AppCompat.Spinner"
+                    android:backgroundTint="@color/colorAccent"
+                    android:foregroundTint="@color/colorPrimaryDark"
+                    android:popupBackground="@drawable/paper_bg"
+                    android:spinnerMode="dialog"
+                    android:textSize="34sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btnAddRemove"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Add/Remove"
+                        android:layout_weight="1"
+                        android:textColor="@color/textAccent"
+                        android:backgroundTint="@color/colorPrimaryLight"
+                        android:textSize="14dp" />
+
+                    <Button
+                        android:id="@+id/btnUpgrade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Upgrade"
+                        android:layout_weight="1"
+                        android:textColor="@color/textAccent"
+                        android:backgroundTint="@color/colorPrimaryLight"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

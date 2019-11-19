@@ -9,9 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.R;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class DiceActivity extends AppCompatActivity {
 
@@ -49,23 +51,27 @@ public class DiceActivity extends AppCompatActivity {
                     int d20 = 0;
                     List<Integer> die = new ArrayList<Integer>();
                     int total = 0;
-
-                    //====================THE ADVANTAGE SYSTEM NEEDS WORK===========================
                     int advantage = 0;
+                    int disadvantage = 0;
+
                     try {
-                        advantage = Integer.parseInt(String.valueOf(editAdv.getText())) - Integer.parseInt(String.valueOf(editDis.getText()));
+                        advantage = Integer.parseInt(String.valueOf(editAdv.getText()));
                     } catch (Exception e)
                     {
                         advantage = 0;
                     }
+                    try {
+                        disadvantage = Integer.parseInt(String.valueOf(editDis.getText()));
+                    } catch (Exception e)
+                    {
+                        disadvantage = 0;
+                    }
+
                     //Roll d20
-                    d20 = rollD20(txtRolls, d20);
+                    total = rollD20(txtRolls, d20);
 
                     //Roll Other Dice
-                    rollOtherDice(txtRolls, die);
-
-                    //Add Total
-                    total = getTotalRoll(d20, die, total);
+                    total  += rollOtherDice(txtRolls, die, advantage, disadvantage);
 
                     //Display Total
                     txtTotal.setText("Total: " + total);
@@ -86,32 +92,115 @@ public class DiceActivity extends AppCompatActivity {
         return total;
     }
 
-    private void rollOtherDice(TextView txtRolls, List<Integer> die) {
-        int roll;
-        for (int i = 0; i < numberOfDie; i++)
+    private int rollOtherDice(TextView txtRolls, List<Integer> die, int advantage, int disadvantage)
+    {
+        int total = 0;
+        int roll = 0;
+        int totalAdvantage = advantage - disadvantage;
+        List<Integer> dieTemp = new ArrayList<Integer>();
+
+        if (totalAdvantage < 0)
         {
-            do
-            {
-                if (valueOfDie == 2)
-                {
-                    roll = dice.d2();
-                }
-                else if (valueOfDie == 6)
-                {
-                    roll = dice.d6();
-                }
-                else if (valueOfDie == 8)
-                {
-                    roll = dice.d8();
-                }
-                else //d10
-                {
-                    roll = dice.d10();
-                }
+            totalAdvantage = totalAdvantage * (-1);
+        }
+
+        if (advantage > disadvantage)
+        {
+
+            for (int i = 0; i < (numberOfDie + totalAdvantage); i++) {
+                roll = getRoll();
                 die.add(roll);
                 txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
-            } while (roll == valueOfDie);
+            }
+            Collections.sort(die);
+            Collections.reverse(die);
+            Log.i("Rolls - Sorted", die.toString());
+            for (int i = 0; i < numberOfDie; i++) {
+                dieTemp.add(die.get(i));
+                Log.i("Rolls - dieTemp", dieTemp.toString());
+            }
+
+            for (int i = 0; i < dieTemp.size(); i++) {
+                if (dieTemp.get(i) == valueOfDie) {
+                    roll = getRoll();
+                    dieTemp.add(roll);
+                    Log.i("Rolls - Explosions", dieTemp.toString());
+                }
+            }
+            total = dieSum(dieTemp);
+            Log.i("Rolls - Total", ""+total);
         }
+        else if (disadvantage > advantage)
+        {
+            for (int i = 0; i < (numberOfDie + totalAdvantage); i++) {
+                roll = getRoll();
+                die.add(roll);
+                txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+            }
+            Collections.sort(die);
+            Log.i("Rolls - Sorted", die.toString());
+            for (int i = 0; i < numberOfDie; i++) {
+                dieTemp.add(die.get(i));
+                Log.i("Rolls - dieTemp", dieTemp.toString());
+            }
+
+            for (int i = 0; i < dieTemp.size(); i++) {
+                if (dieTemp.get(i) == valueOfDie) {
+                    roll = getRoll();
+                    dieTemp.add(roll);
+                    txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+                    Log.i("Rolls - Explosions", dieTemp.toString());
+                }
+            }
+            total = dieSum(dieTemp);
+            Log.i("Rolls - Total", ""+total);
+        }
+        else
+        {
+            for (int i = 0; i < numberOfDie; i++)
+            {
+                do
+                {
+                    roll = getRoll();
+                    die.add(roll);
+                    txtRolls.setText(txtRolls.getText() + "Roll d"+valueOfDie+" : " + roll +"\n");
+                } while (roll == valueOfDie);
+            }
+            total = dieSum(die);
+            Log.i("Rolls - Total", ""+total);
+        }
+
+        return total;
+    }
+
+    public int dieSum(List<Integer> die) {
+        int sum = 0;
+
+        for (int i : die)
+            sum = sum + i;
+
+        return sum;
+    }
+
+    private int getRoll() {
+        int roll = 0;
+        if (valueOfDie == 2)
+        {
+            roll = dice.d2();
+        }
+        else if (valueOfDie == 6)
+        {
+            roll = dice.d6();
+        }
+        else if (valueOfDie == 8)
+        {
+            roll = dice.d8();
+        }
+        else //d10
+        {
+            roll = dice.d10();
+        }
+        return roll;
     }
 
     private int rollD20(TextView txtRolls, int d20) {

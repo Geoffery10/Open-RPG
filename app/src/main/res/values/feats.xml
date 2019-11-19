@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="Feat_Array">
+        <item>Alternate Form (I - II)</item>
+        <item>Area Manipulation (I - V)</item>
+        <item>Armor Mastery (I - II)</item>
+        <item>Attack Redirection</item>
+        <item>Attack Specialization (I - IX)</item>
+        <item>Attribute Substitution (I - II)</item>
+        <item>Bane Focus</item>
+        <item>Battle Trance</item>
+        <item>Battlefield Opportunist (I - V)</item>
+        <item>Battlefield Punisher</item>
+        <item>Battlefield Retribution</item>
+        <item>Boon Access</item>
+        <item>Boon Focus (I - III)</item>
+        <item>Breakfall (I - II)</item>
+        <item>Brutal Intimidation</item>
+        <item>Climbing</item>
+        <item>Combat Follow-through</item>
+        <item>Combat Momentum</item>
+        <item>Companion (I - III)</item>
+        <item>Craft Mundane Item (I - II)</item>
+        <item>Craft Extraordinary Item (I - III)</item>
+        <item>Crushing Blow</item>
+        <item>Death Blow (I - II)</item>
+        <item>Deathless Trance</item>
+        <item>Defensive Mastery</item>
+        <item>Defensive Reflexes (I - IX)</item>
+        <item>Destructive Trance</item>
+        <item>Diehard</item>
+        <item>Energy Resistance (I - IV)</item>
+        <item>Evasive Footwork</item>
+        <item>Extraordinary Defense (I - III)</item>
+        <item>Extraordinary Focus</item>
+        <item>Extraordinary Healing</item>
+        <item>Fast Draw</item>
+        <item>Fast Tracker</item>
+        <item>Ferocious Minions (I - III)</item>
+        <item>Fleet of Foot (I - III)</item>
+        <item>Flying</item>
+        <item>Great Leap (I - III)</item>
+        <item>Hallucination (I - II)</item>
+        <item>Heightened Invocation (I - III)</item>
+        <item>Hospitaler</item>
+        <item>Impervious Trance</item>
+        <item>Indomitable Endurance (I - V)</item>
+        <item>Indomitable Resolve (I - III)</item>
+        <item>Inspiring Champion (I - III)</item>
+        <item>Knowledge (I - III)</item>
+        <item>Lethal Strike (I - IX)</item>
+        <item>Lightning Reflexes (I - V)</item>
+        <item>Longshot</item>
+        <item>Silencing Strike</item>
+        <item>Martial Focus</item>
+        <item>Master Tracker</item>
+        <item>Mimic</item>
+        <item>Multi-Attack Specialist (I - VI)</item>
+        <item>Multi-Bane Specialist</item>
+        <item>Multi-Target Attack Specialist (I - V)</item>
+        <item>Multi-Target Boon Expert</item>
+        <item>Multi-Target Boon Specialist (I - IX)</item>
+        <item>Natural Defense (I - III)</item>
+        <item>Overpowering Strike</item>
+        <item>Potent Bane</item>
+        <item>Reactionary Trance</item>
+        <item>Reckless Attack</item>
+        <item>Resilient</item>
+        <item>Sentinel (I - III)</item>
+        <item>Skill Specialization (I - V)</item>
+        <item>Superior Concentration (I - III)</item>
+        <item>Swimming</item>
+        <item>Sworn Enemy (I - IX)</item>
+        <item>Tough as Nails (I - II)</item>
+        <item>Two Weapon Brute</item>
+        <item>Two Weapon Defense</item>
+        <item>Unending Charm</item>
+        <item>Untrackable</item>
+        <item>Vicious Strike</item>
+        <item>Wealthy</item>
+        <item>Well-Rounded</item>
+    </array>
+</resources>

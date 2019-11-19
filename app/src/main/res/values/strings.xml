@@ -1,3 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Open RPG</string>
+    <array name="charTypes">
+        <item>Player Character</item>
+        <item>Companion Character - I</item>
+        <item>Companion Character - II</item>
+        <item>Companion Character - III</item>
+    </array>
+
+    <string name="newSheetStart">
+        <b><u>Welcome to Character Creation!</u></b>\n
+        Start by entering some basic information about your character then press <i>Continue</i>.
+        All these values can be changed later if you change your mind. <i>Note: type is normally
+        Player Character unless
+        you are making a side character</i>
+    </string>
+    <string name="newSheetLang">
+        <b><u>Languages</u></b>\n
+        You may add up to 10 Languages. <i>Note: Currently Not Added</i>
+    </string>
+    <string name="newSheetLevel">
+        <b><u>Levels</u></b>\n
+        Open Legend levels can be expressed as <b>Major</b> and <b>Minor Levels</b> or simply
+        <b>Experience</b>. Unless Specified by the GameMaster most Players start at Major(0)/Minor(0)
+        or Experience(0).
+    </string>
+    <string name="newSheetAttributes">
+        <b><u>Attributes, Banes, and Boon</u></b>\n
+        Attribute points determine what your character is good at. To increase an attribute the value
+        of the next attribute value must be spent <i>(2->3 requires 3 points)</i>. Stats like <b>Guard</b>
+        are calculated based on your attributes. Additionally attributes unlock different
+        <b>Banes</b>/<b>Boons</b> which can turn the tide of battle. <i>Note: Information on
+        calculations on the Open Legend - Character Creation website</i>
+    </string>
+    
+    <string name="Agility_Glance">
+        Dodge attacks, move with stealth, perform acrobatics, shoot a bow, pick a pocket
+    </string>
+    <string name="Fortitude_Glance">
+        Resist poison, shrug off pain, survive in a desert, wear heavy armor
+    </string>
+    <string name="Might_Glance">
+        Swing a maul, jump over a chasm, break down a door, wrestle a foe to submission
+    </string>
+
+    <string name="Learning_Glance">
+        Recall facts about history, arcane magic, the natural world, or any information you picked up from an external source
+    </string>
+    <string name="Logic_Glance">
+        Innovate a new crafting method, decipher a code, jury-rig a device, get the gist of a language you don’t speak
+    </string>
+    <string name="Perception_Glance">
+        Sense ulterior motives, track someone, catch a gut feeling, spot a hidden foe, find a secret door
+    </string>
+    <string name="Will_Glance">
+        Maintain your resolve, resist torture, study long hours, stay awake on watch, stave off insanity
+    </string>
+
+    <string name="Deception_Glance">
+        Tell a lie, bluff at cards, disguise yourself, spread rumors, swindle a sucker
+    </string>
+    <string name="Persuasion_Glance">
+        Negotiate a deal, convince someone, haggle a good price, pry information
+    </string>
+    <string name="Presence_Glance">
+        Give a speech, sing a song, inspire an army, exert your force of personality, have luck smile upon you
+    </string>
+
+    <string name="Alteration_Glance">
+        Change shape, alter molecular structures, transmute one material into another
+    </string>
+    <string name="Creation_Glance">
+        Channel higher powers, manifest something from nothing, regenerate, divinely bolster
+    </string>
+    <string name="Energy_Glance">
+        Create and control the elements—fire, cold, electricity
+    </string>
+    <string name="Entropy_Glance">
+        Disintegrate matter, kill with a word, create undead, sicken others
+    </string>
+    <string name="Influence_Glance">
+        Control the minds of others, speak telepathically, instill fear, create illusory figments, cloak with invisibility
+    </string>
+    <string name="Movement_Glance">
+        Teleport, fly, hasten, telekinetically push
+    </string>
+    <string name="Prescience_Glance">
+        See the future, read minds or auras, view from afar, detect magic or evil, communicate with extraplanar entities
+    </string>
+    <string name="Protection_Glance">
+        Protect from damage, break supernatural influence, dispel magic, exile extradimensional beings
+    </string>
+    <string name="Armor_Glance">
+        The value or your armors protection if wearing any (Directly adds to guard)
+    </string>
 </resources>
