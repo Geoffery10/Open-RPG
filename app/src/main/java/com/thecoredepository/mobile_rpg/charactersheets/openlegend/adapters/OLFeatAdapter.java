@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
+package com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters;
 
 import android.content.Context;
 import android.util.Log;
@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLFeatsActivitiy;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
 
 import java.util.ArrayList;

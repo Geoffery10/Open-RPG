@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLFeatAdapter;
+
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 
 public class OLFeatsActivitiy extends AppCompatActivity
