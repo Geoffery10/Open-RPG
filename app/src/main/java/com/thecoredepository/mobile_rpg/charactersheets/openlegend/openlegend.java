@@ -65,6 +65,7 @@ public class openlegend
     private int hitpoints;
     private int damageTaken;
     private int speed;
+	private int lethalDamage;
 
     //Feats
     private int featPointsAvailable;
