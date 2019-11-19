@@ -16,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBanes;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBoons;
 
 import java.util.ArrayList;
 

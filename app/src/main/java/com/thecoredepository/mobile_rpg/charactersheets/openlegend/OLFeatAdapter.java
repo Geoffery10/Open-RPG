@@ -1,6 +1,5 @@
 package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
-import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,12 +16,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
 
 import java.util.ArrayList;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
 
 public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder>
 {

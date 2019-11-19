@@ -5,8 +5,11 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 // be saved often reduce the chance of lost data.
 */
 
-import android.app.Presentation;
 import android.util.Log;
+
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBanes;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBoons;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
 
 import java.util.ArrayList;
 import java.util.Arrays;
