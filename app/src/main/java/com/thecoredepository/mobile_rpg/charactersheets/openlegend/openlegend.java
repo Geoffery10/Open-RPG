@@ -166,8 +166,17 @@ public class openlegend
 		return lethalDamage;
 	}
 	
+	public setLethalDamage() {
+		this.lethalDamage = 0;
+	}
+	
 	public setLethalDamage(int lethalDamage) {
-		this.lethalDamage = lethalDamage;
+		if (lethalDamage >= 0) {
+			this.lethalDamage = 0;
+		}
+		else if (lethalDamage > this.getHitpoints){
+			this.lethalDamage += lethalDamage;
+		}
 	}
 
     public String getPlayerName() {
@@ -554,7 +563,7 @@ public class openlegend
     }
 
     public void setHitpoints() {
-        this.hitpoints = ((2 * (fortitude + presence + will)) + 10);
+        this.hitpoints = ((2 * (fortitude + presence + will)) + 10 - this.lethalDamage);
     }
 
 
