@@ -29,6 +29,7 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.Vi
     private Context context;
     private Boolean showBanes = false;
     private Boolean showBoons = false;
+    private Boolean showAll = false;
 
     public ArrayList<OLBanes> getBanesList() {
         return banesList;
@@ -49,13 +50,14 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.Vi
     private ArrayList<OLBanes> banesList = new ArrayList<>();
     private ArrayList<OLBoons> boonsList = new ArrayList<>();
 
-    public OLBaneBoonAdapter(Context context, ArrayList<OLBanes> banes, ArrayList<OLBoons> boons, Boolean showBanes, Boolean showBoons)
+    public OLBaneBoonAdapter(Context context, ArrayList<OLBanes> banes, ArrayList<OLBoons> boons, Boolean showBanes, Boolean showBoons, Boolean showAll)
     {
         this.context = context;
         this.banesList = banes;
         this.boonsList = boons;
         this.showBanes = showBanes;
         this.showBoons = showBoons;
+        this.showAll = showAll;
     }
 
     @NonNull
@@ -287,16 +289,40 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.Vi
         int size = 0;
         //Get count of banes, boons, or both
 
-        /*
-        if (showAll == false) {
-            Log.d("Recycle", "Size: " + player.getBaneBoonCount());
-            size = player.getBaneBoonCount();
+        if (showBanes == true && showBoons == false) {
+            //Count Banes
+            if (showAll == true) {
+                size =  27; //Total Banes
+            } else {
+                //size = player.getAvailableBanes().size();
+            }
+        } else if (showBanes == false && showBoons == true) {
+            //Count Boons
+            if (showAll == true) {
+                size = 31; //Total Boons
+            } else {
+                //size = player.getAvailableBanes().size();
+            }
+        } else if (showBanes == true && showBoons == true) {
+            //Count All
+            if (showAll == true) {
+                size = 58; //Total Banes and Boons
+            } else {
+                //size = number of banes and boons;
+            }
+        } else {
+            //This should never happen
+            Log.e("ERROR", "SHOW BANES AND SHOW BOONS ARE BOTH FALSE!");
+            Log.e("ERROR", "SHOWING BOTH BANES AND BOONS TO AVOID ERRORS...");
+            //Count All in this case
+            if (showAll == true) {
+                size = 58; //Total Banes and Boons
+            } else {
+                //size = number of banes and boons;
+            }
         }
-        else if (add == true || showAll == true) {
-            Log.d("Recycle", "Size: " + OLBanes.getBaneBoonList().size());
-            size = OLBanes.getBaneBoonList().size();
-        }
-        */
+
+        Log.d("Recycle", "Size: " + size);
 
         return size;
     }
