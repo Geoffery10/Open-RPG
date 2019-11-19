@@ -303,52 +303,47 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        /*
         LinearLayout viewBaneBoon;
-        Button btnBaneBoon;
+        Button btnBaneBoon; //BANE/BOON - 1/4/7
         LinearLayout infoBaneBoon;
         Button lblDescription;
-        TextView txtDescription;
-        Button lblPrerequisites;
-        TextView txtPrerequisites;
-        Button lblBaneBoonEffect;
-        TextView txtBaneBoonEffect;
-        LinearLayout specialBaneBoon;
+        TextView txtDescription; //@string/BANEBOON_description
+        Button lblDuration;
+        TextView txtDuration; //@string/BANEBOON_duration
+        Button lblAttributes;
+        TextView txtAttributes; //@string/BANEBOON_attributes
+        Button lblAttack;
+        TextView txtAttack; //@string/BANEBOON_attack
+        Button lblPowerLvl;
+        Button txtPowerLvl; //BANEBOON.minLvl
+        Button lblEffect;
+        TextView txtEffect; //@string/BANEBOON_effect
+        LinearLayout viewSpecial; //Hide if BANEBOON.special == "N/A"
         Button lblSpecial;
-        TextView txtSpecial;
-        LinearLayout viewAddRemoveUpgradeBaneBoon;
-        EditText editAddRemoveUpgradeBaneBoon;
-        Spinner spinnerAddRemoveUpgradeBaneBoon;
-        Spinner spinnerAddRemoveUpgradeBaneBoon2;
-        Button btnAddRemove;
-        Button btnUpgrade;
+        TextView txtSpecial; //@string/BANEBOON_special
 
-         */
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            /*
+
             viewBaneBoon = itemView.findViewById(R.id.viewBaneBoon);
             btnBaneBoon = itemView.findViewById(R.id.btnBaneBoon);
             infoBaneBoon = itemView.findViewById(R.id.infoBaneBoon);
             lblDescription = itemView.findViewById(R.id.lblDescription);
             txtDescription = itemView.findViewById(R.id.txtDescription);
-            lblPrerequisites = itemView.findViewById(R.id.lblPrerequisites);
-            txtPrerequisites = itemView.findViewById(R.id.txtPrerequisites);
-            lblBaneBoonEffect = itemView.findViewById(R.id.lblBaneBoonEffect);
-            txtBaneBoonEffect = itemView.findViewById(R.id.txtBaneBoonEffect);
-            specialBaneBoon = itemView.findViewById(R.id.specialBaneBoon);
+            lblDuration = itemView.findViewById(R.id.lblDuration);
+            txtDuration = itemView.findViewById(R.id.txtDuration);
+            lblAttributes = itemView.findViewById(R.id.lblAttributes);
+            txtAttributes = itemView.findViewById(R.id.txtAttributes);
+            lblAttack = itemView.findViewById(R.id.lblAttack);
+            txtAttack = itemView.findViewById(R.id.txtAttack);
+            lblPowerLvl = itemView.findViewById(R.id.lblPowerLvl);
+            txtPowerLvl = itemView.findViewById(R.id.txtPowerLvl);
+            lblEffect = itemView.findViewById(R.id.lblEffect);
+            txtEffect = itemView.findViewById(R.id.txtEffect);
+            viewSpecial = itemView.findViewById(R.id.viewSpecial);
             lblSpecial = itemView.findViewById(R.id.lblSpecial);
             txtSpecial = itemView.findViewById(R.id.txtSpecial);
-            viewAddRemoveUpgradeBaneBoon = itemView.findViewById(R.id.viewAddRemoveUpgradeBaneBoon);
-            editAddRemoveUpgradeBaneBoon = itemView.findViewById(R.id.editAddRemoveUpgradeBaneBoon);
-            spinnerAddRemoveUpgradeBaneBoon = itemView.findViewById(R.id.spinnerAddRemoveUpgradeBaneBoon);
-            spinnerAddRemoveUpgradeBaneBoon2 = itemView.findViewById(R.id.spinnerAddRemoveUpgradeBaneBoon2);
-            btnAddRemove = itemView.findViewById(R.id.btnAddRemove);
-            btnUpgrade = itemView.findViewById(R.id.btnUpgrade);
-
-             */
         }
-
     }
 }

@@ -68,7 +68,7 @@
                     android:textSize="14dp" />
 
                 <TextView
-                    android:id="@+id/txtFeatEffect"
+                    android:id="@+id/txtDuration"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Blinded_duration"
@@ -146,6 +146,25 @@
 
             </LinearLayout>
 
+            <Button
+                android:id="@+id/lblEffect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryLight"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="Effect"
+                android:textColor="@color/textAccent"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txtEffect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/Blinded_effect"
+                android:textSize="20sp" />
+
             <LinearLayout
                 android:id="@+id/viewSpecial"
                 android:layout_width="match_parent"
@@ -172,25 +191,6 @@
                     android:text="@string/Blinded_special"
                     android:textSize="20sp" />
             </LinearLayout>
-
-            <Button
-                android:id="@+id/lblEffect"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimaryLight"
-                android:clickable="false"
-                android:gravity="center"
-                android:text="Effect"
-                android:textColor="@color/textAccent"
-                android:textSize="14dp" />
-
-            <TextView
-                android:id="@+id/txtEffect"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/Blinded_effect"
-                android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
