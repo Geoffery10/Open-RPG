@@ -166,15 +166,15 @@ public class openlegend
 		return lethalDamage;
 	}
 	
-	public setLethalDamage() {
+	public void setLethalDamage() {
 		this.lethalDamage = 0;
 	}
 	
-	public setLethalDamage(int lethalDamage) {
+	public void setLethalDamage(int lethalDamage) {
 		if (lethalDamage >= 0) {
 			this.lethalDamage = 0;
 		}
-		else if (lethalDamage > this.getHitpoints){
+		else if (lethalDamage > getHitpoints()){
 			this.lethalDamage += lethalDamage;
 		}
 	}
