@@ -22,69 +22,78 @@ import java.util.ArrayList;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
 
-public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder>
+public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.ViewHolder>
 {
     private Context context;
     private Boolean add = false;
     private Boolean remove = false;
     private Boolean showAll = false;
 
-    public ArrayList<OLFeats> getFeatsList() {
-        return featsList;
+    public ArrayList<OLBanes> getBanesList() {
+        return banesList;
     }
 
-    public OLFeats getFeatsList(int position) {
-        return featsList.get(position);
+    public OLBanes getBanesList(int position) {
+        return banesList.get(position);
     }
 
-    private ArrayList<OLFeats> featsList = new ArrayList<>();
+    public ArrayList<OLBoons> getBaneBoonsList() {
+        return boonsList;
+    }
 
-    public OLFeatAdapter(Context context, ArrayList<OLFeats> feats, Boolean add, Boolean remove, Boolean showAll)
+    public OLBoons getBoonsList(int position) {
+        return boonsList.get(position);
+    }
+
+    private ArrayList<OLBanes> banesList = new ArrayList<>();
+    private ArrayList<OLBoons> boonsList = new ArrayList<>();
+
+    public OLBaneBoonAdapter(Context context, ArrayList<OLBanes> banes, ArrayList<OLBoons> boons, Boolean showAll)
     {
         this.context = context;
-        this.featsList = feats;
-        this.add = add;
-        this.remove = remove;
+        this.banesList = banes;
+        this.boonsList = boons;
         this.showAll = showAll;
     }
 
     @NonNull
     @Override
-    public OLFeatAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_feat_item, parent, false);
+    public OLBaneBoonAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_baneboon_item, parent, false);
         OLBaneBoonAdapter.ViewHolder holder = new OLBaneBoonAdapter.ViewHolder(view);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final OLFeatAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final OLBaneBoonAdapter.ViewHolder holder, int position) {
         Log.d("Recycle", "onBindViewHolder called");
-        OLFeats feat = new OLFeats();
+        OLBanes baneBoon = new OLBanes();
 
-        holder.infoFeat.setVisibility(View.GONE);
-        holder.viewAddRemoveUpgradeFeat.setVisibility(View.GONE);
-        holder.spinnerAddRemoveUpgradeFeat.setVisibility(View.GONE);
-        holder.spinnerAddRemoveUpgradeFeat2.setVisibility(View.GONE);
-        holder.editAddRemoveUpgradeFeat.setVisibility(View.GONE);
+        holder.infoBaneBoon.setVisibility(View.GONE);
+        holder.viewAddRemoveUpgradeBaneBoon.setVisibility(View.GONE);
+        holder.spinnerAddRemoveUpgradeBaneBoon.setVisibility(View.GONE);
+        holder.spinnerAddRemoveUpgradeBaneBoon2.setVisibility(View.GONE);
+        holder.editAddRemoveUpgradeBaneBoon.setVisibility(View.GONE);
+
 
         if (add == false && showAll == false)
         {
-            feat = getFeatsList(position);
+            baneBoon = getBaneBoonsList(position);
 
-            String btnFeatText = feat.getTitle() + "";
-            if (feat.getConnection() != null) {
-                btnFeatText += " (" + feat.getConnection() + ")";
+            String btnBaneBoonText = baneBoon.getTitle() + "";
+            if (baneBoon.getConnection() != null) {
+                btnBaneBoonText += " (" + baneBoon.getConnection() + ")";
             }
-            if (feat.getMaxLevel() > 1) {
-                int levelNum = feat.getLevel();
-                btnFeatText += " - " + numberToRoman(levelNum) + "  ";
+            if (baneBoon.getMaxLevel() > 1) {
+                int levelNum = baneBoon.getLevel();
+                btnBaneBoonText += " - " + numberToRoman(levelNum) + "  ";
             }
 
-            btnFeatText += "[" + feat.getFeatCost() + "]";
-            holder.btnFeat.setText(btnFeatText);
-            holder.txtDescription.setText(feat.getDescription());
-            if (!feat.getPrerequisites().equals("None")) {
-                holder.txtPrerequisites.setText(feat.getPrerequisites());
+            btnBaneBoonText += "[" + baneBoon.getBaneBoonCost() + "]";
+            holder.btnBaneBoon.setText(btnBaneBoonText);
+            holder.txtDescription.setText(baneBoon.getDescription());
+            if (!baneBoon.getPrerequisites().equals("None")) {
+                holder.txtPrerequisites.setText(baneBoon.getPrerequisites());
                 holder.lblPrerequisites.setVisibility(View.VISIBLE);
                 holder.txtPrerequisites.setVisibility(View.VISIBLE);
             }
@@ -92,48 +101,48 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHo
                 holder.lblPrerequisites.setVisibility(View.GONE);
                 holder.txtPrerequisites.setVisibility(View.GONE);
             }
-            holder.txtFeatEffect.setText(feat.getEffects());
-            if (!feat.getSpecial().equals("None")) {
-                holder.txtSpecial.setText(feat.getSpecial());
+            holder.txtBaneBoonEffect.setText(baneBoon.getEffects());
+            if (!baneBoon.getSpecial().equals("None")) {
+                holder.txtSpecial.setText(baneBoon.getSpecial());
                 holder.txtSpecial.setVisibility(View.VISIBLE);
             }
             else {
                 holder.txtSpecial.setVisibility(View.GONE);
             }
 
-            holder.viewAddRemoveUpgradeFeat.setVisibility(View.GONE);
+            holder.viewAddRemoveUpgradeBaneBoon.setVisibility(View.GONE);
 
-            holder.btnFeat.setOnClickListener(new View.OnClickListener() {
+            holder.btnBaneBoon.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Open Feat
-                    if (holder.infoFeat.getVisibility() == View.GONE)
+                    //Open BaneBoon
+                    if (holder.infoBaneBoon.getVisibility() == View.GONE)
                     {
-                        holder.infoFeat.setVisibility(View.VISIBLE);
+                        holder.infoBaneBoon.setVisibility(View.VISIBLE);
                     }
                     else
                     {
-                        holder.infoFeat.setVisibility(View.GONE);
+                        holder.infoBaneBoon.setVisibility(View.GONE);
                     }
                 }
             });
         }
         if (add == true || showAll == true) {
-            feat = OLFeats.getFeatList().get(position);
-            String btnFeatText = feat.getTitle() + " ";
-            if (feat.getMaxLevel() > 1) {
-                int levelNum = feat.getMaxLevel();
-                btnFeatText += " - I-" + numberToRoman(levelNum);
+            baneBoon = OLBanes.getBaneBoonList().get(position);
+            String btnBaneBoonText = baneBoon.getTitle() + " ";
+            if (baneBoon.getMaxLevel() > 1) {
+                int levelNum = baneBoon.getMaxLevel();
+                btnBaneBoonText += " - I-" + numberToRoman(levelNum);
             }
             else {
-                btnFeatText += " - I";
+                btnBaneBoonText += " - I";
             }
 
-            btnFeatText += "  [" + feat.getFeatCost() + "]";
-            holder.btnFeat.setText(btnFeatText);
-            holder.txtDescription.setText(feat.getDescription());
-            if (!feat.getPrerequisites().equals("None")) {
-                holder.txtPrerequisites.setText(feat.getPrerequisites());
+            btnBaneBoonText += "  [" + baneBoon.getBaneBoonCost() + "]";
+            holder.btnBaneBoon.setText(btnBaneBoonText);
+            holder.txtDescription.setText(baneBoon.getDescription());
+            if (!baneBoon.getPrerequisites().equals("None")) {
+                holder.txtPrerequisites.setText(baneBoon.getPrerequisites());
                 holder.lblPrerequisites.setVisibility(View.VISIBLE);
                 holder.txtPrerequisites.setVisibility(View.VISIBLE);
             }
@@ -141,15 +150,15 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHo
                 holder.lblPrerequisites.setVisibility(View.GONE);
                 holder.txtPrerequisites.setVisibility(View.GONE);
             }
-            holder.txtFeatEffect.setText(feat.getEffects());
-            if (!feat.getSpecial().equals("None")) {
-                holder.txtSpecial.setText(feat.getSpecial());
+            holder.txtBaneBoonEffect.setText(baneBoon.getEffects());
+            if (!baneBoon.getSpecial().equals("None")) {
+                holder.txtSpecial.setText(baneBoon.getSpecial());
                 holder.txtSpecial.setVisibility(View.VISIBLE);
             }
             else {
                 holder.txtSpecial.setVisibility(View.GONE);
             }
-            holder.viewAddRemoveUpgradeFeat.setVisibility(View.GONE);
+            holder.viewAddRemoveUpgradeBaneBoon.setVisibility(View.GONE);
         }
         //=================================ADD NEW FEAT=============================================
         if (add == true)
@@ -159,47 +168,47 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHo
             player.setAvaliableBoons();
 
             //IF THERE IS A CONNECTION SHOW FIELDS
-            if (!feat.getConnectionType().equals(""))
+            if (!baneBoon.getConnectionType().equals(""))
             {
                 //Show Connection Inputs based off ConnectionType labels
                 ArrayList<String> connections = new ArrayList<>();
 
                 //CONNECTION SETUPS
-                if (feat.getConnectionType().equals("Character"))
+                if (baneBoon.getConnectionType().equals("Character"))
                 {
                     connections = (ArrayList<String>)sheetList.clone();
                     connections.remove(sheetList.indexOf(player.getCharName()));
                 }
-                else if (feat.getConnectionType().equals("Weapon/Attack Type"))
+                else if (baneBoon.getConnectionType().equals("Weapon/Attack Type"))
                 {
                     //getAvailableWeaponAttackTypes is not setup yet
                     //connections = (ArrayList<String>)player.getAvailableWeaponAttackTypes().clone();
                 }
-                else if (feat.getConnectionType().equals("Attribute"))
+                else if (baneBoon.getConnectionType().equals("Attribute"))
                 {
                     //ATTRIBUTES HERE
                 }
-                else if (feat.getConnectionType().equals("AvailableBane"))
+                else if (baneBoon.getConnectionType().equals("AvailableBane"))
                 {
                     connections = player.getAvailableBanes();
                 }
 
-                ArrayAdapter<String> featSpinner = new ArrayAdapter<String>(context, R.layout.spinner_style, connections);
-                holder.spinnerAddRemoveUpgradeFeat.setAdapter(featSpinner);
-                holder.spinnerAddRemoveUpgradeFeat.setVisibility(View.VISIBLE);
+                ArrayAdapter<String> baneBoonSpinner = new ArrayAdapter<String>(context, R.layout.spinner_style, connections);
+                holder.spinnerAddRemoveUpgradeBaneBoon.setAdapter(baneBoonSpinner);
+                holder.spinnerAddRemoveUpgradeBaneBoon.setVisibility(View.VISIBLE);
             }
             else {
-                holder.spinnerAddRemoveUpgradeFeat.setVisibility(View.GONE);
+                holder.spinnerAddRemoveUpgradeBaneBoon.setVisibility(View.GONE);
             }
-            holder.viewAddRemoveUpgradeFeat.setVisibility(View.VISIBLE);
-            if (feat.getCanBeTakenMoreThanOnce() == true || !player.getFeats().contains(feat)) {
+            holder.viewAddRemoveUpgradeBaneBoon.setVisibility(View.VISIBLE);
+            if (baneBoon.getCanBeTakenMoreThanOnce() == true || !player.getBaneBoons().contains(baneBoon)) {
                 holder.btnAddRemove.setText("Add");
                 holder.btnAddRemove.setVisibility(View.VISIBLE);
             }
             else {
                 holder.btnAddRemove.setVisibility(View.GONE);
             }
-            if (player.getFeats().contains(feat) && player.getFeatLevel(feat) < feat.getMaxLevel()) {
+            if (player.getBaneBoons().contains(baneBoon) && player.getBaneBoonLevel(baneBoon) < baneBoon.getMaxLevel()) {
                 holder.btnUpgrade.setVisibility(View.VISIBLE);
             }
             else {
@@ -207,66 +216,66 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHo
             }
 
             final int finalPosition = position;
-            final OLFeats finalFeat = feat;
+            final OLBanes finalBaneBoon = baneBoon;
             holder.btnAddRemove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Add Feat to Player
+                    //Add BaneBoon to Player
 
-                    if (holder.spinnerAddRemoveUpgradeFeat.getVisibility() == View.VISIBLE) {
-                        if (holder.spinnerAddRemoveUpgradeFeat2.getVisibility() == View.VISIBLE) {
-                            finalFeat.setConnection(holder.spinnerAddRemoveUpgradeFeat.getSelectedItem().toString() + " - " + holder.spinnerAddRemoveUpgradeFeat2.getSelectedItem().toString());
+                    if (holder.spinnerAddRemoveUpgradeBaneBoon.getVisibility() == View.VISIBLE) {
+                        if (holder.spinnerAddRemoveUpgradeBaneBoon2.getVisibility() == View.VISIBLE) {
+                            finalBaneBoon.setConnection(holder.spinnerAddRemoveUpgradeBaneBoon.getSelectedItem().toString() + " - " + holder.spinnerAddRemoveUpgradeBaneBoon2.getSelectedItem().toString());
                         }
                         else {
-                            finalFeat.setConnection(holder.spinnerAddRemoveUpgradeFeat.getSelectedItem().toString() + "");
+                            finalBaneBoon.setConnection(holder.spinnerAddRemoveUpgradeBaneBoon.getSelectedItem().toString() + "");
                         }
                     }
-                    else if (holder.editAddRemoveUpgradeFeat.getVisibility() == View.VISIBLE) {
-                        finalFeat.setConnection("" + holder.editAddRemoveUpgradeFeat.getText());
+                    else if (holder.editAddRemoveUpgradeBaneBoon.getVisibility() == View.VISIBLE) {
+                        finalBaneBoon.setConnection("" + holder.editAddRemoveUpgradeBaneBoon.getText());
                     }
-                    //Add Connection Data to Feat
+                    //Add Connection Data to BaneBoon
 
-                    player.addFeat(finalFeat);
+                    player.addBaneBoon(finalBaneBoon);
                     //notifyItemRemoved(finalPosition);
-                    OLFeatsActivitiy updateFeatPoints = new OLFeatsActivitiy();
-                    updateFeatPoints.updateFeatsHeader(context);
+                    OLBanesActivitiy updateBaneBoonPoints = new OLBanesActivitiy();
+                    updateBaneBoonPoints.updateBaneBoonsHeader(context);
                 }
             });
         }
         else if (remove == true)
         {
-            holder.viewAddRemoveUpgradeFeat.setVisibility(View.VISIBLE);
-            holder.spinnerAddRemoveUpgradeFeat.setVisibility(View.GONE);
-            holder.spinnerAddRemoveUpgradeFeat2.setVisibility(View.GONE);
-            holder.editAddRemoveUpgradeFeat.setVisibility(View.GONE);
+            holder.viewAddRemoveUpgradeBaneBoon.setVisibility(View.VISIBLE);
+            holder.spinnerAddRemoveUpgradeBaneBoon.setVisibility(View.GONE);
+            holder.spinnerAddRemoveUpgradeBaneBoon2.setVisibility(View.GONE);
+            holder.editAddRemoveUpgradeBaneBoon.setVisibility(View.GONE);
             holder.btnAddRemove.setText("Remove");
             holder.btnAddRemove.setVisibility(View.VISIBLE);
             holder.btnUpgrade.setVisibility(View.GONE);
 
             final int finalPosition = position;
-            final OLFeats finalFeat = feat;
+            final OLBanes finalBaneBoon = baneBoon;
             holder.btnAddRemove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Remove Feat from Player then Reload
-                    player.removeFeat(finalFeat);
+                    //Remove BaneBoon from Player then Reload
+                    player.removeBaneBoon(finalBaneBoon);
                     notifyItemRemoved(finalPosition);
-                    OLFeatsActivitiy updateFeatPoints = new OLFeatsActivitiy();
-                    updateFeatPoints.updateFeatsHeader(context);
+                    OLBanesActivitiy updateBaneBoonPoints = new OLBanesActivitiy();
+                    updateBaneBoonPoints.updateBaneBoonsHeader(context);
                 }
             });
         }
-        holder.btnFeat.setOnClickListener(new View.OnClickListener() {
+        holder.btnBaneBoon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Open Feat
-                if (holder.infoFeat.getVisibility() == View.GONE)
+                //Open BaneBoon
+                if (holder.infoBaneBoon.getVisibility() == View.GONE)
                 {
-                    holder.infoFeat.setVisibility(View.VISIBLE);
+                    holder.infoBaneBoon.setVisibility(View.VISIBLE);
                 }
                 else
                 {
-                    holder.infoFeat.setVisibility(View.GONE);
+                    holder.infoBaneBoon.setVisibility(View.GONE);
                 }
             }
         });
@@ -303,12 +312,12 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHo
     public int getItemCount() {
         int size = 0;
         if (add == false && showAll == false) {
-            Log.d("Recycle", "Size: " + player.getFeatCount());
-            size = player.getFeatCount();
+            Log.d("Recycle", "Size: " + player.getBaneBoonCount());
+            size = player.getBaneBoonCount();
         }
         else if (add == true || showAll == true) {
-            Log.d("Recycle", "Size: " + OLFeats.getFeatList().size());
-            size = OLFeats.getFeatList().size();
+            Log.d("Recycle", "Size: " + OLBanes.getBaneBoonList().size());
+            size = OLBanes.getBaneBoonList().size();
         }
 
         return size;
@@ -316,43 +325,43 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        LinearLayout viewFeat;
-        Button btnFeat;
-        LinearLayout infoFeat;
+        LinearLayout viewBaneBoon;
+        Button btnBaneBoon;
+        LinearLayout infoBaneBoon;
         Button lblDescription;
         TextView txtDescription;
         Button lblPrerequisites;
         TextView txtPrerequisites;
-        Button lblFeatEffect;
-        TextView txtFeatEffect;
-        LinearLayout specialFeat;
+        Button lblBaneBoonEffect;
+        TextView txtBaneBoonEffect;
+        LinearLayout specialBaneBoon;
         Button lblSpecial;
         TextView txtSpecial;
-        LinearLayout viewAddRemoveUpgradeFeat;
-        EditText editAddRemoveUpgradeFeat;
-        Spinner spinnerAddRemoveUpgradeFeat;
-        Spinner spinnerAddRemoveUpgradeFeat2;
+        LinearLayout viewAddRemoveUpgradeBaneBoon;
+        EditText editAddRemoveUpgradeBaneBoon;
+        Spinner spinnerAddRemoveUpgradeBaneBoon;
+        Spinner spinnerAddRemoveUpgradeBaneBoon2;
         Button btnAddRemove;
         Button btnUpgrade;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            viewFeat = itemView.findViewById(R.id.viewFeat);
-            btnFeat = itemView.findViewById(R.id.btnFeat);
-            infoFeat = itemView.findViewById(R.id.infoFeat);
+            viewBaneBoon = itemView.findViewById(R.id.viewBaneBoon);
+            btnBaneBoon = itemView.findViewById(R.id.btnBaneBoon);
+            infoBaneBoon = itemView.findViewById(R.id.infoBaneBoon);
             lblDescription = itemView.findViewById(R.id.lblDescription);
             txtDescription = itemView.findViewById(R.id.txtDescription);
             lblPrerequisites = itemView.findViewById(R.id.lblPrerequisites);
             txtPrerequisites = itemView.findViewById(R.id.txtPrerequisites);
-            lblFeatEffect = itemView.findViewById(R.id.lblFeatEffect);
-            txtFeatEffect = itemView.findViewById(R.id.txtFeatEffect);
-            specialFeat = itemView.findViewById(R.id.specialFeat);
+            lblBaneBoonEffect = itemView.findViewById(R.id.lblBaneBoonEffect);
+            txtBaneBoonEffect = itemView.findViewById(R.id.txtBaneBoonEffect);
+            specialBaneBoon = itemView.findViewById(R.id.specialBaneBoon);
             lblSpecial = itemView.findViewById(R.id.lblSpecial);
             txtSpecial = itemView.findViewById(R.id.txtSpecial);
-            viewAddRemoveUpgradeFeat = itemView.findViewById(R.id.viewAddRemoveUpgradeFeat);
-            editAddRemoveUpgradeFeat = itemView.findViewById(R.id.editAddRemoveUpgradeFeat);
-            spinnerAddRemoveUpgradeFeat = itemView.findViewById(R.id.spinnerAddRemoveUpgradeFeat);
-            spinnerAddRemoveUpgradeFeat2 = itemView.findViewById(R.id.spinnerAddRemoveUpgradeFeat2);
+            viewAddRemoveUpgradeBaneBoon = itemView.findViewById(R.id.viewAddRemoveUpgradeBaneBoon);
+            editAddRemoveUpgradeBaneBoon = itemView.findViewById(R.id.editAddRemoveUpgradeBaneBoon);
+            spinnerAddRemoveUpgradeBaneBoon = itemView.findViewById(R.id.spinnerAddRemoveUpgradeBaneBoon);
+            spinnerAddRemoveUpgradeBaneBoon2 = itemView.findViewById(R.id.spinnerAddRemoveUpgradeBaneBoon2);
             btnAddRemove = itemView.findViewById(R.id.btnAddRemove);
             btnUpgrade = itemView.findViewById(R.id.btnUpgrade);
         }
