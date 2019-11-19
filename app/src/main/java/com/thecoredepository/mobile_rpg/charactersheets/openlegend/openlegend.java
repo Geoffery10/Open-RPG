@@ -170,7 +170,7 @@ public class openlegend
 		this.lethalDamage = 0;
 	}
 	
-	public void setLethalDamage(int lethalDamage) {
+	public void takeLethalDamage(int lethalDamage) {
 		if (lethalDamage < 0) {
 			this.lethalDamage = 0;
 		}
@@ -181,6 +181,18 @@ public class openlegend
             this.lethalDamage = this.lethalDamage + lethalDamage;
         }
 	}
+
+    public void healLethalDamage(int lethalDamage) {
+        if (lethalDamage < 0) {
+            this.lethalDamage = 0;
+        }
+        else if ((lethalDamage + getHitpoints()) >= getMaxHitpoints()){
+            this.lethalDamage = 0;
+        }
+        else {
+            this.lethalDamage = this.lethalDamage - lethalDamage;
+        }
+    }
 
     public String getPlayerName() {
         return playerName;
@@ -563,6 +575,10 @@ public class openlegend
 
     public int getHitpoints() {
         return hitpoints;
+    }
+
+    public int getMaxHitpoints() {
+        return ((2 * (fortitude + presence + will)) + 10);
     }
 
     public void setHitpoints() {

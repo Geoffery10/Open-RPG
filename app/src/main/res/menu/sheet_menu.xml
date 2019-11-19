@@ -4,7 +4,15 @@
     <item android:title="Edit Sheet" android:id="@+id/EditSheet"></item>
     <item android:title="Banes" android:id="@+id/Banes"></item>
     <item android:title="Boons" android:id="@+id/Boons"></item>
-    <item android:title="Damage" android:id="@+id/Damage"></item>
-    <item android:title="Healing" android:id="@+id/Healing"></item>
-    <item android:title="Lethal Damage" android:id="@+id/LethalDamage"></item>
+    <item android:visible="true" android:id="@+id/damages"
+        android:titleCondensed="Damage"
+        android:title="Damage/Healing"
+        android:enabled="true">
+    <menu>
+        <item android:title="Damage" android:id="@+id/Damage"></item>
+        <item android:title="Healing" android:id="@+id/Healing"></item>
+        <item android:title="Lethal Damage" android:id="@+id/LethalDamage"></item>
+        <item android:title="Lethal Healing" android:id="@+id/LethalHealing"></item>
+    </menu>
+    </item>
 </menu>
