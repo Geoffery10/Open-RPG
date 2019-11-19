@@ -27,6 +27,9 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         txtBanesBoonsTitle.setText(selected);
 
         //Display Banes/Boons
+
+        //This is being replaced by recyclerview
+        /*
         if (selected.equals("Banes"))
         {
             showBanesByStats();
@@ -51,7 +54,11 @@ public class OLBanesBoonsActivity extends AppCompatActivity
 
         //Banes/Boons Buttons
         ShowHideButtons();
+
+         */
     }
+
+    /*
 
     private void ShowHideButtons() {
         final LinearLayout infoBB01 = findViewById(R.id.infoBB01);
@@ -1450,4 +1457,6 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         viewBB57.setVisibility(visibility);
         viewBB58.setVisibility(visibility);
     }
+
+     */
 }

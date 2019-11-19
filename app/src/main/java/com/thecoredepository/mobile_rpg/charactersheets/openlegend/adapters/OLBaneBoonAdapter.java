@@ -27,9 +27,8 @@ import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openle
 public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.ViewHolder>
 {
     private Context context;
-    private Boolean add = false;
-    private Boolean remove = false;
-    private Boolean showAll = false;
+    private Boolean showBanes = false;
+    private Boolean showBoons = false;
 
     public ArrayList<OLBanes> getBanesList() {
         return banesList;
@@ -50,12 +49,13 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.Vi
     private ArrayList<OLBanes> banesList = new ArrayList<>();
     private ArrayList<OLBoons> boonsList = new ArrayList<>();
 
-    public OLBaneBoonAdapter(Context context, ArrayList<OLBanes> banes, ArrayList<OLBoons> boons, Boolean showAll)
+    public OLBaneBoonAdapter(Context context, ArrayList<OLBanes> banes, ArrayList<OLBoons> boons, Boolean showBanes, Boolean showBoons)
     {
         this.context = context;
         this.banesList = banes;
         this.boonsList = boons;
-        this.showAll = showAll;
+        this.showBanes = showBanes;
+        this.showBoons = showBoons;
     }
 
     @NonNull
@@ -69,16 +69,13 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull final OLBaneBoonAdapter.ViewHolder holder, int position) {
         Log.d("Recycle", "onBindViewHolder called");
-        OLBanes baneBoon = new OLBanes();
-
-        holder.infoBaneBoon.setVisibility(View.GONE);
-        holder.viewAddRemoveUpgradeBaneBoon.setVisibility(View.GONE);
-        holder.spinnerAddRemoveUpgradeBaneBoon.setVisibility(View.GONE);
-        holder.spinnerAddRemoveUpgradeBaneBoon2.setVisibility(View.GONE);
-        holder.editAddRemoveUpgradeBaneBoon.setVisibility(View.GONE);
+        OLBanes bane = new OLBanes();
+        OLBoons boon = new OLBoons();
 
 
-        if (add == false && showAll == false)
+
+
+        /*if (add == false && showAll == false)
         {
             baneBoon = getBaneBoonsList(position);
 
@@ -281,39 +278,17 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.Vi
                 }
             }
         });
+        */
 
-
-    }
-
-    private String numberToRoman(int levelNum) {
-        String result = "";
-        while (levelNum >= 10) {
-            result += "X";
-            levelNum -= 10;
-        }
-        while (levelNum >= 9) {
-            result += "IX";
-            levelNum -= 9;
-        }
-        while (levelNum >= 5) {
-            result += "V";
-            levelNum -= 5;
-        }
-        while (levelNum >= 4) {
-            result += "IV";
-            levelNum -= 4;
-        }
-        while (levelNum >= 1) {
-            result += "I";
-            levelNum -= 1;
-        }
-        return result;
     }
 
     @Override
     public int getItemCount() {
         int size = 0;
-        if (add == false && showAll == false) {
+        //Get count of banes, boons, or both
+
+        /*
+        if (showAll == false) {
             Log.d("Recycle", "Size: " + player.getBaneBoonCount());
             size = player.getBaneBoonCount();
         }
@@ -321,12 +296,14 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.Vi
             Log.d("Recycle", "Size: " + OLBanes.getBaneBoonList().size());
             size = OLBanes.getBaneBoonList().size();
         }
+        */
 
         return size;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
+        /*
         LinearLayout viewBaneBoon;
         Button btnBaneBoon;
         LinearLayout infoBaneBoon;
@@ -346,8 +323,11 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.Vi
         Button btnAddRemove;
         Button btnUpgrade;
 
+         */
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            /*
             viewBaneBoon = itemView.findViewById(R.id.viewBaneBoon);
             btnBaneBoon = itemView.findViewById(R.id.btnBaneBoon);
             infoBaneBoon = itemView.findViewById(R.id.infoBaneBoon);
@@ -366,6 +346,9 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.Vi
             spinnerAddRemoveUpgradeBaneBoon2 = itemView.findViewById(R.id.spinnerAddRemoveUpgradeBaneBoon2);
             btnAddRemove = itemView.findViewById(R.id.btnAddRemove);
             btnUpgrade = itemView.findViewById(R.id.btnUpgrade);
+
+             */
         }
+
     }
 }
