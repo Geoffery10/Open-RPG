@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
+package com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity;
 
 import android.app.Activity;
 import android.content.Context;
