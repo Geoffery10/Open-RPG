@@ -161,6 +161,14 @@ public class openlegend
                 ", Boons=" + Boons +
                 '}';
     }
+	
+	public int getlLethalDamage() {
+		return lethalDamage;
+	}
+	
+	public setLethalDamage(int lethalDamage) {
+		this.lethalDamage = lethalDamage;
+	}
 
     public String getPlayerName() {
         return playerName;
