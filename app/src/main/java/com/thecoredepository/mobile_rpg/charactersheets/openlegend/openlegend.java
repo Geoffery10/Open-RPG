@@ -162,7 +162,7 @@ public class openlegend
                 '}';
     }
 	
-	public int getlLethalDamage() {
+	public int getLethalDamage() {
 		return lethalDamage;
 	}
 	
