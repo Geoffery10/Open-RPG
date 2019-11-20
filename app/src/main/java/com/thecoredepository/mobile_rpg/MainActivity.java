@@ -131,7 +131,9 @@ public class MainActivity extends AppCompatActivity {
         Theming.setContext(mContext);
 
         //Load Theme From Save if Any
-        Theming.setThemeID(2);
+        Theming.setThemeID(1);
+
+        //Set Theme According to Loaded Theme
         switch (Theming.getThemeID()) {
             case 1:
                 Theming.setFontColor(getResources().getColor(R.color.text));
