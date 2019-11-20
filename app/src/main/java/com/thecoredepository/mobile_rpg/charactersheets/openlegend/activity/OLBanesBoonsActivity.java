@@ -27,9 +27,6 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         txtBanesBoonsTitle.setText(selected);
 
         //Display Banes/Boons
-
-        //This is being replaced by recyclerview
-        /*
         if (selected.equals("Banes"))
         {
             showBanesByStats();
@@ -54,11 +51,7 @@ public class OLBanesBoonsActivity extends AppCompatActivity
 
         //Banes/Boons Buttons
         ShowHideButtons();
-
-         */
     }
-
-    /*
 
     private void ShowHideButtons() {
         final LinearLayout infoBB01 = findViewById(R.id.infoBB01);
@@ -1211,123 +1204,123 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         {
             viewBB28.setVisibility(View.VISIBLE);
         }
-		if(player.getCreation() >= 6 || player.getEntropy() >= 6 || player.getLogic() >= 6)
+        if(player.getCreation() >= 6 || player.getEntropy() >= 6 || player.getLogic() >= 6)
         {
             viewBB29.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 4 || player.getCreation() >= 4 || player.getEnergy() >= 4 || player.getEntropy() >= 4 || player.getInfluence() >= 4 || player.getMovement() >= 4 || player.getPresence() >= 4 || player.getPrescience() >= 4 || player.getProtection() >= 4)
+        if(player.getAlteration() >= 4 || player.getCreation() >= 4 || player.getEnergy() >= 4 || player.getEntropy() >= 4 || player.getInfluence() >= 4 || player.getMovement() >= 4 || player.getPresence() >= 4 || player.getPrescience() >= 4 || player.getProtection() >= 4)
         {
             viewBB30.setVisibility(View.VISIBLE);
         }
-		if(player.getCreation() >= 3 || player.getEnergy() >= 3 || player.getEntropy() >= 3 || player.getProtection() >= 3)
+        if(player.getCreation() >= 3 || player.getEnergy() >= 3 || player.getEntropy() >= 3 || player.getProtection() >= 3)
         {
             viewBB31.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 5 || player.getEntropy() >= 5 || player.getPerception() >= 5 || player.getPrescience() >= 5)
+        if(player.getAlteration() >= 5 || player.getEntropy() >= 5 || player.getPerception() >= 5 || player.getPrescience() >= 5)
         {
             viewBB32.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 3 || player.getCreation() >= 3 || player.getPrescience() >= 3 || player.getPresence() >= 3)
+        if(player.getAlteration() >= 3 || player.getCreation() >= 3 || player.getPrescience() >= 3 || player.getPresence() >= 3)
         {
             viewBB33.setVisibility(View.VISIBLE);
         }
-		if(player.getEntropy() >= 1 || player.getInfluence() >= 1)
+        if(player.getEntropy() >= 1 || player.getInfluence() >= 1)
         {
             viewBB34.setVisibility(View.VISIBLE);
         }
-		if(player.getPrescience() >= 1)
+        if(player.getPrescience() >= 1)
         {
             viewBB35.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 5 || player.getMovement() >= 5)
+        if(player.getAlteration() >= 5 || player.getMovement() >= 5)
         {
             viewBB36.setVisibility(View.VISIBLE);
         }
-		if(player.getCreation() >= 1)
+        if(player.getCreation() >= 1)
         {
             viewBB37.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 2 || player.getMovement() >= 2)
+        if(player.getAlteration() >= 2 || player.getMovement() >= 2)
         {
             viewBB38.setVisibility(View.VISIBLE);
         }
-		if(player.getCreation() >= 1 || player.getLearning() >= 1 || player.getLogic() >= 1 || player.getPresence() >= 1)
+        if(player.getCreation() >= 1 || player.getLearning() >= 1 || player.getLogic() >= 1 || player.getPresence() >= 1)
         {
             viewBB39.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 7 || player.getEntropy() >= 7)
+        if(player.getAlteration() >= 7 || player.getEntropy() >= 7)
         {
             viewBB40.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 5 || player.getInfluence() >= 5)
+        if(player.getAlteration() >= 5 || player.getInfluence() >= 5)
         {
             viewBB41.setVisibility(View.VISIBLE);
         }
-		if(player.getEntropy() >= 5)
+        if(player.getEntropy() >= 5)
         {
             viewBB42.setVisibility(View.VISIBLE);
         }
-		if(player.getCreation() >= 1 || player.getEnergy() >= 1)
+        if(player.getCreation() >= 1 || player.getEnergy() >= 1)
         {
             viewBB43.setVisibility(View.VISIBLE);
         }
-		if(player.getPrescience() >= 1)
+        if(player.getPrescience() >= 1)
         {
             viewBB44.setVisibility(View.VISIBLE);
         }
-		if(player.getPrescience() >= 5)
+        if(player.getPrescience() >= 5)
         {
             viewBB45.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 1 || player.getCreation() >= 1)
+        if(player.getAlteration() >= 1 || player.getCreation() >= 1)
         {
             viewBB46.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 3 || player.getEnergy() >= 3 || player.getMovement() >= 3 || player.getProtection() >= 3)
+        if(player.getAlteration() >= 3 || player.getEnergy() >= 3 || player.getMovement() >= 3 || player.getProtection() >= 3)
         {
             viewBB47.setVisibility(View.VISIBLE);
         }
-		if(player.getCreation() >= 1 || player.getProtection() >= 1)
+        if(player.getCreation() >= 1 || player.getProtection() >= 1)
         {
             viewBB48.setVisibility(View.VISIBLE);
         }
-		if(player.getPrescience() >= 4)
+        if(player.getPrescience() >= 4)
         {
             viewBB49.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 2)
+        if(player.getAlteration() >= 2)
         {
             viewBB50.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 4 || player.getCreation() >= 4 || player.getEntropy() >= 4 || player.getEnergy() >= 4)
+        if(player.getAlteration() >= 4 || player.getCreation() >= 4 || player.getEntropy() >= 4 || player.getEnergy() >= 4)
         {
             viewBB51.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 3 || player.getCreation() >= 3 || player.getProtection() >= 3)
+        if(player.getAlteration() >= 3 || player.getCreation() >= 3 || player.getProtection() >= 3)
         {
             viewBB52.setVisibility(View.VISIBLE);
         }
-		if(player.getMovement() >= 3)
+        if(player.getMovement() >= 3)
         {
             viewBB53.setVisibility(View.VISIBLE);
         }
-		if(player.getInfluence() >= 3 || player.getPrescience() >= 3)
+        if(player.getInfluence() >= 3 || player.getPrescience() >= 3)
         {
             viewBB54.setVisibility(View.VISIBLE);
         }
-		if(player.getMovement() >= 3)
+        if(player.getMovement() >= 3)
         {
             viewBB55.setVisibility(View.VISIBLE);
         }
-		if(player.getPrescience() >= 5)
+        if(player.getPrescience() >= 5)
         {
             viewBB56.setVisibility(View.VISIBLE);
         }
-		if(player.getAlteration() >= 3)
+        if(player.getAlteration() >= 3)
         {
             viewBB57.setVisibility(View.VISIBLE);
         }
-		if(player.getPrescience() >= 5)
+        if(player.getPrescience() >= 5)
         {
             viewBB58.setVisibility(View.VISIBLE);
         }
@@ -1457,6 +1450,4 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         viewBB57.setVisibility(visibility);
         viewBB58.setVisibility(visibility);
     }
-
-     */
 }
