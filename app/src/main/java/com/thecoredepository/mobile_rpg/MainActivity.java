@@ -2,6 +2,7 @@ package com.thecoredepository.mobile_rpg;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -33,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AppContext.mContext = mContext;
+
+        //Load Theme
+        loadTheming();
+
+        ConstraintLayout mainactivity_layout = findViewById(R.id.mainactivity_layout);
+        mainactivity_layout.setBackgroundResource(Theming.getBackground());
         Spinner spinnerOL = findViewById(R.id.spinnerOL);
         Button btnOpenSheet = findViewById(R.id.btnOpenSheet);
         Button btnNewSheet = findViewById(R.id.btnNewSheet);
@@ -40,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         TextView txtVersion = findViewById(R.id.txtVersion);
         String versionName = BuildConfig.VERSION_NAME;
         txtVersion.setText("Version: " + versionName);
+        txtVersion.setTextColor(Theming.getColoredFontColor());
 
         //Preload Feats
         featList();
@@ -49,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         saveData.loadData(this);
 
         //Load Data into Spinner
-        ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, R.layout.spinner_style, sheetList);
+        ArrayAdapter<String> adapterOL = new ArrayAdapter<String>(this, Theming.getSpinnerStyle(), sheetList);
         spinnerOL.setAdapter(adapterOL);
         //Load lastSheet
         SharedPreferences loadLastSheet = getSharedPreferences("lastSheet", MODE_PRIVATE);
@@ -117,6 +125,27 @@ public class MainActivity extends AppCompatActivity {
                         .setNegativeButton(android.R.string.no, null).show();
             }
         });
+    }
+
+    private void loadTheming() {
+        Theming.setContext(mContext);
+
+        //Load Theme From Save if Any
+        Theming.setThemeID(2);
+        switch (Theming.getThemeID()) {
+            case 1:
+                Theming.setFontColor(getResources().getColor(R.color.text));
+                Theming.setColoredFontColor(getResources().getColor(R.color.textColored));
+                Theming.setBackground(R.drawable.paper_bg);
+                Theming.setSpinnerStyle(R.layout.spinner_style);
+                break;
+            case 2:
+                Theming.setFontColor(getResources().getColor(R.color.textDarkTheme));
+                Theming.setColoredFontColor(getResources().getColor(R.color.textColoredDarkTheme));
+                Theming.setBackground(R.drawable.paper_bg_dark);
+                Theming.setSpinnerStyle(R.layout.spinner_style_dark);
+                break;
+        }
     }
 
     private void saveLastSheet(String selected) {
