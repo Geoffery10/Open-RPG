@@ -43,8 +43,8 @@ Samsung Galaxy S7
 
 #### Play Store
 
-Installing can be done by downloading from the Play Store (Not Available)
-* Link: (Not Available)
+Installing can be done by downloading from the Play Store.
+* [Play Store](https://play.google.com/store/apps/details?id=com.thecoredepository.mobile_rpg)
   
 #### GitHub Release 
 
