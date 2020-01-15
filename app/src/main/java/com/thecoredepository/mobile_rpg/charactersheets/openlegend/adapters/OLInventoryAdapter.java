@@ -5,8 +5,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
@@ -51,47 +54,20 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        /*LinearLayout viewBaneBoon;
-        Button btnBaneBoon; //BANE/BOON - 1/4/7
-        LinearLayout infoBaneBoon;
-        Button lblDescription;
-        TextView txtDescription; //@string/BANEBOON_description
-        Button lblDuration;
-        TextView txtDuration; //@string/BANEBOON_duration
-        Button lblAttributes;
-        TextView txtAttributes; //@string/BANEBOON_attributes
-        Button lblAttack;
-        TextView txtAttack; //@string/BANEBOON_attack
-        Button lblPowerLvl;
-        Button txtPowerLvl; //BANEBOON.minLvl
-        Button lblEffect;
-        TextView txtEffect; //@string/BANEBOON_effect
-        LinearLayout viewSpecial; //Hide if BANEBOON.special == "N/A"
-        Button lblSpecial;
-        TextView txtSpecial; //@string/BANEBOON_special*/
-
+        ConstraintLayout viewItem;
+        ImageView imgIcon;
+        TextView txtTitle;
+        TextView txtDescription;
+        TextView txtQuantity;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            /*viewBaneBoon = itemView.findViewById(R.id.viewBaneBoon);
-            btnBaneBoon = itemView.findViewById(R.id.btnBaneBoon);
-            infoBaneBoon = itemView.findViewById(R.id.infoBaneBoon);
-            lblDescription = itemView.findViewById(R.id.lblDescription);
+            viewItem = itemView.findViewById(R.id.viewItem);
+            imgIcon = itemView.findViewById(R.id.imgIcon);
+            txtTitle = itemView.findViewById(R.id.txtTitle);
             txtDescription = itemView.findViewById(R.id.txtDescription);
-            lblDuration = itemView.findViewById(R.id.lblDuration);
-            txtDuration = itemView.findViewById(R.id.txtDuration);
-            lblAttributes = itemView.findViewById(R.id.lblAttributes);
-            txtAttributes = itemView.findViewById(R.id.txtAttributes);
-            lblAttack = itemView.findViewById(R.id.lblAttack);
-            txtAttack = itemView.findViewById(R.id.txtAttack);
-            lblPowerLvl = itemView.findViewById(R.id.lblPowerLvl);
-            txtPowerLvl = itemView.findViewById(R.id.txtPowerLvl);
-            lblEffect = itemView.findViewById(R.id.lblEffect);
-            txtEffect = itemView.findViewById(R.id.txtEffect);
-            viewSpecial = itemView.findViewById(R.id.viewSpecial);
-            lblSpecial = itemView.findViewById(R.id.lblSpecial);
-            txtSpecial = itemView.findViewById(R.id.txtSpecial);*/
+            txtQuantity = itemView.findViewById(R.id.txtQuanity);
         }
     }
 }
