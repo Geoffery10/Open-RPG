@@ -13,9 +13,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLFeatsActivitiy;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
 
@@ -236,6 +238,12 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
                     //notifyItemRemoved(finalPosition);
                     OLFeatsActivitiy updateFeatPoints = new OLFeatsActivitiy();
                     updateFeatPoints.updateFeatsHeader(context);
+
+                    //Save
+                    Log.i("Saving", "Started Saving...");
+                    OLSavingSheets saveData = new OLSavingSheets();
+                    saveData.saveData(context);
+                    Log.i("Saving", "Saved");
                 }
             });
         }
@@ -259,6 +267,12 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
                     notifyItemRemoved(finalPosition);
                     OLFeatsActivitiy updateFeatPoints = new OLFeatsActivitiy();
                     updateFeatPoints.updateFeatsHeader(context);
+
+                    //Save
+                    Log.i("Saving", "Started Saving...");
+                    OLSavingSheets saveData = new OLSavingSheets();
+                    saveData.saveData(context);
+                    Log.i("Saving", "Saved");
                 }
             });
         }
