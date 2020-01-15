@@ -22,6 +22,7 @@ import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLFe
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
@@ -214,12 +215,36 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
                 holder.btnUpgrade.setVisibility(View.GONE);
             }
 
+            //=================================ADD BUTTON===========================================
+
             final int finalPosition = position;
             final OLFeats finalFeat = feat;
             holder.btnAddRemove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     //Add Feat to Player
+
+                    //Get Max Feat Level
+                    Iterator<OLFeats> iterator = OLFeats.featList.iterator();
+                    while (iterator.hasNext()) {
+                        OLFeats feat = iterator.next();
+                        if (feat.getTitle().equals(finalFeat.getTitle())) {
+                            //Feat Found in List
+                            finalFeat.setMaxLevel(feat.getMaxLevel());
+                            if(finalFeat.getLevel() == 0) {
+                                finalFeat.setLevel(1);
+                            }
+                            Log.i("Max Level", "Max Level Found: " + finalFeat.getMaxLevel() + " Current Level: " + finalFeat.getLevel());
+
+                            //Remove Feat if it is upgrading
+                            player.removeFeat(feat);
+                        }
+                    }
+
+
+                    if ((finalFeat.getLevel() + 1) < finalFeat.getMaxLevel()) {
+                        finalFeat.setLevel(finalFeat.getLevel() + 1);
+                    }
 
                     if (holder.spinnerAddRemoveUpgradeFeat.getVisibility() == View.VISIBLE) {
                         if (holder.spinnerAddRemoveUpgradeFeat2.getVisibility() == View.VISIBLE) {
@@ -233,7 +258,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
                         finalFeat.setConnection("" + holder.editAddRemoveUpgradeFeat.getText());
                     }
                     //Add Connection Data to Feat
-
+                    Log.i("finalFeat", finalFeat.toString());
                     player.addFeat(finalFeat);
                     //notifyItemRemoved(finalPosition);
                     OLFeatsActivitiy updateFeatPoints = new OLFeatsActivitiy();
@@ -259,6 +284,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
 
             final int finalPosition = position;
             final OLFeats finalFeat = feat;
+            //=================================REMOVE BUTTON========================================
             holder.btnAddRemove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

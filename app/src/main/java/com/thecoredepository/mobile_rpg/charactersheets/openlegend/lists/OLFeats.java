@@ -34,6 +34,24 @@ public class OLFeats
         return newFeat;
     }
 
+    @Override
+    public String toString() {
+        return "OLFeats{" +
+                "\ntitle='" + title + '\'' +
+                ", \nmaxLevel=" + maxLevel +
+                ", \nlevel=" + level +
+                ", \nfeatCost=" + featCost +
+                ", \nfeatCostTotal=" + featCostTotal +
+                ", \ndescription='" + description + '\'' +
+                ", \nprerequisites='" + prerequisites + '\'' +
+                ", \neffects='" + effects + '\'' +
+                ", \nspecial='" + special + '\'' +
+                ", \nconnectionType='" + connectionType + '\'' +
+                ", \nconnection='" + connection + '\'' +
+                ", \ncanBeTakenMoreThanOnce=" + canBeTakenMoreThanOnce +
+                "\n}";
+    }
+
     public OLFeats getFeatPosition(int index) {
         return featList.get(index);
     }

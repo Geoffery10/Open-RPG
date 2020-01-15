@@ -638,6 +638,7 @@ public class openlegend
         while (iterator.hasNext()) {
             OLFeats feat = iterator.next();
             used += feat.getLevel() * feat.getFeatCost();
+            Log.i("setFeatPointsUsed", "used("+used+") += feat.getLevel("+feat.getLevel()+") * feat.getFeatCost("+feat.getFeatCost()+")");
         }
         this.featPointsUsed = used;
     }
