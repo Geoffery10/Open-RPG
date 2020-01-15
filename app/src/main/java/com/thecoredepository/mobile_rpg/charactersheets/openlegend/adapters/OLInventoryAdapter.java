@@ -21,10 +21,14 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
     private Context context;
 
     private ArrayList<OLItem> items = new ArrayList<>();
+    private Boolean add = false;
+    private Boolean remove = false;
 
-    public OLInventoryAdapter(Context context, ArrayList<OLItem> items) {
+    public OLInventoryAdapter(Context context, ArrayList<OLItem> items, Boolean add, Boolean remove) {
         this.context = context;
         this.items = items;
+        this.add = add;
+        this.remove = remove;
     }
 
     @NonNull
@@ -38,13 +42,16 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
     @Override
     public void onBindViewHolder(@NonNull final OLInventoryAdapter.ViewHolder holder, int position) {
         Log.d("Recycle", "onBindViewHolder called");
-        OLItem item = new OLItem();
+        OLItem item = items.get(position);
 
+        holder.txtTitle.setText(item.getTitle());
+        holder.txtDescription.setText(item.getDescription());
+        holder.txtQuantity.setText("Quantity: " + item.getQuantity());
     }
 
     @Override
     public int getItemCount() {
-        int size = 0;
+        int size = items.size();
         //Get count
 
         Log.d("Recycle", "Size: " + size);
