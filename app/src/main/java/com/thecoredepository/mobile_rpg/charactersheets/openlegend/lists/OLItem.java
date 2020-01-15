@@ -1,6 +1,6 @@
 package com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists;
 
-public class OLInventory
+public class OLItem
 {
     private String title; //What it is called
     private String description; //What is the item
@@ -53,7 +53,7 @@ public class OLInventory
 
     @Override
     public String toString() {
-        return "OLInventory{" +
+        return "OLItem{" +
                 "\ntitle='" + title + '\'' +
                 ", \ndescription='" + description + '\'' +
                 ", \nquantity=" + quantity +
