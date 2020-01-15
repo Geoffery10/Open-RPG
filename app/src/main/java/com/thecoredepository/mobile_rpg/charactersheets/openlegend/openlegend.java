@@ -10,6 +10,7 @@ import android.util.Log;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBanes;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBoons;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -81,8 +82,7 @@ public class openlegend
     //inventoryOL inventory = new inventoryOL();
     //Or just keep the values here
     private int inventorySize;
-    private ArrayList<String> items = new ArrayList<String>();
-    private ArrayList<String> itemInfo = new ArrayList<String>();
+    private ArrayList<OLItem> items = new ArrayList<OLItem>();
     private int wealth;
 
     //Banes/Boons
@@ -766,53 +766,54 @@ public class openlegend
         this.inventorySize = inventorySize;
     }
 
-    public List getAllItems() {
+    public ArrayList getAllItems() {
         return items;
     }
 
-    public List getAllItemInfo() {
-        return itemInfo;
-    }
-
-    public String getItemAt(int index)
+    public OLItem getItemAt(int index)
     {
-        return (String) this.items.get(index);
+        return items.get(index);
     }
 
-    public String getItemInfoAt(int index)
-    {
-        return (String) this.itemInfo.get(index);
-    }
-
-    public void setItems(ArrayList<String> items) {
+    public void setItems(ArrayList<OLItem> items) {
         this.items = items;
     }
 
-    public void setItemInfo(ArrayList<String> itemInfo) {
-        this.itemInfo = itemInfo;
-    }
-
-    public void addItem(String item, String itemInfo)
+    public void addItem(OLItem leather_armor)
     {
-        this. items.add(item);
-        this.itemInfo.add(itemInfo);
+        OLItem item = new OLItem();
+        item.OLItem();
+        this.items.add(item);
         this.inventorySize += 1;
     }
 
-    public void removeItem(String item)
+    public void addItem(String title, String description, int quantity)
     {
-        //Remove item and description at same index
-        int index = items.indexOf(item);
-        this.items.remove(index);
-        this.itemInfo.remove(index);
-        this.inventorySize -= 1;
+        OLItem item = new OLItem();
+        item.OLItem(title, description, quantity);
+        this.items.add(item);
+        this.inventorySize += 1;
     }
 
-    public String inventoryToString()
+    public void addItem(String title, String description, int quantity, int diceType, int diceQuanity)
     {
-        return "Inventory - {" +
-            "Inventory=" + Arrays.toString(items.toArray())
-                + "\nItem Info=" + Arrays.toString(itemInfo.toArray()) + "}";
+        OLItem item = new OLItem();
+        item.OLItem(title, description, quantity, diceType, diceQuanity);
+        this.items.add(item);
+        this.inventorySize += 1;
+    }
+
+    public void removeItem(OLItem item)
+    {
+        int index;
+        if (items.contains(item)) {
+            index = items.indexOf(item);
+            items.remove(index);
+            this.inventorySize -= 1;
+        }
+        else {
+            Log.d("removeItem", "Item not found");
+        }
     }
 
     public int getWealth()
@@ -1254,13 +1255,14 @@ public class openlegend
             tazmur.setAttributePointsAvailable(tazmur.getType());
 
             tazmur.setWealth(3);
-            tazmur.addItem("Leather Armor", "(+1 Guard)");
-            tazmur.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
-            tazmur.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
-            tazmur.addItem("Bow", "Agility v. Guard - Range 125ft");
-            tazmur.addItem("Creature Book", "Advantage on Creature Knowledge");
-            tazmur.addItem("Mask Collection (10)", "Collection of Masks from the Happy Mask Sales Men");
-            tazmur.addItem("Magic Pearl", "Magic Peal with the power to stop the transformitive effects of the Dark World");
+
+
+            tazmur.addItem(new OLItem("Leather Armor", "(+1 Guard)", 1, "Armor"));
+            tazmur.addItem(new OLItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)", 2, "Weapon"));
+            tazmur.addItem(new OLItem("Bow", "Agility v. Guard - Range 125ft", 1, "Weapon"));
+            tazmur.addItem(new OLItem("Creature Book", "Advantage on Creature Knowledge", 1, "Item"));
+            tazmur.addItem(new OLItem("Mask Collection", "Collection of Masks from the Happy Mask Sales Men", 10, "Item"));
+            tazmur.addItem(new OLItem("Magic Pearl", "Magic Peal with the power to stop the transformitive effects of the Dark World", 1, "Item"));
 
             if (tazmur.getType().equals("pc") || tazmur.getType().equals("ccII") || tazmur.getType().equals("ccIII"))
             {
