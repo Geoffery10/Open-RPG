@@ -31,7 +31,7 @@ public class OLInventoryActivity extends AppCompatActivity
 
         for (int i = 0; i < player.getInventorySize(); i++)
         {
-            txtInventory.setText(txtInventory.getText() + "\u2022 " + player.getItemAt(i) +" : "+ player.getItemInfoAt(i) + "\n");
+            txtInventory.setText(txtInventory.getText() + "\u2022 " + player.getItemAt(i).getTitle() +" : "+ player.getItemAt(i).getDescription() + "\n");
         }
     }
 

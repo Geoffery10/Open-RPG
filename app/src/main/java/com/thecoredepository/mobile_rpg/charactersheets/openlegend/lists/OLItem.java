@@ -11,32 +11,31 @@ public class OLItem
 
     public OLItem()
     {
-        setTitle("TEMP");
-        setDescription("This Item has no info.");
-        setQuantity(1);
-        setType("Other");
-        setDiceType(0);
-        setDiceQuantity(0);
+        this.title = "TEMP";
+        this.description = "This Item has no info.";
+        this.quantity = 1;
+        this.type = "Other";
+        this.diceType = 0;
+        this.diceQuantity = 0;
     }
 
     public OLItem(String title, String description, int quantity, String type)
     {
-        setTitle(title);
-        setDescription(description);
-        setQuantity(quantity);
-        setType(type);
-        setDiceType(0);
-        setDiceQuantity(0);
+        this.title = title;
+        this.description = description;
+        this.quantity = quantity;
+        this.type = type;
+        this.diceType = 0;
+        this.diceQuantity = 0;
     }
 
-    public OLItem(String title, String description, int quantity, int diceType, int diceQuantity, String type)
-    {
-        setTitle(title);
-        setDescription(description);
-        setQuantity(quantity);
-        setType(type);
-        setDiceType(diceType);
-        setDiceQuantity(diceQuantity);
+    public OLItem(String title, String description, int quantity, int diceType, int diceQuantity, String type) {
+        this.title = title;
+        this.description = description;
+        this.quantity = quantity;
+        this.type = type;
+        this.diceType = diceType;
+        this.diceQuantity = diceQuantity;
     }
 
     public String getTitle() {
@@ -96,6 +95,7 @@ public class OLItem
                 "\ntitle='" + title + '\'' +
                 ", \ndescription='" + description + '\'' +
                 ", \nquantity=" + quantity +
+                ", \ntype=" + type +
                 ", \ndiceType=" + diceType +
                 ", \ndiceQuantity=" + diceQuantity +
                 "\n}";
