@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -43,6 +45,9 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
     public void onBindViewHolder(@NonNull final OLInventoryAdapter.ViewHolder holder, int position) {
         Log.d("Recycle", "onBindViewHolder called");
         OLItem item = items.get(position);
+        holder.btnSave.setVisibility(View.GONE);
+        holder.txtTitle.setVisibility(View.VISIBLE);
+        holder.editTitle.setVisibility(View.GONE);
 
         String type = ""+ item.getType();
         switch (type) {
@@ -55,19 +60,30 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
             default : holder.imgIcon.setImageResource(R.drawable.ic_other_icon);
         }
 
-        /*if (item.getType().equals("Weapon")) {
-            holder.imgIcon.setImageResource(R.drawable.ic_weapon_icon);
-        } else if (item.getType().equals("Armor")) {
-            holder.imgIcon.setImageResource(R.drawable.ic_armor_icon);
-        } else if (item.getType().equals("Potion")) {
-            holder.imgIcon.setImageResource(R.drawable.ic_potion_icon);
-        } else {
-            holder.imgIcon.setImageResource(R.drawable.ic_other_icon);
-        }*/
-
         holder.txtTitle.setText(item.getTitle());
         holder.txtDescription.setText(item.getDescription());
         holder.txtQuantity.setText("Quantity: " + item.getQuantity());
+
+        holder.btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Open Edit
+                if (holder.btnSave.getVisibility() == View.GONE)
+                {
+                    holder.btnSave.setVisibility(View.VISIBLE);
+                    holder.txtTitle.setVisibility(View.GONE);
+                    holder.editTitle.setText(holder.txtTitle.getText());
+                    holder.editTitle.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    holder.btnSave.setVisibility(View.GONE);
+                    holder.txtTitle.setVisibility(View.VISIBLE);
+                    holder.txtTitle.setText(holder.editTitle.getText());
+                    holder.editTitle.setVisibility(View.GONE);
+                }
+            }
+        });
     }
 
     @Override
@@ -87,6 +103,9 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
         TextView txtTitle;
         TextView txtDescription;
         TextView txtQuantity;
+        ImageView btnEdit;
+        Button btnSave;
+        EditText editTitle;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -96,6 +115,9 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
             txtTitle = itemView.findViewById(R.id.txtTitle);
             txtDescription = itemView.findViewById(R.id.txtDescription);
             txtQuantity = itemView.findViewById(R.id.txtQuanity);
+            btnEdit = itemView.findViewById(R.id.btnEdit);
+            btnSave = itemView.findViewById(R.id.btnSave);
+            editTitle = itemView.findViewById(R.id.editTitle);
         }
     }
 }

@@ -825,7 +825,8 @@ public class openlegend
 
     public void sortItems() {
         ArrayList<OLItem> temp = new ArrayList<>();
-        Collections.sort(items, OLItem.itemComparator);
+        //Collections.sort(items, OLItem.itemComparator);
+
         /*for (int i = 0; i < items.size(); i++) {
             if(items.get(i).getType().equals("Weapon")) {
                 temp.add(items.get(i));
