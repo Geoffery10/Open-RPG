@@ -44,10 +44,14 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
         Log.d("Recycle", "onBindViewHolder called");
         OLItem item = items.get(position);
 
-        switch (item.getType()) {
+        String type = ""+ item.getType();
+        switch (type) {
             case "Weapon": holder.imgIcon.setImageResource(R.drawable.ic_weapon_icon);
+                break;
             case "Armor": holder.imgIcon.setImageResource(R.drawable.ic_armor_icon);
+                break;
             case "Potion": holder.imgIcon.setImageResource(R.drawable.ic_potion_icon);
+                break;
             default : holder.imgIcon.setImageResource(R.drawable.ic_other_icon);
         }
 
