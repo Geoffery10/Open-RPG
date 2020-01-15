@@ -73,6 +73,10 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         {
             feat = getFeatsList(position);
 
+            if (feat.getTitle().equals("Filler")) {
+                holder.viewFeat.setVisibility(View.GONE);
+            }
+
             String btnFeatText = feat.getTitle() + "";
             if (feat.getConnection() != null) {
                 btnFeatText += " (" + feat.getConnection() + ")";
