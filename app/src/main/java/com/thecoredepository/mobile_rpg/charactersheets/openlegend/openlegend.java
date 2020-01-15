@@ -1519,7 +1519,7 @@ public class openlegend
             Noujou.setWealth(3);
 
             Noujou.addItem(new OLItem("Claws", "Agility(Entropy) v. Guard", 4, "Weapon"));
-            Noujou.addItem(new OLItem("Health Potion", "Heals 5HP", 10, "Item"));
+            Noujou.addItem(new OLItem("Health Potion", "Heals 5HP", 10, "Potion"));
             Noujou.addItem(new OLItem("Broad Sword", "Might v. Guard", 1, "Weapon"));
 
             if (Noujou.getType().equals("pc") || Noujou.getType().equals("ccII") || Noujou.getType().equals("ccIII"))
