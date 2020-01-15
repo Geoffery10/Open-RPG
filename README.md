@@ -25,8 +25,8 @@ Let Open RPG do all the hard work for you!
 
 ## Getting Started
 
-(Not Available).
-* [Releases](https://github.com/Geoffery10/Mobile-RPG/releases)
+* [Play Store](https://play.google.com/store/apps/details?id=com.thecoredepository.mobile_rpg)
+* [Github Releases](https://github.com/Geoffery10/Mobile-RPG/releases)
 
 ### Prerequisites
 
