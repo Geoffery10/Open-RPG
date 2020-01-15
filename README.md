@@ -1,5 +1,5 @@
 <p align="center">
-<img align="center" width="500" height="100" src="https://github.com/Geoffery10/Mobile-RPG/blob/master/github_assets/icon_banner.jpg">
+<img align="center" width="398" height="100" src="https://github.com/Geoffery10/Mobile-RPG/blob/master/github_assets/icon_banner.jpg">
 </p>
 
 # Open RPG
