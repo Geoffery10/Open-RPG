@@ -22,21 +22,19 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="24dp"
                 android:text="Wealth Lvl:"
-                android:textIsSelectable="true"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textIsSelectable="true"
                 android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/txtInventory"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/item_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="24dp"
-                android:lineSpacingExtra="8dp"
-                android:text="Item: ItemInfo\n"
-                android:textIsSelectable="true"
-                android:textSize="20sp" />
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:scrollbars="vertical" />
         </LinearLayout>
     </ScrollView>
 

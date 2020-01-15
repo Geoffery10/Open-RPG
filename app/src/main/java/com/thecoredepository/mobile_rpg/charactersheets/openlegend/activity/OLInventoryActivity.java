@@ -8,8 +8,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLFeatAdapter;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLInventoryAdapter;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 
@@ -24,15 +28,14 @@ public class OLInventoryActivity extends AppCompatActivity
         Intent intent = getIntent();
 
         TextView txtWealth = findViewById(R.id.txtWealth);
-        TextView txtInventory = findViewById(R.id.txtInventory);
+        RecyclerView recyclerView = findViewById(R.id.item_view);
 
         txtWealth.setText("Wealth Level: " + player.getWealth());
-        txtInventory.setText("");
 
-        for (int i = 0; i < player.getInventorySize(); i++)
-        {
-            txtInventory.setText(txtInventory.getText() + "\u2022 " + player.getItemAt(i) +" : "+ player.getItemInfoAt(i) + "\n");
-        }
+        Boolean add = false;
+        Boolean remove = false;
+
+        generateRecyclerView(add, remove, recyclerView);
     }
 
     @Override
@@ -61,5 +64,14 @@ public class OLInventoryActivity extends AppCompatActivity
         }
 
         return true;
+    }
+
+    private void generateRecyclerView(Boolean add, Boolean remove, RecyclerView recyclerView) {
+        for (int i = 0; i < player.getAllItems().size(); i++)
+        {
+            OLInventoryAdapter adapter = new OLInventoryAdapter(this, player.getAllItems(), add, remove);
+            recyclerView.setAdapter(adapter);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        }
     }
 }

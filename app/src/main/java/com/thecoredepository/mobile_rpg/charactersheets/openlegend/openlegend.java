@@ -10,11 +10,11 @@ import android.util.Log;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBanes;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBoons;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 
 public class openlegend
 {
@@ -81,8 +81,7 @@ public class openlegend
     //inventoryOL inventory = new inventoryOL();
     //Or just keep the values here
     private int inventorySize;
-    private ArrayList<String> items = new ArrayList<String>();
-    private ArrayList<String> itemInfo = new ArrayList<String>();
+    private ArrayList<OLItem> items = new ArrayList<OLItem>();
     private int wealth;
 
     //Banes/Boons
@@ -154,8 +153,7 @@ public class openlegend
                 ", perks=" + Arrays.toString(perks) +
                 ", flaws=" + Arrays.toString(flaws) +
                 ", inventorySize=" + inventorySize +
-                ", items=" + items +
-                ", itemInfo=" + itemInfo +
+                ", items=" + items.toString() +
                 ", wealth=" + wealth +
                 ", Banes=" + Banes +
                 ", Boons=" + Boons +
@@ -766,53 +764,58 @@ public class openlegend
         this.inventorySize = inventorySize;
     }
 
-    public List getAllItems() {
+    public ArrayList getAllItems() {
         return items;
     }
 
-    public List getAllItemInfo() {
-        return itemInfo;
-    }
-
-    public String getItemAt(int index)
+    public OLItem getItemAt(int index)
     {
-        return (String) this.items.get(index);
+        return items.get(index);
     }
 
-    public String getItemInfoAt(int index)
-    {
-        return (String) this.itemInfo.get(index);
-    }
-
-    public void setItems(ArrayList<String> items) {
+    public void setItems(ArrayList<OLItem> items) {
         this.items = items;
     }
 
-    public void setItemInfo(ArrayList<String> itemInfo) {
-        this.itemInfo = itemInfo;
-    }
-
-    public void addItem(String item, String itemInfo)
+    public void addItem()
     {
-        this. items.add(item);
-        this.itemInfo.add(itemInfo);
+        OLItem item = new OLItem();
+        this.items.add(item);
         this.inventorySize += 1;
     }
 
-    public void removeItem(String item)
+    public void addItem(String title, String description, int quantity, String type)
     {
-        //Remove item and description at same index
-        int index = items.indexOf(item);
-        this.items.remove(index);
-        this.itemInfo.remove(index);
-        this.inventorySize -= 1;
+        OLItem item = new OLItem(title, description, quantity, type);
+        this.items.add(item);
+        this.inventorySize += 1;
+        Log.d("addItem", "Item: \n" + item.toString());
     }
 
-    public String inventoryToString()
+    public void addItem(String title, String description, int quantity, int diceType, int diceQuanity, String type)
     {
-        return "Inventory - {" +
-            "Inventory=" + Arrays.toString(items.toArray())
-                + "\nItem Info=" + Arrays.toString(itemInfo.toArray()) + "}";
+        OLItem item = new OLItem(title, description, quantity, diceType, diceQuanity, type);
+        this.items.add(item);
+        this.inventorySize += 1;
+    }
+
+    public void addItem(OLItem item)
+    {
+        this.items.add(item);
+        this.inventorySize += 1;
+    }
+
+    public void removeItem(OLItem item)
+    {
+        int index;
+        if (items.contains(item)) {
+            index = items.indexOf(item);
+            items.remove(index);
+            this.inventorySize -= 1;
+        }
+        else {
+            Log.d("removeItem", "Item not found");
+        }
     }
 
     public int getWealth()
@@ -1203,7 +1206,6 @@ public class openlegend
         newChar.flaws = flaws;
         newChar.inventorySize = inventorySize;
         newChar.items = items;
-        newChar.itemInfo = itemInfo;
         newChar.wealth = wealth;
         Banes = banes;
         Boons = boons;
@@ -1254,13 +1256,13 @@ public class openlegend
             tazmur.setAttributePointsAvailable(tazmur.getType());
 
             tazmur.setWealth(3);
-            tazmur.addItem("Leather Armor", "(+1 Guard)");
-            tazmur.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
-            tazmur.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
-            tazmur.addItem("Bow", "Agility v. Guard - Range 125ft");
-            tazmur.addItem("Creature Book", "Advantage on Creature Knowledge");
-            tazmur.addItem("Mask Collection (10)", "Collection of Masks from the Happy Mask Sales Men");
-            tazmur.addItem("Magic Pearl", "Magic Peal with the power to stop the transformitive effects of the Dark World");
+
+            tazmur.addItem(new OLItem("Leather Armor", "(+1 Guard)", 1, "Armor"));
+            tazmur.addItem(new OLItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)", 2, "Weapon"));
+            tazmur.addItem(new OLItem("Bow", "Agility v. Guard - Range 125ft", 1, "Weapon"));
+            tazmur.addItem(new OLItem("Creature Book", "Advantage on Creature Knowledge", 1, "Item"));
+            tazmur.addItem(new OLItem("Mask Collection", "Collection of Masks from the Happy Mask Sales Men", 10, "Item"));
+            tazmur.addItem(new OLItem("Magic Pearl", "Magic Peal with the power to stop the transformitive effects of the Dark World", 1, "Item"));
 
             if (tazmur.getType().equals("pc") || tazmur.getType().equals("ccII") || tazmur.getType().equals("ccIII"))
             {
@@ -1376,13 +1378,12 @@ public class openlegend
 
             mazok.setWealth(1);
 
-            mazok.addItem("Leather Armor", "(+1 Guard)");
-            mazok.addItem("Longbow", "");
-            mazok.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
-            mazok.addItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)");
-            mazok.addItem("Rope 50", "");
-            mazok.addItem("Lockpicks", "");
-            mazok.addItem("Deku Mask", "");
+            mazok.addItem(new OLItem("Leather Armor", "(+1 Guard)", 1, "Armor"));
+            mazok.addItem(new OLItem("Longbow", "N/A", 1, "Weapon"));
+            mazok.addItem(new OLItem("Dagger", "Agility v. Guard - (Advantage 1 & Initiative + 1)", 2, "Weapon"));
+            mazok.addItem(new OLItem("Rope 50", "N/A", 1, "Item"));
+            mazok.addItem(new OLItem("Lockpicks", "You can pick locks", 20, "Item"));
+            mazok.addItem(new OLItem("Deku Mask", "Transform into a Deku Shrub", 1, "Item"));
 
             if (mazok.getType().equals("pc") || mazok.getType().equals("ccII") || mazok.getType().equals("ccIII"))
             {
@@ -1517,9 +1518,9 @@ public class openlegend
 
             Noujou.setWealth(3);
 
-            Noujou.addItem("Claws", "Agility(Entropy) v. Guard");
-            Noujou.addItem("Health Potion", "");
-            Noujou.addItem("Broad Sword", "Might v. Guard");
+            Noujou.addItem(new OLItem("Claws", "Agility(Entropy) v. Guard", 4, "Weapon"));
+            Noujou.addItem(new OLItem("Health Potion", "Heals 5HP", 10, "Item"));
+            Noujou.addItem(new OLItem("Broad Sword", "Might v. Guard", 1, "Weapon"));
 
             if (Noujou.getType().equals("pc") || Noujou.getType().equals("ccII") || Noujou.getType().equals("ccIII"))
             {
@@ -1577,7 +1578,6 @@ public class openlegend
         blank.flaws = null;
         blank.inventorySize = 0;
         blank.items.clear();
-        blank.itemInfo.clear();
         blank.wealth = 0;
         blank.Banes.clear();
         blank.Boons.clear();
