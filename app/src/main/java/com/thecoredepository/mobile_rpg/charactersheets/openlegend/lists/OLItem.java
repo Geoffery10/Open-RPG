@@ -1,5 +1,7 @@
 package com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists;
 
+import java.util.Comparator;
+
 public class OLItem
 {
     private String title; //What it is called
@@ -67,7 +69,7 @@ public class OLItem
     }
 
     public void setType(String type) {
-        if (!(type.equals("Weapon") || type.equals("Armor") || type.equals("Item") || type.equals("Other"))) {
+        if (!(type.equals("Weapon") || type.equals("Armor") || type.equals("Item") || type.equals("Potion"))) {
             type = "Other";
         }
         this.type = type;
@@ -89,6 +91,16 @@ public class OLItem
         this.diceQuantity = diceQuantity;
     }
 
+    public static Comparator<OLItem> itemComparator = new Comparator<OLItem>() {
+
+        public int compare(OLItem item_1, OLItem item_2) {
+            String title_01 = item_1.getTitle().toUpperCase();
+            String title_02 = item_2.getTitle().toUpperCase();
+
+            //ascending order
+            return title_01.compareTo(title_02);
+        }};
+    
     @Override
     public String toString() {
         return "OLItem{" +

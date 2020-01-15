@@ -14,6 +14,7 @@ import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class openlegend
@@ -782,6 +783,7 @@ public class openlegend
         OLItem item = new OLItem();
         this.items.add(item);
         this.inventorySize += 1;
+        sortItems();
     }
 
     public void addItem(String title, String description, int quantity, String type)
@@ -790,6 +792,7 @@ public class openlegend
         this.items.add(item);
         this.inventorySize += 1;
         Log.d("addItem", "Item: \n" + item.toString());
+        sortItems();
     }
 
     public void addItem(String title, String description, int quantity, int diceType, int diceQuanity, String type)
@@ -797,12 +800,14 @@ public class openlegend
         OLItem item = new OLItem(title, description, quantity, diceType, diceQuanity, type);
         this.items.add(item);
         this.inventorySize += 1;
+        sortItems();
     }
 
     public void addItem(OLItem item)
     {
         this.items.add(item);
         this.inventorySize += 1;
+        sortItems();
     }
 
     public void removeItem(OLItem item)
@@ -816,6 +821,33 @@ public class openlegend
         else {
             Log.d("removeItem", "Item not found");
         }
+    }
+
+    public void sortItems() {
+        ArrayList<OLItem> temp = new ArrayList<>();
+        Collections.sort(items, OLItem.itemComparator);
+        /*for (int i = 0; i < items.size(); i++) {
+            if(items.get(i).getType().equals("Weapon")) {
+                temp.add(items.get(i));
+            }
+        }
+        for (int i = 0; i < items.size(); i++) {
+            if(items.get(i).getType().equals("Armor")) {
+                temp.add(items.get(i));
+            }
+        }
+        for (int i = 0; i < items.size(); i++) {
+            if(items.get(i).getType().equals("Potion")) {
+                temp.add(items.get(i));
+            }
+        }
+        for (int i = 0; i < items.size(); i++) {
+            if(items.get(i).getType().equals("Other")) {
+                temp.add(items.get(i));
+            }
+        }
+        items.clear();
+        items.addAll(temp);*/
     }
 
     public int getWealth()
