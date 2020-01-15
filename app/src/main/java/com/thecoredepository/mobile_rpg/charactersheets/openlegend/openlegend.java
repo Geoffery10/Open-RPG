@@ -723,6 +723,7 @@ public class openlegend
 
     public void addFeat(OLFeats feat) {
         this.feats.add(feat);
+        Log.i("Added Feat", "Feat = " + feat.getTitle());
     }
 
     public void removeFeat(OLFeats feat) {

@@ -17,9 +17,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLBanesBoonsActivity;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats.*;
 
 public class OLNewSheet extends AppCompatActivity {
 
@@ -787,6 +789,19 @@ public class OLNewSheet extends AppCompatActivity {
                 layoutFeats.setVisibility(View.GONE);
                 LinearLayout layoutInventory = findViewById(R.id.layoutInventory);
                 layoutInventory.setVisibility(View.VISIBLE);
+
+                //Assign Feats
+                OLFeats Filler_Feat = new OLFeats();
+                Filler_Feat.setTitle("Filler");
+                Filler_Feat.setMaxLevel(1);
+                Filler_Feat.setFeatCost(0);
+                Filler_Feat.setDescription("This is a temporary feat.");
+                Filler_Feat.setPrerequisites("None");
+                Filler_Feat.setEffects("This feat has no effects.");
+                Filler_Feat.setSpecial("None");
+
+                playerTemp.addFeat(Filler_Feat);
+
             }
         });
 
