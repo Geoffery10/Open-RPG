@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,6 +15,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.thecoredepository.mobile_rpg.AppContext;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.Theming;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLFeatAdapter;
@@ -39,10 +42,20 @@ public class OLInventoryActivity extends AppCompatActivity
 
         txtWealth.setText("Wealth Level: " + player.getWealth());
 
+        Button btnAdd = findViewById(R.id.btnAdd);
+
         Boolean add = false;
         Boolean remove = false;
 
         generateRecyclerView(add, remove, recyclerView);
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast toast = Toast.makeText(AppContext.mContext, "This feature isn't ready just yet", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
     }
 
     @Override
