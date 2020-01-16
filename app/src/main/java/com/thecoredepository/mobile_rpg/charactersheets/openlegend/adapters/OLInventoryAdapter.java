@@ -128,7 +128,14 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
 
         String title = "" + holder.editTitle.getText();
         String description = "" + holder.editDescription.getText();
-        int quantity = Integer.parseInt("" + holder.editQuantity.getText());
+
+        int quantity;
+        if (holder.editQuantity.getText().toString().equals("")) {
+            quantity = 1;
+        } else {
+            quantity = Integer.parseInt("" + holder.editQuantity.getText());
+        }
+
         String type = player.getItemAt(position).getType();
 
         player.setItemAt(position, new OLItem(title, description, quantity, type));
