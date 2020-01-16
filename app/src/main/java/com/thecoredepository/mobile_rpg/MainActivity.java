@@ -19,10 +19,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLNewSheet;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats.featList;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
@@ -155,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
                                     loadTheming(2);
                                     updateTheme();
                                     setTheme(R.style.AppThemeDark);
+                                    saveTheme(2);
                                 }})
                             .setNegativeButton(android.R.string.no, null).show();
                 }
@@ -163,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
                     loadTheming(1);
                     updateTheme();
                     setTheme(R.style.AppTheme);
+                    saveTheme(1);
                 }
                 break;
             case R.id.exportSheet:
@@ -184,9 +192,26 @@ public class MainActivity extends AppCompatActivity {
     private void loadTheming() {
         Theming.setContext(mContext);
 
+        int themeID = 1;
+
+        Log.d("Load Theme", "Loading Theme...");
+        SharedPreferences themePreferences = mContext.getSharedPreferences("theme", Context.MODE_PRIVATE);
+        themeID = themePreferences.getInt("theme", 0);
+        Log.d("Load Theme", "Loaded Theme: " + themeID);
+
+        if (themeID == 0)
+        {
+            themeID = 1;
+            Theming.setThemeID(1);
+
+            saveTheme(themeID);
+        }
+
+        Theming.setThemeID(themeID);
+
         //Load Theme From Save if Any
         if (Theming.getThemeID() >= 1) {
-            //Do nothing
+            //Theming
         } else {
             Theming.setThemeID(1);
         }
@@ -204,8 +229,18 @@ public class MainActivity extends AppCompatActivity {
                 Theming.setColoredFontColor(getResources().getColor(R.color.textColoredDarkTheme));
                 Theming.setBackground(R.drawable.paper_bg_dark);
                 Theming.setSpinnerStyle(R.layout.spinner_style_dark);
+                Theming.setThemeID(2);
                 break;
         }
+    }
+
+    private void saveTheme(int themeID) {
+        Log.d("Saving Theme", "Saving Theme: " + themeID);
+        SharedPreferences themeSavePreferences = mContext.getSharedPreferences("theme", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = themeSavePreferences.edit();
+        editor.putInt("theme", themeID);
+        editor.commit();
+        Log.d("Saved Theme", "Saved Theme: " + themeID);
     }
 
     private void loadTheming(int theme) {
@@ -229,6 +264,7 @@ public class MainActivity extends AppCompatActivity {
                 Theming.setSpinnerStyle(R.layout.spinner_style_dark);
                 break;
         }
+        saveTheme(theme);
     }
 
     private void updateTheme() {
