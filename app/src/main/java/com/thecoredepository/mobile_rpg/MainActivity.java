@@ -154,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
                                     Theming.setThemeID(2);
                                     loadTheming(2);
                                     updateTheme();
+                                    setTheme(R.style.AppThemeDark);
                                 }})
                             .setNegativeButton(android.R.string.no, null).show();
                 }
@@ -161,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
                     Theming.setThemeID(1);
                     loadTheming(1);
                     updateTheme();
+                    setTheme(R.style.AppTheme);
                 }
                 break;
             case R.id.exportSheet:
