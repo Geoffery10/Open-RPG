@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/featsView"
+    android:id="@+id/aboutView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/paper_bg">
@@ -29,6 +29,7 @@
                 android:text="About"
                 android:textColor="@color/colorAccent"
                 android:textSize="30sp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -55,7 +56,11 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
+                android:autoLink="web"
+                android:lineSpacingExtra="8sp"
+                android:linksClickable="true"
                 android:text="@string/ol_license"
+                android:textSize="12sp"
                 app:layout_constraintDimensionRatio=""
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

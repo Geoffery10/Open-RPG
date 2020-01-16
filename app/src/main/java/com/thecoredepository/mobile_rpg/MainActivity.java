@@ -24,6 +24,7 @@ import com.google.gson.reflect.TypeToken;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLNewSheet;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.AboutActivity;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
 
@@ -180,7 +181,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.about:
-                Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT).show();
+                Intent in = new Intent(getApplicationContext(), AboutActivity.class);
+                startActivity(in);
                 break;
             default:
                 return super.onOptionsItemSelected(item);
