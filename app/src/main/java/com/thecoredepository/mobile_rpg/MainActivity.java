@@ -10,12 +10,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLNewSheet;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity;
@@ -28,6 +32,7 @@ import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openle
 public class MainActivity extends AppCompatActivity {
 
     public Context mContext = this;
+    public Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,11 +132,62 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        this.menu = menu;
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.DarkMode:
+                if (Theming.getThemeID() == 1) {
+                    new AlertDialog.Builder(mContext)
+                            .setTitle("Enable Dark Mode?")
+                            .setMessage("Dark Mode is not finished and may still contain bugs. Do you want to enable?")
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                                public void onClick(DialogInterface dialog, int whichButton) {
+                                    Theming.setThemeID(2);
+                                    loadTheming(2);
+                                    updateTheme();
+                                }})
+                            .setNegativeButton(android.R.string.no, null).show();
+                }
+                else {
+                    Theming.setThemeID(1);
+                    loadTheming(1);
+                    updateTheme();
+                }
+                break;
+            case R.id.exportSheet:
+                Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.importSheet:
+                Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.about:
+                Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+        return true;
+    }
+
     private void loadTheming() {
         Theming.setContext(mContext);
 
         //Load Theme From Save if Any
-        Theming.setThemeID(1);
+        if (Theming.getThemeID() >= 1) {
+            //Do nothing
+        } else {
+            Theming.setThemeID(1);
+        }
 
         //Set Theme According to Loaded Theme
         switch (Theming.getThemeID()) {
@@ -148,6 +204,36 @@ public class MainActivity extends AppCompatActivity {
                 Theming.setSpinnerStyle(R.layout.spinner_style_dark);
                 break;
         }
+    }
+
+    private void loadTheming(int theme) {
+        Theming.setContext(mContext);
+
+        //Load Theme From Save if Any
+        Theming.setThemeID(theme);
+
+        //Set Theme According to Loaded Theme
+        switch (Theming.getThemeID()) {
+            case 1:
+                Theming.setFontColor(getResources().getColor(R.color.text));
+                Theming.setColoredFontColor(getResources().getColor(R.color.textColored));
+                Theming.setBackground(R.drawable.paper_bg);
+                Theming.setSpinnerStyle(R.layout.spinner_style);
+                break;
+            case 2:
+                Theming.setFontColor(getResources().getColor(R.color.textDarkTheme));
+                Theming.setColoredFontColor(getResources().getColor(R.color.textColoredDarkTheme));
+                Theming.setBackground(R.drawable.paper_bg_dark);
+                Theming.setSpinnerStyle(R.layout.spinner_style_dark);
+                break;
+        }
+    }
+
+    private void updateTheme() {
+        ConstraintLayout mainactivity_layout = findViewById(R.id.mainactivity_layout);
+        mainactivity_layout.setBackgroundResource(Theming.getBackground());
+        TextView txtVersion = findViewById(R.id.txtVersion);
+        txtVersion.setTextColor(Theming.getColoredFontColor());
     }
 
     private void saveLastSheet(String selected) {
