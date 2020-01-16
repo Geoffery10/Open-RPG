@@ -48,7 +48,7 @@ public class OLInventoryActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-        Toast toast = Toast.makeText(this, "Feature Not Avaliable Yet", Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(this, "This feature is being migrated to a new area...", Toast.LENGTH_SHORT);
         switch(item.getItemId()) {
             case R.id.addItem:
                 toast.show();

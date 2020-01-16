@@ -774,6 +774,11 @@ public class openlegend
         return items.get(index);
     }
 
+    public void setItemAt(int index, OLItem item)
+    {
+        this.items.set(index, item);
+    }
+
     public void setItems(ArrayList<OLItem> items) {
         this.items = items;
     }
