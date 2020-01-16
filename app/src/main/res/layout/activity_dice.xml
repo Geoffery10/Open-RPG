@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/diceView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/paper_bg"
@@ -33,6 +34,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
+                android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:enabled="true"
                 android:inputType="number"
@@ -65,6 +67,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
+                android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:enabled="true"
                 android:inputType="number"
@@ -101,12 +104,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
+                android:layout_marginRight="24dp"
                 android:text="Total: "
                 android:textAlignment="center"
-                android:textIsSelectable="true"
                 android:textColor="@color/colorPrimaryDark"
+                android:textIsSelectable="true"
                 android:textSize="36sp" />
 
             <TextView

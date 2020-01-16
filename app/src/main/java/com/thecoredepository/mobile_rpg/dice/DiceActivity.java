@@ -7,9 +7,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.Theming;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -34,6 +37,22 @@ public class DiceActivity extends AppCompatActivity {
         valueOfDie = valueOfDie(diceIn);
 
         Button btnRoll = findViewById(R.id.btnRoll);
+
+        LinearLayout diceView = findViewById(R.id.diceView);
+        diceView.setBackgroundResource(Theming.getBackground());
+        TextView txtAdv = findViewById(R.id.txtAdv);
+        txtAdv.setTextColor(Theming.getFontColor());
+        TextView txtDis = findViewById(R.id.txtDis);
+        txtDis.setTextColor(Theming.getFontColor());
+        TextView txtRolls = findViewById(R.id.txtRolls);
+        txtRolls.setTextColor(Theming.getColoredFontColor());
+        TextView txtTotal = findViewById(R.id.txtTotal);
+        txtTotal.setTextColor(Theming.getColoredFontColor());
+        EditText editAdv = findViewById(R.id.editAdv);
+        editAdv.setTextColor(Theming.getColoredFontColor());
+        EditText editDis = findViewById(R.id.editDis);
+        editDis.setTextColor(Theming.getColoredFontColor());
+
         btnRoll.setText("Roll - " + diceIn);
         btnRoll.setOnClickListener(new View.OnClickListener() {
             @Override
