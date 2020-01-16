@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="5dp"
-        android:background="#80FFFFFF"
         android:orientation="vertical"
         android:visibility="visible">
 
@@ -42,11 +41,11 @@
                     android:id="@+id/lblDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryLight"
                     android:clickable="false"
                     android:gravity="center"
                     android:text="Description"
                     android:textColor="@color/textAccent"
-                    android:backgroundTint="@color/colorPrimaryLight"
                     android:textSize="14dp" />
 
                 <TextView
@@ -60,11 +59,11 @@
                     android:id="@+id/lblPrerequisites"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryLight"
                     android:clickable="false"
                     android:gravity="center"
                     android:text="Prerequisites"
                     android:textColor="@color/textAccent"
-                    android:backgroundTint="@color/colorPrimaryLight"
                     android:textSize="14dp" />
 
                 <TextView
@@ -81,11 +80,11 @@
                     android:id="@+id/lblFeatEffect"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryLight"
                     android:clickable="false"
                     android:gravity="center"
                     android:text="Effect"
                     android:textColor="@color/textAccent"
-                    android:backgroundTint="@color/colorPrimaryLight"
                     android:textSize="14dp" />
 
                 <TextView
@@ -106,11 +105,11 @@
                         android:id="@+id/lblSpecial"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorPrimaryLight"
                         android:clickable="false"
                         android:gravity="center"
                         android:text="Special"
                         android:textColor="@color/textAccent"
-                        android:backgroundTint="@color/colorPrimaryLight"
                         android:textSize="14dp" />
 
                     <TextView
@@ -141,24 +140,24 @@
                 <Spinner
                     android:id="@+id/spinnerAddRemoveUpgradeFeat"
                     style="@style/Platform.Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:backgroundTint="@color/colorAccent"
                     android:foregroundTint="@color/colorPrimaryDark"
                     android:popupBackground="@drawable/paper_bg"
                     android:spinnerMode="dialog"
-                    android:textSize="34sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:textSize="34sp" />
 
                 <Spinner
                     android:id="@+id/spinnerAddRemoveUpgradeFeat2"
                     style="@style/Platform.Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:backgroundTint="@color/colorAccent"
                     android:foregroundTint="@color/colorPrimaryDark"
                     android:popupBackground="@drawable/paper_bg"
                     android:spinnerMode="dialog"
-                    android:textSize="34sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:textSize="34sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -170,22 +169,22 @@
                         android:id="@+id/btnAddRemove"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorPrimaryLight"
                         android:gravity="center"
                         android:text="Add/Remove"
-                        android:layout_weight="1"
                         android:textColor="@color/textAccent"
-                        android:backgroundTint="@color/colorPrimaryLight"
                         android:textSize="14dp" />
 
                     <Button
                         android:id="@+id/btnUpgrade"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorPrimaryLight"
                         android:gravity="center"
                         android:text="Upgrade"
-                        android:layout_weight="1"
                         android:textColor="@color/textAccent"
-                        android:backgroundTint="@color/colorPrimaryLight"
                         android:textSize="14dp" />
 
                 </LinearLayout>

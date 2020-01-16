@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.Theming;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 
@@ -23,7 +24,10 @@ public class OLBanesBoonsActivity extends AppCompatActivity
         Intent intent = getIntent();
         String selected = intent.getExtras().getString("selected"); //Banes or Boons
 
+        LinearLayout banesboonsView = findViewById(R.id.banesboonsView);
+        banesboonsView.setBackgroundResource(Theming.getBackground());
         TextView txtBanesBoonsTitle = findViewById(R.id.txtBanesBoonsTitle);
+        txtBanesBoonsTitle.setTextColor(Theming.getColoredFontColor());
         txtBanesBoonsTitle.setText(selected);
 
         //Display Banes/Boons

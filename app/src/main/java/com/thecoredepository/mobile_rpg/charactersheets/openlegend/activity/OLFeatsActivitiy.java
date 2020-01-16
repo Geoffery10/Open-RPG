@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.Theming;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLFeatAdapter;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
@@ -31,6 +33,10 @@ public class OLFeatsActivitiy extends AppCompatActivity
         Intent intent = getIntent();
         //String selected = intent.getExtras().getString("selected");
         RecyclerView recyclerView = findViewById(R.id.feat_view);
+        LinearLayout featsView = findViewById(R.id.featsView);
+        featsView.setBackgroundResource(Theming.getBackground());
+        TextView txtFeatHeader = findViewById(R.id.txtFeatsHeader);
+        txtFeatHeader.setTextColor(Theming.getColoredFontColor());
         add = false;
         remove = false;
         generateRecyclerView(add, remove, showAll, recyclerView);

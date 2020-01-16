@@ -17,6 +17,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.Theming;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLFeatsActivitiy;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
@@ -71,6 +72,11 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         holder.spinnerAddRemoveUpgradeFeat.setVisibility(View.GONE);
         holder.spinnerAddRemoveUpgradeFeat2.setVisibility(View.GONE);
         holder.editAddRemoveUpgradeFeat.setVisibility(View.GONE);
+
+        holder.txtDescription.setTextColor(Theming.getFontColor());
+        holder.txtFeatEffect.setTextColor(Theming.getFontColor());
+        holder.txtPrerequisites.setTextColor(Theming.getFontColor());
+        holder.txtSpecial.setTextColor(Theming.getFontColor());
 
         if (add == false && showAll == false)
         {

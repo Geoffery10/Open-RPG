@@ -4,14 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.Theming;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLFeatAdapter;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLInventoryAdapter;
 
@@ -27,7 +30,11 @@ public class OLInventoryActivity extends AppCompatActivity
         setContentView(R.layout.activity_ol_inventory);
         Intent intent = getIntent();
 
+        LinearLayout inventoryView = findViewById(R.id.inventoryView);
+        inventoryView.setBackgroundResource(Theming.getBackground());
+
         TextView txtWealth = findViewById(R.id.txtWealth);
+        txtWealth.setTextColor(Theming.getColoredFontColor());
         RecyclerView recyclerView = findViewById(R.id.item_view);
 
         txtWealth.setText("Wealth Level: " + player.getWealth());

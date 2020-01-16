@@ -15,6 +15,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.Theming;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLItem;
 
@@ -56,6 +57,10 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
         holder.editDescription.setVisibility(View.GONE);
         holder.txtQuantity.setVisibility(View.VISIBLE);
         holder.editQuantity.setVisibility(View.GONE);
+
+        holder.txtTitle.setTextColor(Theming.getFontColor());
+        holder.txtDescription.setTextColor(Theming.getFontColor());
+        holder.txtQuantity.setTextColor(Theming.getFontColor());
 
         setTypeImage(holder, item);
 

@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:id="@+id/featsView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/paper_bg">
+    android:background="@drawable/paper_bg"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/txtFeatsHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Feats"
         android:layout_margin="10dp"
-        android:textSize="30sp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="Feats"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/feat_view"
