@@ -35,13 +35,22 @@ public class AboutActivity  extends AppCompatActivity
         txtAbout_01.setTextColor(Theming.getFontColor());
 
         ImageView imgGeoffery = findViewById(R.id.imgGeoffery);
-        try {
+        ImageView imgConnor = findViewById(R.id.imgConnor);
+        TextView txtGeofferyName = findViewById(R.id.txtGeofferyName);
+        txtGeofferyName.setTextColor(Theming.getFontColor());
+        TextView txtConnorName = findViewById(R.id.txtConnorName);
+        txtConnorName.setTextColor(Theming.getFontColor());
+        TextView txtDevs = findViewById(R.id.txtDevs);
+        txtDevs.setTextColor(Theming.getColoredFontColor());
+
+
+        /*try {
             Bitmap bitmap = BitmapFactory.decodeStream((InputStream)new URL("").getContent());
             imgGeoffery.setImageBitmap(bitmap);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }
