@@ -264,7 +264,6 @@ public class MainActivity extends AppCompatActivity {
                 Theming.setSpinnerStyle(R.layout.spinner_style_dark);
                 break;
         }
-        saveTheme(theme);
     }
 
     private void updateTheme() {
