@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.Theming;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
 import com.thecoredepository.mobile_rpg.dice.DiceActivity;
 
@@ -43,9 +44,13 @@ public class OLSheetActivity extends AppCompatActivity {
 
     private void initializationOfElement() {
         //Initialization of Elements
+        LinearLayout sheetView = findViewById(R.id.sheetView);
+        sheetView.setBackgroundResource(Theming.getBackground());
         TextView txtName = findViewById(R.id.txtCharName);
         txtName.setText(player.getCharName());
+        txtName.setTextColor(Theming.getFontColor());
         TextView txtNickName = findViewById(R.id.txtNickName);
+        txtNickName.setTextColor(Theming.getFontColor());
         if (!(player.getNickname().equals(""))) {
             txtNickName.setText("(" + player.getNickname() + ")");
             txtNickName.setVisibility(View.VISIBLE);
@@ -54,85 +59,113 @@ public class OLSheetActivity extends AppCompatActivity {
             txtNickName.setVisibility(View.GONE);
         }
         TextView txtLvl = findViewById(R.id.txtLvl);
+        txtLvl.setTextColor(Theming.getFontColor());
         txtLvl.setText("Level: " + (player.getMajorLvl()) + " (" + (player.getMinorLvl()) + ")");
         TextView txtDeity = findViewById(R.id.txtDeity);
+        txtDeity.setTextColor(Theming.getFontColor());
         txtDeity.setText(player.getDeity());
         TextView txtLang = findViewById(R.id.txtLang);
+        txtLang.setTextColor(Theming.getFontColor());
         String lang = "";
         lang = getLangs(lang);
         txtLang.setText("Languages: " + (lang));
         TextView txtBio = findViewById(R.id.txtBio);
+        txtBio.setTextColor(Theming.getFontColor());
         txtBio.setText("Bio: " + (player.getBio()));
         TextView txtAttributes = findViewById(R.id.txtAttributes);
+        txtAttributes.setTextColor(Theming.getFontColor());
         txtAttributes.setText("Attributes: " + player.getGetAttributePointsUsed() +"/"+ player.getAttributePointsAvailable());
         TextView txtToughness = findViewById(R.id.txtToughness);
         txtToughness.setText("Toughness: " + player.getToughness());
+        txtToughness.setTextColor(Theming.getFontColor());
         TextView txtGuard = findViewById(R.id.txtGuard);
+        txtGuard.setTextColor(Theming.getFontColor());
         txtGuard.setText("Guard: " + (player.getGuard()));
         TextView txtResolve = findViewById(R.id.txtResolve);
+        txtResolve.setTextColor(Theming.getFontColor());
         txtResolve.setText("Resolve: " + player.getResolve());
         TextView txtHitpoints = findViewById(R.id.txtHitpoints);
+        txtHitpoints.setTextColor(Theming.getFontColor());
         if (player.getLethalDamage() > 0) {
             txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()) + "  (L:"+player.getLethalDamage()+")");
         } else {
             txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
         }
         TextView txtSpeed = findViewById(R.id.txtSpeed);
+        txtSpeed.setTextColor(Theming.getFontColor());
         txtSpeed.setText("Speed: " + (player.getSpeed()));
 
         //Attributes
         TextView txtAgility = findViewById(R.id.txtAgility);
+        txtAgility.setTextColor(Theming.getFontColor());
         LinearLayout LLAgility = findViewById(R.id.LLAgility);
         Button btnAgility = findViewById(R.id.btnAgility);
         TextView txtFortitude = findViewById(R.id.txtFortitude);
+        txtFortitude.setTextColor(Theming.getFontColor());
         LinearLayout LLFortitude = findViewById(R.id.LLFortitude);
         Button btnFortitude = findViewById(R.id.btnFortitude);
         TextView txtMight = findViewById(R.id.txtMight);
+        txtMight.setTextColor(Theming.getFontColor());
         LinearLayout LLMight = findViewById(R.id.LLMight);
         Button btnMight = findViewById(R.id.btnMight);
         TextView txtLearning = findViewById(R.id.txtLearning);
+        txtLearning.setTextColor(Theming.getFontColor());
         LinearLayout LLLearning = findViewById(R.id.LLLearning);
         Button btnLearning = findViewById(R.id.btnLearning);
         TextView txtLogic = findViewById(R.id.txtLogic);
+        txtLogic.setTextColor(Theming.getFontColor());
         LinearLayout LLLogic = findViewById(R.id.LLLogic);
         Button btnLogic = findViewById(R.id.btnLogic);
         TextView txtPerception = findViewById(R.id.txtPerception);
+        txtPerception.setTextColor(Theming.getFontColor());
         LinearLayout LLPerception = findViewById(R.id.LLPerception);
         Button btnPerception = findViewById(R.id.btnPerception);
         TextView txtWill = findViewById(R.id.txtWill);
+        txtWill.setTextColor(Theming.getFontColor());
         LinearLayout LLWill = findViewById(R.id.LLWill);
         Button btnWill = findViewById(R.id.btnWill);
         TextView txtDeception = findViewById(R.id.txtDeception);
+        txtDeception.setTextColor(Theming.getFontColor());
         LinearLayout LLDeception = findViewById(R.id.LLDeception);
         Button btnDeception = findViewById(R.id.btnDeception);
         TextView txtPersuasion = findViewById(R.id.txtPersuasion);
+        txtPersuasion.setTextColor(Theming.getFontColor());
         LinearLayout LLPersuasion = findViewById(R.id.LLPersuasion);
         Button btnPersuasion = findViewById(R.id.btnPersuasion);
         TextView txtPresence = findViewById(R.id.txtPresence);
+        txtPresence.setTextColor(Theming.getFontColor());
         LinearLayout LLPresence = findViewById(R.id.LLPresence);
         Button btnPresence = findViewById(R.id.btnPresence);
         TextView txtAlteration = findViewById(R.id.txtAlteration);
+        txtAlteration.setTextColor(Theming.getFontColor());
         LinearLayout LLAlteration = findViewById(R.id.LLAlteration);
         Button btnAlteration = findViewById(R.id.btnAlteration);
         TextView txtCreation = findViewById(R.id.txtCreation);
+        txtCreation.setTextColor(Theming.getFontColor());
         LinearLayout LLCreation = findViewById(R.id.LLCreation);
         Button btnCreation = findViewById(R.id.btnCreation);
         TextView txtEnergy = findViewById(R.id.txtEnergy);
+        txtEnergy.setTextColor(Theming.getFontColor());
         LinearLayout LLEnergy = findViewById(R.id.LLEnergy);
         Button btnEnergy = findViewById(R.id.btnEnergy);
         TextView txtEntropy = findViewById(R.id.txtEntropy);
+        txtEnergy.setTextColor(Theming.getFontColor());
         LinearLayout LLEntropy = findViewById(R.id.LLEntropy);
         Button btnEntropy = findViewById(R.id.btnEntropy);
         TextView txtInfluence = findViewById(R.id.txtInfluence);
+        txtInfluence.setTextColor(Theming.getFontColor());
         LinearLayout LLInfluence = findViewById(R.id.LLInfluence);
         Button btnInfluence = findViewById(R.id.btnInfluence);
         TextView txtMovement = findViewById(R.id.txtMovement);
+        txtMovement.setTextColor(Theming.getFontColor());
         LinearLayout LLMovement = findViewById(R.id.LLMovement);
         Button btnMovement = findViewById(R.id.btnMovement);
         TextView txtPrescience = findViewById(R.id.txtPrescience);
+        txtPrescience.setTextColor(Theming.getFontColor());
         LinearLayout LLPrescience = findViewById(R.id.LLPrescience);
         Button btnPrescience = findViewById(R.id.btnPrescience);
         TextView txtProtection = findViewById(R.id.txtProtection);
+        txtProtection.setTextColor(Theming.getFontColor());
         LinearLayout LLProtection = findViewById(R.id.LLProtection);
         Button btnProtection = findViewById(R.id.btnProtection);
 
@@ -140,10 +173,6 @@ public class OLSheetActivity extends AppCompatActivity {
         Button btnBanes = findViewById(R.id.btnBanes);
         Button btnBoons = findViewById(R.id.btnBoons);
         Button btnFeats = findViewById(R.id.btnFeats);
-
-        //THIS IS BEING REPLACED BY FEATS MENU
-        TextView txtFeats = findViewById(R.id.txtFeats);
-        txtFeats.setVisibility(View.GONE);
 
         //Button Clicks
         buttonClicks(btnBanes, btnBoons, btnInventory, btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection, btnFeats);
