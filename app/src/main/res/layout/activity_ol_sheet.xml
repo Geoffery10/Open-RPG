@@ -282,6 +282,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -309,6 +311,8 @@
                         android:id="@+id/btnFortitude"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:layout_weight="0"
                         android:text="1d6" />
                 </LinearLayout>
@@ -338,6 +342,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -366,6 +372,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -394,6 +402,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -422,6 +432,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -450,6 +462,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -478,6 +492,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -506,6 +522,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -534,6 +552,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -562,6 +582,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -590,6 +612,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -618,6 +642,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -646,6 +672,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -674,6 +702,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -702,6 +732,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -730,6 +762,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -758,6 +792,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="1d6" />
                 </LinearLayout>
 
@@ -775,6 +811,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
                         android:layout_weight="1"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="Banes" />
 
                     <Button
@@ -783,6 +821,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
                         android:layout_weight="1"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/textAccent"
                         android:text="Boons" />
                 </LinearLayout>
 
@@ -793,6 +833,8 @@
                     android:layout_marginHorizontal="5dp"
                     android:layout_marginTop="12dp"
                     android:padding="18dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/textAccent"
                     android:text="Inventory" />
 
                 <Button
@@ -802,20 +844,10 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginHorizontal="5dp"
                     android:padding="18dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/textAccent"
                     android:layout_marginBottom="32dp"
                     android:text="Feats" />
-
-                <TextView
-                    android:id="@+id/txtFeats"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="5dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="32dp"
-                    android:padding="10dp"
-                    android:text="Feats"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
 
             </LinearLayout>
 
