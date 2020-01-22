@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -37,6 +38,7 @@ import com.bumptech.glide.load.resource.bitmap.FitCenter;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.Theming;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
 import com.thecoredepository.mobile_rpg.dice.DiceActivity;
 
 import java.io.File;
@@ -108,6 +110,8 @@ public class OLSheetActivity extends AppCompatActivity {
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .transform(new FitCenter(), new CircleCrop())
                     .into(imgTopSheet);
+            OLSavingSheets saveData = new OLSavingSheets();
+            saveData.saveImage(data.getData());
         }
     }
 
@@ -249,6 +253,17 @@ public class OLSheetActivity extends AppCompatActivity {
         Button btnBanes = findViewById(R.id.btnBanes);
         Button btnBoons = findViewById(R.id.btnBoons);
         Button btnFeats = findViewById(R.id.btnFeats);
+
+        /*if (player.getImageUri() != null) {
+            Glide.with(this)
+                    .load(player.getImageUri())
+                    .placeholder(R.drawable.banner_ol)
+                    .error(R.drawable.banner_ol)
+                    .skipMemoryCache(true)
+                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                    .transform(new FitCenter(), new CircleCrop())
+                    .into(imgTopSheet);
+        }*/
 
         //Button Clicks
         buttonClicks(btnBanes, btnBoons, btnInventory, btnAgility, btnFortitude, btnMight,
@@ -674,32 +689,7 @@ public class OLSheetActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                final Dialog imageDialog = new Dialog(imgTopSheet.getContext());
-                imageDialog.setContentView(R.layout.popup_large_image);
-                CardView popup_image = imageDialog.findViewById(R.id.popup_image);
-                popup_image.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
-                ImageView imgCharLarge = imageDialog.findViewById(R.id.imgCharLarge);
-                Button btnEditImage = imageDialog.findViewById(R.id.btnEditImage);
-                Glide.with(imgTopSheet.getContext())
-                        .load(imgTopSheet.getDrawable())
-                        .placeholder(R.drawable.banner_ol)
-                        .error(R.drawable.banner_ol)
-                        .skipMemoryCache(true)
-                        .diskCacheStrategy(DiskCacheStrategy.NONE)
-                        .transform(new FitCenter())
-                        .into(imgCharLarge);
-
-                btnEditImage.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v)
-                    {
-                        setCharacterImage();
-                        imageDialog.dismiss();
-                    }
-                });
-
-                imageDialog.show();
-                //setCharacterImage();
+                popup_large_image(imgTopSheet);
             }
         });
 
@@ -901,6 +891,34 @@ public class OLSheetActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
+    }
+
+    private void popup_large_image(ImageView imgTopSheet) {
+        final Dialog imageDialog = new Dialog(imgTopSheet.getContext());
+        imageDialog.setContentView(R.layout.popup_large_image);
+        CardView popup_image = imageDialog.findViewById(R.id.popup_image);
+        popup_image.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
+        ImageView imgCharLarge = imageDialog.findViewById(R.id.imgCharLarge);
+        Button btnEditImage = imageDialog.findViewById(R.id.btnEditImage);
+        Glide.with(imgTopSheet.getContext())
+                .load(imgTopSheet.getDrawable())
+                .placeholder(R.drawable.banner_ol)
+                .error(R.drawable.banner_ol)
+                .skipMemoryCache(true)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .transform(new FitCenter())
+                .into(imgCharLarge);
+
+        btnEditImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                setCharacterImage();
+                imageDialog.dismiss();
+            }
+        });
+
+        imageDialog.show();
     }
 
     @Override

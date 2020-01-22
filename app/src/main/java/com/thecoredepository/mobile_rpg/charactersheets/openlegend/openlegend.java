@@ -5,6 +5,7 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 // be saved often reduce the chance of lost data.
 */
 
+import android.net.Uri;
 import android.util.Log;
 
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBanes;
@@ -107,6 +108,9 @@ public class openlegend
     public static ArrayList<openlegend> sheets = new ArrayList<openlegend>(); //Sheets
     public static ArrayList<String> sheetList = new ArrayList<String>(); //List of Sheet Names
     public static openlegend player = new openlegend(); //Current Sheets
+
+    //Image
+    private String imagePath = null;
 
     //Getters and Setters
 
@@ -1143,6 +1147,14 @@ public class openlegend
         setHitpoints();
         setDamageTaken(0);
         setLevel();
+    }
+
+    public String getImageUri() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     public void generateRandomCharacter()

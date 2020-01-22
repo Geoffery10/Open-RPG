@@ -14,6 +14,12 @@
         android:orientation="vertical"
         android:layout_margin="5dp">
 
+        <ImageView
+            android:id="@+id/imgCharLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center" />
+
         <Button
             android:id="@+id/btnEditImage"
             android:layout_width="match_parent"
@@ -22,12 +28,6 @@
             android:background="@color/colorPrimary"
             android:text="Change Image"
             android:textColor="@color/textAccent" />
-
-        <ImageView
-            android:id="@+id/imgCharLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="center" />
 
     </LinearLayout>
 

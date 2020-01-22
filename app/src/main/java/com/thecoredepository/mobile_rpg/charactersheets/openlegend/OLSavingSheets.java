@@ -2,14 +2,26 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.Uri;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.lang.reflect.Type;
+import java.net.URI;
 import java.util.ArrayList;
 
 import static android.content.Context.MODE_PRIVATE;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
 
@@ -54,4 +66,39 @@ public class OLSavingSheets
             openlegend.HARDCODEDSHEETS();
         }
     }
+
+    public void saveImage(Uri sourceuri)
+    {
+        String sourceFilename= sourceuri.getPath();
+        String destinationFilename = android.os.Environment.getExternalStorageDirectory().getPath()+File.separatorChar+"openrpg/"+player.getCharName()+".png";
+        Log.d("Saving Image", "Saving at: " + destinationFilename);
+        player.setImagePath(destinationFilename);
+
+        BufferedInputStream bis = null;
+        BufferedOutputStream bos = null;
+
+        try {
+            bis = new BufferedInputStream(new FileInputStream(sourceFilename));
+            bos = new BufferedOutputStream(new FileOutputStream(destinationFilename, false));
+            byte[] buf = new byte[1024];
+            bis.read(buf);
+            do {
+                bos.write(buf);
+            } while(bis.read(buf) != -1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (bis != null) bis.close();
+                if (bos != null) bos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /*public String loadImage() {
+
+        String destinationFilename = android.os.Environment.getExternalStorageDirectory().getPath() + File.separatorChar + "/openrpg/" + player.getCharName() + ".png";
+    }*/
 }
