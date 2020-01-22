@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -61,8 +62,6 @@ public class OLSheetActivity extends AppCompatActivity {
         player = player.loadCharacterSheet(selected);
         initializationOfElement();
         showHideBio();
-
-        //setCharacterImage();
     }
 
     private void setCharacterImage() {
@@ -114,6 +113,7 @@ public class OLSheetActivity extends AppCompatActivity {
 
     private void initializationOfElement() {
         //Initialization of Elements
+        ImageView imgTopSheet = findViewById(R.id.imgTopSheet);
         CardView playerInfoCard = findViewById(R.id.playerInfoCard);
         playerInfoCard.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
         CardView playerStatsCard = findViewById(R.id.playerStatsCard);
@@ -251,7 +251,10 @@ public class OLSheetActivity extends AppCompatActivity {
         Button btnFeats = findViewById(R.id.btnFeats);
 
         //Button Clicks
-        buttonClicks(btnBanes, btnBoons, btnInventory, btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection, btnFeats);
+        buttonClicks(btnBanes, btnBoons, btnInventory, btnAgility, btnFortitude, btnMight,
+                btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion,
+                btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence,
+                btnMovement, btnPrescience, btnProtection, btnFeats, imgTopSheet);
 
         //Element Visibility and Values
         setAttributes(txtAgility, LLAgility, btnAgility, txtFortitude, LLFortitude, btnFortitude,
@@ -660,7 +663,46 @@ public class OLSheetActivity extends AppCompatActivity {
         }
     }
 
-    private void buttonClicks(Button btnBanes, Button btnBoons, Button btnInventory, Button btnAgility, Button btnFortitude, Button btnMight, Button btnLearning, Button btnLogic, Button btnPerception, Button btnWill, Button btnDeception, Button btnPersuasion, Button btnPresence, Button btnAlteration, Button btnCreation, Button btnEnergy, Button btnEntropy, Button btnInfluence, Button btnMovement, Button btnPrescience, Button btnProtection, Button btnFeats) {
+    private void buttonClicks(Button btnBanes, Button btnBoons, Button btnInventory, Button btnAgility,
+                              Button btnFortitude, Button btnMight, Button btnLearning, Button btnLogic,
+                              Button btnPerception, Button btnWill, Button btnDeception, Button btnPersuasion,
+                              Button btnPresence, Button btnAlteration, Button btnCreation, Button btnEnergy,
+                              Button btnEntropy, Button btnInfluence, Button btnMovement, Button btnPrescience,
+                              Button btnProtection, Button btnFeats, final ImageView imgTopSheet) {
+
+        imgTopSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                final Dialog imageDialog = new Dialog(imgTopSheet.getContext());
+                imageDialog.setContentView(R.layout.popup_large_image);
+                CardView popup_image = imageDialog.findViewById(R.id.popup_image);
+                popup_image.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
+                ImageView imgCharLarge = imageDialog.findViewById(R.id.imgCharLarge);
+                Button btnEditImage = imageDialog.findViewById(R.id.btnEditImage);
+                Glide.with(imgTopSheet.getContext())
+                        .load(imgTopSheet.getDrawable())
+                        .placeholder(R.drawable.banner_ol)
+                        .error(R.drawable.banner_ol)
+                        .skipMemoryCache(true)
+                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .transform(new FitCenter())
+                        .into(imgCharLarge);
+
+                btnEditImage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        setCharacterImage();
+                        imageDialog.dismiss();
+                    }
+                });
+
+                imageDialog.show();
+                //setCharacterImage();
+            }
+        });
+
         btnBanes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
