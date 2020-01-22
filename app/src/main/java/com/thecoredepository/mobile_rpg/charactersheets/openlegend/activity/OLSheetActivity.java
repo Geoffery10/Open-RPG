@@ -49,6 +49,8 @@ public class OLSheetActivity extends AppCompatActivity {
         //Initialization of Elements
         CardView playerInfoCard = findViewById(R.id.playerInfoCard);
         playerInfoCard.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
+        CardView playerStatsCard = findViewById(R.id.playerStatsCard);
+        playerStatsCard.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
         LinearLayout sheetView = findViewById(R.id.sheetView);
         sheetView.setBackgroundResource(Theming.getBackground());
         TextView txtName = findViewById(R.id.txtCharName);

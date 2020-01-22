@@ -306,608 +306,618 @@
 
             </androidx.cardview.widget.CardView>
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/playerStatsCard"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
-                android:orientation="vertical"
-                tools:visibility="visible">
+                android:layout_margin="10dp">
 
                 <LinearLayout
-                    android:id="@+id/LLAgility"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:orientation="vertical"
+                    tools:visibility="visible">
 
-                    <TextView
-                        android:id="@+id/txtAgility"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Agility:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
-
-                    <Button
-                        android:id="@+id/btnAgility"
+                    <LinearLayout
+                        android:id="@+id/LLAgility"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLFortitude"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtAgility"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Agility:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtFortitude"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Fortitude:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnAgility"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnFortitude"
+                    <LinearLayout
+                        android:id="@+id/LLFortitude"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLMight"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtFortitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Fortitude:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtMight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Might:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnFortitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnMight"
+                    <LinearLayout
+                        android:id="@+id/LLMight"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLLearning"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtMight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Might:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtLearning"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Learning:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnMight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnLearning"
+                    <LinearLayout
+                        android:id="@+id/LLLearning"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLLogic"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtLearning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Learning:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtLogic"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Logic:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnLearning"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnLogic"
+                    <LinearLayout
+                        android:id="@+id/LLLogic"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLPerception"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtLogic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Logic:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtPerception"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Perception:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnLogic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnPerception"
+                    <LinearLayout
+                        android:id="@+id/LLPerception"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLWill"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtPerception"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Perception:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtWill"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Will:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnPerception"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnWill"
+                    <LinearLayout
+                        android:id="@+id/LLWill"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLDeception"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtWill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Will:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtDeception"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Deception:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnWill"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnDeception"
+                    <LinearLayout
+                        android:id="@+id/LLDeception"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLPersuasion"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtDeception"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Deception:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtPersuasion"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Persuasion:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnDeception"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnPersuasion"
+                    <LinearLayout
+                        android:id="@+id/LLPersuasion"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLPresence"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtPersuasion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Persuasion:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtPresence"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Presence:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnPersuasion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnPresence"
+                    <LinearLayout
+                        android:id="@+id/LLPresence"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLAlteration"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtPresence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Presence:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtAlteration"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Alteration:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnPresence"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnAlteration"
+                    <LinearLayout
+                        android:id="@+id/LLAlteration"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLCreation"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtAlteration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Alteration:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtCreation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Creation:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnAlteration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnCreation"
+                    <LinearLayout
+                        android:id="@+id/LLCreation"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLEnergy"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtCreation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Creation:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtEnergy"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Energy:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnCreation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnEnergy"
+                    <LinearLayout
+                        android:id="@+id/LLEnergy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLEntropy"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtEnergy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Energy:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtEntropy"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Entropy:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnEnergy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnEntropy"
+                    <LinearLayout
+                        android:id="@+id/LLEntropy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLInfluence"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtEntropy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Entropy:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtInfluence"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Influence:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnEntropy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnInfluence"
+                    <LinearLayout
+                        android:id="@+id/LLInfluence"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLMovement"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtInfluence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Influence:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtMovement"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Movement:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnInfluence"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnMovement"
+                    <LinearLayout
+                        android:id="@+id/LLMovement"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLPrescience"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtMovement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Movement:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtPrescience"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Prescience:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnMovement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnPrescience"
+                    <LinearLayout
+                        android:id="@+id/LLPrescience"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/LLProtection"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtPrescience"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Prescience:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/txtProtection"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="0"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="Protection:"
-                        android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textSize="24sp" />
+                        <Button
+                            android:id="@+id/btnPrescience"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
-                    <Button
-                        android:id="@+id/btnProtection"
+                    <LinearLayout
+                        android:id="@+id/LLProtection"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:text="1d6"
-                        android:textColor="@color/textAccent" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="12dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txtProtection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Protection:"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp" />
 
+                        <Button
+                            android:id="@+id/btnProtection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="1d6"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+
+                        <Button
+                            android:id="@+id/btnBanes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="Banes"
+                            android:textColor="@color/textAccent" />
+
+                        <Button
+                            android:id="@+id/btnBoons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="Boons"
+                            android:textColor="@color/textAccent" />
+                    </LinearLayout>
 
                     <Button
-                        android:id="@+id/btnBanes"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/btnInventory"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
-                        android:layout_weight="1"
+                        android:layout_marginTop="12dp"
                         android:backgroundTint="@color/colorPrimary"
-                        android:text="Banes"
+                        android:padding="18dp"
+                        android:text="Inventory"
                         android:textColor="@color/textAccent" />
 
                     <Button
-                        android:id="@+id/btnBoons"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/btnFeats"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
-                        android:layout_weight="1"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="32dp"
                         android:backgroundTint="@color/colorPrimary"
-                        android:text="Boons"
+                        android:padding="18dp"
+                        android:text="Feats"
                         android:textColor="@color/textAccent" />
+
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/btnInventory"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="5dp"
-                    android:layout_marginTop="12dp"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:padding="18dp"
-                    android:text="Inventory"
-                    android:textColor="@color/textAccent" />
+            </androidx.cardview.widget.CardView>
 
-                <Button
-                    android:id="@+id/btnFeats"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="5dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="32dp"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:padding="18dp"
-                    android:text="Feats"
-                    android:textColor="@color/textAccent" />
 
-            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
