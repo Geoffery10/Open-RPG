@@ -219,21 +219,24 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Set Theme According to Loaded Theme
+        setThemeValues();
+    }
+
+    private void setThemeValues() {
         switch (Theming.getThemeID()) {
             case 1:
                 Theming.setFontColor(getResources().getColor(R.color.text));
                 Theming.setColoredFontColor(getResources().getColor(R.color.textColored));
                 Theming.setBackground(R.drawable.paper_bg);
-                Theming.setCardViewBG(R.color.cardViewBG);
+                Theming.setCardViewBG("#FFFFFF");
                 Theming.setSpinnerStyle(R.layout.spinner_style);
                 break;
             case 2:
                 Theming.setFontColor(getResources().getColor(R.color.textDarkTheme));
                 Theming.setColoredFontColor(getResources().getColor(R.color.textColoredDarkTheme));
                 Theming.setBackground(R.drawable.paper_bg_dark);
-                Theming.setCardViewBG(R.color.cardViewBGDarkTheme);
+                Theming.setCardViewBG("#141414");
                 Theming.setSpinnerStyle(R.layout.spinner_style_dark);
-                Theming.setThemeID(2);
                 break;
         }
     }
@@ -254,20 +257,7 @@ public class MainActivity extends AppCompatActivity {
         Theming.setThemeID(theme);
 
         //Set Theme According to Loaded Theme
-        switch (Theming.getThemeID()) {
-            case 1:
-                Theming.setFontColor(getResources().getColor(R.color.text));
-                Theming.setColoredFontColor(getResources().getColor(R.color.textColored));
-                Theming.setBackground(R.drawable.paper_bg);
-                Theming.setSpinnerStyle(R.layout.spinner_style);
-                break;
-            case 2:
-                Theming.setFontColor(getResources().getColor(R.color.textDarkTheme));
-                Theming.setColoredFontColor(getResources().getColor(R.color.textColoredDarkTheme));
-                Theming.setBackground(R.drawable.paper_bg_dark);
-                Theming.setSpinnerStyle(R.layout.spinner_style_dark);
-                break;
-        }
+        setThemeValues();
     }
 
     private void updateTheme() {

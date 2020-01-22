@@ -41,15 +41,14 @@ public class OLSheetActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String selected = intent.getExtras().getString("selected");
         player = player.loadCharacterSheet(selected);
-        showHideBio();
-
         initializationOfElement();
+        showHideBio();
     }
 
     private void initializationOfElement() {
         //Initialization of Elements
         CardView playerInfoCard = findViewById(R.id.playerInfoCard);
-        //playerInfoCard.setCardBackgroundColor(Theming.getCardViewBG());
+        playerInfoCard.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
         LinearLayout sheetView = findViewById(R.id.sheetView);
         sheetView.setBackgroundResource(Theming.getBackground());
         TextView txtName = findViewById(R.id.txtCharName);
