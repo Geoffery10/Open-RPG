@@ -16,10 +16,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.Theming;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
@@ -47,6 +50,16 @@ public class OLSheetActivity extends AppCompatActivity {
 
     private void initializationOfElement() {
         //Initialization of Elements
+        ImageView imgTopSheet = findViewById(R.id.imgTopSheet);
+        Glide.with(this) //1
+                .load("$photoUrl?w=360")
+                .placeholder(R.drawable.banner_ol)
+                .error(R.drawable.banner_ol)
+                .skipMemoryCache(true) //2
+                .diskCacheStrategy(DiskCacheStrategy.NONE) //3
+                .into(imgTopSheet);
+
+
         CardView playerInfoCard = findViewById(R.id.playerInfoCard);
         playerInfoCard.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
         CardView playerStatsCard = findViewById(R.id.playerStatsCard);
