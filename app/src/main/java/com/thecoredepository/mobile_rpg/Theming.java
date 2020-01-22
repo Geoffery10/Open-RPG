@@ -9,6 +9,7 @@ public class Theming
     private static int fontColor;
     private static int coloredFontColor;
     private static int background;
+    private static String cardViewBG;
     private static int spinnerStyle;
 
     public static Context getContext() {
@@ -49,6 +50,14 @@ public class Theming
 
     public static void setBackground(int background) {
         Theming.background = background;
+    }
+
+    public static String getCardViewBG() {
+        return cardViewBG;
+    }
+
+    public static void setCardViewBG(String cardViewBG) {
+        Theming.cardViewBG = cardViewBG;
     }
 
     public static int getSpinnerStyle() {

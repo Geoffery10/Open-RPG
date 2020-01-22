@@ -2,6 +2,7 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -40,13 +41,18 @@ public class OLSheetActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String selected = intent.getExtras().getString("selected");
         player = player.loadCharacterSheet(selected);
-        showHideBio();
-
         initializationOfElement();
+        showHideBio();
     }
 
     private void initializationOfElement() {
         //Initialization of Elements
+        CardView playerInfoCard = findViewById(R.id.playerInfoCard);
+        playerInfoCard.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
+        CardView playerStatsCard = findViewById(R.id.playerStatsCard);
+        playerStatsCard.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
+        CardView playerButtonsCard = findViewById(R.id.playerButtonsCard);
+        playerButtonsCard.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
         LinearLayout sheetView = findViewById(R.id.sheetView);
         sheetView.setBackgroundResource(Theming.getBackground());
         TextView txtName = findViewById(R.id.txtCharName);

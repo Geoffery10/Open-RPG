@@ -11,5 +11,7 @@
     <color name="textColoredDarkTheme">#703CE2</color>
     <color name="textDarkTheme">#FFFFFF</color>
     <color name="textAccent">#FFFFFF</color>
+    <color name="cardViewBG">#FFFFFF</color>
+    <color name="cardViewBGDarkTheme">#141414</color>
     <color name="hpBar">#00796b</color>
 </resources>
