@@ -1,6 +1,7 @@
 package com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -77,6 +79,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         holder.txtFeatEffect.setTextColor(Theming.getFontColor());
         holder.txtPrerequisites.setTextColor(Theming.getFontColor());
         holder.txtSpecial.setTextColor(Theming.getFontColor());
+        holder.cardFeat.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
 
         if (add == false && showAll == false)
         {
@@ -386,9 +389,11 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
         Spinner spinnerAddRemoveUpgradeFeat2;
         Button btnAddRemove;
         Button btnUpgrade;
+        CardView cardFeat;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            cardFeat = itemView.findViewById(R.id.cardFeat);
             viewFeat = itemView.findViewById(R.id.viewFeat);
             btnFeat = itemView.findViewById(R.id.btnFeat);
             infoFeat = itemView.findViewById(R.id.infoFeat);
