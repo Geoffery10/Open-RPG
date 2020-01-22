@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Gravity;
@@ -14,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.thecoredepository.mobile_rpg.R;
@@ -85,12 +88,12 @@ public class OLSheetActivity extends AppCompatActivity {
         txtResolve.setTextColor(Theming.getFontColor());
         txtResolve.setText("Resolve: " + player.getResolve());
         TextView txtHitpoints = findViewById(R.id.txtHitpoints);
+        ProgressBar barHealth = findViewById(R.id.barHealth);
+        //barHealth.getProgressDrawable().setColorFilter(Color.RED, PorterDuff.Mode.SRC_IN);
+        TextView txtHPBar = findViewById(R.id.txtHPBar);
         txtHitpoints.setTextColor(Theming.getFontColor());
-        if (player.getLethalDamage() > 0) {
-            txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()) + "  (L:"+player.getLethalDamage()+")");
-        } else {
-            txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
-        }
+        updateHPInfo();
+
         TextView txtSpeed = findViewById(R.id.txtSpeed);
         txtSpeed.setTextColor(Theming.getFontColor());
         txtSpeed.setText("Speed: " + (player.getSpeed()));
@@ -178,7 +181,15 @@ public class OLSheetActivity extends AppCompatActivity {
         buttonClicks(btnBanes, btnBoons, btnInventory, btnAgility, btnFortitude, btnMight, btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion, btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence, btnMovement, btnPrescience, btnProtection, btnFeats);
 
         //Element Visibility and Values
-        setAttributes(txtAgility, LLAgility, btnAgility, txtFortitude, LLFortitude, btnFortitude, txtMight, LLMight, btnMight, txtLearning, LLLearning, btnLearning, txtLogic, LLLogic, btnLogic, txtPerception, LLPerception, btnPerception, txtWill, LLWill, btnWill, txtDeception, LLDeception, btnDeception, txtPersuasion, LLPersuasion, btnPersuasion, txtPresence, LLPresence, btnPresence, txtAlteration, LLAlteration, btnAlteration, txtCreation, LLCreation, btnCreation, txtEnergy, LLEnergy, btnEnergy, txtEntropy, LLEntropy, btnEntropy, txtInfluence, LLInfluence, btnInfluence, txtMovement, LLMovement, btnMovement, txtPrescience, LLPrescience, btnPrescience, txtProtection, LLProtection, btnProtection);
+        setAttributes(txtAgility, LLAgility, btnAgility, txtFortitude, LLFortitude, btnFortitude,
+                txtMight, LLMight, btnMight, txtLearning, LLLearning, btnLearning, txtLogic,
+                LLLogic, btnLogic, txtPerception, LLPerception, btnPerception, txtWill, LLWill,
+                btnWill, txtDeception, LLDeception, btnDeception, txtPersuasion, LLPersuasion,
+                btnPersuasion, txtPresence, LLPresence, btnPresence, txtAlteration, LLAlteration,
+                btnAlteration, txtCreation, LLCreation, btnCreation, txtEnergy, LLEnergy, btnEnergy,
+                txtEntropy, LLEntropy, btnEntropy, txtInfluence, LLInfluence, btnInfluence, txtMovement,
+                LLMovement, btnMovement, txtPrescience, LLPrescience, btnPrescience, txtProtection,
+                LLProtection, btnProtection, barHealth, txtHPBar);
     }
 
     private String getLangs(String lang) {
@@ -265,8 +276,7 @@ public class OLSheetActivity extends AppCompatActivity {
                 String userin = input.getText().toString();
                 int num = Integer.valueOf(userin);
                 player.setDamageTaken(num);
-                TextView txtHitpoints = findViewById(R.id.txtHitpoints);
-                txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
+                updateHPInfo();
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -296,13 +306,7 @@ public class OLSheetActivity extends AppCompatActivity {
                 String userin = input.getText().toString();
                 int num = Integer.valueOf(userin);
                 player.takeLethalDamage(num);
-                player.setHitpoints();
-                TextView txtHitpoints = findViewById(R.id.txtHitpoints);
-                if (player.getLethalDamage() > 0) {
-                    txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()) + "  (L:"+player.getLethalDamage()+")");
-                } else {
-                    txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
-                }
+                updateHPInfo();
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -332,13 +336,7 @@ public class OLSheetActivity extends AppCompatActivity {
                 String userin = input.getText().toString();
                 int num = Integer.valueOf(userin);
                 player.healLethalDamage(num);
-                player.setHitpoints();
-                TextView txtHitpoints = findViewById(R.id.txtHitpoints);
-                if (player.getLethalDamage() > 0) {
-                    txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()) + "  (L:"+player.getLethalDamage()+")");
-                } else {
-                    txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
-                }
+                updateHPInfo();
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -368,8 +366,7 @@ public class OLSheetActivity extends AppCompatActivity {
                 String userin = input.getText().toString();
                 int num = Integer.valueOf(userin);
                 player.setDamagedHealed(num);
-                TextView txtHitpoints = findViewById(R.id.txtHitpoints);
-                txtHitpoints.setText("Hitpoints: " + (player.getDamageTaken()) + "/" +(player.getHitpoints()));
+                updateHPInfo();
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -379,6 +376,19 @@ public class OLSheetActivity extends AppCompatActivity {
             }
         });
         builder.show();
+    }
+
+    private void updateHPInfo() {
+        ProgressBar barHealth = findViewById(R.id.barHealth);
+        barHealth.setMax(player.getMaxHitpoints());
+        TextView txtHPBar = findViewById(R.id.txtHPBar);
+        if (player.getLethalDamage() > 0) {
+            txtHPBar.setText((player.getDamageTaken()) + "/" + (player.getHitpoints()) + "  (L:" + player.getLethalDamage() + ")");
+            barHealth.setProgress(player.getDamageTaken());
+        } else {
+            txtHPBar.setText((player.getDamageTaken()) + "/" + (player.getHitpoints()));
+            barHealth.setProgress(player.getDamageTaken());
+        }
     }
 
     private void showHideBio() {
@@ -414,7 +424,23 @@ public class OLSheetActivity extends AppCompatActivity {
         startActivity(in);
     }
 
-    private void setAttributes(TextView txtAgility, LinearLayout LLAgility, Button btnAgility, TextView txtFortitude, LinearLayout LLFortitude, Button btnFortitude, TextView txtMight, LinearLayout LLMight, Button btnMight, TextView txtLearning, LinearLayout LLLearning, Button btnLearning, TextView txtLogic, LinearLayout LLLogic, Button btnLogic, TextView txtPerception, LinearLayout LLPerception, Button btnPerception, TextView txtWill, LinearLayout LLWill, Button btnWill, TextView txtDeception, LinearLayout LLDeception, Button btnDeception, TextView txtPersuasion, LinearLayout LLPersuasion, Button btnPersuasion, TextView txtPresence, LinearLayout LLPresence, Button btnPresence, TextView txtAlteration, LinearLayout LLAlteration, Button btnAlteration, TextView txtCreation, LinearLayout LLCreation, Button btnCreation, TextView txtEnergy, LinearLayout LLEnergy, Button btnEnergy, TextView txtEntropy, LinearLayout LLEntropy, Button btnEntropy, TextView txtInfluence, LinearLayout LLInfluence, Button btnInfluence, TextView txtMovement, LinearLayout LLMovement, Button btnMovement, TextView txtPrescience, LinearLayout LLPrescience, Button btnPrescience, TextView txtProtection, LinearLayout LLProtection, Button btnProtection) {
+    private void setAttributes(TextView txtAgility, LinearLayout LLAgility, Button btnAgility,
+                               TextView txtFortitude, LinearLayout LLFortitude, Button btnFortitude,
+                               TextView txtMight, LinearLayout LLMight, Button btnMight,
+                               TextView txtLearning, LinearLayout LLLearning, Button btnLearning,
+                               TextView txtLogic, LinearLayout LLLogic, Button btnLogic, TextView txtPerception,
+                               LinearLayout LLPerception, Button btnPerception, TextView txtWill,
+                               LinearLayout LLWill, Button btnWill, TextView txtDeception, LinearLayout LLDeception,
+                               Button btnDeception, TextView txtPersuasion, LinearLayout LLPersuasion,
+                               Button btnPersuasion, TextView txtPresence, LinearLayout LLPresence,
+                               Button btnPresence, TextView txtAlteration, LinearLayout LLAlteration,
+                               Button btnAlteration, TextView txtCreation, LinearLayout LLCreation,
+                               Button btnCreation, TextView txtEnergy, LinearLayout LLEnergy, Button btnEnergy,
+                               TextView txtEntropy, LinearLayout LLEntropy, Button btnEntropy, TextView txtInfluence,
+                               LinearLayout LLInfluence, Button btnInfluence, TextView txtMovement,
+                               LinearLayout LLMovement, Button btnMovement, TextView txtPrescience,
+                               LinearLayout LLPrescience, Button btnPrescience, TextView txtProtection,
+                               LinearLayout LLProtection, Button btnProtection, ProgressBar barHealth, TextView txtHPBar) {
         if (player.getAgility() != 0) {
             txtAgility.setText("Agility: " + player.getAgility());
             btnAgility.setText(attributeToDice(player.getAgility()));
