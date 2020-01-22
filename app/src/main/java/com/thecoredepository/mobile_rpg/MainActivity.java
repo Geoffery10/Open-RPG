@@ -235,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
                 Theming.setFontColor(getResources().getColor(R.color.textDarkTheme));
                 Theming.setColoredFontColor(getResources().getColor(R.color.textColoredDarkTheme));
                 Theming.setBackground(R.drawable.paper_bg_dark);
-                Theming.setCardViewBG("#141414");
+                Theming.setCardViewBG("#1f1f1f");
                 Theming.setSpinnerStyle(R.layout.spinner_style_dark);
                 break;
         }
