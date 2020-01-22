@@ -89,7 +89,7 @@ public class OLSheetActivity extends AppCompatActivity {
         txtResolve.setText("Resolve: " + player.getResolve());
         TextView txtHitpoints = findViewById(R.id.txtHitpoints);
         ProgressBar barHealth = findViewById(R.id.barHealth);
-        //barHealth.getProgressDrawable().setColorFilter(Color.RED, PorterDuff.Mode.SRC_IN);
+        barHealth.getProgressDrawable().setColorFilter(getResources().getColor(R.color.hpBar), PorterDuff.Mode.SRC_IN);
         TextView txtHPBar = findViewById(R.id.txtHPBar);
         txtHitpoints.setTextColor(Theming.getFontColor());
         updateHPInfo();

@@ -11,4 +11,5 @@
     <color name="textColoredDarkTheme">#703CE2</color>
     <color name="textDarkTheme">#FFFFFF</color>
     <color name="textAccent">#FFFFFF</color>
+    <color name="hpBar">#84a82d</color>
 </resources>
