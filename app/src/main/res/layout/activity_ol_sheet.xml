@@ -24,7 +24,7 @@
                 android:id="@+id/imgTopSheet"
                 android:layout_width="wrap_content"
                 android:layout_height="128dp"
-                android:cropToPadding="true"
+                android:layout_gravity="center_horizontal"
                 android:padding="15dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_bannerol" />
