@@ -197,9 +197,15 @@ public class MainActivity extends AppCompatActivity {
         int themeID = 1;
 
         Log.d("Load Theme", "Loading Theme...");
-        SharedPreferences themePreferences = mContext.getSharedPreferences("theme", Context.MODE_PRIVATE);
-        themeID = themePreferences.getInt("theme", 0);
-        Log.d("Load Theme", "Loaded Theme: " + themeID);
+        try {
+            SharedPreferences themePreferences = mContext.getSharedPreferences("theme", Context.MODE_PRIVATE);
+            themeID = themePreferences.getInt("theme", 0);
+            Log.d("Load Theme", "Loaded Theme: " + themeID);
+        } catch (Exception e) {
+            themeID = 1;
+            Log.d("Load Theme", "Theme failed to load");
+        }
+
 
         if (themeID == 0)
         {
