@@ -249,11 +249,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void saveTheme(int themeID) {
         Log.d("Saving Theme", "Saving Theme: " + themeID);
-        SharedPreferences themeSavePreferences = mContext.getSharedPreferences("theme", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = themeSavePreferences.edit();
-        editor.putInt("theme", themeID);
-        editor.commit();
-        Log.d("Saved Theme", "Saved Theme: " + themeID);
+        try {
+            SharedPreferences themeSavePreferences = mContext.getSharedPreferences("theme", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = themeSavePreferences.edit();
+            editor.putInt("theme", themeID);
+            editor.commit();
+            Log.d("Saved Theme", "Saved Theme: " + themeID);
+        } catch (Exception e) {
+            Log.d("Saved Theme", "Theme Saving Failed");
+        }
     }
 
     private void loadTheming(int theme) {
@@ -275,9 +279,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void saveLastSheet(String selected) {
         //Save lastSheet
-        SharedPreferences saveLastSheet = getSharedPreferences("lastSheet", MODE_PRIVATE);
-        SharedPreferences.Editor editor = saveLastSheet.edit();
-        editor.putString("lastSheet", selected);
-        editor.apply();
+        Log.d("Saving Sheet", "Saving Sheet");
+        try {
+            SharedPreferences saveLastSheet = getSharedPreferences("lastSheet", MODE_PRIVATE);
+            SharedPreferences.Editor editor = saveLastSheet.edit();
+            editor.putString("lastSheet", selected);
+            editor.apply();
+            Log.d("Saving Sheet", "Saving Sheet Success");
+        } catch (Exception e) {
+            Log.d("Saving Sheet", "Saving Sheet Failed");
+        }
     }
 }
