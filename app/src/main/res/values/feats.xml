@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- List of Feet Titles -->
     <array name="Feat_Array">
         <item>Alternate Form (I - II)</item>
         <item>Area Manipulation (I - V)</item>
