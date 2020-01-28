@@ -11,9 +11,11 @@
     android:screenOrientation="portrait"
     android:orientation="vertical">
 
-    <ScrollView
+    <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+        android:id="@+id/sheet_OSV"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -317,8 +319,8 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="18dp"
-                    android:layout_marginRight="18dp"
                     android:layout_marginTop="12dp"
+                    android:layout_marginRight="18dp"
                     android:layout_marginBottom="12dp"
                     android:orientation="vertical"
                     tools:visibility="visible">
@@ -941,6 +943,6 @@
 
 
         </LinearLayout>
-    </ScrollView>
+    </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
 
 </LinearLayout>

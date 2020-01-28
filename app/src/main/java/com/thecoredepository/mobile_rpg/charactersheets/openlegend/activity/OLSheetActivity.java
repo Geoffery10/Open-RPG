@@ -2,6 +2,7 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -35,6 +36,9 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.load.resource.bitmap.FitCenter;
+import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
+import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
+import com.github.ksoichiro.android.observablescrollview.ScrollState;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.Theming;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
@@ -47,7 +51,7 @@ import java.io.InputStream;
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 import static com.thecoredepository.mobile_rpg.dice.dice.attributeToDice;
 
-public class OLSheetActivity extends AppCompatActivity {
+public class OLSheetActivity extends AppCompatActivity implements ObservableScrollViewCallbacks {
 
     private static final int GALLERY_REQUEST = 1000;
     private static final int PERMISSION_CODE = 1001;
@@ -253,6 +257,9 @@ public class OLSheetActivity extends AppCompatActivity {
         Button btnBanes = findViewById(R.id.btnBanes);
         Button btnBoons = findViewById(R.id.btnBoons);
         Button btnFeats = findViewById(R.id.btnFeats);
+
+        ObservableScrollView sheet_OSV = (ObservableScrollView) findViewById(R.id.sheet_OSV);
+        sheet_OSV.setScrollViewCallbacks(this);
 
         /*if (player.getImageUri() != null) {
             Glide.with(this)
@@ -927,5 +934,30 @@ public class OLSheetActivity extends AppCompatActivity {
         super.onRestart();
         //Refresh
         initializationOfElement();
+    }
+
+    @Override
+    public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging) {
+
+    }
+
+    @Override
+    public void onDownMotionEvent() {
+
+    }
+
+    @Override
+    public void onUpOrCancelMotionEvent(ScrollState scrollState) {
+        ActionBar ab = getSupportActionBar();
+        if (scrollState == ScrollState.UP) {
+            if (ab.isShowing()) {
+                ab.hide();
+            }
+        } else if (scrollState == ScrollState.DOWN) {
+            if (!ab.isShowing()) {
+                ab.show();
+            }
+        }
+
     }
 }
