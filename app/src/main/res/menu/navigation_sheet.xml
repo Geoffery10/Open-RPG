@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_Sheet"
+        android:icon="@drawable/ic_other_icon"
+        android:title="Sheet"/>
+
+    <item
+        android:id="@+id/navigation_Inventory"
+        android:icon="@drawable/ic_weapon_icon"
+        android:title="Inventory"/>
+
+    <item
+        android:id="@+id/navigation_Banes"
+        android:icon="@drawable/ic_potion_icon"
+        android:title="Banes"/>
+
+    <item
+        android:id="@+id/navigation_Boons"
+        android:icon="@drawable/ic_potion_icon"
+        android:title="Boons"/>
+
+    <item
+        android:id="@+id/navigation_Feats"
+        android:icon="@drawable/ic_potion_icon"
+        android:title="Feats"/>
+
+</menu>
