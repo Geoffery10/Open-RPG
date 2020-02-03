@@ -1,5 +1,6 @@
 package com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,6 +27,7 @@ import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.Theming;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLFeatAdapter;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLInventoryAdapter;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.dialogs.DialogAddItem;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 
@@ -58,8 +61,8 @@ public class OLInventoryActivity extends AppCompatActivity
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(AppContext.mContext, "This feature isn't ready just yet", Toast.LENGTH_SHORT);
-                toast.show();
+                DialogAddItem AddItem = new DialogAddItem(OLInventoryActivity.this);
+                AddItem.show();
             }
         });
 
