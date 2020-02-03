@@ -60,7 +60,7 @@ public class OLBanesBoonsActivity extends AppCompatActivity
 
         //Banes/Boons Buttons
         ShowHideButtons();
-        //navButtons();
+        navButtons();
     }
 
     private void navButtons() {
