@@ -229,7 +229,7 @@ public class OLSheetActivity extends AppCompatActivity {
         LinearLayout LLEnergy = findViewById(R.id.LLEnergy);
         Button btnEnergy = findViewById(R.id.btnEnergy);
         TextView txtEntropy = findViewById(R.id.txtEntropy);
-        txtEnergy.setTextColor(Theming.getFontColor());
+        txtEntropy.setTextColor(Theming.getFontColor());
         LinearLayout LLEntropy = findViewById(R.id.LLEntropy);
         Button btnEntropy = findViewById(R.id.btnEntropy);
         TextView txtInfluence = findViewById(R.id.txtInfluence);
