@@ -3,22 +3,22 @@
 
     <item
         android:id="@+id/navigation_Sheet"
-        android:icon="@drawable/ic_other_icon"
+        android:icon="@drawable/ic_nav_sheet"
         android:title="Sheet"/>
 
     <item
         android:id="@+id/navigation_Inventory"
-        android:icon="@drawable/ic_weapon_icon"
+        android:icon="@drawable/ic_nav_inventory"
         android:title="Inventory"/>
 
     <item
         android:id="@+id/navigation_Banes"
-        android:icon="@drawable/ic_potion_icon"
+        android:icon="@drawable/ic_nav_banes"
         android:title="Banes"/>
 
     <item
         android:id="@+id/navigation_Boons"
-        android:icon="@drawable/ic_potion_icon"
+        android:icon="@drawable/ic_nav_boons"
         android:title="Boons"/>
 
     <item
