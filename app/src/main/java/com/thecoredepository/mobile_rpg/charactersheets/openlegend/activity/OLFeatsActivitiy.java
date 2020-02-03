@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -36,14 +37,14 @@ public class OLFeatsActivitiy extends AppCompatActivity
         Intent intent = getIntent();
         //String selected = intent.getExtras().getString("selected");
         RecyclerView recyclerView = findViewById(R.id.feat_view);
-        LinearLayout featsView = findViewById(R.id.featsView);
+        ConstraintLayout featsView = findViewById(R.id.featsView);
         featsView.setBackgroundResource(Theming.getBackground());
         TextView txtFeatHeader = findViewById(R.id.txtFeatsHeader);
         txtFeatHeader.setTextColor(Theming.getColoredFontColor());
         add = false;
         remove = false;
         generateRecyclerView(add, remove, showAll, recyclerView);
-        //navButtons();
+        navButtons();
 
     }
 
@@ -56,6 +57,7 @@ public class OLFeatsActivitiy extends AppCompatActivity
                 switch (item.getItemId()) {
                     case R.id.navigation_Sheet:
                         finish();
+                        break;
                     case R.id.navigation_Inventory:
                         in = new Intent(getApplicationContext(), OLInventoryActivity.class);
                         //in.putExtra("selected", "Banes");

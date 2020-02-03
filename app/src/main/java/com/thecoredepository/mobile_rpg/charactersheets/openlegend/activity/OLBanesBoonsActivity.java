@@ -72,6 +72,7 @@ public class OLBanesBoonsActivity extends AppCompatActivity
                 switch (item.getItemId()) {
                     case R.id.navigation_Sheet:
                         finish();
+                        break;
                     case R.id.navigation_Inventory:
                         in = new Intent(getApplicationContext(), OLInventoryActivity.class);
                         //in.putExtra("selected", "Banes");
