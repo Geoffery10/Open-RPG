@@ -41,7 +41,7 @@ Samsung Galaxy S7
 
 ### Installing
 
-#### Play Store
+#### Play Store (Most up to date version)
 
 Installing can be done by downloading from the Play Store.
 * [Play Store](https://play.google.com/store/apps/details?id=com.thecoredepository.mobile_rpg)
