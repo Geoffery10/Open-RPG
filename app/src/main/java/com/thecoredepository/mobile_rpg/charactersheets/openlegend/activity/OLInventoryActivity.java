@@ -1,5 +1,6 @@
 package com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,12 +11,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.thecoredepository.mobile_rpg.AppContext;
+import com.thecoredepository.mobile_rpg.MainActivity;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.Theming;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLFeatAdapter;
@@ -26,6 +31,7 @@ import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openle
 public class OLInventoryActivity extends AppCompatActivity
 {
     private Menu menu;
+    public Context mContext = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +60,47 @@ public class OLInventoryActivity extends AppCompatActivity
             public void onClick(View v) {
                 Toast toast = Toast.makeText(AppContext.mContext, "This feature isn't ready just yet", Toast.LENGTH_SHORT);
                 toast.show();
+            }
+        });
+
+        navButtons();
+    }
+
+    private void navButtons() {
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent in;
+                switch (item.getItemId()) {
+                    case R.id.navigation_Sheet:
+                        finish();
+                    case R.id.navigation_Inventory:
+                        /*in = new Intent(getApplicationContext(), OLInventoryActivity.class);
+                        //in.putExtra("selected", "Banes");
+                        startActivity(in);
+                        finish();*/
+                        break;
+                    case R.id.navigation_Banes:
+                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+                        in.putExtra("selected", "Banes");
+                        startActivity(in);
+                        finish();
+                        break;
+                    case R.id.navigation_Boons:
+                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+                        in.putExtra("selected", "Boons");
+                        startActivity(in);
+                        finish();
+                        break;
+                    case R.id.navigation_Feats:
+                        in = new Intent(getApplicationContext(), OLFeatsActivitiy.class);
+                        //in.putExtra("selected", "Banes");
+                        startActivity(in);
+                        finish();
+                        break;
+                }
+                return true;
             }
         });
     }

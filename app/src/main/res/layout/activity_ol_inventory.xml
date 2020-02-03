@@ -61,9 +61,23 @@
             android:background="@color/LogoColor"
             android:text="Add"
             android:textColor="@color/textAccent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/navigationView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="0dp"
+            android:background="?android:attr/windowBackground"
+            android:gravity="bottom"
+            app:itemBackground="@color/colorPrimary"
+            app:itemIconTint="@color/textAccent"
+            app:itemTextColor="@color/textAccent"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/navigation_sheet" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

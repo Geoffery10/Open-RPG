@@ -2,13 +2,16 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.Theming;
 
@@ -17,12 +20,14 @@ import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openle
 public class OLBanesBoonsActivity extends AppCompatActivity
 {
 
+    private String selected;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ol_baneboons);
         Intent intent = getIntent();
-        String selected = intent.getExtras().getString("selected"); //Banes or Boons
+        selected = intent.getExtras().getString("selected"); //Banes or Boons
 
         LinearLayout banesboonsView = findViewById(R.id.banesboonsView);
         banesboonsView.setBackgroundResource(Theming.getBackground());
@@ -55,6 +60,40 @@ public class OLBanesBoonsActivity extends AppCompatActivity
 
         //Banes/Boons Buttons
         ShowHideButtons();
+        //navButtons();
+    }
+
+    private void navButtons() {
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent in;
+                switch (item.getItemId()) {
+                    case R.id.navigation_Sheet:
+                        finish();
+                    case R.id.navigation_Inventory:
+                        in = new Intent(getApplicationContext(), OLInventoryActivity.class);
+                        //in.putExtra("selected", "Banes");
+                        startActivity(in);
+                        finish();
+                        break;
+                    case R.id.navigation_Banes:
+                        showBanesByStats();
+                        break;
+                    case R.id.navigation_Boons:
+                        showBoonsByStats();
+                        break;
+                    case R.id.navigation_Feats:
+                        in = new Intent(getApplicationContext(), OLFeatsActivitiy.class);
+                        //in.putExtra("selected", "Banes");
+                        startActivity(in);
+                        finish();
+                        break;
+                }
+                return true;
+            }
+        });
     }
 
     private void ShowHideButtons() {

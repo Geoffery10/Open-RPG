@@ -35,6 +35,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.load.resource.bitmap.FitCenter;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.Theming;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
@@ -64,6 +65,7 @@ public class OLSheetActivity extends AppCompatActivity {
         player = player.loadCharacterSheet(selected);
         initializationOfElement();
         showHideBio();
+        navButtons();
     }
 
     private void setCharacterImage() {
@@ -281,6 +283,42 @@ public class OLSheetActivity extends AppCompatActivity {
                 txtEntropy, LLEntropy, btnEntropy, txtInfluence, LLInfluence, btnInfluence, txtMovement,
                 LLMovement, btnMovement, txtPrescience, LLPrescience, btnPrescience, txtProtection,
                 LLProtection, btnProtection, barHealth, txtHPBar);
+    }
+
+    private void navButtons() {
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent in;
+                switch (item.getItemId()) {
+                    case R.id.navigation_Sheet:
+                        break;
+                    case R.id.navigation_Inventory:
+                        in = new Intent(getApplicationContext(), OLInventoryActivity.class);
+                        //in.putExtra("selected", "Banes");
+                        startActivity(in);
+                        break;
+                    case R.id.navigation_Banes:
+                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+                        in.putExtra("selected", "Banes");
+                        startActivity(in);
+                        break;
+                    case R.id.navigation_Boons:
+                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+                        in.putExtra("selected", "Boons");
+                        startActivity(in);
+                        break;
+                    case R.id.navigation_Feats:
+                        //Open Feats Menu
+                        in = new Intent(getApplicationContext(), OLFeatsActivitiy.class);
+                        //in.putExtra("dice", attributeToDice(player.getProtection()));
+                        startActivity(in);
+                        break;
+                }
+                return true;
+            }
+        });
     }
 
     private String getLangs(String lang) {

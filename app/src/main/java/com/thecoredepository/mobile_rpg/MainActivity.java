@@ -1,5 +1,6 @@
 package com.thecoredepository.mobile_rpg;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -19,12 +20,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLNewSheet;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.AboutActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLBanesBoonsActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLFeatsActivitiy;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLInventoryActivity;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
 
@@ -137,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
                         .setNegativeButton(android.R.string.no, null).show();
             }
         });
+
     }
 
     @Override
