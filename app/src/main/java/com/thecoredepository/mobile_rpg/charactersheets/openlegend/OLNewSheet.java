@@ -777,6 +777,15 @@ public class OLNewSheet extends AppCompatActivity {
                 layoutAttributes.setVisibility(View.GONE);
                 LinearLayout layoutFeats = findViewById(R.id.layoutFeats);
                 layoutFeats.setVisibility(View.VISIBLE);
+                EditText editSpeed = findViewById(R.id.editSpeed);
+                int speed;
+
+                try {
+                    speed = Integer.parseInt(editSpeed.getText() + "");
+                } catch (NumberFormatException e) {
+                    speed = 30;
+                }
+                playerTemp.setSpeed(speed);
             }
         });
 
