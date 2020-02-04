@@ -35,6 +35,7 @@ public class OLInventoryActivity extends AppCompatActivity
 {
     private Menu menu;
     public Context mContext = this;
+    public static OLInventoryAdapter itemAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,8 +141,8 @@ public class OLInventoryActivity extends AppCompatActivity
     private void generateRecyclerView(Boolean add, Boolean remove, RecyclerView recyclerView) {
         for (int i = 0; i < player.getAllItems().size(); i++)
         {
-            OLInventoryAdapter adapter = new OLInventoryAdapter(this, player.getAllItems(), add, remove);
-            recyclerView.setAdapter(adapter);
+            itemAdapter = new OLInventoryAdapter(this, player.getAllItems(), add, remove);
+            recyclerView.setAdapter(itemAdapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
         }
     }
