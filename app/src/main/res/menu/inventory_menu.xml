@@ -3,4 +3,5 @@
     <item android:title="Add Item" android:id="@+id/addItem"></item>
     <item android:title="Remove Item" android:id="@+id/removeItem"></item>
     <item android:title="Edit Item" android:id="@+id/editItem"></item>
+    <item android:title="Set Wealth Level" android:id="@+id/setWealth"></item>
 </menu>

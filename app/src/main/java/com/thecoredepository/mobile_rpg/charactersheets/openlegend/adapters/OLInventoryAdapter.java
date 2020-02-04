@@ -59,8 +59,11 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
         holder.editQuantity.setVisibility(View.GONE);
 
         holder.txtTitle.setTextColor(Theming.getFontColor());
+        holder.editTitle.setTextColor(Theming.getFontColor());
         holder.txtDescription.setTextColor(Theming.getFontColor());
+        holder.editDescription.setTextColor(Theming.getFontColor());
         holder.txtQuantity.setTextColor(Theming.getFontColor());
+        holder.editQuantity.setTextColor(Theming.getFontColor());
 
         setTypeImage(holder, item);
 
