@@ -12,31 +12,65 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/txtWealth"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Wealth Lvl:"
-            android:textAlignment="center"
-            android:textColor="@color/textColored"
-            android:textIsSelectable="true"
-            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btnSaveWealth"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_exit_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.16"
+                app:layout_constraintStart_toEndOf="@+id/editWealth"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtWealth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wealth Lvl:"
+                android:textAlignment="center"
+                android:textColor="@color/textColored"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editWealth"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/textColored"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txtWealth"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/btnAdd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtWealth">
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/item_view"
@@ -47,6 +81,7 @@
                 android:scrollbars="vertical">
 
             </androidx.recyclerview.widget.RecyclerView>
+
         </LinearLayout>
 
         <Button

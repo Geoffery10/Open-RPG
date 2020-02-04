@@ -4,10 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +28,7 @@ import com.thecoredepository.mobile_rpg.AppContext;
 import com.thecoredepository.mobile_rpg.MainActivity;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.Theming;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLFeatAdapter;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLInventoryAdapter;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.dialogs.DialogAddItem;
@@ -46,11 +50,19 @@ public class OLInventoryActivity extends AppCompatActivity
         LinearLayout inventoryView = findViewById(R.id.inventoryView);
         inventoryView.setBackgroundResource(Theming.getBackground());
 
+        ImageView btnSaveWealth = findViewById(R.id.btnSaveWealth);
         TextView txtWealth = findViewById(R.id.txtWealth);
+        EditText editWealth = findViewById(R.id.editWealth);
         txtWealth.setTextColor(Theming.getColoredFontColor());
+        editWealth.setTextColor(Theming.getColoredFontColor());
         RecyclerView recyclerView = findViewById(R.id.item_view);
 
         txtWealth.setText("Wealth Level: " + player.getWealth());
+        editWealth.setText(player.getWealth() + "");
+
+        txtWealth.setVisibility(View.VISIBLE);
+        editWealth.setVisibility(View.INVISIBLE);
+        btnSaveWealth.setVisibility(View.GONE);
 
         Button btnAdd = findViewById(R.id.btnAdd);
 
@@ -59,15 +71,56 @@ public class OLInventoryActivity extends AppCompatActivity
 
         generateRecyclerView(add, remove, recyclerView);
 
+        txtWealth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editWealth();
+            }
+        });
+
+        btnSaveWealth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ImageView btnSaveWealth = findViewById(R.id.btnSaveWealth);
+                TextView txtWealth = findViewById(R.id.txtWealth);
+                EditText editWealth = findViewById(R.id.editWealth);
+                txtWealth.setVisibility(View.VISIBLE);
+                editWealth.setVisibility(View.INVISIBLE);
+                btnSaveWealth.setVisibility(View.GONE);
+                try {
+                    player.setWealth(Integer.parseInt(editWealth.getText() + ""));
+                } catch (NumberFormatException e) {
+                    Log.i("NumberFormatException", e + "");
+                }
+                txtWealth.setText("Wealth Level: " + player.getWealth());
+                editWealth.setText(player.getWealth() + "");
+                //Save
+                Log.i("Saving", "Started Saving...");
+                OLSavingSheets saveData = new OLSavingSheets();
+                saveData.saveData(mContext);
+                Log.i("Saving", "Saved");
+            }
+        });
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogAddItem AddItem = new DialogAddItem(OLInventoryActivity.this);
                 AddItem.show();
             }
-        });
+            });
 
         navButtons();
+    }
+
+    private void editWealth() {
+        ImageView btnSaveWealth = findViewById(R.id.btnSaveWealth);
+        TextView txtWealth = findViewById(R.id.txtWealth);
+        EditText editWealth = findViewById(R.id.editWealth);
+        txtWealth.setVisibility(View.GONE);
+        editWealth.setVisibility(View.VISIBLE);
+        btnSaveWealth.setVisibility(View.VISIBLE);
+        editWealth.setText(player.getWealth() + "");
     }
 
     private void navButtons() {
@@ -130,6 +183,9 @@ public class OLInventoryActivity extends AppCompatActivity
                 break;
             case R.id.editItem:
                 toast.show();
+                break;
+            case R.id.setWealth:
+                editWealth();
                 break;
             default:
                 return super.onOptionsItemSelected(item);
