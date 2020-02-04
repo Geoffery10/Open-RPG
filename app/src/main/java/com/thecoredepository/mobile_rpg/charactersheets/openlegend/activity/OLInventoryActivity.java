@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -60,6 +61,9 @@ public class OLInventoryActivity extends AppCompatActivity
         txtWealth.setText("Wealth Level: " + player.getWealth());
         editWealth.setText(player.getWealth() + "");
 
+        Button btnAddItem = findViewById(R.id.btnAdd);
+        btnAddItem.setVisibility(View.VISIBLE);
+
         txtWealth.setVisibility(View.VISIBLE);
         editWealth.setVisibility(View.INVISIBLE);
         btnSaveWealth.setVisibility(View.GONE);
@@ -84,6 +88,8 @@ public class OLInventoryActivity extends AppCompatActivity
                 ImageView btnSaveWealth = findViewById(R.id.btnSaveWealth);
                 TextView txtWealth = findViewById(R.id.txtWealth);
                 EditText editWealth = findViewById(R.id.editWealth);
+                Button btnAddItem = findViewById(R.id.btnAdd);
+                btnAddItem.setVisibility(View.VISIBLE);
                 txtWealth.setVisibility(View.VISIBLE);
                 editWealth.setVisibility(View.INVISIBLE);
                 btnSaveWealth.setVisibility(View.GONE);
@@ -99,6 +105,8 @@ public class OLInventoryActivity extends AppCompatActivity
                 OLSavingSheets saveData = new OLSavingSheets();
                 saveData.saveData(mContext);
                 Log.i("Saving", "Saved");
+                InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+                imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
             }
         });
 
@@ -117,10 +125,13 @@ public class OLInventoryActivity extends AppCompatActivity
         ImageView btnSaveWealth = findViewById(R.id.btnSaveWealth);
         TextView txtWealth = findViewById(R.id.txtWealth);
         EditText editWealth = findViewById(R.id.editWealth);
+        Button btnAddItem = findViewById(R.id.btnAdd);
+        btnAddItem.setVisibility(View.GONE);
         txtWealth.setVisibility(View.GONE);
         editWealth.setVisibility(View.VISIBLE);
         btnSaveWealth.setVisibility(View.VISIBLE);
         editWealth.setText(player.getWealth() + "");
+        editWealth.setSelected(true);
     }
 
     private void navButtons() {
