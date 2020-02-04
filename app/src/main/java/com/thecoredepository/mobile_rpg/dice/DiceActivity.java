@@ -206,6 +206,9 @@ public class DiceActivity extends AppCompatActivity {
         if (valueOfDie == 2)
         {
             roll = dice.d2();
+        }else if (valueOfDie == 4)
+        {
+            roll = dice.d4();
         }
         else if (valueOfDie == 6)
         {
@@ -215,9 +218,13 @@ public class DiceActivity extends AppCompatActivity {
         {
             roll = dice.d8();
         }
-        else //d10
+        else if (valueOfDie == 10)
         {
             roll = dice.d10();
+        }
+        else
+        {
+            roll = dice.custom(valueOfDie);
         }
         return roll;
     }
