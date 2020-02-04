@@ -747,6 +747,14 @@ public class OLSheetActivity extends AppCompatActivity {
             }
         });
 
+        ProgressBar barHealth = findViewById(R.id.barHealth);
+        barHealth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                damageDialog();
+            }
+        });
+
         btnInventory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
