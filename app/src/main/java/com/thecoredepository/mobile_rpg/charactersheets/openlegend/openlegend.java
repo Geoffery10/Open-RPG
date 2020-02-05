@@ -1274,7 +1274,86 @@ public class openlegend
 
     public static void HARDCODEDSHEETS()
     {
+        if (sheetList.contains("Well-Rounded Jack") == false)
+        {
+            openlegend well_rounded_jack = new openlegend();
+            well_rounded_jack.setType("pc");
+            well_rounded_jack.setCharName("Well-Rounded Jack");
+            well_rounded_jack.setNickname("Jack");
+            well_rounded_jack.setDeity("Open Legend");
+            String[] lang = new String[10];
+            lang[0] = "Basic";
+            lang[1] = "Elvish";
+            well_rounded_jack.setLanguages(lang);
+            well_rounded_jack.setBio("Well-Rounded Jack is a simple man with simple stats. He loves to battle goblins and loot chests (Assuming it's not a Mimic). I bet you can make a much more interesting character than Jack though.");
+            well_rounded_jack.setFortitude(4);
+            well_rounded_jack.setAgility(4);
+            well_rounded_jack.setPerception(3);
+            well_rounded_jack.setMight(3);
+            well_rounded_jack.setLearning(3);
+            well_rounded_jack.setWill(1);
+            well_rounded_jack.setLogic(1);
+            well_rounded_jack.setArmor(1);
+            well_rounded_jack.setLevelTotal(0);
+            well_rounded_jack.setSpeed(30);
 
+            well_rounded_jack.setStats();
+            well_rounded_jack.setGetAttributePointsUsed();
+            well_rounded_jack.setAttributePointsAvailable(well_rounded_jack.getType());
+
+            well_rounded_jack.setWealth(3);
+
+            well_rounded_jack.addItem(new OLItem("Leather Armor", "(+1 Guard)", 1, "Armor"));
+            well_rounded_jack.addItem(new OLItem("Longsword", "Agility v. Guard - (Advantage 1 & Initiative + 1)", 2, "Weapon"));
+            well_rounded_jack.addItem(new OLItem("Bow", "Agility v. Guard - Range 125ft", 1, "Weapon"));
+            well_rounded_jack.addItem(new OLItem("Creature Book", "Advantage on Creature Knowledge", 1, "Item"));
+            well_rounded_jack.addItem(new OLItem("Mask Collection", "Collection of Masks from the Happy Mask Sales Men", 10, "Item"));
+            well_rounded_jack.addItem(new OLItem("Magic Pearl", "Magic Peal with the power to stop the transformitive effects of the Dark World", 1, "Item"));
+
+            if (well_rounded_jack.getType().equals("pc") || well_rounded_jack.getType().equals("ccII") || well_rounded_jack.getType().equals("ccIII"))
+            {
+                Log.i("Feats", "Adding Feats");
+                Iterator<OLFeats> iterator = OLFeats.featList.iterator();
+                while (iterator.hasNext()) {
+                    OLFeats feat = iterator.next();
+                    if (feat.getTitle().equals("Superior Concentration")) {
+                        feat.setLevel(1);
+                        well_rounded_jack.feats.add(feat.copyFeat());
+                        Log.i("Feats", "added Superior Concentration");
+                    }
+                    if (feat.getTitle().equals("Boon Focus")) {
+                        feat.setLevel(1);
+                        feat.setConnection("Aura");
+                        well_rounded_jack.feats.add(feat.copyFeat());
+                        Log.i("Feats", "added Boon Focus - Aura");
+                    }
+                    if (feat.getTitle().equals("Boon Focus")) {
+                        feat.setLevel(1);
+                        feat.setConnection("Invisible");
+                        well_rounded_jack.feats.add(feat.copyFeat());
+                        Log.i("Feats", "added Boon Focus - Invisible");
+                    }
+                    if (feat.getTitle().equals("Boon Focus")) {
+                        feat.setLevel(1);
+                        feat.setConnection("Haste");
+                        well_rounded_jack.feats.add(feat.copyFeat());
+                        Log.i("Feats", "added Boon Focus - Haste");
+                    }
+                    if (feat.getTitle().equals("Companion")) {
+                        feat.setLevel(3);
+                        feat.setConnection("Nightmare");
+                        well_rounded_jack.feats.add(feat.copyFeat());
+                        Log.i("Feats", "added Companion");
+                    }
+                }
+            }
+            sheetList.add(well_rounded_jack.getCharName());
+            sheets.add(well_rounded_jack);
+        }
+
+        //==========================================================================================
+
+        /*
         if (sheetList.contains("Tazmur") == false)
         {
             openlegend tazmur = new openlegend();
@@ -1578,7 +1657,7 @@ public class openlegend
             }
             sheetList.add(Noujou.getCharName());
             sheets.add(Noujou);
-        }
+        }*/
     }
 
     public static openlegend blankChar(openlegend blank) {
