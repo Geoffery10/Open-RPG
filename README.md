@@ -14,6 +14,7 @@ Let Open RPG do all the hard work for you!
   * [Tested On](https://github.com/Geoffery10/Mobile-RPG#tested-on)
   * [Installing](https://github.com/Geoffery10/Mobile-RPG#installing)
     * [Play Store](https://github.com/Geoffery10/Mobile-RPG#play-store)
+    * [Firebase](https://github.com/Geoffery10/Open-RPG/blob/master/README.md#firebase-bleeding-edge-testing-builds)
     * [GitHub Releases](https://github.com/Geoffery10/Mobile-RPG#github-release)
 * [Built With](https://github.com/Geoffery10/Mobile-RPG#built-with)
 * [Contributing](https://github.com/Geoffery10/Mobile-RPG#contributing)  
