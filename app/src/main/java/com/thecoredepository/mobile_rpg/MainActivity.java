@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
@@ -45,12 +46,14 @@ public class MainActivity extends AppCompatActivity {
 
     public Context mContext = this;
     public Menu menu;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AppContext.mContext = mContext;
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         //Load Theme
         loadTheming();
@@ -88,6 +91,10 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("selected", selected);
                 //Save lastSheet
                 saveLastSheet(selected);
+                //Log
+                Bundle params = new Bundle();
+                params.putString("sheet_name", selected);
+                mFirebaseAnalytics.logEvent("open_sheet", params);
                 //Open Sheet
                 Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
                 in.putExtra("selected", selected);
@@ -98,6 +105,10 @@ public class MainActivity extends AppCompatActivity {
         btnNewSheet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Log
+                Bundle params = new Bundle();
+                params.putString("new_sheet", "Started New Sheet");
+                mFirebaseAnalytics.logEvent("new_sheet", params);
                 //New Sheet
                 Intent in = new Intent(getApplicationContext(), OLNewSheet.class);
                 startActivity(in);
@@ -122,6 +133,10 @@ public class MainActivity extends AppCompatActivity {
                                 Spinner spinnerOL = findViewById(R.id.spinnerOL);
                                 String selected = (String)spinnerOL.getSelectedItem();
                                 Log.i("selected", selected);
+                                //Log
+                                Bundle params = new Bundle();
+                                params.putString("sheet_name", selected);
+                                mFirebaseAnalytics.logEvent("delete_sheet", params);
 
                                 //Check for Sheet
                                 if (sheetList.contains(selected))

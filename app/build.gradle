@@ -9,8 +9,8 @@ android {
         applicationId "com.thecoredepository.mobile_rpg"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 15
-        versionName "0.17.2"
+        versionCode 16
+        versionName "0.17.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -43,4 +43,5 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:29.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.firebase:firebase-core:17.2.2'
 }

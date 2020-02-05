@@ -91,7 +91,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="connordavey33"
+                app:layout_constraintBottom_toTopOf="@+id/btnTester"
                 app:layout_constraintEnd_toEndOf="@+id/imgConnor"
                 app:layout_constraintStart_toStartOf="@+id/imgConnor"
                 app:layout_constraintTop_toBottomOf="@+id/imgConnor" />
@@ -129,10 +131,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="Geoffery10"
+                app:layout_constraintBottom_toTopOf="@+id/btnTester"
                 app:layout_constraintEnd_toEndOf="@+id/imgGeoffery"
                 app:layout_constraintStart_toStartOf="@+id/imgGeoffery"
                 app:layout_constraintTop_toBottomOf="@+id/imgGeoffery" />
+
+            <Button
+                android:id="@+id/btnTester"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:enabled="true"
+                android:text="Want to be a beta tester?"
+                android:textColor="#DEFFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
