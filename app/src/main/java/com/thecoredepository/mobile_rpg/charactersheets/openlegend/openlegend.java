@@ -1316,34 +1316,20 @@ public class openlegend
                 Iterator<OLFeats> iterator = OLFeats.featList.iterator();
                 while (iterator.hasNext()) {
                     OLFeats feat = iterator.next();
-                    if (feat.getTitle().equals("Superior Concentration")) {
+                    if (feat.getTitle().equals("Fleet of Foot")) {
                         feat.setLevel(1);
                         well_rounded_jack.feats.add(feat.copyFeat());
-                        Log.i("Feats", "added Superior Concentration");
+                        Log.i("Feats", "added Fleet of Foot");
                     }
-                    if (feat.getTitle().equals("Boon Focus")) {
+                    if (feat.getTitle().equals("Master Tracker")) {
                         feat.setLevel(1);
-                        feat.setConnection("Aura");
                         well_rounded_jack.feats.add(feat.copyFeat());
-                        Log.i("Feats", "added Boon Focus - Aura");
+                        Log.i("Feats", "added Boon Focus - Master Tracker");
                     }
-                    if (feat.getTitle().equals("Boon Focus")) {
+                    if (feat.getTitle().equals("Climbing")) {
                         feat.setLevel(1);
-                        feat.setConnection("Invisible");
                         well_rounded_jack.feats.add(feat.copyFeat());
-                        Log.i("Feats", "added Boon Focus - Invisible");
-                    }
-                    if (feat.getTitle().equals("Boon Focus")) {
-                        feat.setLevel(1);
-                        feat.setConnection("Haste");
-                        well_rounded_jack.feats.add(feat.copyFeat());
-                        Log.i("Feats", "added Boon Focus - Haste");
-                    }
-                    if (feat.getTitle().equals("Companion")) {
-                        feat.setLevel(3);
-                        feat.setConnection("Nightmare");
-                        well_rounded_jack.feats.add(feat.copyFeat());
-                        Log.i("Feats", "added Companion");
+                        Log.i("Feats", "added Climbing");
                     }
                 }
             }
