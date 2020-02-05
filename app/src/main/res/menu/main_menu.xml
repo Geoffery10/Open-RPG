@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Dark Mode (BETA)" android:id="@+id/DarkMode"></item>
+    <item
+        android:id="@+id/DarkMode"
+        android:title="Dark Mode"></item>
     <item android:title="Export" android:id="@+id/exportSheet"></item>
     <item android:title="Import" android:id="@+id/importSheet"></item>
     <item android:title="About" android:id="@+id/about"></item>
+    <item android:visible="true" android:id="@+id/GMTools"
+        android:titleCondensed="GM Tools"
+        android:title="GM Tools"
+        android:enabled="true">
+        <menu>
+            <item android:visible="true" android:id="@+id/HeroMuster"
+                android:titleCondensed="HeroMuster"
+                android:title="HeroMuster (External)"
+                android:enabled="true">
+                <menu>
+                    <item android:title="Core Rules" android:id="@+id/corerules"></item>
+                    <item android:title="Encounters" android:id="@+id/encounters"></item>
+                    <item android:title="DnD Conversion" android:id="@+id/dndConversion"></item>
+                </menu>
+            </item>
+        </menu>
+    </item>
 </menu>

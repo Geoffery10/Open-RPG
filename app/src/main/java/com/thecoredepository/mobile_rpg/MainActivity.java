@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -205,11 +206,26 @@ public class MainActivity extends AppCompatActivity {
                 Intent in = new Intent(getApplicationContext(), AboutActivity.class);
                 startActivity(in);
                 break;
+            case R.id.corerules:
+                openURL("https://openlegendrpg.com/core-rules/00-introduction");
+                break;
+            case R.id.encounters:
+                openURL("https://encounters.heromuster.com/");
+                break;
+            case R.id.dndConversion:
+                openURL("http://blog.openlegendrpg.com/5th-edition-dd-to-open-legend-character-conversion-guide/");
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
 
         return true;
+    }
+
+    private void openURL(String url) {
+        Uri uri = Uri.parse(url);
+        Intent webIntent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(webIntent);
     }
 
     private void loadTheming() {

@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:title="Show Bio" android:id="@+id/Bio"></item>
     <item android:title="Edit Sheet" android:id="@+id/EditSheet"></item>
-    <item android:title="Banes" android:id="@+id/Banes"></item>
-    <item android:title="Boons" android:id="@+id/Boons"></item>
+    <item android:title="Banes" android:visible="false" android:id="@+id/Banes"></item>
+    <item android:title="Boons" android:visible="false" android:id="@+id/Boons"></item>
     <item android:visible="true" android:id="@+id/damages"
         android:titleCondensed="Damage"
         android:title="Damage/Healing"
