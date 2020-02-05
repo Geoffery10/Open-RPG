@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "528101209801",
+    "firebase_url": "https://openrpg-3f7b2.firebaseio.com",
+    "project_id": "openrpg-3f7b2",
+    "storage_bucket": "openrpg-3f7b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528101209801:android:614577c1e4e792b48e7f18",
+        "android_client_info": {
+          "package_name": "com.thecoredepository.mobile_rpg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528101209801-fhhg2kjrtlio929bg0souimi3gon9fp9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD50rmIZ_GL95N6ftr1BR7UDQ99qCTARXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528101209801-fhhg2kjrtlio929bg0souimi3gon9fp9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
