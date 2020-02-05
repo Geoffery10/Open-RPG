@@ -46,7 +46,7 @@ Samsung Galaxy S7
 Installing can be done by downloading from the Play Store.
 * [Play Store](https://play.google.com/store/apps/details?id=com.thecoredepository.mobile_rpg)
 
-### Firebase (Bleeding Edge Testing Builds)
+#### Firebase (Bleeding Edge Testing Builds)
 Installing can be done by signing up and accepting test builds. Emails will notify you of new versions. This is the most experimential way to use Open RPG.
 * [Firebase](https://appdistribution.firebase.dev/i/B74jmJty)
   
