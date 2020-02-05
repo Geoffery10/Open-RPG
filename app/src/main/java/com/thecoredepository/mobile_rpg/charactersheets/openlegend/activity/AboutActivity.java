@@ -3,7 +3,10 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,6 +36,7 @@ public class AboutActivity  extends AppCompatActivity
         txtAboutHeader.setTextColor(Theming.getColoredFontColor());
         TextView txtAbout_01 = findViewById(R.id.txtAbout_01);
         txtAbout_01.setTextColor(Theming.getFontColor());
+        Button btnTester = findViewById(R.id.btnTester);
 
         ImageView imgGeoffery = findViewById(R.id.imgGeoffery);
         ImageView imgConnor = findViewById(R.id.imgConnor);
@@ -43,6 +47,14 @@ public class AboutActivity  extends AppCompatActivity
         TextView txtDevs = findViewById(R.id.txtDevs);
         txtDevs.setTextColor(Theming.getColoredFontColor());
 
+        btnTester.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://appdistribution.firebase.dev/i/B74jmJty");
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(webIntent);
+            }
+        });
 
         /*try {
             Bitmap bitmap = BitmapFactory.decodeStream((InputStream)new URL("").getContent());
