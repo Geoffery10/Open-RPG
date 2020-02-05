@@ -69,6 +69,7 @@ public class OLBanesBoonsActivity extends AppCompatActivity
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Intent in;
+                TextView txtBanesBoonsTitle = findViewById(R.id.txtBanesBoonsTitle);
                 switch (item.getItemId()) {
                     case R.id.navigation_Sheet:
                         finish();
@@ -81,9 +82,11 @@ public class OLBanesBoonsActivity extends AppCompatActivity
                         break;
                     case R.id.navigation_Banes:
                         showBanesByStats();
+                        txtBanesBoonsTitle.setText("Banes");
                         break;
                     case R.id.navigation_Boons:
                         showBoonsByStats();
+                        txtBanesBoonsTitle.setText("Boons");
                         break;
                     case R.id.navigation_Feats:
                         in = new Intent(getApplicationContext(), OLFeatsActivitiy.class);
