@@ -82,10 +82,14 @@ public class DialogAddItem extends Dialog implements android.view.View.OnClickLi
                 player.addItem(item);
                 //OLFeatAdapter.notifyDataSetChanged();
                 //Save
-                Log.i("Saving", "Started Saving...");
-                OLSavingSheets saveData = new OLSavingSheets();
-                saveData.saveData(getContext());
-                Log.i("Saving", "Saved");
+                try {
+                    Log.i("Saving", "Started Saving...");
+                    OLSavingSheets saveData = new OLSavingSheets();
+                    saveData.saveData(getContext());
+                    Log.i("Saving", "Saved");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 OLInventoryActivity.itemAdapter.notifyDataSetChanged();
                 break;
             case R.id.btnCancel:
