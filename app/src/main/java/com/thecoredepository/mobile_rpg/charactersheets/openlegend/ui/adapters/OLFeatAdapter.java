@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters;
+package com.thecoredepository.mobile_rpg.charactersheets.openlegend.ui.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -15,20 +15,19 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.Theming;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLFeatsActivitiy;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.Theming;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.SavingSheets;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.ui.activity.OLFeatsActivitiy;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.sheetList;
 
 public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder>
 {
@@ -275,7 +274,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
 
                     //Save
                     Log.i("Saving", "Started Saving...");
-                    OLSavingSheets saveData = new OLSavingSheets();
+                    SavingSheets saveData = new SavingSheets();
                     saveData.saveData(context);
                     Log.i("Saving", "Saved");
                 }
@@ -305,7 +304,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
 
                     //Save
                     Log.i("Saving", "Started Saving...");
-                    OLSavingSheets saveData = new OLSavingSheets();
+                    SavingSheets saveData = new SavingSheets();
                     saveData.saveData(context);
                     Log.i("Saving", "Saved");
                 }

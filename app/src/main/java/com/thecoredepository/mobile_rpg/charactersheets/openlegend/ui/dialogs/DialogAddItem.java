@@ -1,28 +1,20 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.dialogs;
+package com.thecoredepository.mobile_rpg.charactersheets.openlegend.ui.dialogs;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import androidx.annotation.NonNull;
-
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLInventoryActivity;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLFeatAdapter;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.SavingSheets;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.ui.activity.InventoryActivity;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLItem;
 
-import java.lang.reflect.Type;
-
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.player;
 
 public class DialogAddItem extends Dialog implements android.view.View.OnClickListener
 {
@@ -84,13 +76,13 @@ public class DialogAddItem extends Dialog implements android.view.View.OnClickLi
                 //Save
                 try {
                     Log.i("Saving", "Started Saving...");
-                    OLSavingSheets saveData = new OLSavingSheets();
+                    SavingSheets saveData = new SavingSheets();
                     saveData.saveData(getContext());
                     Log.i("Saving", "Saved");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                OLInventoryActivity.itemAdapter.notifyDataSetChanged();
+                InventoryActivity.itemAdapter.notifyDataSetChanged();
                 break;
             case R.id.btnCancel:
                 dismiss();

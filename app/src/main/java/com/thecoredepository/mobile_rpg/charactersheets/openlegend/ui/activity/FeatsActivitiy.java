@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity;
+package com.thecoredepository.mobile_rpg.charactersheets.openlegend.ui.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,12 +16,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.Theming;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLFeatAdapter;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.Theming;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.ui.adapters.OLFeatAdapter;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.player;
 
-public class OLFeatsActivitiy extends AppCompatActivity
+public class FeatsActivitiy extends AppCompatActivity
 {
     private Menu menu;
     private Boolean add = false;
@@ -59,19 +58,19 @@ public class OLFeatsActivitiy extends AppCompatActivity
                         finish();
                         break;
                     case R.id.navigation_Inventory:
-                        in = new Intent(getApplicationContext(), OLInventoryActivity.class);
+                        in = new Intent(getApplicationContext(), InventoryActivity.class);
                         //in.putExtra("selected", "Banes");
                         startActivity(in);
                         finish();
                         break;
                     case R.id.navigation_Banes:
-                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+                        in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
                         in.putExtra("selected", "Banes");
                         startActivity(in);
                         finish();
                         break;
                     case R.id.navigation_Boons:
-                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+                        in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
                         in.putExtra("selected", "Boons");
                         startActivity(in);
                         finish();

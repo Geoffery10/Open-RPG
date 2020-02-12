@@ -2,7 +2,7 @@ package com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists;
 
 import android.content.Context;
 
-import com.thecoredepository.mobile_rpg.AppContext;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.AppContext;
 import com.thecoredepository.mobile_rpg.R;
 
 import java.util.ArrayList;

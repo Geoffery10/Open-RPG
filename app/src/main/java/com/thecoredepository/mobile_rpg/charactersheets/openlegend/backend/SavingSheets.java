@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
+package com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -14,18 +14,14 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.lang.reflect.Type;
-import java.net.URI;
 import java.util.ArrayList;
 
-import static android.content.Context.MODE_PRIVATE;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.sheetList;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.sheets;
 
-public class OLSavingSheets
+public class SavingSheets
 {
 
     public void saveData(Context context)
