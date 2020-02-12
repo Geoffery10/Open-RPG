@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".charactersheets.openlegend.ui.activity.MainActivity"
+        <activity android:name="com.thecoredepository.mobile_rpg.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,42 +18,42 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".charactersheets.openlegend.ui.activity.SheetActivity"
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".charactersheets.openlegend.ui.activity.DiceActivity"
+            android:name="com.thecoredepository.mobile_rpg.dice.DiceActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".charactersheets.openlegend.ui.activity.InventoryActivity"
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLInventoryActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".charactersheets.openlegend.ui.activity.BanesBoonsActivity"
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLBanesBoonsActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".charactersheets.openlegend.ui.activity.OLFeatsActivitiy"
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLFeatsActivitiy"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".charactersheets.openlegend.ui.activity.NewSheet"
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLNewSheet"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".charactersheets.openlegend.ui.activity.EditSheet"
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".charactersheets.openlegend.ui.activity.AboutActivity"
+            android:name="com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.AboutActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>

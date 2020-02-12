@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.ui.activity;
+package com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.Theming;
+import com.thecoredepository.mobile_rpg.Theming;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 
-public class BanesBoonsActivity extends AppCompatActivity
+public class OLBanesBoonsActivity extends AppCompatActivity
 {
 
     private String selected;
@@ -75,7 +75,7 @@ public class BanesBoonsActivity extends AppCompatActivity
                         finish();
                         break;
                     case R.id.navigation_Inventory:
-                        in = new Intent(getApplicationContext(), InventoryActivity.class);
+                        in = new Intent(getApplicationContext(), OLInventoryActivity.class);
                         //in.putExtra("selected", "Banes");
                         startActivity(in);
                         finish();

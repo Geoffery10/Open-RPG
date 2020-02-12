@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.ui.activity;
+package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,14 +15,15 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.SavingSheets;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLBanesBoonsActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.sheetList;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.sheets;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats.*;
 
-public class NewSheet extends AppCompatActivity {
+public class OLNewSheet extends AppCompatActivity {
 
     public Context mContext = this;
     public openlegend playerTemp = new openlegend();
@@ -821,11 +822,11 @@ public class NewSheet extends AppCompatActivity {
                 LinearLayout layoutInventory = findViewById(R.id.layoutInventory);
                 layoutInventory.setVisibility(View.GONE);
                 //Open Sheet
-                Intent in = new Intent(getApplicationContext(), SheetActivity.class);
+                Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
                 sheets.add(playerTemp);
                 sheetList.add(playerTemp.getCharName());
 
-                SavingSheets saveData = new SavingSheets();
+                OLSavingSheets saveData = new OLSavingSheets();
                 saveData.saveData(mContext);
 
                 in.putExtra("selected", playerTemp.getCharName());
@@ -875,14 +876,14 @@ public class NewSheet extends AppCompatActivity {
 
     private void toBanes()
     {
-        Intent in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
+        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
         in.putExtra("selected", "Banes");
         startActivity(in);
     }
 
     private void toBoons()
     {
-        Intent in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
+        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
         in.putExtra("selected", "Boons");
         startActivity(in);
     }

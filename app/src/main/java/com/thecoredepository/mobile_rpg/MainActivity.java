@@ -1,5 +1,6 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.ui.activity;
+package com.thecoredepository.mobile_rpg;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -20,16 +21,26 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.thecoredepository.mobile_rpg.BuildConfig;
-import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.AppContext;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.SavingSheets;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.Theming;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLNewSheet;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.AboutActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLBanesBoonsActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLFeatsActivitiy;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLInventoryActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats.featList;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.sheetList;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.sheets;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -63,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         featList();
 
         //Load Saved Data
-        final SavingSheets saveData = new SavingSheets();
+        final OLSavingSheets saveData = new OLSavingSheets();
         saveData.loadData(this);
 
         //Load Data into Spinner
@@ -86,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 params.putString("sheet_name", selected);
                 mFirebaseAnalytics.logEvent("open_sheet", params);
                 //Open Sheet
-                Intent in = new Intent(getApplicationContext(), SheetActivity.class);
+                Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
                 in.putExtra("selected", selected);
                 startActivity(in);
             }
@@ -100,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 params.putString("new_sheet", "Started New Sheet");
                 mFirebaseAnalytics.logEvent("new_sheet", params);
                 //New Sheet
-                Intent in = new Intent(getApplicationContext(), NewSheet.class);
+                Intent in = new Intent(getApplicationContext(), OLNewSheet.class);
                 startActivity(in);
             }
         });

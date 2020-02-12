@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.ui.activity;
+package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +11,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.SavingSheets;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLBanesBoonsActivity;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLInventoryActivity;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 
-public class EditSheet extends AppCompatActivity
+public class OLEditSheet extends AppCompatActivity
 {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -294,7 +295,7 @@ public class EditSheet extends AppCompatActivity
         player.setStats();
 
         updateStats();
-        SavingSheets saveData = new SavingSheets();
+        OLSavingSheets saveData = new OLSavingSheets();
         saveData.saveData(this);
 
         Toast toast = Toast.makeText(this, "Player Saved", Toast.LENGTH_SHORT);
@@ -303,14 +304,14 @@ public class EditSheet extends AppCompatActivity
 
     private void toBanes()
     {
-        Intent in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
+        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
         in.putExtra("selected", "Banes");
         startActivity(in);
     }
 
     private void toBoons()
     {
-        Intent in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
+        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
         in.putExtra("selected", "Boons");
         startActivity(in);
     }
@@ -340,7 +341,7 @@ public class EditSheet extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                Intent in = new Intent(getApplicationContext(), InventoryActivity.class);
+                Intent in = new Intent(getApplicationContext(), OLInventoryActivity.class);
                 //in.putExtra("", attributeToDice();
                 startActivity(in);
             }
@@ -360,7 +361,7 @@ public class EditSheet extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 //Open Feats Menu
-                Intent in = new Intent(getApplicationContext(), FeatsActivitiy.class);
+                Intent in = new Intent(getApplicationContext(), OLFeatsActivitiy.class);
                 //in.putExtra("dice", attributeToDice(player.getProtection()));
                 startActivity(in);
             }

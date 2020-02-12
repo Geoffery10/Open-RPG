@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.ui.adapters;
+package com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters;
 
 import android.content.Context;
 import android.util.Log;
@@ -15,13 +15,13 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.Theming;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.SavingSheets;
+import com.thecoredepository.mobile_rpg.Theming;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
 import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLItem;
 
 import java.util.ArrayList;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
 
 public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.ViewHolder> {
     private Context context;
@@ -101,7 +101,7 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
 
                 //Save
                 Log.i("Saving", "Started Saving...");
-                SavingSheets saveData = new SavingSheets();
+                OLSavingSheets saveData = new OLSavingSheets();
                 saveData.saveData(context);
                 Log.i("Saving", "Saved");
             }
@@ -155,7 +155,7 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
 
         //Save
         Log.i("Saving", "Started Saving...");
-        SavingSheets saveData = new SavingSheets();
+        OLSavingSheets saveData = new OLSavingSheets();
         saveData.saveData(context);
         Log.i("Saving", "Saved");
     }

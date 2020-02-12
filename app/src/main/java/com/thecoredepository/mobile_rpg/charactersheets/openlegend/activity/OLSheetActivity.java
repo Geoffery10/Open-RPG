@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.ui.activity;
+package com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,9 +13,12 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,13 +37,18 @@ import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.load.resource.bitmap.FitCenter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.Theming;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.SavingSheets;
+import com.thecoredepository.mobile_rpg.Theming;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
+import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
+import com.thecoredepository.mobile_rpg.dice.DiceActivity;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.openlegend.player;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend.dice.attributeToDice;
+import java.io.File;
+import java.io.InputStream;
 
-public class SheetActivity extends AppCompatActivity {
+import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.dice.dice.attributeToDice;
+
+public class OLSheetActivity extends AppCompatActivity {
 
     private static final int GALLERY_REQUEST = 1000;
     private static final int PERMISSION_CODE = 1001;
@@ -104,7 +112,7 @@ public class SheetActivity extends AppCompatActivity {
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .transform(new FitCenter(), new CircleCrop())
                     .into(imgTopSheet);
-            SavingSheets saveData = new SavingSheets();
+            OLSavingSheets saveData = new OLSavingSheets();
             saveData.saveImage(data.getData());
         }
     }
@@ -287,17 +295,17 @@ public class SheetActivity extends AppCompatActivity {
                     case R.id.navigation_Sheet:
                         break;
                     case R.id.navigation_Inventory:
-                        in = new Intent(getApplicationContext(), InventoryActivity.class);
+                        in = new Intent(getApplicationContext(), OLInventoryActivity.class);
                         //in.putExtra("selected", "Banes");
                         startActivity(in);
                         break;
                     case R.id.navigation_Banes:
-                        in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
+                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
                         in.putExtra("selected", "Banes");
                         startActivity(in);
                         break;
                     case R.id.navigation_Boons:
-                        in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
+                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
                         in.putExtra("selected", "Boons");
                         startActivity(in);
                         break;
@@ -351,7 +359,7 @@ public class SheetActivity extends AppCompatActivity {
                 showHideBio();
                 break;
             case R.id.EditSheet:
-                Intent in = new Intent(getApplicationContext(), EditSheet.class);
+                Intent in = new Intent(getApplicationContext(), OLEditSheet.class);
                 startActivity(in);
                 break;
             case R.id.Banes:
@@ -534,13 +542,13 @@ public class SheetActivity extends AppCompatActivity {
     }
 
     private void toBanes() {
-        Intent in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
+        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
         in.putExtra("selected", "Banes");
         startActivity(in);
     }
 
     private void toBoons() {
-        Intent in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
+        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
         in.putExtra("selected", "Boons");
         startActivity(in);
     }
@@ -751,7 +759,7 @@ public class SheetActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent in = new Intent(getApplicationContext(), InventoryActivity.class);
+                Intent in = new Intent(getApplicationContext(), OLInventoryActivity.class);
                 //in.putExtra("", attributeToDice();
                 startActivity(in);
             }

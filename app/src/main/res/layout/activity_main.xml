@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/paper_bg"
     android:screenOrientation="portrait"
-    tools:context=".charactersheets.openlegend.ui.activity.MainActivity">
+    tools:context="com.thecoredepository.mobile_rpg.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"

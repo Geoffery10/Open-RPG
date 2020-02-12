@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.backend;
+package com.thecoredepository.mobile_rpg.dice;
 
 public class dice
 {
