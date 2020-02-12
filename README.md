@@ -8,18 +8,18 @@ The app includes features like dice rollers and lookup of skill/banes/boons/feat
 Let Open RPG do all the hard work for you!
 
 ## Table of Contents
-* [Screenshots](https://github.com/Geoffery10/Open-RPG#screenshots)
-* [Getting Started](https://github.com/Geoffery10/Open-RPG#getting-started)
-  * [Prerequisites](https://github.com/Geoffery10/Open-RPG#prerequisites)
-  * [Tested On](https://github.com/Geoffery10/Open-RPG#tested-on)
-  * [Installing](https://github.com/Geoffery10/Open-RPG#installing)
-    * [Play Store](https://github.com/Geoffery10/Open-RPG#play-store-most-up-to-date-version)
-    * [Firebase](https://github.com/Geoffery10/Open-RPG#firebase-bleeding-edge-testing-builds)
-    * [GitHub Releases](https://github.com/Geoffery10/Open-RPG#github-release)
-* [Built With](https://github.com/Geoffery10/Open-RPG#built-with)
-* [Contributing](https://github.com/Geoffery10/Open-RPG#contributing)  
-* [Authors](https://github.com/Geoffery10/Open-RPG#authors)
-* [License and Acknowledgments](https://github.com/Geoffery10/Open-RPG#license)
+* [Screenshots](#screenshots)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Tested On](#tested-on)
+  * [Installing](#installing)
+    * [Play Store](#play-store-most-up-to-date-version)
+    * [Firebase](#firebase-bleeding-edge-testing-builds)
+    * [GitHub Releases](#github-release)
+* [Built With](#built-with)
+* [Contributing](#contributing)  
+* [Authors](#authors)
+* [License and Acknowledgments](#license)
 
 ## Screenshots
 ![Screenshot](https://github.com/Geoffery10/Mobile-RPG/blob/master/github_assets/Screenshot_1568401566.png?raw=true)
