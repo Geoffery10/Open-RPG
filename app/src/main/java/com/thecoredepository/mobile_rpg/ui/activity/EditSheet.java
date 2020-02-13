@@ -11,11 +11,11 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
+import com.thecoredepository.mobile_rpg.backend.SavingSheets;
 
-import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.player;
 
-public class OLEditSheet extends AppCompatActivity
+public class EditSheet extends AppCompatActivity
 {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -294,7 +294,7 @@ public class OLEditSheet extends AppCompatActivity
         player.setStats();
 
         updateStats();
-        OLSavingSheets saveData = new OLSavingSheets();
+        SavingSheets saveData = new SavingSheets();
         saveData.saveData(this);
 
         Toast toast = Toast.makeText(this, "Player Saved", Toast.LENGTH_SHORT);
@@ -303,14 +303,14 @@ public class OLEditSheet extends AppCompatActivity
 
     private void toBanes()
     {
-        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+        Intent in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
         in.putExtra("selected", "Banes");
         startActivity(in);
     }
 
     private void toBoons()
     {
-        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+        Intent in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
         in.putExtra("selected", "Boons");
         startActivity(in);
     }
@@ -340,7 +340,7 @@ public class OLEditSheet extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                Intent in = new Intent(getApplicationContext(), OLInventoryActivity.class);
+                Intent in = new Intent(getApplicationContext(), InventoryActivity.class);
                 //in.putExtra("", attributeToDice();
                 startActivity(in);
             }
@@ -360,8 +360,8 @@ public class OLEditSheet extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 //Open Feats Menu
-                Intent in = new Intent(getApplicationContext(), OLFeatsActivitiy.class);
-                //in.putExtra("dice", attributeToDice(player.getProtection()));
+                Intent in = new Intent(getApplicationContext(), FeatsActivitiy.class);
+                //in.putExtra("Dice", attributeToDice(player.getProtection()));
                 startActivity(in);
             }
         });

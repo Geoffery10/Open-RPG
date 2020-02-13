@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.backend.dice;
+import com.thecoredepository.mobile_rpg.backend.Dice;
 import com.thecoredepository.mobile_rpg.ui.Theming;
 
 import java.util.ArrayList;
@@ -31,7 +31,7 @@ public class DiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dice);
 
         Intent intent = getIntent();
-        String diceIn = intent.getExtras().getString("dice");
+        String diceIn = intent.getExtras().getString("Dice");
 
         numberOfDie = numberOfDie(diceIn);
         valueOfDie = valueOfDie(diceIn);
@@ -205,26 +205,26 @@ public class DiceActivity extends AppCompatActivity {
         int roll = 0;
         if (valueOfDie == 2)
         {
-            roll = dice.d2();
+            roll = Dice.d2();
         }else if (valueOfDie == 4)
         {
-            roll = dice.d4();
+            roll = Dice.d4();
         }
         else if (valueOfDie == 6)
         {
-            roll = dice.d6();
+            roll = Dice.d6();
         }
         else if (valueOfDie == 8)
         {
-            roll = dice.d8();
+            roll = Dice.d8();
         }
         else if (valueOfDie == 10)
         {
-            roll = dice.d10();
+            roll = Dice.d10();
         }
         else
         {
-            roll = dice.custom(valueOfDie);
+            roll = Dice.custom(valueOfDie);
         }
         return roll;
     }
@@ -233,7 +233,7 @@ public class DiceActivity extends AppCompatActivity {
         int roll;
         do
         {
-            roll = dice.d20();
+            roll = Dice.d20();
             d20 += roll;
             txtRolls.setText(txtRolls.getText() + "Roll d20: " + roll +"\n");
         } while (roll == 20);
@@ -242,7 +242,7 @@ public class DiceActivity extends AppCompatActivity {
 
     private int numberOfDie(String dice)
     {
-        //Log.i("Dice", "" + Character.getNumericValue(dice.charAt(0)));
+        //Log.i("Dice", "" + Character.getNumericValue(Dice.charAt(0)));
         return Character.getNumericValue(dice.charAt(0));
     }
 

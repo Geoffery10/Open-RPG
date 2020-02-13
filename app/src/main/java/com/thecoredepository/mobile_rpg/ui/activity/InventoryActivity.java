@@ -23,18 +23,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.backend.SavingSheets;
 import com.thecoredepository.mobile_rpg.ui.Theming;
-import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
-import com.thecoredepository.mobile_rpg.ui.adapters.OLInventoryAdapter;
+import com.thecoredepository.mobile_rpg.ui.adapters.InventoryAdapter;
 import com.thecoredepository.mobile_rpg.ui.dialogs.DialogAddItem;
 
-import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.player;
 
-public class OLInventoryActivity extends AppCompatActivity
+public class InventoryActivity extends AppCompatActivity
 {
     private Menu menu;
     public Context mContext = this;
-    public static OLInventoryAdapter itemAdapter;
+    public static InventoryAdapter itemAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +96,7 @@ public class OLInventoryActivity extends AppCompatActivity
                 editWealth.setText(player.getWealth() + "");
                 //Save
                 Log.i("Saving", "Started Saving...");
-                OLSavingSheets saveData = new OLSavingSheets();
+                SavingSheets saveData = new SavingSheets();
                 saveData.saveData(mContext);
                 Log.i("Saving", "Saved");
                 InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -107,7 +107,7 @@ public class OLInventoryActivity extends AppCompatActivity
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogAddItem AddItem = new DialogAddItem(OLInventoryActivity.this);
+                DialogAddItem AddItem = new DialogAddItem(InventoryActivity.this);
                 AddItem.show();
             }
             });
@@ -139,25 +139,25 @@ public class OLInventoryActivity extends AppCompatActivity
                         finish();
                         break;
                     case R.id.navigation_Inventory:
-                        /*in = new Intent(getApplicationContext(), OLInventoryActivity.class);
+                        /*in = new Intent(getApplicationContext(), InventoryActivity.class);
                         //in.putExtra("selected", "Banes");
                         startActivity(in);
                         finish();*/
                         break;
                     case R.id.navigation_Banes:
-                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+                        in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
                         in.putExtra("selected", "Banes");
                         startActivity(in);
                         finish();
                         break;
                     case R.id.navigation_Boons:
-                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+                        in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
                         in.putExtra("selected", "Boons");
                         startActivity(in);
                         finish();
                         break;
                     case R.id.navigation_Feats:
-                        in = new Intent(getApplicationContext(), OLFeatsActivitiy.class);
+                        in = new Intent(getApplicationContext(), FeatsActivitiy.class);
                         //in.putExtra("selected", "Banes");
                         startActivity(in);
                         finish();
@@ -202,7 +202,7 @@ public class OLInventoryActivity extends AppCompatActivity
     private void generateRecyclerView(Boolean add, Boolean remove, RecyclerView recyclerView) {
         for (int i = 0; i < player.getAllItems().size(); i++)
         {
-            itemAdapter = new OLInventoryAdapter(this, player.getAllItems(), add, remove);
+            itemAdapter = new InventoryAdapter(this, player.getAllItems(), add, remove);
             recyclerView.setAdapter(itemAdapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
         }

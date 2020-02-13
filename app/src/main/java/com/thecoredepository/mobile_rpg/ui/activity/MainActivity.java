@@ -21,15 +21,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.thecoredepository.mobile_rpg.backend.SavingSheets;
 import com.thecoredepository.mobile_rpg.ui.AppContext;
 import com.thecoredepository.mobile_rpg.BuildConfig;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.ui.Theming;
-import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
 
 import static com.thecoredepository.mobile_rpg.backend.lists.OLFeats.featList;
-import static com.thecoredepository.mobile_rpg.backend.openlegend.sheetList;
-import static com.thecoredepository.mobile_rpg.backend.openlegend.sheets;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheetList;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheets;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         featList();
 
         //Load Saved Data
-        final OLSavingSheets saveData = new OLSavingSheets();
+        final SavingSheets saveData = new SavingSheets();
         saveData.loadData(this);
 
         //Load Data into Spinner
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 params.putString("sheet_name", selected);
                 mFirebaseAnalytics.logEvent("open_sheet", params);
                 //Open Sheet
-                Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
+                Intent in = new Intent(getApplicationContext(), SheetActivity.class);
                 in.putExtra("selected", selected);
                 startActivity(in);
             }
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 params.putString("new_sheet", "Started New Sheet");
                 mFirebaseAnalytics.logEvent("new_sheet", params);
                 //New Sheet
-                Intent in = new Intent(getApplicationContext(), OLNewSheet.class);
+                Intent in = new Intent(getApplicationContext(), NewSheet.class);
                 startActivity(in);
             }
         });

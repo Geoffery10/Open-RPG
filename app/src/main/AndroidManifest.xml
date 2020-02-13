@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.OLSheetActivity"
+            android:name=".ui.activity.SheetActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
@@ -28,27 +28,27 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".ui.activity.OLInventoryActivity"
+            android:name=".ui.activity.InventoryActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".ui.activity.OLBanesBoonsActivity"
+            android:name=".ui.activity.BanesBoonsActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".ui.activity.OLFeatsActivitiy"
+            android:name=".ui.activity.FeatsActivitiy"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.thecoredepository.mobile_rpg.ui.activity.OLNewSheet"
+            android:name="com.thecoredepository.mobile_rpg.ui.activity.NewSheet"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.thecoredepository.mobile_rpg.ui.activity.OLEditSheet"
+            android:name="com.thecoredepository.mobile_rpg.ui.activity.EditSheet"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>

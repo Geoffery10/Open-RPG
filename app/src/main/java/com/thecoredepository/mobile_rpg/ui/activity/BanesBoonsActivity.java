@@ -15,9 +15,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.ui.Theming;
 
-import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.player;
 
-public class OLBanesBoonsActivity extends AppCompatActivity
+public class BanesBoonsActivity extends AppCompatActivity
 {
 
     private String selected;
@@ -75,7 +75,7 @@ public class OLBanesBoonsActivity extends AppCompatActivity
                         finish();
                         break;
                     case R.id.navigation_Inventory:
-                        in = new Intent(getApplicationContext(), OLInventoryActivity.class);
+                        in = new Intent(getApplicationContext(), InventoryActivity.class);
                         //in.putExtra("selected", "Banes");
                         startActivity(in);
                         finish();
@@ -89,7 +89,7 @@ public class OLBanesBoonsActivity extends AppCompatActivity
                         txtBanesBoonsTitle.setText("Boons");
                         break;
                     case R.id.navigation_Feats:
-                        in = new Intent(getApplicationContext(), OLFeatsActivitiy.class);
+                        in = new Intent(getApplicationContext(), FeatsActivitiy.class);
                         //in.putExtra("selected", "Banes");
                         startActivity(in);
                         finish();

@@ -7,7 +7,6 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.thecoredepository.mobile_rpg.backend.openlegend;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -18,11 +17,11 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
-import static com.thecoredepository.mobile_rpg.backend.openlegend.sheetList;
-import static com.thecoredepository.mobile_rpg.backend.openlegend.sheets;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.player;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheetList;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheets;
 
-public class OLSavingSheets
+public class SavingSheets
 {
 
     public void saveData(Context context)
@@ -53,14 +52,14 @@ public class OLSavingSheets
         SharedPreferences sheetsPreferences = context.getSharedPreferences("sheets", Context.MODE_PRIVATE);
         gson = new Gson();
         json = sheetsPreferences.getString("sheets", null);
-        type = new TypeToken<ArrayList<openlegend>>() {}.getType();
+        type = new TypeToken<ArrayList<OpenLegend>>() {}.getType();
         sheets = gson.fromJson(json, type);
 
         if (sheetList == null || sheets == null)
         {
             sheetList = new ArrayList<>();
             sheets = new ArrayList<>();
-            openlegend.HARDCODEDSHEETS();
+            OpenLegend.HARDCODEDSHEETS();
         }
     }
 

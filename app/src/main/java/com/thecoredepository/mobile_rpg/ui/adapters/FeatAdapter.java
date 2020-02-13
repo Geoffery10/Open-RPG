@@ -18,18 +18,18 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.backend.SavingSheets;
 import com.thecoredepository.mobile_rpg.ui.Theming;
-import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
-import com.thecoredepository.mobile_rpg.ui.activity.OLFeatsActivitiy;
+import com.thecoredepository.mobile_rpg.ui.activity.FeatsActivitiy;
 import com.thecoredepository.mobile_rpg.backend.lists.OLFeats;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
-import static com.thecoredepository.mobile_rpg.backend.openlegend.sheetList;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.player;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheetList;
 
-public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder>
+public class FeatAdapter extends RecyclerView.Adapter<FeatAdapter.ViewHolder>
 {
     private Context context;
     private Boolean add = false;
@@ -46,7 +46,7 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
 
     private ArrayList<OLFeats> featsList = new ArrayList<>();
 
-    public OLFeatAdapter(Context context, ArrayList<OLFeats> feats, Boolean add, Boolean remove, Boolean showAll)
+    public FeatAdapter(Context context, ArrayList<OLFeats> feats, Boolean add, Boolean remove, Boolean showAll)
     {
         this.context = context;
         this.featsList = feats;
@@ -269,12 +269,12 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
                     Log.i("finalFeat", finalFeat.toString());
                     player.addFeat(finalFeat);
                     //notifyItemRemoved(finalPosition);
-                    OLFeatsActivitiy updateFeatPoints = new OLFeatsActivitiy();
+                    FeatsActivitiy updateFeatPoints = new FeatsActivitiy();
                     updateFeatPoints.updateFeatsHeader(context);
 
                     //Save
                     Log.i("Saving", "Started Saving...");
-                    OLSavingSheets saveData = new OLSavingSheets();
+                    SavingSheets saveData = new SavingSheets();
                     saveData.saveData(context);
                     Log.i("Saving", "Saved");
                 }
@@ -299,12 +299,12 @@ public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder
                     //Remove Feat from Player then Reload
                     player.removeFeat(finalFeat);
                     notifyItemRemoved(finalPosition);
-                    OLFeatsActivitiy updateFeatPoints = new OLFeatsActivitiy();
+                    FeatsActivitiy updateFeatPoints = new FeatsActivitiy();
                     updateFeatPoints.updateFeatsHeader(context);
 
                     //Save
                     Log.i("Saving", "Started Saving...");
-                    OLSavingSheets saveData = new OLSavingSheets();
+                    SavingSheets saveData = new SavingSheets();
                     saveData.saveData(context);
                     Log.i("Saving", "Saved");
                 }

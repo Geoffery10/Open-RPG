@@ -35,16 +35,16 @@ import com.bumptech.glide.load.resource.bitmap.FitCenter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.ui.Theming;
-import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
+import com.thecoredepository.mobile_rpg.backend.SavingSheets;
 
-import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
-import static com.thecoredepository.mobile_rpg.backend.dice.attributeToDice;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.player;
+import static com.thecoredepository.mobile_rpg.backend.Dice.attributeToDice;
 
-public class OLSheetActivity extends AppCompatActivity {
+public class SheetActivity extends AppCompatActivity {
 
     private static final int GALLERY_REQUEST = 1000;
     private static final int PERMISSION_CODE = 1001;
-    //public openlegend player = new openlegend();
+    //public OpenLegend player = new OpenLegend();
     public boolean bioEnabled = false;
     public Menu menu;
 
@@ -104,7 +104,7 @@ public class OLSheetActivity extends AppCompatActivity {
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .transform(new FitCenter(), new CircleCrop())
                     .into(imgTopSheet);
-            OLSavingSheets saveData = new OLSavingSheets();
+            SavingSheets saveData = new SavingSheets();
             saveData.saveImage(data.getData());
         }
     }
@@ -287,24 +287,24 @@ public class OLSheetActivity extends AppCompatActivity {
                     case R.id.navigation_Sheet:
                         break;
                     case R.id.navigation_Inventory:
-                        in = new Intent(getApplicationContext(), OLInventoryActivity.class);
+                        in = new Intent(getApplicationContext(), InventoryActivity.class);
                         //in.putExtra("selected", "Banes");
                         startActivity(in);
                         break;
                     case R.id.navigation_Banes:
-                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+                        in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
                         in.putExtra("selected", "Banes");
                         startActivity(in);
                         break;
                     case R.id.navigation_Boons:
-                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+                        in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
                         in.putExtra("selected", "Boons");
                         startActivity(in);
                         break;
                     case R.id.navigation_Feats:
                         //Open Feats Menu
-                        in = new Intent(getApplicationContext(), OLFeatsActivitiy.class);
-                        //in.putExtra("dice", attributeToDice(player.getProtection()));
+                        in = new Intent(getApplicationContext(), FeatsActivitiy.class);
+                        //in.putExtra("Dice", attributeToDice(player.getProtection()));
                         startActivity(in);
                         break;
                 }
@@ -351,7 +351,7 @@ public class OLSheetActivity extends AppCompatActivity {
                 showHideBio();
                 break;
             case R.id.EditSheet:
-                Intent in = new Intent(getApplicationContext(), OLEditSheet.class);
+                Intent in = new Intent(getApplicationContext(), EditSheet.class);
                 startActivity(in);
                 break;
             case R.id.Banes:
@@ -534,13 +534,13 @@ public class OLSheetActivity extends AppCompatActivity {
     }
 
     private void toBanes() {
-        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+        Intent in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
         in.putExtra("selected", "Banes");
         startActivity(in);
     }
 
     private void toBoons() {
-        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+        Intent in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
         in.putExtra("selected", "Boons");
         startActivity(in);
     }
@@ -751,7 +751,7 @@ public class OLSheetActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent in = new Intent(getApplicationContext(), OLInventoryActivity.class);
+                Intent in = new Intent(getApplicationContext(), InventoryActivity.class);
                 //in.putExtra("", attributeToDice();
                 startActivity(in);
             }
@@ -762,7 +762,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getAgility()));
+                in.putExtra("Dice", attributeToDice(player.getAgility()));
                 startActivity(in);
             }
         });
@@ -771,7 +771,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getFortitude()));
+                in.putExtra("Dice", attributeToDice(player.getFortitude()));
                 startActivity(in);
             }
         });
@@ -780,7 +780,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getMight()));
+                in.putExtra("Dice", attributeToDice(player.getMight()));
                 startActivity(in);
             }
         });
@@ -789,7 +789,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getLearning()));
+                in.putExtra("Dice", attributeToDice(player.getLearning()));
                 startActivity(in);
             }
         });
@@ -798,7 +798,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getLogic()));
+                in.putExtra("Dice", attributeToDice(player.getLogic()));
                 startActivity(in);
             }
         });
@@ -807,7 +807,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getPerception()));
+                in.putExtra("Dice", attributeToDice(player.getPerception()));
                 startActivity(in);
             }
         });
@@ -816,7 +816,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getWill()));
+                in.putExtra("Dice", attributeToDice(player.getWill()));
                 startActivity(in);
             }
         });
@@ -825,7 +825,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getDeception()));
+                in.putExtra("Dice", attributeToDice(player.getDeception()));
                 startActivity(in);
             }
         });
@@ -834,7 +834,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getPersuasion()));
+                in.putExtra("Dice", attributeToDice(player.getPersuasion()));
                 startActivity(in);
             }
         });
@@ -843,7 +843,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getPresence()));
+                in.putExtra("Dice", attributeToDice(player.getPresence()));
                 startActivity(in);
             }
         });
@@ -852,7 +852,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getAlteration()));
+                in.putExtra("Dice", attributeToDice(player.getAlteration()));
                 startActivity(in);
             }
         });
@@ -861,7 +861,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getCreation()));
+                in.putExtra("Dice", attributeToDice(player.getCreation()));
                 startActivity(in);
             }
         });
@@ -870,7 +870,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getEnergy()));
+                in.putExtra("Dice", attributeToDice(player.getEnergy()));
                 startActivity(in);
             }
         });
@@ -879,7 +879,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getEntropy()));
+                in.putExtra("Dice", attributeToDice(player.getEntropy()));
                 startActivity(in);
             }
         });
@@ -888,7 +888,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getInfluence()));
+                in.putExtra("Dice", attributeToDice(player.getInfluence()));
                 startActivity(in);
             }
         });
@@ -897,7 +897,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getMovement()));
+                in.putExtra("Dice", attributeToDice(player.getMovement()));
                 startActivity(in);
             }
         });
@@ -906,7 +906,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getPrescience()));
+                in.putExtra("Dice", attributeToDice(player.getPrescience()));
                 startActivity(in);
             }
         });
@@ -915,7 +915,7 @@ public class OLSheetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Roll Dice
                 Intent in = new Intent(getApplicationContext(), DiceActivity.class);
-                in.putExtra("dice", attributeToDice(player.getProtection()));
+                in.putExtra("Dice", attributeToDice(player.getProtection()));
                 startActivity(in);
             }
         });
@@ -924,8 +924,8 @@ public class OLSheetActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Open Feats Menu
-                Intent in = new Intent(getApplicationContext(), OLFeatsActivitiy.class);
-                //in.putExtra("dice", attributeToDice(player.getProtection()));
+                Intent in = new Intent(getApplicationContext(), FeatsActivitiy.class);
+                //in.putExtra("Dice", attributeToDice(player.getProtection()));
                 startActivity(in);
             }
         });

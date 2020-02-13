@@ -18,7 +18,7 @@ import com.thecoredepository.mobile_rpg.backend.lists.OLBoons;
 
 import java.util.ArrayList;
 
-public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.ViewHolder>
+public class BaneBoonAdapter extends RecyclerView.Adapter<BaneBoonAdapter.ViewHolder>
 {
     private Context context;
     private Boolean showBanes = false;
@@ -44,7 +44,7 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.Vi
     private ArrayList<OLBanes> banesList = new ArrayList<>();
     private ArrayList<OLBoons> boonsList = new ArrayList<>();
 
-    public OLBaneBoonAdapter(Context context, ArrayList<OLBanes> banes, ArrayList<OLBoons> boons, Boolean showBanes, Boolean showBoons, Boolean showAll)
+    public BaneBoonAdapter(Context context, ArrayList<OLBanes> banes, ArrayList<OLBoons> boons, Boolean showBanes, Boolean showBoons, Boolean showAll)
     {
         this.context = context;
         this.banesList = banes;
@@ -56,14 +56,14 @@ public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.Vi
 
     @NonNull
     @Override
-    public OLBaneBoonAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BaneBoonAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_baneboon_item, parent, false);
-        OLBaneBoonAdapter.ViewHolder holder = new OLBaneBoonAdapter.ViewHolder(view);
+        BaneBoonAdapter.ViewHolder holder = new BaneBoonAdapter.ViewHolder(view);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final OLBaneBoonAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final BaneBoonAdapter.ViewHolder holder, int position) {
         Log.d("Recycle", "onBindViewHolder called");
         OLBanes bane = new OLBanes();
         OLBoons boon = new OLBoons();

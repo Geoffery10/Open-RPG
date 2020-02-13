@@ -15,17 +15,17 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
-import com.thecoredepository.mobile_rpg.backend.openlegend;
+import com.thecoredepository.mobile_rpg.backend.OpenLegend;
+import com.thecoredepository.mobile_rpg.backend.SavingSheets;
 import com.thecoredepository.mobile_rpg.backend.lists.OLFeats;
 
-import static com.thecoredepository.mobile_rpg.backend.openlegend.sheetList;
-import static com.thecoredepository.mobile_rpg.backend.openlegend.sheets;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheetList;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheets;
 
-public class OLNewSheet extends AppCompatActivity {
+public class NewSheet extends AppCompatActivity {
 
     public Context mContext = this;
-    public openlegend playerTemp = new openlegend();
+    public OpenLegend playerTemp = new OpenLegend();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -821,11 +821,11 @@ public class OLNewSheet extends AppCompatActivity {
                 LinearLayout layoutInventory = findViewById(R.id.layoutInventory);
                 layoutInventory.setVisibility(View.GONE);
                 //Open Sheet
-                Intent in = new Intent(getApplicationContext(), OLSheetActivity.class);
+                Intent in = new Intent(getApplicationContext(), SheetActivity.class);
                 sheets.add(playerTemp);
                 sheetList.add(playerTemp.getCharName());
 
-                OLSavingSheets saveData = new OLSavingSheets();
+                SavingSheets saveData = new SavingSheets();
                 saveData.saveData(mContext);
 
                 in.putExtra("selected", playerTemp.getCharName());
@@ -875,14 +875,14 @@ public class OLNewSheet extends AppCompatActivity {
 
     private void toBanes()
     {
-        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+        Intent in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
         in.putExtra("selected", "Banes");
         startActivity(in);
     }
 
     private void toBoons()
     {
-        Intent in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+        Intent in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
         in.putExtra("selected", "Boons");
         startActivity(in);
     }

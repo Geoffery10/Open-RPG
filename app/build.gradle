@@ -21,7 +21,7 @@ android {
     }
     sourceSets {
         main {
-            assets.srcDirs = ['src/main/assets', 'src/main/java/com/thecoredepository/mobile_rpg/charactersheets/openlegend/assets']
+            assets.srcDirs = ['src/main/assets', 'src/main/java/com/thecoredepository/mobile_rpg/charactersheets/OpenLegend/assets']
         }
     }
 }

@@ -10,11 +10,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
-import com.thecoredepository.mobile_rpg.ui.activity.OLInventoryActivity;
+import com.thecoredepository.mobile_rpg.backend.SavingSheets;
+import com.thecoredepository.mobile_rpg.ui.activity.InventoryActivity;
 import com.thecoredepository.mobile_rpg.backend.lists.OLItem;
 
-import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.player;
 
 public class DialogAddItem extends Dialog implements android.view.View.OnClickListener
 {
@@ -72,17 +72,17 @@ public class DialogAddItem extends Dialog implements android.view.View.OnClickLi
                 //Type should be gathered from a spinner
                 item.setType("Item");
                 player.addItem(item);
-                //OLFeatAdapter.notifyDataSetChanged();
+                //FeatAdapter.notifyDataSetChanged();
                 //Save
                 try {
                     Log.i("Saving", "Started Saving...");
-                    OLSavingSheets saveData = new OLSavingSheets();
+                    SavingSheets saveData = new SavingSheets();
                     saveData.saveData(getContext());
                     Log.i("Saving", "Saved");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                OLInventoryActivity.itemAdapter.notifyDataSetChanged();
+                InventoryActivity.itemAdapter.notifyDataSetChanged();
                 break;
             case R.id.btnCancel:
                 dismiss();

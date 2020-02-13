@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class openlegend
+public class OpenLegend
 {
     //Values from the Open Legend Character Sheet
     private String playerName;
@@ -103,9 +103,9 @@ public class openlegend
 
 
     //Define Player
-    public static ArrayList<openlegend> sheets = new ArrayList<openlegend>(); //Sheets
+    public static ArrayList<OpenLegend> sheets = new ArrayList<OpenLegend>(); //Sheets
     public static ArrayList<String> sheetList = new ArrayList<String>(); //List of Sheet Names
-    public static openlegend player = new openlegend(); //Current Sheets
+    public static OpenLegend player = new OpenLegend(); //Current Sheets
 
     //Image
     private String imagePath = null;
@@ -114,7 +114,7 @@ public class openlegend
 
     @Override
     public String toString() {
-        return "openlegend{" +
+        return "OpenLegend{" +
                 "playerName='" + playerName + '\'' +
                 ", charName='" + charName + '\'' +
                 ", nickname='" + nickname + '\'' +
@@ -1120,12 +1120,12 @@ public class openlegend
         AttackTypes = attackTypes;
     }
 
-    public static ArrayList<openlegend> getSheets() {
+    public static ArrayList<OpenLegend> getSheets() {
         return sheets;
     }
 
-    public static void setSheets(ArrayList<openlegend> sheets) {
-        openlegend.sheets = sheets;
+    public static void setSheets(ArrayList<OpenLegend> sheets) {
+        OpenLegend.sheets = sheets;
     }
 
     public static ArrayList<String> getSheetList() {
@@ -1133,7 +1133,7 @@ public class openlegend
     }
 
     public static void setSheetList(ArrayList<String> sheetList) {
-        openlegend.sheetList = sheetList;
+        OpenLegend.sheetList = sheetList;
     }
 
     public void setStats()
@@ -1202,14 +1202,14 @@ public class openlegend
          */
     }
 
-    public openlegend loadCharacterSheet(String selected)
+    public OpenLegend loadCharacterSheet(String selected)
     {
         player = sheets.get(sheetList.indexOf(selected));
         return player;
     }
 
     public void newCharacter(String playerName, String type, String charName, String nickname, int majorLvl, int minorLvl, int levelTotal, String deity, String[] languages, String bio, int attributePointsAvalible, int getAttributePointsUsed, int agility, int fortitude, int might, int learning, int logic, int perception, int will, int deception, int persuasion, int presence, int alteration, int creation, int energy, int entropy, int influence, int movement, int prescience, int protection, int toughness, int guard, int armor, int resolve, int hitpoints, int damageTaken, int speed, int featPointsAvailable, int featPointsUsed, String[] perks, String[] flaws, int inventorySize, ArrayList items, ArrayList itemInfo, int wealth, ArrayList banes, ArrayList boons) {
-        openlegend newChar = new openlegend();
+        OpenLegend newChar = new OpenLegend();
 
         newChar.playerName = playerName;
         newChar.type = type;
@@ -1274,7 +1274,7 @@ public class openlegend
     {
         if (sheetList.contains("Well-Rounded Jack") == false)
         {
-            openlegend well_rounded_jack = new openlegend();
+            OpenLegend well_rounded_jack = new OpenLegend();
             well_rounded_jack.setType("pc");
             well_rounded_jack.setCharName("Well-Rounded Jack");
             well_rounded_jack.setNickname("Jack");
@@ -1340,7 +1340,7 @@ public class openlegend
         /*
         if (sheetList.contains("Tazmur") == false)
         {
-            openlegend tazmur = new openlegend();
+            OpenLegend tazmur = new OpenLegend();
             tazmur.setType("pc");
             tazmur.setCharName("Tazmur");
             tazmur.setNickname("Taz");
@@ -1422,7 +1422,7 @@ public class openlegend
 
         if (sheetList.contains("Nightmare") == false)
         {
-            openlegend nightmare = new openlegend();
+            OpenLegend nightmare = new OpenLegend();
             nightmare.setType("ccIII");
             nightmare.setCharName("Nightmare");
             nightmare.setNickname("Spirit");
@@ -1463,7 +1463,7 @@ public class openlegend
 
         if (sheetList.contains("Mazok") == false)
         {
-            openlegend mazok = new openlegend();
+            OpenLegend mazok = new OpenLegend();
             mazok.setType("pc");
             mazok.setCharName("Mazok");
             mazok.setNickname("Maz");
@@ -1550,7 +1550,7 @@ public class openlegend
 
         if (sheetList.contains("Ookami") == false)
         {
-            openlegend ookami = new openlegend();
+            OpenLegend ookami = new OpenLegend();
             ookami.setType("ccIII");
             ookami.setCharName("Ookami");
             ookami.setNickname("");
@@ -1600,7 +1600,7 @@ public class openlegend
 
         if (sheetList.contains("Noujou") == false)
         {
-            openlegend Noujou = new openlegend();
+            OpenLegend Noujou = new OpenLegend();
             Noujou.setType("pc");
             Noujou.setCharName("Noujou");
             Noujou.setNickname("Noujou");
@@ -1644,7 +1644,7 @@ public class openlegend
         }*/
     }
 
-    public static openlegend blankChar(openlegend blank) {
+    public static OpenLegend blankChar(OpenLegend blank) {
         blank.playerName = "";
         blank.type = "";
         blank.charName = "";

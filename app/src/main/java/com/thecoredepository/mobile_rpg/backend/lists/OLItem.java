@@ -9,7 +9,7 @@ public class OLItem
     private int quantity; //How many of said item
     private  String type; //Weapon, Armor, Item, Other
     private int diceType; //d20, d12, d6
-    private int diceQuantity; // 5 dice, 3 dice, 1 dice
+    private int diceQuantity; // 5 Dice, 3 Dice, 1 Dice
 
     public OLItem()
     {

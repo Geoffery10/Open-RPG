@@ -15,22 +15,22 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.backend.SavingSheets;
 import com.thecoredepository.mobile_rpg.ui.Theming;
-import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
 import com.thecoredepository.mobile_rpg.backend.lists.OLItem;
 
 import java.util.ArrayList;
 
-import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.player;
 
-public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.ViewHolder> {
+public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.ViewHolder> {
     private Context context;
 
     private ArrayList<OLItem> items = new ArrayList<>();
     private Boolean add = false;
     private Boolean remove = false;
 
-    public OLInventoryAdapter(Context context, ArrayList<OLItem> items, Boolean add, Boolean remove) {
+    public InventoryAdapter(Context context, ArrayList<OLItem> items, Boolean add, Boolean remove) {
         this.context = context;
         this.items = items;
         this.add = add;
@@ -41,12 +41,12 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_item_item, parent, false);
-        OLInventoryAdapter.ViewHolder holder = new OLInventoryAdapter.ViewHolder(view);
+        InventoryAdapter.ViewHolder holder = new InventoryAdapter.ViewHolder(view);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final OLInventoryAdapter.ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final InventoryAdapter.ViewHolder holder, final int position) {
         Log.d("Recycle", "onBindViewHolder called");
         final OLItem item = items.get(position);
         holder.btnSave.setVisibility(View.GONE);
@@ -101,7 +101,7 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
 
                 //Save
                 Log.i("Saving", "Started Saving...");
-                OLSavingSheets saveData = new OLSavingSheets();
+                SavingSheets saveData = new SavingSheets();
                 saveData.saveData(context);
                 Log.i("Saving", "Saved");
             }
@@ -155,7 +155,7 @@ public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.
 
         //Save
         Log.i("Saving", "Started Saving...");
-        OLSavingSheets saveData = new OLSavingSheets();
+        SavingSheets saveData = new SavingSheets();
         saveData.saveData(context);
         Log.i("Saving", "Saved");
     }

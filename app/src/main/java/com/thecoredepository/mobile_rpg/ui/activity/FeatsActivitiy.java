@@ -17,11 +17,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.ui.Theming;
-import com.thecoredepository.mobile_rpg.ui.adapters.OLFeatAdapter;
+import com.thecoredepository.mobile_rpg.ui.adapters.FeatAdapter;
 
-import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.player;
 
-public class OLFeatsActivitiy extends AppCompatActivity
+public class FeatsActivitiy extends AppCompatActivity
 {
     private Menu menu;
     private Boolean add = false;
@@ -58,19 +58,19 @@ public class OLFeatsActivitiy extends AppCompatActivity
                         finish();
                         break;
                     case R.id.navigation_Inventory:
-                        in = new Intent(getApplicationContext(), OLInventoryActivity.class);
+                        in = new Intent(getApplicationContext(), InventoryActivity.class);
                         //in.putExtra("selected", "Banes");
                         startActivity(in);
                         finish();
                         break;
                     case R.id.navigation_Banes:
-                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+                        in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
                         in.putExtra("selected", "Banes");
                         startActivity(in);
                         finish();
                         break;
                     case R.id.navigation_Boons:
-                        in = new Intent(getApplicationContext(), OLBanesBoonsActivity.class);
+                        in = new Intent(getApplicationContext(), BanesBoonsActivity.class);
                         in.putExtra("selected", "Boons");
                         startActivity(in);
                         finish();
@@ -144,7 +144,7 @@ public class OLFeatsActivitiy extends AppCompatActivity
     private void generateRecyclerView(Boolean add, Boolean remove, Boolean showAll, RecyclerView recyclerView) {
         for (int i = 0; i < player.getFeatCount(); i++)
         {
-            OLFeatAdapter adapter = new OLFeatAdapter(this, player.getFeats(), add, remove, showAll);
+            FeatAdapter adapter = new FeatAdapter(this, player.getFeats(), add, remove, showAll);
             recyclerView.setAdapter(adapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             TextView txtFeatHeader = findViewById(R.id.txtFeatsHeader);

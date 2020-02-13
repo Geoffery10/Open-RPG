@@ -1,6 +1,6 @@
 package com.thecoredepository.mobile_rpg.backend;
 
-public class dice
+public class Dice
 {
     public static int d2()
     {
@@ -41,7 +41,7 @@ public class dice
         return result;
     }
 
-    //Changes attribute score to dice string
+    //Changes attribute score to Dice string
     public static String attributeToDice(int attribute)
     {
         if (attribute == 1){
