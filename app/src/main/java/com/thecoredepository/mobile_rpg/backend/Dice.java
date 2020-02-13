@@ -7,32 +7,9 @@ package com.thecoredepository.mobile_rpg.backend;
 
 public class Dice
 {
-    public static int d2()
-    {
-        return (int)(Math.random()*2) + 1;
-    }
-    public static int d4()
-    {
-        return (int)(Math.random()*4) + 1;
-    }
-    public static int d6()
-    {
-        return (int)(Math.random()*6) + 1;
-    }
-    public static int d8()
-    {
-        return (int)(Math.random()*8) + 1;
-    }
-    public static int d10()
-    {
-        return (int)(Math.random()*10) + 1;
-    }
-    public static int d20()
-    {
-        return (int)(Math.random()*20) + 1;
-    }
     public static int custom(int custom)
     {
+        //Roll any dice
         return (int)((Math.random()*custom)+1);
     }
     

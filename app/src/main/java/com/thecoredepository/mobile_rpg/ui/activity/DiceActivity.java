@@ -212,7 +212,7 @@ public class DiceActivity extends AppCompatActivity {
         int roll;
         do
         {
-            roll = Dice.d20();
+            roll = Dice.custom(20);
             d20 += roll;
             txtRolls.setText(txtRolls.getText() + "Roll d20: " + roll +"\n");
         } while (roll == 20);
