@@ -38,20 +38,24 @@ public class OLFeats
 
     @Override
     public String toString() {
-        return "OLFeats{" +
-                "\ntitle='" + title + '\'' +
-                ", \nmaxLevel=" + maxLevel +
-                ", \nlevel=" + level +
-                ", \nfeatCost=" + featCost +
-                ", \nfeatCostTotal=" + featCostTotal +
-                ", \ndescription='" + description + '\'' +
-                ", \nprerequisites='" + prerequisites + '\'' +
-                ", \neffects='" + effects + '\'' +
-                ", \nspecial='" + special + '\'' +
-                ", \nconnectionType='" + connectionType + '\'' +
-                ", \nconnection='" + connection + '\'' +
-                ", \ncanBeTakenMoreThanOnce=" + canBeTakenMoreThanOnce +
-                "\n}";
+        if (!title.equals("Filler")) {
+            return "OLFeats{" +
+                    "\ntitle='" + title + '\'' +
+                    ", \nmaxLevel=" + maxLevel +
+                    ", \nlevel=" + level +
+                    ", \nfeatCost=" + featCost +
+                    ", \nfeatCostTotal=" + featCostTotal +
+                    ", \ndescription='" + description + '\'' +
+                    ", \nprerequisites='" + prerequisites + '\'' +
+                    ", \neffects='" + effects + '\'' +
+                    ", \nspecial='" + special + '\'' +
+                    ", \nconnectionType='" + connectionType + '\'' +
+                    ", \nconnection='" + connection + '\'' +
+                    ", \ncanBeTakenMoreThanOnce=" + canBeTakenMoreThanOnce +
+                    "\n}";
+        } else {
+            return "";
+        }
     }
 
     public OLFeats getFeatPosition(int index) {

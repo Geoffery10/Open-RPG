@@ -162,8 +162,58 @@ public class OpenLegend
                 ", Boons=" + Boons +
                 '}';
     }
-	
-	public int getLethalDamage() {
+
+
+    public String toFile() {
+        return "Open Legend Character: " +
+                "\n\t Player Name = " + playerName +
+                "\n\t Character Name = " + charName +
+                "\n\t Nickname = " + nickname +
+                "\n\t Character Type = " + type +
+                "\n\t Deity = " + deity +
+                "\n\t Languages = " + Arrays.toString(languages) +
+                "\n\t Bio = " + bio +
+                "\n\n\t Major Level = " + majorLvl +
+                "\n\t Minor Level = " + minorLvl +
+                "\n\t Level Total = " + levelTotal +
+                "\n\n\t Attribute Points = " + getAttributePointsUsed + "/" + attributePointsAvalible +
+                "\n\t\t Agility = " + agility +
+                "\n\t\t Fortitude = " + fortitude +
+                "\n\t\t Might = " + might +
+                "\n\t\t Learning = " + learning +
+                "\n\t\t Logic = " + logic +
+                "\n\t\t Perception = " + perception +
+                "\n\t\t Will = " + will +
+                "\n\t\t Deception = " + deception +
+                "\n\t\t Persuasion = " + persuasion +
+                "\n\t\t Presence = " + presence +
+                "\n\t\t Alteration = " + alteration +
+                "\n\t\t Creation = " + creation +
+                "\n\t\t Energy = " + energy +
+                "\n\t\t Entropy = " + entropy +
+                "\n\t\t Influence = " + influence +
+                "\n\t\t Movement = " + movement +
+                "\n\t\t Prescience = " + prescience +
+                "\n\t\t Protection = " + protection +
+                "\n\n\t Toughness = " + toughness +
+                "\n\t Guard = " + guard +
+                "\n\t Armor = " + armor +
+                "\n\t Resolve = " + resolve +
+                "\n\t Speed = " + speed +
+                "\n\n\t Hitpoints = " + hitpoints +
+                "\n\t Damage Taken = " + damageTaken +
+                "\n\t Lethal Damage = " + lethalDamage +
+                "\n\n\n\t Feat Points = " + featPointsUsed + "/" + featPointsAvailable +
+                "\n\n Feats = " + feats.toString() +
+                "\n\n\t Perks = " + Arrays.toString(perks) +
+                "\n\t Flaws = " + Arrays.toString(flaws) +
+                "\n\n\n Wealth Level = " + wealth +
+                "\n\n Items = " + items.toString() +
+                "\n\n Available Banes = " + AvailableBanes +
+                "\n\n Available Boons = " + AvailableBoons;
+    }
+
+    public int getLethalDamage() {
 		return lethalDamage;
 	}
 	

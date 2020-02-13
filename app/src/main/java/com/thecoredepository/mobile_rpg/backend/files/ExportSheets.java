@@ -5,7 +5,6 @@ package com.thecoredepository.mobile_rpg.backend.files;
 // should also be able to be imported back into the app.
 */
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -13,26 +12,13 @@ import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
 import android.widget.Toast;
-
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import com.thecoredepository.mobile_rpg.backend.OpenLegend;
 import com.thecoredepository.mobile_rpg.ui.AppContext;
-
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-
-import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
-import static android.content.Context.MODE_PRIVATE;
 
 public class ExportSheets
 {
@@ -59,7 +45,7 @@ public class ExportSheets
                     FileOutputStream os = null;
                     try {
                         os = new FileOutputStream(file);
-                        os.write(sheet.toString().getBytes());
+                        os.write(sheet.toFile().getBytes());
                         os.close();
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -78,7 +64,7 @@ public class ExportSheets
                 FileOutputStream os = null;
                 try {
                     os = new FileOutputStream(file);
-                    os.write(sheet.toString().getBytes());
+                    os.write(sheet.toFile().getBytes());
                     os.close();
                 } catch (IOException e) {
                     e.printStackTrace();
