@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.dice;
+package com.thecoredepository.mobile_rpg.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,12 +11,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.Theming;
+import com.thecoredepository.mobile_rpg.backend.dice;
+import com.thecoredepository.mobile_rpg.ui.Theming;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.IntStream;
 
 public class DiceActivity extends AppCompatActivity {
 

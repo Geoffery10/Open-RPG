@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters;
+package com.thecoredepository.mobile_rpg.ui.adapters;
 
 import android.content.Context;
 import android.util.Log;
@@ -15,13 +15,13 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.Theming;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLItem;
+import com.thecoredepository.mobile_rpg.ui.Theming;
+import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
+import com.thecoredepository.mobile_rpg.backend.lists.OLItem;
 
 import java.util.ArrayList;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
 
 public class OLInventoryAdapter extends RecyclerView.Adapter<OLInventoryAdapter.ViewHolder> {
     private Context context;

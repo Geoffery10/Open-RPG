@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
+package com.thecoredepository.mobile_rpg.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,10 +11,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLBanesBoonsActivity;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLInventoryActivity;
+import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
 
 public class OLEditSheet extends AppCompatActivity
 {

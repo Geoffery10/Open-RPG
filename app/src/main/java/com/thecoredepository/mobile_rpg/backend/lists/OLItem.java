@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists;
+package com.thecoredepository.mobile_rpg.backend.lists;
 
 import java.util.Comparator;
 

@@ -1,28 +1,22 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters;
+package com.thecoredepository.mobile_rpg.ui.adapters;
 
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBanes;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBoons;
+import com.thecoredepository.mobile_rpg.backend.lists.OLBanes;
+import com.thecoredepository.mobile_rpg.backend.lists.OLBoons;
 
 import java.util.ArrayList;
-
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
 
 public class OLBaneBoonAdapter extends RecyclerView.Adapter<OLBaneBoonAdapter.ViewHolder>
 {

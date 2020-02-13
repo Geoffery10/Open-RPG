@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters;
+package com.thecoredepository.mobile_rpg.ui.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -15,20 +15,19 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.Theming;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLFeatsActivitiy;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
+import com.thecoredepository.mobile_rpg.ui.Theming;
+import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
+import com.thecoredepository.mobile_rpg.ui.activity.OLFeatsActivitiy;
+import com.thecoredepository.mobile_rpg.backend.lists.OLFeats;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
+import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.backend.openlegend.sheetList;
 
 public class OLFeatAdapter extends RecyclerView.Adapter<OLFeatAdapter.ViewHolder>
 {

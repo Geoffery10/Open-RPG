@@ -1,6 +1,5 @@
-package com.thecoredepository.mobile_rpg;
+package com.thecoredepository.mobile_rpg.ui.activity;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -21,26 +20,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLEditSheet;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLNewSheet;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.AboutActivity;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLBanesBoonsActivity;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLFeatsActivitiy;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLInventoryActivity;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend;
+import com.thecoredepository.mobile_rpg.ui.AppContext;
+import com.thecoredepository.mobile_rpg.BuildConfig;
+import com.thecoredepository.mobile_rpg.R;
+import com.thecoredepository.mobile_rpg.ui.Theming;
+import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats.featList;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
+import static com.thecoredepository.mobile_rpg.backend.lists.OLFeats.featList;
+import static com.thecoredepository.mobile_rpg.backend.openlegend.sheetList;
+import static com.thecoredepository.mobile_rpg.backend.openlegend.sheets;
 
 
 public class MainActivity extends AppCompatActivity {

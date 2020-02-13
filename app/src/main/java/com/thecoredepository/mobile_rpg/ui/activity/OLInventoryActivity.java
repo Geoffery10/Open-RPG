@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity;
+package com.thecoredepository.mobile_rpg.ui.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -17,24 +17,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.thecoredepository.mobile_rpg.AppContext;
-import com.thecoredepository.mobile_rpg.MainActivity;
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.Theming;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.OLSavingSheets;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLFeatAdapter;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.adapters.OLInventoryAdapter;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.dialogs.DialogAddItem;
+import com.thecoredepository.mobile_rpg.ui.Theming;
+import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
+import com.thecoredepository.mobile_rpg.ui.adapters.OLInventoryAdapter;
+import com.thecoredepository.mobile_rpg.ui.dialogs.DialogAddItem;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.player;
+import static com.thecoredepository.mobile_rpg.backend.openlegend.player;
 
 public class OLInventoryActivity extends AppCompatActivity
 {

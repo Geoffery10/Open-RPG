@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
+package com.thecoredepository.mobile_rpg.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,13 +15,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLBanesBoonsActivity;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.activity.OLSheetActivity;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
+import com.thecoredepository.mobile_rpg.backend.OLSavingSheets;
+import com.thecoredepository.mobile_rpg.backend.openlegend;
+import com.thecoredepository.mobile_rpg.backend.lists.OLFeats;
 
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheetList;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.openlegend.sheets;
-import static com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats.*;
+import static com.thecoredepository.mobile_rpg.backend.openlegend.sheetList;
+import static com.thecoredepository.mobile_rpg.backend.openlegend.sheets;
 
 public class OLNewSheet extends AppCompatActivity {
 

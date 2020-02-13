@@ -1,21 +1,19 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend;
+package com.thecoredepository.mobile_rpg.backend;
 
 /* This class contains the player's character sheet.
 // All of the player's values are stored here and should
 // be saved often reduce the chance of lost data.
 */
 
-import android.net.Uri;
 import android.util.Log;
 
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBanes;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLBoons;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLFeats;
-import com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists.OLItem;
+import com.thecoredepository.mobile_rpg.backend.lists.OLBanes;
+import com.thecoredepository.mobile_rpg.backend.lists.OLBoons;
+import com.thecoredepository.mobile_rpg.backend.lists.OLFeats;
+import com.thecoredepository.mobile_rpg.backend.lists.OLItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Iterator;
 
 public class openlegend

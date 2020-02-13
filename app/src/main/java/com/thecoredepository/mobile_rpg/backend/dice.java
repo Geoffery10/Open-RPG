@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.dice;
+package com.thecoredepository.mobile_rpg.backend;
 
 public class dice
 {

@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg;
+package com.thecoredepository.mobile_rpg.ui;
 
 import android.content.Context;
 

@@ -1,8 +1,8 @@
-package com.thecoredepository.mobile_rpg.charactersheets.openlegend.lists;
+package com.thecoredepository.mobile_rpg.backend.lists;
 
 import android.content.Context;
 
-import com.thecoredepository.mobile_rpg.AppContext;
+import com.thecoredepository.mobile_rpg.ui.AppContext;
 import com.thecoredepository.mobile_rpg.R;
 
 import java.util.ArrayList;
