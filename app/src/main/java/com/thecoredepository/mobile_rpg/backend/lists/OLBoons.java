@@ -2,6 +2,8 @@ package com.thecoredepository.mobile_rpg.backend.lists;
 
 import java.util.ArrayList;
 
+/* This object class dictates the behaviors and traits of Boons */
+
 public class OLBoons
 {
     public static ArrayList<OLBoons> boonList = new ArrayList<>();

@@ -1,6 +1,6 @@
 package com.thecoredepository.mobile_rpg.backend;
 
-/* This class contains the player's character sheet.
+/* This class contains the player's character sheet data.
 // All of the player's values are stored here and should
 // be saved often reduce the chance of lost data.
 */

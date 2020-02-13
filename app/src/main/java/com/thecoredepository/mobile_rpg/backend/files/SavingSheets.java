@@ -1,4 +1,4 @@
-package com.thecoredepository.mobile_rpg.backend;
+package com.thecoredepository.mobile_rpg.backend.files;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.thecoredepository.mobile_rpg.backend.OpenLegend;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -20,6 +21,10 @@ import java.util.ArrayList;
 import static com.thecoredepository.mobile_rpg.backend.OpenLegend.player;
 import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheetList;
 import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheets;
+
+/* This class is designed for the saving of character sheets locally on the device. These saves are
+// not accessible by the user and are simply for the app to retain data after closing it.
+*/
 
 public class SavingSheets
 {

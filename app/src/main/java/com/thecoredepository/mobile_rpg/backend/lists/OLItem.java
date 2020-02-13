@@ -2,6 +2,8 @@ package com.thecoredepository.mobile_rpg.backend.lists;
 
 import java.util.Comparator;
 
+/* This object class dictates the behaviors and traits of Items */
+
 public class OLItem
 {
     private String title; //What it is called

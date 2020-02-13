@@ -7,6 +7,8 @@ import com.thecoredepository.mobile_rpg.R;
 
 import java.util.ArrayList;
 
+/* This object class dictates the behaviors and traits of Banes */
+
 public class OLBanes
 {
 

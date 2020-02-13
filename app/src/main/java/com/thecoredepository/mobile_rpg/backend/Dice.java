@@ -1,5 +1,10 @@
 package com.thecoredepository.mobile_rpg.backend;
 
+/* This object class dictates the behaviors and traits of Dice.
+*  Dice are able to explode when rolled to their max value. This means they can roll an additional
+*  dice of that same value.
+*/
+
 public class Dice
 {
     public static int d2()
