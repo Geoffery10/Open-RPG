@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.thecoredepository.mobile_rpg.backend.files.ExportSheets;
 import com.thecoredepository.mobile_rpg.backend.files.SavingSheets;
 import com.thecoredepository.mobile_rpg.ui.AppContext;
 import com.thecoredepository.mobile_rpg.BuildConfig;
@@ -186,7 +187,21 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.exportSheet:
-                Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT).show();
+                Spinner spinnerOL = findViewById(R.id.spinnerOL);
+                String selected = (String)spinnerOL.getSelectedItem();
+                Log.i("selected", selected);
+                //Log
+                Bundle params = new Bundle();
+                params.putString("sheet_name", selected);
+                mFirebaseAnalytics.logEvent("export_sheet", params);
+
+                //Check for Sheet
+                if (sheetList.contains(selected))
+                {
+                    int index = 0;
+                    index = sheetList.indexOf(selected);
+                    ExportSheets.exportSheet(sheets.get(index));
+                }
                 break;
             case R.id.importSheet:
                 Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT).show();
