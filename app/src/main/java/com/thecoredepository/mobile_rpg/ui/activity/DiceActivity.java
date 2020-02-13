@@ -203,29 +203,8 @@ public class DiceActivity extends AppCompatActivity {
 
     private int getRoll() {
         int roll = 0;
-        if (valueOfDie == 2)
-        {
-            roll = Dice.d2();
-        }else if (valueOfDie == 4)
-        {
-            roll = Dice.d4();
-        }
-        else if (valueOfDie == 6)
-        {
-            roll = Dice.d6();
-        }
-        else if (valueOfDie == 8)
-        {
-            roll = Dice.d8();
-        }
-        else if (valueOfDie == 10)
-        {
-            roll = Dice.d10();
-        }
-        else
-        {
-            roll = Dice.custom(valueOfDie);
-        }
+        //Custom Dice Roller
+        roll = Dice.custom(valueOfDie);
         return roll;
     }
 
