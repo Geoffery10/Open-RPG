@@ -175,6 +175,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAdLoaded() {
                 // Code to be executed when an ad finishes loading.
+                //Log
+                Bundle params = new Bundle();
+                params.putString("Ads", "Ads_Loaded");
+                mFirebaseAnalytics.logEvent("Ads", params);
             }
 
             @Override
@@ -193,6 +197,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAdClicked() {
                 // Code to be executed when the user clicks on an ad.
+                //Log
+                Bundle params = new Bundle();
+                params.putString("Ads", "Ads_Clicked");
+                mFirebaseAnalytics.logEvent("Ads", params);
             }
 
             @Override
