@@ -9,9 +9,13 @@ android {
         applicationId "com.thecoredepository.mobile_rpg"
         minSdkVersion 16
         targetSdkVersion 29
+        multiDexEnabled true
         versionCode 23
         versionName "0.18.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    dexOptions {
+        javaMaxHeapSize "Xg"
     }
     buildTypes {
         release {
@@ -44,4 +48,5 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'com.google.firebase:firebase-core:17.2.2'
+    implementation 'com.google.android.gms:play-services-ads:18.3.0'
 }
