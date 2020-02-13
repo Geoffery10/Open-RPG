@@ -82,7 +82,12 @@ public class DialogAddItem extends Dialog implements android.view.View.OnClickLi
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                InventoryActivity.itemAdapter.notifyDataSetChanged();
+
+                try {
+                    InventoryActivity.itemAdapter.notifyDataSetChanged();
+                } catch (Exception e) {
+                    Log.e("Inventory Refresh", "Inventory did not refresh: " + e);
+                }
                 break;
             case R.id.btnCancel:
                 dismiss();

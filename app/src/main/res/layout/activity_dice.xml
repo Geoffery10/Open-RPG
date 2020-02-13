@@ -38,7 +38,7 @@
                 android:ems="10"
                 android:enabled="true"
                 android:inputType="number"
-                android:text="0"
+                android:hint="0"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -71,7 +71,7 @@
                 android:ems="10"
                 android:enabled="true"
                 android:inputType="number"
-                android:text="0"
+                android:hint="0"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
