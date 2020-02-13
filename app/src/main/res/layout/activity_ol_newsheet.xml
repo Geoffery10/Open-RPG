@@ -58,7 +58,7 @@
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
                         android:inputType="textPersonName|textCapWords"
-                        android:text=""
+                        android:hint="Character's Name"
                         android:textIsSelectable="true"
                         android:textSize="24sp"
                         tools:layout_conversion_absoluteHeight="19dp"
@@ -91,6 +91,7 @@
                         android:inputType="textPersonName|textCapWords"
                         android:textIsSelectable="true"
                         android:textSize="24sp"
+                        android:hint="Nickname"
                         tools:layout_conversion_absoluteHeight="247dp"
                         tools:layout_conversion_absoluteWidth="411dp" />
 
@@ -121,6 +122,7 @@
                         android:inputType="textPersonName|textCapWords"
                         android:textIsSelectable="true"
                         android:textSize="24sp"
+                        android:hint="Deity"
                         tools:layout_conversion_absoluteHeight="247dp"
                         tools:layout_conversion_absoluteWidth="411dp" />
 
@@ -180,6 +182,7 @@
                     android:singleLine="false"
                     android:textIsSelectable="true"
                     android:textSize="24sp"
+                    android:hint="Your Bio Goes Here..."
                     tools:layout_conversion_absoluteHeight="247dp"
                     tools:layout_conversion_absoluteWidth="411dp" />
 

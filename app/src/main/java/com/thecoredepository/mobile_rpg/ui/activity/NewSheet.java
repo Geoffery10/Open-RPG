@@ -18,6 +18,7 @@ import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.backend.OpenLegend;
 import com.thecoredepository.mobile_rpg.backend.SavingSheets;
 import com.thecoredepository.mobile_rpg.backend.lists.OLFeats;
+import com.thecoredepository.mobile_rpg.backend.lists.OLItem;
 
 import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheetList;
 import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheets;
@@ -734,8 +735,12 @@ public class NewSheet extends AppCompatActivity {
                     getBioSection(txtCharName);
                     LinearLayout layoutBio = findViewById(R.id.layoutBio);
                     layoutBio.setVisibility(View.GONE);
-                    LinearLayout layoutLang = findViewById(R.id.layoutLang);
-                    layoutLang.setVisibility(View.VISIBLE);
+
+                    //Skipping Unused Layouts
+                    //LinearLayout layoutLang = findViewById(R.id.layoutLang);
+                    //layoutLang.setVisibility(View.VISIBLE);
+                    LinearLayout layoutLevel = findViewById(R.id.layoutLevel);
+                    layoutLevel.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -745,6 +750,7 @@ public class NewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 //Languages aren't required
+                //CURRENTLY UNUSED
                 playerTemp.setLevelTotal(0);
 
                 LinearLayout layoutLang = findViewById(R.id.layoutLang);
@@ -774,8 +780,14 @@ public class NewSheet extends AppCompatActivity {
                 //Set Speed 0 if none
                 LinearLayout layoutAttributes = findViewById(R.id.layoutAttributes);
                 layoutAttributes.setVisibility(View.GONE);
-                LinearLayout layoutFeats = findViewById(R.id.layoutFeats);
-                layoutFeats.setVisibility(View.VISIBLE);
+                //Skipping Unused Layouts
+                //LinearLayout layoutFeats = findViewById(R.id.layoutFeats);
+                //layoutFeats.setVisibility(View.VISIBLE);
+                //Add Skipped Menus
+                addFeats();
+                addItems();
+                finishCreation();
+
                 EditText editSpeed = findViewById(R.id.editSpeed);
                 int speed;
 
@@ -793,23 +805,13 @@ public class NewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 //FEATS aren't required
+                //CURRENTLY UNUSED
                 LinearLayout layoutFeats = findViewById(R.id.layoutFeats);
                 layoutFeats.setVisibility(View.GONE);
                 LinearLayout layoutInventory = findViewById(R.id.layoutInventory);
                 layoutInventory.setVisibility(View.VISIBLE);
 
-                //Assign Feats
-                OLFeats Filler_Feat = new OLFeats();
-                Filler_Feat.setTitle("Filler");
-                Filler_Feat.setMaxLevel(1);
-                Filler_Feat.setFeatCost(0);
-                Filler_Feat.setDescription("This is a temporary feat.");
-                Filler_Feat.setPrerequisites("None");
-                Filler_Feat.setEffects("This feat has no effects.");
-                Filler_Feat.setSpecial("None");
-
-                playerTemp.addFeat(Filler_Feat);
-
+                addFeats();
             }
         });
 
@@ -818,21 +820,47 @@ public class NewSheet extends AppCompatActivity {
             public void onClick(View v)
             {
                 //Items aren't required
+                //CURRENTLY UNUSED
                 LinearLayout layoutInventory = findViewById(R.id.layoutInventory);
                 layoutInventory.setVisibility(View.GONE);
-                //Open Sheet
-                Intent in = new Intent(getApplicationContext(), SheetActivity.class);
-                sheets.add(playerTemp);
-                sheetList.add(playerTemp.getCharName());
+                addItems();
 
-                SavingSheets saveData = new SavingSheets();
-                saveData.saveData(mContext);
-
-                in.putExtra("selected", playerTemp.getCharName());
-                startActivity(in);
-                finish();
+                finishCreation();
             }
         });
+    }
+
+    private void addItems() {
+        OLItem item = new OLItem();
+        playerTemp.addItem(item);
+    }
+
+    private void finishCreation() {
+        //Open Sheet
+        Intent in = new Intent(getApplicationContext(), SheetActivity.class);
+        sheets.add(playerTemp);
+        sheetList.add(playerTemp.getCharName());
+
+        SavingSheets saveData = new SavingSheets();
+        saveData.saveData(mContext);
+
+        in.putExtra("selected", playerTemp.getCharName());
+        startActivity(in);
+        finish();
+    }
+
+    private void addFeats() {
+        //Assign Feats
+        OLFeats Filler_Feat = new OLFeats();
+        Filler_Feat.setTitle("Filler");
+        Filler_Feat.setMaxLevel(1);
+        Filler_Feat.setFeatCost(0);
+        Filler_Feat.setDescription("This is a temporary feat.");
+        Filler_Feat.setPrerequisites("None");
+        Filler_Feat.setEffects("This feat has no effects.");
+        Filler_Feat.setSpecial("None");
+
+        playerTemp.addFeat(Filler_Feat);
     }
 
     private void getBioSection(EditText txtCharName) {

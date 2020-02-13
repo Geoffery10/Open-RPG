@@ -71,6 +71,10 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.View
         holder.txtDescription.setText(item.getDescription());
         holder.txtQuantity.setText("Quantity: " + item.getQuantity());
 
+        if (item.getTitle().equals("TEMP - DO NOT USE THIS ITEM")) {
+            holder.viewItem.setVisibility(View.GONE);
+        }
+
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

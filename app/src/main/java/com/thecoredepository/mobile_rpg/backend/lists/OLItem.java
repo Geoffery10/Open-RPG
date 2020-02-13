@@ -13,7 +13,7 @@ public class OLItem
 
     public OLItem()
     {
-        this.title = "TEMP";
+        this.title = "TEMP - DO NOT USE THIS ITEM";
         this.description = "This Item has no info.";
         this.quantity = 1;
         this.type = "Other";
