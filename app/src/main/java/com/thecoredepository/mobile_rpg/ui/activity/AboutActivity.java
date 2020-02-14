@@ -14,7 +14,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.ui.Theming;
 
-public class AboutActivity  extends AppCompatActivity
+public class AboutActivity extends AppCompatActivity
 {
 
     @Override
