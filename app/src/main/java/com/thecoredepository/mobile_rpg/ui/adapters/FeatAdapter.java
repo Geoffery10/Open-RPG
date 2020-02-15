@@ -256,14 +256,26 @@ public class FeatAdapter extends RecyclerView.Adapter<FeatAdapter.ViewHolder>
 
                     if (holder.spinnerAddRemoveUpgradeFeat.getVisibility() == View.VISIBLE) {
                         if (holder.spinnerAddRemoveUpgradeFeat2.getVisibility() == View.VISIBLE) {
-                            finalFeat.setConnection(holder.spinnerAddRemoveUpgradeFeat.getSelectedItem().toString() + " - " + holder.spinnerAddRemoveUpgradeFeat2.getSelectedItem().toString());
+                            try {
+                                finalFeat.setConnection(holder.spinnerAddRemoveUpgradeFeat.getSelectedItem().toString() + " - " + holder.spinnerAddRemoveUpgradeFeat2.getSelectedItem().toString());
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
                         }
                         else {
-                            finalFeat.setConnection(holder.spinnerAddRemoveUpgradeFeat.getSelectedItem().toString() + "");
+                            try {
+                                finalFeat.setConnection(holder.spinnerAddRemoveUpgradeFeat.getSelectedItem().toString() + "");
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
                         }
                     }
                     else if (holder.editAddRemoveUpgradeFeat.getVisibility() == View.VISIBLE) {
-                        finalFeat.setConnection("" + holder.editAddRemoveUpgradeFeat.getText());
+                        try {
+                            finalFeat.setConnection("" + holder.editAddRemoveUpgradeFeat.getText());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                     //Add Connection Data to Feat
                     Log.i("finalFeat", finalFeat.toString());
