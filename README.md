@@ -31,7 +31,7 @@ Let Open RPG do all the hard work for you!
 
 ### Prerequisites
 
-This app requires at least Android 4.0.3 (Ice Cream Sandwich).
+This app requires at least Android 4.1 (Jelly Bean).
 
 #### Tested On
 ```
