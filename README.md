@@ -22,7 +22,7 @@ Let Open RPG do all the hard work for you!
 * [License and Acknowledgments](#license)
 
 ## Screenshots
-![Screenshot](https://github.com/Geoffery10/Mobile-RPG/blob/master/github_assets/Screenshot_1568401566.png?raw=true)
+![Screenshot](https://github.com/Geoffery10/Open-RPG/blob/master/github_assets/Screenshot_Collection_0.18.4.png?raw=true)
 
 ## Getting Started
 
