@@ -79,9 +79,10 @@ Interested in contributing? Join our [Discord](https://discord.gg/yh7E5S3)! <a h
 ## Authors
 Geoffery Powell - [Geoffery10](https://github.com/Geoffery10) | Connor Davey - [CD33](https://github.com/connordavey33) | Ben Eickmeier - [micr0ike](https://github.com/micr0ike)
 --------------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------
-Team Lead | Creative Designer | Developer 
-Developer | System Math Development |
-Graphic Designer | |
+Team Lead | Developer | Developer 
+Developer | System Math Development | Tester
+Graphic Designer | Graphic Designer |
+Tester | Tester | 
 
 ## License
 
