@@ -35,9 +35,15 @@ This app requires at least Android 4.0.3 (Ice Cream Sandwich).
 
 #### Tested On
 ```
+Samsung Galaxy S10+
+Samsung Galaxy A10e
 Samsung Galaxy S9+
 Samsung Galaxy S8
 Samsung Galaxy S7
+Droid Turbo
+Nexus 5X
+LG G3
+Google Pixel
 ```
 
 ### Installing
