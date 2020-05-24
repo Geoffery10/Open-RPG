@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     style="?attr/spinnerDropDownItemStyle"
-    android:singleLine="true"
-    android:layout_height="?attr/dropdownListPreferredItemHeight"
     android:layout_width="fill_parent"
-    android:gravity="center"
-    android:ellipsize="marquee"
-    android:textColor="@color/textDarkTheme"
+    android:layout_height="?attr/dropdownListPreferredItemHeight"
     android:background="@color/colorPrimaryLight"
-    android:text="Sample Text"
+    android:ellipsize="marquee"
+    android:gravity="center"
+    android:paddingTop="5dp"
     android:paddingBottom="5dp"
-    android:textSize="10pt"
-    android:paddingTop="5dp"></TextView>
+    android:singleLine="true"
+    android:text="Sample Text"
+    android:textColor="@color/textDarkTheme"
+    android:textSize="10pt"></TextView>
+

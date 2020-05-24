@@ -22,8 +22,9 @@
                 android:id="@+id/btnFeat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimary"
                 android:text="FEAT TITLE - LEVEL     (COST)"
+                android:backgroundTint="@color/colorAccent"
+                android:background="@drawable/custom_buttons"
                 android:textColor="@color/textAccent"
                 android:textSize="16sp" />
 
@@ -167,6 +168,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
                         android:visibility="visible">
 
                         <Button
@@ -174,7 +176,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:layout_marginRight="5dp"
                             android:backgroundTint="@color/colorPrimaryLight"
+                            android:background="@drawable/custom_buttons"
                             android:gravity="center"
                             android:text="Add/Remove"
                             android:textColor="@color/textAccent"
@@ -185,6 +189,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/custom_buttons"
                             android:backgroundTint="@color/colorPrimaryLight"
                             android:gravity="center"
                             android:text="Upgrade"
