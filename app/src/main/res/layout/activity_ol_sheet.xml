@@ -351,6 +351,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -381,6 +384,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -411,6 +417,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -441,6 +450,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -471,6 +483,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -501,6 +516,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -531,6 +549,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -561,6 +582,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -591,6 +615,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -621,6 +648,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -651,6 +681,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -681,6 +714,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -711,6 +747,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -741,6 +780,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -771,6 +813,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -801,6 +846,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -831,6 +879,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -861,6 +912,9 @@
                             android:layout_weight="0"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="1d6"
+                            android:textSize="16dp"
+                            android:background="@drawable/custom_buttons"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 
@@ -901,6 +955,7 @@
                             android:layout_weight="1"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="Banes"
+                            android:background="@drawable/custom_buttons"
                             android:textColor="@color/textAccent" />
 
                         <Button
@@ -911,6 +966,7 @@
                             android:layout_weight="1"
                             android:backgroundTint="@color/colorPrimary"
                             android:text="Boons"
+                            android:background="@drawable/custom_buttons"
                             android:textColor="@color/textAccent" />
                     </LinearLayout>
 

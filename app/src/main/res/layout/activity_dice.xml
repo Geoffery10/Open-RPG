@@ -13,6 +13,7 @@
         android:layout_margin="24dp"
         android:backgroundTint="@color/colorPrimary"
         android:text="Roll"
+        android:background="@drawable/custom_buttons"
         android:textColor="@color/textAccent"
         android:textSize="24sp" />
 
