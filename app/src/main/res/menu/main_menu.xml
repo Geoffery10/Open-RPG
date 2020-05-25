@@ -3,8 +3,18 @@
     <item
         android:id="@+id/DarkMode"
         android:title="Dark Mode"></item>
-    <item android:title="Export" android:id="@+id/exportSheet"></item>
-    <item android:title="Import" android:id="@+id/importSheet"></item>
+    <item android:visible="true" android:id="@+id/importExport"
+        android:titleCondensed="Manage Sheets"
+        android:title="Manage Sheets"
+        android:enabled="true">
+        <menu>
+            <item android:title="Export" android:id="@+id/exportSheet"></item>
+            <item android:title="Import" android:id="@+id/importSheet"></item>
+            <item android:title="Upload" android:id="@+id/uploadSheet"></item>
+            <item android:title="Download" android:id="@+id/downloadSheet"></item>
+        </menu>
+    </item>
+    <item android:title="Account" android:id="@+id/account"></item>
     <item android:title="About" android:id="@+id/about"></item>
     <item android:visible="true" android:id="@+id/GMTools"
         android:titleCondensed="GM Tools"

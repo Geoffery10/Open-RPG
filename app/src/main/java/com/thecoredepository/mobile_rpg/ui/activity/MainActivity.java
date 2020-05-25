@@ -225,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent in;
         switch(item.getItemId()) {
             case R.id.DarkMode:
                 if (Theming.getThemeID() == 1) {
@@ -271,8 +272,18 @@ public class MainActivity extends AppCompatActivity {
             case R.id.importSheet:
                 Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.uploadSheet:
+                Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.downloadSheet:
+                Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.about:
-                Intent in = new Intent(getApplicationContext(), AboutActivity.class);
+                in = new Intent(getApplicationContext(), AboutActivity.class);
+                startActivity(in);
+                break;
+            case R.id.account:
+                in = new Intent(getApplicationContext(), AccountActivity.class);
                 startActivity(in);
                 break;
             case R.id.corerules:
