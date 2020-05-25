@@ -283,8 +283,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(in);
                 break;
             case R.id.account:
+                Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT).show();
                 in = new Intent(getApplicationContext(), AccountActivity.class);
-                startActivity(in);
+                //startActivity(in);
                 break;
             case R.id.corerules:
                 openURL("https://openlegendrpg.com/core-rules/00-introduction");
