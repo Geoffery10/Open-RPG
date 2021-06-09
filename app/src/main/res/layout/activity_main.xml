@@ -9,6 +9,34 @@
     android:screenOrientation="portrait"
     tools:context="com.thecoredepository.mobile_rpg.ui.activity.MainActivity">
 
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="74dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/custom_buttons"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Sign In"
+        android:textColor="@color/colorTint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDownload"
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/custom_buttons"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Download"
+        android:textColor="@color/colorTint"
+        app:layout_constraintEnd_toStartOf="@+id/btnSignIn"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

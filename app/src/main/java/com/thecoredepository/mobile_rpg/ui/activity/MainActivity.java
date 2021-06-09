@@ -1,9 +1,5 @@
 package com.thecoredepository.mobile_rpg.ui.activity;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -20,6 +16,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -27,16 +27,16 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.thecoredepository.mobile_rpg.BuildConfig;
+import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.backend.files.ExportSheets;
 import com.thecoredepository.mobile_rpg.backend.files.SavingSheets;
 import com.thecoredepository.mobile_rpg.ui.AppContext;
-import com.thecoredepository.mobile_rpg.BuildConfig;
-import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.ui.Theming;
 
-import static com.thecoredepository.mobile_rpg.backend.lists.OLFeats.featList;
 import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheetList;
 import static com.thecoredepository.mobile_rpg.backend.OpenLegend.sheets;
+import static com.thecoredepository.mobile_rpg.backend.lists.OLFeats.featList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         ConstraintLayout mainactivity_layout = findViewById(R.id.mainactivity_layout);
         mainactivity_layout.setBackgroundResource(Theming.getBackground());
         Spinner spinnerOL = findViewById(R.id.spinnerOL);
+        Button btnSignIn = findViewById(R.id.btnSignIn);
+        Button btnDownload = findViewById(R.id.btnDownload);
         Button btnOpenSheet = findViewById(R.id.btnOpenSheet);
         Button btnNewSheet = findViewById(R.id.btnNewSheet);
         Button btnDeleteSheet = findViewById(R.id.btnDeleteSheet);
@@ -100,6 +102,46 @@ public class MainActivity extends AppCompatActivity {
                 Intent in = new Intent(getApplicationContext(), SheetActivity.class);
                 in.putExtra("selected", selected);
                 startActivity(in);
+            }
+        });
+
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Boolean featureReady = false;
+                if (featureReady) {
+                    //Log
+                    Bundle params = new Bundle();
+                    params.putString("sign_in", "Started Sign In");
+                    mFirebaseAnalytics.logEvent("sign_in", params);
+                    //New Sheet
+                    Intent in = new Intent(getApplicationContext(), NewSheet.class);
+                    startActivity(in);
+                }
+                else {
+                    Toast.makeText(mContext, "Coming Soon...", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        btnDownload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Boolean featureReady = false;
+
+                if (featureReady) {
+                    //Log
+                    Bundle params = new Bundle();
+                    params.putString("sign_in", "Started Sign In");
+                    mFirebaseAnalytics.logEvent("sign_in", params);
+                    //New Sheet
+                    Intent in = new Intent(getApplicationContext(), NewSheet.class);
+                    startActivity(in);
+                }
+                else {
+                    Toast.makeText(mContext, "Coming Soon...", Toast.LENGTH_SHORT).show();
+                    //requests.getRequest(mContext);
+                }
             }
         });
 
