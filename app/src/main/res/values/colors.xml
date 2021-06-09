@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- basic colors -->
-    <color name="colorPrimary">#512DA8</color>
+    <color name="colorPrimary">#6237A9</color>
     <color name="colorPrimaryDark">#2F1A61</color>
     <color name="colorAccent">#512DA8</color>
-    <color name="colorPrimaryLight">#6943CF</color>
+    <color name="colorPrimaryLight">#703FC2</color>
     <color name="colorTint">#2D999999</color>
     <color name="LogoColor">#5937AA</color>
     <color name="textAccent">#FFFFFF</color>
+    <color name="textAccentLight">#9B6FE3</color>
     <color name="hpBar">#00796b</color>
+    <color name="transparent">#00FFFFFF</color>
 
     <!-- theme 1 (LIGHT THEME) -->
     <color name="text">#000000</color>

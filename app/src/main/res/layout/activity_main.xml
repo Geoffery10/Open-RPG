@@ -5,7 +5,7 @@
     android:id="@+id/mainactivity_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/paper_bg"
+    android:background="@drawable/background_2"
     android:screenOrientation="portrait"
     tools:context="com.thecoredepository.mobile_rpg.ui.activity.MainActivity">
 
@@ -20,6 +20,7 @@
         android:backgroundTint="@color/colorAccent"
         android:text="Sign In"
         android:textColor="@color/colorTint"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,6 +35,7 @@
         android:backgroundTint="@color/colorAccent"
         android:text="Download"
         android:textColor="@color/colorTint"
+        android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@+id/btnSignIn"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,11 +43,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/txtVersion"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61">
+        app:layout_constraintVertical_bias="0.45">
 
         <Button
             android:id="@+id/btnOpenSheet"
@@ -56,10 +58,10 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="36dp"
-            android:text="Open Sheet"
-            android:backgroundTint="@color/colorAccent"
-            android:textColor="#DEFFFFFF"
             android:background="@drawable/custom_buttons"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Open Sheet"
+            android:textColor="#DEFFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinnerOL" />
@@ -73,11 +75,11 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
+            android:background="@drawable/custom_buttons"
             android:backgroundTint="@color/colorPrimary"
             android:enabled="true"
             android:text="New Sheet"
             android:textColor="#DEFFFFFF"
-            android:background="@drawable/custom_buttons"
             app:layout_constraintBottom_toTopOf="@+id/btnDeleteSheet"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -91,11 +93,11 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="32dp"
             android:layout_marginBottom="72dp"
+            android:background="@drawable/custom_buttons"
             android:backgroundTint="@color/colorPrimary"
             android:enabled="true"
             android:text="Delete Sheet"
             android:textColor="#DEFFFFFF"
-            android:background="@drawable/custom_buttons"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.75"
@@ -116,10 +118,10 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:scaleType="fitCenter"
+            android:src="@drawable/ic_bannerol"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/ic_bannerol" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
             android:id="@+id/spinnerOL"
@@ -131,10 +133,10 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="30dp"
+            android:background="@drawable/custom_buttons"
             android:backgroundTint="@color/colorPrimaryLight"
             android:foregroundTint="@color/textDarkTheme"
             android:popupBackground="@drawable/paper_bg"
-            android:background="@drawable/custom_buttons"
             android:spinnerMode="dropdown"
             android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -158,29 +160,67 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/txtVersion"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Version: 0.0.0"
-        android:layout_marginBottom="52dp"
-        android:textColor="@color/text"
-        app:layout_constraintBottom_toBottomOf="@+id/adView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
+        android:background="@drawable/ic_bottom_card"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-9232605715033267/8202748210">
-    </com.google.android.gms.ads.AdView>
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txtVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:text="Version: 0.0.0"
+            android:textColor="@color/textAccentLight"
+            app:layout_constraintBottom_toTopOf="@+id/adView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-9232605715033267/8202748210"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_tab_card_colored"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnInfo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:drawable/ic_dialog_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

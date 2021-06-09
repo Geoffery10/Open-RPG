@@ -19,9 +19,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.backend.files.SavingSheets;
+import com.thecoredepository.mobile_rpg.backend.lists.OLFeats;
 import com.thecoredepository.mobile_rpg.ui.Theming;
 import com.thecoredepository.mobile_rpg.ui.activity.FeatsActivitiy;
-import com.thecoredepository.mobile_rpg.backend.lists.OLFeats;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -78,7 +78,10 @@ public class FeatAdapter extends RecyclerView.Adapter<FeatAdapter.ViewHolder>
         holder.txtFeatEffect.setTextColor(Theming.getFontColor());
         holder.txtPrerequisites.setTextColor(Theming.getFontColor());
         holder.txtSpecial.setTextColor(Theming.getFontColor());
-        holder.cardFeat.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
+        holder.infoFeat.setVisibility(View.GONE);
+        holder.cardFeat.setBackgroundResource(R.color.transparent);
+        holder.btnFeat.setBackgroundResource(R.drawable.custom_buttons_white);
+        holder.btnFeat.setTextColor(Theming.getColoredFontColor());
 
         if (add == false && showAll == false)
         {
@@ -329,10 +332,16 @@ public class FeatAdapter extends RecyclerView.Adapter<FeatAdapter.ViewHolder>
                 if (holder.infoFeat.getVisibility() == View.GONE)
                 {
                     holder.infoFeat.setVisibility(View.VISIBLE);
+                    holder.cardFeat.setBackgroundResource(R.drawable.custom_buttons_white);
+                    holder.btnFeat.setBackgroundResource(R.drawable.custom_buttons_primary_dark);
+                    holder.btnFeat.setTextColor(Color.parseColor("#FFFFFF"));
                 }
                 else
                 {
                     holder.infoFeat.setVisibility(View.GONE);
+                    holder.cardFeat.setBackgroundResource(R.color.transparent);
+                    holder.btnFeat.setBackgroundResource(R.drawable.custom_buttons_white);
+                    holder.btnFeat.setTextColor(Theming.getColoredFontColor());
                 }
             }
         });

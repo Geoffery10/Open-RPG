@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         mainactivity_layout.setBackgroundResource(Theming.getBackground());
         Spinner spinnerOL = findViewById(R.id.spinnerOL);
         Button btnSignIn = findViewById(R.id.btnSignIn);
+        Button btnInfo = findViewById(R.id.btnInfo);
         Button btnDownload = findViewById(R.id.btnDownload);
         Button btnOpenSheet = findViewById(R.id.btnOpenSheet);
         Button btnNewSheet = findViewById(R.id.btnNewSheet);
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         TextView txtVersion = findViewById(R.id.txtVersion);
         String versionName = BuildConfig.VERSION_NAME;
         txtVersion.setText("Version: " + versionName);
-        txtVersion.setTextColor(Theming.getColoredFontColor());
+        //txtVersion.setTextColor(Theming.getFontColor());
 
         //Preload Feats
         featList();
@@ -116,6 +117,26 @@ public class MainActivity extends AppCompatActivity {
                     mFirebaseAnalytics.logEvent("sign_in", params);
                     //New Sheet
                     Intent in = new Intent(getApplicationContext(), NewSheet.class);
+                    startActivity(in);
+                }
+                else {
+                    Toast.makeText(mContext, "Coming Soon...", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        btnInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Boolean featureReady = true;
+                if (featureReady) {
+                    //Log
+                    Bundle params = new Bundle();
+                    params.putString("about", "Started About");
+                    mFirebaseAnalytics.logEvent("about", params);
+                    //About Us
+                    Intent in;
+                    in = new Intent(getApplicationContext(), AboutActivity.class);
                     startActivity(in);
                 }
                 else {
@@ -211,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("AF2561E3607CBE6EAB2B78A1329365F0").build();
         mAdView.loadAd(adRequest);
         mAdView.setAdListener(new AdListener() {
             @Override
@@ -393,14 +414,14 @@ public class MainActivity extends AppCompatActivity {
             case 1:
                 Theming.setFontColor(getResources().getColor(R.color.text));
                 Theming.setColoredFontColor(getResources().getColor(R.color.textColored));
-                Theming.setBackground(R.drawable.paper_bg);
+                Theming.setBackground(R.drawable.background_2);
                 Theming.setCardViewBG("#FFFFFF");
                 Theming.setSpinnerStyle(R.layout.spinner_style);
                 break;
             case 2:
                 Theming.setFontColor(getResources().getColor(R.color.textDarkTheme));
                 Theming.setColoredFontColor(getResources().getColor(R.color.textColoredDarkTheme));
-                Theming.setBackground(R.drawable.paper_bg_dark);
+                Theming.setBackground(R.drawable.background_2);
                 Theming.setCardViewBG("#1f1f1f");
                 Theming.setSpinnerStyle(R.layout.spinner_style_dark);
                 break;
@@ -434,7 +455,7 @@ public class MainActivity extends AppCompatActivity {
         ConstraintLayout mainactivity_layout = findViewById(R.id.mainactivity_layout);
         mainactivity_layout.setBackgroundResource(Theming.getBackground());
         TextView txtVersion = findViewById(R.id.txtVersion);
-        txtVersion.setTextColor(Theming.getColoredFontColor());
+        //txtVersion.setTextColor(Theming.getFontColor());
     }
 
     private void saveLastSheet(String selected) {

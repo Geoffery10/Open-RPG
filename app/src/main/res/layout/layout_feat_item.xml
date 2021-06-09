@@ -23,9 +23,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="FEAT TITLE - LEVEL     (COST)"
-                android:backgroundTint="@color/colorAccent"
-                android:background="@drawable/custom_buttons"
-                android:textColor="@color/textAccent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/custom_buttons_white"
+                android:textColor="@color/textColored"
                 android:textSize="16sp" />
 
             <LinearLayout

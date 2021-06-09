@@ -7,24 +7,32 @@
     android:layout_height="match_parent"
     android:background="@drawable/paper_bg">
 
-    <TextView
-        android:id="@+id/txtFeatsHeader"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_top"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginLeft="9dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:text="Feats"
-        android:textColor="@color/colorAccent"
-        android:textSize="30sp"
+        android:background="@drawable/ic_top_card"
         app:layout_constraintBottom_toTopOf="@+id/feat_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtFeatsHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Feats"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/feat_view"
@@ -36,14 +44,13 @@
         app:layout_constraintBottom_toTopOf="@+id/navigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFeatsHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/card_top" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigationView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        app:itemBackground="@color/colorPrimary"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_bottom_card_colored"
         app:itemIconTint="@color/textAccent"
         app:itemTextColor="@color/textAccent"
         app:labelVisibilityMode="labeled"
