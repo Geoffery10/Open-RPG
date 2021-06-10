@@ -30,6 +30,7 @@ public class AboutActivity extends AppCompatActivity
         TextView txtAbout_01 = findViewById(R.id.txtAbout_01);
         txtAbout_01.setTextColor(Theming.getFontColor());
         Button btnTester = findViewById(R.id.btnTester);
+        btnTester.setVisibility(View.GONE);
 
         ImageView imgGeoffery = findViewById(R.id.imgGeoffery);
         ImageView imgConnor = findViewById(R.id.imgConnor);

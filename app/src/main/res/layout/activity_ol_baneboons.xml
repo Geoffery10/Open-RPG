@@ -7,14 +7,30 @@
     android:background="@drawable/paper_bg"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txtBanesBoonsTitle"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:text="Banes/Boons"
-        android:textSize="30sp" />
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_top_card"
+        app:layout_constraintBottom_toTopOf="@+id/banesboonsView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtBanesBoonsTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Banes/Boons"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -45,7 +61,8 @@
                         android:id="@+id/btnBB01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Blinded_name" />
 
                     <LinearLayout
@@ -226,6 +243,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Charmed_name" />
 
                     <LinearLayout
@@ -399,6 +418,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Deafened_name" />
 
                     <LinearLayout
@@ -571,6 +592,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Death_name" />
 
                     <LinearLayout
@@ -743,6 +766,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Demoralized_name" />
 
                     <LinearLayout
@@ -915,6 +940,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Disarmed_name" />
 
                     <LinearLayout
@@ -1087,6 +1114,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Dominated_name" />
 
                     <LinearLayout
@@ -1259,6 +1288,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Fatigued_name" />
 
                     <LinearLayout
@@ -1431,6 +1462,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Fear_name" />
 
                     <LinearLayout
@@ -1603,6 +1636,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Forced_Move_name" />
 
                     <LinearLayout
@@ -1775,6 +1810,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Immobile_name" />
 
                     <LinearLayout
@@ -1947,6 +1984,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Incapacitated_name" />
 
                     <LinearLayout
@@ -2119,6 +2158,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Knockdown_name" />
 
                     <LinearLayout
@@ -2291,6 +2332,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Memory_Alteration_name" />
 
                     <LinearLayout
@@ -2463,6 +2506,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Mind_Dredge_name" />
 
                     <LinearLayout
@@ -2635,6 +2680,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Nullify_name" />
 
                     <LinearLayout
@@ -2807,6 +2854,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Persistent_Damage_name" />
 
                     <LinearLayout
@@ -2979,6 +3028,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Phantasm_name" />
 
                     <LinearLayout
@@ -3151,6 +3202,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Polymorph_name" />
 
                     <LinearLayout
@@ -3323,6 +3376,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Provoked_name" />
 
                     <LinearLayout
@@ -3495,6 +3550,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Spying_name" />
 
                     <LinearLayout
@@ -3667,6 +3724,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Sickened_name" />
 
                     <LinearLayout
@@ -3839,6 +3898,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Silenced_name" />
 
                     <LinearLayout
@@ -4011,6 +4072,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Slowed_name" />
 
                     <LinearLayout
@@ -4183,6 +4246,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Stunned_name" />
 
                     <LinearLayout
@@ -4355,6 +4420,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Stupefied_name" />
 
                     <LinearLayout
@@ -4527,6 +4594,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Truthfulness_name" />
 
                     <LinearLayout
@@ -4699,6 +4768,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Absorb_Object_name" />
 
                     <LinearLayout
@@ -4871,6 +4942,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Animation_name" />
 
                     <LinearLayout
@@ -5043,6 +5116,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Aura_name" />
 
                     <LinearLayout
@@ -5215,6 +5290,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Barrier_name" />
 
                     <LinearLayout
@@ -5387,6 +5464,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Blindsight_name" />
 
                     <LinearLayout
@@ -5559,6 +5638,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Bolster_name" />
 
                     <LinearLayout
@@ -5731,6 +5812,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Darkness_name" />
 
                     <LinearLayout
@@ -5903,6 +5986,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Detection_name" />
 
                     <LinearLayout
@@ -6075,6 +6160,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Flight_name" />
 
                     <LinearLayout
@@ -6247,6 +6334,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Genesis_name" />
 
                     <LinearLayout
@@ -6419,6 +6508,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Haste_name" />
 
                     <LinearLayout
@@ -6591,6 +6682,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Heal_name" />
 
                     <LinearLayout
@@ -6763,6 +6856,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Insubstantial_name" />
 
                     <LinearLayout
@@ -6935,6 +7030,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Invisible_name" />
 
                     <LinearLayout
@@ -7107,6 +7204,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Life_Drain_name" />
 
                     <LinearLayout
@@ -7279,6 +7378,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Light_name" />
 
                     <LinearLayout
@@ -7451,6 +7552,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Precognition_name" />
 
                     <LinearLayout
@@ -7623,6 +7726,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Reading_name" />
 
                     <LinearLayout
@@ -7795,6 +7900,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Regeneration_name" />
 
                     <LinearLayout
@@ -7967,6 +8074,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Resistance_name" />
 
                     <LinearLayout
@@ -8139,6 +8248,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Restoration_name" />
 
                     <LinearLayout
@@ -8311,6 +8422,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Seeing_name" />
 
                     <LinearLayout
@@ -8483,6 +8596,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Shapeshift_name" />
 
                     <LinearLayout
@@ -8655,6 +8770,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Summon_Creature_name" />
 
                     <LinearLayout
@@ -8827,6 +8944,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Sustenance_name" />
 
                     <LinearLayout
@@ -8999,6 +9118,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Telekinesis_name" />
 
                     <LinearLayout
@@ -9171,6 +9292,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Telepathy_name" />
 
                     <LinearLayout
@@ -9343,6 +9466,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Teleport_name" />
 
                     <LinearLayout
@@ -9515,6 +9640,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Tongues_name" />
 
                     <LinearLayout
@@ -9687,6 +9814,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Transmutation_name" />
 
                     <LinearLayout
@@ -9859,6 +9988,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/custom_buttons"
+                        android:textColor="@color/textAccent"
                         android:text="@string/Truesight_name" />
 
                     <LinearLayout
@@ -10018,12 +10149,8 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigationView"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_weight="1"
-        android:background="?android:attr/windowBackground"
-        app:itemBackground="@color/colorPrimary"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_bottom_card_colored"
         app:itemIconTint="@color/textAccent"
         app:itemTextColor="@color/textAccent"
         app:labelVisibilityMode="labeled"

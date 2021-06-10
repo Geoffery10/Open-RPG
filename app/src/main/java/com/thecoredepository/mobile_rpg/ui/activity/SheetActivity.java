@@ -1,11 +1,5 @@
 package com.thecoredepository.mobile_rpg.ui.activity;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.Manifest;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -28,17 +22,25 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.load.resource.bitmap.FitCenter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.thecoredepository.mobile_rpg.R;
-import com.thecoredepository.mobile_rpg.ui.Theming;
 import com.thecoredepository.mobile_rpg.backend.files.SavingSheets;
+import com.thecoredepository.mobile_rpg.ui.Theming;
+import com.thecoredepository.mobile_rpg.ui.dialogs.DialogHealth;
 
-import static com.thecoredepository.mobile_rpg.backend.OpenLegend.player;
 import static com.thecoredepository.mobile_rpg.backend.Dice.attributeToDice;
+import static com.thecoredepository.mobile_rpg.backend.OpenLegend.player;
 
 public class SheetActivity extends AppCompatActivity {
 
@@ -58,6 +60,20 @@ public class SheetActivity extends AppCompatActivity {
         initializationOfElement();
         showHideBio();
         navButtons();
+
+        CardView playerInfoCard = findViewById(R.id.playerInfoCard);
+        playerInfoCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (bioEnabled == false) {
+                    bioEnabled = true;
+                }
+                else {
+                    bioEnabled = false;
+                }
+                showHideBio();
+            }
+        });
     }
 
     private void setCharacterImage() {
@@ -94,6 +110,7 @@ public class SheetActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && requestCode == GALLERY_REQUEST) {
             ImageView imgTopSheet = findViewById(R.id.imgTopSheet);
             Glide.with(this)
@@ -118,7 +135,7 @@ public class SheetActivity extends AppCompatActivity {
         playerStatsCard.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
         CardView playerButtonsCard = findViewById(R.id.playerButtonsCard);
         playerButtonsCard.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));
-        LinearLayout sheetView = findViewById(R.id.sheetView);
+        ConstraintLayout sheetView = findViewById(R.id.sheetView);
         sheetView.setBackgroundResource(Theming.getBackground());
         TextView txtName = findViewById(R.id.txtCharName);
         txtName.setText(player.getCharName());
@@ -243,6 +260,8 @@ public class SheetActivity extends AppCompatActivity {
         LinearLayout LLProtection = findViewById(R.id.LLProtection);
         Button btnProtection = findViewById(R.id.btnProtection);
 
+        Button btnEditSheet = findViewById(R.id.btnEditSheet);
+
         Button btnInventory = findViewById(R.id.btnInventory);
         Button btnBanes = findViewById(R.id.btnBanes);
         Button btnBoons = findViewById(R.id.btnBoons);
@@ -263,7 +282,7 @@ public class SheetActivity extends AppCompatActivity {
         buttonClicks(btnBanes, btnBoons, btnInventory, btnAgility, btnFortitude, btnMight,
                 btnLearning, btnLogic, btnPerception, btnWill, btnDeception, btnPersuasion,
                 btnPresence, btnAlteration, btnCreation, btnEnergy, btnEntropy, btnInfluence,
-                btnMovement, btnPrescience, btnProtection, btnFeats, imgTopSheet);
+                btnMovement, btnPrescience, btnProtection, btnFeats, imgTopSheet, btnEditSheet);
 
         //Element Visibility and Values
         setAttributes(txtAgility, LLAgility, btnAgility, txtFortitude, LLFortitude, btnFortitude,
@@ -713,7 +732,7 @@ public class SheetActivity extends AppCompatActivity {
                               Button btnPerception, Button btnWill, Button btnDeception, Button btnPersuasion,
                               Button btnPresence, Button btnAlteration, Button btnCreation, Button btnEnergy,
                               Button btnEntropy, Button btnInfluence, Button btnMovement, Button btnPrescience,
-                              Button btnProtection, Button btnFeats, final ImageView imgTopSheet) {
+                              Button btnProtection, Button btnFeats, final ImageView imgTopSheet, Button btnEditSheet) {
 
         imgTopSheet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -740,10 +759,18 @@ public class SheetActivity extends AppCompatActivity {
         });
 
         ProgressBar barHealth = findViewById(R.id.barHealth);
+        DialogHealth DialogHealing = new DialogHealth(SheetActivity.this);
         barHealth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                damageDialog();
+                //damageDialog();
+                DialogHealing.show();
+            }
+        });
+        DialogHealing.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(final DialogInterface arg0) {
+                updateHPInfo();
             }
         });
 
@@ -926,6 +953,15 @@ public class SheetActivity extends AppCompatActivity {
                 //Open Feats Menu
                 Intent in = new Intent(getApplicationContext(), FeatsActivitiy.class);
                 //in.putExtra("Dice", attributeToDice(player.getProtection()));
+                startActivity(in);
+            }
+        });
+
+        btnEditSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Open Edit Sheet Menu
+                Intent in = new Intent(getApplicationContext(), EditSheet.class);
                 startActivity(in);
             }
         });

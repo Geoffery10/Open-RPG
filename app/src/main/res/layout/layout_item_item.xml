@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="1dp"
-    android:layout_marginBottom="1dp"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/viewItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorTint">
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_buttons_white">
 
         <ImageView
             android:id="@+id/imgIcon"
@@ -134,12 +135,12 @@
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:scaleType="fitXY"
+            android:src="@drawable/ic_edit_icon"
             app:layout_constraintBottom_toBottomOf="@+id/imgIcon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imgIcon"
-            android:src="@drawable/ic_edit_icon"
-            android:layout_marginRight="8dp" />
+            app:layout_constraintTop_toTopOf="@+id/imgIcon" />
 
         <Button
             android:id="@+id/btnSave"
@@ -153,10 +154,10 @@
             android:background="@color/LogoColor"
             android:text="Save"
             android:textColor="@color/textAccent"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editQuantity"
-            android:visibility="gone"/>
+            app:layout_constraintTop_toBottomOf="@+id/editQuantity" />
 
         <Button
             android:id="@+id/btnDelete"
@@ -171,11 +172,11 @@
             android:background="@color/LogoColor"
             android:text="Delete"
             android:textColor="@color/textAccent"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnSave"
-            android:visibility="gone"/>
+            app:layout_constraintTop_toBottomOf="@+id/btnSave" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

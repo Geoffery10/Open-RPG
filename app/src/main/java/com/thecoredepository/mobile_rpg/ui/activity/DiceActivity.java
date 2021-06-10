@@ -7,9 +7,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import com.thecoredepository.mobile_rpg.R;
 import com.thecoredepository.mobile_rpg.backend.Dice;
 import com.thecoredepository.mobile_rpg.ui.Theming;
@@ -38,12 +40,12 @@ public class DiceActivity extends AppCompatActivity {
 
         Button btnRoll = findViewById(R.id.btnRoll);
 
-        LinearLayout diceView = findViewById(R.id.diceView);
+        ConstraintLayout diceView = findViewById(R.id.diceView);
         diceView.setBackgroundResource(Theming.getBackground());
         TextView txtAdv = findViewById(R.id.txtAdv);
-        txtAdv.setTextColor(Theming.getFontColor());
+        //txtAdv.setTextColor(Theming.getColoredFontColor());
         TextView txtDis = findViewById(R.id.txtDis);
-        txtDis.setTextColor(Theming.getFontColor());
+        //txtDis.setTextColor(Theming.getColoredFontColor());
         TextView txtRolls = findViewById(R.id.txtRolls);
         txtRolls.setTextColor(Theming.getColoredFontColor());
         TextView txtTotal = findViewById(R.id.txtTotal);
@@ -94,6 +96,7 @@ public class DiceActivity extends AppCompatActivity {
 
                     //Display Total
                     txtTotal.setText("Total: " + total);
+                    txtRolls.setText(txtRolls.getText().toString().trim());
 
                     //Reset Clock
                     lastClickTime = SystemClock.elapsedRealtime();
@@ -188,7 +191,6 @@ public class DiceActivity extends AppCompatActivity {
             total = dieSum(die);
             Log.i("Rolls - Total", ""+total);
         }
-
         return total;
     }
 
@@ -214,7 +216,8 @@ public class DiceActivity extends AppCompatActivity {
         {
             roll = Dice.custom(20);
             d20 += roll;
-            txtRolls.setText(txtRolls.getText() + "Roll d20: " + roll +"\n");
+            txtRolls.setText(txtRolls.getText() + "Roll d20:" + roll + "\n");
+            txtRolls.setVisibility(View.VISIBLE);
         } while (roll == 20);
         return d20;
     }

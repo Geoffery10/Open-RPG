@@ -1,31 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/diceView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/paper_bg"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnRoll"
-        android:layout_width="match_parent"
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Roll"
-        android:background="@drawable/custom_buttons"
-        android:textColor="@color/textAccent"
-        android:textSize="24sp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/custom_buttons_white"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/txtRolls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="36sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txtTotal" />
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total: "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textIsSelectable="true"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/custom_buttons"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnRoll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:orientation="vertical">
 
             <EditText
@@ -38,8 +105,8 @@
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:enabled="true"
-                android:inputType="number"
                 android:hint="0"
+                android:inputType="number"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -51,14 +118,15 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="24dp"
                 android:text="Advantage"
-                android:textAlignment="center"
-                android:textColor="@color/text"
+                android:textColor="@color/textAccent"
                 android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:orientation="vertical">
 
             <EditText
@@ -71,8 +139,8 @@
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:enabled="true"
-                android:inputType="number"
                 android:hint="0"
+                android:inputType="number"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -84,45 +152,30 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="24dp"
                 android:text="Disadvantage"
-                android:textAlignment="center"
-                android:textColor="@color/text"
+                android:textColor="@color/textAccent"
                 android:textSize="24sp" />
         </LinearLayout>
 
     </LinearLayout>
 
-    <ScrollView
+    <Button
+        android:id="@+id/btnRoll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/custom_buttons_white"
+        android:text="Roll"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/txtTotal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginRight="24dp"
-                android:text="Total: "
-                android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
-                android:textIsSelectable="true"
-                android:textSize="36sp" />
 
-            <TextView
-                android:id="@+id/txtRolls"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="24dp"
-                android:textAlignment="center"
-                android:textIsSelectable="true"
-                android:textSize="36sp" />
 
-        </LinearLayout>
-    </ScrollView>
-
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

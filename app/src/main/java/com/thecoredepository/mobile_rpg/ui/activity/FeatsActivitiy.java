@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -40,10 +42,37 @@ public class FeatsActivitiy extends AppCompatActivity
         featsView.setBackgroundResource(Theming.getBackground());
         TextView txtFeatHeader = findViewById(R.id.txtFeatsHeader);
         txtFeatHeader.setTextColor(Theming.getColoredFontColor());
+        Button btnAddFeats = findViewById(R.id.btnAddFeats);
         add = false;
         remove = false;
         generateRecyclerView(add, remove, showAll, recyclerView);
         navButtons();
+
+        btnAddFeats.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (add == false && remove == false && showAll == false) {
+                    add = true;
+                    remove = false;
+                    showAll = false;
+                    btnAddFeats.setText("-");
+                } else if (add == true && remove == false && showAll == false) {
+                    add = false;
+                    remove = true;
+                    showAll = false;
+                    btnAddFeats.setText("=");
+                }
+                else if (add == false && remove == true && showAll == false) {
+                    add = false;
+                    remove = false;
+                    showAll = false;
+                    btnAddFeats.setText("+");
+                }
+
+                generateRecyclerView(add, remove, showAll, recyclerView);
+            }
+        });
+        generateRecyclerView(add, remove, showAll, recyclerView);
 
     }
 

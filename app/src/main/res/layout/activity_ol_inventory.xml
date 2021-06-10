@@ -13,12 +13,15 @@
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/card_top"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@drawable/ic_top_card"
+            app:layout_constraintBottom_toTopOf="@+id/navigationView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
             <ImageView
                 android:id="@+id/btnSaveWealth"
@@ -49,17 +52,35 @@
                 android:id="@+id/editWealth"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
+                android:hint="0"
                 android:inputType="number"
                 android:singleLine="true"
                 android:textAlignment="center"
                 android:textColor="@color/textColored"
                 android:textIsSelectable="true"
                 android:textSize="24sp"
-                android:hint="0"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/txtWealth"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/colorAccent"
+                android:text="+"
+                android:textColor="#DEFFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txtWealth"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.32999998" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -67,12 +88,11 @@
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+            app:layout_constraintBottom_toTopOf="@+id/navigationView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+            app:layout_constraintTop_toBottomOf="@+id/card_top">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/item_view"
@@ -86,35 +106,17 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="8dp"
-            android:text="Add"
-            android:backgroundTint="@color/colorAccent"
-            android:textColor="#DEFFFFFF"
-            android:background="@drawable/custom_buttons"
-            app:layout_constraintBottom_toTopOf="@+id/navigationView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navigationView"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_margin="0dp"
-            android:background="?android:attr/windowBackground"
-            android:gravity="bottom"
-            app:itemBackground="@color/colorPrimary"
+            android:background="@drawable/ic_bottom_card_colored"
             app:itemIconTint="@color/textAccent"
             app:itemTextColor="@color/textAccent"
             app:labelVisibilityMode="labeled"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/navigation_sheet" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
