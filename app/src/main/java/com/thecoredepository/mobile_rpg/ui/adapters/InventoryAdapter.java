@@ -58,6 +58,7 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.View
         holder.txtQuantity.setVisibility(View.VISIBLE);
         holder.editQuantity.setVisibility(View.GONE);
 
+        holder.viewItem.setBackgroundResource(Theming.getBackgroundImage("button"));
         holder.txtTitle.setTextColor(Theming.getFontColor());
         holder.editTitle.setTextColor(Theming.getFontColor());
         holder.txtDescription.setTextColor(Theming.getFontColor());

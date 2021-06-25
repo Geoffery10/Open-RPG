@@ -14,7 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thecoredepository.mobile_rpg.R;
@@ -332,7 +332,7 @@ public class FeatAdapter extends RecyclerView.Adapter<FeatAdapter.ViewHolder>
                 if (holder.infoFeat.getVisibility() == View.GONE)
                 {
                     holder.infoFeat.setVisibility(View.VISIBLE);
-                    holder.cardFeat.setBackgroundResource(R.drawable.custom_buttons_white);
+                    holder.cardFeat.setBackgroundResource(Theming.getBackgroundImage("button"));
                     holder.btnFeat.setBackgroundResource(R.drawable.custom_buttons_primary_dark);
                     holder.btnFeat.setTextColor(Color.parseColor("#FFFFFF"));
                 }
@@ -409,7 +409,7 @@ public class FeatAdapter extends RecyclerView.Adapter<FeatAdapter.ViewHolder>
         Spinner spinnerAddRemoveUpgradeFeat2;
         Button btnAddRemove;
         Button btnUpgrade;
-        CardView cardFeat;
+        ConstraintLayout cardFeat;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

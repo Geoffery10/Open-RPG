@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         Spinner spinnerOL = findViewById(R.id.spinnerOL);
         Button btnSignIn = findViewById(R.id.btnSignIn);
         Button btnInfo = findViewById(R.id.btnInfo);
+        Button btnDarkMode = findViewById(R.id.btnDarkMode);
         Button btnDownload = findViewById(R.id.btnDownload);
         Button btnOpenSheet = findViewById(R.id.btnOpenSheet);
         Button btnNewSheet = findViewById(R.id.btnNewSheet);
@@ -86,6 +87,10 @@ public class MainActivity extends AppCompatActivity {
         //Load lastSheet
         SharedPreferences loadLastSheet = getSharedPreferences("lastSheet", MODE_PRIVATE);
         spinnerOL.setSelection(sheetList.indexOf(loadLastSheet.getString("lastSheet", "ERROR")));
+
+        if (Theming.getThemeID() == 2) {
+            btnDarkMode.setBackgroundResource(R.drawable.ic_sun);
+        }
 
         btnOpenSheet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,6 +146,37 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     Toast.makeText(mContext, "Coming Soon...", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        btnDarkMode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Theming.getThemeID() == 1) {
+                    new AlertDialog.Builder(mContext)
+                            .setTitle("Enable Dark Mode?")
+                            .setMessage("Dark Mode is not finished and may still contain bugs. Do you want to enable?")
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                                public void onClick(DialogInterface dialog, int whichButton) {
+                                    Theming.setThemeID(2);
+                                    loadTheming(2);
+                                    updateTheme();
+                                    setTheme(R.style.AppThemeDark);
+                                    saveTheme(2);
+                                    btnDarkMode.setBackgroundResource(R.drawable.ic_sun);
+                                }})
+                            .setNegativeButton(android.R.string.no, null).show();
+                }
+                else {
+                    Theming.setThemeID(1);
+                    loadTheming(1);
+                    updateTheme();
+                    setTheme(R.style.AppTheme);
+                    saveTheme(1);
+                    btnDarkMode.setBackgroundResource(R.drawable.ic_moon);
                 }
             }
         });
@@ -415,6 +451,8 @@ public class MainActivity extends AppCompatActivity {
                 Theming.setFontColor(getResources().getColor(R.color.text));
                 Theming.setColoredFontColor(getResources().getColor(R.color.textColored));
                 Theming.setBackground(R.drawable.background_2);
+                Theming.setTopbannerBG(R.drawable.ic_top_card);
+                Theming.setButtonBG(R.drawable.custom_buttons_white);
                 Theming.setCardViewBG("#FFFFFF");
                 Theming.setSpinnerStyle(R.layout.spinner_style);
                 break;
@@ -422,6 +460,8 @@ public class MainActivity extends AppCompatActivity {
                 Theming.setFontColor(getResources().getColor(R.color.textDarkTheme));
                 Theming.setColoredFontColor(getResources().getColor(R.color.textColoredDarkTheme));
                 Theming.setBackground(R.drawable.background_2);
+                Theming.setTopbannerBG(R.drawable.ic_top_card_dark);
+                Theming.setButtonBG(R.drawable.custom_buttons_dark);
                 Theming.setCardViewBG("#1f1f1f");
                 Theming.setSpinnerStyle(R.layout.spinner_style_dark);
                 break;

@@ -128,6 +128,8 @@ public class SheetActivity extends AppCompatActivity {
 
     private void initializationOfElement() {
         //Initialization of Elements
+        ConstraintLayout constraintLayoutTopBanner = findViewById(R.id.topBanner);
+        constraintLayoutTopBanner.setBackgroundResource(Theming.getBackgroundImage("top_banner"));
         ImageView imgTopSheet = findViewById(R.id.imgTopSheet);
         CardView playerInfoCard = findViewById(R.id.playerInfoCard);
         playerInfoCard.setCardBackgroundColor(Color.parseColor(Theming.getCardViewBG()));

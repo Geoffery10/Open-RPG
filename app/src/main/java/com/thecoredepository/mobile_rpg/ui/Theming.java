@@ -9,6 +9,8 @@ public class Theming
     private static int fontColor;
     private static int coloredFontColor;
     private static int background;
+    private static int topbannerBG;
+    private static int buttonBG;
     private static String cardViewBG;
     private static int spinnerStyle;
 
@@ -46,6 +48,24 @@ public class Theming
 
     public static int getBackground() {
         return background;
+    }
+
+    public static int getBackgroundImage(String id) {
+        id = id.toLowerCase();
+        if (id == "top_banner") {
+            return topbannerBG;
+        } else if (id == "button") {
+            return buttonBG;
+        }
+        return background;
+    }
+
+    public static void setTopbannerBG(int background) {
+        Theming.topbannerBG = background;
+    }
+
+    public static void setButtonBG(int background) {
+        Theming.buttonBG = background;
     }
 
     public static void setBackground(int background) {

@@ -25,6 +25,8 @@ public class AboutActivity extends AppCompatActivity
 
         ConstraintLayout aboutView = findViewById(R.id.aboutView);
         aboutView.setBackgroundResource(Theming.getBackground());
+        ConstraintLayout constraintView = findViewById(R.id.constraintView);
+        constraintView.setBackgroundResource(Theming.getBackgroundImage("button"));
         TextView txtAboutHeader = findViewById(R.id.txtAboutHeader);
         txtAboutHeader.setTextColor(Theming.getColoredFontColor());
         TextView txtAbout_01 = findViewById(R.id.txtAbout_01);

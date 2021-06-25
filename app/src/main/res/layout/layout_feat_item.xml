@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cardFeat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,16 +18,20 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <Button
                 android:id="@+id/btnFeat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="FEAT TITLE - LEVEL     (COST)"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/custom_buttons_white"
+                android:text="FEAT TITLE - LEVEL     (COST)"
                 android:textColor="@color/textColored"
                 android:textSize="16sp" />
 
@@ -168,18 +174,18 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
                         android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
                         android:visibility="visible">
 
                         <Button
                             android:id="@+id/btnAddRemove"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginRight="5dp"
-                            android:backgroundTint="@color/colorPrimaryLight"
+                            android:layout_weight="1"
                             android:background="@drawable/custom_buttons"
+                            android:backgroundTint="@color/colorPrimaryLight"
                             android:gravity="center"
                             android:text="Add/Remove"
                             android:textColor="@color/textAccent"
@@ -189,8 +195,8 @@
                             android:id="@+id/btnUpgrade"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
                             android:background="@drawable/custom_buttons"
                             android:backgroundTint="@color/colorPrimaryLight"
                             android:gravity="center"
@@ -203,6 +209,6 @@
             </LinearLayout>
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
